@@ -1,0 +1,69 @@
+﻿<DefaultWindow xmlns="https://spacestation14.io"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               Title="{Loc plant-extractor-window-title}" MinSize="512 400" SetSize="512 350">
+    <TabContainer Name="Tabs" Margin="0 0 2 0">
+
+        <BoxContainer Orientation="Vertical" Margin="5 5 5 5" >
+
+            <BoxContainer Orientation="Horizontal">
+                <Label Text="{Loc 'plant-extractor-window-chamber-label'}"/>
+            </BoxContainer>
+
+            <PanelContainer VerticalExpand="True" MinSize="100 250">
+                <ItemList  Name="ChamberBox" VerticalExpand="True" HorizontalExpand="True"/>
+            </PanelContainer>
+
+            <BoxContainer Orientation="Horizontal" Margin="0 10 0 0">
+                <Button Name="ExtractButton" Text="{Loc plant-extractor-window-extract-button}" TextAlign="Center" MinSize="100 50"/>
+                <Button Name="EjectAllButton" Text="{Loc plant-extractor-window-eject-all-button}" TextAlign="Center" MinSize="100 50" Margin="20 0 0 0"/>
+            </BoxContainer>
+
+        </BoxContainer>
+
+        <BoxContainer Orientation="Vertical" Margin="5 5 5 5">
+
+            <BoxContainer Orientation="Horizontal">
+                <Label Text="{Loc 'plant-extractor-window-buffer-label'}" />
+                <Control HorizontalExpand="True" />
+                <Button Name="BufferTransferButton"
+                        Text="{Loc 'plant-extractor-window-transfer-button'}" ToggleMode="True"
+                        StyleClasses="OpenRight" />
+                <Button Name="BufferDiscardButton"
+                        Text="{Loc 'plant-extractor-window-discard-button'}" ToggleMode="True"
+                        StyleClasses="OpenLeft" />
+            </BoxContainer>
+
+            <!-- Buffer info -->
+            <PanelContainer VerticalExpand="True" MinSize="0 200">
+                <!-- Buffer reagent list -->
+                <BoxContainer Name="BufferInfo"
+                              Orientation="Vertical"
+                              Margin="4 4 4 4"
+                              HorizontalExpand="True">
+                    <Label Text="{Loc 'plant-extractor-window-buffer-empty-text'}" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <!-- Buffer -->
+            <BoxContainer Orientation="Horizontal">
+                <Label Text="{Loc 'plant-extractor-window-container-label'}" />
+                <Control HorizontalExpand="True" />
+                <Button Name="BeakerEjectButton" Text="{Loc 'plant-extractor-window-eject-button'}"/>
+            </BoxContainer>
+
+            <!-- Padding -->
+            <Control MinSize="0 10" />
+
+            <PanelContainer VerticalExpand="True" MinSize="0 200">
+                <!-- Initially empty, when server sends state data this will have container contents and fill volume.-->
+                <BoxContainer Name="ContainerInfo"
+                              Orientation="Vertical"
+                              Margin="4 4 4 4"
+                              HorizontalExpand="True">
+                    <Label Text="{Loc 'plant-extractor-window-no-container-loaded-text'}" />
+                </BoxContainer>
+            </PanelContainer>
+        </BoxContainer>
+
+    </TabContainer>
+</DefaultWindow>
