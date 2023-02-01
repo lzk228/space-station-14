@@ -191,6 +191,24 @@
 
 #Utility
 
+- type: uplinkListing
+  id: UplinkJetpack
+  category: Utility
+  itemId: JetpackBlack
+  listingName: Black Jetpack
+  description: A black jetpack. It allows you to fly around in space. Additional fuel not included.
+  icon: Objects/Tanks/Jetpacks/black.rsi/icon.png
+  price: 5
+
+- type: listing
+  id: UplinkSignaller
+  category: Utility
+  itemId: RemoteSignaller
+  listingName: Передатчик сигналов
+  description: Портативное устройство, используемое для дистанционной передачи сигналов объектам.
+  icon: Objects/Devices/signaller.rsi/signaller.png
+  price: 4
+
 - type: listing
   id: UplinkHoloparaKit
   name: uplink-holopara-kit-name
@@ -759,7 +777,7 @@
   description: uplink-cat-ears-desc
   productEntity: ClothingHeadHatCatEars
   cost:
-    Telecrystal: 26
+    Telecrystal: 13
   categories:
   - UplinkPointless
 
