@@ -190,23 +190,17 @@
   - UplinkAmmo
 
 #Utility
-- type: listing
-  id: UplinkSignaller
-  category: Utility
-  itemId: RemoteSignaller
-  listingName: Передатчик сигналов
-  description: Портативное устройство, используемое для дистанционной передачи сигналов объектам.
-  icon: Objects/Devices/signaller.rsi/signaller.png
-  price: 4
 
 - type: listing
-  id: UplinkJetpack
-  category: Utility
-  itemId: JetpackBlack
-  listingName: Black Jetpack
-  description: A black jetpack. It allows you to fly around in space. Additional fuel not included.
-  icon: Objects/Tanks/Jetpacks/black.rsi/icon.png
-  price: 5
+  id: UplinkSignaller
+  name: Передатчик сигналов
+  description: Портативное устройство, используемое для дистанционной передачи сигналов объектам.
+  icon: { sprite: /Textures/Objects/Devices/signaller.rsi/signaller.png, state: icon }
+  productEntity: RemoteSignaller
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkUtility
 
 - type: listing
   id: UplinkHoloparaKit
