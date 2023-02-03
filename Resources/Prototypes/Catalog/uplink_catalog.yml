@@ -195,7 +195,7 @@
   id: UplinkSignaller
   name: Передатчик сигналов
   description: Портативное устройство, используемое для дистанционной передачи сигналов объектам.
-  icon: { sprite: /Textures/Objects/Devices/signaller.rsi/signaller.png, state: signaltrigger }
+#  icon: { sprite: /Textures/Objects/Devices/signaller.rsi/signaller.png, state: signaltrigger }
   productEntity: RemoteSignaller
   cost:
     Telecrystal: 4
