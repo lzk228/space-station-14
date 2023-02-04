@@ -40,6 +40,26 @@
       path: /Audio/Voice/Moth/laugh_moth.ogg
 
 - type: emoteSounds
+  id: FemaleFelinid
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: FemaleLaugh
+
+- type: emoteSounds
+  id: MaleFelinid
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: MaleLaugh
+
+- type: emoteSounds
   id: UnisexVox
   sound:
     path: /Audio/Voice/Vox/shriek1.ogg

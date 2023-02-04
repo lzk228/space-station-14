@@ -1,16 +1,11 @@
 - type: entity
   save: false
-  name: Урист МакФлафф
-  parent: BaseMobMoth
-  id: MobMoth
+  name: Урист МакНян
+  parent: MobFelinidBase
+  id: MobFelinid
   components:
   - type: CombatMode
     canDisarm: true
-  - type: InteractionPopup
-    successChance: 1
-    interactSuccessString: hugging-success-generic
-    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
-    messagePerceivedByOthers: hugging-success-generic-others
   - type: Mind
     showExamineInfo: true
   - type: Input
@@ -20,10 +15,10 @@
   - type: Respirator
     damage:
       types:
-        Asphyxiation: 1.0
+        Asphyxiation: 1.5
     damageRecovery:
       types:
-        Asphyxiation: -1.0
+        Asphyxiation: -1.5
   - type: Alerts
   - type: Actions
   - type: Eye
@@ -33,3 +28,8 @@
   - type: Faction
     factions:
     - NanoTrasen
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: hugging-success-generic
+    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
+    messagePerceivedByOthers: hugging-success-generic-others

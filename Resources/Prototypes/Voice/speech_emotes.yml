@@ -7,6 +7,8 @@
     - крик
     - кричит
     - вопит
+    - орёт
+    - орет
     - scream
     - screams
     - screaming
@@ -30,7 +32,12 @@
   chatMessages: [смеётся]
   chatTriggers:
     - смех
+    - смеется
     - смеётся
+    - ржет
+    - ржёт
+    - угарает
+    - хихикает
     - laugh
     - laughs
     - laughing
@@ -90,4 +97,3 @@
     - snaps fingers
     - snapping fingers
     - snapped fingers
-
