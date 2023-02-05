@@ -533,6 +533,9 @@
   - type: Stamp
     stampedName: stamp-component-stamped-name-syndicate
     stampState: "paper_stamp-syndicate"
+  - type: StampStateHandler
+    stampStateCollection: ["paper_stamp-mime", "paper_stamp-cap", "paper_stamp-warden", "paper_stamp-ce"]
+    stampNameCollection: [stamp-component-stamped-name-mime, stamp-component-stamped-name-captain, stamp-component-stamped-name-warden, stamp-component-stamped-name-ce]
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: stamp-syndicate
