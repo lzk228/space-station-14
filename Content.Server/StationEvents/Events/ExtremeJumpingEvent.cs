@@ -119,7 +119,8 @@ namespace Content.Server.StationEvents.Events
                             continue;
 
                         selected.Restitutions.Add(fixture.Restitution);
-                        _physics.SetRestitution(selected.Uid, fixture, 1.0f, false, fixtures);
+                        var restitution = 1.1f / (physicsComponent.Mass / 10f);
+                        _physics.SetRestitution(selected.Uid, fixture, restitution, false, fixtures);
                     }
 
                     _fixtures.FixtureUpdate(selected.Uid, manager: fixtures, body: physicsComponent);

@@ -7,4 +7,12 @@
     minimumPlayers: 5
     weight: 10
     startAnnouncement: station-event-extreme-jumping-start-announcement
+    startAudio:
+      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
+      params:
+        volume: -4
     endAnnouncement: station-event-extreme-jumping-end-announcement
+    endAudio:
+      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
+      params:
+        volume: -6
