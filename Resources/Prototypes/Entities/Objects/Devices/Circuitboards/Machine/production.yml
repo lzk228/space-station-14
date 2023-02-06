@@ -726,7 +726,7 @@
     materialRequirements:
       Steel: 10
       Plasma: 5
-      
+
 - type: entity
   id: BoozeDispenserMachineCircuitboard
   parent: BaseMachineCircuitboard
@@ -762,3 +762,24 @@
             Amount: 1
             DefaultPrototype: Beaker
             ExamineName: Glass Beaker
+
+- type: entity
+  id: PlantExtractorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: plant extractor machine board
+  description: A machine printed circuit board for a plant extractor
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: plant_extractor
+      requirements:
+        MatterBin: 2
+        Manipulator: 2
+      tagRequirements:
+        GlassBeaker:
+          Amount: 2
+          DefaultPrototype: Beaker
+          ExamineName: Glass Beaker
+      materialRequirements:
+        Steel: 2
