@@ -75,3 +75,9 @@
   wires:
   - !type:PowerWireAction
   - !type:CryoPodEjectLockWireAction
+
+- type: wireLayout
+  id: PlantExtractor
+  dummyWires: 1
+  wires:
+  - !type:PowerWireAction

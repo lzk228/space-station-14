@@ -93,6 +93,7 @@
   unlockedRecipes:
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
+  - PlantExtractorMachineCircuitboard
   - HandheldHealthAnalyzer
   - Implanter
 

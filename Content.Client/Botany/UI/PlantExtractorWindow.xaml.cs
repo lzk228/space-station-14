@@ -113,11 +113,11 @@ namespace Content.Client.Botany.UI
 
         private void BuildContainerPanel(ContainerInfo? info)
         {
-            ContainerInfo.Children.Clear();
+            ContainerInfoBox.Children.Clear();
 
             if (info is null)
             {
-                ContainerInfo.Children.Add(new Label
+                ContainerInfoBox.Children.Add(new Label
                 {
                     Text = Loc.GetString("plant-extractor-window-no-container-loaded-text")
                 });
@@ -125,7 +125,7 @@ namespace Content.Client.Botany.UI
             }
 
             // Name of the container and its fill status (Ex: 44/100u)
-            ContainerInfo.Children.Add(new BoxContainer
+            ContainerInfoBox.Children.Add(new BoxContainer
             {
                 Orientation = BoxContainer.LayoutOrientation.Horizontal,
                 Children =
@@ -173,26 +173,26 @@ namespace Content.Client.Botany.UI
                 // Padding
                 cs.Add(new Control { HorizontalExpand = true });
 
-                cs.Add(MakeReagentButton("1", PlantExtractorReagentAmount.U1, id, false));
-                cs.Add(MakeReagentButton("5", PlantExtractorReagentAmount.U5, id, false));
-                cs.Add(MakeReagentButton("10", PlantExtractorReagentAmount.U10, id, false));
-                cs.Add(MakeReagentButton("25", PlantExtractorReagentAmount.U25, id, false));
-                cs.Add(MakeReagentButton("33", PlantExtractorReagentAmount.U33, id, false));
+                cs.Add(MakeReagentButton("1", PlantExtractorReagentAmount.U1, id, false, "OpenRight"));
+                cs.Add(MakeReagentButton("5", PlantExtractorReagentAmount.U5, id, false, "OpenBoth"));
+                cs.Add(MakeReagentButton("10", PlantExtractorReagentAmount.U10, id, false, "OpenBoth"));
+                cs.Add(MakeReagentButton("25", PlantExtractorReagentAmount.U25, id, false, "OpenBoth"));
+                cs.Add(MakeReagentButton("33", PlantExtractorReagentAmount.U33, id, false, "OpenBoth"));
                 cs.Add(MakeReagentButton(
                     Loc.GetString("plant-extractor-window-buffer-all-amount"),
-                    PlantExtractorReagentAmount.All, id, false));
+                    PlantExtractorReagentAmount.All, id, false, "OpenLeft"));
 
-                ContainerInfo.Children.Add(inner);
+                ContainerInfoBox.Children.Add(inner);
             }
         }
 
         private void BuildBufferPanel(PlantExtractorBoundUserInterfaceState state)
         {
-            BufferInfo.Children.Clear();
+            BufferInfoBox.Children.Clear();
 
             if (!state.BufferReagents.Any())
             {
-                BufferInfo.Children.Add(new Label { Text = Loc.GetString("plant-extractor-window-buffer-empty-text") });
+                BufferInfoBox.Children.Add(new Label { Text = Loc.GetString("plant-extractor-window-buffer-empty-text") });
 
                 return;
             }
@@ -201,7 +201,7 @@ namespace Content.Client.Botany.UI
             {
                 Orientation = BoxContainer.LayoutOrientation.Horizontal
             };
-            BufferInfo.AddChild(bufferHBox);
+            BufferInfoBox.AddChild(bufferHBox);
 
             var bufferLabel = new Label { Text = $"{Loc.GetString("plant-extractor-window-buffer-label")} " };
             bufferHBox.AddChild(bufferLabel);
@@ -219,7 +219,7 @@ namespace Content.Client.Botany.UI
 
                 if (proto != null)
                 {
-                    BufferInfo.Children.Add(new BoxContainer
+                    BufferInfoBox.Children.Add(new BoxContainer
                     {
                         Orientation = BoxContainer.LayoutOrientation.Horizontal,
                         Children =
@@ -233,23 +233,23 @@ namespace Content.Client.Botany.UI
                             // Padding
                             new Control {HorizontalExpand = true},
 
-                            MakeReagentButton("1", PlantExtractorReagentAmount.U1, reagent.ReagentId, true),
-                            MakeReagentButton("5", PlantExtractorReagentAmount.U5, reagent.ReagentId, true),
-                            MakeReagentButton("10", PlantExtractorReagentAmount.U10, reagent.ReagentId, true),
-                            MakeReagentButton("25", PlantExtractorReagentAmount.U25, reagent.ReagentId, true),
-                            MakeReagentButton("33", PlantExtractorReagentAmount.U33, reagent.ReagentId, true),
+                            MakeReagentButton("1", PlantExtractorReagentAmount.U1, reagent.ReagentId, true, "OpenRight"),
+                            MakeReagentButton("5", PlantExtractorReagentAmount.U5, reagent.ReagentId, true, "OpenBoth"),
+                            MakeReagentButton("10", PlantExtractorReagentAmount.U10, reagent.ReagentId, true, "OpenBoth"),
+                            MakeReagentButton("25", PlantExtractorReagentAmount.U25, reagent.ReagentId, true, "OpenBoth"),
+                            MakeReagentButton("33", PlantExtractorReagentAmount.U33, reagent.ReagentId, true, "OpenBoth"),
                             MakeReagentButton(
                             Loc.GetString("plant-extractor-window-buffer-all-amount"),
-                            PlantExtractorReagentAmount.All, reagent.ReagentId, true)
+                            PlantExtractorReagentAmount.All, reagent.ReagentId, true, "OpenLeft")
                         }
                     });
                 }
             }
         }
 
-        private ReagentButton MakeReagentButton(string text, PlantExtractorReagentAmount amount, string id, bool isBuffer)
+        private ReagentButton MakeReagentButton(string text, PlantExtractorReagentAmount amount, string id, bool isBuffer, string styleClass)
         {
-            var button = new ReagentButton(text, amount, id, isBuffer);
+            var button = new ReagentButton(text, amount, id, isBuffer, styleClass);
             button.OnPressed += args => OnReagentButtonPressed?.Invoke(args, button);
             return button;
         }
@@ -265,12 +265,14 @@ namespace Content.Client.Botany.UI
         public PlantExtractorReagentAmount Amount { get; set; }
         public readonly bool IsBuffer;
         public string Id { get; set; }
-        public ReagentButton(string text, PlantExtractorReagentAmount amount, string id, bool isBuffer)
+        public ReagentButton(string text, PlantExtractorReagentAmount amount, string id, bool isBuffer, string styleClass)
         {
             Text = text;
             Amount = amount;
             Id = id;
             IsBuffer = isBuffer;
+            SetWidth = 42;
+            AddStyleClass(styleClass);
         }
     }
 }

@@ -18,6 +18,7 @@ using Content.Server.Power.EntitySystems;
 using Content.Shared.Random.Helpers;
 using Robust.Shared.Timing;
 using Content.Shared.Stacks;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Botany.Systems
 {
@@ -35,6 +36,7 @@ namespace Content.Server.Botany.Systems
         [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         public override void Initialize()
         {
@@ -71,11 +73,11 @@ namespace Content.Server.Botany.Systems
                     continue;
 
                 component.AudioStream?.Stop();
-                RemCompDeferred<ActiveReagentGrinderComponent>(uid);
+                RemCompDeferred<ActivePlantExtractorComponent>(uid);
 
                 var inputContainer = _containerSystem.EnsureContainer<Container>(uid, SharedPlantExtractor.InputContainerId);
 
-                if (!_solutionContainerSystem.TryGetSolution(component.Owner, SharedPlantExtractor.BufferId, out var bufferSolution))
+                if (!_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out var bufferSolution))
                     continue;
 
                 foreach (var item in inputContainer.ContainedEntities.ToList())
@@ -91,7 +93,8 @@ namespace Content.Server.Botany.Systems
                     }
                     QueueDel(item);
 
-                    bufferSolution.AddSolution(solution);
+                    // _solutionContainerSystem.TryAddSolution(uid, bufferSolution, solution);
+                    bufferSolution.AddSolution(solution, _prototypeManager);
                 }
 
                 UpdateUiState(component);
@@ -109,7 +112,7 @@ namespace Content.Server.Botany.Systems
             var beakerContainer = _itemSlotsSystem.GetItemOrNull(component.Owner, SharedPlantExtractor.BeakerContainerId);
 
             var bufferReagents = bufferSolution.Contents;
-            var bufferCurrentVolume = bufferSolution.CurrentVolume;
+            var bufferCurrentVolume = bufferSolution.Volume;
 
             var isBusy = HasComp<ActivePlantExtractorComponent>(component.Owner);
             var canExtract = false;
@@ -336,7 +339,7 @@ namespace Content.Server.Botany.Systems
             var reagents = solution.Contents
                 .Select(reagent => (reagent.ReagentId, reagent.Quantity)).ToList();
 
-            return new ContainerInfo(name, true, solution.CurrentVolume, solution.MaxVolume, reagents);
+            return new ContainerInfo(name, true, solution.Volume, solution.MaxVolume, reagents);
         }
 
         private bool CanExtract(EntityUid uid)

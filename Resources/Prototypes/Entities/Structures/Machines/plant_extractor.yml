@@ -1,7 +1,7 @@
 - type: entity
   id: plant_extractor
   parent: [ BaseMachinePowered, ConstructibleMachine ]
-  name: Plant extracor
+  name: Plant extractor
   description: Sample text.
   placement:
     mode: SnapgridCenter
@@ -63,10 +63,10 @@
           False: { visible: false }
   # Machine / Construction stuff
   - type: Wires
-    BoardName: "chem_master"
-    LayoutId: chem_master
+    BoardName: "Plant Extractor"
+    LayoutId: PlantExtractor
   - type: Machine
-    board: ChemMasterMachineCircuitboard
+    board: PlantExtractorMachineCircuitboard
   - type: ContainerContainer
     containers:
       beakerContainer: !type:ContainerSlot

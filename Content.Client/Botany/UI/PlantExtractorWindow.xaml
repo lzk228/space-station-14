@@ -1,28 +1,35 @@
 ﻿<DefaultWindow xmlns="https://spacestation14.io"
                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-               Title="{Loc plant-extractor-window-title}" MinSize="512 400" SetSize="512 350">
+               xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+               Title="{Loc plant-extractor-window-title}" MinSize="600 580" SetSize="600 580">
     <TabContainer Name="Tabs" Margin="0 0 2 0">
 
         <BoxContainer Orientation="Vertical" Margin="5 5 5 5" >
 
-            <BoxContainer Orientation="Horizontal">
+            <BoxContainer Orientation="Horizontal" Margin="0 0 0 5">
                 <Label Text="{Loc 'plant-extractor-window-chamber-label'}"/>
+                <Control HorizontalExpand="True" />
+                <Button Name="ExtractButton"
+                        Text="{Loc plant-extractor-window-extract-button}"
+                        TextAlign="Center"
+                        MinWidth="100"
+                        StyleClasses="OpenRight"/>
+                <Button Name="EjectAllButton"
+                        Text="{Loc plant-extractor-window-eject-all-button}"
+                        TextAlign="Center"
+                        MinWidth="100"
+                        StyleClasses="OpenLeft"/>
             </BoxContainer>
 
-            <PanelContainer VerticalExpand="True" MinSize="100 250">
+            <PanelContainer VerticalExpand="True" MinSize="100 300">
                 <ItemList  Name="ChamberBox" VerticalExpand="True" HorizontalExpand="True"/>
             </PanelContainer>
-
-            <BoxContainer Orientation="Horizontal" Margin="0 10 0 0">
-                <Button Name="ExtractButton" Text="{Loc plant-extractor-window-extract-button}" TextAlign="Center" MinSize="100 50"/>
-                <Button Name="EjectAllButton" Text="{Loc plant-extractor-window-eject-all-button}" TextAlign="Center" MinSize="100 50" Margin="20 0 0 0"/>
-            </BoxContainer>
 
         </BoxContainer>
 
         <BoxContainer Orientation="Vertical" Margin="5 5 5 5">
 
-            <BoxContainer Orientation="Horizontal">
+            <BoxContainer Orientation="Horizontal" Margin="0 0 0 5">
                 <Label Text="{Loc 'plant-extractor-window-buffer-label'}" />
                 <Control HorizontalExpand="True" />
                 <Button Name="BufferTransferButton"
@@ -33,10 +40,11 @@
                         StyleClasses="OpenLeft" />
             </BoxContainer>
 
-            <!-- Buffer info -->
-            <PanelContainer VerticalExpand="True" MinSize="0 200">
-                <!-- Buffer reagent list -->
-                <BoxContainer Name="BufferInfo"
+            <PanelContainer VerticalExpand="True" MinSize="100 200">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Name="BufferInfoBox"
                               Orientation="Vertical"
                               Margin="4 4 4 4"
                               HorizontalExpand="True">
@@ -44,19 +52,17 @@
                 </BoxContainer>
             </PanelContainer>
 
-            <!-- Buffer -->
-            <BoxContainer Orientation="Horizontal">
+            <BoxContainer Orientation="Horizontal" Margin="0 5 0 5">
                 <Label Text="{Loc 'plant-extractor-window-container-label'}" />
                 <Control HorizontalExpand="True" />
                 <Button Name="BeakerEjectButton" Text="{Loc 'plant-extractor-window-eject-button'}"/>
             </BoxContainer>
 
-            <!-- Padding -->
-            <Control MinSize="0 10" />
-
-            <PanelContainer VerticalExpand="True" MinSize="0 200">
-                <!-- Initially empty, when server sends state data this will have container contents and fill volume.-->
-                <BoxContainer Name="ContainerInfo"
+            <PanelContainer VerticalExpand="True" MinSize="100 200">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Name="ContainerInfoBox"
                               Orientation="Vertical"
                               Margin="4 4 4 4"
                               HorizontalExpand="True">
