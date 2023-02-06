@@ -227,7 +227,7 @@
       - VoiceTrigger
       - PowerCellSmall
       - PowerCellMedium
-      - PowerCellHigh  
+      - PowerCellHigh
       - SynthesizerInstrument
       - RPED
       - NodeScanner
@@ -313,6 +313,7 @@
       - GyroscopeMachineCircuitboard
       - GasRecyclerMachineCircuitboard
       - SeedExtractorMachineCircuitboard
+      - PlantExtractorMachineCircuitboard
       - AnalysisComputerCircuitboard
       - ExosuitFabricatorMachineCircuitboard
       - AnomalyVesselCircuitboard

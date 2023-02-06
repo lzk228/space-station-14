@@ -2,22 +2,22 @@
   id: plant_extractor
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: Plant extractor
-  description: Sample text.
+  description: Advanced plant reagent extraction machine.
   placement:
     mode: SnapgridCenter
   components:
   - type: Sprite
-    sprite: Structures/Machines/mixer.rsi
+    sprite: Structures/Machines/plant_extractor.rsi
     netsync: false
     snapCardinals: true
     layers:
-    - state: mixer_empty
-    - state: mixer_screens
+    - state: plant_extractor_empty
+    - state: plant_extractor_screens
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
   - type: Icon
-    sprite: Structures/Machines/mixer.rsi
-    state: mixer_loaded
+    sprite: Structures/Machines/plant_extractor.rsi
+    state: plant_extractor_loaded
   - type: PlantExtractor
     baseStorageMaxEntities: 10
   - type: Physics
