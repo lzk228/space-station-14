@@ -112,6 +112,7 @@
       - id: ClothingUniformOveralls
       - id: ClothingHeadHatTrucker
         prob: 0.1
+      - id: PlantExtractorMachineCircuitboard
 
 - type: entity
   id: LockerBotanistLoot
