@@ -37,3 +37,7 @@
 - type: stationGoal
   id: StationGoalAnomalyResearch
   text: station-goal-anomaly-research
+
+- type: stationGoal
+  id: StationGoalMiningOres
+  text: station-goal-mining-ores

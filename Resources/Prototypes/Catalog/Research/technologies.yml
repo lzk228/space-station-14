@@ -274,6 +274,7 @@
   - AppraisalTool
   - MiningDrill
   - OreProcessorMachineCircuitboard
+  - SalvageMagnetMachineCircuitboard
 
 - type: technology
   name: technologies-spacefaring

@@ -11,7 +11,7 @@
       time: 18000
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 54000 # Corvax-RoleTime
+      time: 43200 # Corvax-RoleTime
   weight: 10
   startingGear: CMOGear
   icon: "ChiefMedicalOfficer"

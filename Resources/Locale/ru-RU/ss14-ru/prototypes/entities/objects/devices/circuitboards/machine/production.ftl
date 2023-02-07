@@ -136,4 +136,6 @@ ent-SodaDispenserMachineCircuitboard = раздатчик безалкоголя
 ent-PlantExtractorMachineCircuitboard = ботанический извлекатель реагентов (машинная плата)
     .desc = Печатная плата ботанического извлекателя реагентов.
     .suffix = { "" }
-
+ent-SalvageMagnetMachineCircuitboard = магнит обломков (машинная плата)
+    .desc = Печатная плата магнита обломков.
+    .suffix = { "" }

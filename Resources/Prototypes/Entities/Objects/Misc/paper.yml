@@ -534,8 +534,8 @@
     stampedName: stamp-component-stamped-name-syndicate
     stampState: "paper_stamp-syndicate"
   - type: StampStateHandler
-    stampStateCollection: ["paper_stamp-mime", "paper_stamp-cap", "paper_stamp-warden", "paper_stamp-ce"]
-    stampNameCollection: [stamp-component-stamped-name-mime, stamp-component-stamped-name-captain, stamp-component-stamped-name-warden, stamp-component-stamped-name-ce]
+    stampStateCollection: ["paper_stamp-cap", "paper_stamp-warden", "paper_stamp-ce", "paper_stamp-chaplain", "paper_stamp-clown", "paper_stamp-mime", "paper_stamp-cmo", "paper_stamp-deny", "paper_stamp-approve", "paper_stamp-hop", "paper_stamp-hos", "paper_stamp-qm", "paper_stamp-rd", "paper_stamp-syndicate"]
+    stampNameCollection: [stamp-component-stamped-name-captain, stamp-component-stamped-name-warden, stamp-component-stamped-name-ce, stamp-component-stamped-name-chaplain, stamp-component-stamped-name-clown, stamp-component-stamped-name-mime, stamp-component-stamped-name-cmo, stamp-component-stamped-name-denied, stamp-component-stamped-name-approved, stamp-component-stamped-name-hop, stamp-component-stamped-name-hos, stamp-component-stamped-name-qm, stamp-component-stamped-name-rd, stamp-component-stamped-name-syndicate]
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: stamp-syndicate
