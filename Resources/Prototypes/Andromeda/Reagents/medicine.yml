@@ -1,0 +1,19 @@
+﻿- type: reagent
+  id: Homilin
+  name: reagent-name-homilin
+  group: Medicine
+  desc: reagent-desc-homilin
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#de5df5"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.01
+      effects:
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            types:
+              Asphyxiation: 7

@@ -1,0 +1,9 @@
+﻿- type: reaction
+  id: Homilin
+  reactants:
+    Epinephrine:
+      amount: 2
+    Leporazine:
+      amount: 1
+  products:
+    Homilin: 3
