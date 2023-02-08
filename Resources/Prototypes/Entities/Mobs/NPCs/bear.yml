@@ -29,13 +29,14 @@
       - MobLayer
   - type: MovementAlwaysTouching
   - type: MobState
-    allowedStates:
-      - Alive
-      - Dead
+#    allowedStates:
+#      - Alive
+#      - Dead
   - type: MobThresholds
     thresholds:
       0: Alive
-      150: Dead
+      150: Critical
+      200: Dead
   - type: Stamina
     excess: 150
   - type: Appearance
@@ -43,8 +44,8 @@
     states:
       Alive:
         Base: bear
-      Critical:
-        Base: bear_dead
+#      Critical:
+#        Base: bear_dead
       Dead:
         Base: bear_dead
   - type: Butcherable
