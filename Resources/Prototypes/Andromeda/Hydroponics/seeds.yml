@@ -97,3 +97,24 @@
       Min: 10
       Max: 20
       PotencyDivisor: 20
+
+- type: seed
+  id: lemonka
+  name: seeds-lemonka-name
+  noun: seeds-noun-seeds
+  displayName: seeds-lemonka-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+  productPrototypes:
+    - LemonKa
+  lifespan: 80
+  maturation: 12
+  production: 8
+  yield: 2
+  potency: 10
+  growthStages: 6
+  waterConsumption: 10
+  chemicals:
+    cfl3:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 50

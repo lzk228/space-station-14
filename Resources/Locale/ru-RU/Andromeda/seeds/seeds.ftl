@@ -6,3 +6,5 @@ seeds-cotton-name = хлопок
 seeds-cotton-display-name = хлопок
 seeds-slipperyblob-name = жижевик
 seeds-slipperyblob-display-name = жижевик
+seeds-lemonka-name = лимонка
+seeds-lemonka-display-name = лимонка

@@ -40,3 +40,34 @@
           density: 30
           mask:
             - ItemMask
+
+- type: entity
+  name: lemonka
+  description: Juicy organic grenade.
+  parent: FoodProduceBase
+  id: LemonKa
+  components:
+    - type: FlavorProfile
+      flavors:
+        - spicy
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: ChlorineTrifluoride
+              Quantity: 2
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+    - type: Lemonka
+    - type: Produce
+      seedId: LemonkaSeeds
+    - type: Damageable
+      damageContainer: Biological
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]

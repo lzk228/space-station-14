@@ -10,3 +10,6 @@ ent-CottonSeeds = пакет семян хлопка
 ent-SlipperyBlobSeeds = пакет семян жижевика
     .desc = Скользкие на вид.
     .suffix = { "" }
+ent-LemonkaSeeds = пакет семян лимонки
+    .desc = Подозрительные на вид.
+    .suffix = { "" }

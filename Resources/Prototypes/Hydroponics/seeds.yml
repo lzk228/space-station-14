@@ -124,6 +124,14 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+  evolveTable:
+    lemonka:
+      requiredMinPotency: 49
+      requiredMaxPotency: 100
+      requiredMinEndurance: 99
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 10
+      requiredReagent: ChlorineTrifluoride
 
 - type: seed
   id: pineapple
