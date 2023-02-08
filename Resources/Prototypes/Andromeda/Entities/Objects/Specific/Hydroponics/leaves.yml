@@ -1,0 +1,37 @@
+﻿- type: entity
+  name: lifeweed leaves
+  parent: ProduceBase
+  id: LifeweedLeaves
+  description: "Mystical plant that cures most diseases."
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lifeweed.rsi
+    - type: Produce
+      seedId: lifeweed
+    - type: Food
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: Omnizine
+              Quantity: 2
+
+- type: entity
+  name: deathweed leaves
+  parent: ProduceBase
+  id: DeathweedLeaves
+  description: "Mystical plant that makes you dead."
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/deathweed.rsi
+    - type: Produce
+      seedId: deathweed
+    - type: Food
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: Toxin
+              Quantity: 10
+            - ReagentId: ChloralHydrate
+              Quantity: 5

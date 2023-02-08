@@ -1,0 +1,99 @@
+﻿- type: seed
+  id: lifeweed
+  name: seeds-lifeweed-name
+  noun: seeds-noun-seeds
+  displayName: seeds-lifeweed-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/lifeweed.rsi
+  productPrototypes:
+    - LifeweedLeaves
+  harvestRepeat: Repeat
+  lifespan: 40
+  maturation: 8
+  production: 12
+  yield: 2
+  potency: 20
+  growthStages: 3
+  idealLight: 11
+  idealHeat: 298
+  consumeGasses:
+    Oxygen: 0.1
+  chemicals:
+    Omnizine:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 50
+
+- type: seed
+  id: deathweed
+  name: seeds-deathweed-name
+  noun: seeds-noun-seeds
+  displayName: seeds-deathweed-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/deathweed.rsi
+  productPrototypes:
+    - DeathweedLeaves
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 8
+  production: 12
+  yield: 2
+  potency: 20
+  growthStages: 3
+  idealLight: 2
+  idealHeat: 298
+  exudeGasses:
+    Tritium: 0.05
+  chemicals:
+    Toxin:
+      Min: 8
+      Max: 15
+      PotencyDivisor: 20
+    ChloralHydrate:
+      Min: 4
+      Max: 8
+      PotencyDivisor: 50
+
+- type: seed
+  id: cotton
+  name: seeds-cotton-name
+  noun: seeds-noun-seeds
+  displayName: seeds-cotton-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/cotton.rsi
+  productPrototypes:
+    - MaterialCotton1
+  harvestRepeat: Repeat
+  lifespan: 80
+  maturation: 15
+  production: 10
+  yield: 5
+  potency: 10
+  growthStages: 5
+  waterConsumption: 5
+  lightTolerance: 6
+  idealLight: 12
+  idealHeat: 300
+  chemicals:
+    Fiber:
+      Min: 2
+      Max: 4
+      PotencyDivisor: 20
+
+- type: seed
+  id: slipperyblob
+  name: seeds-slipperyblob-name
+  noun: seeds-noun-seeds
+  displayName: seeds-slipperyblob-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
+  productPrototypes:
+    - SlipperyBlob
+  lifespan: 30
+  maturation: 12
+  production: 2
+  yield: 4
+  potency: 10
+  growthStages: 4
+  waterConsumption: 3
+  chemicals:
+    SpaceLube:
+      Min: 10
+      Max: 20
+      PotencyDivisor: 20

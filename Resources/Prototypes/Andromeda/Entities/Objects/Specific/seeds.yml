@@ -1,0 +1,39 @@
+﻿- type: entity
+  parent: SeedBase
+  name: packet of lifeweed seeds
+  id: LifeweedSeeds
+  components:
+    - type: Seed
+      seedId: lifeweed
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lifeweed.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of deathweed seeds
+  id: DeathweedSeeds
+  components:
+    - type: Seed
+      seedId: deathweed
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/deathweed.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of cotton seeds
+  id: CottonSeeds
+  components:
+    - type: Seed
+      seedId: cotton
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/cotton.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of slipperyblob seeds
+  id: SlipperyBlobSeeds
+  components:
+    - type: Seed
+      seedId: slipperyblob
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi

@@ -1,0 +1,11 @@
+﻿- type: reaction
+  id: PlantBooster
+  reactants:
+    Diethylamine:
+      amount: 1
+    RobustHarvest:
+      amount: 1
+    Carbon:
+      amount: 1
+  products:
+    PlantBooster: 2

@@ -64,6 +64,7 @@
   idealLight: 9
   waterConsumption: 6
   idealHeat: 298
+  slip: true
   chemicals:
     Vitamin:
       Min: 1
@@ -178,6 +179,14 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+  evolveTable:
+    slipperyblob:
+      requiredMinPotency: 46
+      requiredMaxPotency: 100
+      requiredMinEndurance: 80
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 6
+      requiredReagent: WeldingFuel
 
 - type: seed
   id: sugarcane
@@ -434,6 +443,14 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
+  evolveTable:
+    cotton:
+      requiredMinPotency: 25
+      requiredMaxPotency: 100
+      requiredMinEndurance: 50
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 1
+      requiredReagent: Carbon
 
 - type: seed
   id: cannabis
@@ -457,6 +474,20 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
+  evolveTable:
+    lifeweed:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinEndurance: 95
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 11
+      requiredReagent: Tricordrazine
+    deathweed:
+      requiredMinPotency: 30
+      requiredMaxPotency: 50
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 30
+      requiredMutationLevel: 5
 
 - type: seed
   id: tobacco

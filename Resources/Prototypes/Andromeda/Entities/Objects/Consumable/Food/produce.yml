@@ -1,0 +1,42 @@
+﻿- type: entity
+  name: slipperyblob
+  parent: FoodProduceBase
+  id: SlipperyBlob
+  description: Strange and slippery fruit
+  components:
+    - type: FlavorProfile
+      flavors:
+        - slimy
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: SpaceLube
+              Quantity: 15
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
+    - type: Produce
+      seedId: SlipperyBlobSeeds
+    - type: Slippery
+      launchForwardsMultiplier: 2.5
+    - type: StepTrigger
+      intersectRatio: 0.2
+    - type: CollisionWake
+      enabled: false
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        - shape:
+            !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          id: "slips"
+          hard: false
+          layer:
+            - SlipLayer
+        - shape:
+            !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          density: 30
+          mask:
+            - ItemMask
