@@ -1,0 +1,109 @@
+﻿- type: entity
+  parent: SeedBase
+  name: packet of lifeweed seeds
+  id: LifeweedSeeds
+  components:
+    - type: Seed
+      seedId: lifeweed
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lifeweed.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of deathweed seeds
+  id: DeathweedSeeds
+  components:
+    - type: Seed
+      seedId: deathweed
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/deathweed.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of cotton seeds
+  id: CottonSeeds
+  components:
+    - type: Seed
+      seedId: cotton
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/cotton.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of slipperyblob seeds
+  id: SlipperyBlobSeeds
+  components:
+    - type: Seed
+      seedId: slipperyblob
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of lemonka seeds
+  id: LemonkaSeeds
+  components:
+    - type: Seed
+      seedId: lemonka
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of steelcane seeds
+  id: SteelcaneSeeds
+  components:
+    - type: Seed
+      seedId: steelcane
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/steelcane.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of namelessmushrom spores
+  id: NamelessMushroomSpores
+  components:
+    - type: Seed
+      seedId: namelessmushrщom
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of colina seeds
+  id: ColinaSeeds
+  components:
+    - type: Seed
+      seedId: colina
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/colina.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of moneytree seeds
+  id: MoneytreeSeeds
+  components:
+    - type: Seed
+      seedId: moneytree
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/moneytree.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of pizzaplant seeds
+  id: PizzaplantSeeds
+  components:
+    - type: Seed
+      seedId: pizzaplant
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/pizzaplant.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of rice seeds
+  id: RiceSeeds
+  components:
+    - type: Seed
+      seedId: rice
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/rice.rsi

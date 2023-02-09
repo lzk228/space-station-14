@@ -1,0 +1,263 @@
+﻿- type: seed
+  id: lifeweed
+  name: seeds-lifeweed-name
+  noun: seeds-noun-seeds
+  displayName: seeds-lifeweed-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/lifeweed.rsi
+  productPrototypes:
+    - LifeweedLeaves
+  harvestRepeat: Repeat
+  lifespan: 40
+  maturation: 8
+  production: 12
+  yield: 2
+  potency: 20
+  growthStages: 3
+  idealLight: 11
+  idealHeat: 298
+  consumeGasses:
+    Oxygen: 0.1
+  chemicals:
+    Omnizine:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 5
+
+- type: seed
+  id: deathweed
+  name: seeds-deathweed-name
+  noun: seeds-noun-seeds
+  displayName: seeds-deathweed-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/deathweed.rsi
+  productPrototypes:
+    - DeathweedLeaves
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 8
+  production: 12
+  yield: 2
+  potency: 20
+  growthStages: 3
+  idealLight: 2
+  idealHeat: 298
+  exudeGasses:
+    Tritium: 0.05
+  chemicals:
+    Toxin:
+      Min: 8
+      Max: 30
+      PotencyDivisor: 5
+    ChloralHydrate:
+      Min: 4
+      Max: 15
+      PotencyDivisor: 10
+
+- type: seed
+  id: cotton
+  name: seeds-cotton-name
+  noun: seeds-noun-seeds
+  displayName: seeds-cotton-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/cotton.rsi
+  productPrototypes:
+    - MaterialCotton1
+  harvestRepeat: Repeat
+  lifespan: 80
+  maturation: 15
+  production: 10
+  yield: 5
+  potency: 10
+  growthStages: 5
+  waterConsumption: 5
+  lightTolerance: 6
+  idealLight: 12
+  idealHeat: 300
+  chemicals:
+    Fiber:
+      Min: 2
+      Max: 10
+      PotencyDivisor: 10
+
+- type: seed
+  id: slipperyblob
+  name: seeds-slipperyblob-name
+  noun: seeds-noun-seeds
+  displayName: seeds-slipperyblob-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
+  productPrototypes:
+    - SlipperyBlob
+  lifespan: 30
+  maturation: 12
+  production: 2
+  yield: 4
+  potency: 10
+  growthStages: 4
+  waterConsumption: 3
+  idealHeat: 255
+  chemicals:
+    SpaceLube:
+      Min: 10
+      Max: 20
+      PotencyDivisor: 10
+
+- type: seed
+  id: lemonka
+  name: seeds-lemonka-name
+  noun: seeds-noun-seeds
+  displayName: seeds-lemonka-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+  productPrototypes:
+    - LemonKa
+  lifespan: 80
+  maturation: 12
+  production: 8
+  yield: 2
+  potency: 10
+  growthStages: 6
+  waterConsumption: 10
+  chemicals:
+    ChlorineTrifluoride:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 25
+  evolveTable:
+    gatfruit:
+      requiredMinPotency: 20
+      requiredMaxPotency: 100
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 40
+      requiredMutationLevel: 0
+
+- type: seed
+  id: steelcane
+  name: seeds-steelcane-name
+  noun: seeds-noun-seeds
+  displayName: seeds-steelcane-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/steelcane.rsi
+  productPrototypes:
+    - PartRodMetal1
+  harvestRepeat: Repeat
+  lifespan: 160
+  maturation: 5
+  production: 10
+  yield: 4
+  potency: 1
+  growthStages: 3
+  idealHeat: 298
+  waterConsumption: 0
+  chemicals:
+    Iron:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+
+- type: seed
+  id: namelessmushroom
+  name: seeds-namelessmushroom-name
+  noun: seeds-noun-spores
+  displayName: seeds-namelessmushroom-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi
+  productPrototypes:
+    - FoodNamelessMushroom
+  lifespan: 25
+  maturation: 10
+  production: 2
+  yield: 3
+  potency: 10
+  growthStages: 3
+  waterConsumption: 5
+  chemicals:
+    Zoomium:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+
+- type: seed
+  id: colina
+  name: seeds-colina-name
+  noun: seeds-noun-seeds
+  displayName: seeds-colina-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/colina.rsi
+  productPrototypes:
+    - DrinkColaCan
+  lifespan: 100
+  maturation: 10
+  production: 2
+  yield: 2
+  potency: 1
+  growthStages: 3
+  waterConsumption: 10
+  chemicals:
+    Cola:
+      Min: 25
+      Max: 35
+      PotencyDivisor: 10
+
+- type: seed
+  id: moneytree
+  name: seeds-moneytree-name
+  noun: seeds-noun-seeds
+  displayName: seeds-moneytree-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/moneytree.rsi
+  productPrototypes:
+    - SpaceCash10
+  harvestRepeat: Repeat
+  lifespan: 30
+  maturation: 6
+  production: 6
+  yield: 5
+  potency: 1
+  idealLight: 4
+  chemicals:
+    Blood:
+      Min: 1
+      Max: 1
+      PotencyDivisor: 100
+
+- type: seed
+  id: pizzaplant
+  name: seeds-pizzaplant-name
+  noun: seeds-noun-seeds
+  displayName: seeds-pizzaplant-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/pizzaplant.rsi
+  productPrototypes:
+    - FoodPizzaPineapple
+  lifespan: 55
+  maturation: 6
+  production: 6
+  yield: 1
+  potency: 10
+  idealLight: 8
+  growthStages: 2
+  idealHeat: 373
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 5
+
+- type: seed
+  id: rice
+  name: seeds-rice-name
+  noun: seeds-noun-seeds
+  displayName: seeds-rice-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/rice.rsi
+  productPrototypes:
+    - RiceBushel
+  lifespan: 25
+  maturation: 6
+  production: 1
+  yield: 4
+  potency: 5
+  idealLight: 8
+  nutrientConsumption: 0.15
+  waterConsumption: 8
+  growthStages: 3
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 20
+    Rice:
+      Min: 5
+      Max: 20
+      PotencyDivisor: 20

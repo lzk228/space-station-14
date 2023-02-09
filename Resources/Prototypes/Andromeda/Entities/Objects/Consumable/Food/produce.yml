@@ -1,0 +1,123 @@
+﻿- type: entity
+  name: slipperyblob
+  parent: FoodProduceBase
+  id: SlipperyBlob
+  description: Strange and slippery fruit
+  components:
+    - type: FlavorProfile
+      flavors:
+        - slimy
+    - type: StaticPrice
+      price: 80
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: SpaceLube
+              Quantity: 15
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
+    - type: Produce
+      seedId: SlipperyBlobSeeds
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Slippery
+      launchForwardsMultiplier: 2.5
+    - type: StepTrigger
+      intersectRatio: 0.2
+    - type: CollisionWake
+      enabled: false
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        - shape:
+            !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          id: "slips"
+          hard: false
+          layer:
+            - SlipLayer
+        - shape:
+            !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          density: 30
+          mask:
+            - ItemMask
+
+- type: entity
+  name: lemonka
+  description: Juicy organic grenade.
+  parent: FoodProduceBase
+  id: LemonKa
+  components:
+    - type: FlavorProfile
+      flavors:
+        - spicy
+    - type: StaticPrice
+      price: 50
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: ChlorineTrifluoride
+              Quantity: 2
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+    - type: Lemonka
+    - type: Produce
+      seedId: LemonkaSeeds
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Damageable
+      damageContainer: Biological
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  name: namelessmushroom
+  parent: FoodProduceBase
+  id: FoodNamelessMushroom
+  description: Unknown mushroom.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - mushroom
+        - bitter
+    - type: StaticPrice
+      price: 100
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: Zoomium
+              Quantity: 7
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi
+    - type: Produce
+      seedId: namelessmushroom
+    - type: Extractable
+      grindableSolutionName: food
+
+- type: entity
+  name: wheat bushel
+  description: Yay! Rice!
+  id: RiceBushel
+  parent: ProduceBase
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/rice.rsi
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: Rice
+              Quantity: 10
+    - type: Produce
+      seedId: rice

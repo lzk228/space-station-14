@@ -22,6 +22,20 @@
       Min: 5
       Max: 20
       PotencyDivisor: 20
+  evolveTable:
+    oat:
+      requiredMinPotency: 40
+      requiredMaxPotency: 100
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 40
+      requiredMutationLevel: 0
+    rice:
+      requiredMinPotency: 30
+      requiredMaxPotency: 100
+      requiredMinEndurance: 70
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 0
+      requiredReagent: Rice
 
 - type: seed
   id: oat
@@ -64,6 +78,7 @@
   idealLight: 9
   waterConsumption: 6
   idealHeat: 298
+  slip: true
   chemicals:
     Vitamin:
       Min: 1
@@ -98,6 +113,14 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+  evolveTable:
+    colina:
+      requiredMinPotency: 30
+      requiredMaxPotency: 100
+      requiredMinEndurance: 60
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 1
+      requiredReagent: Cola
 
 - type: seed
   id: lemon
@@ -123,6 +146,14 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+  evolveTable:
+    lemonka:
+      requiredMinPotency: 49
+      requiredMaxPotency: 100
+      requiredMinEndurance: 99
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 1
+      requiredReagent: ChlorineTrifluoride
 
 - type: seed
   id: pineapple
@@ -153,6 +184,14 @@
       Min: 1
       Max: 2
       PotencyDivisor: 50
+  evolveTable:
+    pizzaplant:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinEndurance: 90
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 0
+      requiredReagent: Flour
 
 - type: seed
   id: potato
@@ -178,6 +217,14 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+  evolveTable:
+    slipperyblob:
+      requiredMinPotency: 46
+      requiredMaxPotency: 100
+      requiredMinEndurance: 80
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 0
+      requiredReagent: WeldingFuel
 
 - type: seed
   id: sugarcane
@@ -200,6 +247,14 @@
       Min: 4
       Max: 5
       PotencyDivisor: 5
+  evolveTable:
+    steelcane:
+      requiredMinPotency: 30
+      requiredMaxPotency: 100
+      requiredMinEndurance: 70
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 0
+      requiredReagent: Iron
 
 - type: seed
   id: towercap
@@ -300,6 +355,14 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+  evolveTable:
+    moneytree:
+      requiredMinPotency: 15
+      requiredMaxPotency: 100
+      requiredMinEndurance: 60
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 0
+      requiredReagent: SyndicateBomb
 
 - type: seed
   id: corn
@@ -412,6 +475,13 @@
       Min: 1
       Max: 25
       PotencyDivisor: 25
+  evolveTable:
+    flyAmanita:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 30
+      requiredMutationLevel: 0
 
 - type: seed
   id: eggy
@@ -434,6 +504,14 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
+  evolveTable:
+    cotton:
+      requiredMinPotency: 25
+      requiredMaxPotency: 100
+      requiredMinEndurance: 50
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 0
+      requiredReagent: Carbon
 
 - type: seed
   id: cannabis
@@ -457,6 +535,20 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
+  evolveTable:
+    lifeweed:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinEndurance: 95
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 1
+      requiredReagent: Tricordrazine
+    deathweed:
+      requiredMinPotency: 30
+      requiredMaxPotency: 50
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 30
+      requiredMutationLevel: 0
 
 - type: seed
   id: tobacco
@@ -608,6 +700,14 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
+  evolveTable:
+    namelessmushroom:
+      requiredMinPotency: 30
+      requiredMaxPotency: 100
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 70
+      requiredMutationLevel: 0
+      requiredReagent: SpaceDrugs
 
 - type: seed
   id: ambrosiaVulgaris
@@ -666,6 +766,13 @@
       Min: 1
       Max: 25
       PotencyDivisor: 4
+  evolveTable:
+    cannabis:
+      requiredMinPotency: 60
+      requiredMaxPotency: 100
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 70
+      requiredMutationLevel: 0
 
 - type: seed
   id: flyAmanita

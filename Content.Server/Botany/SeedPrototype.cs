@@ -63,6 +63,17 @@ public struct SeedChemQuantity
     [DataField("PotencyDivisor")] public int PotencyDivisor;
 }
 
+[DataDefinition]
+public struct SeedEvolveConditions
+{
+    [DataField("requiredMinPotency")] public int RequiredMinPotency;
+    [DataField("requiredMaxPotency")] public int RequiredMaxPotency;
+    [DataField("requiredMinEndurance")] public int RequiredMinEndurance;
+    [DataField("requiredMaxEndurance")] public int RequiredMaxEndurance;
+    [DataField("requiredMutationLevel")] public int RequiredMutationLevel;
+    [DataField("requiredReagent")] public string? ReagentId;
+}
+
 // TODO reduce the number of friends to a reasonable level. Requires ECS-ing things like plant holder component.
 [Virtual, DataDefinition]
 [Access(typeof(BotanySystem), typeof(PlantHolderSystem), typeof(SeedExtractorSystem), typeof(PlantHolderComponent), typeof(ReagentEffect), typeof(MutationSystem))]
@@ -186,6 +197,8 @@ public class SeedData
     /// </summary>
     [DataField("ligneous")] public bool Ligneous;
 
+    [DataField("evolveTable")] public Dictionary<string, SeedEvolveConditions> EvolveTable = new();
+
     // No, I'm not removing these.
     // if you re-add these, make sure that they get cloned.
     //public PlantSpread Spread { get; set; }
@@ -261,6 +274,7 @@ public class SeedData
             Slip = Slip,
             Sentient = Sentient,
             Ligneous = Ligneous,
+            EvolveTable = new Dictionary<string, SeedEvolveConditions>(EvolveTable),
 
             PlantRsi = PlantRsi,
             PlantIconState = PlantIconState,

@@ -1,9 +1,9 @@
 plant-extractor-component-upgrade-work-time = Время работы
 plant-extractor-component-upgrade-storage = Хранилище
 
-plant-extractor-component-cannot-put-entity-message = Вы не можете положить это в ботанический извлекатель реагентов!
+plant-extractor-component-cannot-put-entity-message = Вы не можете положить это в ботанический экстрактор!
 
-plant-extractor-window-title = Ботанический извлекатель реагентов
+plant-extractor-window-title = Ботанический экстрактор
 
 plant-extractor-window-tab-buffer = Буфер реагентов
 plant-extractor-window-tab-chamber = Камера хранения

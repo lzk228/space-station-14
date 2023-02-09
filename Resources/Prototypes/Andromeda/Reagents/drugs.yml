@@ -1,0 +1,17 @@
+﻿- type: reagent
+  id: Zoomium
+  name: reagent-name-zoomium
+  group: Narcotics
+  desc: reagent-desc-zoomium
+  physicalDesc: reagent-physical-desc-syrupy
+  flavor: bitter
+  color: "#9f01a1"
+  metabolisms:
+    Narcotic:
+      effects:
+        - !type:GenericStatusEffect
+          key: Zoomium
+          component: Zoomium
+          type: Add
+          time: 4
+          refresh: false

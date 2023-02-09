@@ -200,6 +200,17 @@
           - cotton
           - cotton_2
           - cotton_3
+  - type: Material
+    materials:
+      Cloth: 10
+  - type: SolutionContainerManager
+    solutions:
+      fiber:
+        reagents:
+          - ReagentId: Fiber
+            Quantity: 3
+  - type: Extractable
+    grindableSolutionName: fiber
 
 - type: entity
   parent: MaterialCotton
@@ -210,3 +221,4 @@
     state: cotton
   - type: Stack
     count: 1
+  - type: PotencyVisuals
