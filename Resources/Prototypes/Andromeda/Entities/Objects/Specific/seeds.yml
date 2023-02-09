@@ -47,3 +47,23 @@
       seedId: lemonka
     - type: Sprite
       sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of steelcane seeds
+  id: SteelcaneSeeds
+  components:
+    - type: Seed
+      seedId: steelcane
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/steelcane.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of namelessmushrom spores
+  id: NamelessMushroomSpores
+  components:
+    - type: Seed
+      seedId: namelessmushrщom
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi

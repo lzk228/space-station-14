@@ -8,3 +8,7 @@ seeds-slipperyblob-name = жижевик
 seeds-slipperyblob-display-name = жижевик
 seeds-lemonka-name = лимонка
 seeds-lemonka-display-name = лимонка
+seeds-steelcane-name = арматурник
+seeds-steelcane-display-name = арматурник
+seeds-namelessmushroom-name = неизвестный гриб
+seeds-namelessmushroom-display-name = неизвестный гриб

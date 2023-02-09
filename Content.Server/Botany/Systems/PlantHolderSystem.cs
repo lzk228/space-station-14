@@ -15,6 +15,7 @@ using Content.Shared.Botany;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Maps;
 using Content.Shared.Popups;
 using Content.Shared.Random.Helpers;
 using Robust.Server.GameObjects;
@@ -304,10 +305,17 @@ namespace Content.Server.Botany.Systems
             var transform = Transform(component.Owner);
             var coords = transform.Coordinates;
 
-            if (component.MutationLevel > 15 && component.NutritionLevel > 4)
+            foreach (var entity in coords.GetEntitiesInTile())
+            {
+                if (_tagSystem.HasTag(entity, "Weed"))
+                    return;
+            }
+
+            if (component.MutationLevel > 15 && component.NutritionLevel > 20)
             {
                 EntityManager.SpawnEntity("Kudzu", coords);
                 Logger.Info($"Spawning a Kudzu at {coords}");
+                component.MutationLevel -= 5;
             }
             else
             {

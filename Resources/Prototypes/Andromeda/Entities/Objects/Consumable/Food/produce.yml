@@ -17,6 +17,8 @@
       sprite: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
     - type: Produce
       seedId: SlipperyBlobSeeds
+    - type: Extractable
+      grindableSolutionName: food
     - type: Slippery
       launchForwardsMultiplier: 2.5
     - type: StepTrigger
@@ -61,6 +63,8 @@
     - type: Lemonka
     - type: Produce
       seedId: LemonkaSeeds
+    - type: Extractable
+      grindableSolutionName: food
     - type: Damageable
       damageContainer: Biological
     - type: Destructible
@@ -71,3 +75,26 @@
           behaviors:
             - !type:DoActsBehavior
               acts: ["Destruction"]
+
+- type: entity
+  name: namelessmushroom
+  parent: FoodProduceBase
+  id: FoodNamelessMushroom
+  description: Unknown mushroom.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - mushroom
+        - bitter
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          reagents:
+            - ReagentId: Zoomium
+              Quantity: 7
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi
+    - type: Produce
+      seedId: namelessmushroom
+    - type: Extractable
+      grindableSolutionName: food

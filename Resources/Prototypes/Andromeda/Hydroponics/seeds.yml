@@ -20,8 +20,8 @@
   chemicals:
     Omnizine:
       Min: 1
-      Max: 5
-      PotencyDivisor: 50
+      Max: 6
+      PotencyDivisor: 20
 
 - type: seed
   id: deathweed
@@ -96,7 +96,7 @@
     SpaceLube:
       Min: 10
       Max: 20
-      PotencyDivisor: 20
+      PotencyDivisor: 10
 
 - type: seed
   id: lemonka
@@ -114,7 +114,46 @@
   growthStages: 6
   waterConsumption: 10
   chemicals:
-    cfl3:
+    ChlorineTrifluoride:
       Min: 1
-      Max: 2
+      Max: 4
       PotencyDivisor: 50
+
+- type: seed
+  id: steelcane
+  name: seeds-steelcane-name
+  noun: seeds-noun-seeds
+  displayName: seeds-steelcane-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/steelcane.rsi
+  productPrototypes:
+    - PartRodMetal1
+  harvestRepeat: Repeat
+  lifespan: 160
+  maturation: 5
+  production: 10
+  yield: 4
+  potency: 1
+  growthStages: 3
+  idealHeat: 298
+  waterConsumption: 0
+
+- type: seed
+  id: namelessmushroom
+  name: seeds-namelessmushroom-name
+  noun: seeds-noun-spores
+  displayName: seeds-namelessmushroom-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi
+  productPrototypes:
+    - FoodNamelessMushroom
+  lifespan: 25
+  maturation: 10
+  production: 2
+  yield: 3
+  potency: 10
+  growthStages: 3
+  waterConsumption: 5
+  chemicals:
+    Zoomium:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20

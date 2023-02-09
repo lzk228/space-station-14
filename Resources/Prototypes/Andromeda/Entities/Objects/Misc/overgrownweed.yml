@@ -17,6 +17,9 @@
       state: weed
       drawdepth: Overdoors
       netsync: false
+    - type: Tag
+      tags:
+        - Weed
     - type: Appearance
     - type: Clickable
     - type: Transform

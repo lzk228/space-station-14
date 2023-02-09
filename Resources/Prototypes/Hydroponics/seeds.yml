@@ -217,6 +217,14 @@
       Min: 4
       Max: 5
       PotencyDivisor: 5
+  evolveTable:
+    steelcane:
+      requiredMinPotency: 30
+      requiredMaxPotency: 100
+      requiredMinEndurance: 70
+      requiredMaxEndurance: 150
+      requiredMutationLevel: 3
+      requiredReagent: Iron
 
 - type: seed
   id: towercap
@@ -647,6 +655,14 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
+  evolveTable:
+    namelessmushroom:
+      requiredMinPotency: 30
+      requiredMaxPotency: 100
+      requiredMinEndurance: 0
+      requiredMaxEndurance: 70
+      requiredMutationLevel: 0
+      requiredReagent: SpaceDrugs
 
 - type: seed
   id: ambrosiaVulgaris
