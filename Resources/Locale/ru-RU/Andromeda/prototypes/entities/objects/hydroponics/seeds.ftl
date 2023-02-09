@@ -19,4 +19,15 @@ ent-SteelcaneSeeds = пакет семян арматурника
 ent-NamelessMushroomSpores = пакет неизвестных спор
     .desc = Вы понятия не имеете о том, что это.
     .suffix = { "" }
-
+ent-ColinaSeeds = пакет семян колины
+    .desc = Один их вид утоляет жажду.
+    .suffix = { "" }
+ent-MoneyTreeSeeds = пакет семян денежного дерева
+    .desc = Кто говорил, что деньги не растут на деревьях?
+    .suffix = { "" }
+ent-PizzaplantSeeds = пакет семян пиццевика
+    .desc = Конечно же с ананасом!
+    .suffix = { "" }
+ent-RiceSeeds = пакет семян риса
+    .desc = Незаменим на кухне.
+    .suffix = { "" }

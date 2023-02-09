@@ -9,6 +9,8 @@
     - type: Produce
       seedId: lifeweed
     - type: Food
+    - type: StaticPrice
+      price: 150
     - type: SolutionContainerManager
       solutions:
         food:
@@ -27,6 +29,8 @@
     - type: Produce
       seedId: deathweed
     - type: Food
+    - type: StaticPrice
+      price: 130
     - type: SolutionContainerManager
       solutions:
         food:

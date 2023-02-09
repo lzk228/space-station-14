@@ -221,6 +221,4 @@
     state: cotton
   - type: Stack
     count: 1
-  - type: Produce
-    seedId: cotton
   - type: PotencyVisuals

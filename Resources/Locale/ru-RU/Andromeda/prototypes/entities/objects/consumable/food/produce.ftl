@@ -7,3 +7,6 @@ ent-LemonKa = ЛимонКа
 ent-FoodNamelessMushroom = Неизвестный гриб
     .desc = Неизвестный полупрозрачный гриб, на котором сложно сфокусировать взгляд.
     .suffix = { "" }
+ent-RiceBushel = Бушель риса
+    .desc = Ура! Рис!
+    .suffix = { "" }
