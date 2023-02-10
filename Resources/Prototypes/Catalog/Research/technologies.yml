@@ -414,6 +414,7 @@
   - ThermomachineFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
+  - AtmosDeviceFanTinyMachineCircuitboard
 
 - type: technology
   name: technologies-rapid-upgrade

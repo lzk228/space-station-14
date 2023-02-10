@@ -800,3 +800,17 @@
       materialRequirements:
         Steel: 5
         Cable: 2
+
+- type: entity
+  id: AtmosDeviceFanTinyMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: tiny fan machine board
+  description: A machine printed circuit board for a tiny fan
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: AtmosDeviceFanTiny
+      requirements:
+        MatterBin: 3
+        Manipulator: 2

@@ -544,3 +544,11 @@
   materials:
     Steel: 100
     Glass: 900
+
+- type: latheRecipe
+  id: AtmosDeviceFanTinyMachineCircuitboard
+  result: AtmosDeviceFanTinyMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 350

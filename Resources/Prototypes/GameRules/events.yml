@@ -213,10 +213,15 @@
   config:
     !type:StationEventRuleConfiguration
     id: SpiderSpawn
+    startAnnouncement: station-event-spider-spawn-start-announcement
+    startAudio:
+      path: /Audio/Announcements/aliens.ogg # Corvax-Announcements
+      params:
+        volume: -4
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
-    endAfter: 60    
+    endAfter: 60
 
 - type: gameRule
   id: ZombieOutbreak

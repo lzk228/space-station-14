@@ -22,3 +22,18 @@
   - type: Airtight
     noAirWhenFullyAirBlocked: false
   - type: Clickable
+  - type: Machine
+    board: AtmosDeviceFanTinyMachineCircuitboard
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: Machine
+    node: machine
