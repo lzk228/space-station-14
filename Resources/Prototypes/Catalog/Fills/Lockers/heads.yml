@@ -159,6 +159,7 @@
       - id: DoorRemoteResearch
       - id: RubberStampRd
       - id: ClothingHeadsetAltScience
+      - id: PinpointerAnomaly
 
 - type: entity
   id: LockerHeadOfSecurityFilled

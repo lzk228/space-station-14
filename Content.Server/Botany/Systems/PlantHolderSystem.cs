@@ -858,8 +858,8 @@ namespace Content.Server.Botany.Systems
 
                     if (component.Seed.Potency >= seedEvolveConditions.RequiredMinPotency &&
                         component.Seed.Potency < seedEvolveConditions.RequiredMaxPotency &&
-                        component.Seed.Endurance >= seedEvolveConditions.RequiredMinEndurance &&
-                        component.Seed.Endurance < seedEvolveConditions.RequiredMaxEndurance &&
+                        component.Health >= seedEvolveConditions.RequiredMinHealth &&
+                        component.Health < seedEvolveConditions.RequiredMaxHealth &&
                         mutationLevelMemory >= seedEvolveConditions.RequiredMutationLevel &&
                         (seedEvolveConditions.ReagentId == null || solution.ContainsReagent(seedEvolveConditions.ReagentId)))
                     {

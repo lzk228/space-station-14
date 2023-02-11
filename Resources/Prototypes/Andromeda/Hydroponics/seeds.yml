@@ -107,6 +107,7 @@
   plantRsi: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
   productPrototypes:
     - LemonKa
+  harvestRepeat: Repeat
   lifespan: 80
   maturation: 12
   production: 8
@@ -121,10 +122,10 @@
       PotencyDivisor: 25
   evolveTable:
     gatfruit:
-      requiredMinPotency: 20
+      requiredMinPotency: 60
       requiredMaxPotency: 100
-      requiredMinEndurance: 0
-      requiredMaxEndurance: 40
+      requiredMinHealth: 0
+      requiredMaxHealth: 40
       requiredMutationLevel: 0
 
 - type: seed

@@ -26,14 +26,14 @@
     oat:
       requiredMinPotency: 40
       requiredMaxPotency: 100
-      requiredMinEndurance: 0
-      requiredMaxEndurance: 40
+      requiredMinHealth: 0
+      requiredMaxHealth: 40
       requiredMutationLevel: 0
     rice:
       requiredMinPotency: 30
       requiredMaxPotency: 100
-      requiredMinEndurance: 70
-      requiredMaxEndurance: 150
+      requiredMinHealth: 70
+      requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: Rice
 
@@ -115,10 +115,10 @@
       PotencyDivisor: 25
   evolveTable:
     colina:
-      requiredMinPotency: 30
+      requiredMinPotency: 10
       requiredMaxPotency: 100
-      requiredMinEndurance: 60
-      requiredMaxEndurance: 150
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
       requiredMutationLevel: 1
       requiredReagent: Cola
 
@@ -148,10 +148,10 @@
       PotencyDivisor: 25
   evolveTable:
     lemonka:
-      requiredMinPotency: 49
+      requiredMinPotency: 51
       requiredMaxPotency: 100
-      requiredMinEndurance: 99
-      requiredMaxEndurance: 150
+      requiredMinHealth: 99
+      requiredMaxHealth: 150
       requiredMutationLevel: 1
       requiredReagent: ChlorineTrifluoride
 
@@ -188,8 +188,8 @@
     pizzaplant:
       requiredMinPotency: 50
       requiredMaxPotency: 100
-      requiredMinEndurance: 90
-      requiredMaxEndurance: 150
+      requiredMinHealth: 90
+      requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: Flour
 
@@ -221,8 +221,8 @@
     slipperyblob:
       requiredMinPotency: 46
       requiredMaxPotency: 100
-      requiredMinEndurance: 80
-      requiredMaxEndurance: 150
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: WeldingFuel
 
@@ -249,10 +249,10 @@
       PotencyDivisor: 5
   evolveTable:
     steelcane:
-      requiredMinPotency: 30
+      requiredMinPotency: 0
       requiredMaxPotency: 100
-      requiredMinEndurance: 70
-      requiredMaxEndurance: 150
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: Iron
 
@@ -359,8 +359,8 @@
     moneytree:
       requiredMinPotency: 15
       requiredMaxPotency: 100
-      requiredMinEndurance: 60
-      requiredMaxEndurance: 150
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: SyndicateBomb
 
@@ -477,10 +477,10 @@
       PotencyDivisor: 25
   evolveTable:
     flyAmanita:
-      requiredMinPotency: 50
+      requiredMinPotency: 40
       requiredMaxPotency: 100
-      requiredMinEndurance: 0
-      requiredMaxEndurance: 30
+      requiredMinHealth: 0
+      requiredMaxHealth: 30
       requiredMutationLevel: 0
 
 - type: seed
@@ -508,8 +508,8 @@
     cotton:
       requiredMinPotency: 25
       requiredMaxPotency: 100
-      requiredMinEndurance: 50
-      requiredMaxEndurance: 150
+      requiredMinHealth: 50
+      requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: Carbon
 
@@ -539,15 +539,15 @@
     lifeweed:
       requiredMinPotency: 50
       requiredMaxPotency: 100
-      requiredMinEndurance: 95
-      requiredMaxEndurance: 150
+      requiredMinHealth: 95
+      requiredMaxHealth: 150
       requiredMutationLevel: 1
       requiredReagent: Tricordrazine
     deathweed:
       requiredMinPotency: 30
-      requiredMaxPotency: 50
-      requiredMinEndurance: 0
-      requiredMaxEndurance: 30
+      requiredMaxPotency: 40
+      requiredMinHealth: 0
+      requiredMaxHealth: 20
       requiredMutationLevel: 0
 
 - type: seed
@@ -704,8 +704,8 @@
     namelessmushroom:
       requiredMinPotency: 30
       requiredMaxPotency: 100
-      requiredMinEndurance: 0
-      requiredMaxEndurance: 70
+      requiredMinHealth: 0
+      requiredMaxHealth: 40
       requiredMutationLevel: 0
       requiredReagent: SpaceDrugs
 
@@ -770,8 +770,8 @@
     cannabis:
       requiredMinPotency: 60
       requiredMaxPotency: 100
-      requiredMinEndurance: 0
-      requiredMaxEndurance: 70
+      requiredMinHealth: 0
+      requiredMaxHealth: 70
       requiredMutationLevel: 0
 
 - type: seed

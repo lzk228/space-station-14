@@ -42,6 +42,6 @@ public sealed class LemonkaSystem : EntitySystem
 
         var potency = produceComponent.Seed?.Potency ?? 1;
         EntitySystem.Get<ExplosionSystem>().QueueExplosion(
-            uid, "Default", potency * 3, 1, 120);
+            uid, "Default", potency * 2, 1, 120);
     }
 }

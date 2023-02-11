@@ -68,8 +68,8 @@ public struct SeedEvolveConditions
 {
     [DataField("requiredMinPotency")] public int RequiredMinPotency;
     [DataField("requiredMaxPotency")] public int RequiredMaxPotency;
-    [DataField("requiredMinEndurance")] public int RequiredMinEndurance;
-    [DataField("requiredMaxEndurance")] public int RequiredMaxEndurance;
+    [DataField("requiredMinHealth")] public int RequiredMinHealth;
+    [DataField("requiredMaxHealth")] public int RequiredMaxHealth;
     [DataField("requiredMutationLevel")] public int RequiredMutationLevel;
     [DataField("requiredReagent")] public string? ReagentId;
 }

@@ -1,0 +1,7 @@
+﻿- type: entity
+  name: pinpointeranomaly
+  id: PinpointerAnomaly
+  parent: PinpointerBase
+  components:
+    - type: Pinpointer
+      component: Anomaly
