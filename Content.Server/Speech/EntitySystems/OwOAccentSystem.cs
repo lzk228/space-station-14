@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
 using Robust.Shared.Random;
 
@@ -13,8 +14,7 @@ namespace Content.Server.Speech.EntitySystems
 
         private static readonly IReadOnlyDictionary<string, string> SpecialWords = new Dictionary<string, string>()
         {
-            { "you", "wu" },
-            { "ты", "ти" }, // Corvax-Localization
+            { "you", "wu" }
         };
 
         public override void Initialize()
@@ -29,11 +29,12 @@ namespace Content.Server.Speech.EntitySystems
                 message = message.Replace(word, repl);
             }
 
+            message = Regex.Replace(message, "Р([уияа])", "В$1");
+            message = Regex.Replace(message, "р([уияа])", "в$1");
+            message = Regex.Replace(message, "([Нн])а", "$1я");
+            message = Regex.Replace(message, "([Нн])о", "$1ё");
+
             return message.Replace("!", _random.Pick(Faces))
-                // Corvax-Localization-Start
-                .Replace("р", "в").Replace("Р", "В")
-                .Replace("л", "в").Replace("Л", "В")
-                // Corvax-Localization-End
                 .Replace("r", "w").Replace("R", "W")
                 .Replace("l", "w").Replace("L", "W");
         }
