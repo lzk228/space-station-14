@@ -20,7 +20,7 @@ public sealed class AdminNotifySystem : EntitySystem
         if (!TryComp(ev.Target, out ActorComponent? actorComponent))
             return;
 
-        if (actorComponent.PlayerSession.AttachedEntity == null)
+        if (actorComponent.PlayerSession.AttachedEntity == null || ev.NewMobState == MobState.Alive)
             return;
 
         string message;
