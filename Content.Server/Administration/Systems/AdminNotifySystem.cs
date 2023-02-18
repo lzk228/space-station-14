@@ -38,6 +38,6 @@ public sealed class AdminNotifySystem : EntitySystem
                 ("origin", ToPrettyString(ev.Origin.Value)));
         }
 
-        _chatManager.SendAdminAnnouncement(message);
+        _chatManager.SendAdminNotification(message);
     }
 }

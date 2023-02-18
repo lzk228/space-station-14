@@ -75,6 +75,11 @@ namespace Content.Shared.Chat
         Unspecified = 1 << 12,
 
         /// <summary>
+        ///     Unspecified.
+        /// </summary>
+        AdminNotifications = 1 << 13,
+
+        /// <summary>
         ///     Channels considered to be IC.
         /// </summary>
         IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual,

@@ -1,0 +1,41 @@
+﻿- type: artifactEffect
+  id: EffectEvolvedSeedsSpawn
+  targetDepth: 1
+  effectHint: artifact-effect-hint-creation
+  components:
+    - type: SpawnArtifact
+      maxSpawns: 6
+      spawns:
+        - id: LifeweedSeeds
+          prob: 0.05
+          orGroup: Seeds
+        - id: DeathweedSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: CottonSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: SlipperyBlobSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: LemonkaSeeds
+          prob: 0.05
+          orGroup: Seeds
+        - id: SteelcaneSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: NamelessMushroomSpores
+          prob: 0.1
+          orGroup: Seeds
+        - id: ColinaSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: MoneytreeSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: PizzaplantSeeds
+          prob: 0.1
+          orGroup: Seeds
+        - id: RiceSeeds
+          prob: 0.1
+          orGroup: Seeds

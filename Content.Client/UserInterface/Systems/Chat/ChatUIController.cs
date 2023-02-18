@@ -422,6 +422,7 @@ public sealed class ChatUIController : UIController
         {
             FilterableChannels |= ChatChannel.Admin;
             FilterableChannels |= ChatChannel.AdminChat;
+            FilterableChannels |= ChatChannel.AdminNotifications;
             CanSendChannels |= ChatSelectChannel.Admin;
         }
 

@@ -21,6 +21,7 @@ public sealed partial class ChannelFilterPopup : Popup
         ChatChannel.Dead,
         ChatChannel.Admin,
         ChatChannel.AdminChat,
+        ChatChannel.AdminNotifications,
         ChatChannel.Server
     };
 
