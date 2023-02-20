@@ -261,6 +261,9 @@ public sealed class MobThresholdSystem : EntitySystem
             if (damageableComponent.TotalDamage < threshold)
                 continue;
 
+            if (mobState == MobState.Critical && thresholdsComponent.IgnoreCritical)
+                continue;
+
             TriggerThreshold(target, mobState, mobStateComponent, thresholdsComponent, origin);
             break;
         }
@@ -335,6 +338,19 @@ public sealed class MobThresholdSystem : EntitySystem
         UpdateAlerts(target, mobState.CurrentState, thresholds, args.Damageable);
     }
 
+    private void VerifyState(EntityUid target, MobThresholdsComponent thresholds)
+    {
+        if (!TryComp<MobStateComponent>(target, out var mobState))
+            return;
+        if (!TryComp<DamageableComponent>(target, out var damageableComponent))
+            return;
+
+        CheckThresholds(target, mobState, thresholds, damageableComponent);
+        var ev = new MobThresholdChecked(target, mobState, thresholds, damageableComponent);
+        RaiseLocalEvent(target, ref ev, true);
+        UpdateAlerts(target, mobState.CurrentState, thresholds, damageableComponent);
+    }
+
     private void OnHandleComponentState(EntityUid target, MobThresholdsComponent component,
         ref ComponentHandleState args)
     {
@@ -343,12 +359,25 @@ public sealed class MobThresholdSystem : EntitySystem
 
         component.Thresholds = new SortedDictionary<FixedPoint2, MobState>(state.Thresholds);
         component.CurrentThresholdState = state.CurrentThresholdState;
+        component.IgnoreCritical = state.IgnoreCritical;
+        component.IsNeededToVerifyState = state.IsNeededToVerifyState;
+
+        if (!component.IsNeededToVerifyState)
+            return;
+        VerifyState(target, component);
+        component.IsNeededToVerifyState = false;
     }
 
     private void OnGetComponentState(EntityUid target, MobThresholdsComponent component, ref ComponentGetState args)
     {
         args.State = new MobThresholdComponentState(component.CurrentThresholdState,
-            new Dictionary<FixedPoint2, MobState>(component.Thresholds));
+            new Dictionary<FixedPoint2, MobState>(component.Thresholds),
+            component.IgnoreCritical, component.IsNeededToVerifyState);
+
+        if (!component.IsNeededToVerifyState)
+            return;
+        VerifyState(target, component);
+        component.IsNeededToVerifyState = false;
     }
 
     private void MobThresholdStartup(EntityUid target, MobThresholdsComponent thresholds, ComponentStartup args)

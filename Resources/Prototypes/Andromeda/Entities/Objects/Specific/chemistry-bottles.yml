@@ -1,0 +1,33 @@
+﻿- type: entity
+  id: IodineChemistryBottle
+  name: iodine bottle
+  description: This will help a bit with blunt traumas.
+  parent: BaseChemistryEmptyBottle
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        drink:
+          maxVol: 30
+          reagents:
+            - ReagentId: Iodine
+              Quantity: 30
+    - type: Tag
+      tags:
+        - Bottle
+
+- type: entity
+  id: AcetoneChemistryBottle
+  name: acetone bottle
+  description: Suitable for the household.
+  parent: BaseChemistryEmptyBottle
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        drink:
+          maxVol: 30
+          reagents:
+            - ReagentId: Acetone
+              Quantity: 30
+    - type: Tag
+      tags:
+        - Bottle

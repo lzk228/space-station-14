@@ -26,3 +26,47 @@
   - type: Tag
     tags:
     - Wooden
+  - type: Storage
+    capacity: 50
+  - type: UserInterface
+    interfaces:
+      - key: enum.StorageUiKey.Key
+        type: StorageBoundUserInterface
+  - type: InteractionOutline
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+  - type: StorageFill
+    contents:
+      - id: Paper
+        prob: 0.5
+        amount: 2
+      - id: Pen
+        prob: 0.5
+      - id: CigPackGreen
+        prob: 0.2
+      - id: CigPackRed
+        prob: 0.2
+      - id: CheapLighter
+        prob: 0.2
+      - id: UniformShortsRed
+        prob: 0.17
+      - id: EmergencyMedipen
+        prob: 0.15
+      - id: IodineChemistryBottle
+        prob: 0.15
+      - id: DiseaseSwab
+        prob: 0.12
+      - id: PillTricordrazine
+        prob: 0.05
+      - id: PillKelotane
+        prob: 0.05
+      - id: Blunt
+        prob: 0.05
+      - id: PlushieLizard
+        prob: 0.01
+      - id: PlushieSlime
+        prob: 0.01
+      - id: SmokingPipe
+        prob: 0.01

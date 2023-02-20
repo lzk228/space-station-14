@@ -13,5 +13,67 @@
           key: Zoomium
           component: Zoomium
           type: Add
-          time: 4
+          time: 6
+          refresh: false
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              reagent: Zoomium
+              min: 50
+          damage:
+            types:
+              Poison: 1
+
+- type: reagent
+  id: CrazyRussianDrug
+  name: reagent-name-crd
+  group: Narcotics
+  desc: reagent-desc-crd
+  physicalDesc: reagent-physical-desc-sickly
+  flavor: bitter
+  color: "#cb4300"
+  boilingPoint: 255.0
+  meltingPoint: 150.0
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:HealthChange
+          probability: 0.4
+          damage:
+            types:
+              Cellular: 1
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 0.5
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              reagent: CrazyRussianDrug
+              min: 30
+          damage:
+            types:
+              Cellular: 1
+    Narcotic:
+      effects:
+        - !type:GenericStatusEffect
+          key: CrazyRussianDrug
+          component: CrazyRussianDrug
+          type: Add
+          time: 3
+          refresh: false
+        - !type:GenericStatusEffect
+          key: BerserkDrug
+          component: BerserkDrug
+          type: Add
+          time: 3
+          refresh: false
+        - !type:GenericStatusEffect
+          key: Stutter
+          component: StutteringAccent
+          type: Add
+          time: 3
+          refresh: false
+        - !type:Jitter
+          time: 3
           refresh: false

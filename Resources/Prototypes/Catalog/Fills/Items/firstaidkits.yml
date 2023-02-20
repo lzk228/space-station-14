@@ -43,6 +43,8 @@
         amount: 2
       - id: Gauze
         amount: 2
+      - id: IodineChemistryBottle
+        amount: 1
 
 - type: entity
   id: MedkitToxinFilled

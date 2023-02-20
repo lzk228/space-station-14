@@ -1,0 +1,4 @@
+﻿- type: shader
+  id: MixedGrayscale
+  kind: source
+  path: "/Textures/Shaders/Andromeda/grayscale_mix.swsl"
