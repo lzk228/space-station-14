@@ -15,6 +15,10 @@
         amount: 2
       - id: Ointment
         amount: 2
+      - id: IodineChemistryBottle
+        amount: 3
+      - id: BoxMouthSwab
+        amount: 1
 
 - type: entity
   id: LockerWallMedicalFilled
@@ -33,6 +37,10 @@
         amount: 2
       - id: Ointment
         amount: 2
+      - id: IodineChemistryBottle
+        amount: 3
+      - id: BoxMouthSwab
+        amount: 1
 
 
 - type: entity

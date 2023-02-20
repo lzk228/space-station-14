@@ -1,14 +1,16 @@
-﻿using Content.Server.Drugs.Components;
+﻿using Content.Shared.Drugs;
+using Content.Shared.Eye.Blinding;
 using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.Drugs;
+namespace Content.Server.Drugs.Systems;
 
 public sealed class DrugSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -24,6 +26,8 @@ public sealed class DrugSystem : EntitySystem
             UpdateZoomium(zoomiumComponent.Owner, zoomiumComponent);
         }
     }
+
+    #region Zoomium
 
     private void OnZoomiumRemoval(EntityUid uid, ZoomiumComponent component, ComponentRemove args)
     {
@@ -50,4 +54,6 @@ public sealed class DrugSystem : EntitySystem
         component.NextZoomLevel = _random.NextFloat();
         component.NextUpdate = _gameTiming.CurTime + component.UpdateDelay / component.Severity;
     }
+
+    #endregion
 }

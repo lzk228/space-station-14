@@ -15,6 +15,16 @@
     - Recyclable
   - type: DiseaseSwab
   - type: BotanySwab
+  - type: MedicalSwab
+  - type: SolutionContainerManager
+    solutions:
+      swab:
+        maxVol: 5
+  - type: RefillableSolution
+    solution: swab
+  - type: InjectableSolution
+    solution: swab
+
 
 - type: entity
   parent: BaseItem

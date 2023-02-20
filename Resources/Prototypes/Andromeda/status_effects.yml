@@ -1,2 +1,8 @@
 ﻿- type: statusEffect
   id: Zoomium
+
+- type: statusEffect
+  id: CrazyRussianDrug
+
+- type: statusEffect
+  id: BerserkDrug

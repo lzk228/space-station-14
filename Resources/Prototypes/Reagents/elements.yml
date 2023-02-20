@@ -30,6 +30,16 @@
   color: "#a2ff00"
   meltingPoint: -101.5
   boilingPoint: -34.04
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+        - !type:HealthChange
+          scaleByQuantity: true
+          ignoreResistances: false
+          damage:
+            groups:
+              Caustic: 1
   plantMetabolism:
     - !type:PlantAdjustWater
       amount: -0.5
@@ -39,6 +49,13 @@
       amount: -3
     - !type:PlantAdjustHealth
       amount: -1
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:HealthChange
+          damage:
+            type:
+              Poison: 1
 
 - type: reagent
   id: Copper
@@ -61,6 +78,16 @@
   color: "#808080"
   boilingPoint: -188.11
   meltingPoint: -219.67
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+        - !type:HealthChange
+          scaleByQuantity: true
+          ignoreResistances: false
+          damage:
+            groups:
+              Caustic: 1
   plantMetabolism:
     - !type:PlantAdjustWater
       amount: -0.5
@@ -103,6 +130,44 @@
   color: "#BC8A00"
   boilingPoint: 184.3
   meltingPoint: 113.7
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+        - !type:HealthChange
+          scaleByQuantity: true
+          ignoreResistances: true
+          damage:
+            types:
+              Blunt: -1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              reagent: Iodine
+              min: 30
+          scaleByQuantity: true
+          ignoreResistances: true
+          damage:
+            groups:
+              Burn: 2
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 0
+              max: 5
+          damage:
+            types:
+              Radiation: -0.5
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 5
+          damage:
+            types:
+              Asphyxiation: 1
 
 - type: reagent
   id: Iron
@@ -171,6 +236,16 @@
   color: "#ede4e4"
   meltingPoint: 44.2
   boilingPoint: 280.5
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+        - !type:HealthChange
+          scaleByQuantity: true
+          ignoreResistances: false
+          damage:
+            groups:
+              Caustic: 1
   plantMetabolism:
     - !type:PlantAdjustNutrition
       amount: 0.1
