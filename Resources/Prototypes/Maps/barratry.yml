@@ -2,7 +2,7 @@
   id: Barratry
   mapName: 'Barratry'
   mapPath: /Maps/barratry.yml
-  minPlayers: 25
+  minPlayers: 35
   stations:
     Barratry:
       mapNameTemplate: '{0} Barratry {1}'
