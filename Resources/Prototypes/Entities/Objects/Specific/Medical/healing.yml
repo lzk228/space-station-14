@@ -303,3 +303,48 @@
         reagents:
         - ReagentId: Corpium
           Quantity: 10
+
+- type: entity
+  name: krokodil syringe
+  parent: BaseSyringe
+  id: SyringeKrokodil
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+        - ReagentId: CrazyRussianDrug
+          Quantity: 15
+
+- type: entity
+  name: Hawks Claw syringe
+  parent: BaseSyringe
+  id: SyringeHawksClaw
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+        - ReagentId: CrazyRussianDrug
+          Quantity: 10
+        - ReagentId: Zoomium
+          Quantity: 5
+
+- type: entity
+  name: KOKC syringe
+  parent: BaseSyringe
+  id: SyringeKOKC
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+        - ReagentId: THC
+          Quantity: 6
+        - ReagentId: Zoomium
+          Quantity: 3
+        - ReagentId: CrazyRussianDrug
+          Quantity: 6

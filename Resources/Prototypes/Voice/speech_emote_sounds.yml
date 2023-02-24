@@ -38,6 +38,8 @@
       path: /Audio/Voice/Moth/scream_moth.ogg
     Laugh:
       path: /Audio/Voice/Moth/laugh_moth.ogg
+      params:
+        volume: -6
 
 - type: emoteSounds
   id: FemaleFelinid
