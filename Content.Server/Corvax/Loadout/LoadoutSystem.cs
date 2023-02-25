@@ -19,7 +19,7 @@ public sealed class LoadoutSystem : EntitySystem
     [Dependency] private readonly HandsSystem _handsSystem = default!;
     [Dependency] private readonly StorageSystem _storageSystem = default!;
     [Dependency] private readonly SponsorsManager _sponsorsManager = default!;
-    
+
     public override void Initialize()
     {
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawned);
@@ -29,13 +29,13 @@ public sealed class LoadoutSystem : EntitySystem
     {
         if (_sponsorsManager.TryGetInfo(ev.Player.UserId, out var sponsor))
         {
-            foreach (var loadoutId in sponsor.AllowedMarkings)
+            foreach (var loadoutId in sponsor.AllowedLoadouts)
             {
                 // NOTE: Now is easy to not extract method because event give all info we need
                 if (_prototypeManager.TryIndex<LoadoutItemPrototype>(loadoutId, out var loadout))
                 {
                     var isSponsorOnly = loadout.SponsorOnly &&
-                                        !sponsor.AllowedMarkings.Contains(loadoutId);
+                                        !sponsor.AllowedLoadouts.Contains(loadoutId);
                     var isWhitelisted = ev.JobId != null &&
                                         loadout.WhitelistJobs != null &&
                                         !loadout.WhitelistJobs.Contains(ev.JobId);
@@ -49,14 +49,14 @@ public sealed class LoadoutSystem : EntitySystem
                         continue;
 
                     var entity = Spawn(loadout.EntityId, Transform(ev.Mob).Coordinates);
-                    
+
                     // Take in hand if not clothes
                     if (!TryComp<ClothingComponent>(entity, out var clothing))
                     {
                         _handsSystem.TryPickup(ev.Mob, entity);
                         continue;
                     }
-                    
+
                     // Automatically search empty slot for clothes to equip
                     string? firstSlotName = null;
                     bool isEquiped = false;
@@ -67,7 +67,7 @@ public sealed class LoadoutSystem : EntitySystem
 
                         if (firstSlotName == null)
                             firstSlotName = slot.Name;
-                        
+
                         if (_inventorySystem.TryGetSlotEntity(ev.Mob, slot.Name, out var _))
                             continue;
 
@@ -77,7 +77,7 @@ public sealed class LoadoutSystem : EntitySystem
                             break;
                         }
                     }
-                    
+
                     if (isEquiped || firstSlotName == null)
                         continue;
 

@@ -27,9 +27,9 @@ public sealed class SponsorsManager
     {
         _sawmill = Logger.GetSawmill("sponsors");
         _cfg.OnValueChanged(CCCVars.SponsorsApiUrl, s => _apiUrl = s, true);
-        
+
         _netMgr.RegisterNetMessage<MsgSponsorInfo>();
-        
+
         _netMgr.Connecting += OnConnecting;
         _netMgr.Connected += OnConnected;
         _netMgr.Disconnect += OnDisconnect;
@@ -53,14 +53,14 @@ public sealed class SponsorsManager
 
         _cachedSponsors[e.UserId] = info;
     }
-    
+
     private void OnConnected(object? sender, NetChannelArgs e)
     {
         var info = _cachedSponsors.TryGetValue(e.Channel.UserId, out var sponsor) ? sponsor : null;
         var msg = new MsgSponsorInfo() { Info = info };
         _netMgr.ServerSendMessage(msg, e.Channel);
     }
-    
+
     private void OnDisconnect(object? sender, NetDisconnectedArgs e)
     {
         _cachedSponsors.Remove(e.Channel.UserId);
@@ -71,8 +71,18 @@ public sealed class SponsorsManager
         if (string.IsNullOrEmpty(_apiUrl))
             return null;
 
-        var url = $"{_apiUrl}/sponsors/{userId.ToString()}";
-        var response = await _httpClient.GetAsync(url);
+        var url = $"{_apiUrl}/subscriptions/{userId.ToString()}";
+        HttpResponseMessage response;
+        try
+        {
+            response = await _httpClient.GetAsync(url);
+        }
+        catch (HttpRequestException e)
+        {
+            _sawmill.Error(e.Message);
+            return null;
+        }
+
         if (response.StatusCode == HttpStatusCode.NotFound)
             return null;
 
