@@ -1,0 +1,9 @@
+ent-SyringeKrokodil = шприц "Крокодил"
+    .desc = { ent-BaseSyringe.desc }
+    .suffix = { "" }
+ent-SyringeHawksClaw = шприц "Коготь Ястреба"
+    .desc = { ent-BaseSyringe.desc }
+    .suffix = { "" }
+ent-SyringeKOKC = шприц "К.О.К.С."
+    .desc = { ent-BaseSyringe.desc }
+    .suffix = { "" }
