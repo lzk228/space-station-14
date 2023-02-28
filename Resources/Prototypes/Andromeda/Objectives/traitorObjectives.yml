@@ -1,0 +1,31 @@
+- type: objective
+  id: TechFabCircuitBoardStealObjective
+  issuer: syndicate
+  difficultyOverride: 3
+  requirements:
+    - !type:TraitorRequirement {}
+    - !type:IncompatibleConditionsRequirement
+      conditions:
+        - DieCondition
+    - !type:NotRoleRequirement
+      roleId: HeadOfSecurity
+  conditions:
+    - !type:StealCondition
+      prototype: SecurityTechFabCircuitboard
+      owner: job-name-hos
+
+- type: objective
+  id: HoSHardsuitStealObjective
+  issuer: syndicate
+  difficultyOverride: 3
+  requirements:
+    - !type:TraitorRequirement {}
+    - !type:IncompatibleConditionsRequirement
+      conditions:
+        - DieCondition
+    - !type:NotRoleRequirement
+      roleId: HeadOfSecurity
+  conditions:
+    - !type:StealCondition
+      prototype: ClothingOuterHardsuitSecurityRed
+      owner: job-name-hos

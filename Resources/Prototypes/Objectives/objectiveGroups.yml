@@ -21,6 +21,8 @@
     CaptainGunStealObjective: 0.5
     CaptainJetpackStealObjective: 0.5
     HandTeleporterStealObjective: 0.5
+    HoSHardsuitStealObjective: 0.5
+    TechFabCircuitBoardStealObjective: 0.5
 
 - type: weightedRandom
   id: TraitorObjectiveGroupKill
