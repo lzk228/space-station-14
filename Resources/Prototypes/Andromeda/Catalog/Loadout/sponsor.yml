@@ -1,0 +1,44 @@
+# HowAreYouMyFriend(clown loadout)
+- type: loadout
+  id: GoldenBikeHornLoadout
+  entity: GoldenBikeHorn
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+- type: loadout
+  id: ClothingShoesBlingLoadout
+  entity: ClothingShoesBling
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+- type: loadout
+  id: CyberPenLoadout
+  entity: CyberPen
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+- type: loadout
+  id: BalloonSynLoadout
+  entity: BalloonSyn
+  sponsorOnly: true
+  whitelistJobs: [Clown]
+
+# HowAreYouMyFriend(HoS loadout)
+- type: loadout
+  id: ClothingBackpackDuffelMilitaryLoadout
+  entity: ClothingBackpackDuffelMilitary
+  sponsorOnly: true
+  whitelistJobs: [HeadOfSecurity]
+
+# HowAreYouMyFriend(passenger loadout)
+- type: loadout
+  id: ClothingOuterCoatPirateLoadout
+  entity: ClothingOuterCoatPirate
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingHeadHatPirateLoadout
+  entity: ClothingHeadHatPirate
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
