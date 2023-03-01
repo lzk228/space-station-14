@@ -9,6 +9,7 @@ using Content.Server.Popups;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -28,9 +29,7 @@ public sealed class MedicalSwabSystem : EntitySystem
         SubscribeLocalEvent<MedicalSwabComponent, AfterInteractEvent>(OnAfterInteract);
         SubscribeLocalEvent<MedicalSwabComponent, SolutionChangedEvent>(OnSolutionChanged);
         SubscribeLocalEvent<MedicalSwabComponent, ExaminedEvent>(OnExamined);
-
-        SubscribeLocalEvent<TargetSwabSuccessfulEvent>(OnTargetSwabSuccessful);
-        SubscribeLocalEvent<SwabCancelledEvent>(OnSwabCancelled);
+        SubscribeLocalEvent<MedicalSwabComponent, DoAfterEvent<MedicalSwabData>>(OnDoAfter);
     }
 
     private void OnAfterInteract(EntityUid uid, MedicalSwabComponent component, AfterInteractEvent args)
@@ -38,10 +37,7 @@ public sealed class MedicalSwabSystem : EntitySystem
         if (!component.IsSolutionAdded)
             return;
 
-        if (!TryComp<SolutionContainerManagerComponent>(uid, out var solutionContainerManagerComponent))
-            return;
-
-        if (!solutionContainerManagerComponent.Solutions.TryGetValue("swab", out var solution))
+        if (!_solutionContainerSystem.TryGetSolution(uid, component.SolutionName, out var solution))
             return;
 
         if (solution.Volume == 0)
@@ -50,16 +46,17 @@ public sealed class MedicalSwabSystem : EntitySystem
             return;
         }
 
-        component.CancelToken = new CancellationTokenSource();
-        _doAfterSystem.DoAfter(new DoAfterEventArgs(args.User, component.SwabDelay, component.CancelToken.Token, target: args.Target)
+        var swabData = new MedicalSwabData(solution);
+
+        var doAfterEventArgs = new DoAfterEventArgs(args.User, component.SwabDelay, target: args.Target, used: uid)
         {
-            BroadcastFinishedEvent = new TargetSwabSuccessfulEvent(args.User, args.Target, component, solution),
-            BroadcastCancelledEvent = new SwabCancelledEvent(component),
             BreakOnTargetMove = true,
             BreakOnUserMove = true,
             BreakOnStun = true,
             NeedHand = true
-        });
+        };
+
+        _doAfterSystem.DoAfter(doAfterEventArgs, swabData);
     }
 
     private void OnSolutionChanged(EntityUid uid, MedicalSwabComponent component, SolutionChangedEvent args)
@@ -88,43 +85,20 @@ public sealed class MedicalSwabSystem : EntitySystem
         }
     }
 
-    private void OnTargetSwabSuccessful(TargetSwabSuccessfulEvent ev)
+    private void OnDoAfter(EntityUid uid, MedicalSwabComponent component, DoAfterEvent<MedicalSwabData> args)
     {
-        if (ev.Target == null)
+        if (args.Handled || args.Cancelled || args.Args.Target == null || component.Deleted)
             return;
 
-        _reactiveSystem.DoEntityReaction(ev.Target.Value, ev.SwabSolution, ReactionMethod.Touch);
-        _solutionContainerSystem.RemoveAllSolution(ev.Swab.Owner, ev.SwabSolution);
-        _popupSystem.PopupEntity(Loc.GetString("medical-swab-swabbed", ("target", Identity.Entity(ev.Target.Value, EntityManager))), ev.Target.Value, ev.User);
+        _reactiveSystem.DoEntityReaction(args.Args.Target.Value, args.AdditionalData.SwabSolution, ReactionMethod.Touch);
+        _solutionContainerSystem.RemoveAllSolution(uid, args.AdditionalData.SwabSolution);
+        _popupSystem.PopupEntity(Loc.GetString("medical-swab-swabbed",
+            ("target", Identity.Entity(args.Args.Target.Value, EntityManager))), args.Args.Target.Value, args.Args.User);
+        args.Handled = true;
     }
 
-    private void OnSwabCancelled(SwabCancelledEvent ev)
+    private record struct MedicalSwabData(Solution SwabSolution)
     {
-        ev.Swab.CancelToken = null;
-    }
-
-    private sealed class SwabCancelledEvent : EntityEventArgs
-    {
-        public readonly MedicalSwabComponent Swab;
-        public SwabCancelledEvent(MedicalSwabComponent swab)
-        {
-            Swab = swab;
-        }
-    }
-
-    private sealed class TargetSwabSuccessfulEvent : EntityEventArgs
-    {
-        public EntityUid User { get; }
-        public EntityUid? Target { get; }
-        public MedicalSwabComponent Swab { get; }
-        public Solution SwabSolution { get; }
-
-        public TargetSwabSuccessfulEvent(EntityUid user, EntityUid? target, MedicalSwabComponent swab, Solution solution)
-        {
-            User = user;
-            Target = target;
-            Swab = swab;
-            SwabSolution = solution;
-        }
+        public readonly Solution SwabSolution = SwabSolution;
     }
 }

@@ -6,6 +6,6 @@ namespace Content.Server.Medical.Components;
 public sealed class MedicalSwabComponent : Component
 {
     [DataField("swabDelay")] public float SwabDelay = 2f;
-    public CancellationTokenSource? CancelToken;
+    [DataField("solution")] public string SolutionName = "swab";
     public bool IsSolutionAdded;
 }
