@@ -1,3 +1,4 @@
+using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
@@ -7,6 +8,7 @@ using Content.Server.UserInterface;
 using Content.Shared.Actions;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
+using Content.Shared.Database;
 using Content.Shared.Toggleable;
 using Content.Shared.Examine;
 using JetBrains.Annotations;
@@ -28,6 +30,7 @@ namespace Content.Server.Atmos.EntitySystems
         [Dependency] private readonly SharedContainerSystem _containers = default!;
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly UserInterfaceSystem _ui = default!;
+        [Dependency] private readonly IAdminLogManager _adminLogger = default!;
 
         private const float TimerDelay = 0.5f;
         private float _timer = 0f;
@@ -316,6 +319,21 @@ namespace Content.Server.Atmos.EntitySystems
 
             if (component.Integrity < 3)
                 component.Integrity++;
+        }
+
+        public void PurgeContents(EntityUid uid, GasTankComponent? tank = null, TransformComponent? transform = null)
+        {
+            if (!Resolve(uid, ref tank, ref transform))
+                return;
+
+            var environment = _atmosphereSystem.GetContainingMixture(uid, false, true);
+
+            if (environment != null)
+                _atmosphereSystem.Merge(environment, tank.Air);
+
+            _audioSys.Play(tank.RuptureSound, Filter.Pvs(tank.Owner), Transform(tank.Owner).Coordinates, true, AudioParams.Default.WithVariation(0.125f));
+            _adminLogger.Add(LogType.CanisterPurged, LogImpact.Medium, $"Gas tank {ToPrettyString(uid):tank} purged its contents of {tank.Air:gas} into the environment.");
+            tank.Air.Clear();
         }
 
         /// <summary>

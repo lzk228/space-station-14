@@ -35,6 +35,31 @@
     damage:
       types:
         Blunt: 10
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: ExplodeOnTrigger
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Heat
+          damage: 40
+        behaviors:
+          - !type:ExplodeBehavior
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 90
+        behaviors:
+          - !type:DumpGasTankBehavior
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
 
 - type: entity
   parent: GasTankBase
