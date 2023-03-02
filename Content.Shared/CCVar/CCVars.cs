@@ -276,6 +276,12 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> GameTableBonk =
             CVarDef.Create("game.table_bonk", false, CVar.SERVERONLY);
 
+        /// <summary>
+        ///     Controls if lobby has an automatic map vote.
+        /// </summary>
+        public static readonly CVarDef<bool>
+            GameAutoMapVote = CVarDef.Create("game.lobby_auto_map_vote", false, CVar.ARCHIVE | CVar.SERVERONLY);
+
 #if EXCEPTION_TOLERANCE
         /// <summary>
         ///     Amount of times round start must fail before the server is shut down.
