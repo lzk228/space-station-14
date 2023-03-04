@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformReallyBlackSuitSkirt # Wyvern
+  name: шикарная чёрная юбка-комбинезон
+  description: Шикарный женский костюм сшитый на заказ. Вызывает уважение!
+  sponsorOnly: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Sponsor/Jumpskirt/really_black_suit_skirt.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Sponsor/Jumpskirt/really_black_suit_skirt.rsi

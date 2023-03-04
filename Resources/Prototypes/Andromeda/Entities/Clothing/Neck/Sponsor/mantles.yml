@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckRegalMantle # Wyvern
+  name: королевская крылатая мантия
+  description: Восхитительная мантия, сшитая на заказ. При создании не пострадала не одна виверна!
+  sponsorOnly: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Sponsor/regal_mantle.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Neck/Sponsor/regal_mantle.rsi

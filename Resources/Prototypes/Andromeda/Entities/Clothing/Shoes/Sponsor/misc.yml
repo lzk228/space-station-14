@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesGildedCuffs # Wyvern
+  name: позолоченные манжеты
+  description: Красивые и золотистые.
+  sponsorOnly: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Shoes/Sponsor/gildedcuffs.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Shoes/Sponsor/gildedcuffs.rsi

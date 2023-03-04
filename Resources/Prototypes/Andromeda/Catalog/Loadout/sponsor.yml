@@ -42,3 +42,19 @@
   entity: ClothingHeadHatPirate
   sponsorOnly: true
   whitelistJobs: [Passenger]
+
+# Wyvern
+- type: loadout
+  id: ClothingNeckRegalMantleLoadout
+  entity: ClothingNeckRegalMantle
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesGildedCuffsLoadout
+  entity: ClothingShoesGildedCuffs
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformReallyBlackSuitSkirtLoadout
+  entity: ClothingUniformReallyBlackSuitSkirt
+  sponsorOnly: true
