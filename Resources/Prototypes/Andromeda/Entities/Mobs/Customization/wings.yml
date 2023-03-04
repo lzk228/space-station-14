@@ -1,0 +1,9 @@
+- type: marking
+  id: SponsorMiniFeatherWings # Wyvern
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Human, Felinid]
+#  sponsorOnly: true
+  sprites:
+  - sprite: Andromeda/Mobs/Customization/sponsor_wyvern_wings.rsi
+    state: m_wings_minifeather_BEHIND_test1

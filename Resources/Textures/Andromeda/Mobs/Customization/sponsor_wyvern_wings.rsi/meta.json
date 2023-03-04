@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"license": "CC-BY-SA-3.0",
+	"copyright": "Skylar-tg Space Station 13",
+	"size": {
+		"x": 64,
+		"y": 64
+	},
+	"states": [
+		{
+			"name": "m_wings_minifeather_BEHIND_test1",
+			"directions": 4
+		}
+	]
+}
