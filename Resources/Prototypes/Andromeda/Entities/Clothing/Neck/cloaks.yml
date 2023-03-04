@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBANCloak
+  name: плащ предводителя клуба Б.А.Н.
+  description: Его носит гордый лидер клуба Ботанических и Агрокультурных Нёрдов. Пахнет лимонкой.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/tehnox_ban_cloak.rsi
