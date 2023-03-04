@@ -58,3 +58,9 @@
   id: ClothingUniformReallyBlackSuitSkirtLoadout
   entity: ClothingUniformReallyBlackSuitSkirt
   sponsorOnly: true
+
+# Tehnox
+- type: loadout
+  id: ClothingNeckBANCloakLoadout
+  entity: ClothingNeckBANCloak
+  sponsorOnly: true
