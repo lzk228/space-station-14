@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckRegalMantle # Wyvern
-  name: королевская мантия
-  description: Восхитительная мантия, сшитая на заказ.
+  name: королевская крылатая мантия
+  description: Восхитительная мантия, сшитая на заказ. При создании не пострадала не одна виверна!
   sponsorOnly: true
   components:
   - type: Sprite
