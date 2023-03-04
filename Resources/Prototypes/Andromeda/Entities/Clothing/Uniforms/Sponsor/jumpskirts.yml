@@ -6,6 +6,6 @@
   sponsorOnly: true
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/really_black_suit_skirt.rsi
+    sprite: Andromeda/Clothing/Uniforms/Sponsor/Jumpskirt/really_black_suit_skirt.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/really_black_suit_skirt.rsi
+    sprite: Andromeda/Clothing/Uniforms/Sponsor/Jumpskirt/really_black_suit_skirt.rsi
