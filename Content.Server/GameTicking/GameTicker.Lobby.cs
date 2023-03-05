@@ -7,6 +7,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Players;
 using System.Text;
+using Content.Server.Maps;
 
 namespace Content.Server.GameTicking
 {
@@ -48,6 +49,7 @@ namespace Content.Server.GameTicking
             var readyCount = _playerGameStatuses.Values.Count(x => x == PlayerGameStatus.ReadyToPlay);
 
             StringBuilder stationNames = new StringBuilder();
+            GameMapPrototype? gameMapPrototype;
             if (_stationSystem.Stations.Count != 0)
             {
                 foreach (EntityUid entUID in _stationSystem.Stations)
@@ -62,6 +64,10 @@ namespace Content.Server.GameTicking
                         stationNames.Append(metaData.EntityName);
                     }
                 }
+            }
+            else if ((gameMapPrototype = _gameMapManager.GetSelectedMap()) != null)
+            {
+                stationNames.Append(gameMapPrototype.MapName);
             }
             else
             {
