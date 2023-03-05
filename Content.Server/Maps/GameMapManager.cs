@@ -15,7 +15,7 @@ public sealed class GameMapManager : IGameMapManager
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    
+
     [ViewVariables(VVAccess.ReadOnly)]
     private readonly Queue<string> _previousMaps = new();
     [ViewVariables(VVAccess.ReadOnly)]
@@ -86,6 +86,9 @@ public sealed class GameMapManager : IGameMapManager
                     continue;
                 }
 
+                if (_mapRotationEnabled && _previousMaps.Contains(mapProto.ID))
+                    continue;
+
                 yield return mapProto;
             }
         } else
@@ -114,6 +117,8 @@ public sealed class GameMapManager : IGameMapManager
         if (!TryLookupMap(gameMap, out var map) || !IsMapEligible(map))
             return false;
         _selectedMap = map;
+        if (_mapRotationEnabled)
+            EnqueueMap(map.ID);
         return true;
     }
 
@@ -122,12 +127,16 @@ public sealed class GameMapManager : IGameMapManager
         if (!TryLookupMap(gameMap, out var map))
             throw new ArgumentException($"The map \"{gameMap}\" is invalid!");
         _selectedMap = map;
+        if (_mapRotationEnabled)
+            EnqueueMap(map.ID);
     }
 
     public void SelectMapRandom()
     {
         var maps = CurrentlyEligibleMaps().ToList();
         _selectedMap = _random.Pick(maps);
+        if (_mapRotationEnabled)
+            EnqueueMap(_selectedMap.ID);
     }
 
     public void SelectMapFromRotationQueue(bool markAsPlayed = false)
