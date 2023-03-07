@@ -142,3 +142,6 @@ ent-SalvageMagnetMachineCircuitboard = магнит обломков (машин
 ent-AtmosDeviceFanTinyMachineCircuitboard = маленький вентилятор (машинная плата)
     .desc = Печатная плата маленького вентилятора.
     .suffix = { "" }
+ent-TelecomServerCircuitboard = telecommunication server machine board
+    .desc = A machine printed circuit board for an telecommunication server
+    .suffix = { "" }

@@ -378,6 +378,7 @@
   - SignalTrigger
   - VoiceTrigger
   - TimerTrigger
+  - TelecomServerCircuitboard
 
 - type: technology
   name: technologies-electrical-engineering
