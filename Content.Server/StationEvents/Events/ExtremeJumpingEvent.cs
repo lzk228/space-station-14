@@ -1,10 +1,8 @@
 ﻿using System.Linq;
-using System.Threading;
 using Content.Server.Plants.Components;
-using Content.Server.Power.Components;
-using Content.Server.Station.Components;
 using Content.Server.Storage.Components;
 using Content.Shared.Buckle.Components;
+using Content.Shared.Construction.Components;
 using Content.Shared.VendingMachines;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics;
@@ -46,7 +44,7 @@ namespace Content.Server.StationEvents.Events
         public override void Started()
         {
             var entities = new List<Component>();
-            entities.AddRange(EntityQuery<EntityStorageComponent>(true).ToList());
+            entities.AddRange(EntityQuery<EntityStorageComponent, AnchorableComponent>(true).Select(x => x.Item1).ToList());
             entities.AddRange(EntityQuery<StrapComponent>(true));
             entities.AddRange(EntityQuery<PottedPlantHideComponent>(true));
             entities.AddRange(EntityQuery<VendingMachineComponent>(true));

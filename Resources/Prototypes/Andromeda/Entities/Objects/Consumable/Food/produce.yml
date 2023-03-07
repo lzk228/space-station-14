@@ -104,20 +104,3 @@
       seedId: namelessmushroom
     - type: Extractable
       grindableSolutionName: food
-
-- type: entity
-  name: wheat bushel
-  description: Yay! Rice!
-  id: RiceBushel
-  parent: ProduceBase
-  components:
-    - type: Sprite
-      sprite: Andromeda/Objects/Specific/Hydroponics/rice.rsi
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          reagents:
-            - ReagentId: Rice
-              Quantity: 10
-    - type: Produce
-      seedId: rice

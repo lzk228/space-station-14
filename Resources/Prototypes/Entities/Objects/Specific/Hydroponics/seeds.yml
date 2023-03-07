@@ -343,7 +343,7 @@
     - type: Seed
       seedId: rice
     - type: Sprite
-      sprite: Objects/Specific/Hydroponics/rice.rsi
+      sprite: Andromeda/Objects/Specific/Hydroponics/rice.rsi
 
 - type: entity
   parent: SeedBase

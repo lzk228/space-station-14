@@ -235,30 +235,3 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
-
-- type: seed
-  id: rice
-  name: seeds-rice-name
-  noun: seeds-noun-seeds
-  displayName: seeds-rice-display-name
-  plantRsi: Andromeda/Objects/Specific/Hydroponics/rice.rsi
-  productPrototypes:
-    - RiceBushel
-  lifespan: 25
-  maturation: 6
-  production: 1
-  yield: 4
-  potency: 5
-  idealLight: 8
-  nutrientConsumption: 0.15
-  waterConsumption: 8
-  growthStages: 3
-  chemicals:
-    Nutriment:
-      Min: 1
-      Max: 20
-      PotencyDivisor: 20
-    Rice:
-      Min: 5
-      Max: 20
-      PotencyDivisor: 20

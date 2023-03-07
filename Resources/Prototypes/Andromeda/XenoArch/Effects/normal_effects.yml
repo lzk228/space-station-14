@@ -7,7 +7,7 @@
       maxSpawns: 6
       spawns:
         - id: LifeweedSeeds
-          prob: 0.05
+          prob: 0.1
           orGroup: Seeds
         - id: DeathweedSeeds
           prob: 0.1
@@ -19,7 +19,7 @@
           prob: 0.1
           orGroup: Seeds
         - id: LemonkaSeeds
-          prob: 0.05
+          prob: 0.1
           orGroup: Seeds
         - id: SteelcaneSeeds
           prob: 0.1
@@ -34,8 +34,5 @@
           prob: 0.1
           orGroup: Seeds
         - id: PizzaplantSeeds
-          prob: 0.1
-          orGroup: Seeds
-        - id: RiceSeeds
           prob: 0.1
           orGroup: Seeds

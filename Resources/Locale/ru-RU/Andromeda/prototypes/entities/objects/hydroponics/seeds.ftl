@@ -28,6 +28,3 @@ ent-MoneytreeSeeds = пакет семян денежного дерева
 ent-PizzaplantSeeds = пакет семян пиццевика
     .desc = Конечно же с ананасом!
     .suffix = { "" }
-ent-RiceSeeds = пакет семян риса
-    .desc = Незаменим на кухне.
-    .suffix = { "" }

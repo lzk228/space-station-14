@@ -18,5 +18,3 @@ seeds-moneytree-name = денежное дерево
 seeds-moneytree-display-name = денежное дерево
 seeds-pizzaplant-name = пиццевик
 seeds-pizzaplant-display-name = пиццевик
-seeds-rice-name = рис
-seeds-rice-display-name = рис

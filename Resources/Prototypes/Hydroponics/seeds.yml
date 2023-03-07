@@ -931,7 +931,7 @@
   name: seeds-rice-name
   noun: seeds-noun-seeds
   displayName: seeds-rice-display-name
-  plantRsi: Objects/Specific/Hydroponics/rice.rsi
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/rice.rsi
   productPrototypes:
     - RiceBushel
   lifespan: 25
@@ -939,7 +939,7 @@
   production: 1
   yield: 4
   potency: 5
-  growthStages: 4
+  growthStages: 3
   idealLight: 5
   nutrientConsumption: 0.15
   chemicals:
