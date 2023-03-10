@@ -6,3 +6,30 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/tehnox_ban_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckHealerCloak
+  name: торжественный плащ доктора
+  description: Вручается самым выдающимся докторам. Не вызывает эпилепсию в 99.9% случаях.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/healer_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMinerCloak
+  name: торжественный плащ шахтёра
+  description: Вручается самым выдающимся шахтёрам. Не переваривается космическими медведями.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/miner_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCleanerCloak
+  name: торжественный плащ уборщика
+  description: Вручается самым выдающимся уборщикам. Убивает микробов в радиусе 13 метров от владельца.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/cleaner_cloak.rsi
