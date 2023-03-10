@@ -62,6 +62,7 @@
           reagents:
             - ReagentId: ChlorineTrifluoride
               Quantity: 2
+          canBoil: false
     - type: Sprite
       sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
     - type: Lemonka
