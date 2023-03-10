@@ -49,7 +49,7 @@ namespace Content.Server.Kitchen.Components
         ///     The max temperature that this microwave can heat objects to.
         /// </summary>
         [DataField("temperatureUpperThreshold")]
-        public float TemperatureUpperThreshold = 373.15f;
+        public float TemperatureUpperThreshold = 573.15f;
 
         public int CurrentCookTimeButtonIndex;
 
