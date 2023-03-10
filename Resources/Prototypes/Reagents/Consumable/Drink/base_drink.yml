@@ -1,6 +1,8 @@
 ﻿- type: reagent
   id: BaseDrink
   group: Drinks
+  meltingPoint: 0.0
+  boilingPoint: 100.0
   abstract: true
   metabolisms:
     Drink:
@@ -40,6 +42,8 @@
   id: BaseAlcohol
   group: Drinks
   abstract: true
+  meltingPoint: -20.0
+  boilingPoint: 82.0
   metabolisms:
     Drink:
       effects:

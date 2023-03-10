@@ -243,6 +243,8 @@
   desc: reagent-desc-thc
   flavor: bitter
   color: "#808080"
+  boilingPoint: 157.0
+  meltingPoint: 0.0
   physicalDesc: reagent-physical-desc-crystalline
   plantMetabolism:
   - !type:PlantAdjustNutrition
@@ -270,6 +272,8 @@
   physicalDesc: reagent-physical-desc-skunky
   flavor: bitter
   color: "#DAA520"
+  boilingPoint: 157.0
+  meltingPoint: 0.0
   metabolisms:
     Narcotic:
       effects:
@@ -290,6 +294,8 @@
   desc: reagent-desc-nicotine
   flavor: bitter
   color: "#C0C0C0"
+  boilingPoint: 157.0
+  meltingPoint: 0.0
   physicalDesc: reagent-physical-desc-strong-smelling
   plantMetabolism:
   - !type:PlantAdjustHealth
@@ -303,6 +309,8 @@
   physicalDesc: reagent-physical-desc-acrid
   flavor: bitter
   color: "#215263"
+  boilingPoint: 255.0
+  meltingPoint: 36.0
 
 - type: reagent
   id: SpaceDrugs
@@ -312,6 +320,8 @@
   physicalDesc: reagent-physical-desc-syrupy
   flavor: bitter
   color: "#63806e"
+  boilingPoint: 157.0
+  meltingPoint: 0.0
   metabolisms:
     Narcotic:
       effects:

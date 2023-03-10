@@ -6,6 +6,8 @@
   physicalDesc: reagent-physical-desc-syrupy
   flavor: bitter
   color: "#9f01a1"
+  boilingPoint: 106.0
+  meltingPoint: -6.0
   metabolisms:
     Narcotic:
       effects:

@@ -58,6 +58,13 @@ namespace Content.Shared.Chemistry.Components
         public bool CanMix { get; set; } = false;
 
         /// <summary>
+        ///     If solution can boil out.
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField("canBoil")]
+        public bool CanBoil { get; set; } = true;
+
+        /// <summary>
         ///     Volume needed to fill this container.
         /// </summary>
         [ViewVariables]
@@ -158,6 +165,7 @@ namespace Content.Shared.Chemistry.Components
         public Solution(Solution solution)
         {
             Volume = solution.Volume;
+            Temperature = solution.Temperature;
             _heatCapacity = solution._heatCapacity;
             _heatCapacityDirty = solution._heatCapacityDirty;
             Contents = solution.Contents.ShallowClone();
@@ -288,7 +296,7 @@ namespace Content.Shared.Chemistry.Components
         /// <param name="quantity">The quantity in milli-units.</param>
         public void AddReagent(ReagentPrototype proto, FixedPoint2 quantity)
         {
-            AddReagent(proto.ID, quantity, false);
+            AddReagent(proto.ID, quantity, true);
             _heatCapacity += quantity.Float() * proto.SpecificHeat;
         }
 
@@ -422,6 +430,58 @@ namespace Content.Shared.Chemistry.Components
 
             // Reagent is not on the solution...
             return FixedPoint2.Zero;
+        }
+
+        public bool IsBoiling(IPrototypeManager? protoMan)
+        {
+            if (!CanBoil)
+                return false;
+
+            IoCManager.Resolve(ref protoMan);
+            for (var i = 0; i < Contents.Count; i++)
+            {
+                var reagentPrototype = protoMan.Index<ReagentPrototype>(Contents[i].ReagentId);
+                var boilingPoint = reagentPrototype.BoilingPoint ?? 99999f;
+                if (boilingPoint < Temperature - 273.15f)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public Solution? BoilOutSolution(IPrototypeManager? protoMan)
+        {
+            if (!CanBoil)
+                return null;
+
+            IoCManager.Resolve(ref protoMan);
+            var outSolution = new Solution(Contents.Count);
+            var reagentsToRemove = new List<ReagentQuantity>();
+
+            foreach (var reagent in Contents)
+            {
+                var reagentPrototype = protoMan.Index<ReagentPrototype>(reagent.ReagentId);
+                var boilingPoint = reagentPrototype.BoilingPoint ?? 99999f;
+                // C -> K
+                boilingPoint += 273.15f;
+
+                if (boilingPoint < Temperature)
+                {
+                    reagentsToRemove.Add(reagent);
+                    var reagentTemperature = Math.Max(0f, Math.Min(273.15f, boilingPoint - 20f));
+                    outSolution.AddReagent(reagentPrototype, reagent.Quantity, reagentTemperature, protoMan);
+                }
+            }
+
+            foreach (var reagent in reagentsToRemove)
+            {
+                RemoveReagent(reagent.ReagentId, reagent.Quantity);
+            }
+
+            ValidateSolution();
+            outSolution.ValidateSolution();
+
+            return outSolution;
         }
 
         public void RemoveAllSolution()

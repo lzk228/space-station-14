@@ -35,6 +35,7 @@
         reagents:
         - ReagentId: WeldingFuel
           Quantity: 1500
+        canBoil: false
 
 # Water
 
@@ -62,6 +63,7 @@
         reagents:
         - ReagentId: Water
           Quantity: 1500
+        canBoil: false
 
 - type: entity
   parent: WaterTankFull
@@ -76,6 +78,7 @@
         reagents:
         - ReagentId: Water
           Quantity: 500
+        canBoil: false
 
 - type: entity
   parent: StorageTank
@@ -93,6 +96,7 @@
 #         This is *100, 000* on /tg/
           Quantity: 10000
         maxVol: 10000
+        canBoil: false
 #   It's pressurized...
   - type: ReagentTank
     transferAmount: 100
@@ -118,3 +122,4 @@
           reagents:
             - ReagentId: Kvass
               Quantity: 1500
+          canBoil: false

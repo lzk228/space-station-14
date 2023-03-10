@@ -96,6 +96,8 @@
   physicalDesc: reagent-physical-desc-blazing
   flavor: bitter
   color: "#FFC8C8"
+  boilingPoint: 11.75
+  meltingPoint: -76.34
   tileReactions:
   - !type:PryTileReaction
   metabolisms:

@@ -1,11 +1,13 @@
 using System.Linq;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Audio;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Events;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -294,13 +296,22 @@ namespace Content.Shared.Chemistry.Reaction
 
             // Repeatedly attempt to perform reactions, ending when there are no more applicable reactions, or when we
             // exceed the iteration limit.
-            for (var i = 0; i < MaxReactionIterations; i++)
+            for (var i = 0; i <= MaxReactionIterations; i++)
             {
                 if (!ProcessReactions(solution, owner, maxVolume, reactions, mixerComponent))
-                    return;
+                    break;
+
+                if (i == MaxReactionIterations)
+                    Logger.Error($"{nameof(Solution)} {owner} could not finish reacting in under {MaxReactionIterations} loops.");
             }
 
-            Logger.Error($"{nameof(Solution)} {owner} could not finish reacting in under {MaxReactionIterations} loops.");
+            if (solution.IsBoiling(_prototypeManager))
+                BoilOutSolution(solution, owner);
+        }
+
+        protected virtual void BoilOutSolution(Solution solution, EntityUid owner)
+        {
+
         }
     }
 

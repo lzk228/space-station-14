@@ -44,6 +44,7 @@
     solutions:
       stomach:
         maxVol: 100
+        canBoil: false
   - type: Stomach
     maxVolume: 10
   - type: Metabolizer

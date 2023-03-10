@@ -80,6 +80,7 @@
     solutions:
       stomach:
         maxVol: 50
+        canBoil: false
   - type: Stomach
   - type: Metabolizer
     maxReagents: 6

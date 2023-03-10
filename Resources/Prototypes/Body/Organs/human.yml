@@ -142,6 +142,7 @@
     solutions:
       stomach:
         maxVol: 50
+        canBoil: false
   - type: Stomach
   # The stomach metabolizes stuff like foods and drinks.
   # TODO: Have it work off of the ent's solution container, and move this

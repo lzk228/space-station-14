@@ -7,6 +7,7 @@
       solutions:
         injector:
           maxVol: 15
+          canBoil: false
           reagents:
             - ReagentId: CrazyRussianDrug
               Quantity: 15
@@ -20,6 +21,7 @@
       solutions:
         injector:
           maxVol: 15
+          canBoil: false
           reagents:
             - ReagentId: CrazyRussianDrug
               Quantity: 10
@@ -35,6 +37,7 @@
       solutions:
         injector:
           maxVol: 15
+          canBoil: false
           reagents:
             - ReagentId: THC
               Quantity: 6

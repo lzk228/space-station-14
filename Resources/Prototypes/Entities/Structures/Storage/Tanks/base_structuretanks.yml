@@ -54,6 +54,7 @@
     solutions:
       tank:
         maxVol: 1500
+        canBoil: false
   - type: DrainableSolution
     solution: tank
   - type: ReagentTank

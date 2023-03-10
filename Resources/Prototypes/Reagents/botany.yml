@@ -5,6 +5,8 @@
   desc: reagent-desc-e-z-nutrient
   flavor: bitter
   color: "#664330"
+  boilingPoint: 98.5
+  meltingPoint: -50.0
   physicalDesc: reagent-physical-desc-thick
   plantMetabolism:
     - !type:PlantAdjustNutrition
@@ -24,6 +26,8 @@
   desc: reagent-desc-left4-zed
   flavor: bitter
   color: "#5b406c"
+  boilingPoint: 98.5
+  meltingPoint: -50.0
   physicalDesc: reagent-physical-desc-heterogeneous
   plantMetabolism:
     - !type:PlantAdjustNutrition
@@ -55,6 +59,8 @@
   desc: reagent-desc-pest-killer
   flavor: bitter
   color: "#9e9886"
+  boilingPoint: 98.5
+  meltingPoint: -50.0
   physicalDesc: reagent-physical-desc-bubbling
   plantMetabolism:
     - !type:PlantAdjustToxins
@@ -79,6 +85,8 @@
   desc: reagent-desc-plant-b-gone
   flavor: bitter
   color: "#49002E"
+  boilingPoint: 98.5
+  meltingPoint: -50.0
   physicalDesc: reagent-physical-desc-bubbling
   plantMetabolism:
     - !type:PlantAdjustToxins
@@ -110,6 +118,8 @@
   desc: reagent-desc-robust-harvest
   flavor: bitter
   color: "#3e901c"
+  boilingPoint: 98.5
+  meltingPoint: -50.0
   physicalDesc: reagent-physical-desc-robust
   plantMetabolism:
     - !type:PlantAdjustNutrition
@@ -142,6 +152,8 @@
   desc: reagent-desc-weed-killer
   flavor: bitter
   color: "#968395"
+  boilingPoint: 98.5
+  meltingPoint: -50.0
   physicalDesc: reagent-physical-desc-bubbling
   plantMetabolism:
     - !type:PlantAdjustToxins

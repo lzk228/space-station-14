@@ -129,6 +129,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Dexalin
           Quantity: 15
@@ -142,6 +143,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Dylovene
           Quantity: 15
@@ -155,6 +157,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Hyronalin
           Quantity: 15
@@ -168,6 +171,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Iron
           Quantity: 15
@@ -181,6 +185,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Kelotane
           Quantity: 15
@@ -194,6 +199,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: SpaceDrugs
           Quantity: 15
@@ -207,6 +213,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Tricordrazine
           Quantity: 15
@@ -220,6 +227,7 @@
     solutions:
       food:
         maxVol: 50
+        canBoil: false
         reagents:
         - ReagentId: Romerol
           Quantity: 10
@@ -234,6 +242,7 @@
     solutions:
       injector:
         maxVol: 15
+        canBoil: false
         reagents:
         - ReagentId: Ephedrine
           Quantity: 15
@@ -247,6 +256,7 @@
     solutions:
       injector:
         maxVol: 15
+        canBoil: false
         reagents:
         - ReagentId: Inaprovaline
           Quantity: 15
@@ -260,6 +270,7 @@
     solutions:
       injector:
         maxVol: 15
+        canBoil: false
         reagents:
         - ReagentId: TranexamicAcid
           Quantity: 15
@@ -273,6 +284,7 @@
     solutions:
       injector:
         maxVol: 15
+        canBoil: false
         reagents:
         - ReagentId: Spaceacillin
           Quantity: 15
@@ -286,6 +298,7 @@
     solutions:
       injector:
         maxVol: 15
+        canBoil: false
         reagents:
         - ReagentId: Ipecac
           Quantity: 15
@@ -300,6 +313,7 @@
     solutions:
       injector:
         maxVol: 15
+        canBoil: false
         reagents:
         - ReagentId: Corpium
           Quantity: 10

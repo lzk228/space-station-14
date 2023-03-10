@@ -8,6 +8,7 @@
       solutions:
         drink:
           maxVol: 30
+          canBoil: false
           reagents:
             - ReagentId: Iodine
               Quantity: 30
@@ -25,6 +26,7 @@
       solutions:
         drink:
           maxVol: 30
+          canBoil: false
           reagents:
             - ReagentId: Acetone
               Quantity: 30

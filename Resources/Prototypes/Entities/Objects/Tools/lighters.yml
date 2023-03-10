@@ -55,6 +55,7 @@
         - ReagentId: WeldingFuel
           Quantity: 8
         maxVol: 8 #uses less fuel than a welder, so this isnt as bad as it looks
+        canBoil: false
   - type: MeleeWeapon
     damage:
       types:
@@ -103,5 +104,6 @@
         - ReagentId: WeldingFuel
           Quantity: 4
         maxVol: 4 #uses less fuel than a welder, so this isnt as bad as it looks
+        canBoil: false
 
     #TODO: zippos

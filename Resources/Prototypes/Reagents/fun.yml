@@ -34,6 +34,8 @@
   physicalDesc: reagent-physical-desc-fibrous
   flavor: fiber
   color: "#808080"
+  boilingPoint: 4200.0
+  meltingPoint: 3550.0
 
 - type: reagent
   id: BuzzochloricBees
@@ -153,6 +155,8 @@
   physicalDesc: reagent-physical-desc-electric
   flavor: shocking
   color: "#FDD023"
+  boilingPoint: 438.0
+  meltingPoint: 297.0
   metabolisms:
     Poison:
       effects:

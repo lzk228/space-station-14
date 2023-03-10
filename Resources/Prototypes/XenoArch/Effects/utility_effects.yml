@@ -80,6 +80,7 @@
     solutions:
       beaker:
         maxVol: 150
+        canBoil: false
   - type: FitsInDispenser
     solution: beaker
   - type: RefillableSolution

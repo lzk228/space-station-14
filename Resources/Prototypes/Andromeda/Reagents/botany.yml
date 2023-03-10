@@ -5,6 +5,8 @@
   desc: reagent-desc-plant-booster
   flavor: bitter
   color: "#72dcb7"
+  boilingPoint: 75.0
+  meltingPoint: -12.0
   physicalDesc: reagent-physical-desc-skunky
   plantMetabolism:
     - !type:PlantAdjustNutrition

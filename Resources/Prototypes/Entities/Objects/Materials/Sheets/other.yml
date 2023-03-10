@@ -83,6 +83,7 @@
   - type: SolutionContainerManager
     solutions:
       plasma:
+        canBoil: false
         reagents:
         - ReagentId: Plasma
           Quantity: 10
@@ -167,6 +168,7 @@
   - type: SolutionContainerManager
     solutions:
       uranium:
+        canBoil: false
         reagents:
         - ReagentId: Uranium
           Quantity: 10

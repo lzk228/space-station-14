@@ -371,6 +371,8 @@
   desc: reagent-desc-amatoxin
   physicalDesc: reagent-physical-desc-nondescript
   color: "#D6CE7B"
+  meltingPoint: 0.0
+  boilingPoint: 210.0
   metabolisms:
     Poison:
       effects:
@@ -386,6 +388,8 @@
   physicalDesc: reagent-physical-desc-sticky
   flavor: bitter
   color: "#000000"
+  meltingPoint: 0.0
+  boilingPoint: 410.0
   metabolisms:
     Poison:
       effects:
@@ -404,6 +408,8 @@
   physicalDesc: reagent-physical-desc-necrotic
   flavor: bitter
   color: "#7668a1"
+  meltingPoint: 0.0
+  boilingPoint: 390.0
   metabolisms:
     Poison:
       effects:
@@ -422,6 +428,8 @@
   physicalDesc: reagent-physical-desc-clumpy
   flavor: bitter
   color: "#FFFFE5"
+  meltingPoint: 0.0
+  boilingPoint: 220.0
   metabolisms:
     Poison:
       effects:
@@ -446,6 +454,8 @@
   physicalDesc: reagent-physical-desc-pungent
   flavor: bitter
   color: "#F2E9D2"
+  meltingPoint: 0.0
+  boilingPoint: 260.0
   metabolisms:
     Poison:
       metabolismRate: 0.05
@@ -466,6 +476,8 @@
   desc: reagent-desc-pax
   physicalDesc: reagent-physical-desc-soothing
   color: "#AAAAAA"
+  meltingPoint: 0.0
+  boilingPoint: 180.0
   metabolisms:
     Poison:
       effects:

@@ -19,6 +19,7 @@
   - type: SolutionContainerManager
     solutions:
       swab:
+        canBoil: false
         maxVol: 5
   - type: RefillableSolution
     solution: swab

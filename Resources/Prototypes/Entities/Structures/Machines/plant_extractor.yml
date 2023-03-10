@@ -81,4 +81,5 @@
           - FitsInDispenser
   - type: SolutionContainerManager
     solutions:
-      buffer: {}
+      buffer:
+        canBoil: false

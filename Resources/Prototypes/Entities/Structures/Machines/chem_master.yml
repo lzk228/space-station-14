@@ -84,4 +84,5 @@
           - PillCanister
   - type: SolutionContainerManager
     solutions:
-      buffer: {}
+      buffer:
+        canBoil: false

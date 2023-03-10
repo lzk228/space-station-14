@@ -6,6 +6,8 @@
   physicalDesc: reagent-physical-desc-opaque
   flavor: medicine
   color: "#de5df5"
+  boilingPoint: 94.0
+  meltingPoint: -67.0
   metabolisms:
     Medicine:
       metabolismRate: 0.01

@@ -22,6 +22,7 @@
       drink: # This solution name and target volume is hard-coded in ChemMasterComponent
         maxVol: 30
         canMix: true
+        canBoil: false
   - type: RefillableSolution
     solution: drink
   - type: DrainableSolution
@@ -124,6 +125,7 @@
     solutions:
       drink: # This solution name and target volume is hard-coded in ChemMasterComponent
         maxVol: 30
+        canBoil: false
         reagents:
         - ReagentId: Epinephrine
           Quantity: 30
@@ -141,6 +143,7 @@
     solutions:
       drink:
         maxVol: 30
+        canBoil: false
         reagents:
         - ReagentId: RobustHarvest
           Quantity: 30
@@ -158,6 +161,7 @@
     solutions:
       drink:
         maxVol: 30
+        canBoil: false
         reagents:
         - ReagentId: UnstableMutagen
           Quantity: 30
@@ -175,6 +179,7 @@
     solutions:
       drink:
         maxVol: 30
+        canBoil: false
         reagents:
         - ReagentId: Nocturine
           Quantity: 30
@@ -191,6 +196,7 @@
     solutions:
       drink:
         maxVol: 30
+        canBoil: false
         reagents:
         - ReagentId: Ephedrine
           Quantity: 30
@@ -207,6 +213,7 @@
     solutions:
       drink:
         maxVol: 30
+        canBoil: false
         reagents:
         - ReagentId: Omnizine
           Quantity: 30
