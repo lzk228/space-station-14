@@ -27,6 +27,7 @@
     size: 5
   - type: Temperature
     currentTemperature: 290
+  - type: DestroyableOnBoil
 
 - type: Tag
   id: Raw

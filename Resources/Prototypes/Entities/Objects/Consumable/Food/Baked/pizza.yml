@@ -22,6 +22,7 @@
           Quantity: 30
         - ReagentId: Vitamin
           Quantity: 5
+  - type: DestroyableOnBoil
   - type: SliceableFood
     count: 6
   - type: Item
@@ -53,6 +54,7 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 0.8
+  - type: DestroyableOnBoil
   - type: Item
     size: 1
   - type: Tag

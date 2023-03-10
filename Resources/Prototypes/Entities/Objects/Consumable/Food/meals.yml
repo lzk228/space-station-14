@@ -20,6 +20,7 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 20
+  - type: DestroyableOnBoil
 
 # Meals
 

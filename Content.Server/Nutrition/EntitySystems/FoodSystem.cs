@@ -1,5 +1,6 @@
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
+using Content.Server.Chemistry.Components;
 using Content.Server.Chemistry.EntitySystems;
 using Content.Server.DoAfter;
 using Content.Server.Hands.Components;
@@ -55,6 +56,7 @@ namespace Content.Server.Nutrition.EntitySystems
             SubscribeLocalEvent<FoodComponent, AfterInteractEvent>(OnFeedFood);
             SubscribeLocalEvent<FoodComponent, GetVerbsEvent<AlternativeVerb>>(AddEatVerb);
             SubscribeLocalEvent<FoodComponent, DoAfterEvent<FoodData>>(OnDoAfter);
+            SubscribeLocalEvent<FoodComponent, BoilOutEvent>(OnSolutionBoilOut);
             SubscribeLocalEvent<InventoryComponent, IngestionAttemptEvent>(OnInventoryIngestAttempt);
         }
 
@@ -234,6 +236,18 @@ namespace Content.Server.Nutrition.EntitySystems
                 DeleteAndSpawnTrash(component, uid, args.Args.User);
 
             args.Handled = true;
+        }
+
+        private void OnSolutionBoilOut(EntityUid uid, FoodComponent component, ref BoilOutEvent args)
+        {
+            if (!HasComp<DestroyableOnBoilComponent>(uid))
+                return;
+
+            if (string.IsNullOrEmpty(component.TrashPrototype))
+                EntityManager.QueueDeleteEntity(uid);
+
+            else
+                DeleteAndSpawnTrash(component, uid);
         }
 
         private void DeleteAndSpawnTrash(FoodComponent component, EntityUid food, EntityUid? user = null)

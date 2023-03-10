@@ -13,6 +13,7 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 20
+  - type: DestroyableOnBoil
   - type: Sprite
     sprite: Objects/Consumable/Food/bowl.rsi
     netsync: false

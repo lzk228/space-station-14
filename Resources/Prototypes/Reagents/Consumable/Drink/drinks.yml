@@ -6,6 +6,8 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: coffee
   color: "#664300"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Drink:
       effects:
@@ -23,6 +25,8 @@
   physicalDesc: reagent-physical-desc-creamy
   flavor: creamy
   color: "#DFD7AF"
+  boilingPoint: 100.0
+  meltingPoint: -5.0
   metabolisms:
     Drink:
       effects:
@@ -37,6 +41,8 @@
   physicalDesc: reagent-physical-desc-creamy
   flavor: creamy
   color: "#664300"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/cafe_latte.rsi
     state: icon
@@ -49,6 +55,8 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: tea
   color: "#C33F00"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/glass_green.rsi
     state: icon
@@ -61,6 +69,8 @@
   physicalDesc: reagent-physical-desc-dark-red
   flavor: bitter
   color: "#EA1D26"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/grenadineglass.rsi
     state: icon
@@ -73,6 +83,8 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: coffee
   color: "#102838"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/icedcoffeeglass.rsi
     state: icon
@@ -85,6 +97,8 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: icedtea
   color: "#CE4200"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/glass_green.rsi
     state: icon
@@ -97,6 +111,8 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: icedtea
   color: "#104038"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/icedteaglass.rsi
     state: icon
@@ -117,6 +133,8 @@
   physicalDesc: reagent-physical-desc-tart
   flavor: sweet
   color: "#FFFF00"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/lemonadeglass.rsi
     state: icon
@@ -134,6 +152,8 @@
   physicalDesc: reagent-physical-desc-opaque
   flavor: milk
   color: "#DFDFDF"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   plantMetabolism:
     - !type:PlantAdjustNutrition
       amount: 0.1
@@ -159,6 +179,8 @@
   physicalDesc: reagent-physical-desc-refreshing
   flavor: oats
   color: "#DEDACD"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Drink:
       effects:
@@ -182,6 +204,8 @@
   physicalDesc: reagent-physical-desc-putrid
   flavor: terrible
   color: "#faffba"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Drink:
       effects:
@@ -212,6 +236,8 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: atomiccola
   color: "#100800"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/nuclear_colaglass.rsi
     state: icon
@@ -235,6 +261,8 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: fizzy
   color: "#619494"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
 
 - type: reagent
   id: SoyLatte
@@ -244,6 +272,8 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: soy
   color: "#664300"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/soy_latte.rsi
     state: icon
@@ -256,6 +286,8 @@
   physicalDesc: reagent-physical-desc-aromatic
   flavor: tea
   color: "#8a5a3a"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Drink:
       effects:
@@ -273,6 +305,8 @@
   physicalDesc: reagent-physical-desc-fizzy
   flavor: water
   color: "#0064C8"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
 
 - type: reagent
   id: Water
@@ -311,6 +345,8 @@
   physicalDesc: reagent-physical-desc-wormy
   flavor: cheapnoodles
   color: "#664300"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Food:
       effects:
@@ -325,6 +361,8 @@
   physicalDesc: reagent-physical-desc-wormy
   flavor: cheapnoodles
   color: "#664300"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Food:
       effects:
@@ -339,6 +377,8 @@
   physicalDesc: reagent-physical-desc-creamy
   flavor: pilk
   color: "#e7c69f"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metabolisms:
     Drink:
       effects:
@@ -353,6 +393,8 @@
   physicalDesc: reagent-physical-desc-sour
   flavor: bitter
   color: "#B3B599"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/glass_light_yellow.rsi
     state: icon
@@ -365,6 +407,8 @@
   physicalDesc: strong-smelling
   flavor: sweet
   color: "#CCCC99"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/kiraspecial.rsi
     state: icon
@@ -377,6 +421,8 @@
   physicalDesc: strong-smelling
   flavor: sweet
   color: "#485000"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/rewriter.rsi
     state: icon
@@ -389,6 +435,8 @@
   physicalDesc: reagent-physical-desc-bubbly
   flavor: bread
   color: "#381600"
+  boilingPoint: 100.0
+  meltingPoint: 0.0
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/kvass.rsi
     state: icon

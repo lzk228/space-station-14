@@ -6,6 +6,8 @@
   physicalDesc: reagent-physical-desc-sugary
   flavor: sweet
   color: aquamarine
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: BbqSauce
@@ -15,6 +17,8 @@
   physicalDesc: reagent-physical-desc-gloopy
   flavor: sweet
   color: darkred
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Cornoil
@@ -24,6 +28,8 @@
   physicalDesc: reagent-physical-desc-oily
   flavor: oily
   color: yellow
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Frostoil
@@ -33,6 +39,8 @@
   physicalDesc: reagent-physical-desc-cold
   flavor: cold
   color: skyblue
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: HorseradishSauce
@@ -42,6 +50,8 @@
   physicalDesc: reagent-physical-desc-overpowering
   flavor: spicy
   color: gray
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Hotsauce
@@ -51,6 +61,8 @@
   physicalDesc: reagent-physical-desc-spicy
   flavor: spicy
   color: red
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Ketchup
@@ -60,6 +72,8 @@
   physicalDesc: reagent-physical-desc-tangy
   flavor: tomato
   color: red
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Ketchunaise
@@ -69,6 +83,8 @@
   physicalDesc: reagent-physical-desc-saucey
   flavor: piquant
   color: "#fba399"
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Mayo
@@ -78,6 +94,8 @@
   physicalDesc: reagent-physical-desc-thick
   flavor: sour
   color: "#f9f5e5"
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Vinaigrette
@@ -87,6 +105,8 @@
   physicalDesc: reagent-physical-desc-sour
   flavor: sour
   color: "#efdaae"
+  boilingPoint: 110.0
+  meltingPoint: -9.0
 
 - type: reagent
   id: Soysauce
@@ -96,6 +116,8 @@
   physicalDesc: reagent-physical-desc-salty
   flavor: salty
   color: saddlebrown
+  boilingPoint: 110.0
+  meltingPoint: -9.0
   metabolisms:
     Food:
       effects:

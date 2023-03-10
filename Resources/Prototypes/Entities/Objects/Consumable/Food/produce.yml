@@ -14,6 +14,7 @@
   - type: Appearance
   - type: Extractable
     grindableSolutionName: food
+  - type: DestroyableOnBoil
 
 # For produce that can be immediately eaten
 
@@ -31,6 +32,7 @@
   - type: Appearance
   - type: Extractable
     grindableSolutionName: food
+  - type: DestroyableOnBoil
 
 # Subclasses
 
@@ -215,6 +217,7 @@
     grindableSolutionName: food
   - type: Recyclable
   - type: SpaceGarbage
+  - type: DestroyableOnBoil
 
 - type: entity
   name: carrot
@@ -692,6 +695,7 @@
     state: slice
   - type: Extractable
     grindableSolutionName: food
+  - type: DestroyableOnBoil
 
 - type: entity
   name: pineapple slice

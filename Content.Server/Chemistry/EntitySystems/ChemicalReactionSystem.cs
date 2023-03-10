@@ -55,6 +55,22 @@ namespace Content.Server.Chemistry.EntitySystems
             areaEffectComponent.Start(amount, duration, 0.5f, 1.0f);
 
             _audio.PlayPvs("/Audio/Effects/smoke.ogg", owner, AudioHelpers.WithVariation(0.125f));
+
+            if (solution.Volume <= 0)
+            {
+                var ev = new BoilOutEvent(owner);
+                RaiseLocalEvent(owner, ref ev);
+            }
+
+            AdminLogger.Add(LogType.ChemicalReaction, LogImpact.High,
+                $"Solution {smokeSolution:solution} boiled out with strength {amount:strength} on entity {ToPrettyString(owner)} at {coords}");
+
         }
+    }
+
+    [ByRefEvent]
+    public record struct BoilOutEvent(EntityUid Entity)
+    {
+
     }
 }

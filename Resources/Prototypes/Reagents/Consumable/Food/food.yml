@@ -7,6 +7,8 @@
   physicalDesc: reagent-physical-desc-opaque
   flavor: nutriment
   color: "#664330"
+  boilingPoint: 430.0
+  meltingPoint: 146.0
   metabolisms:
     Food:
       effects:
@@ -26,6 +28,8 @@
   physicalDesc: reagent-physical-desc-chalky
   flavor: vitamin
   color: "#D3D3D3"
+  boilingPoint: 290.0
+  meltingPoint: 146.0
   metabolisms:
     Food: #This makes it not compete with medicines, a large bonus for something that can heal
       effects:
@@ -49,6 +53,8 @@
   physicalDesc: reagent-physical-desc-clumpy
   flavor: protein
   color: "#FFFFE5"
+  boilingPoint: 270.0
+  meltingPoint: 146.0
   metabolisms:
     Food:
       effects:
@@ -70,6 +76,7 @@
   physicalDesc: reagent-physical-desc-sweet
   flavor: sweet
   color: white
+  boilingPoint: 192.0
   meltingPoint: 146.0
   metabolisms:
     Food:

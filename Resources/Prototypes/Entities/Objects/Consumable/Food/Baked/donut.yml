@@ -20,6 +20,7 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
+  - type: DestroyableOnBoil
   - type: Item
     sprite: Objects/Consumable/Food/Baked/donut.rsi
     size: 1

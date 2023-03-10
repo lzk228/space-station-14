@@ -17,6 +17,7 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 8
+  - type: DestroyableOnBoil
   - type: Item
     size: 5
 

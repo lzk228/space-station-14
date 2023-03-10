@@ -16,6 +16,7 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 10
+  - type: DestroyableOnBoil
   - type: Item
     sprite: Objects/Consumable/Food/snacks.rsi
     heldPrefix: packet

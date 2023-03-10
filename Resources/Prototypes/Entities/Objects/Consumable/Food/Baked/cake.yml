@@ -22,6 +22,7 @@
           Quantity: 20
         - ReagentId: Vitamin
           Quantity: 5
+  - type: DestroyableOnBoil
 
 - type: entity
   parent: FoodCakeBase

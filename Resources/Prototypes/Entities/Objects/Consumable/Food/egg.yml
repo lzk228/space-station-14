@@ -24,6 +24,7 @@
         reagents:
         - ReagentId: Egg
           Quantity: 6
+  - type: DestroyableOnBoil
   - type: SolutionSpiker
     sourceSolution: food
     ignoreEmpty: true
@@ -106,6 +107,7 @@
         reagents:
         - ReagentId: Egg
           Quantity: 1
+  - type: DestroyableOnBoil
   - type: Tag
     tags:
     - Egg
