@@ -13,7 +13,7 @@
 - type: reaction
   id: CrazyRussianDrug
   impact: Medium
-  minTemp: 120
+  minTemp: 370
   reactants:
     Acetone:
       amount: 3
