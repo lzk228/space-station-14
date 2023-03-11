@@ -1,10 +1,10 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCueball
-  name: экспериментальный голографический шар
+  name: экспериментальный голо-шар
   description: Процесс его создания держится в секрете. А вот практические свойства не являются тайной - их попросту нет.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/Head/Misc/cueball.rsi
+    sprite: Andromeda/Clothing/Head/cueball.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/Head/Misc/cueball.rsi
+    sprite: Andromeda/Clothing/Head/cueball.rsi

@@ -72,12 +72,11 @@
   sponsorOnly: true
 
 # 13lackHawk
-#- type: loadout
-#  id: ClothingHeadHatCueballLoadout
-#  entity: ClothingHeadHatCueball
-#  sponsorOnly: true
-#  whitelistJobs: [ResearchDirector, Scientist]
-# WIP
+- type: loadout
+  id: ClothingHeadHatCueballLoadout
+  entity: ClothingHeadHatCueball
+  sponsorOnly: true
+  whitelistJobs: [ResearchDirector, Scientist]
 
 - type: loadout
   id: ClothingNeckHealerCloakLoadout
@@ -90,3 +89,21 @@
   entity: ClothingNeckMinerCloak
   sponsorOnly: true
   whitelistJobs: [SalvageSpecialist, Quartermaster]
+
+# Zluka
+- type: loadout
+  id: ClothingNeckCloakGoliathCloakLoadout
+  entity: ClothingNeckCloakGoliathCloak
+  sponsorOnly: true
+  blacklistJobs: [Janitor]
+
+- type: loadout
+  id: ClothingEyesGlassesSunglassesLoadout
+  entity: ClothingEyesGlassesSunglasses
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCleanerCloakLoadout
+  entity: ClothingNeckCleanerCloak
+  sponsorOnly: true
+  whitelistJobs: [Janitor]
