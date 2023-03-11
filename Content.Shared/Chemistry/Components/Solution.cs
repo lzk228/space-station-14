@@ -457,6 +457,7 @@ namespace Content.Shared.Chemistry.Components
             IoCManager.Resolve(ref protoMan);
             var outSolution = new Solution(Contents.Count);
             var reagentsToRemove = new List<ReagentQuantity>();
+            var newTemperature = float.MaxValue;
 
             foreach (var reagent in Contents)
             {
@@ -469,6 +470,7 @@ namespace Content.Shared.Chemistry.Components
                 {
                     reagentsToRemove.Add(reagent);
                     var reagentTemperature = Math.Max(0f, Math.Min(273.15f, boilingPoint - 20f));
+                    newTemperature = Math.Min(newTemperature, reagentTemperature);
                     outSolution.AddReagent(reagentPrototype, reagent.Quantity, reagentTemperature, protoMan);
                 }
             }
@@ -477,6 +479,9 @@ namespace Content.Shared.Chemistry.Components
             {
                 RemoveReagent(reagent.ReagentId, reagent.Quantity);
             }
+
+            if (newTemperature < Temperature)
+                Temperature = newTemperature;
 
             ValidateSolution();
             outSolution.ValidateSolution();

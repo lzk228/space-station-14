@@ -439,9 +439,6 @@ namespace Content.Server.Kitchen.EntitySystems
                 if (active.CookTimeRemaining > 0)
                     continue;
 
-                //this means the microwave has finished cooking.
-                AddTemperature(microwave, active.TotalTime);
-
                 if (active.PortionedRecipe.Item1 != null)
                 {
                     var coords = Transform(microwave.Owner).Coordinates;
@@ -451,6 +448,9 @@ namespace Content.Server.Kitchen.EntitySystems
                         Spawn(active.PortionedRecipe.Item1.Result, coords);
                     }
                 }
+
+                //this means the microwave has finished cooking.
+                AddTemperature(microwave, active.TotalTime);
 
                 _sharedContainer.EmptyContainer(microwave.Storage);
                 UpdateUserInterfaceState(microwave.Owner, microwave);

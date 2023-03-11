@@ -63,7 +63,7 @@ namespace Content.Server.Chemistry.EntitySystems
             }
 
             AdminLogger.Add(LogType.ChemicalReaction, LogImpact.High,
-                $"Solution {smokeSolution:solution} boiled out with strength {amount:strength} on entity {ToPrettyString(owner)} at {coords}");
+                $"Solution {smokeSolution} boiled out with strength {amount} on entity {ToPrettyString(owner)} at {coords}");
 
         }
     }
