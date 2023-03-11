@@ -33,3 +33,12 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/cleaner_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckSyndieCloak
+  name: необычный синди-плащ
+  description: Если долго всматриваться в букву "S", то можно увидеть оттенки 20 разных телекристаллов.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/syndie_cloak.rsi
