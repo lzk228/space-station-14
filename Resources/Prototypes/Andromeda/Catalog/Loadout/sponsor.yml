@@ -21,7 +21,7 @@
   id: BalloonSynLoadout
   entity: BalloonSyn
   sponsorOnly: true
-  whitelistJobs: [Clown]
+  whitelistJobs: [Clown, Passenger]
 
 # HowAreYouMyFriend(HoS loadout)
 - type: loadout
@@ -32,14 +32,14 @@
 
 # HowAreYouMyFriend(passenger loadout)
 - type: loadout
-  id: ClothingOuterCoatPirateLoadout
-  entity: ClothingOuterCoatPirate
+  id: ClothingUniformJumpsuitPyjamaSyndicateRedLoadout
+  entity: ClothingUniformJumpsuitPyjamaSyndicateRed
   sponsorOnly: true
   whitelistJobs: [Passenger]
 
 - type: loadout
-  id: ClothingHeadHatPirateLoadout
-  entity: ClothingHeadHatPirate
+  id: ClothingHeadPyjamaSyndicateRedLoadout
+  entity: ClothingHeadPyjamaSyndicateRed
   sponsorOnly: true
   whitelistJobs: [Passenger]
 
@@ -64,3 +64,29 @@
   id: ClothingNeckBANCloakLoadout
   entity: ClothingNeckBANCloak
   sponsorOnly: true
+
+# Hifos
+- type: loadout
+  id: ClothingNeckSyndieCloakLoadout
+  entity: ClothingNeckSyndieCloak
+  sponsorOnly: true
+
+# 13lackHawk
+#- type: loadout
+#  id: ClothingHeadHatCueballLoadout
+#  entity: ClothingHeadHatCueball
+#  sponsorOnly: true
+#  whitelistJobs: [ResearchDirector, Scientist]
+# WIP
+
+- type: loadout
+  id: ClothingNeckHealerCloakLoadout
+  entity: ClothingNeckHealerCloak
+  sponsorOnly: true
+  whitelistJobs: [ChiefMedicalOfficer]
+
+- type: loadout
+  id: ClothingNeckMinerCloakLoadout
+  entity: ClothingNeckMinerCloak
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist, Quartermaster]
