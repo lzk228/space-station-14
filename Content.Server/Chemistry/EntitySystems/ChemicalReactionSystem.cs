@@ -33,7 +33,7 @@ namespace Content.Server.Chemistry.EntitySystems
             if (smokeSolution == null)
                 return;
 
-            var amount = (int) Math.Round(1 + Math.Sqrt(smokeSolution.Volume.Float()));
+            var amount = (int) Math.Max(1, Math.Round(Math.Sqrt(smokeSolution.Volume.Float())));
             amount = Math.Min(amount, 15);
             var duration = Math.Min(amount, 5);
 

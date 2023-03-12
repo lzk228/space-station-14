@@ -455,7 +455,12 @@ namespace Content.Shared.Chemistry.Components
                 return null;
 
             IoCManager.Resolve(ref protoMan);
-            var outSolution = new Solution(Contents.Count);
+            var outSolution = new Solution(Contents.Count)
+            {
+                CanMix = false,
+                CanBoil = false,
+                CanReact = false
+            };
             var reagentsToRemove = new List<ReagentQuantity>();
             var newTemperature = float.MaxValue;
 
@@ -469,7 +474,7 @@ namespace Content.Shared.Chemistry.Components
                 if (boilingPoint < Temperature)
                 {
                     reagentsToRemove.Add(reagent);
-                    var reagentTemperature = Math.Max(0f, Math.Min(273.15f, boilingPoint - 20f));
+                    var reagentTemperature = Math.Max(0f, Math.Min(273.15f, boilingPoint - 1f));
                     newTemperature = Math.Min(newTemperature, reagentTemperature);
                     outSolution.AddReagent(reagentPrototype, reagent.Quantity, reagentTemperature, protoMan);
                 }
