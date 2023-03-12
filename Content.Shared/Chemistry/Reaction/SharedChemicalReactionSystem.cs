@@ -305,8 +305,8 @@ namespace Content.Shared.Chemistry.Reaction
                     Logger.Error($"{nameof(Solution)} {owner} could not finish reacting in under {MaxReactionIterations} loops.");
             }
 
-            if (solution.IsBoiling(_prototypeManager))
-                BoilOutSolution(solution, owner);
+            // if (solution.IsBoiling(_prototypeManager))
+            //     BoilOutSolution(solution, owner);
         }
 
         protected virtual void BoilOutSolution(Solution solution, EntityUid owner)
