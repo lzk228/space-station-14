@@ -488,6 +488,9 @@ namespace Content.Shared.Chemistry.Components
             if (newTemperature < Temperature)
                 Temperature = newTemperature;
 
+            UpdateHeatCapacity(protoMan);
+            outSolution.UpdateHeatCapacity(protoMan);
+
             ValidateSolution();
             outSolution.ValidateSolution();
 

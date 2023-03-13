@@ -32,6 +32,7 @@
       Lung:
         maxVol: 100.0
         canReact: false
+        canBoil: false
 
 - type: entity
   id: OrganAnimalStomach
