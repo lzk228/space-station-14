@@ -45,3 +45,17 @@
               Quantity: 3
             - ReagentId: CrazyRussianDrug
               Quantity: 6
+
+- type: entity
+  name: шприц когнизина
+  parent: BaseSyringe
+  id: SyringeCognizine
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          canBoil: false
+          reagents:
+            - ReagentId: Cognizine
+              Quantity: 15

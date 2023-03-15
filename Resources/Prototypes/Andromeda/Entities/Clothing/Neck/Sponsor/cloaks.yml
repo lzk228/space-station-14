@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBlackCloak
+  name: шикарный черный плащ
+  description: Если долго вглядываться в этот плащ, он не начнет вглядываться в тебя. Вот досада!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Sponsor/black_cloak.rsi
