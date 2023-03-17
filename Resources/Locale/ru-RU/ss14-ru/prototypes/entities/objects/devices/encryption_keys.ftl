@@ -1,14 +1,14 @@
 ent-EncryptionKey = ключ шифрования
     .desc = Небольшой шифрующий чип для гарнитуры.
     .suffix = { "" }
-ent-EncryptionKeyCommon = ключ шифрования пассажира
+ent-EncryptionKeyCommon = ключ шифрования общего канала
     .desc = Ключ шифрования, используемый кем угодно.
     .suffix = { "" }
 ent-EncryptionKeyCargo = ключ шифрования отдела снабжения
     .desc = Ключ шифрования, используемый сотрудниками отдела снабжения.
     .suffix = { "" }
-ent-EncryptionKeyStationMaster = station master encryption key
-    .desc = An encryption key used by station's bosses.
+ent-EncryptionKeyStationMaster = ключ шифрования руководства станции
+    .desc = Ключ шифрования, используемый боссами станции.
     .suffix = { "" }
 ent-EncryptionKeyCentCom = ключ шифрования центрального командования
     .desc = Ключ шифрования, используемый боссами капитана.
@@ -39,4 +39,4 @@ ent-EncryptionKeyService = ключ шифрования сервисного о
     .suffix = { "" }
 ent-EncryptionKeySyndie = кроваво-красный ключ шифрования
     .desc = Ключ шифрования, используемый... секундочку... Кто владелец этого чипа?
-    .suffix = { "" }
+    

@@ -1,3 +1,4 @@
+# High yields
 - type: ore
   id: OreSteel
   oreEntity: SteelOre1
@@ -10,6 +11,7 @@
   minOreYield: 3
   maxOreYield: 7
 
+# Medium yields
 - type: ore
   id: OreGold
   oreEntity: GoldOre1
@@ -22,6 +24,7 @@
   minOreYield: 2
   maxOreYield: 5
 
+# Low yields
 - type: ore
   id: OreSilver
   oreEntity: SilverOre1

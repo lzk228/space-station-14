@@ -23,7 +23,7 @@ CHANGELOG_FILE = "Resources/Changelog/Changelog.yml"
 
 TYPES_TO_EMOJI = {
     "Fix":    "🐛",
-    "Add":    "🆕",
+    "Add":    "✨", # Corvax: Use gitmoji 💥
     "Remove": "❌",
     "Tweak":  "⚒️"
 }
@@ -110,7 +110,7 @@ def send_to_discord(entries: Iterable[ChangelogEntry]) -> None:
 
     content = io.StringIO()
     for name, group in itertools.groupby(entries, lambda x: x["author"]):
-        content.write(f"**{name}** обновил:\n")
+        content.write(f"**{name}** обновил(а):\n")
         for entry in group:
             for change in entry["changes"]:
                 emoji = TYPES_TO_EMOJI.get(change['type'], "❓")
@@ -126,18 +126,21 @@ def send_to_discord(entries: Iterable[ChangelogEntry]) -> None:
                     message = resp.json()['data']
                 # Corvax-Localization-End
                 content.write(f"{emoji} {message}\n")
+        content.write(f"\n") # Corvax: Better formatting
 
-    body = {
-        "content": content.getvalue(),
-        # Do not allow any mentions.
-        "allowed_mentions": {
-            "parse": []
-        },
-        # SUPPRESS_EMBEDS
-        "flags": 1 << 2
-    }
+    content.seek(0) # Corvax
+    for chunk in iter(lambda: content.read(2000), ''): # Corvax: Split big changelogs messages
+        body = {
+            "content": chunk,
+            # Do not allow any mentions.
+            "allowed_mentions": {
+                "parse": []
+            },
+            # SUPPRESS_EMBEDS
+            "flags": 1 << 2
+        }
 
-    requests.post(DISCORD_WEBHOOK_URL, json=body)
+        requests.post(DISCORD_WEBHOOK_URL, json=body)
 
 
 main()

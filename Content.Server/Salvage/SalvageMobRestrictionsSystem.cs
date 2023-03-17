@@ -67,7 +67,7 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
             }
             else if (damageQuery.TryGetComponent(target, out var damageableComponent))
             {
-                _damageableSystem.SetAllDamage(damageableComponent, 200);
+                _damageableSystem.SetAllDamage(target, damageableComponent, 200);
             }
         }
     }
