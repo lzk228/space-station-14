@@ -4,17 +4,13 @@ using Content.Server.Mind.Components;
 using Content.Server.NodeContainer;
 using Content.Server.Power.Components;
 using Content.Server.UserInterface;
-using Content.Server.Radio.EntitySystems;
-using Content.Server.Radio.Components;
 using Content.Shared.AME;
 using Content.Shared.Database;
-using Content.Shared.Radio;
 using Content.Shared.Hands.EntitySystems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
-using Robust.Shared.Prototypes;
 
 namespace Content.Server.AME.Components
 {
@@ -24,7 +20,6 @@ namespace Content.Server.AME.Components
         [Dependency] private readonly IEntityManager _entities = default!;
         [Dependency] private readonly IEntitySystemManager _sysMan = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         [ViewVariables] private BoundUserInterface? UserInterface => Owner.GetUIOrNull(AMEControllerUiKey.Key);
         private bool _injecting;
