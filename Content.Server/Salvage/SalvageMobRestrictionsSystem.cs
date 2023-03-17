@@ -52,7 +52,6 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
         var metaQuery = GetEntityQuery<MetaDataComponent>();
         var bodyQuery = GetEntityQuery<BodyComponent>();
         var damageQuery = GetEntityQuery<DamageableComponent>();
-        var bloodstreamQuery = GetEntityQuery<BloodstreamComponent>();
         foreach (var target in component.MobsToKill)
         {
             if (Deleted(target, metaQuery))
@@ -60,9 +59,6 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
 
             if (_mobStateSystem.IsDead(target))
                 continue; // DONT WASTE BIOMASS
-
-            if (bloodstreamQuery.TryGetComponent(target, out var bloodstream) && bloodstream.ChemicalSolution.ContainsReagent("Homilin"))
-                continue;
 
             if (bodyQuery.TryGetComponent(target, out var body))
             {

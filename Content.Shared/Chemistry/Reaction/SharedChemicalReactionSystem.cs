@@ -296,20 +296,16 @@ namespace Content.Shared.Chemistry.Reaction
 
             // Repeatedly attempt to perform reactions, ending when there are no more applicable reactions, or when we
             // exceed the iteration limit.
-            for (var i = 0; i <= MaxReactionIterations; i++)
+            for (var i = 0; i < MaxReactionIterations; i++)
             {
                 if (!ProcessReactions(solution, owner, maxVolume, reactions, mixerComponent))
-                    break;
-
-                if (i == MaxReactionIterations)
-                    Logger.Error($"{nameof(Solution)} {owner} could not finish reacting in under {MaxReactionIterations} loops.");
+                    return;
             }
 
-            // if (solution.IsBoiling(_prototypeManager))
-            //     BoilOutSolution(solution, owner);
+            Logger.Error($"{nameof(Solution)} {owner} could not finish reacting in under {MaxReactionIterations} loops.");
         }
 
-        protected virtual void BoilOutSolution(Solution solution, EntityUid owner)
+        public virtual void BoilOutSolution(Solution solution, EntityUid owner)
         {
 
         }

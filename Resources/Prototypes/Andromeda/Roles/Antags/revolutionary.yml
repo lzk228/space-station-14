@@ -1,0 +1,13 @@
+- type: antag
+  id: RevolutionaryHead
+  name: roles-antag-revolutionary-head-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-revolutionary-head-objective
+
+- type: antag
+  id: Revolutionary
+  name: roles-antag-revolutionary-name
+  antagonist: true
+  setPreference: false
+  objective: roles-antag-revolutionary-objective

@@ -1,0 +1,5 @@
+#Revolutionary uplink categoires
+- type: storeCategory
+  id: UplinkRevolutionary
+  name: store-category-revolutionary
+  priority: 0

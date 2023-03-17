@@ -26,7 +26,7 @@ namespace Content.Server.Chemistry.EntitySystems
             _audio.PlayPvs(reaction.Sound, owner);
         }
 
-        protected override void BoilOutSolution(Solution solution, EntityUid owner)
+        public override void BoilOutSolution(Solution solution, EntityUid owner)
         {
             var smokeSolution = solution.BoilOutSolution(_prototypeManager);
 

@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: LoyaltyImplant
+  name: loyalty implant
+  description: you protected from revs
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+    - type: LoyaltyImplant
+      damage:
+        groups:
+          Brute: 20
+      heal:
+        groups:
+          Brute: -45
