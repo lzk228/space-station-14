@@ -1,0 +1,5 @@
+- type: gameRule
+  id: Revolutionary
+  config:
+    !type:GenericGameRuleConfiguration
+    id: Revolutionary

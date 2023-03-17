@@ -10,8 +10,9 @@
   meltingPoint: -67.0
   metabolisms:
     Medicine:
-      metabolismRate: 0.01
+      metabolismRate: 0.1
       effects:
+        - !type:AdaptSpaceMob
         - !type:HealthChange
           conditions:
             - !type:ReagentThreshold

@@ -1,4 +1,5 @@
-﻿using Content.Server.Mind.Components;
+﻿using System.Linq;
+using Content.Server.Mind.Components;
 using Content.Server.Roles;
 using Content.Shared.CharacterInfo;
 using Content.Shared.Objectives;
@@ -43,13 +44,15 @@ public sealed class CharacterInfoSystem : EntitySystem
             }
 
             // Get job title
-            foreach (var role in mind.AllRoles)
-            {
-                if (role.GetType() != typeof(Job)) continue;
+            // foreach (var role in mind.AllRoles)
+            // {
+            //     if (role.GetType() != typeof(Job)) continue;
+            //
+            //     jobTitle = role.Name;
+            //     break;
+            // }
 
-                jobTitle = role.Name;
-                break;
-            }
+            jobTitle = string.Join(", ", mind.AllRoles.Select(x => x.Name));
 
             // Get briefing
             briefing = mind.Briefing;

@@ -1,0 +1,18 @@
+using Content.Shared.Damage;
+
+namespace Content.Shared.Implants.Components;
+
+[RegisterComponent]
+public sealed class LoyaltyImplantComponent : Component
+{
+    [DataField("damage", required: true)]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public DamageSpecifier Damage = default!;
+
+    [DataField("heal", required: true)]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public DamageSpecifier Heal = default!;
+
+    [ViewVariables] public TimeSpan NextImpact = TimeSpan.Zero;
+    public TimeSpan ImpactDelay = TimeSpan.FromSeconds(3);
+}
