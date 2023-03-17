@@ -42,7 +42,6 @@ namespace Content.Server.AME.Components
         private int _stability = 100;
 
         public ContainerSlot JarSlot = default!;
-        int _warningCD = 3;
         [ViewVariables] public bool HasJar => JarSlot.ContainedEntity != null;
 
         protected override void Initialize()
@@ -89,21 +88,6 @@ namespace Content.Server.AME.Components
                 fuelJar.FuelAmount -= availableInject;
                 InjectSound(overloading);
                 UpdateUserInterface();
-
-                float fuelRatio = (float) fuelJar.FuelAmount / (float) fuelJar.MaxFuelAmount;
-
-                if (fuelRatio <= 0.1f
-                    && _entities.TryGetComponent<IntrinsicRadioReceiverComponent>(this.Owner, out var component))
-                {
-                    if (_warningCD == 0)
-                    {
-                        _entities.EntitySysManager.GetEntitySystem<RadioSystem>().SendRadioMessage(this.Owner, Loc.GetString("ame-controller-warning", ("percentage", Math.Round(fuelRatio * 100f))), _prototypeManager.Index<RadioChannelPrototype>("Engineering"));
-                        _warningCD = 3;
-                    } else
-                    {
-                        _warningCD--;
-                    }
-                }
             }
 
             _stability = group.GetTotalStability();
