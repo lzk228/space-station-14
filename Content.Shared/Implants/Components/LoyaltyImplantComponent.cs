@@ -13,6 +13,10 @@ public sealed class LoyaltyImplantComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier Heal = default!;
 
+    [DataField("durability")]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public int Durability = 5;
+
     [ViewVariables] public TimeSpan NextImpact = TimeSpan.Zero;
     public TimeSpan ImpactDelay = TimeSpan.FromSeconds(3);
 }

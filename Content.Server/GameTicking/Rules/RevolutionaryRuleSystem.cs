@@ -11,6 +11,7 @@ using Content.Server.RoundEnd;
 using Content.Server.Station.Systems;
 using Content.Server.Traitor;
 using Content.Server.Traitor.Uplink;
+using Content.Shared.Chat;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Implants.Components;
@@ -107,15 +108,16 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         "SecurityOfficer"
     };
 
-    private readonly string[] _convertingFlashesIds =
+    private readonly Dictionary<string, float> _flashRangeDictionary = new Dictionary<string, float>()
     {
-        "Flash",
-        "GrenadeFlashBang"
+        { "Flash", 4f },
+        { "GrenadeFlashBang", 15f},
+        { "RevolutionaryFlash", 2f}
     };
 
     private const int MinRevs = 1;
     private const int MaxRevs = 5;
-    private const int MinPlayers = 1;
+    private const int MinPlayers = 3;
     private const string RevolutionaryHeadPrototypeId = "RevolutionaryHead";
     private const string RevolutionaryPrototypeId = "Revolutionary";
     private const string UplinkPresetId = "StorePresetUplinkRevolutionary";
@@ -261,7 +263,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         _factionSystem.AddFaction(uid, "Syndicate");
 
         _popupSystem.PopupEntity(Loc.GetString("revolutionary-convert-to-rev"),
-            uid, uid, PopupType.Large);
+            uid, uid, PopupType.LargeCaution);
     }
 
     private void OnComponentRemove(EntityUid uid, RevolutionaryComponent component, ComponentRemove args)
@@ -294,7 +296,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         }
 
         _popupSystem.PopupEntity(Loc.GetString("revolutionary-convert-from-rev"),
-            uid, uid, PopupType.Large);
+            uid, uid, PopupType.LargeCaution);
 
         CheckWinConditions();
     }
@@ -426,7 +428,6 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
                 ("name", name),
                 ("username", session.Name)));
         }
-
     }
 
     private void OnMobStateChanged(MobStateChangedEvent ev)
@@ -456,13 +457,15 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         var user = ev.User.Value;
         var flash = ev.Used.Value;
 
-        if (!_convertingFlashesIds.Contains(MetaData(flash).EntityPrototype?.ID))
+        if (!_flashRangeDictionary.Keys.Contains(MetaData(flash).EntityPrototype?.ID))
             return;
+
+        var flashId = MetaData(flash).EntityPrototype?.ID!;
 
         if (!TryComp<RevolutionaryComponent>(user, out var revComponent) || HasComp<RevolutionaryComponent>(target))
             return;
 
-        if (!revComponent.Head)
+        if (!revComponent.Head && flashId != "RevolutionaryFlash")
             return;
 
         if (!TryComp<MindComponent>(target, out var mindComponent))
@@ -475,11 +478,16 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         if (targetSession is null)
             return;
 
-        if (HasLoyaltyImplant(target))
+        if (Transform(target).Coordinates.TryDistance(EntityManager, Transform(user).Coordinates, out var distance) &&
+            distance > _flashRangeDictionary[flashId])
             return;
 
-        if (Transform(target).Coordinates.TryDistance(EntityManager, Transform(user).Coordinates, out var distance) && distance > MaxConvertRange)
+        if (HasLoyaltyImplant(target))
+        {
+            if (flashId == "RevolutionaryFlash")
+                DamageLoyaltyImplant(target);
             return;
+        }
 
         if (!TryComp<FactionComponent>(target, out var factionComponent))
             return;
@@ -489,6 +497,12 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         {
             _stunSystem.TryKnockdown(target, TimeSpan.FromSeconds(5), false);
             MakeRev(targetSession);
+
+            var originSession = _playerManager.ServerSessions.FirstOrDefault(x => x.AttachedEntity == user);
+            if (originSession is null)
+                return;
+            var message = Loc.GetString("revolutionary-convert-user", ("name", ToPrettyString(target).Name ?? "??"));
+            _chatManager.ChatMessageToOne(ChatChannel.Server, message, message, source: EntityUid.Invalid, hideChat: false, client: originSession.ConnectedClient, colorOverride: Color.Red);
         }
     }
 
@@ -504,7 +518,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
             return;
 
         var name = MetaData(uid).EntityName;
-        _popupSystem.PopupEntity(Loc.GetString("revolutionary-implant-resist", ("name", name)), uid, PopupType.Medium);
+        _popupSystem.PopupEntity(Loc.GetString("revolutionary-implant-resist", ("name", name)), uid, PopupType.Large);
         EntityManager.QueueDeleteEntity(args.Entity);
     }
 
@@ -536,6 +550,12 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
             {
                 MakeRev(targetSession);
                 _damageableSystem.TryChangeDamage(target, _convertHeal, origin: origin);
+
+                var originSession = _playerManager.ServerSessions.FirstOrDefault(x => x.AttachedEntity == origin);
+                if (originSession is null)
+                    return;
+                var message = Loc.GetString("revolutionary-convert-user", ("name", ToPrettyString(target).Name ?? "??"));
+                _chatManager.ChatMessageToOne(ChatChannel.Server, message, message, source: EntityUid.Invalid, hideChat: false, client: originSession.ConnectedClient, colorOverride: Color.Red);
             }
         }
         else if (!HasComp<RevolutionaryComponent>(origin) && TryComp<RevolutionaryComponent>(target, out var revComponent))
@@ -601,6 +621,23 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         }
 
         return false;
+    }
+
+    private void DamageLoyaltyImplant(EntityUid target)
+    {
+        if (!_containerSystem.TryGetContainer(target, ImplanterComponent.ImplantSlotId, out var implantContainer))
+            return;
+
+        var implantCompQuery = GetEntityQuery<LoyaltyImplantComponent>();
+        foreach (var implant in implantContainer.ContainedEntities)
+        {
+            if (!implantCompQuery.TryGetComponent(implant, out var implantComponent))
+                continue;
+
+            implantComponent.Durability--;
+            if (implantComponent.Durability <= 0)
+                EntityManager.QueueDeleteEntity(implant);
+        }
     }
 
     private void DeconvertAllRevs()
@@ -699,6 +736,9 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
     {
         var entity = session.AttachedEntity;
         if (entity is null)
+            return false;
+
+        if (!HasComp<RevolutionaryComponent>(entity))
             return false;
 
         if (!TryComp<MobStateComponent>(entity, out var mobStateComponent))

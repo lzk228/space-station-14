@@ -10,6 +10,16 @@
     - UplinkRevolutionary
 
 - type: listing
+  id: UplinkRevolutionaryFlashPlus
+  name: uplink-revolutionary-flash-plus-name
+  description: uplink-revolutionary-flash-plus-desc
+  productEntity: RevolutionaryFlash
+  cost:
+    Telecrystal: 10
+  categories:
+    - UplinkRevolutionary
+
+- type: listing
   id: UplinkRevolutionaryFlash
   name: uplink-revolutionary-flash-name
   description: uplink-revolutionary-flash-desc

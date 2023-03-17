@@ -1,0 +1,25 @@
+- type: entity
+  name: revolutionary flash
+  parent: BaseItem
+  id: RevolutionaryFlash
+  description: An ultrabright flashbulb with a trigger, which causes the victim to be dazed and lose their eyesight for a moment. Useless when burnt out.
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/flash.rsi
+      state: flash
+    - type: Flash
+      duration: 1600
+      uses: 9999
+      range: 5
+      aoeFlashDuration: 900
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 0 # why is this classed as a melee weapon? Is it needed for some interaction?
+      angle: 10
+    - type: Item
+      size: 5
+      sprite: Objects/Weapons/Melee/flash.rsi
+    - type: ItemCooldown
+    - type: StaticPrice
+      price: 100
