@@ -119,3 +119,10 @@
   entity: SyringeCognizine
   sponsorOnly: true
   whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+
+# Sonado
+- type: loadout
+  id: ClothingUniformJumpskirtJanimaidLoadout
+  entity: ClothingUniformJumpskirtJanimaid
+  sponsorOnly: true
+  whitelistJobs: [ServiceWorker, Chef, Bartender, Janitor]
