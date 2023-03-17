@@ -115,9 +115,9 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         { "RevolutionaryFlash", 2f}
     };
 
-    private const int MinRevs = 1;
+    private const int MinRevs = 3;
     private const int MaxRevs = 5;
-    private const int MinPlayers = 3;
+    private const int MinPlayers = 15;
     private const string RevolutionaryHeadPrototypeId = "RevolutionaryHead";
     private const string RevolutionaryPrototypeId = "Revolutionary";
     private const string UplinkPresetId = "StorePresetUplinkRevolutionary";
