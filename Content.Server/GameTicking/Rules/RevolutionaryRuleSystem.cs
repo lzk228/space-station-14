@@ -106,7 +106,9 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         "HeadOfSecurity",
         "Quartermaster",
         "SecurityOfficer",
-        "Warden"
+        "Warden",
+        "Lawyer",
+        "IAA"
     };
 
     private readonly Dictionary<string, float> _flashRangeDictionary = new()
