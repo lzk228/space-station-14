@@ -20,3 +20,5 @@ revolutionary-implant-resist = { $name } сопротивляется дейст
 
 revolutionary-abort-shuttle = Вызов эвакуационного шаттла отклонён. На станции замечена подозрительная активность.
 revolutionary-convert-user = Вы завербовали { $name }
+revolutionary-become-rev = Вы стали революционером
+revolutionary-become-head-rev = Вы стали зачинщиком революционером

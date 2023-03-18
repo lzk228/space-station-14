@@ -105,10 +105,11 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         "ResearchDirector",
         "HeadOfSecurity",
         "Quartermaster",
-        "SecurityOfficer"
+        "SecurityOfficer",
+        "Warden"
     };
 
-    private readonly Dictionary<string, float> _flashRangeDictionary = new Dictionary<string, float>()
+    private readonly Dictionary<string, float> _flashRangeDictionary = new()
     {
         { "Flash", 4f },
         { "GrenadeFlashBang", 15f},
@@ -146,6 +147,10 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
 
     public override void Started()
     {
+        RuleWinType = WinType.Neutral;
+        _headRevsPlayers = new Dictionary<string, IPlayerSession>();
+        _revsPlayers = new Dictionary<string, IPlayerSession>();
+        _headPlayers = new Dictionary<string, IPlayerSession>();
     }
 
     public override void Ended()
@@ -185,6 +190,9 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         EntityManager.AddComponent(entity, revComponent, true);
 
         _uplinkSystem.AddUplink(entity, UplinkBalance, UplinkPresetId);
+        var message = Loc.GetString("revolutionary-become-head-rev");
+        _chatManager.ChatMessageToOne(ChatChannel.Server, message, message, source: EntityUid.Invalid, hideChat: false, client: player.ConnectedClient, colorOverride: Color.Red);
+
     }
 
     public void MakeRev(IPlayerSession player)
@@ -203,6 +211,8 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         }
 
         EntityManager.EnsureComponent<RevolutionaryComponent>(entity);
+        var message = Loc.GetString("revolutionary-become-rev");
+        _chatManager.ChatMessageToOne(ChatChannel.Server, message, message, source: EntityUid.Invalid, hideChat: false, client: player.ConnectedClient, colorOverride: Color.Red);
     }
 
     private void OnStartAttempt(RoundStartAttemptEvent ev)
@@ -305,10 +315,6 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
     {
         if (!RuleAdded)
             return;
-
-        _headRevsPlayers = new Dictionary<string, IPlayerSession>();
-        _headPlayers = new Dictionary<string, IPlayerSession>();
-        _revsPlayers = new Dictionary<string, IPlayerSession>();
 
         var everyone = new List<IPlayerSession>();
         var prefList = new List<IPlayerSession>();

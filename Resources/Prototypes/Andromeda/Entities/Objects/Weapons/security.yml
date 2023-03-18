@@ -10,8 +10,8 @@
     - type: Flash
       duration: 1600
       uses: 9999
-      range: 5
-      aoeFlashDuration: 900
+      range: 2
+      aoeFlashDuration: 500
     - type: MeleeWeapon
       damage:
         types:
