@@ -157,6 +157,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
 
     public override void Ended()
     {
+        RuleWinType = WinType.Neutral;
     }
 
     public override void Update(float frameTime)
@@ -297,7 +298,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         }
 
         var role = mind.AllRoles
-            .Where(x => x is TraitorRole).FirstOrDefault(x => (x as TraitorRole)?.Prototype.ID == RevolutionaryPrototypeId);
+            .Where(x => x is TraitorRole).FirstOrDefault(x => (x as TraitorRole)?.Prototype.ID is RevolutionaryPrototypeId or RevolutionaryHeadPrototypeId);
         if (role != null)
             mind.RemoveRole(role);
 
@@ -448,6 +449,9 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
 
         if (ev.NewMobState is MobState.Critical && ev.Origin is not null)
             ConvertEntityOnCritical(ev.Target, ev.Origin.Value);
+
+        if (ev.NewMobState is MobState.Dead or MobState.Invalid && HasComp<RevolutionaryComponent>(ev.Target))
+            RemComp<RevolutionaryComponent>(ev.Target);
 
         CheckWinConditions();
     }
