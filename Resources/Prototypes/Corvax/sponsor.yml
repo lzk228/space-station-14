@@ -50,6 +50,7 @@
     - type: Clothing
       sprite: Corvax/Sponsor/Clothing/Mask/death.rsi
     - type: BreathMask
+    - type: IdentityBlocker
 
 - type: entity
   parent: ClothingNeckBase
