@@ -163,6 +163,7 @@
   - type: Clothing
     sprite: Clothing/Mask/joy.rsi
   - type: BreathMask
+  - type: IdentityBlocker
 
 - type: entity
   parent: ClothingMaskBase
@@ -190,6 +191,7 @@
   - type: IngestionBlocker
   - type: DiseaseProtection
     protection: 0.1
+  - type: IdentityBlocker
 
 - type: entity
   parent: ClothingMaskBase
@@ -208,6 +210,7 @@
     - type: Construction
       graph: Muzzle
       node: muzzle
+    - type: IdentityBlocker
 
 - type: entity
   parent: ClothingMaskPullableBase
