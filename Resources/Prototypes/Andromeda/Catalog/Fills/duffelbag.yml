@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateAmmoBundle
+  id: ClothingBackpackDuffelSyndicateFilledModularGrenade
+  name: набор модульной гранаты "Собери-сам"
+  description: "Содержит в себе все необходимое для сборки одной модульной гранаты. Внутри находятся 3 триггера на выбор, химический заряд и мензурки для него. Реагенты в комлект не входят!"
+  components:
+  - type: StorageFill
+    contents:
+      - id: ModularGrenade
+      - id: CableApcStack1
+      - id: SignalTrigger
+      - id: TimerTrigger
+      - id: VoiceTrigger
+      - id: ChemicalPayload
+      - id: Beaker
+      - id: Beaker
