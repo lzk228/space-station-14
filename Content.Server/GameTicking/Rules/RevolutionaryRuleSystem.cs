@@ -57,6 +57,13 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         Revs
     }
 
+    private enum RuleState
+    {
+        Init,
+        Running
+    }
+
+    private RuleState _state = RuleState.Init;
     private WinType _winType = WinType.Neutral;
 
     private WinType RuleWinType
@@ -150,6 +157,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
     public override void Started()
     {
         RuleWinType = WinType.Neutral;
+        _state = RuleState.Init;
         _headRevsPlayers = new Dictionary<string, IPlayerSession>();
         _revsPlayers = new Dictionary<string, IPlayerSession>();
         _headPlayers = new Dictionary<string, IPlayerSession>();
@@ -158,6 +166,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
     public override void Ended()
     {
         RuleWinType = WinType.Neutral;
+        _state = RuleState.Init;
     }
 
     public override void Update(float frameTime)
@@ -373,6 +382,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         }
 
         LimitHeadJobs();
+        _state = RuleState.Running;
     }
 
     private void OnRoundEndText(RoundEndTextAppendEvent ev)
@@ -441,7 +451,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
 
     private void OnMobStateChanged(MobStateChangedEvent ev)
     {
-        if (!RuleAdded || RuleWinType is WinType.Crew or WinType.Revs)
+        if (!RuleAdded || RuleWinType is WinType.Crew or WinType.Revs || _state is not RuleState.Running)
             return;
 
         if (ev.NewMobState is MobState.Alive)
