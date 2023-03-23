@@ -38,3 +38,15 @@
     Telecrystal: 8
   categories:
     - UplinkRevolutionary
+
+# Syndie uplink
+- type: listing
+  id: UplinkModularGrenadeBundle
+  name: набор модульной гранаты "Собери-сам"
+  description: Содержит в себе все необходимое для сборки одной модульной гранаты. Внутри находятся 3 триггера на выбор, химический заряд и мензурки для него. Реагенты в комлект не входят!
+  icon: { sprite: /Textures/Objects/Weapons/Grenades/modular.rsi, state: complete }
+  productEntity: ClothingBackpackDuffelSyndicateFilledModularGrenade
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkBundles
