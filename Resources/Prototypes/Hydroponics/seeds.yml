@@ -697,6 +697,13 @@
       Min: 1
       Max: 25
       PotencyDivisor: 4
+  evolveTable:
+    fleshbush:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 90
+      requiredMaxHealth: 150
+      requiredReagent: Blood
 
 - type: seed
   id: chili

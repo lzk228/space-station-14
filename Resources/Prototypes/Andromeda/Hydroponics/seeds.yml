@@ -235,3 +235,25 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
+
+- type: seed
+  id: fleshbush
+  name: seeds-fleshbush-name
+  noun: seeds-noun-seeds
+  displayName: seeds-fleshbush-display-name
+  plantRsi: Andromeda/Objects/Specific/Hydroponics/fleshbush.rsi
+  productPrototypes:
+    - MaterialBiomass
+  lifespan: 30
+  maturation: 14
+  production: 1
+  yield: 1
+  potency: 20
+  growthStages: 4
+  idealLight: 2
+  idealHeat: 310
+  chemicals:
+    Protein:
+      Min: 10
+      Max: 30
+      PotencyDivisor: 5

@@ -18,3 +18,5 @@ seeds-moneytree-name = денежное дерево
 seeds-moneytree-display-name = денежное дерево
 seeds-pizzaplant-name = пиццевик
 seeds-pizzaplant-display-name = пиццевик
+seeds-fleshbush-name = плоть
+seeds-fleshbush-display-name = плоть
