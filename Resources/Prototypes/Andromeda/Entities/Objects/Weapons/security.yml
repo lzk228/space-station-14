@@ -10,12 +10,12 @@
     - type: Flash
       duration: 1600
       uses: 9999
-      range: 2
-      aoeFlashDuration: 500
+      range: 0
+      aoeFlashDuration: 0
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 0 # why is this classed as a melee weapon? Is it needed for some interaction?
+          Blunt: 0
       angle: 10
     - type: Item
       size: 5
