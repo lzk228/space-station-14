@@ -1,0 +1,135 @@
+- type: entity
+  name: дымная мензурка (1)
+  parent: BaseBeaker
+  description: Used to contain a large amount of chemicals or solutions.
+  id: LargeBeakerSmoke
+  components:
+  - type: Spillable
+    solution: beaker
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+    layers:
+      - state: beakerlarge
+      - state: beakerlarge1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+        canMix: true
+        reagents:
+          - ReagentId: Phosphorus
+            Quantity: 33
+          - ReagentId: Potassium
+            Quantity: 33
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: beakerlarge
+  - type: StaticPrice
+    price: 40
+
+- type: entity
+  name: дымная мензурка (2)
+  parent: BaseBeaker
+  description: Used to contain a large amount of chemicals or solutions.
+  id: LargeBeakerSmoke2
+  components:
+  - type: Spillable
+    solution: beaker
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+    layers:
+      - state: beakerlarge
+      - state: beakerlarge1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+        canMix: true
+        reagents:
+          - ReagentId: Sugar
+            Quantity: 33
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: beakerlarge
+  - type: StaticPrice
+    price: 40
+
+- type: entity
+  name: пенная мензурка (1)
+  parent: BaseBeaker
+  description: Used to contain a large amount of chemicals or solutions.
+  id: LargeBeakerFoam
+  components:
+  - type: Spillable
+    solution: beaker
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+    layers:
+      - state: beakerlarge
+      - state: beakerlarge1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+        canMix: true
+        reagents:
+          - ReagentId: FoamingAgent
+            Quantity: 25
+          - ReagentId: FluorosulfuricAcid
+            Quantity: 25
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: beakerlarge
+  - type: StaticPrice
+    price: 40
+
+- type: entity
+  name: пенная мензурка (2)
+  parent: BaseBeaker
+  description: Used to contain a large amount of chemicals or solutions.
+  id: LargeBeakerFoam2
+  components:
+  - type: Spillable
+    solution: beaker
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+    layers:
+      - state: beakerlarge
+      - state: beakerlarge1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: 10
+    sprite: Objects/Specific/Chemistry/beaker_large.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+        canMix: true
+        reagents:
+          - ReagentId: Iron
+            Quantity: 50
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: beakerlarge
+  - type: StaticPrice
+    price: 40
