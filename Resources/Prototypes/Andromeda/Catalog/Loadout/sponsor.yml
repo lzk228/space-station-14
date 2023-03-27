@@ -82,7 +82,7 @@
   id: ClothingNeckHealerCloakLoadout
   entity: ClothingNeckHealerCloak
   sponsorOnly: true
-  whitelistJobs: [ChiefMedicalOfficer]
+  whitelistJobs: [ChiefMedicalOfficer, MedicalDoctor, Chemist]
 
 - type: loadout
   id: ClothingNeckMinerCloakLoadout
@@ -92,14 +92,24 @@
 
 # Zluka
 - type: loadout
-  id: ClothingNeckCloakGoliathCloakLoadout
-  entity: ClothingNeckCloakGoliathCloak
+  id: ClothingCloakGamerLoadoutZluka
+  entity: ClothingCloakGamer
   sponsorOnly: true
   blacklistJobs: [Janitor]
 
 - type: loadout
   id: ClothingEyesGlassesSunglassesLoadout
   entity: ClothingEyesGlassesSunglasses
+  sponsorOnly: true
+
+- type: loadout
+  id: MaterialHideBearLoadout
+  entity: MaterialHideBear
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingMaskSkullLoadoutZluka
+  entity: ClothingMaskSkull
   sponsorOnly: true
 
 - type: loadout
