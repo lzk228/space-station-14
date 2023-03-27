@@ -344,7 +344,8 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
                 continue;
             }
 
-            if (ev.Profiles[player.UserId].AntagPreferences.Contains(RevolutionaryHeadPrototypeId))
+            if (ev.Profiles[player.UserId].AntagPreferences.Contains(RevolutionaryHeadPrototypeId) &&
+                !_immuneRolePrototypeIds.Contains(player.Data.ContentData()?.Mind?.CurrentJob?.Prototype.ID))
             {
                 prefList.Add(player);
             }

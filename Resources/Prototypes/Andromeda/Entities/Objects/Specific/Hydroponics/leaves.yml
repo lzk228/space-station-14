@@ -31,6 +31,9 @@
     - type: Food
     - type: StaticPrice
       price: 130
+    - type: RadiationSource
+      slope: 0.5
+      intensity: 1
     - type: SolutionContainerManager
       solutions:
         food:
