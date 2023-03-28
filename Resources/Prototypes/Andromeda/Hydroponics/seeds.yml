@@ -243,10 +243,10 @@
   displayName: seeds-fleshbush-display-name
   plantRsi: Andromeda/Objects/Specific/Hydroponics/fleshbush.rsi
   productPrototypes:
-    - MaterialBiomass
+    - MaterialBiomass25
   lifespan: 30
   maturation: 14
-  production: 1
+  production: 3
   yield: 1
   potency: 20
   growthStages: 4
