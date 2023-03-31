@@ -84,7 +84,7 @@
   - type: Speech
     speechSounds: Alto
   - type: Stamina
-    excess: 85
+    excess: 65
   - type: OwOAccent
   - type: Perishable
 

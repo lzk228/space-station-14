@@ -14,3 +14,24 @@
       - id: ChemicalPayload
       - id: Beaker
       - id: Beaker
+
+- type: entity
+  parent: ClothingBackpackDuffelMilitary
+  id: ClothingBackpackDuffelSwat
+  name: набор спецназа
+  description: "Содержит в себе все необходимое для оснащения одного члена спецназа."
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesMeson
+      - id: ClothingNeckTieDet
+      - id: ClothingMaskGasSecurity
+      - id: ClothingOuterVestWeb
+      - id: ClothingUniformJumpskirtOperative
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingShoesSwat
+      - id: ClothingBeltMilitaryWebbing
+      - id: ClearPDA
+      - id: AgentIDCard
+      - id: OxygenTankFilled
+      - id: ClothingHeadsetAltCommand
