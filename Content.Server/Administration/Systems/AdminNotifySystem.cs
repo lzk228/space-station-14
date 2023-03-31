@@ -41,11 +41,11 @@ public sealed class AdminNotifySystem : EntitySystem
                 ("origin", ToPrettyString(ev.Origin.Value)));
         }
 
-        _chatManager.SendAdminNotification(message);
+        _chatManager.SendAdminAlert(message);
     }
 
     private void OnSingularityConsumedEntity(EntityUid uid, ContainmentFieldGeneratorComponent component, EventHorizonConsumedEntityEvent ev)
     {
-        _chatManager.SendAdminNotification(Loc.GetString("notify-admin-singulatity-breach", ("target", ToPrettyString(ev.Entity))));
+        _chatManager.SendAdminAlert(Loc.GetString("notify-admin-singulatity-breach", ("target", ToPrettyString(ev.Entity))));
     }
 }

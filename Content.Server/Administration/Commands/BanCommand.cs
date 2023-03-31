@@ -2,6 +2,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Content.Server.Andromeda;
 using Content.Server.Database;
 using Content.Shared.Administration;
 using Robust.Server.Player;
@@ -115,8 +116,9 @@ namespace Content.Server.Administration.Commands
 				admin = "*CONSOLE*";
 			else
 				admin = player.Name;
-            // TODO: delegate this to some system
-			RaiseLocalEvent(new BanEvent(admin, target, expires, reason));
+
+            var bansNotificationsSystem = IoCManager.Resolve<BansNotificationsSystem>();
+            bansNotificationsSystem.OnBan(admin, target, reason, expires);
         }
 
         public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

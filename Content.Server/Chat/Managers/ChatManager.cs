@@ -116,6 +116,7 @@ namespace Content.Server.Chat.Managers
                 ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")), ("message", FormattedMessage.EscapeText(message)));
 
             ChatMessageToMany(ChatChannel.AdminAlert, message, wrappedMessage, default, false, true, clients);
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Admin notification: {message}");
         }
 
         public void SendAdminAlert(EntityUid player, string message, MindComponent? mindComponent = null)
@@ -131,19 +132,6 @@ namespace Content.Server.Chat.Managers
                         && (adminSystem.GetCachedPlayerInfo(mindComponent.Mind!.UserId.Value)?.Antag ?? false);
 
             SendAdminAlert($"{mindComponent.Mind!.Session?.Name}{(antag ? " (ANTAG)" : "")} {message}");
-        }
-
-        //TODO: maybe move to ChatChannel.AdminAlert
-        public void SendAdminNotification(string message)
-        {
-            var clients = _adminManager.ActiveAdmins.Select(p => p.ConnectedClient);
-
-            var wrappedMessage = Loc.GetString("chat-manager-send-admin-announcement-wrap-message",
-                ("adminChannelName", Loc.GetString("chat-manager-admin-notification-channel-name")),
-                ("message", FormattedMessage.EscapeText(message)));
-
-            ChatMessageToMany(ChatChannel.AdminNotifications, message, wrappedMessage, default, false, true, clients);
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Admin notification: {message}");
         }
 
         public void SendHookOOC(string sender, string message)

@@ -25,7 +25,6 @@ namespace Content.Server.Chat.Managers
         void SendAdminAnnouncement(string message);
         void SendAdminAlert(string message);
         void SendAdminAlert(EntityUid player, string message, MindComponent? mindComponent = null);
-        void SendAdminNotification(string message);
 
         void ChatMessageToOne(ChatChannel channel, string message, string wrappedMessage, EntityUid source, bool hideChat,
             INetChannel client, Color? colorOverride = null, bool recordReplay = false, string? audioPath = null, float audioVolume = 0);

@@ -38,7 +38,7 @@
           scaleByQuantity: true
           ignoreResistances: false
           damage:
-            groups:
+            types:
               Caustic: 0.3
   plantMetabolism:
     - !type:PlantAdjustWater
@@ -86,7 +86,7 @@
           scaleByQuantity: true
           ignoreResistances: false
           damage:
-            groups:
+            types:
               Caustic: 0.3
   plantMetabolism:
     - !type:PlantAdjustWater
@@ -244,7 +244,7 @@
           scaleByQuantity: true
           ignoreResistances: false
           damage:
-            groups:
+            types:
               Caustic: 0.2
   plantMetabolism:
     - !type:PlantAdjustNutrition
