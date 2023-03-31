@@ -114,7 +114,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
         "Quartermaster",
         "SecurityOfficer",
         "Warden",
-        "Lawyer",
+        "Detective",
         "IAA"
     };
 
