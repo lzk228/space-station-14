@@ -191,7 +191,7 @@
       effects:
       - !type:HealthChange
         damage:
-          groups:
+          types:
             Caustic: 1
 
 - type: reagent
@@ -221,5 +221,5 @@
       effects:
       - !type:HealthChange
         damage:
-          groups:
+          types:
             Caustic: 1
