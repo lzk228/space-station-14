@@ -53,6 +53,8 @@ namespace Content.Client.Voting
             _netManager.RegisterNetMessage<MsgVoteCanCall>(ReceiveVoteCanCall);
 
             _client.RunLevelChanged += ClientOnRunLevelChanged;
+            //Temp fix for lobby vote
+            SetPopupContainer(_userInterfaceManager.WindowRoot);
         }
 
         private void ClientOnRunLevelChanged(object? sender, RunLevelChangedEventArgs e)
