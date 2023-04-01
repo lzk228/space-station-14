@@ -188,7 +188,7 @@
     state: Waffle
 
 - type: decal
-  id: letter_a
+  id: a
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -216,7 +216,7 @@
     state: arrow
 
 - type: decal
-  id: letter_b
+  id: b
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -265,7 +265,7 @@
     state: brush
 
 - type: decal
-  id: letter_c
+  id: c
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -335,7 +335,7 @@
     state: cyka
 
 - type: decal
-  id: letter_d
+  id: d
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -370,7 +370,7 @@
     state: dwarf
 
 - type: decal
-  id: letter_e
+  id: e
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -419,7 +419,7 @@
     state: exclamationmark
 
 - type: decal
-  id: letter_f
+  id: f
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -461,7 +461,7 @@
     state: footprint
 
 - type: decal
-  id: letter_g
+  id: g
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -482,7 +482,7 @@
     state: guy
 
 - type: decal
-  id: letter_h
+  id: h
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -496,28 +496,28 @@
     state: heart
 
 - type: decal
-  id: letter_i
+  id: i
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: i
 
 - type: decal
-  id: letter_j
+  id: j
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: j
 
 - type: decal
-  id: letter_k
+  id: k
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: k
 
 - type: decal
-  id: letter_l
+  id: l
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -545,7 +545,7 @@
     state: line
 
 - type: decal
-  id: letter_m
+  id: m
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -573,7 +573,7 @@
     state: minus
 
 - type: decal
-  id: letter_n
+  id: n
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -587,14 +587,14 @@
     state: nay
 
 - type: decal
-  id: letter_o
+  id: o
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: o
 
 - type: decal
-  id: letter_p
+  id: p
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -643,7 +643,7 @@
     state: prolizard
 
 - type: decal
-  id: letter_q
+  id: q
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -657,7 +657,7 @@
     state: questionmark
 
 - type: decal
-  id: letter_r
+  id: r
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -720,7 +720,7 @@
     state: rune6
 
 - type: decal
-  id: letter_s
+  id: s
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -818,7 +818,7 @@
     state: stickman
 
 - type: decal
-  id: letter_t
+  id: t
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -860,7 +860,7 @@
     state: trade
 
 - type: decal
-  id: letter_u
+  id: u
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
@@ -874,35 +874,35 @@
     state: uboa
 
 - type: decal
-  id: letter_v
+  id: v
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: v
 
 - type: decal
-  id: letter_w
+  id: w
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: w
 
 - type: decal
-  id: letter_x
+  id: x
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: x
 
 - type: decal
-  id: letter_y
+  id: y
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
     state: y
 
 - type: decal
-  id: letter_z
+  id: z
   tags: ["crayon"]
   sprite:
     sprite: Effects/crayondecals.rsi
