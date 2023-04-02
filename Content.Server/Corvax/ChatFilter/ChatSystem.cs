@@ -8,11 +8,8 @@ public sealed partial class ChatSystem
     private static readonly Dictionary<string, string> SlangReplace = new()
     {
         // Game
-        { "хос", "хуесос" }, // april fools
-        { "хоса", "хоса-хуесоса" }, // april fools
-        { "гсб", "хос-хуесос" }, // april fools
-//        { "хос", "гсб" },
-//        { "хоса", "гсб" },
+        { "хос", "гсб" },
+        { "хоса", "гсб" },
         { "смо", "гв" },
         { "се", "си" },
         { "хоп", "гп" },

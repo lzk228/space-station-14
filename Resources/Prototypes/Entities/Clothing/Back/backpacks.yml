@@ -15,8 +15,6 @@
     - back
   - type: Storage
     capacity: 100
-    storageOpenSound:
-      collection: BikeHorn
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
