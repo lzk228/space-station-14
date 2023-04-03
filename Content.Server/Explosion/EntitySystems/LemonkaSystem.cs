@@ -8,26 +8,27 @@ namespace Content.Server.Explosion.EntitySystems;
 [UsedImplicitly]
 public sealed class LemonkaSystem : EntitySystem
 {
+    [Dependency] private ExplosionSystem _explosionSystem = default!;
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<LemonkaComponent, ThrowDoHitEvent>(OnCreamPieHit);
-        SubscribeLocalEvent<LemonkaComponent, LandEvent>(OnCreamPieLand);
-        SubscribeLocalEvent<LemonkaComponent, ThrowHitByEvent>(OnCreamPiedHitBy);
+        SubscribeLocalEvent<LemonkaComponent, ThrowDoHitEvent>(OnHit);
+        SubscribeLocalEvent<LemonkaComponent, LandEvent>(OnLand);
+        SubscribeLocalEvent<LemonkaComponent, ThrowHitByEvent>(OnHitBy);
     }
 
-    private void OnCreamPieLand(EntityUid uid, LemonkaComponent component, ref LandEvent args)
+    private void OnLand(EntityUid uid, LemonkaComponent component, ref LandEvent args)
     {
         Explode(uid);
     }
 
-    private void OnCreamPieHit(EntityUid uid, LemonkaComponent component, ThrowDoHitEvent args)
+    private void OnHit(EntityUid uid, LemonkaComponent component, ThrowDoHitEvent args)
     {
         Explode(uid);
     }
 
-    private void OnCreamPiedHitBy(EntityUid uid, LemonkaComponent component, ThrowHitByEvent args)
+    private void OnHitBy(EntityUid uid, LemonkaComponent component, ThrowHitByEvent args)
     {
         if (!EntityManager.EntityExists(args.Thrown) || !EntityManager.TryGetComponent(args.Thrown, out LemonkaComponent? creamPie))
             return;
@@ -40,8 +41,8 @@ public sealed class LemonkaSystem : EntitySystem
         if (!EntityManager.TryGetComponent(uid, out ProduceComponent? produceComponent))
             return;
 
-        var potency = produceComponent.Seed?.Potency ?? 1;
-        EntitySystem.Get<ExplosionSystem>().QueueExplosion(
-            uid, "Default", potency * 2, 1, 120);
+        var potency = produceComponent.Seed?.Potency ?? 5;
+        var totalIntensity = MathF.Sqrt(potency) * 9;
+        _explosionSystem.QueueExplosion(uid, "Default", totalIntensity, 1.5f, 120, canCreateVacuum:false);
     }
 }
