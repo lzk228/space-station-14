@@ -30,7 +30,7 @@ public sealed class LemonkaSystem : EntitySystem
 
     private void OnHitBy(EntityUid uid, LemonkaComponent component, ThrowHitByEvent args)
     {
-        if (!EntityManager.EntityExists(args.Thrown) || !EntityManager.TryGetComponent(args.Thrown, out LemonkaComponent? creamPie))
+        if (!EntityManager.EntityExists(args.Thrown) || !HasComp<LemonkaComponent>(args.Thrown))
             return;
 
         Explode(uid);
