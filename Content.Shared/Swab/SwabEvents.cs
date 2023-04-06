@@ -1,4 +1,5 @@
-﻿using Content.Shared.DoAfter;
+﻿using Content.Shared.Chemistry.Components;
+using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Swab;
@@ -11,4 +12,25 @@ public sealed class DiseaseSwabDoAfterEvent : SimpleDoAfterEvent
 [Serializable, NetSerializable]
 public sealed class BotanySwabDoAfterEvent : SimpleDoAfterEvent
 {
+}
+
+[Serializable, NetSerializable]
+public sealed class MedicalSwabDoAfterEvent : DoAfterEvent
+{
+    [DataField("solution", required: true)]
+    public readonly Solution Solution = default!;
+
+    private MedicalSwabDoAfterEvent()
+    {
+    }
+
+    public MedicalSwabDoAfterEvent(Solution solution)
+    {
+        Solution = solution;
+    }
+
+    public override DoAfterEvent Clone()
+    {
+        return this;
+    }
 }

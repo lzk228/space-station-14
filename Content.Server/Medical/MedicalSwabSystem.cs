@@ -3,7 +3,6 @@ using Content.Server.Botany;
 using Content.Server.Chemistry.Components.SolutionManager;
 using Content.Server.Chemistry.EntitySystems;
 using Content.Server.Disease.Components;
-using Content.Server.DoAfter;
 using Content.Server.Medical.Components;
 using Content.Server.Popups;
 using Content.Shared.Chemistry;
@@ -13,6 +12,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
+using Content.Shared.Swab;
 
 namespace Content.Server.Medical;
 
@@ -20,7 +20,7 @@ public sealed class MedicalSwabSystem : EntitySystem
 {
     [Dependency] private readonly SolutionContainerSystem _solutionContainerSystem = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
-    [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
+    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly ReactiveSystem _reactiveSystem = default!;
     public override void Initialize()
     {
@@ -29,7 +29,7 @@ public sealed class MedicalSwabSystem : EntitySystem
         SubscribeLocalEvent<MedicalSwabComponent, AfterInteractEvent>(OnAfterInteract);
         SubscribeLocalEvent<MedicalSwabComponent, SolutionChangedEvent>(OnSolutionChanged);
         SubscribeLocalEvent<MedicalSwabComponent, ExaminedEvent>(OnExamined);
-        SubscribeLocalEvent<MedicalSwabComponent, DoAfterEvent<MedicalSwabData>>(OnDoAfter);
+        SubscribeLocalEvent<MedicalSwabComponent, MedicalSwabDoAfterEvent>(OnDoAfter);
     }
 
     private void OnAfterInteract(EntityUid uid, MedicalSwabComponent component, AfterInteractEvent args)
@@ -46,17 +46,21 @@ public sealed class MedicalSwabSystem : EntitySystem
             return;
         }
 
-        var swabData = new MedicalSwabData(solution);
-
-        var doAfterEventArgs = new DoAfterEventArgs(args.User, component.SwabDelay, target: args.Target, used: uid)
+        var doAfterEventArgs = new DoAfterArgs(
+            args.User,
+            component.SwabDelay,
+            new MedicalSwabDoAfterEvent(solution),
+            eventTarget: uid,
+            target: args.Target,
+            used: uid)
         {
             BreakOnTargetMove = true,
             BreakOnUserMove = true,
-            BreakOnStun = true,
+            BreakOnDamage = true,
             NeedHand = true
         };
 
-        _doAfterSystem.DoAfter(doAfterEventArgs, swabData);
+        _doAfterSystem.TryStartDoAfter(doAfterEventArgs);
     }
 
     private void OnSolutionChanged(EntityUid uid, MedicalSwabComponent component, SolutionChangedEvent args)
@@ -85,20 +89,15 @@ public sealed class MedicalSwabSystem : EntitySystem
         }
     }
 
-    private void OnDoAfter(EntityUid uid, MedicalSwabComponent component, DoAfterEvent<MedicalSwabData> args)
+    private void OnDoAfter(EntityUid uid, MedicalSwabComponent component, MedicalSwabDoAfterEvent args)
     {
         if (args.Handled || args.Cancelled || args.Args.Target == null || component.Deleted)
             return;
 
-        _reactiveSystem.DoEntityReaction(args.Args.Target.Value, args.AdditionalData.SwabSolution, ReactionMethod.Touch);
-        _solutionContainerSystem.RemoveAllSolution(uid, args.AdditionalData.SwabSolution);
+        _reactiveSystem.DoEntityReaction(args.Args.Target.Value, args.Solution, ReactionMethod.Touch);
+        _solutionContainerSystem.RemoveAllSolution(uid, args.Solution);
         _popupSystem.PopupEntity(Loc.GetString("medical-swab-swabbed",
             ("target", Identity.Entity(args.Args.Target.Value, EntityManager))), args.Args.Target.Value, args.Args.User);
         args.Handled = true;
-    }
-
-    private record struct MedicalSwabData(Solution SwabSolution)
-    {
-        public readonly Solution SwabSolution = SwabSolution;
     }
 }
