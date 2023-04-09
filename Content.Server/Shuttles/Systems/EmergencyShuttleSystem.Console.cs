@@ -61,6 +61,11 @@ public sealed partial class EmergencyShuttleSystem
     /// </summary>
     private float _authorizeTime;
 
+    private float _AndromedaEmergency60 = 60; // Andromeda Emergency
+    private float _AndromedaEmergency30 = 30; // Andromeda Emergency
+    private float trashcheck60 = 0; // Andromeda Emergency
+    private float trashcheck30 = 0; // Andromeda Emergency
+
     private CancellationTokenSource? _roundEndCancelToken;
 
     private const string EmergencyRepealAllAccess = "EmergencyShuttleRepealAll";
@@ -92,7 +97,7 @@ public sealed partial class EmergencyShuttleSystem
 
         SubscribeLocalEvent<EscapePodComponent, EntityUnpausedEvent>(OnEscapeUnpaused);
     }
-    
+
     // Corvax-Hijack-Start
     private void OnEmagged(EntityUid uid, EmergencyShuttleConsoleComponent component, ref GotEmaggedEvent args)
     {
@@ -157,6 +162,30 @@ public sealed partial class EmergencyShuttleSystem
         {
             if (!EarlyLaunchAuthorized)
                 AnnounceLaunch();
+        }
+
+        // Andromeda Emergency
+        if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency60 && trashcheck60 == 0)
+        {
+            if (_announced) return;
+            _chatSystem.DispatchGlobalAnnouncement(
+                Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
+                playSound: false,
+                colorOverride: DangerColor);
+            SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
+            trashcheck60++;
+        }
+
+        // Andromeda Emergency
+        if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency30 && trashcheck30 == 0)
+        {
+            if (_announced) return;
+            _chatSystem.DispatchGlobalAnnouncement(
+                Loc.GetString("emergency-shuttle-andromeda-30", ("AndromedaEmergency30", $"{_AndromedaEmergency30:0}")),
+                playSound: false,
+                colorOverride: DangerColor);
+            SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
+            trashcheck30++;
         }
 
         // Imminent departure
@@ -309,6 +338,8 @@ public sealed partial class EmergencyShuttleSystem
         _leftShuttles = false;
         _launchedShuttles = false;
         _consoleAccumulator = float.MinValue;
+        trashcheck60 = 0; // Andromeda Emergency
+        trashcheck30 = 0; // Andromeda Emergency
         EarlyLaunchAuthorized = false;
         EmergencyShuttleArrived = false;
         TransitTime = MinimumTransitTime + (MaximumTransitTime - MinimumTransitTime) * _random.NextFloat();

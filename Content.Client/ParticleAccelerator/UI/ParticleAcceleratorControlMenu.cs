@@ -336,7 +336,7 @@ namespace Content.Client.ParticleAccelerator.UI
 
         private bool StrengthSpinBoxValid(int n)
         {
-            return (n >= 0 && n <= 3 && !_blockSpinBox);
+            return (n >= 0 && n <= 1 && !_blockSpinBox); // Andromeda anti-singularity grief
         }
 
         private void PowerStateChanged(ValueChangedEventArgs e)
@@ -350,12 +350,13 @@ namespace Content.Client.ParticleAccelerator.UI
                 case 1:
                     newState = ParticleAcceleratorPowerState.Level0;
                     break;
-                case 2:
-                    newState = ParticleAcceleratorPowerState.Level1;
-                    break;
-                case 3:
-                    newState = ParticleAcceleratorPowerState.Level2;
-                    break;
+                // Andromeda anti-singularity grief
+                //case 2:
+                //    newState = ParticleAcceleratorPowerState.Level1;
+                //    break;
+                //case 3:
+                //    newState = ParticleAcceleratorPowerState.Level2;
+                //    break;
                 // They can't reach this level anyway and I just want to fix the bugginess for now.
                 //case 4:
                 //    newState = ParticleAcceleratorPowerState.Level3;
