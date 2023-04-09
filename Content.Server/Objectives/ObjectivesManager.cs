@@ -1,4 +1,4 @@
-﻿using Content.Server.Objectives.Interfaces;
+using Content.Server.Objectives.Interfaces;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Random;
 using Robust.Shared.Prototypes;

@@ -224,8 +224,10 @@
     - !type:IncompatibleConditionsRequirement
       conditions:
         - DieCondition
+        - EscapeShuttleCondition
   conditions:
     - !type:EscapeShuttleCondition {}
+  canBeDuplicate: false
 
 - type: objective
   id: RandomTraitorProgressObjective

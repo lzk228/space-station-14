@@ -1,0 +1,16 @@
+- type: startingGear
+  id: KIRA_SPECNAZ
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtOperative
+    back: ClothingBackpackERTJanitorFilled
+    shoes: ClothingShoesSwat
+    mask: ClothingMaskGasSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterVestWeb
+    suitStorage: OxygenTankFilled
+    id: ClearPDA
+    ears: ClothingHeadsetAltCommand
+    belt: ClothingBeltMilitaryWebbing
+    pocket1: AgentIDCard
+    neck: ClothingNeckTieDet
+    eyes: ClothingEyesGlassesMeson
