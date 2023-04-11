@@ -2,7 +2,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Content.Shared.Andromeda.CCCCVars;
+using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Robust.Shared.Configuration;
 
@@ -23,9 +23,9 @@ public sealed class BansNotificationsSystem : EntitySystem
 
     public override void Initialize()
     {
+        base.Initialize();
+        _config.OnValueChanged(CCVars.DiscordBanWebhook, OnWebhookChanged, true);
         SubscribeLocalEvent<BanEvent>(OnBan);
-
-        _config.OnValueChanged(CCCCVars.DiscordBanWebhook, value => _webhookUrl = value, true);
     }
 
     private async void SendDiscordMessage(WebhookPayload payload)
@@ -37,8 +37,12 @@ public sealed class BansNotificationsSystem : EntitySystem
         if (!request.IsSuccessStatusCode)
         {
             _sawmill.Log(LogLevel.Error, $"Discord returned bad status code when posting message: {request.StatusCode}\nResponse: {content}");
-            return;
         }
+    }
+
+    private void OnWebhookChanged(string url)
+    {
+        _webhookUrl = url;
     }
 
     public void OnBan(BanEvent e)
@@ -58,21 +62,9 @@ public sealed class BansNotificationsSystem : EntitySystem
         SendDiscordMessage(payload);
     }
 
-    public void OnBan(string adminNick, string username,string reason, DateTimeOffset? expires = null)
+    public void NotifyBan(string adminNick, string username, string reason, DateTimeOffset? expires = null)
     {
-        if (string.IsNullOrEmpty(_webhookUrl))
-            return;
-
-        var payload = new WebhookPayload();
-        var text = Loc.GetString("discord-ban-msg",
-            ("adminnick", adminNick),
-            ("username", username),
-            ("expires", expires == null ? "навсегда" : $"до {expires}"),
-            ("reason", reason));
-
-        payload.Content = text;
-
-        SendDiscordMessage(payload);
+        RaiseLocalEvent(new BanEvent(adminNick, username, expires, reason));
     }
 
     private struct WebhookPayload

@@ -118,7 +118,7 @@ namespace Content.Server.Administration.Commands
 				admin = player.Name;
 
             var bansNotificationsSystem = IoCManager.Resolve<BansNotificationsSystem>();
-            bansNotificationsSystem.OnBan(admin, target, reason, expires);
+            bansNotificationsSystem.NotifyBan(admin, target, reason, expires);
         }
 
         public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

@@ -1,14 +1,10 @@
-using System;
 using System.Runtime;
 using Content.Server.Chat.Managers;
-using Content.Shared.Andromeda.CCCCVars;
-using Content.Shared.Chat;
+using Content.Shared.CCVar;
 using Robust.Shared.Configuration;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using SpaceWizards.Sodium.Interop;
 
-namespace Content.Server.AutoGCF;
+namespace Content.Server.Andromeda.GCF;
 
 /// <summary>
 ///     Handles periodically GCF (Garbage Collector)
@@ -29,9 +25,9 @@ public sealed class GCFSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        _cfg.OnValueChanged(CCCCVars.GCFFrequency, SetTimeGCF, true);
-        _cfg.OnValueChanged(CCCCVars.GCFEnabled, SetEnabledGCF, true);
-		_cfg.OnValueChanged(CCCCVars.GCFNotify, SetEnabledNotify, true);
+        _cfg.OnValueChanged(CCVars.GCFFrequency, SetTimeGCF, true);
+        _cfg.OnValueChanged(CCVars.GCFEnabled, SetEnabledGCF, true);
+		_cfg.OnValueChanged(CCVars.GCFNotify, SetEnabledNotify, true);
 
         RecalculateNextGCFTime();
     }
