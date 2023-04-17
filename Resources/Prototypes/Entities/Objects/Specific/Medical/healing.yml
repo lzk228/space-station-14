@@ -84,8 +84,8 @@
     damageContainer: Biological
     damage:
       types:
-        bloodloss: -0.5 #for whatever godforsaken reason I cannot touch blood level without healing one of these, so fuck it, bleed rate healing
-    ModifyBloodLevel: 10
+        bloodloss: -0.5 #minor bleed rate reduction.
+    ModifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -157,7 +157,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Dexalin
@@ -171,7 +171,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Dylovene
@@ -185,7 +185,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Hyronalin
@@ -199,7 +199,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Iron
@@ -213,7 +213,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Kelotane
@@ -227,7 +227,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: SpaceDrugs
@@ -241,7 +241,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Tricordrazine
@@ -255,7 +255,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 50
+        maxVol: 20
         canBoil: false
         reagents:
         - ReagentId: Romerol

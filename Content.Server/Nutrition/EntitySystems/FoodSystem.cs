@@ -2,7 +2,6 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Chemistry.Components;
 using Content.Server.Chemistry.EntitySystems;
-using Content.Server.Hands.Components;
 using Content.Server.Nutrition.Components;
 using Content.Server.Popups;
 using Content.Shared.Administration.Logs;
@@ -12,6 +11,7 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
+using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -148,6 +148,7 @@ namespace Content.Server.Nutrition.EntitySystems
                 // Mice and the like can eat without hands.
                 // TODO maybe set this based on some CanEatWithoutHands event or component?
                 NeedHand = forceFeed,
+                CancelDuplicate = false,
             };
 
             _doAfterSystem.TryStartDoAfter(doAfterEventArgs);

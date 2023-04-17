@@ -4,6 +4,7 @@
   meltingPoint: 0.0
   boilingPoint: 100.0
   abstract: true
+  slippery: true
   metabolisms:
     Drink:
       effects:

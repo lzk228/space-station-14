@@ -8,6 +8,7 @@
   meltingPoint: -1.0
   boilingPoint: 100.0
   physicalDesc: reagent-physical-desc-ferrous
+  slippery: false
   metabolisms:
     Drink:
       # Quenching!
@@ -28,6 +29,7 @@
   meltingPoint: -22.0
   boilingPoint: 110.0
   physicalDesc: reagent-physical-desc-viscous
+  slippery: false
   metabolisms:
     Food:
       # Delicious!
