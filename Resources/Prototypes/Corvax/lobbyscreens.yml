@@ -46,9 +46,10 @@
   id: Lofi
   background: /Textures/Corvax/LobbyScreens/lofi.png
 
-- type: lobbyBackground
-  id: MaintenanceClown
-  background: /Textures/Corvax/LobbyScreens/maintenance-clown.png
+# Andromeda no scary cringe and shitty drawings
+#- type: lobbyBackground
+#  id: MaintenanceClown
+#  background: /Textures/Corvax/LobbyScreens/maintenance-clown.png
 
 - type: lobbyBackground
   id: MedDepart
