@@ -138,7 +138,11 @@ namespace Content.Server.Salvage
             var magnetTranform = EntityManager.GetComponent<TransformComponent>(component.Owner);
             if (!(magnetTranform.GridUid is EntityUid gridId) || !_salvageGridStates.TryGetValue(gridId, out var salvageGridState))
             {
-                return;
+                salvageGridState = _salvageGridStates.Values
+                    .FirstOrDefault(x => x.ActiveMagnets.Contains(component));
+
+                if (salvageGridState is null)
+                    return;
             }
             salvageGridState.ActiveMagnets.Remove(component);
             Report(uid, component.SalvageChannel, "salvage-system-announcement-spawn-magnet-lost");

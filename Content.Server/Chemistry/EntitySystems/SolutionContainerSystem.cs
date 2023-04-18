@@ -149,6 +149,7 @@ public sealed partial class SolutionContainerSystem : EntitySystem
             _chemistrySystem.FullyReactSolution(solutionHolder, uid, solutionHolder.MaxVolume, mixerComponent);
         }
 
+        // Система кипения ниже
         // if (solutionHolder.CanBoil && solutionHolder.IsBoiling(_prototypeManager))
         // {
         //     _chemistrySystem.BoilOutSolution(solutionHolder, uid);

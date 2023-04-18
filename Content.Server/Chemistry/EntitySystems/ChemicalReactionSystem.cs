@@ -1,11 +1,16 @@
 using Content.Server.Chemistry.Components;
 using Content.Server.Coordinates.Helpers;
+using Content.Server.Fluids.EntitySystems;
 using Content.Shared.Audio;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reaction;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
+using Content.Shared.Maps;
+using Robust.Shared.Audio;
+using Robust.Shared.Map;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Chemistry.EntitySystems
@@ -33,26 +38,33 @@ namespace Content.Server.Chemistry.EntitySystems
             if (smokeSolution == null)
                 return;
 
-            var amount = (int) Math.Max(1, Math.Round(Math.Sqrt(smokeSolution.Volume.Float())));
-            amount = Math.Min(amount, 15);
-            var duration = Math.Min(amount, 5);
+            var spreadAmount = (int) Math.Max(0, Math.Ceiling((smokeSolution.Volume / 2.5).Float()));
+            var duration = 10;
+            var transform = EntityManager.GetComponent<TransformComponent>(owner);
+            var mapManager = IoCManager.Resolve<IMapManager>();
 
-            var coords = Transform(owner).Coordinates;
+            if (!mapManager.TryFindGridAt(transform.MapPosition, out var grid) ||
+                !grid.TryGetTileRef(transform.Coordinates, out var tileRef) ||
+                tileRef.Tile.IsSpace())
+            {
+                return;
+            }
+
+            var coords = grid.MapToGrid(transform.MapPosition);
 
             var smokeEntityPrototype = "Smoke";
             var ent = EntityManager.SpawnEntity(smokeEntityPrototype, coords.SnapToGrid());
 
-            var areaEffectComponent = EntityManager.GetComponentOrNull<SmokeSolutionAreaEffectComponent>(ent);
-
-            if (areaEffectComponent == null)
+            if (!EntityManager.TryGetComponent<SmokeComponent>(ent, out var smokeComponent))
             {
-                Logger.Error("Couldn't get AreaEffectComponent from " + smokeEntityPrototype);
+                Logger.Error("Couldn't get SmokeComponent from " + smokeEntityPrototype);
                 EntityManager.QueueDeleteEntity(ent);
                 return;
             }
 
-            areaEffectComponent.TryAddSolution(smokeSolution);
-            areaEffectComponent.Start(amount, duration, 0.5f, 1.0f);
+            var smoke = EntityManager.System<SmokeSystem>();
+            smokeComponent.SpreadAmount = spreadAmount;
+            smoke.Start(ent, smokeComponent, smokeSolution, duration);
 
             _audio.PlayPvs("/Audio/Effects/smoke.ogg", owner, AudioHelpers.WithVariation(0.125f));
 
@@ -63,8 +75,7 @@ namespace Content.Server.Chemistry.EntitySystems
             }
 
             AdminLogger.Add(LogType.ChemicalReaction, LogImpact.High,
-                $"Solution {smokeSolution} boiled out with strength {amount} on entity {ToPrettyString(owner)} at {coords}");
-
+                $"Solution {smokeSolution} boiled out with strength {spreadAmount} on entity {ToPrettyString(owner)} at {coords}");
         }
     }
 
