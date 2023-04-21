@@ -1,7 +1,7 @@
 - type: startingGear
   id: KIRA_SPECNAZ
   equipment:
-    jumpsuit: ClothingUniformJumpskirtOperative
+    jumpsuit: ClothingUniformJumpsuitSkirtKiraSwat
     back: ClothingBackpackERTJanitorFilled
     shoes: ClothingShoesSwat
     mask: ClothingMaskGasSecurity
