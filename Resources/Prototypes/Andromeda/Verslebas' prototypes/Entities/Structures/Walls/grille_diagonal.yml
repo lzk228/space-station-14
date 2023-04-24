@@ -1,8 +1,8 @@
 - type: entity
   id: GrilleDiagonal
-  name: grille
-  suffix: diagonal
-  description: A flimsy framework of iron rods.
+  name: решётка
+  suffix: диагональная
+  description: Хлипкий каркас из железных прутьев.
   placement:
     mode: SnapgridCenter
   components:

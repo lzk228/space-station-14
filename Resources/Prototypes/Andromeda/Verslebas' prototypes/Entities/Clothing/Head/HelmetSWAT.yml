@@ -1,13 +1,13 @@
 - type: entity
   parent: ClothingHeadHatHardhatBase
-  id: KiraSwatHelmet
-  name: SWAT helmet
-  description: Elite SWAT helmet
+  id: SWATHelmet
+  name: Шлем спецназа
+  description: Элитный шлем бойцов спецназа.
   components:
   - type: Sprite
-    sprite: Clothing/Head/Helmets/KiraSWAT.rsi
+    sprite: Clothing/Head/Helmets/SWAT.rsi
   - type: Clothing
-    sprite: Clothing/Head/Helmets/KiraSWAT.rsi
+    sprite: Clothing/Head/Helmets/SWAT.rsi
   - type: IngestionBlocker
   - type: ExplosionResistance
     resistance: 0.25 # +0.65 from body -> 90%

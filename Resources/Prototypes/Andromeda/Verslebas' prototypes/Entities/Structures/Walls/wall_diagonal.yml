@@ -1,8 +1,8 @@
 - type: entity
   id: WallSolidDiagonal
-  name: solid wall
-  suffix: diagonal
-  description: Keeps the air in and the greytide out.
+  name: обычная стена
+  suffix: диагональная
+  description: Удерживает воздух внутри, а ассистентов снаружи.
   placement:
     mode: SnapgridCenter
     snap:
@@ -39,6 +39,8 @@
   - type: Icon
     sprite: Structures/Walls/solid_diagonal.rsi
     state: state0
+  - type: Occluder
+    boundingBox: "-0.5,-0.5,0.5,0.5"
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
@@ -87,9 +89,9 @@
 
 - type: entity
   id: WallReinforcedDiagonal
-  name: reinforced wall
-  suffix: diagonal
-  description: Keeps the air in and the greytide out.
+  name: укрепленная стена
+  suffix: диагональная
+  description: Удерживает воздух внутри, а ассистентов снаружи.
   placement:
     mode: SnapgridCenter
     snap:
@@ -123,6 +125,8 @@
     mode: Diagonal
     key: walls
     base: state
+  - type: Occluder
+    boundingBox: "-0.5,-0.5,0.5,0.5"
   - type: Icon
     sprite: Structures/Walls/reinforced_diagonal.rsi
     state: state0
