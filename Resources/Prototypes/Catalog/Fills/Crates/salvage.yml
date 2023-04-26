@@ -54,6 +54,14 @@
         prob: 0.1
       - id: BoxBeaker
         prob: 0.1
+      - id: SyringeHomilin
+        prob: 0.1
+      - id: SyringeCognizine
+        prob: 0.1
+      - id: SyringeKOKC
+        prob: 0.1
+      - id: SyringeHawksClaw
+        prob: 0.1
         #  - Scaf
       - id: ClothingHeadHelmetScaf
         prob: 0.1
@@ -112,4 +120,3 @@
         prob: 0.0001
       - id: WeaponRevolverMateba
         prob: 0.0001
-

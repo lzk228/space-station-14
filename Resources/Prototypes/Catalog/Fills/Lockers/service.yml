@@ -121,10 +121,16 @@
     contents:
       - id: ClothingUniformOveralls
       - id: ClothingHeadHatTrucker
-        prob: 0.3
+        prob: 0.1
       - id: GatfruitSeeds
         prob: 0.1
       - id: FlyAmanitaSeeds
         prob: 0.5
       - id: NettleSeeds
+        prob: 0.7
+      - id: LemonkaSeeds
+        prob: 0.1
+      - id: FleshbushSeeds
+        prob: 0.5
+      - id: NamelessMushroomSpores
         prob: 0.7

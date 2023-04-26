@@ -48,6 +48,7 @@
 
 - type: entity
   name: шприц когнизина
+  description: При введении в неразумное существо позволяет ему обрести разум и способность к речи. Эволюция в тонкой иголочке!
   parent: BaseSyringe
   id: SyringeCognizine
   components:
@@ -58,4 +59,19 @@
           canBoil: false
           reagents:
             - ReagentId: Cognizine
+              Quantity: 15
+
+- type: entity
+  name: шприц хомилина
+  description: Используется для создании комфортных условий внутри организмов космических животных, позволяя им не умирать от перепадов атмосферы. На шприце написано "РЕКОМЕНДУЕМАЯ ДОЗА - 5u".
+  parent: BaseSyringe
+  id: SyringeHomilin
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        injector:
+          maxVol: 15
+          canBoil: false
+          reagents:
+            - ReagentId: Homilin
               Quantity: 15
