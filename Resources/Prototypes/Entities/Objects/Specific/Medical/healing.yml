@@ -161,7 +161,7 @@
         canBoil: false
         reagents:
         - ReagentId: Dexalin
-          Quantity: 15
+          Quantity: 10
 
 - type: entity
   name: dylovene pill
@@ -175,7 +175,7 @@
         canBoil: false
         reagents:
         - ReagentId: Dylovene
-          Quantity: 15
+          Quantity: 10
 
 - type: entity
   name: hyronalin pill
@@ -189,7 +189,7 @@
         canBoil: false
         reagents:
         - ReagentId: Hyronalin
-          Quantity: 15
+          Quantity: 10
 
 - type: entity
   name: iron pill
@@ -203,7 +203,7 @@
         canBoil: false
         reagents:
         - ReagentId: Iron
-          Quantity: 15
+          Quantity: 10
 
 - type: entity
   name: kelotane pill
@@ -217,7 +217,7 @@
         canBoil: false
         reagents:
         - ReagentId: Kelotane
-          Quantity: 15
+          Quantity: 10
 
 - type: entity
   name: space drugs
@@ -245,7 +245,7 @@
         canBoil: false
         reagents:
         - ReagentId: Tricordrazine
-          Quantity: 15
+          Quantity: 10
 
 - type: entity
   name: romerol pill

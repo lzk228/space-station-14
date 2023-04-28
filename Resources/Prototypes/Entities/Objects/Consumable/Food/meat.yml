@@ -104,12 +104,6 @@
   - type: Sprite
     netsync: false
     state: bacon
-  - type: RandomSprite
-    available:
-      - enum.DamageStateVisualLayers.Base:
-          bacon: ""
-      - enum.DamageStateVisualLayers.Base:
-          bacon2: ""
   - type: SolutionContainerManager
     solutions:
       food:

@@ -22,6 +22,9 @@
   - type: Airtight
     noAirWhenFullyAirBlocked: false
   - type: Clickable
+  - type: Tag
+    tags:
+      - SpreaderIgnore
   - type: Machine
     board: AtmosDeviceFanTinyMachineCircuitboard
   - type: Destructible
