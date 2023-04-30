@@ -1,5 +1,6 @@
-- type: gameRule
-  id: Revolutionary
-  config:
-    !type:GenericGameRuleConfiguration
-    id: Revolutionary
+# RIP Revolution
+#- type: gameRule
+#  id: Revolutionary
+#  config:
+#    !type:GenericGameRuleConfiguration
+#    id: Revolutionary

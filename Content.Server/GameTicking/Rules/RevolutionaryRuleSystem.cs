@@ -1,4 +1,5 @@
-using System.Linq;
+// RIP Revolution
+/*using System.Linq;
 using Content.Server.Chat.Managers;
 using Content.Server.Flash;
 using Content.Server.Mind.Components;
@@ -774,4 +775,4 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem
     }
 
     #endregion
-}
+}*/

@@ -166,6 +166,7 @@
       - id: RubberStampRd
       - id: ClothingHeadsetAltScience
       - id: PinpointerAnomaly
+        prob: 0.1
       - id: BoxEncryptionKeyScience
       - id: BoxEncryptionKeyRobo
 

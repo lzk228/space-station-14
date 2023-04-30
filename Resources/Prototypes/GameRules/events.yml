@@ -274,9 +274,6 @@
   noSpawn: true
   components:
   - type: StationEvent
-  config:
-    !type:StationEventRuleConfiguration
-    id: SpiderSpawn
     startAnnouncement: station-event-spider-spawn-start-announcement
     startAudio:
       path: /Audio/Announcements/aliens.ogg # Corvax-Announcements

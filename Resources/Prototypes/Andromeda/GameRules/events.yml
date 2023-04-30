@@ -1,18 +1,19 @@
-﻿- type: gameRule
-  id: ExtremeJumpingEvent
-  config:
-    !type:StationEventRuleConfiguration
-    id: ExtremeJumpingEvent
-    earliestStart: 8
-    minimumPlayers: 5
-    weight: 10
-    startAnnouncement: station-event-extreme-jumping-start-announcement
-    startAudio:
-      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
-      params:
-        volume: -4
-    endAnnouncement: station-event-extreme-jumping-end-announcement
-    endAudio:
-      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
-      params:
-        volume: -6
+#  RIP ExtremeJumpingEvent until Tehnox fix it
+#﻿- type: gameRule
+#  id: ExtremeJumpingEvent
+#  config:
+#    !type:StationEventRuleConfiguration
+#    id: ExtremeJumpingEvent
+#    earliestStart: 8
+#    minimumPlayers: 5
+#    weight: 10
+#    startAnnouncement: station-event-extreme-jumping-start-announcement
+#    startAudio:
+#      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
+#      params:
+#        volume: -4
+#    endAnnouncement: station-event-extreme-jumping-end-announcement
+#    endAudio:
+#      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
+#      params:
+#        volume: -6

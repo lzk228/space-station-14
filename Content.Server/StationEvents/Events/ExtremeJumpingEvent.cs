@@ -1,4 +1,5 @@
-﻿using System.Linq;
+// RIP ExtremeJumpingEvent until Tehnox fix it
+/*﻿using System.Linq;
 using Content.Server.Plants.Components;
 using Content.Server.Storage.Components;
 using Content.Shared.Buckle.Components;
@@ -165,4 +166,4 @@ namespace Content.Server.StationEvents.Events
             base.Ended();
         }
     }
-}
+}*/
