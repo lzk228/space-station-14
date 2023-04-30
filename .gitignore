@@ -305,4 +305,4 @@ Resources/MapImages
 /Content.Docfx/api/
 /Content.Docfx/*site
 
-/server_config.toml
+*.bak
