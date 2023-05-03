@@ -1,0 +1,24 @@
+- type: entity
+  noSpawn:  false
+  parent: ClothingMilitaryBackpack
+  id: ClothingMilitaryBackpackCentcomBanFilled
+  components:
+  - type:  StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: WeaponPulsePistol
+      - id: ClothingMaskGasCentcom
+      - id: CrowbarRed
+
+- type: startingGear
+  id: CentcomBanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomFormal
+    back: ClothingMilitaryBackpackCentcomBanFilled
+    shoes:  ClothingShoesBootsJack
+    head: ClothingHeadHatBeretCentcomNaval
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCentcomNaval
+    outerClothing:  ClothingOuterVestKevlar
+    ears: ClothingHeadsetAltCentCom
+    id: CentcomPDA
