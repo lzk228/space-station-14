@@ -1,11 +1,13 @@
 ﻿using Content.Shared.Eye.Blinding;
+using Content.Shared.Eye.Blinding.Systems;
+using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Mobs.Components;
 
 namespace Content.Shared.Drugs.Systems;
 
 public sealed class SharedDrugSystem : EntitySystem
 {
-    [Dependency] private readonly SharedBlindingSystem _blindingSystem = default!;
+    //[Dependency] private readonly BlindableSystem _blindingSystem = default!;
 
     public override void Initialize()
     {
@@ -25,10 +27,10 @@ public sealed class SharedDrugSystem : EntitySystem
         mobThresholdsComponent.IgnoreCritical = true;
         Dirty(mobThresholdsComponent);
 
-        if (!TryComp<BlindableComponent>(uid, out var blindComp))
-            return;
+        //if (!TryComp<BlindableComponent>(uid, out var blindComp))
+        //    return;
 
-        _blindingSystem.AdjustEyeDamage(uid, 7, blindComp);
+        //_blindingSystem.AdjustEyeDamage(uid, 7, blindComp);
     }
 
     private void OnBerserkRemoval(EntityUid uid, BerserkDrugComponent component, ComponentRemove args)
@@ -39,10 +41,10 @@ public sealed class SharedDrugSystem : EntitySystem
         mobThresholdsComponent.IgnoreCritical = false;
         Dirty(mobThresholdsComponent);
 
-        if (!TryComp<BlindableComponent>(uid, out var blindComp))
-            return;
+        //if (!TryComp<BlindableComponent>(uid, out var blindComp))
+        //    return;
 
-        _blindingSystem.AdjustEyeDamage(uid, -7, blindComp);
+        //_blindingSystem.AdjustEyeDamage(uid, -7, blindComp);
     }
 
     #endregion

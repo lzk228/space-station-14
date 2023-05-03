@@ -48,7 +48,7 @@
     heatDamage:
       types:
         Heat : 0.25 #per second, scales with temperature & other constants
-  - type: MovementAlwaysTouching
+  #- type: MovementAlwaysTouching
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.0
     baseSprintSpeed: 5.0

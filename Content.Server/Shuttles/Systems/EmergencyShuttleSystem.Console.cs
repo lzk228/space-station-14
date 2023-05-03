@@ -167,25 +167,29 @@ public sealed partial class EmergencyShuttleSystem
         // Andromeda Emergency
         if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency60 && trashcheck60 == 0)
         {
-            if (_announced) return;
-            _chatSystem.DispatchGlobalAnnouncement(
-                Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
-                playSound: false,
-                colorOverride: DangerColor);
-            SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
-            trashcheck60++;
+            if (_announced == false)
+            {
+                _chatSystem.DispatchGlobalAnnouncement(
+                    Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
+                    playSound: false,
+                    colorOverride: DangerColor);
+                SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
+                trashcheck60++;
+            }
         }
 
         // Andromeda Emergency
         if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency30 && trashcheck30 == 0)
         {
-            if (_announced) return;
-            _chatSystem.DispatchGlobalAnnouncement(
-                Loc.GetString("emergency-shuttle-andromeda-30", ("AndromedaEmergency30", $"{_AndromedaEmergency30:0}")),
-                playSound: false,
-                colorOverride: DangerColor);
-            SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
-            trashcheck30++;
+            if (_announced == false)
+            {
+                _chatSystem.DispatchGlobalAnnouncement(
+                  Loc.GetString("emergency-shuttle-andromeda-30", ("AndromedaEmergency30", $"{_AndromedaEmergency30:0}")),
+                  playSound: false,
+                  colorOverride: DangerColor);
+                SoundSystem.Play("/Audio/Announcements/announce.ogg", Filter.Broadcast());
+                trashcheck30++;
+            }
         }
 
         // Imminent departure

@@ -72,8 +72,6 @@
     node: crategenericsteel
     containers:
       - entity_storage
-  - type: StaticPrice
-    price: 100
 
 - type: entity
   parent: CrateGeneric

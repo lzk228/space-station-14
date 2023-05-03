@@ -829,7 +829,7 @@
       prototype: SalvageMagnet
       requirements:
         Manipulator: 2
-        ScanningModule: 2
+        Capacitor: 2
       materialRequirements:
         Steel: 5
         Cable: 2
