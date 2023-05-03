@@ -1,6 +1,8 @@
 - type: entity
   noSpawn:  false
   parent: ClothingMilitaryBackpack
+  name: армейский рюкзак
+  description: Вместительный рюкзак с множеством карманов, который носят военные структуры.
   id: ClothingMilitaryBackpackCentcomBanFilled
   components:
   - type:  StorageFill
