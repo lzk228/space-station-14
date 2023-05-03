@@ -169,8 +169,8 @@
 #    criticalThreshold: 45
 #    deadThreshold: 90
   - type: MovementBodyPart
-    WalkSpeed: 3.0
-    SprintSpeed: 5.0
+    WalkSpeed: 3.5
+    SprintSpeed: 5.5
 
 - type: entity
   id: RightLegMoth
@@ -192,8 +192,8 @@
 #    criticalThreshold: 45
 #    deadThreshold: 90
   - type: MovementBodyPart
-    WalkSpeed: 3.0
-    SprintSpeed: 5.0
+    WalkSpeed: 3.5
+    SprintSpeed: 5.5
 
 - type: entity
   id: LeftFootMoth
