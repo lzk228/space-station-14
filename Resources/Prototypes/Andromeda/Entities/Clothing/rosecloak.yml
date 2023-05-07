@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRose
+  name: Плащ розы
+  description: Очень яркий и жизнерадостный плащ с розой на спине.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/rosecloak.rsi
