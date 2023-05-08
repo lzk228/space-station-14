@@ -27,7 +27,7 @@
             max: 1
         offset: 0
 
-  - type: entity
+- type: entity
   parent: PosterBaseNew
   id: Poster1new
   name: "Скажем "Нет" хулиганству!"
