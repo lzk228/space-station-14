@@ -28,7 +28,7 @@
         offset: 0
 
   - type: entity
-  parent: PosterBase
+  parent: PosterBaseNew
   id: Poster1new
   name: "Скажем "Нет" хулиганству!"
   description: "Плакат, пропагандирующий порядок и отказ от мыла в массы"
@@ -37,7 +37,7 @@
     state: poster1_new
 
 - type: entity
-  parent: PosterBase
+  parent: PosterBaseNew
   id: poster2new
   name: "Мир, труд, Иан"
   description: "Картина с лучшим работником НТ. Рисунок на ней вдохновляет вас на труд"
