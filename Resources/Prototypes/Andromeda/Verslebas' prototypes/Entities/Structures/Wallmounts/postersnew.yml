@@ -29,7 +29,7 @@
 
 - type: entity
   parent: PosterBaseNew
-  id: Poster1new
+  id: poster1new
   name: "Скажем "Нет" хулиганству!"
   description: "Плакат, пропагандирующий порядок и отказ от мыла в массы"
   components:
