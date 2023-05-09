@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatEliteCMOBeret
+  name: элитный берет главврача
+  description: Красивый и хорошо сидит на голове красивого главврача.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Head/Hats/cmo_sponsor_beret.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Head/Hats/cmo_sponsor_beret.rsi

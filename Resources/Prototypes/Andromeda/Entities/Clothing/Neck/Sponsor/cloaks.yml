@@ -6,3 +6,12 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Sponsor/black_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckGoldCMOCloak
+  name: золотой плащ главврача
+  description: Выдается самым ответственным и выдающимся главврачам. Пахнет хлоркой.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Sponsor/gold_cmo_cloak.rsi

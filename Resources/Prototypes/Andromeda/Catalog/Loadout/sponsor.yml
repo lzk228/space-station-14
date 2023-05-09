@@ -130,9 +130,63 @@
   sponsorOnly: true
   whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
-# Sonado
+# Gazuza3212
 - type: loadout
-  id: ClothingUniformJumpskirtJanimaidLoadout
-  entity: ClothingUniformJumpskirtJanimaid
+  id: ClothingUniformJumpskirtJanimaidminiLoadout
+  entity: ClothingUniformJumpskirtJanimaidmini
   sponsorOnly: true
-  whitelistJobs: [ServiceWorker, Chef, Bartender, Janitor]
+
+- type: loadout
+  id: ClothingHeadHatOutlawHatLoadout
+  entity: ClothingHeadHatOutlawHat
+  sponsorOnly: true
+
+# Flater312
+- type: loadout
+  id: BluespaceBeakerLoadout
+  entity: BluespaceBeaker
+  sponsorOnly: true
+  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
+
+- type: loadout
+  id: ClothingEyesHudMedicalLoadout
+  entity: ClothingEyesHudMedical
+  sponsorOnly: true
+  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+
+- type: loadout
+  id: ClothingHandsGlovesNitrileLoadout
+  entity: ClothingHandsGlovesNitrile
+  sponsorOnly: true
+  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+
+- type: loadout
+  id: ClothingMaskBreathMedicalLoadout
+  entity: ClothingMaskBreathMedical
+  sponsorOnly: true
+  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+
+- type: loadout
+  id: ClothingHeadHatBeretBrigmedicLoadout
+  entity: ClothingHeadHatBeretBrigmedic
+  sponsorOnly: true
+  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+
+- type: loadout
+  id: AnomalyLocatorLoadout
+  entity: AnomalyLocator
+  sponsorOnly: true
+  whitelistJobs: [ResearchDirector, Scientist]
+
+#Naik21
+- type: loadout
+  id: ClothingNeckGoldCMOCloakLoadout
+  entity: ClothingNeckGoldCMOCloak
+  sponsorOnly: true
+  whitelistJobs: [ChiefMedicalOfficer]
+
+- type: loadout
+  id: ClothingHeadHatEliteCMOBeretLoadout
+  entity: ClothingHeadHatEliteCMOBeret
+  sponsorOnly: true
+  whitelistJobs: [ChiefMedicalOfficer]

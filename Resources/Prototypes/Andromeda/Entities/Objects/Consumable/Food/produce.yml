@@ -62,6 +62,10 @@
           reagents:
             - ReagentId: ChlorineTrifluoride
               Quantity: 2
+            - ReagentId: Vinegar
+              Quantity: 4
+            - ReagentId: Potassium
+              Quantity: 4
           canBoil: false
     - type: Sprite
       sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
