@@ -1,0 +1,15 @@
+- type: entity
+  id: DrugsBriefcaseFilled
+  name: интересный чемоданчик
+  parent: BriefcaseBrown
+  description: Чем же он заполнен?
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: SyringeKrokodil
+        amount: 3
+      - id: SyringeHawksClaw
+        amount: 3
+      - id: SyringeKOKC
+        amount: 3

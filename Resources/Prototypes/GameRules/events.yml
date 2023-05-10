@@ -292,7 +292,7 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 50
+    earliestStart: 120
     weight: 2.5
     duration: 1
   - type: ZombieRule

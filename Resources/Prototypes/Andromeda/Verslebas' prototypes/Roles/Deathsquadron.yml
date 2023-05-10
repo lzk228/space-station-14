@@ -75,7 +75,7 @@
   - type: Sprite
     sprite: Andromeda/Clothing/Ears/deathsquadron.rsi
   - type: Clothing
-    sprite: Clothing/Ears/Headsets/deathsquadron.rsi
+    sprite: Andromeda/Clothing/Ears/deathsquadron.rsi
 
 - type: entity
   parent: ClothingShoesBootsMag

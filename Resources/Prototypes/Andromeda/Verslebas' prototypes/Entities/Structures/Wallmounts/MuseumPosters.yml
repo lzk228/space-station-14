@@ -1,0 +1,101 @@
+- type: entity
+  parent: BaseSign
+  id: MuseumPostersBase
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Andromeda/Structures/Wallmounts/MuseumPosters.rsi
+    snapCardinals: true
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterSteelcane
+  name: "Арматурник"
+  description: "Полезное растение если устали от старой станции и хотите построить новую. Создается если добавить в сахарный тростник робаста и железа."
+  components:
+  - type: Sprite
+    state: poster1
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterSlipperyBlob
+  name: "Жижевик"
+  description: "Внезапная замена мылу а еще внутри нее полно космической смазки. Создается если в картофель добавить робаст и сварочное топливо."
+  components:
+  - type: Sprite
+    state: poster2
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterPizzaPlant
+  name: "Пиццевик"
+  description: "Приоритетное растение если на станции нет поваров, а кормить людей чем то надо. Создается если добавить в ананас робаста и муки."
+  components:
+  - type: Sprite
+    state: poster3
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterNamelessMushroom
+  name: "Неизвестный гриб"
+  description: "Инопланетный до конца не изученный гриб, высывает сильные галлюцинации. Создается если добавить в линчжи робаста и космических наркотиков."
+  components:
+  - type: Sprite
+    state: poster4
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterMoneyTree
+  name: "Денежное дерево"
+  description: "Когда деньги нужны, а работников в карго нет можно и вырастить одно другое деревце. Получается если в яблоню добавить робаста и коктейль бомбу синдиката."
+  components:
+  - type: Sprite
+    state: poster5
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterLifeWeed
+  name: "Жизнетрав"
+  description: "Это гордость медицинского и ботанического отдела Нанотрейзен. жизнетрав при измельчении даёт омнизин и получается если в коноплю добавить робаста, трикордазина и капельку мутагена."
+  components:
+  - type: Sprite
+    state: poster6
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterLemonka
+  name: "Лимонка"
+  description: "До сих пор неизвестно какой безумец вывел это растение. Оно крайне опасно и нестабильно, так еще и взрывается при соприкосновении с поверхностью. Секрет производства известен только лучшим ботаникам."
+  components:
+  - type: Sprite
+    state: poster7
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterFleshBush
+  name: "Плоть"
+  description: "Хватит пускать людей на био! Упокойте их души в крематории с нашей новой разработкой - плотью! Плоды этого растения - чистая биомасса, которая получается если добавить в крапиву робаста и свежей крови."
+  components:
+  - type: Sprite
+    state: poster8
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterColina
+  name: "Колина"
+  description: "Полностью натуральный продукт! Получается если добавить в морковь робаста и космической колы."
+  components:
+  - type: Sprite
+    state: poster9
+
+- type: entity
+  parent: MuseumPostersBase
+  id: PosterDeathWeed
+  name: "Смертетрав"
+  description: "Он радиоактивен, опасен, загадочен и непонятен. Он выделяет тритий пока растет, а внутри его листьев содержится опасные токсины и снотворное. Секрет производства известен только лучшим ботаникам."
+  components:
+  - type: Sprite
+    state: poster10

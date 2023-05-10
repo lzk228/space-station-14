@@ -1,8 +1,7 @@
-
 - type: entity
   parent: PosterBase
-  id: poster1new
-  name: "Скажем "Нет" хулиганству!"
+  id: poster1_new
+  name: "Скажем 'Нет' хулиганству!"
   description: "Плакат, пропагандирующий порядок и отказ от мыла в массы"
   components:
   - type: Sprite
@@ -10,7 +9,7 @@
 
 - type: entity
   parent: PosterBase
-  id: poster2new
+  id: poster2_new
   name: "Мир, труд, Иан"
   description: "Картина с лучшим работником НТ. Рисунок на ней вдохновляет вас на труд"
   components:

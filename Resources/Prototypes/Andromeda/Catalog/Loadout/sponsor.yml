@@ -190,3 +190,20 @@
   entity: ClothingHeadHatEliteCMOBeret
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
+
+- type: loadout
+  id: BoxFolderBaseLoadout
+  entity: BoxFolderBase
+  sponsorOnly: true
+  whitelistJobs: [ChiefMedicalOfficer]
+
+#Ramsody
+- type: loadout
+  id: DrugsBriefcaseFilledLoadout
+  entity: DrugsBriefcaseFilled
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterHardsuitLingLoadout
+  entity: ClothingOuterHardsuitLing
+  sponsorOnly: true
