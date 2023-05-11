@@ -66,6 +66,27 @@
     defaultTarget: meat steak
 
 - type: entity
+  name: raw human meat
+  parent: FoodMeatBase
+  id: FoodMeatHuman
+  description: Gross.
+  components:
+  - type: Tag
+    tags:
+    - Raw
+  - type: Sprite
+    state: plain
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 9
+  - type: SliceableFood
+    count: 3
+    slice: FoodMeatCutlet
+
+- type: entity
   name: raw carp fillet
   parent: FoodMeatBase
   # MeatFish?...
@@ -238,6 +259,9 @@
   id: FoodMeatCrab
   description: A pile of raw crab meat.
   components:
+  - type: FlavorProfile
+    flavors:
+      - crabby
   - type: Tag
     tags:
     - Raw
@@ -721,6 +745,9 @@
   id: FoodMeatCrabCooked
   description: Some deliciously cooked crab meat.
   components:
+  - type: FlavorProfile
+    flavors:
+      - crabby
   - type: Tag
     tags:
     - Cooked
@@ -965,11 +992,7 @@
     - Raw
     - Cutlet
   - type: Sprite
-    layers:
-    - state: cutlet
-      color: black
-    - state: cutlet-alpha
-      color: red
+    state: spidercutlet
   - type: SolutionContainerManager
     solutions:
       food:
@@ -992,11 +1015,7 @@
     - Raw
     - Cutlet
   - type: Sprite
-    layers:
-    - state: cutlet
-      color: black
-    - state: cutlet-alpha
-      color: green
+    state: xenocutlet
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1185,11 +1204,7 @@
     - Cooked
     - Cutlet
   - type: Sprite
-    layers:
-    - state: cutlet-cooked
-      color: black
-    - state: cutlet-alpha
-      color: red
+    state: spidercutlet-cooked
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1210,11 +1225,7 @@
     - Cooked
     - Cutlet
   - type: Sprite
-    layers:
-    - state: cutlet-cooked
-      color: black
-    - state: cutlet-alpha
-      color: green
+    state: xenocutlet-cooked
   - type: SolutionContainerManager
     solutions:
       food:

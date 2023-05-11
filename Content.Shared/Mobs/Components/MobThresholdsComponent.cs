@@ -1,8 +1,7 @@
-﻿using Content.Shared.Drugs.Systems;
+using Content.Shared.Drugs.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.GameStates;
-using Robust.Shared.Serialization;
 
 namespace Content.Shared.Mobs.Components;
 
@@ -10,11 +9,14 @@ namespace Content.Shared.Mobs.Components;
 [Access(typeof(MobThresholdSystem), typeof(SharedDrugSystem))]
 public sealed class MobThresholdsComponent : Component
 {
-    [DataField("thresholds", required:true)]public SortedDictionary<FixedPoint2, MobState> Thresholds = new();
+    [DataField("thresholds", required:true), AutoNetworkedField(true)]
+    public SortedDictionary<FixedPoint2, MobState> Thresholds = new();
 
-    [DataField("triggersAlerts")] public bool TriggersAlerts = true;
+    [DataField("triggersAlerts"), AutoNetworkedField]
+    public bool TriggersAlerts = true;
 
-    private bool _ignoreCritical;
+    [DataField("currentThresholdState"), AutoNetworkedField]
+    private bool _ignoreCritical; // Tehnox's Krokodil System Start
 
     [DataField("ignoreCritical")]
     public bool IgnoreCritical
@@ -28,12 +30,16 @@ public sealed class MobThresholdsComponent : Component
         }
     }
 
-    public bool IsNeededToVerifyState = false;
+    public bool IsNeededToVerifyState = false; // Tehnox's Krokodil System End
 
     public MobState CurrentThresholdState;
-}
 
-[Serializable, NetSerializable]
+    /// <summary>
+    /// Whether or not this entity can be revived out of a dead state.
+    /// </summary>
+    [DataField("allowRevives"), AutoNetworkedField]
+    public bool AllowRevives;
+[Serializable, NetSerializable] // Tehnox's Krokodil System Start
 public sealed class MobThresholdComponentState : ComponentState
 {
     public Dictionary<FixedPoint2, MobState> Thresholds;
@@ -47,6 +53,6 @@ public sealed class MobThresholdComponentState : ComponentState
         Thresholds = thresholds;
         IgnoreCritical = ignoreCritical;
         IsNeededToVerifyState = isNeededToVerifyState;
-    }
+    }                          // Tehnox's Krokodil System End
 
 }

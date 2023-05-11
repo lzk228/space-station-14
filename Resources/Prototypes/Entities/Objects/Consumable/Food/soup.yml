@@ -64,6 +64,7 @@
   components:
   - type: FlavorProfile
     flavors:
+      - creamy
       - peas
   - type: Sprite
     sprite: Objects/Consumable/Food/bowl.rsi
@@ -80,7 +81,6 @@
           Quantity: 8
         - ReagentId: Vitamin
           Quantity: 5
-# Tastes like creamy peas.
 
 # Salad
 
@@ -108,7 +108,6 @@
           Quantity: 6
         - ReagentId: Omnizine
           Quantity: 8
-# Tastes like leaves
 
 - type: entity
   name: herb salad
@@ -133,7 +132,6 @@
           Quantity: 8
         - ReagentId: Vitamin
           Quantity: 2
-# Tastes like leaves, apples.
 
 - type: entity
   name: valid salad
@@ -162,7 +160,6 @@
           Quantity: 2
         - ReagentId: DoctorsDelight
           Quantity: 5
-# Tastes like leaves, potato, meat, valids.
 
 - type: entity
   name: coleslaw
@@ -190,7 +187,6 @@
           Quantity: 2
         - ReagentId: Allicin
           Quantity: 3
-# Tastes like cabbage, onion, sour.
 
 - type: entity
   name: caesar salad
@@ -217,7 +213,6 @@
           Quantity: 8
         - ReagentId: Vitamin
           Quantity: 6
-# Tastes like cabbage, onion, croutons, cheese.
 
 - type: entity
   name: kimchi salad
@@ -245,7 +240,6 @@
           Quantity: 2
         - ReagentId: Allicin
           Quantity: 2
-# Tastes like spicy cabbage, carrots.
 
 - type: entity
   name: fruit salad
@@ -269,7 +263,6 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 4
-# Tastes like fruit.
 
 - type: entity
   name: jungle salad
@@ -280,6 +273,7 @@
   - type: FlavorProfile
     flavors:
       - fruity
+      - jungle
   - type: Sprite
     layers:
     - state: bowl
@@ -293,7 +287,6 @@
           Quantity: 7
         - ReagentId: Vitamin
           Quantity: 4
-# Tastes like fruit, the jungle.
 
 - type: entity
   name: citrus salad
@@ -318,7 +311,6 @@
           Quantity: 18
         - ReagentId: Vitamin
           Quantity: 15
-# Tastes like sourness, leaves.
 
 - type: entity
   name: salad of eden
@@ -329,6 +321,7 @@
   - type: FlavorProfile
     flavors:
       - bitter
+      - hope
   - type: Sprite
     layers:
     - state: bowl
@@ -344,7 +337,6 @@
           Quantity: 5
         - ReagentId: Omnizine
           Quantity: 5
-# Tastes like extreme bitterness, hope.
 
 # Rice
 
@@ -361,7 +353,6 @@
     layers:
     - state: bowl
     - state: rice
-# Tastes like rice.
 
 - type: entity
   name: egg-fried rice
@@ -386,7 +377,7 @@
           Quantity: 4
         - ReagentId: Vitamin
           Quantity: 4
-# Tastes like rice, egg. Egg =/= Meat -Swept 2020
+
 - type: entity
   name: rice and pork
   parent: FoodBowlBase
@@ -414,7 +405,6 @@
           Quantity: 6.5
         - ReagentId: Epinephrine
           Quantity: 2
-# Tastes like rice, meat.
 
 - type: entity
   name: rice pudding
@@ -443,7 +433,6 @@
           Quantity: 5
         - ReagentId: Sugar
           Quantity: 5
-# Tastes like rice, sweetness.
 
 - type: entity
   name: black-eyed gumbo
@@ -472,7 +461,6 @@
           Quantity: 3
         - ReagentId: CapsaicinOil
           Quantity: 2
-# Tastes like building heat, savory meat, savory vegetables, suppressed rice.
 
 # Misc
 
@@ -485,6 +473,7 @@
   - type: FlavorProfile
     flavors:
       - oats
+      - milk
   - type: Sprite
     layers:
     - state: bowl
@@ -500,7 +489,6 @@
           Quantity: 2
         - ReagentId: Milk
           Quantity: 10
-# Tastes like oats, milk.
 
 - type: entity
   name: space liberty duff
@@ -508,11 +496,15 @@
   id: FoodJellyDuff
   description: Jello gelatin, from Alfred Hubbard's cookbook.
   components:
+  - type: FlavorProfile
+    flavors:
+      - jelly
+      - mushrooms
   - type: Sprite
     layers:
     - state: bowl
     - state: spacelibertyduff
-# Tastes like jelly, mushroom.
+
 - type: entity
   name: amanita jelly
   parent: FoodInjectableBase
@@ -535,7 +527,6 @@
           Quantity: 6
         - ReagentId: Amatoxin
           Quantity: 6
-# Tastes like jelly, mushroom.
 
 # Soup
 
@@ -545,6 +536,9 @@
   id: FoodSoupMeatball
   description: You've got balls kid, BALLS!
   components:
+  - type: FlavorProfile
+    flavors:
+      - meatballs
   - type: Sprite
     layers:
     - state: bowl
@@ -560,7 +554,6 @@
           Quantity: 8
         - ReagentId: Water
           Quantity: 10
-# Tastes like meatballs.
 
 - type: entity
   name: slime soup
@@ -568,6 +561,9 @@
   id: FoodSoupSlime
   description: If no water is available, you may substitute tears.
   components:
+  - type: FlavorProfile
+    flavors:
+      - slimy
   - type: Sprite
     layers:
     - state: bowl
@@ -583,7 +579,6 @@
           Quantity: 5
         - ReagentId: Water
           Quantity: 10
-# Tastes like slime.
 
 - type: entity
   name: tomato soup
@@ -591,6 +586,10 @@
   id: FoodSoupTomatoBlood
   description: Smells like copper... is that a bone?
   components:
+  - type: FlavorProfile
+    flavors:
+      - metallic
+      - tomato
   - type: Sprite
     layers:
     - state: bowl
@@ -602,11 +601,10 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
-        - ReagentId: Vitamin
-          Quantity: 5
-        - ReagentId: Water
+        - ReagentId: Iron
           Quantity: 10
-# Tastes like iron.
+        - ReagentId: Blood
+          Quantity: 5
 
 - type: entity
   name: wing fang chu
@@ -614,6 +612,10 @@
   id: FoodSoupWingFangChu
   description: A savory dish of alien wing wang in soy.
   components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - salty
   - type: Sprite
     layers:
     - state: bowl
@@ -629,7 +631,6 @@
           Quantity: 10
         - ReagentId: Vitamin
           Quantity: 7
-# Tastes like soy.
 
 - type: entity
   name: clown's tears
@@ -637,6 +638,9 @@
   id: FoodSoupClown
   description: Not very funny.
   components:
+  - type: FlavorProfile
+    flavors:
+      - bad-joke
   - type: Sprite
     layers:
     - state: bowl
@@ -652,7 +656,6 @@
           Quantity: 9
         - ReagentId: Water
           Quantity: 10
-# Tastes like a bad joke.
 
 - type: entity
   name: vegetable soup
@@ -660,6 +663,10 @@
   id: FoodSoupVegetable
   description: A true vegan meal.
   components:
+  - type: FlavorProfile
+    flavors:
+      - vegetables
+      - sadness
   - type: Sprite
     layers:
     - state: bowl
@@ -672,10 +679,11 @@
         - ReagentId: Nutriment
           Quantity: 5
         - ReagentId: Vitamin
-          Quantity: 8
+          Quantity: 7
         - ReagentId: Water
           Quantity: 10
-# Tastes like vegetables, sadness.
+        - ReagentId: Oculine
+          Quantity: 1
 
 - type: entity
   name: nettle soup
@@ -683,6 +691,9 @@
   id: FoodSoupNettle
   description: To think, the botanist would've beat you to death with one of these.
   components:
+  - type: FlavorProfile
+    flavors:
+      - nettles
   - type: Sprite
     layers:
     - state: bowl
@@ -702,7 +713,6 @@
           Quantity: 5
         - ReagentId: Histamine
           Quantity: 0.5
-# Tastes like nettles.
 
 - type: entity
   name: mystery soup
@@ -710,11 +720,13 @@
   id: FoodSoupMystery
   description: The mystery is, why aren't you eating it?
   components:
+  - type: FlavorProfile
+    flavors:
+      - chaos
   - type: Sprite
     layers:
     - state: bowl
     - state: mystery
-# Tastes like chaos.
 
 - type: entity
   name: bowl of hot chili
@@ -722,6 +734,9 @@
   id: FoodSoupChiliHot
   description: A Texan five-alarm chili!
   components:
+  - type: FlavorProfile
+    flavors:
+      - spicy
   - type: Sprite
     layers:
     - state: bowl
@@ -739,7 +754,6 @@
             Quantity: 4
           - ReagentId: Allicin
             Quantity: 3
-# Tastes like hot peppers.
 
 - type: entity
   name: cold chili
@@ -747,6 +761,10 @@
   id: FoodSoupChiliCold
   description: This slush is barely a liquid!
   components:
+  - type: FlavorProfile
+    flavors:
+      - minty
+      - tomato
   - type: Sprite
     layers:
     - state: bowl
@@ -760,7 +778,6 @@
             Quantity: 8
           - ReagentId: Vitamin
             Quantity: 4
-# Tastes like tomato, mint.
 
 - type: entity
   name: chili con carnival
@@ -768,6 +785,12 @@
   id: FoodSoupChiliClown
   description: A delicious stew of meat, chilies, and salty, salty clown tears.
   components:
+  - type: FlavorProfile
+    flavors:
+      - spicy
+      - tomato
+      - bad-joke
+      - parents
   - type: Sprite
     layers:
     - state: bowl
@@ -785,7 +808,6 @@
             Quantity: 4
           - ReagentId: Allicin
             Quantity: 3
-# Tastes like tomato, hot peppers, clown feet, kind of funny, someone's parents.
 
 - type: entity
   name: monkey's delight
@@ -793,6 +815,10 @@
   id: FoodSoupMonkey
   description: A delicious soup with hunks of monkey meat simmered to perfection, in a broth that tastes faintly of bananas.
   components:
+  - type: FlavorProfile
+    flavors:
+      - jungle
+      - banana
   - type: Sprite
     layers:
     - state: bowl
@@ -810,7 +836,6 @@
             Quantity: 1
           - ReagentId: Blackpepper
             Quantity: 1
-# Tastes like the jungle, banana.
 
 - type: entity
   name: tomato soup
@@ -818,6 +843,9 @@
   id: FoodSoupTomato
   description: Drinking this feels like being a vampire! A tomato vampire...
   components:
+  - type: FlavorProfile
+    flavors:
+      - tomato
   - type: Sprite
     layers:
     - state: bowl
@@ -833,7 +861,6 @@
             Quantity: 5
           - ReagentId: Water
             Quantity: 10
-# Tastes like tomato.
 
 - type: entity
   name: eyeball soup
@@ -841,6 +868,10 @@
   id: FoodSoupEyeball
   description: It's looking back at you...
   components:
+  - type: FlavorProfile
+    flavors:
+      - tomato
+      - squirming
   - type: Sprite
     layers:
     - state: bowl
@@ -854,7 +885,6 @@
             Quantity: 5
           - ReagentId: Vitamin
             Quantity: 3
-# Tastes like tomato, squirming.
 
 - type: entity
   name: miso soup
@@ -862,12 +892,16 @@
   id: FoodSoupMiso
   description: Salty, fishy soup, best had with ramen.
   components:
+  - type: FlavorProfile
+    flavors:
+      - miso
   - type: Food
     trash: FoodBowlFancy
   - type: Sprite
     layers:
     - state: bowl2
-    - state: milo ##Why is this misspelled and why does it break if I fix it
+    - state: miso
+        #rip milo
   - type: SolutionContainerManager
     solutions:
       food:
@@ -879,7 +913,6 @@
             Quantity: 3
           - ReagentId: Water
             Quantity: 10
-# Tastes like miso.
 
 - type: entity
   name: mushroom soup
@@ -887,6 +920,9 @@
   id: FoodSoupMushroom
   description: A delicious and hearty mushroom soup.
   components:
+  - type: FlavorProfile
+    flavors:
+      - mushroom
   - type: Sprite
     layers:
     - state: bowl
@@ -904,7 +940,6 @@
             Quantity: 5
           - ReagentId: Milk
             Quantity: 5
-# Tastes like mushroom.
 
 - type: entity
   name: beet soup
@@ -948,7 +983,7 @@
             Quantity: 4
           - ReagentId: Vitamin
             Quantity: 6
-# Tastes like
+# Tastes like beet.
 
 - type: entity
   name: stew
@@ -956,6 +991,11 @@
   id: FoodSoupStew
   description: A nice and warm stew. Healthy and strong.
   components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - tomato
+      - carrot
   - type: Sprite
     layers:
     - state: bowl
@@ -966,10 +1006,11 @@
         maxVol: 15
         reagents:
           - ReagentId: Nutriment
-            Quantity: 7
+            Quantity: 15
+          - ReagentId: Protein
+            Quantity: 5
           - ReagentId: Vitamin
             Quantity: 2
-# Tastes like tomato, carrot.
 
 - type: entity
   name: sweet potato soup
@@ -977,6 +1018,9 @@
   id: FoodSoupPotato
   description: Delicious sweet potato in soup form.
   components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
   - type: Sprite
     layers:
     - state: bowl
@@ -998,6 +1042,9 @@
   id: FoodSoupOnion
   description: Good enough to make a grown mime cry.
   components:
+  - type: FlavorProfile
+    flavors:
+      - onion
   - type: Sprite
     layers:
     - state: bowl
@@ -1013,7 +1060,6 @@
             Quantity: 5
           - ReagentId: Allicin
             Quantity: 5
-# Tastes like onion, france.
 
 - type: entity
   name: bisque
@@ -1021,6 +1067,9 @@
   id: FoodSoupBisque
   description: A classic entrée from Space France.
   components:
+  - type: FlavorProfile
+    flavors:
+      - creamy
   - type: Sprite
     layers:
     - state: bowl
@@ -1038,7 +1087,7 @@
             Quantity: 6
           - ReagentId: Water
             Quantity: 5
-# Tastes like cream, crab.
+# Tastes like crab.
 
 - type: entity
   name: electron soup
@@ -1046,6 +1095,10 @@
   id: FoodSoupElectron
   description: A gastronomic curiosity of ethereal origin.
   components:
+  - type: FlavorProfile
+    flavors:
+      - mushrooms
+      - electrons
   - type: Sprite
     layers:
     - state: bowl
@@ -1059,7 +1112,6 @@
             Quantity: 3
           - ReagentId: Licoxide
             Quantity: 6
-# Tastes like mushroom, electrons.
 
 - type: entity
   name: bungo curry
@@ -1067,6 +1119,9 @@
   id: FoodSoupBungo
   description: A spicy vegetable curry made with the humble bungo fruit, Exotic!
   components:
+  - type: FlavorProfile
+    flavors:
+      - jungle
   - type: Sprite
     layers:
     - state: bowl
@@ -1082,4 +1137,4 @@
             Quantity: 5
           - ReagentId: CapsaicinOil
             Quantity: 5
-# Tastes like bungo, hot curry, tropical sweetness.
+# Tastes like bungo, hot curry.

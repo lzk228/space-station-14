@@ -5,11 +5,6 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.Swab;
 
 [Serializable, NetSerializable]
-public sealed class DiseaseSwabDoAfterEvent : SimpleDoAfterEvent
-{
-}
-
-[Serializable, NetSerializable]
 public sealed class BotanySwabDoAfterEvent : SimpleDoAfterEvent
 {
 }

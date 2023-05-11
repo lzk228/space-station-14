@@ -1,10 +1,10 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Alert;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mobs.Components;
-using Robust.Shared.GameStates;
+
 namespace Content.Shared.Mobs.Systems;
 
 public sealed class MobThresholdSystem : EntitySystem
@@ -17,8 +17,6 @@ public sealed class MobThresholdSystem : EntitySystem
         SubscribeLocalEvent<MobThresholdsComponent, ComponentShutdown>(MobThresholdShutdown);
         SubscribeLocalEvent<MobThresholdsComponent, ComponentStartup>(MobThresholdStartup);
         SubscribeLocalEvent<MobThresholdsComponent, DamageChangedEvent>(OnDamaged);
-        SubscribeLocalEvent<MobThresholdsComponent, ComponentGetState>(OnGetComponentState);
-        SubscribeLocalEvent<MobThresholdsComponent, ComponentHandleState>(OnHandleComponentState);
         SubscribeLocalEvent<MobThresholdsComponent, UpdateMobStateEvent>(OnUpdateMobState);
     }
 
@@ -249,6 +247,14 @@ public sealed class MobThresholdSystem : EntitySystem
         UpdateAlerts(target, mobState.CurrentState, threshold, damageable);
     }
 
+    public void SetAllowRevives(EntityUid uid, bool val, MobThresholdsComponent? component = null)
+    {
+        if (!Resolve(uid, ref component, false))
+            return;
+        component.AllowRevives = val;
+        Dirty(component);
+    }
+
     #endregion
 
     #region Private Implementation
@@ -282,8 +288,13 @@ public sealed class MobThresholdSystem : EntitySystem
             return;
         }
 
+        if (mobState.CurrentState != MobState.Dead || thresholds.AllowRevives)
+            thresholds.CurrentThresholdState = newState;
+        _mobStateSystem.UpdateMobState(target, mobState);
+        // Tehnox's Krokodil System Start
         thresholds.CurrentThresholdState = newState;
         _mobStateSystem.UpdateMobState(target, mobState, origin);
+        // Tehnox's Krokodil System End
 
         Dirty(target);
     }
@@ -337,7 +348,7 @@ public sealed class MobThresholdSystem : EntitySystem
         RaiseLocalEvent(target, ref ev, true);
         UpdateAlerts(target, mobState.CurrentState, thresholds, args.Damageable);
     }
-
+    // Tehnox's Krokodil System Start
     private void VerifyState(EntityUid target, MobThresholdsComponent thresholds)
     {
         if (!TryComp<MobStateComponent>(target, out var mobState))
@@ -389,7 +400,7 @@ public sealed class MobThresholdSystem : EntitySystem
         VerifyState(target, component);
         component.IsNeededToVerifyState = false;
     }
-
+    // Tehnox's Krokodil System End
     private void MobThresholdStartup(EntityUid target, MobThresholdsComponent thresholds, ComponentStartup args)
     {
         if (!TryComp<MobStateComponent>(target, out var mobState) || !TryComp<DamageableComponent>(target, out var damageable))
@@ -408,8 +419,14 @@ public sealed class MobThresholdSystem : EntitySystem
 
     private void OnUpdateMobState(EntityUid target, MobThresholdsComponent component, ref UpdateMobStateEvent args)
     {
-        if (component.CurrentThresholdState != MobState.Invalid)
+        if (!component.AllowRevives && component.CurrentThresholdState == MobState.Dead)
+        {
+            args.State = MobState.Dead;
+        }
+        else if (component.CurrentThresholdState != MobState.Invalid)
+        {
             args.State = component.CurrentThresholdState;
+        }
     }
 
     #endregion
@@ -424,6 +441,4 @@ public sealed class MobThresholdSystem : EntitySystem
 /// <param name="Damageable">Damageable Component owned by the Target</param>
 [ByRefEvent]
 public readonly record struct MobThresholdChecked(EntityUid Target, MobStateComponent MobState,
-    MobThresholdsComponent Threshold, DamageableComponent Damageable)
-{
-}
+    MobThresholdsComponent Threshold, DamageableComponent Damageable);

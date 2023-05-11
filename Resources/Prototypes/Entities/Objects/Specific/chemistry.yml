@@ -144,7 +144,7 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 40
+        maxVol: 60
         canReact: false
         canBoil: false
   - type: Damageable
@@ -154,7 +154,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 5
       behaviors:
       - !type:SpillBehavior
         solution: beaker
