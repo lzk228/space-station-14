@@ -2,7 +2,7 @@
 using Content.Server.Botany;
 using Content.Server.Chemistry.Components.SolutionManager;
 using Content.Server.Chemistry.EntitySystems;
-using Content.Server.Disease.Components;
+//using Content.Server.Disease.Components;
 using Content.Server.Medical.Components;
 using Content.Server.Popups;
 using Content.Shared.Chemistry;
@@ -73,10 +73,10 @@ public sealed class MedicalSwabSystem : EntitySystem
             RemComp(uid, botanySwabComponent);
         }
 
-        if (TryComp<DiseaseSwabComponent>(uid, out var diseaseSwabComponent))
-        {
-            RemComp(uid, diseaseSwabComponent);
-        }
+        //if (TryComp<DiseaseSwabComponent>(uid, out var diseaseSwabComponent))
+        //{
+        //    RemComp(uid, diseaseSwabComponent);
+        //}
 
         component.IsSolutionAdded = true;
     }

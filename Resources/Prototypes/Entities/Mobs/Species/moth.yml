@@ -20,7 +20,7 @@
       Male: FemaleMoth
       Female: FemaleMoth
       Unsexed: FemaleMoth
-  - type: DiseaseCarrier
+  #- type: DiseaseCarrier
     diseaseResist: 0.1
   - type: Flammable
     damage:
@@ -50,8 +50,8 @@
         Heat : 0.25 #per second, scales with temperature & other constants
   #- type: MovementAlwaysTouching
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3.0
-    baseSprintSpeed: 5.0
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5.5
     weightlessAcceleration: 0.5
     weightlessFriction: 0.75
     weightlessModifier: 0.6

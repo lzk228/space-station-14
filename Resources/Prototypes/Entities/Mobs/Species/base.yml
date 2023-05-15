@@ -85,7 +85,7 @@
       - Pacified
       - Zoomium
       - CrazyRussianDrug
-      - BerserkDrug
+      #- BerserkDrug
   - type: Blindable
   # Other
   - type: Inventory

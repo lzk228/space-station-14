@@ -75,7 +75,7 @@
         Blunt: 1
         Slash: 4
         Piercing: 1
-  - type: DiseaseCarrier
+  #- type: DiseaseCarrier
     naturalImmunities:
     - OwOnavirus
   - type: Thieving

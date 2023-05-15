@@ -47,8 +47,8 @@
     bodyType: Static
   - type: Pullable
   - type: Fixtures
-    fixtures:
-    - shape:
+    fix1:
+      shape:
         !type:PolygonShape
           vertices:
           - "-0.5,-0.5"

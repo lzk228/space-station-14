@@ -5,12 +5,13 @@
   setPreference: true
   objective: roles-antag-nuclear-operative-objective
 
-- type: antag
-  id: NukeopsMedic
-  name: roles-antag-nuclear-operative-agent-name
-  antagonist: true
-  setPreference: true
-  objective: roles-antag-nuclear-operative-agent-objective
+# Turned off so sponsor shit can work
+#- type: antag
+#  id: NukeopsMedic
+#  name: roles-antag-nuclear-operative-agent-name
+#  antagonist: true
+#  setPreference: true
+#  objective: roles-antag-nuclear-operative-agent-objective
 
 - type: antag
   id: NukeopsCommander

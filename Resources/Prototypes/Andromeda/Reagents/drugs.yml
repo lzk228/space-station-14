@@ -55,7 +55,7 @@
               min: 30
           damage:
             types:
-              Cellular: 1
+              Cellular: 0.5
     Narcotic:
       effects:
         - !type:GenericStatusEffect
@@ -64,12 +64,13 @@
           type: Add
           time: 3
           refresh: false
-        - !type:GenericStatusEffect
-          key: BerserkDrug
-          component: BerserkDrug
-          type: Add
-          time: 3
-          refresh: false
+          # RIP
+#        - !type:GenericStatusEffect
+#          key: BerserkDrug
+#          component: BerserkDrug
+#          type: Add
+#          time: 3
+#          refresh: false
         - !type:GenericStatusEffect
           key: Stutter
           component: StutteringAccent

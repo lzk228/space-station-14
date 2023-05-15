@@ -31,19 +31,20 @@
       bodyType: Dynamic
     - type: Fixtures
       fixtures:
-        - shape:
+        slips:
+          shape:
             !type:PhysShapeAabb
             bounds: "-0.2,-0.2,0.2,0.2"
-          id: "slips"
           hard: false
           layer:
-            - SlipLayer
-        - shape:
+          - SlipLayer
+        fix1:
+          shape:
             !type:PhysShapeAabb
             bounds: "-0.2,-0.2,0.2,0.2"
           density: 30
           mask:
-            - ItemMask
+          - ItemMask
 
 - type: entity
   name: lemonka

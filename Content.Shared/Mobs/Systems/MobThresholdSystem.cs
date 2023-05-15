@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Alert;
 using Content.Shared.Damage;
@@ -260,17 +260,14 @@ public sealed class MobThresholdSystem : EntitySystem
     #region Private Implementation
 
     private void CheckThresholds(EntityUid target, MobStateComponent mobStateComponent,
-        MobThresholdsComponent thresholdsComponent, DamageableComponent damageableComponent, EntityUid? origin = null)
+        MobThresholdsComponent thresholdsComponent, DamageableComponent damageableComponent)
     {
         foreach (var (threshold, mobState) in thresholdsComponent.Thresholds.Reverse())
         {
             if (damageableComponent.TotalDamage < threshold)
                 continue;
 
-            if (mobState == MobState.Critical && thresholdsComponent.IgnoreCritical)
-                continue;
-
-            TriggerThreshold(target, mobState, mobStateComponent, thresholdsComponent, origin);
+            TriggerThreshold(target, mobState, mobStateComponent, thresholdsComponent);
             break;
         }
     }
@@ -279,8 +276,7 @@ public sealed class MobThresholdSystem : EntitySystem
         EntityUid target,
         MobState newState,
         MobStateComponent? mobState = null,
-        MobThresholdsComponent? thresholds = null,
-        EntityUid? origin = null)
+        MobThresholdsComponent? thresholds = null)
     {
         if (!Resolve(target, ref mobState, ref thresholds) ||
             mobState.CurrentState == newState)
@@ -291,10 +287,6 @@ public sealed class MobThresholdSystem : EntitySystem
         if (mobState.CurrentState != MobState.Dead || thresholds.AllowRevives)
             thresholds.CurrentThresholdState = newState;
         _mobStateSystem.UpdateMobState(target, mobState);
-        // Tehnox's Krokodil System Start
-        thresholds.CurrentThresholdState = newState;
-        _mobStateSystem.UpdateMobState(target, mobState, origin);
-        // Tehnox's Krokodil System End
 
         Dirty(target);
     }
@@ -343,64 +335,12 @@ public sealed class MobThresholdSystem : EntitySystem
     {
         if (!TryComp<MobStateComponent>(target, out var mobState))
             return;
-        CheckThresholds(target, mobState, thresholds, args.Damageable, args.Origin);
+        CheckThresholds(target, mobState, thresholds, args.Damageable);
         var ev = new MobThresholdChecked(target, mobState, thresholds, args.Damageable);
         RaiseLocalEvent(target, ref ev, true);
         UpdateAlerts(target, mobState.CurrentState, thresholds, args.Damageable);
     }
-    // Tehnox's Krokodil System Start
-    private void VerifyState(EntityUid target, MobThresholdsComponent thresholds)
-    {
-        if (!TryComp<MobStateComponent>(target, out var mobState))
-            return;
-        if (!TryComp<DamageableComponent>(target, out var damageableComponent))
-            return;
 
-        CheckThresholds(target, mobState, thresholds, damageableComponent);
-        var ev = new MobThresholdChecked(target, mobState, thresholds, damageableComponent);
-        RaiseLocalEvent(target, ref ev, true);
-        UpdateAlerts(target, mobState.CurrentState, thresholds, damageableComponent);
-    }
-
-    private void OnHandleComponentState(EntityUid target, MobThresholdsComponent component,
-        ref ComponentHandleState args)
-    {
-        if (args.Current is not MobThresholdComponentState state)
-            return;
-
-        if (component.Thresholds.Count != state.Thresholds.Count ||
-            !component.Thresholds.SequenceEqual(state.Thresholds))
-        {
-            component.Thresholds.Clear();
-
-            foreach (var threshold in state.Thresholds)
-            {
-                component.Thresholds.Add(threshold.Key, threshold.Value);
-            }
-        }
-
-        component.CurrentThresholdState = state.CurrentThresholdState;
-        component.IgnoreCritical = state.IgnoreCritical;
-        component.IsNeededToVerifyState = state.IsNeededToVerifyState;
-
-        if (!component.IsNeededToVerifyState)
-            return;
-        VerifyState(target, component);
-        component.IsNeededToVerifyState = false;
-    }
-
-    private void OnGetComponentState(EntityUid target, MobThresholdsComponent component, ref ComponentGetState args)
-    {
-        args.State = new MobThresholdComponentState(component.CurrentThresholdState,
-            new Dictionary<FixedPoint2, MobState>(component.Thresholds),
-            component.IgnoreCritical, component.IsNeededToVerifyState);
-
-        if (!component.IsNeededToVerifyState)
-            return;
-        VerifyState(target, component);
-        component.IsNeededToVerifyState = false;
-    }
-    // Tehnox's Krokodil System End
     private void MobThresholdStartup(EntityUid target, MobThresholdsComponent thresholds, ComponentStartup args)
     {
         if (!TryComp<MobStateComponent>(target, out var mobState) || !TryComp<DamageableComponent>(target, out var damageable))

@@ -26,8 +26,8 @@
       anchored: true
     - type: Physics
     - type: Fixtures
-      fixtures:
-      - hard: false
+      fix1:
+        hard: false
         density: 7
         shape:
           !type:PhysShapeAabb

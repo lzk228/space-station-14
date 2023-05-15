@@ -49,8 +49,8 @@
     - South
     - East
   - type: Fixtures
-    fixtures:
-    - shape:
+    fix1:
+      shape:
         !type:PolygonShape
           vertices:
           - "-0.5,-0.5"
@@ -151,8 +151,8 @@
     - South
     - East
   - type: Fixtures
-    fixtures:
-    - shape:
+    fix1:
+      shape:
         !type:PolygonShape
           vertices:
           - "-0.5,-0.5"
@@ -255,8 +255,8 @@
     - South
     - East
   - type: Fixtures
-    fixtures:
-    - shape:
+    fix1:
+      shape:
         !type:PolygonShape
           vertices:
           - "-0.5,-0.5"
