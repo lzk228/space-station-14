@@ -121,6 +121,10 @@ namespace Content.Shared.Chemistry.Components
             return _heatCapacity;
         }
 
+        public float GetThermalEnergy(IPrototypeManager? protoMan)
+        {
+            return GetHeatCapacity(protoMan) * Temperature;
+        }
 
         /// <summary>
         ///     Constructs an empty solution (ex. an empty beaker).

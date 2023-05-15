@@ -88,6 +88,23 @@
     # Corvax-Localization-End
 
 - type: emote
+  id: Sigh
+  category: Vocal
+  chatMessages: [sighs]
+  chatTriggers:
+    - вздохнул
+    - вздохнула
+    - вздыхает
+    - вздох
+    - мда
+    - sigh
+    - sighs
+    - sighed
+    - sigh.
+    - sighs.
+    - sighed.
+
+- type: emote
   id: Whistle
   category: Hands
   chatMessages: [свистнул]
