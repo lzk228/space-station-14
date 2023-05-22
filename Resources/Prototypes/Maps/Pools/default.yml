@@ -1,7 +1,7 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Aspid
+  ##- Aspid
   - Bagel
   - Box
   - Cluster
@@ -9,7 +9,7 @@
   - Kettle
   - Marathon
   - Meta
-  - Moose
+  ##- Moose
   - Omega
   - Origin
   - Saltern
