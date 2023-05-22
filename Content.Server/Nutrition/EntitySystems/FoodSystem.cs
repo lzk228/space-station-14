@@ -63,7 +63,7 @@ namespace Content.Server.Nutrition.EntitySystems
             SubscribeLocalEvent<FoodComponent, AfterInteractEvent>(OnFeedFood);
             SubscribeLocalEvent<FoodComponent, GetVerbsEvent<AlternativeVerb>>(AddEatVerb);
             SubscribeLocalEvent<FoodComponent, ConsumeDoAfterEvent>(OnDoAfter);
-            SubscribeLocalEvent<FoodComponent, BoilOutEvent>(OnSolutionBoilOut);
+            //SubscribeLocalEvent<FoodComponent, BoilOutEvent>(OnSolutionBoilOut);
             SubscribeLocalEvent<InventoryComponent, IngestionAttemptEvent>(OnInventoryIngestAttempt);
         }
 
@@ -302,7 +302,7 @@ namespace Content.Server.Nutrition.EntitySystems
                 DeleteAndSpawnTrash(component, uid, args.User);
         }
 
-        private void OnSolutionBoilOut(EntityUid uid, FoodComponent component, ref BoilOutEvent args)
+        /*private void OnSolutionBoilOut(EntityUid uid, FoodComponent component, ref BoilOutEvent args)
         {
             if (!HasComp<DestroyableOnBoilComponent>(uid))
                 return;
@@ -312,7 +312,7 @@ namespace Content.Server.Nutrition.EntitySystems
 
             else
                 DeleteAndSpawnTrash(component, uid);
-        }
+        }*/
 
         private void DeleteAndSpawnTrash(FoodComponent component, EntityUid food, EntityUid? user = null)
         {

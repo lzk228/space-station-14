@@ -1,0 +1,14 @@
+- type: entity
+  parent: BookBase
+  id: BookMedicalSponsor
+  name: медицинская книга
+  description: Что в ней написано известно только самому главврачу. А остальным не известно, пока не прочтут.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/books.rsi
+      layers:
+        - state: book7
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6

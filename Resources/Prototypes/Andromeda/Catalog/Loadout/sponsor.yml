@@ -192,8 +192,8 @@
   whitelistJobs: [ChiefMedicalOfficer]
 
 - type: loadout
-  id: BoxFolderBaseLoadout
-  entity: BoxFolderBase
+  id: BookMedicalSponsorLoadout
+  entity: BookMedicalSponsor
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
 
