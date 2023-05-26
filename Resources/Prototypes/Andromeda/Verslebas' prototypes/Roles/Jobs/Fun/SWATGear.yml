@@ -1,6 +1,6 @@
 - type: entity
-  noSpawn:  false
-  parent: ClothingBackpackSWAT
+  noSpawn: false
+  parent: ClothingSwatBackpack
   id: ClothingBackpackSWATFilled
   components:
   - type:  StorageFill
@@ -48,17 +48,3 @@
     state: pda-bartender
   - type: Icon
     state: pda-bartender
-
-- type: startingGear
-  id: SWATGear
-  equipment:
-    head: SWATHelmet
-    jumpsuit: ClothingUniformJumpskirtSWAT
-    back: ClothingBackpackSWATFilled
-    shoes: ClothingShoesSwat
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterVestWeb
-    id: SWATPDA
-    ears: ClothingHeadsetCommand
-    belt: ClothingBeltMilitaryWebbingfilled
-    eyes: ClothingEyesGlassesSWAT

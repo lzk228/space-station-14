@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetHeavySwat
+  name: шлем спецназа
+  description: Крепкий и тяжелый шлем спецназа, используемый в штурмовых операциях, хорошо защищает от пуль и осколков, компания производитель NT S-Arms
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Head/Helmets/swathelmet.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Head/Helmets/swathelmet.rsi
+  - type: IngestionBlocker
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.8
+        Piercing: 0.5
+  - type: IdentityBlocker

@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetSwat
+  name: полноразмерная гарнитура спецназа
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentCom
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: Andromeda/Clothing/Ears/Headsets/swatheadset.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Ears/Headsets/swatheadset.rsi

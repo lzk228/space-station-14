@@ -137,8 +137,8 @@
   sponsorOnly: true
 
 - type: loadout
-  id: ClothingHeadHatOutlawHatLoadout
-  entity: ClothingHeadHatOutlawHat
+  id: ClothingMaskSexyMimeLoadout
+  entity: ClothingMaskSexyMime
   sponsorOnly: true
 
 # Flater312
@@ -206,4 +206,10 @@
 - type: loadout
   id: ClothingOuterHardsuitLingLoadout
   entity: ClothingOuterHardsuitLing
+  sponsorOnly: true
+
+#Lyk_Botyn
+- type: loadout
+  id: BlyatLoadout
+  entity: Blyat
   sponsorOnly: true
