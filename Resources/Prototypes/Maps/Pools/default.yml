@@ -1,11 +1,11 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  ##- Aspid
+  - Aspid
   - Bagel
   - Box
   - Cluster
-  - CorvaxIshimura
+  - Fland
   - Kettle
   - Marathon
   - Meta

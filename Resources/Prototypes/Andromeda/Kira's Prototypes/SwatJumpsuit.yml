@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSwat
+  name: комбинезон спецназа
+  description: Синие опозновательные знаки указывают на принадлежность к спецназу. Эти люди приходят в самый напряженный момент с полным боекомплектом.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/swat.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/swat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.9
+        Piercing: 0.95
+        Heat: 0.95

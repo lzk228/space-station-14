@@ -12,6 +12,7 @@
   recipeUnlocks:
   - MiningDrill
   - OreProcessorMachineCircuitboard
+  - SalvageMagnetMachineCircuitboard
 
 - type: technology
   id: AdvancedPowercells
@@ -82,6 +83,7 @@
   recipeUnlocks:
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
+  - AtmosDeviceFanTinyMachineCircuitboard
 
 # Tier 2
 
@@ -172,7 +174,7 @@
     - WelderIndustrialAdvanced
     - PowerDrill
     - JawsOfLife
-    
+
 # Tier 3
 
 - type: technology

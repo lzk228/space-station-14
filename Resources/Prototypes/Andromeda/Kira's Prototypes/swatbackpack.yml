@@ -1,0 +1,27 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingSwatBackpack
+  name: рюкзак спецназа
+  description: Обычный рюкзак спецназа используемый для хранения в нём всех необходимых вещей.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Backpacks/swatbackpack.rsi
+    state: icon
+  - type: Item
+    size: 225
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    capacity: 225
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
