@@ -197,6 +197,12 @@
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
 
+- type: loadout
+  id: ClothingUniformCMOEliteSuitSkirtLoadout
+  entity: ClothingUniformCMOEliteSuitSkirt
+  sponsorOnly: true
+  whitelistJobs: [ChiefMedicalOfficer]
+
 #Ramsody
 - type: loadout
   id: DrugsBriefcaseFilledLoadout

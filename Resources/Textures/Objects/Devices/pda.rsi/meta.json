@@ -203,9 +203,15 @@
       "name": "pda-zookeeper"
     },
     {
+      "name": "pda-swatstandart"
+    },
+    {
+      "name": "pda-swatleader"
+    },
+    {
       "name": "pda-ert"
     },
-	{
+	  {
       "name": "pda-cluwne"
     }
   ]

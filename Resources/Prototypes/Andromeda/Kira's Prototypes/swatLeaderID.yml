@@ -1,0 +1,11 @@
+- type: entity
+  parent: CentcomIDCard
+  id: SwatLeaderIDCard
+  name: СПБСТ Лидер ID Карта
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: swat_leaderID
+  - type: Item
+    heldPrefix: gold

@@ -32,6 +32,12 @@
       "name": "ert_security"
     },
     {
+      "name": "swat_leaderID"
+    },
+    {
+      "name": "swat_standartID"
+    },
+    {
       "name": "gold"
     },
     {
@@ -202,7 +208,7 @@
     {
       "name": "syndie"
     },
-	{
+	  {
       "name": "idcluwne"
     },
     {

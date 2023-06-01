@@ -1,0 +1,16 @@
+- type: startingGear
+  id: SwatStandartGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSwat
+    back: ClothingBackpackSWATFilled
+    shoes: ClothingShoesSwatBoots
+    head: ClothingHeadHatBeretSwat
+    eyes: ClothingEyesGlassesTacticalSwat
+    mask: ClothingSwatGasMask
+    gloves: ClothingHandsGlovesCombatSwat
+    outerClothing: ClothingOuterVestSwat
+    id: SwatStandartPDA
+    ears: ClothingHeadsetSwat
+    belt: ClothingBeltSwatWedding
+    pocket1: ClothingHeadHelmetHeavySwat
+    pocket2: WeaponFlareGun

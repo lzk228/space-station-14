@@ -13477,136 +13477,406 @@ entities:
     - pos: 52.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 5477
     components:
     - pos: 46.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 6129
     components:
     - pos: -11.5,-0.5
       parent: 7536
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 6130
     components:
     - pos: -11.5,-4.5
       parent: 7536
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 6768
     components:
     - pos: 54.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 6769
     components:
     - pos: 44.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 6788
     components:
     - pos: 59.5,14.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 7581
     components:
     - pos: 59.5,12.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 9110
     components:
     - pos: 0.5,-0.5
       parent: 7536
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 9214
     components:
     - pos: 23.5,-29.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 12269
     components:
     - pos: 39.5,-46.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 13825
     components:
     - pos: 25.5,-25.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19688
     components:
     - pos: 7.5,-70.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19689
     components:
     - pos: 7.5,-63.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19690
     components:
     - pos: -4.5,-70.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19691
     components:
     - pos: 5.5,-70.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19692
     components:
     - pos: 5.5,-63.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19694
     components:
     - pos: -4.5,-63.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19786
     components:
     - pos: -24.5,-35.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19800
     components:
     - pos: 23.5,-46.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 19808
     components:
     - pos: 20.5,28.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 21130
     components:
     - pos: 44.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 23380
     components:
     - pos: 46.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 23381
     components:
     - pos: 52.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 23382
     components:
     - pos: 54.5,31.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 23969
     components:
     - pos: 15.5,-63.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
   - uid: 23970
     components:
     - pos: 15.5,-70.5
       parent: 60
       type: Transform
+    - containers:
+      - machine_parts
+      - machine_board
+      type: Construction
+    - containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
+      type: ContainerContainer
 - proto: AtmosFixBlockerMarker
   entities:
   - uid: 15215
@@ -14890,6 +15160,17 @@ entities:
     - pos: -49.629227,-28.475441
       parent: 60
       type: Transform
+- proto: Blyat
+  entities:
+  - uid: 9504
+    components:
+    - desc: Выдается сотрудникам нашедшим ошибки в системе NT(вместо зарплаты).
+      type: MetaData
+    - pos: -3.3911357,-20.535946
+      parent: 60
+      type: Transform
+    - nextSound: 51.8956961
+      type: EmitSoundOnCollide
 - proto: BodyBag_Container
   entities:
   - uid: 2049
@@ -71575,6 +71856,12 @@ entities:
       pos: 47.5,16.5
       parent: 60
       type: Transform
+  - uid: 13798
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 41.5,1.5
+      parent: 60
+      type: Transform
   - uid: 14191
     components:
     - pos: -7.5,21.5
@@ -76298,6 +76585,14 @@ entities:
   - uid: 23763
     components:
     - pos: -31.5,15.5
+      parent: 60
+      type: Transform
+- proto: ComputerSalvageExpedition
+  entities:
+  - uid: 13799
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 40.5,1.5
       parent: 60
       type: Transform
 - proto: ComputerShuttleCargo
@@ -134089,7 +134384,7 @@ entities:
       type: Transform
   - uid: 2418
     components:
-    - rot: 3.141592653589793 rad
+    - rot: 1.5707963267948966 rad
       pos: 40.5,2.5
       parent: 60
       type: Transform
@@ -153621,7 +153916,7 @@ entities:
     - pos: -39.5,19.5
       parent: 60
       type: Transform
-    - nextEmpEject: 41.1344533
+    - nextEmpEject: 41.1344532
       type: VendingMachine
 - proto: VendingMachineYouTool
   entities:

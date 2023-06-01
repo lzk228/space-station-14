@@ -121,6 +121,7 @@ public sealed class NukeopsRuleComponent : Component
     /// todo: don't store sessions, dingus
     [DataField("operativePlayers")]
     public readonly Dictionary<string, IPlayerSession> OperativePlayers = new();
+
     [DataField("faction", customTypeSerializer: typeof(PrototypeIdSerializer<FactionPrototype>), required: true)]
     public string Faction = default!;
 }

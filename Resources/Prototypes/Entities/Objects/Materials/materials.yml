@@ -283,15 +283,16 @@
     - cotton
     - cotton_2
     - cotton_3
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Sprite
     state: cotton_3
     layers:
     - state: cotton_3
       map: ["base"]
   - type: Appearance
-  - type: Material
-    materials:
-      Cloth: 10
   - type: SolutionContainerManager
     solutions:
       fiber:

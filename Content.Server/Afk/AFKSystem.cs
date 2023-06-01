@@ -7,6 +7,8 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Robust.Server.GameObjects; // Andromeda SSD System(cringe)
+using Content.Shared.Bed.Sleep; // Andromeda SSD System(cringe)
 
 namespace Content.Server.Afk;
 
@@ -84,6 +86,13 @@ public sealed class AFKSystem : EntitySystem
             {
                 var ev = new AFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
+                // Andromeda SSD System(cringe) Start
+                if (!pSession.AttachedEntity.HasValue) continue;
+                if (!HasComp<SleepingComponent>(pSession.AttachedEntity.Value))
+                {
+                    EnsureComp<SleepingComponent>(pSession.AttachedEntity.Value);
+                }
+                // Andromeda SSD System(cringe) End
                 continue;
             }
 
@@ -91,6 +100,13 @@ public sealed class AFKSystem : EntitySystem
             {
                 var ev = new UnAFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
+                // Andromeda SSD System(cringe) Start
+                if (!pSession.AttachedEntity.HasValue) continue;
+                if (HasComp<SleepingComponent>(pSession.AttachedEntity.Value))
+                {
+                    RemComp<SleepingComponent>(pSession.AttachedEntity.Value);
+                }
+                // Andromeda SSD System(cringe) End
             }
         }
     }

@@ -1,0 +1,11 @@
+- type: entity
+  parent: BasePDA
+  id: SwatStandartPDA
+  name: КПК СПБСТ
+  description: На задней стороне написано K.I.R.A Arsenal и чтобы это могло значить?
+  components:
+  - type: PDA
+    id: SwatStandartIDCard
+    state: pda-swatstandart
+  - type: Icon
+    state: pda-swatstandart
