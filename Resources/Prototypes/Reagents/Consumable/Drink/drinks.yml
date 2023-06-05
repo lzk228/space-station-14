@@ -8,6 +8,7 @@
   color: "#664300"
   boilingPoint: 100.0
   meltingPoint: 0.0
+  recognizable: true
   metabolisms:
     Drink:
       effects:
@@ -154,6 +155,7 @@
   color: "#DFDFDF"
   boilingPoint: 100.0
   meltingPoint: 0.0
+  recognizable: true
   plantMetabolism:
     - !type:PlantAdjustNutrition
       amount: 0.1
@@ -181,6 +183,7 @@
   color: "#DEDACD"
   boilingPoint: 100.0
   meltingPoint: 0.0
+  recognizable: true
   metabolisms:
     Drink:
       effects:
@@ -288,6 +291,7 @@
   color: "#8a5a3a"
   boilingPoint: 100.0
   meltingPoint: 0.0
+  recognizable: true
   metabolisms:
     Drink:
       effects:
@@ -317,6 +321,7 @@
   physicalDesc: reagent-physical-desc-translucent
   flavor: water
   color: "#75b1f0"
+  recognizable: true
   boilingPoint: 100.0
   meltingPoint: 0.0
   metabolisms:
@@ -332,6 +337,7 @@
   physicalDesc: reagent-physical-desc-frosty
   flavor: cold
   color: "#bed8e6"
+  recognizable: true
   meltingPoint: 0.0
   boilingPoint: 100.0
   plantMetabolism:

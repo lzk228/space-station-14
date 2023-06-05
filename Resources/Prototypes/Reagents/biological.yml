@@ -7,6 +7,7 @@
   color: "#800000"
   meltingPoint: -1.0
   boilingPoint: 100.0
+  recognizable: true
   physicalDesc: reagent-physical-desc-ferrous
   slippery: false
   metabolisms:
@@ -28,6 +29,7 @@
   color: "#2cf274"
   meltingPoint: -22.0
   boilingPoint: 110.0
+  recognizable: true
   physicalDesc: reagent-physical-desc-viscous
   slippery: false
   viscosity: 0.25
@@ -47,6 +49,7 @@
   desc: reagent-desc-spider-blood
   flavor: metallic
   color: "#162581"
+  recognizable: true
   physicalDesc: reagent-physical-desc-ferrous
   slippery: false
   metabolisms:
@@ -69,6 +72,7 @@
   color: "#f4692e"
   meltingPoint: -61.0
   boilingPoint: 480.0
+  recognizable: true
   metabolisms:
     Drink:
       effects:

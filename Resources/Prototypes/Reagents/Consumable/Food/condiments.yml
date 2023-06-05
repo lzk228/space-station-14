@@ -8,6 +8,7 @@
   color: aquamarine
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: BbqSauce
@@ -19,6 +20,7 @@
   color: darkred
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Cornoil
@@ -30,6 +32,7 @@
   color: yellow
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Frostoil
@@ -52,6 +55,7 @@
   color: gray
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Hotsauce
@@ -63,6 +67,7 @@
   color: red
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Ketchup
@@ -74,6 +79,7 @@
   color: red
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Ketchunaise
@@ -85,6 +91,7 @@
   color: "#fba399"
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Mayo
@@ -96,6 +103,7 @@
   color: "#f9f5e5"
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Vinaigrette
@@ -107,6 +115,7 @@
   color: "#efdaae"
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
 
 - type: reagent
   id: Soysauce
@@ -118,6 +127,7 @@
   color: saddlebrown
   boilingPoint: 110.0
   meltingPoint: -9.0
+  recognizable: true
   metabolisms:
     Food:
       effects:
@@ -134,6 +144,7 @@
   physicalDesc: reagent-physical-desc-grainy
   flavor: salty
   color: "#a1000b"
+  recognizable: true
   boilingPoint: 1465.0
   meltingPoint: 800.7
   plantMetabolism:
