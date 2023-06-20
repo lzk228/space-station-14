@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackCMOEliteSatchel
+  name: сумка элитного Главного врача
+  description: Элитная сумка для лучшего главврача!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Satchels/elite_cmo_satchel.rsi

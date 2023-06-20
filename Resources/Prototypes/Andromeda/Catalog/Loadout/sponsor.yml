@@ -3,13 +3,13 @@
   id: GoldenBikeHornLoadout
   entity: GoldenBikeHorn
   sponsorOnly: true
-  whitelistJobs: [Clown]
+  whitelistJobs: [Clown, Passenger]
 
 - type: loadout
   id: ClothingShoesBlingLoadout
   entity: ClothingShoesBling
   sponsorOnly: true
-  whitelistJobs: [Clown]
+  whitelistJobs: [Clown, Passenger]
 
 - type: loadout
   id: CyberPenLoadout
@@ -219,3 +219,133 @@
   id: BlyatLoadout
   entity: Blyat
   sponsorOnly: true
+
+#Steemon
+- type: loadout
+  id: Blyat2Loadout
+  entity: Blyat2
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatUshankaLoadout
+  entity: ClothingHeadHatUshanka
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHandsGlovesLeatherUSSPBlackLoadout
+  entity: ClothingHandsGlovesLeatherUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatJensenLoadout
+  entity: ClothingOuterCoatJensen
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitOperativeLoadout
+  entity: ClothingUniformJumpsuitOperative
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckUSSPPinLoadout
+  entity: ClothingNeckUSSPPin
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingMaskGasExplorerLoadout
+  entity: ClothingMaskGasExplorer
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
+- type: loadout
+  id: ClothingShoesSwatLoadout
+  entity: ClothingShoesSwat
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBeltMilitaryWebbingLoadout
+  entity: ClothingBeltMilitaryWebbing
+  sponsorOnly: true
+
+- type: loadout
+  id: PowerCellHyperLoadout
+  entity: PowerCellHyper
+  sponsorOnly: true
+
+- type: loadout
+  id: MacheteLoadout
+  entity: Machete
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
+- type: loadout
+  id: MedkitFilledLoadout
+  entity: MedkitFilled
+  sponsorOnly: true
+
+- type: loadout
+  id: CigaretteBluespaceLoadout
+  entity: CigaretteBluespace
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckSalvageXenoCloakLoadout
+  entity: ClothingNeckSalvageXenoCloak
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
+- type: loadout
+  id: ClothingBackpackDuffelMilitarySponsorLoadout
+  entity: ClothingBackpackDuffelMilitarySponsor
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
+#PANDA1
+- type: loadout
+  id: ClothingUniformJumpskirtJanimaidminiLoadout2
+  entity: ClothingUniformJumpskirtJanimaidmini
+  sponsorOnly: true
+  whitelistJobs: [Musician, CargoTechnician]
+
+- type: loadout
+  id: ClothingShoesSwatLoadout2
+  entity: ClothingShoesSwat
+  sponsorOnly: true
+  whitelistJobs: [Musician, CargoTechnician]
+
+- type: loadout
+  id: ClothingHandsGlovesColorBlackLoadout
+  entity: ClothingHandsGlovesColorBlack
+  sponsorOnly: true
+  whitelistJobs: [Musician, CargoTechnician]
+
+- type: loadout
+  id: ClothingHeadHatBeretLoadout
+  entity: ClothingHeadHatBeret
+  sponsorOnly: true
+  whitelistJobs: [Musician, CargoTechnician]
+
+- type: loadout
+  id: ClothingBeltMercWebbingLoadout
+  entity: ClothingBeltMercWebbing
+  sponsorOnly: true
+  whitelistJobs: [CargoTechnician]
+
+#HowAreYouMyFriend 2
+- type: loadout
+  id: GoldenBikeHornLoadout2 # fix duplicates later
+  entity: GoldenBikeHorn
+  sponsorOnly: true
+  whitelistJobs: [Clown, Passenger]
+
+- type: loadout
+  id: ClothingShoesBlingLoadout2 # fix duplicates later
+  entity: ClothingShoesBling
+  sponsorOnly: true
+  whitelistJobs: [Clown, Passenger]
+
+- type: loadout
+  id: ClothingBackpackDuffelClownLoadout
+  entity: ClothingBackpackDuffelClown
+  sponsorOnly: true
+  whitelistJobs: [Passenger]

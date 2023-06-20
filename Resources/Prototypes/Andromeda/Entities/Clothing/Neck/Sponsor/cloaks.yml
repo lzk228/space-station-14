@@ -10,8 +10,17 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckGoldCMOCloak
-  name: золотой плащ главврача
+  name: плащ элитного Главного врача
   description: Выдается самым ответственным и выдающимся главврачам. Пахнет хлоркой.
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Sponsor/gold_cmo_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckSalvageXenoCloak
+  name: элитный плащ ксено-охотника
+  description: Пропитан кровью и слезами ксеносов.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Sponsor/salvage_xeno_cloak.rsi

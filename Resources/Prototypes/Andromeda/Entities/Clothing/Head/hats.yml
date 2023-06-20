@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatEliteCMOBeret
-  name: элитный берет главврача
+  name: берет элитного Главного врача
   description: Красивый и хорошо сидит на голове красивого главврача.
   components:
   - type: Sprite

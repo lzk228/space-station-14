@@ -206,12 +206,15 @@
       "name": "pda-swatstandart"
     },
     {
+      "name": "pda-swatmedic"
+    },
+    {
       "name": "pda-swatleader"
     },
     {
       "name": "pda-ert"
     },
-	  {
+	{
       "name": "pda-cluwne"
     }
   ]

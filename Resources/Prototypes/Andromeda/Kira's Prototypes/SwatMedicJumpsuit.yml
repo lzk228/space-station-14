@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMedicSwat
+  name: комбинезон медика спецназа
+  description: Синий и голубой, кажется вы встретились с Медиком Спецназа!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/swatmedicjumpsuit.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/swatmedicjumpsuit.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.95

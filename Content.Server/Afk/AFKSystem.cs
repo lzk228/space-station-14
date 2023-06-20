@@ -87,11 +87,11 @@ public sealed class AFKSystem : EntitySystem
                 var ev = new AFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
                 // Andromeda SSD System(cringe) Start
-                if (!pSession.AttachedEntity.HasValue) continue;
-                if (!HasComp<SleepingComponent>(pSession.AttachedEntity.Value))
-                {
-                    EnsureComp<SleepingComponent>(pSession.AttachedEntity.Value);
-                }
+                //if (!pSession.AttachedEntity.HasValue) continue;
+                //if (!HasComp<SleepingComponent>(pSession.AttachedEntity.Value))
+                //{
+                //    EnsureComp<SleepingComponent>(pSession.AttachedEntity.Value);
+                //}
                 // Andromeda SSD System(cringe) End
                 continue;
             }
@@ -101,11 +101,11 @@ public sealed class AFKSystem : EntitySystem
                 var ev = new UnAFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
                 // Andromeda SSD System(cringe) Start
-                if (!pSession.AttachedEntity.HasValue) continue;
-                if (HasComp<SleepingComponent>(pSession.AttachedEntity.Value))
-                {
-                    RemComp<SleepingComponent>(pSession.AttachedEntity.Value);
-                }
+                //if (!pSession.AttachedEntity.HasValue) continue;
+                //if (HasComp<SleepingComponent>(pSession.AttachedEntity.Value))
+                //{
+                //    RemComp<SleepingComponent>(pSession.AttachedEntity.Value);
+                //}
                 // Andromeda SSD System(cringe) End
             }
         }

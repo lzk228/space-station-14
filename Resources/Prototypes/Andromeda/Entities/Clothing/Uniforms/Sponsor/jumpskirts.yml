@@ -13,7 +13,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformCMOEliteSuitSkirt # Naik21
-  name: элитная юбка-комбинезон главврача
+  name: юбка-комбинезон элитного Главного врача
   description: Кто сказал что главврачи не могут выглядеть восхитительно?
   sponsorOnly: true
   components:

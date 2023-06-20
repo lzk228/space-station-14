@@ -1,0 +1,13 @@
+- type: entity
+  id: CigaretteBluespace
+  parent: Cigarette
+  name: блюспейс-сигарета
+  description: Безостановочное курение ЭТОЙ сигареты действительно убивает.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 9999
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 9999
