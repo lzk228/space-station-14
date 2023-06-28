@@ -4,7 +4,7 @@
   name: КПК СПБСТ
   description: На задней стороне написано K.I.R.A Arsenal и чтобы это могло значить?
   components:
-  - type: PDA
+  - type: Pda
     id: SwatStandartIDCard
     state: pda-swatstandart
   - type: Icon

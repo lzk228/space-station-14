@@ -4,7 +4,7 @@
   name: КПК Медика СПБСТ
   description: На задней стороне написано K.I.R.A Medical, что бы это могло значить? Пахнет больницей.
   components:
-  - type: PDA
+  - type: Pda
     id: SwatMedicIDCard
     state: pda-swatmedic
   - type: Icon

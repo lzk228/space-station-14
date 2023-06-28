@@ -140,7 +140,7 @@
   name: КПК эскадрона смерти
   description: Пахнет смертью.
   components:
-  - type: PDA
+  - type: Pda
     id: DeathSquadronIDCard
     state: pda-bartender
   - type: Icon

@@ -35,9 +35,9 @@ namespace Content.Server.Objectives.Conditions
                 return false;
 
             var entMan = IoCManager.Resolve<IEntityManager>();
-            var sysMan = IoCManager.Resolve<IEntitySystemManager>();
-            var transformSys = sysMan.GetEntitySystem<TransformSystem>();
-            var lookupSys = sysMan.GetEntitySystem<EntityLookupSystem>();
+            var transformSys = entMan.EntitySysManager.GetEntitySystem<TransformSystem>();
+            var lookupSys = entMan.EntitySysManager.GetEntitySystem<EntityLookupSystem>();
+            var mindSystem = entMan.EntitySysManager.GetEntitySystem<MindSystem>();
 
             if (!entMan.TryGetComponent<MapGridComponent>(shuttle, out var shuttleGrid) ||
                 !entMan.TryGetComponent<TransformComponent>(shuttle, out var shuttleXform))

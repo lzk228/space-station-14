@@ -17614,406 +17614,146 @@ entities:
       pos: 81.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 715
     components:
     - rot: 3.141592653589793 rad
       pos: 74.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 716
     components:
     - rot: 3.141592653589793 rad
       pos: 75.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 756
     components:
     - rot: 3.141592653589793 rad
       pos: 76.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 757
     components:
     - rot: 3.141592653589793 rad
       pos: 77.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 3771
     components:
     - pos: -34.5,-14.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7710
     components:
     - rot: 3.141592653589793 rad
       pos: 82.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7711
     components:
     - rot: 3.141592653589793 rad
       pos: 83.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7712
     components:
     - rot: 3.141592653589793 rad
       pos: 84.5,16.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7785
     components:
     - pos: 74.5,-3.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7788
     components:
     - pos: 84.5,-3.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7789
     components:
     - pos: 84.5,-10.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7842
     components:
     - pos: 74.5,-10.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7892
     components:
     - rot: -1.5707963267948966 rad
       pos: 9.5,-51.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7901
     components:
     - rot: 1.5707963267948966 rad
       pos: -52.5,39.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7902
     components:
     - rot: 1.5707963267948966 rad
       pos: -52.5,46.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 7912
     components:
     - rot: 1.5707963267948966 rad
       pos: 89.5,3.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8007
     components:
     - pos: -47.5,-50.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8387
     components:
     - rot: -1.5707963267948966 rad
       pos: -67.5,48.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8393
     components:
     - rot: -1.5707963267948966 rad
       pos: -67.5,38.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8394
     components:
     - rot: -1.5707963267948966 rad
       pos: -67.5,40.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8395
     components:
     - rot: -1.5707963267948966 rad
       pos: -67.5,46.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8994
     components:
     - pos: -6.5,-66.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 8995
     components:
     - pos: -4.5,-66.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 25252
     components:
     - pos: 49.5,21.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
   - uid: 25280
     components:
     - pos: 49.5,23.5
       parent: 82
       type: Transform
-    - containers:
-      - machine_parts
-      - machine_board
-      type: Construction
-    - containers:
-        machine_board: !type:Container
-          ents: []
-        machine_parts: !type:Container
-          ents: []
-      type: ContainerContainer
 - proto: AtmosFixBlockerMarker
   entities:
   - uid: 20075
@@ -85168,6 +84908,12 @@ entities:
     - pos: 4.5,-9.5
       parent: 82
       type: Transform
+  - uid: 21610
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 45.5,13.5
+      parent: 82
+      type: Transform
 - proto: ComputerCargoShuttle
   entities:
   - uid: 3403
@@ -140629,7 +140375,7 @@ entities:
       type: Transform
   - uid: 17333
     components:
-    - pos: 45.488743,63.49623
+    - pos: 46.5106,62.535637
       parent: 82
       type: Transform
   - uid: 25072
@@ -160567,13 +160313,6 @@ entities:
   - uid: 24471
     components:
     - pos: 29.5,24.5
-      parent: 82
-      type: Transform
-- proto: SpawnMobSmile
-  entities:
-  - uid: 21814
-    components:
-    - pos: 27.5,64.5
       parent: 82
       type: Transform
 - proto: SpawnMobWalter

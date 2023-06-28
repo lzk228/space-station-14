@@ -46,10 +46,10 @@
   name: Officer BlueShield PDA
   description: I'm Blue Da ba dee da ba dye
   components:
-    - type: PDA
+    - type: Pda
       id: OfficerBlueShieldIDcard
       state: pda-ert
-    - type: PDABorderColor
+    - type: PdaBorderColor
       borderColor: "#000000"
       accentHColor: "#8b0000"
 

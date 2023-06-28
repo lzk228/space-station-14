@@ -203,6 +203,12 @@
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
 
+- type: loadout
+  id: ClothingBackpackCMOEliteSatchelLoadout
+  entity: ClothingBackpackCMOEliteSatchel
+  sponsorOnly: true
+  whitelistJobs: [ChiefMedicalOfficer]
+
 #Ramsody
 - type: loadout
   id: DrugsBriefcaseFilledLoadout
@@ -300,6 +306,11 @@
   sponsorOnly: true
   whitelistJobs: [SalvageSpecialist]
 
+- type: loadout
+  id: ElectricGuitarInstrumentLoadout
+  entity: ElectricGuitarInstrument
+  sponsorOnly: true
+
 #PANDA1
 - type: loadout
   id: ClothingUniformJumpskirtJanimaidminiLoadout2
@@ -349,3 +360,28 @@
   entity: ClothingBackpackDuffelClown
   sponsorOnly: true
   whitelistJobs: [Passenger]
+
+#NIKForest
+- type: loadout
+  id: ClothingHandsGlovesColorBlackLoadout2
+  entity: ClothingHandsGlovesColorBlack
+  sponsorOnly: true
+  whitelistJobs: [Botanist]
+
+- type: loadout
+  id: ClothingShoesBootsJackLoadout
+  entity: ClothingShoesBootsJack
+  sponsorOnly: true
+  whitelistJobs: [Botanist]
+
+- type: loadout
+  id: ClothingHeadHatOutlawHatLoadout
+  entity: ClothingHeadHatOutlawHat
+  sponsorOnly: true
+  whitelistJobs: [Botanist]
+
+- type: loadout
+  id: ClothingOuterCoatJensenLoadout2
+  entity: ClothingOuterCoatJensen
+  sponsorOnly: true
+  whitelistJobs: [Botanist]
