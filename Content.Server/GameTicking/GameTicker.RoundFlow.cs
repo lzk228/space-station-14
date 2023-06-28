@@ -4,7 +4,6 @@ using Content.Server.Ghost;
 using Content.Server.Maps;
 using Content.Server.Mind;
 using Content.Server.Players;
-using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Preferences;
 using JetBrains.Annotations;
@@ -23,6 +22,7 @@ using Content.Server.Voting.Managers;
 using Content.Shared.Database;
 using Content.Shared.Voting;
 using Robust.Shared.Asynchronous;
+using PlayerData = Content.Server.Players.PlayerData;
 
 namespace Content.Server.GameTicking
 {
@@ -68,9 +68,6 @@ namespace Content.Server.GameTicking
                 RaiseLocalEvent(new GameRunLevelChangedEvent(old, value));
             }
         }
-
-        [ViewVariables]
-        public int RoundId { get; private set; }
 
         /// <summary>
         /// Returns true if the round's map is eligible to be updated.
@@ -324,12 +321,12 @@ namespace Content.Server.GameTicking
                 var connected = false;
                 var observer = mind.AllRoles.Any(role => role is ObserverRole);
                 // Continuing
-                if (_playerManager.TryGetSessionById(userId, out var ply))
+                if (userId != null && _playerManager.ValidSessionId(userId.Value))
                 {
                     connected = true;
                 }
                 PlayerData? contentPlayerData = null;
-                if (_playerManager.TryGetPlayerData(userId, out var playerData))
+                if (userId != null && _playerManager.TryGetPlayerData(userId.Value, out var playerData))
                 {
                     contentPlayerData = playerData.ContentData();
                 }

@@ -8,7 +8,6 @@
   components:
   - type: Sprite
     sprite: Structures/Machines/mixer.rsi
-    netsync: false
     snapCardinals: true
     layers:
     - state: mixer_empty
@@ -86,5 +85,8 @@
           - PillCanister
   - type: SolutionContainerManager
     solutions:
-      buffer:
-        canBoil: false
+      buffer: {}
+  - type: GuideHelp
+    guides:
+    - Chemicals
+    - Chemist

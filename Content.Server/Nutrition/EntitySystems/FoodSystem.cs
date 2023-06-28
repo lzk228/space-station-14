@@ -295,26 +295,21 @@ namespace Content.Server.Nutrition.EntitySystems
                 return;
             }
 
-            if (string.IsNullOrEmpty(component.TrashPrototype))
-                EntityManager.QueueDeleteEntity(uid);
+            var ev = new BeforeFullyEatenEvent
+            {
+                User = args.User
+            };
+            RaiseLocalEvent(uid, ev);
+            if (ev.Cancelled)
+                return;
 
+            if (string.IsNullOrEmpty(component.TrashPrototype))
+                QueueDel(uid);
             else
                 DeleteAndSpawnTrash(component, uid, args.User);
         }
 
-        /*private void OnSolutionBoilOut(EntityUid uid, FoodComponent component, ref BoilOutEvent args)
-        {
-            if (!HasComp<DestroyableOnBoilComponent>(uid))
-                return;
-
-            if (string.IsNullOrEmpty(component.TrashPrototype))
-                EntityManager.QueueDeleteEntity(uid);
-
-            else
-                DeleteAndSpawnTrash(component, uid);
-        }*/
-
-        private void DeleteAndSpawnTrash(FoodComponent component, EntityUid food, EntityUid? user = null)
+        public void DeleteAndSpawnTrash(FoodComponent component, EntityUid food, EntityUid? user = null)
         {
             //We're empty. Become trash.
             var position = Transform(food).MapPosition;

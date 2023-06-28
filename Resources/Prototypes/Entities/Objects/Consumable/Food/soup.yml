@@ -16,7 +16,6 @@
   - type: DestroyableOnBoil
   - type: Sprite
     sprite: Objects/Consumable/Food/bowl.rsi
-    netsync: false
   - type: DamageOnLand
     damage:
       types:

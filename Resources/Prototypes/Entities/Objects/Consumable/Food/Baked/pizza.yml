@@ -12,7 +12,6 @@
   - type: Food
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/pizza.rsi
-    netsync: false
   - type: SolutionContainerManager
     solutions:
       food:
@@ -43,7 +42,6 @@
   - type: Food
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/pizza.rsi
-    netsync: false
   - type: SolutionContainerManager
     solutions:
       food:

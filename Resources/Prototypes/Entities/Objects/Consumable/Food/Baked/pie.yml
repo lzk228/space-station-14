@@ -12,7 +12,6 @@
     trash: FoodPlateTin
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/pie.rsi
-    netsync: false
   - type: SolutionContainerManager
     solutions:
       food:
@@ -42,7 +41,6 @@
     trash: FoodPlateSmall
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/pie.rsi
-    netsync: false
   - type: SolutionContainerManager
     solutions:
       food:
