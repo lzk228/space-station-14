@@ -27,19 +27,32 @@ namespace Content.Server.GameTicking
         {
             var session = args.Session;
 
+            if (_mindSystem.TryGetMind(session.UserId, out var mind))
+            {
+                if (args.OldStatus == SessionStatus.Connecting && args.NewStatus == SessionStatus.Connected)
+                    mind.Session = session;
+
+                DebugTools.Assert(mind.Session == session);
+                DebugTools.Assert(session.Data.ContentData()?.Mind is not {} dataMind || dataMind == mind);
+            }
+
             switch (args.NewStatus)
             {
                 case SessionStatus.Connected:
                 {
                     AddPlayerToDb(args.Session.UserId.UserId);
 
-                    // Always make sure the client has player data. Mind gets assigned on spawn.
+                    // Always make sure the client has player data.
                     if (session.Data.ContentDataUncast == null)
-                        session.Data.ContentDataUncast = new PlayerData(session.UserId, args.Session.Name);
+                    {
+                        var data = new PlayerData(session.UserId, args.Session.Name);
+                        data.Mind = mind;
+                        session.Data.ContentDataUncast = data;
+                    }
 
                     // Make the player actually join the game.
                     // timer time must be > tick length
-                    // Timer.Spawn(0, args.Session.JoinGame); // Corvax-Queue: Moved to `JoinQueueManager`
+                    Timer.Spawn(0, args.Session.JoinGame);
 
                     var record = await _dbManager.GetPlayerRecordByUserId(args.Session.UserId);
                     var firstConnection = record != null &&
@@ -74,31 +87,30 @@ namespace Content.Server.GameTicking
                             return;
                         }
 
+                        SpawnWaitDb();
+                        break;
+                    }
 
+                    if (data.Mind.CurrentEntity == null || Deleted(data.Mind.CurrentEntity))
+                    {
+                        DebugTools.Assert(data.Mind.CurrentEntity == null, "a mind's current entity has been deleted");
                         SpawnWaitDb();
                     }
                     else
                     {
-                        if (data.Mind.CurrentEntity == null)
-                        {
-                            SpawnWaitDb();
-                        }
-                        else
-                        {
-                            session.AttachToEntity(data.Mind.CurrentEntity);
-                            PlayerJoinGame(session);
-                        }
+                        session.AttachToEntity(data.Mind.CurrentEntity);
+                        PlayerJoinGame(session);
                     }
-
                     break;
                 }
 
                 case SessionStatus.Disconnected:
                 {
                     _chatManager.SendAdminAnnouncement(Loc.GetString("player-leave-message", ("name", args.Session.Name)));
+                    if (mind != null)
+                        mind.Session = null;
 
-                    if (_playerGameStatuses.ContainsKey(args.Session.UserId)) // Corvax-Queue: Delete data only if player was in game
-                        _userDb.ClientDisconnected(session);
+                    _userDb.ClientDisconnected(session);
                     break;
                 }
             }

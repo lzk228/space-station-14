@@ -175,9 +175,8 @@ namespace Content.Server.GameTicking
 
             DebugTools.AssertNotNull(data);
 
-            data!.WipeMind();
-            var newMind = _mindSystem.CreateMind(data.UserId, character.Name);
-            _mindSystem.ChangeOwningPlayer(newMind, data.UserId);
+            var newMind = _mindSystem.CreateMind(data!.UserId, character.Name);
+            _mindSystem.SetUserId(newMind, data.UserId);
 
             var jobPrototype = _prototypeManager.Index<JobPrototype>(jobId);
             var job = new Job(newMind, jobPrototype);
@@ -198,7 +197,6 @@ namespace Content.Server.GameTicking
                     Loc.GetString(
                         "latejoin-arrival-announcement",
                     ("character", MetaData(mob).EntityName),
-                    ("gender", character.Gender), // Corvax-LastnameGender
                     ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(job.Name))
                     ), Loc.GetString("latejoin-arrival-sender"),
                     playDefaultSound: false);
@@ -245,7 +243,7 @@ namespace Content.Server.GameTicking
 
         public void Respawn(IPlayerSession player)
         {
-            player.ContentData()?.WipeMind();
+            _mindSystem.WipeMind(player);
             _adminLogger.Add(LogType.Respawn, LogImpact.Medium, $"Player {player} was respawned.");
 
             if (LobbyEnabled)
@@ -279,9 +277,8 @@ namespace Content.Server.GameTicking
 
             DebugTools.AssertNotNull(data);
 
-            data!.WipeMind();
-            var newMind = _mindSystem.CreateMind(data.UserId);
-            _mindSystem.ChangeOwningPlayer(newMind, data.UserId);
+            var newMind = _mindSystem.CreateMind(data!.UserId);
+            _mindSystem.SetUserId(newMind, data.UserId);
             _mindSystem.AddRole(newMind, new ObserverRole(newMind));
 
             var mob = SpawnObserverMob();
