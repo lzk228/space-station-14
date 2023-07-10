@@ -5,9 +5,9 @@
   description: Более бронированная версия Экзокостюма, позволяет бить террористов в космосе.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKForest/swathardsuitleader.rsi
+    sprite: Andromeda/Clothing/NIKforest/swathardsuitleader.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKForest/swathardsuitleader.rsi
+    sprite: Andromeda/Clothing/NIKforest/swathardsuitleader.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
