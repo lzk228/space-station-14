@@ -69,7 +69,7 @@
         params:
           volume: -1 # Corvax: Reduce sound volume
       disableSelection: true
-      color: Lime
-      emergencyLightColor: Lime
+      color: lime
+      emergencyLightColor: lime
       forceEnableEmergencyLights: true
       shuttleTime: 120000
