@@ -5,9 +5,9 @@
   description: Медицинский экзокостюм СПБсТ, подвержен крайнему облегчению, для прямых спасательных операций.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKForest/swathardsuitmedic.rsi
+    sprite: Andromeda/Clothing/NIKforest/swathardsuitmedic.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKForest/swathardsuitmedic.rsi
+    sprite: Andromeda/Clothing/NIKforest/swathardsuitmedic.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
