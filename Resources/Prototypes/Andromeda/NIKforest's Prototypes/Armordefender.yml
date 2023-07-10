@@ -5,9 +5,9 @@
   description: Очень бронированная тяжёлая броня, но за это пришлось платить весом и скоростью. На спине можно рассмотреть логотип НТ.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKForest/defenderarmor.rsi
+    sprite: Andromeda/Clothing/NIKforest/defenderarmor.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKForest/defenderarmor.rsi
+    sprite: Andromeda/Clothing/NIKforest/defenderarmor.rsi
   - type: Armor
     modifiers:
       coefficients:
