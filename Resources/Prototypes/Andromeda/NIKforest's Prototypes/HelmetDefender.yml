@@ -5,9 +5,9 @@
   description: Очень прочный шлем, нужно быть большим и сильным что-бы надеть его. После этого шлема ваша шея будет долго болеть.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKForest/defenderhelmet.rsi
+    sprite: Andromeda/Clothing/NIKforest/defenderhelmet.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKForest/defenderhelmet.rsi
+    sprite: Andromeda/Clothing/NIKforest/defenderhelmet.rsi
   - type: IngestionBlocker
   - type: Armor
     modifiers:
