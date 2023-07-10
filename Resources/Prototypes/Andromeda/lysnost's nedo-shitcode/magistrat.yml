@@ -1,0 +1,15 @@
+
+- type: startingGear
+  id: MagistrateGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatPwig
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesColorWhite
+    outerClothing: ClothingOuterRobesJudge
+    id: CentcomPDA
+    ears: ClothingHeadsetAltCommand
+    neck: ClothingNeckLawyerbadge
+    pocket1: BookEscalationSecurity
+    pocket2: ClothingNeckNanoTrasenPin
