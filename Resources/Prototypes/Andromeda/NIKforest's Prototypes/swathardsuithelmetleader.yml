@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitSwatLeader
+  noSpawn: true
+  name: шлем экзокостюма лидера СПБсТ
+  description: Защищает СПБсТ от давления, заставляет террористов бежать в страхе.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Andromeda/Clothing/NIKForest/swathardsuithelmetleader.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+    - state: light-overlay
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-head
+      - state: equipped-head-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: blue
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.005
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.75
+        Heat: 0.7
+        Shock: 0.7
+        Cold: 0.7
+        Radiation: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.8

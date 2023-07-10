@@ -1,0 +1,33 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitSwatStandart
+  name: лёгкий экзокостюм СПБсТ
+  description: Лёгкий экзокостюм СПБсТ позволяющий передвигаться и вести боевые действия в космических условиях
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/NIKForest/swathardsuitstandart.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/NIKForest/swathardsuitstandart.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.65
+        Heat: 0.65
+        Cold: 0.65
+        Shock: 0.8
+        Radiation: 0.7
+        Caustic: 0.65
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSwat
