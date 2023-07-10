@@ -5,9 +5,9 @@
   description: С элитных миссий.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKForest/hardsuitcargo.rsi
+    sprite: Andromeda/Clothing/NIKforest/hardsuitcargo.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKForest/hardsuitcargo.rsi
+    sprite: Andromeda/Clothing/NIKforest/hardsuitcargo.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
