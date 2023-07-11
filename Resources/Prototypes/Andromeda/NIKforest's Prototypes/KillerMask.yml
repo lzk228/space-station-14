@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskHockeyKiller
+  name: сломанная хокейная маска
+  description: Ch ch ch, ah ah ah.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/killermask13th.rsi
+  - type: Clothing
+    sprite: /Uploaded/killermask13th.rsi
+  - type: BreathMask
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.70
+        Piercing: 0.40
+        Heat: 0.60
+  - type: EyeProtection
+    protectionTime: 5
