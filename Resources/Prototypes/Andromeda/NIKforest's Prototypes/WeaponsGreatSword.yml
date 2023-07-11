@@ -6,7 +6,7 @@
   components:
   - type: Sharp
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKforest/greatsword.rsi
+    sprite: Andromeda/NIKforest/greatsword.rsi
     state: icon
   - type: MeleeWeapon
     attackRate: 1
@@ -19,7 +19,7 @@
   - type: Item
     size: 50
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKforest/greatsword.rsi
+    sprite: Andromeda/NIKforest/greatsword.rsi
     slots:
     - back
   - type: DisarmMalus
