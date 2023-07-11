@@ -5,9 +5,9 @@
   description: Лёгкий экзокостюм СПБсТ позволяющий передвигаться и вести боевые действия в космических условиях
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/NIKforest/swathardsuitstandart.rsi
+    sprite: Andromeda/NIKforest/swathardsuitstandart.rsi
   - type: Clothing
-    sprite: Andromeda/Clothing/NIKforest/swathardsuitstandart.rsi
+    sprite: Andromeda/NIKforest/swathardsuitstandart.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
