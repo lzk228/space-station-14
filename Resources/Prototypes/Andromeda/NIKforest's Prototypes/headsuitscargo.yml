@@ -6,9 +6,9 @@
   description: Удобный шлем, с оранжевым свечением.
   components:
     - type: Sprite
-      sprite: Andromeda/Clothing/NIKforest/hardsuitscargohelmet.rsi
+      sprite: Andromeda/NIKforest/hardsuitscargohelmet.rsi
     - type: Clothing
-      sprite: Andromeda/Clothing/NIKforest/hardsuitscargohelmet.rsi
+      sprite: Andromeda/NIKforest/hardsuitscargohelmet.rsi
     - type: PointLight
       color: orange
     - type: PressureProtection
