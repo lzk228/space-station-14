@@ -7,7 +7,7 @@
   components:
   - type: Sprite
     netsync: false
-    sprite: Andromeda/Clothing/NIKforest/swathardsuithelmet.rsi
+    sprite: Andromeda/NIKforest/swathardsuithelmet.rsi
     layers:
     - state: icon
     - state: icon-unshaded
