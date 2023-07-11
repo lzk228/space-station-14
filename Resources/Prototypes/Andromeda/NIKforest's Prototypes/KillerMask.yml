@@ -5,9 +5,9 @@
   description: Ch ch ch, ah ah ah.
   components:
   - type: Sprite
-    sprite: /Uploaded/killermask13th.rsi
+    sprite: Andromeda/Clothing/NIKforest/killermask13th.rsi
   - type: Clothing
-    sprite: /Uploaded/killermask13th.rsi
+    sprite: Andromeda/Clothing/NIKforest/killermask13th.rsi
   - type: BreathMask
   - type: Armor
     modifiers:
