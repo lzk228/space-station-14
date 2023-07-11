@@ -5,9 +5,9 @@
   description: Очень противные на ощюпь.
   components:
   - type: Sprite
-    sprite: /Uploaded/killerboots.rsi
+    sprite: Andromeda/NIKforest/killerboots.rsi
   - type: Clothing
-    sprite: /Uploaded/killerboots.rsi
+    sprite: Andromeda/NIKforest/killerboots.rsi
   - type: Storage
     whitelist:
       tags:
