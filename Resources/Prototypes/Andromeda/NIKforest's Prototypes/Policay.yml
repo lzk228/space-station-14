@@ -5,9 +5,9 @@
   description: Специальные перчатки для сотрудников безопасности, имеют встроенный шокер который срабатывает при ударе по цели, на пластине надпись "при задержании хотя-бы одна рука должна быть свободной".
   components:
   - type: Sprite
-    sprite: /Uploaded/securitygloves.rsi
+    sprite: Andromeda/NIKforest/securitygloves.rsi
   - type: Clothing
-    sprite: /Uploaded/securitygloves.rsi
+    sprite: Andromeda/NIKforest/securitygloves.rsi
   - type: GloveHeatResistance
     heatResistance: 1400
   - type: MeleeWeapon
