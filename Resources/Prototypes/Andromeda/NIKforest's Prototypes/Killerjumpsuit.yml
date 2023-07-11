@@ -5,9 +5,9 @@
   description: Ужасно выглядит. Очень старая, порванная одежда.
   components:
   - type: Sprite
-    sprite: /Uploaded/killersuit.rsi
+    sprite: Andromeda/NIKforest/killersuit.rsi
   - type: Clothing
-    sprite: /Uploaded/killersuit.rsi
+    sprite: Andromeda/NIKforest/killersuit.rsi
   - type: Armor
     modifiers:
       coefficients:
