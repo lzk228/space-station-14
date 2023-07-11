@@ -1,2 +1,2 @@
-job-name-iaa = агент внутренних дел
-JobIAA = агент внутренних дел
+job-name-magistrate = Магистрат
+JobMagistrate = Магистрат
