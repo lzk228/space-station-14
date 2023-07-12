@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitCargoElite
+  name: Бронескафандр отдела снабженния
+  description: С элитных миссий.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/hardsuitcargo.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/hardsuitcargo.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.7
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.20
+        Caustic: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCargo

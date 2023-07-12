@@ -1,0 +1,25 @@
+- type: entity
+  name: Великий меч
+  parent: BaseItem
+  id: GreatSword
+  description: Обычно идёт в наборе с рыцарем. А может с ним что-то случилось?
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: Andromeda/NIKforest/greatsword.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 40
+        Structual: 10
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: 50
+  - type: Clothing
+    sprite: Andromeda/NIKforest/greatsword.rsi
+    slots:
+    - back
+  - type: DisarmMalus

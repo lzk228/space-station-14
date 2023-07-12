@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingShoesStorageBase
+  id: ClothingShoesBootsKiller
+  name: старые ботинки
+  description: Очень противные на ощюпь.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/killerboots.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/killerboots.rsi
+  - type: Storage
+    whitelist:
+      tags:
+        - Knife

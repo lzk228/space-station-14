@@ -1,0 +1,33 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitSwatLeader
+  name: экзокостюм лидера СПБсТ
+  description: Более бронированная версия Экзокостюма, позволяет бить террористов в космосе.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/swathardsuitleader.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/swathardsuitleader.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.65
+        Cold: 0.65
+        Shock: 0.65
+        Radiation: 0.65
+        Caustic: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSwatLeader

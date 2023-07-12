@@ -1,0 +1,24 @@
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitCargo
+  noSpawn: true
+  name: Шлем от скафандра отдела снабженния
+  description: Удобный шлем, с оранжевым свечением.
+  components:
+    - type: Sprite
+      sprite: Andromeda/NIKforest/hardsuitscargohelmet.rsi
+    - type: Clothing
+      sprite: Andromeda/NIKforest/hardsuitscargohelmet.rsi
+    - type: PointLight
+      color: orange
+    - type: PressureProtection
+      highPressureMultiplier: 0.08
+      lowPressureMultiplier: 1000
+    - type: Armor
+      modifiers:
+        coefficients:
+          Blunt: 0.9
+          Slash: 0.9
+          Piercing: 0.9
+          Heat: 0.9
+          Radiation: 0.5

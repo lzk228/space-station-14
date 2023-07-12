@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterDefenderArmor
+  name: Тяжёлая броня рыцаря
+  description: Очень бронированная тяжёлая броня, но за это пришлось платить весом и скоростью. На спине можно рассмотреть логотип НТ.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/defenderarmor.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/defenderarmor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.2
+        Slash: 0.1
+        Piercing: 0.1
+        poison: 0.1
+  - type: ClothingSpeedModifier
+    walkModifier: 0.4
+    sprintModifier: 0.8
+  - type: GroupExamine

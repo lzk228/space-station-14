@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitSwatMedic
+  noSpawn: true
+  name: шлем экзокостюма медика СПБсТ
+  description: Защищает СПБсТ от давления, позволяет легче спасать своих товарищей
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Andromeda/NIKforest/swathardsuithelmetmedic.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+    - state: light-overlay
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-head
+      - state: equipped-head-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: blue
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.005
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.9
+        Shock: 0.8
+        Cold: 0.8
+        Radiation: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
