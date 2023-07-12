@@ -242,7 +242,7 @@
   - type: Construction
     graph: Muzzle
     node: muzzle
-    - type: IdentityBlocker
+  - type: IdentityBlocker
 
 - type: entity
   parent: ClothingMaskPullableBase

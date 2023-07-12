@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtGoldCaptain
+  name: Золотой капитанский юбка-комбинезон
+  description: Выдаётся почётным и опытным членам экипажа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/goldcaptainjumpskirt.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/goldcaptainjumpskirt.rsi

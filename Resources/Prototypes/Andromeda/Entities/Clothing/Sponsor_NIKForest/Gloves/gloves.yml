@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesGoldCaptain
+  name: Золотые перчатки капитана
+  description: Выдаются почётным и опытным членам экипажа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Hands/Gloves/goldcaptaingloves.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Hands/Gloves/goldcaptaingloves.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-regal-blue
+  - type: FingerprintMask

@@ -1,3 +1,7 @@
 ﻿- type: lobbyBackground
   id: ClownRewokin
   background: /Textures/Andromeda/LobbyScreens/clown-rewokin.png
+
+- type: lobbyBackground
+  id: CMONiana
+  background: /Textures/Andromeda/LobbyScreens/cmo_niana.png

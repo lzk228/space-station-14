@@ -2,3 +2,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "By Rewokin for Andromeda-13"
   source: "https://github.com/13lackHawk/space-station-14"
+
+- files: ["cmo-niana.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "By Naik21 for Andromeda-13"
+  source: "https://github.com/13lackHawk/space-station-14"

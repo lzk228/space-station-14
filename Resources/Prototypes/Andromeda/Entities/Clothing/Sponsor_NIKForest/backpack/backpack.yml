@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackKingStation
+  name: Рюкзак гопника
+  description: Скорее всего тут раньше было много украденного, до прихода в бриг.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Backpacks/kingstationbackpack.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackGoldCaptain
+  name: Золотой капитанский рюкзак
+  description: Выдаётся почётным и опытным членам экипажа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Backpacks/goldcaptainbackpack.rsi

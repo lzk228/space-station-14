@@ -363,25 +363,61 @@
 
 #NIKForest
 - type: loadout
-  id: ClothingHandsGlovesColorBlackLoadout2
-  entity: ClothingHandsGlovesColorBlack
+  id: ClothingOuterArmorGoldCaptainCarapaceLoadout
+  entity: ClothingOuterArmorGoldCaptainCarapace
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
 
 - type: loadout
-  id: ClothingShoesBootsJackLoadout
-  entity: ClothingShoesBootsJack
+  id: ClothingBackpackGoldCaptainLoadout
+  entity: ClothingBackpackGoldCaptain
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
 
 - type: loadout
-  id: ClothingHeadHatOutlawHatLoadout
-  entity: ClothingHeadHatOutlawHat
+  id: ClothingShoesColorGoldBlackLoadout
+  entity: ClothingShoesColorGoldBlack
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
 
 - type: loadout
-  id: ClothingOuterCoatJensenLoadout2
-  entity: ClothingOuterCoatJensen
+  id: ClothingHandsGlovesGoldCaptainLoadout
+  entity: ClothingUniformJumpsuitUSSPBlack
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingHeadHatGoldCaptainLoadout
+  entity: ClothingHeadHatGoldCaptain
+  sponsorOnly: true
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingUniformJumpskirtGoldCaptainLoadout
+  entity: ClothingUniformJumpskirtGoldCaptain
+  sponsorOnly: true
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingUniformJumpsuitGoldCaptainLoadout
+  entity: ClothingUniformJumpsuitGoldCaptain
+  sponsorOnly: true
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingUniformJumpsuitKingStationLoadout
+  entity: ClothingUniformJumpsuitKingStation
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingBackpackKingStationLoadout
+  entity: ClothingBackpackKingStation
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingHeadHatKingStationLoadout
+  entity: ClothingHeadHatKingStation
+  sponsorOnly: true
+  whitelistJobs: [Passenger]

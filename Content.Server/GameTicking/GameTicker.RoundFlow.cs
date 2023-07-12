@@ -20,12 +20,16 @@ using System.Linq;
 using Content.Shared.Database;
 using Robust.Shared.Asynchronous;
 using PlayerData = Content.Server.Players.PlayerData;
+using Content.Server.Voting.Managers;
+using Content.Shared.Voting;
+using Content.Shared.CCVar;
 
 namespace Content.Server.GameTicking
 {
     public sealed partial class GameTicker
     {
         [Dependency] private readonly ITaskManager _taskManager = default!;
+        [Dependency] private readonly IVoteManager _voteManager = default!;
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -396,6 +400,11 @@ namespace Content.Server.GameTicking
 
                 SendStatusToAll();
                 UpdateInfoText();
+
+                if (_configurationManager.GetCVar(CCVars.GameAutoMapVote))
+                {
+                    _voteManager.CreateStandardVote(null, StandardVoteType.Map);
+                }
 
                 ReqWindowAttentionAll();
             }
