@@ -1,2 +1,2 @@
-job-name-magistrate = Магистрат
-JobMagistrate = Магистрат
+job-name-magistrate = магистрат
+JobMagistrate = магистрат
