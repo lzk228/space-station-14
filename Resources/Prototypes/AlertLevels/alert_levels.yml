@@ -53,7 +53,7 @@
       announcement: alert-level-epsilon-announcement
       selectable: false
       sound:
-        path: /Audio/Andromeda/pepsilon.ogg
+        path: /Audio/Misc/epsilon.ogg
         params:
           volume: -2
       disableSelection: true
