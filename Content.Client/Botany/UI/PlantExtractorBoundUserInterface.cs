@@ -12,11 +12,13 @@ namespace Content.Client.Botany.UI
     [UsedImplicitly]
     public sealed class PlantExtractorBoundUserInterface : BoundUserInterface
     {
-        [Dependency] private readonly IEntityManager _entityManager = default!;
+        //[Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+
+        [ViewVariables]
         private PlantExtractorWindow? _window;
 
-        public PlantExtractorBoundUserInterface(ClientUserInterfaceComponent owner, Enum uiKey) : base(owner, uiKey)
+        public PlantExtractorBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
 
         }
@@ -25,7 +27,7 @@ namespace Content.Client.Botany.UI
         {
             base.Open();
 
-            _window = new PlantExtractorWindow(this, _entityManager, _prototypeManager);
+            _window = new PlantExtractorWindow(this, EntMan, _prototypeManager);
             _window.OpenCentered();
             _window.OnClose += Close;
         }
@@ -44,10 +46,8 @@ namespace Content.Client.Botany.UI
         protected override void UpdateState(BoundUserInterfaceState state)
         {
             base.UpdateState(state);
-            if (!(state is PlantExtractorBoundUserInterfaceState cState))
-            {
+            if (state is not PlantExtractorBoundUserInterfaceState cState)
                 return;
-            }
 
             _window?.UpdateState(cState);
         }
@@ -58,6 +58,8 @@ namespace Content.Client.Botany.UI
             _window?.HandleMessage(message);
         }
 
+        // Make Tehnox's shit cleaner someday
+        // https://github.com/space-syndicate/space-station-14/commit/3ac4cf85db02c9db8196bf126ea9fc1c25a082b3
         public void StartExtracting(BaseButton.ButtonEventArgs? args = null) => SendMessage(new PlantExtractorStartMessage());
         public void EjectAll(BaseButton.ButtonEventArgs? args = null) => SendMessage(new PlantExtractorEjectChamberAllMessage());
         public void EjectBeaker(BaseButton.ButtonEventArgs? args = null) =>

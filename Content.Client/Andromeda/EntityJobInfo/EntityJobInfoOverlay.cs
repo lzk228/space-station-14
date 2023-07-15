@@ -9,6 +9,7 @@ using Robust.Shared.Utility;
 using Content.Shared.Access.Components;
 using Content.Shared.Roles;
 using System.Diagnostics.CodeAnalysis;
+using System.Numerics;
 
 namespace Content.Client.Andromeda.EntityJobInfo;
 
