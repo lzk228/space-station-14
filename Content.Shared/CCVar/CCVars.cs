@@ -286,6 +286,12 @@ namespace Content.Shared.CCVar
             CVarDef.Create("game.local_status_icons_enabled", true, CVar.CLIENTONLY);
 
         /// <summary>
+        /// Whether or not coordinates on the Debug overlay should only be available to admins.
+        /// </summary>
+        public static readonly CVarDef<bool> DebugCoordinatesAdminOnly =
+            CVarDef.Create("game.debug_coordinates_admin_only", true, CVar.SERVER | CVar.REPLICATED);
+
+        /// <summary>
         ///     Controls if lobby has an automatic map vote.
         /// </summary>
         public static readonly CVarDef<bool>
