@@ -1,0 +1,80 @@
+- type: reagent
+  id: Aphrodisiac
+  name: Афродизиак
+  desc: Афродизиак
+  physicalDesc: ароматное
+  color: "#FF1493"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:AdjustReagent
+        reagent: Aphrodisiac
+        amount: 0.45
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          max: 0.5
+        reagent: Aphrodisiac
+        amount: -1
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          max: 30
+        visualType: Medium
+        messages: ["Ваши ноги слегка косятся", "Ваши мысли путаются", "Вы чувствуете лёгкий дискомфорт между ног", "Вы чувствуете себя немного возбужденным"]
+        probability: 0.25
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          min: 30
+          max: 60
+        visualType: Medium
+        messages: ["вам тяжело стоять на ногах...", "У вас похотливые мысли!", "Вы чувствуете дискомфорт между ног!", "Вы чувствуете себя сильно возбужденным!"]
+        probability: 0.25
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          min: 60
+          max: 80
+        visualType: Large
+        messages: ["Ваши ноги не держат вас!", "Вы не можете думать не о чем кроме секса!", "Вы чувствуете сильный дискомфорт между ног!", "Вы чувствуете себя очень возбужденным!"]
+        probability: 0.25
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          min: 80
+        visualType: Large
+        messages: ["Вы очень хотите секса!", "Вы не можете терпеть...", "Вы не можете себя контролировать!"]
+        probability: 0.25
+      - !type:PopupMessage
+        type: Pvs
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          min: 80
+        visualType: Medium
+        messages: ["Его(Её) половые органы сильно возбуждены", "Трясётся от возбуждения", "Выглядит возбуждённым(нной)"]
+        probability: 0.3
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          min: 80
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Aphrodisiac
+          min: 80
+        key: Forceddead
+        component: ForcedSleeping
+        refresh: false
+        type: Add
