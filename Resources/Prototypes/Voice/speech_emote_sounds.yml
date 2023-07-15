@@ -176,6 +176,16 @@
       collection: FelinidScreams
     Laugh:
       collection: FemaleLaugh
+    Hiss:
+      collection: FelinidHisses
+    Meow:
+      collection: FelinidMeows
+    Mew:
+      collection: FelinidMews
+    Growl:
+      collection: FelinidGrowls
+    Purr:
+      collection: FelinidPurrs
 
 - type: emoteSounds
   id: MaleFelinid
@@ -186,6 +196,36 @@
       collection: FelinidScreams
     Laugh:
       collection: MaleLaugh
+    Hiss:
+      collection: FelinidHisses
+    Meow:
+      collection: FelinidMeows
+    Mew:
+      collection: FelinidMews
+    Growl:
+      collection: FelinidGrowls
+    Purr:
+      collection: FelinidPurrs
+
+- type: emoteSounds
+  id: MaleVulpkanin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
+    Laugh:
+      collection: MaleLaugh
+
+- type: emoteSounds
+  id: FemaleVulpkanin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
+    Laugh:
+      collection: FemaleLaugh
 
 - type: emoteSounds
   id: UnisexVox

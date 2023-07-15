@@ -51,17 +51,18 @@
     minimumPlayers: 15
   - type: BreakerFlipRule
 
-- type: entity
-  id: BureaucraticError
-  parent: BaseGameRule
-  noSpawn: true
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-bureaucratic-error-announcement
-    minimumPlayers: 25
-    weight: 5
-    duration: 1
-  - type: BureaucraticErrorRule
+# honestly it is dogshit
+#- type: entity
+#  id: BureaucraticError
+#  parent: BaseGameRule
+#  noSpawn: true
+#  components:
+#  - type: StationEvent
+#    startAnnouncement: station-event-bureaucratic-error-announcement
+#    minimumPlayers: 25
+#    weight: 5
+#    duration: 1
+#  - type: BureaucraticErrorRule
 
 - type: entity
   id: Dragon
@@ -154,6 +155,7 @@
     duration: null #ending is handled by MeteorSwarmRule
     startDelay: 30
   - type: MeteorSwarmRule
+
 
 - type: entity
   id: MouseMigration
@@ -328,7 +330,7 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 50
+    earliestStart: 120
     weight: 2.5
     duration: 1
   - type: ZombieRule

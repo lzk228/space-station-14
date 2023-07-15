@@ -6,7 +6,8 @@
         - id: MoveToCombatTargetPrimitive
         - id: EatPrimitive
         - id: WaitIdleTimePrimitive
-
+      preconditions:                  # Andromeda HungerPrecondition System
+        - !type:HungerPrecondition
 
 - type: htnPrimitive
   id: PickFoodTargetPrimitive

@@ -8,6 +8,10 @@
     sprite: Clothing/Eyes/Hud/diag.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/diag.rsi
+  - type: ClothingGrantComponent  # Andromeda HUD System Start
+    component:
+    - type: ShowHealthBars
+      damageContainer: Inorganic  # Andromeda HUD System End
 
 - type: entity
   parent: ClothingEyesBase
@@ -19,6 +23,10 @@
     sprite: Clothing/Eyes/Hud/med.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/med.rsi
+  - type: ClothingGrantComponent  # Andromeda HUD System Start
+    component:
+    - type: ShowHealthBars
+      damageContainer: Biological # Andromeda HUD System End
 
 - type: entity
   parent: ClothingEyesBase
@@ -30,3 +38,6 @@
     sprite: Clothing/Eyes/Hud/sec.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/sec.rsi
+  - type: ClothingGrantComponent # Andromeda HUD System Start
+    component:
+    - type: ShowJobInfo # Andromeda HUD System End
