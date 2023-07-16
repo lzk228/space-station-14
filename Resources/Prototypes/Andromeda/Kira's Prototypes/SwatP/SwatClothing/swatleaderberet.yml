@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretLeaderSwat
+  name: берет лидера спецназа
+  description: Вдвойне элитный и чёрный берет спецназа, обозначающий ветеранство, профессионализм а так же командование
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Head/Hats/swatleaderberet.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Head/Hats/swatleaderberet.rsi

@@ -1,0 +1,17 @@
+- type: entity
+  prefix: Заполненный
+  noSpawn: false
+  parent: ClothingBeltSwatWedding
+  id: ClothingBeltSwatWeddingFilled
+  components:
+  - type:  StorageFill
+    contents:
+      - id: WeaponPistolMk58
+      - id: MagazinePistol
+      - id: MagazinePistol
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineLightRifleRubber
+      - id: MagazineLightRifleRubber
+      - id: Stunbaton
+      - id: Handcuffs

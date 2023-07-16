@@ -1,0 +1,17 @@
+- type: entity
+  name: медипен спецназа
+  parent: ChemicalMedipen
+  id: MedipenSwat
+  description: Специальный медипен для спецназа, содержит не содержит ничего, излучает безысходность
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+  - type: Tag
+    tags: []

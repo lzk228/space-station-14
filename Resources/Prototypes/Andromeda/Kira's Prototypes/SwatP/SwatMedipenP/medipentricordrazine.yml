@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен трикордразина
+  parent: ChemicalMedipen
+  id: MedipenTricordrazine
+  description: Специальный медипен для спецназа, содержит трикордразин, стимулятор широкого действия
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenTricordrazine
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Tricordrazine
+          Quantity: 15
+  - type: Tag
+    tags: []

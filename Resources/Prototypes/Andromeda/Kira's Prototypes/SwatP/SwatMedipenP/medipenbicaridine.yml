@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен бикаридина
+  parent: ChemicalMedipen
+  id: MedipenBicaridine
+  description: Специальный медипен для спецназа, содержит бикаридин, лечит от механических травм
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenBicaridine
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 10
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 10
+  - type: Tag
+    tags: []

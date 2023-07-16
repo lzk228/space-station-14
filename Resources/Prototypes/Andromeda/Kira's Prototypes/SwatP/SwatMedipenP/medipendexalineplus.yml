@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен дексалина+
+  parent: ChemicalMedipen
+  id: MedipenDexalinePlus
+  description: Специальный медипен для спецназа, содержит дексалин плюс, лечит удушение
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenDexalinPlus
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: DexalinPlus
+          Quantity: 15
+  - type: Tag
+    tags: []

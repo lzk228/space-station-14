@@ -1,0 +1,27 @@
+- type: entity
+  parent: Clothing
+  id: ClothingBackpackSwatMedicSatchel
+  name: сумка медика спецназа
+  description: Удобная и максимально компактная сумка медика спецназа, которая способна вместить море медикаментов.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Satchels/swatmedicsatchelbag.rsi
+    state: icon
+  - type: Item
+    size: 9999
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    capacity: 195
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
