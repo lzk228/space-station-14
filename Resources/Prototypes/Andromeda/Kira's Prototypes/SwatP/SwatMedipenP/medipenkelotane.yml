@@ -12,9 +12,9 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 15
+        maxVol: 20
         reagents:
         - ReagentId: Kelotane
-          Quantity: 15
+          Quantity: 20
   - type: Tag
     tags: []
