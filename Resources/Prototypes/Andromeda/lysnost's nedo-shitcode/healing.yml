@@ -1,0 +1,12 @@
+- type: entity
+  name: Афродизиак
+  parent: Pill
+  id: PillAphrodisiac
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Aphrodisiac
+          Quantity: 15
