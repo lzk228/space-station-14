@@ -5,6 +5,8 @@
   id: DrinkBase
   abstract: true
   components:
+  - type: Item
+    size: 15
   - type: SolutionContainerManager
     solutions:
       drink:
