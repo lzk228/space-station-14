@@ -3,6 +3,8 @@
   id: DrinkBottleBaseFull
   abstract: true
   components:
+  - type: Item
+    size: 30
   - type: Drink
     openSounds:
       collection: bottleOpenSounds
