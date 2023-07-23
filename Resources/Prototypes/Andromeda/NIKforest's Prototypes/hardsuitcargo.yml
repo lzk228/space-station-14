@@ -19,10 +19,10 @@
       coefficients:
         Blunt: 0.8
         Slash: 0.7
-        Piercing: 0.5
-        Heat: 0.5
+        Piercing: 0.8
+        Heat: 0.7
         Radiation: 0.20
-        Caustic: 0.75
+        Caustic: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.8
   - type: ToggleableClothing
