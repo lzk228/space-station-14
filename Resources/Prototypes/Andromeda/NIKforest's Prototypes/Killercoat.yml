@@ -5,9 +5,9 @@
   description: Мама любит тебя, Джейсон. Накажи их всех.
   components:
   - type: Sprite
-    sprite: /Uploaded/killercoat13th.rsi
+    sprite: Andromeda/NIKforest/killercoat13th.rsi
   - type: Clothing
-    sprite: /Uploaded/killercoat13th.rsi
+    sprite: Andromeda/NIKforest/killercoat13th.rsi
   - type: Item
     size: 15
   - type: Storage
