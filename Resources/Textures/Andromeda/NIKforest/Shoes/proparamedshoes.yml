@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesParamedPro
+  name: спортивные ботинки парамедика
+  description: Очень удобные. Её особая ткань способна подстраиваться на ноги носителя и даёт немного сил.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/proshoesparamed.rsi
+  - type: Clothing
+    sprite: /Uploaded/proshoesparamed.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
