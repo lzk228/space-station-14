@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesSwat
+  name: перчатки спецназа
+  description: Тактические перчатки спецназа, способные защитить от неприятности по типу электричества.
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/swatgloves.rsi
+  - type: Clothing
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/swatgloves.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-black
+  - type: FingerprintMask
