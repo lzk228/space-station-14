@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSummerFitnes
+  name: Фитнес костюм
+  description: Летний костюм для жаркой атмосферы, а также для фитнеса.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/summerfitnes.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/summerfitnes.rsi
