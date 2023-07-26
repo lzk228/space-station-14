@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackSheriff
+  name: рюкзак шерифа
+  description: Кожаный, удобный, вместительный.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/SheriffBackpack.rsi

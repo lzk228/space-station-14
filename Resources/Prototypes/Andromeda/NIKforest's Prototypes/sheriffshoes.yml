@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesColorSheriff
+  name: сапоги шерифа
+  description: Их исторически носят североамериканские пастухи-ковбои..
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/sheriffshoes.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/sheriffshoes.rsi

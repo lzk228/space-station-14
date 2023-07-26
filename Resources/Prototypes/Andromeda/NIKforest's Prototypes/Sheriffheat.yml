@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSheriff
+  name: шляпа шерифа
+  description: Обычная шляпа, но шерифа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/sheriffheat.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/sheriffheat.rsi

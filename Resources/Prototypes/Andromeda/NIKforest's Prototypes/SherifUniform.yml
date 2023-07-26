@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSheriff
+  name: комбинезон шерифа
+  description: Старый костюм стражей порядка дикого запада.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/sherifform.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/sherifform.rsi
