@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatEmeraldTrench
+  name: аккуратный изумрудный тренч
+  description: Выглядит потёртым в нескольких местах. Носят его только истинные любители красивых костюмов.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/elemeraldtrench.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/elemeraldtrench.rsi
+  - type: Item
+    size: 10
+  - type: Storage
+    capacity: 10
+      
+        
