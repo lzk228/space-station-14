@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltSwatMedicWedding
+  name: РПС медика спецназа
+  description: Увеличенная в обьеме разгрузочно поясная система, для Медиков Спецназа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Belt/Wedding/swatmedicwedding.rsi
+  - type: Clothing
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Belt/Wedding/swatmedicwedding.rsi
+  - type: Storage
+    capacity: 70
