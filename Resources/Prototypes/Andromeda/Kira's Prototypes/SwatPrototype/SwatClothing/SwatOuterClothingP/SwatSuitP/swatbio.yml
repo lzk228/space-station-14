@@ -15,6 +15,6 @@
         Slash: 0.8
         Piercing: 0.7
         Heat: 0.75
-        Caustic: 0.4
+        Caustic: 0.3
   - type: ExplosionResistance
     damageCoefficient: 0.8

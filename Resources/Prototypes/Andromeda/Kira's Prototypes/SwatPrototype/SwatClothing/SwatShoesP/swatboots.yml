@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesSwatBoots
-  name: ботинки спецназа
+  name: лёгкие ботинки спецназа
   description: Лёгкие и удобные ботинки спецназа, позволяют свободно передвигаться... по крайней мере по поверхности.
   components:
   - type: Sprite
