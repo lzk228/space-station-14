@@ -10,7 +10,7 @@
       - id: WeaponDisabler
       - id: Crowbar
       - id: MedkitCombatSwatFilled
-      - id: MagazineBoxLightRifle
+      - id: MedkitCombatSwatFilled
       - id: MagazineBoxLightRifle
       - id: MagazineBoxPistol
       - id: Flare

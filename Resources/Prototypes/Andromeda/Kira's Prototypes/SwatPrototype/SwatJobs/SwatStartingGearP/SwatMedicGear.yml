@@ -11,7 +11,7 @@
     outerClothing: ClothingOuterVestSwat
     id: SwatMedicPDA
     ears: ClothingHeadsetSwat
-    belt: ClothingBeltSwatWeddingFilled
+    belt: ClothingBeltSwatMedicWeddingFilled
     pocket1: ClothingHeadHelmetHeavySwat
     pocket2: WeaponFlareGun
   innerclothingskirt: ClothingUniformJumpskirtMedicSwat
