@@ -6,9 +6,9 @@
   description: Лёгкий шлем для парамедика, встроен в скафандр.
   components:
   - type: Sprite
-    sprite: /Uploaded/proparamedichel.rsi
+    sprite: Andromeda/NIKforest/proparamedichel.rsi
   - type: Clothing
-    sprite: /Uploaded/proparamedichel.rsi
+    sprite: Andromeda/NIKforest/proparamedichel.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
