@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatTraderCoat
+  name: пальто торговца
+  description: С маленькой сумочкой.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/tradercoat.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/tradercoat.rsi
+  - type: Item
+    size: 15
+  - type: Storage
+    capacity: 15
+      
+        
