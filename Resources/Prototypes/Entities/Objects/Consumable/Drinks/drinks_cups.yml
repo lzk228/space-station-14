@@ -5,8 +5,6 @@
   name: base cup
   abstract: true
   components:
-  - type: Item
-    size: 10
   - type: SolutionContainerManager
     solutions:
       drink:
