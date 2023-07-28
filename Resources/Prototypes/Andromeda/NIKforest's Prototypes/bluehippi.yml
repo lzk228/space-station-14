@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHippiBlue
+  name: синий костюм хиппи
+  description: Держи себя в руках, даже когда избивают.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/hippiblue.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/hippiblue.rsi

@@ -1,0 +1,14 @@
+- type: startingGear
+  id: ProParamedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitProParamed
+    back: ClothingBackpackParamedProFilled
+    shoes: ClothingShoesParamedPro
+    gloves: ClothingHandsGlovesCombatParamed
+    id: ParamedicPDA
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltProParamedicFilled
+    outerClothing: ClothingOuterHardsuitProParamed
+  innerclothingskirt: ClothingUniformJumpsuitProParamed
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled

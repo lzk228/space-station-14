@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackParamedPro
+  name: рюкзак парамедика
+  description: Удобный и яркий рюкзак.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/paramedbackpack.rsi

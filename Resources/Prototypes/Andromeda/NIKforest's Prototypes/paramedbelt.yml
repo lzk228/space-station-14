@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingBeltMedical
+  id: ClothingBeltMedicalParamedic
+  name: пояс парамедика
+  description: Резиновый. Ничего особенного.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/paramedicbelt.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/paramedicbelt.rsi

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSlavaVDV
+  name: тельняшка
+  description: За ВДВ. Прокричал дед и сбросился с крыши.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/slavavdv.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/slavavdv.rsi

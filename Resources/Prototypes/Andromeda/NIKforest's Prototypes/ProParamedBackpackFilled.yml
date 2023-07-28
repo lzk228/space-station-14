@@ -1,0 +1,10 @@
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackParamedPro
+  id: ClothingBackpackParamedProFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: HandheldCrewMonitor
+      - id: Defibrillator
+      - id: RollerBed

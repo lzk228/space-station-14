@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCombatParamed
+  name: боевый перчатки парамедика
+  description: Созданы для парамедиков профессионалов для самообороны и защиты экипажа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/combatparamed.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/combatparamed.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-latex
+  - type: FingerprintMask

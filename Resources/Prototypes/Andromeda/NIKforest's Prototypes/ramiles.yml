@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpSkirtFemaleTop
+  name: Женский летний топ
+  description: Подойдёт для пляжного отдыха.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/femaletop.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/femaletop.rsi

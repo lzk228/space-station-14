@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitProParamed
+  name: комбинезон профиссионального парамедика
+  description: Удобный комбинезон для бега. Удаляет пот.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/proparamedform.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/proparamedform.rsi
