@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesSwatBoots
+  name: лёгкие ботинки спецназа
+  description: Лёгкие и удобные ботинки спецназа, позволяют свободно передвигаться... по крайней мере по поверхности.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Shoes/swatboots.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Shoes/swatboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05

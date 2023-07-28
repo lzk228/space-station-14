@@ -1,0 +1,53 @@
+## SPBsT Standart
+
+- type: entity
+  id: RandomHumanoidSpawnerSwatStandart
+  name: Оперативник СПБсТ
+  components:
+    - type: Sprite
+      sprite: Andromeda/MissKira/Markers/jobs.rsi
+      state: SwatStandart
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstPoliceSwat
+      - NamesLastPSWCallsign
+    - type: RandomHumanoidSpawner
+      settings: SwatStandartSettings
+
+- type: randomHumanoidSettings
+  id: SwatStandartSettings
+  randomizeName: false
+  components:
+    - type: GhostRole
+      name: Оперативник СПБсТ
+      description: Вы - Элитный Боец спецназа НаноТразен, оперативник отряда СПБсТ.
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ SwatStandartGear ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstPoliceSwatLeader
+      - NamesLastPSWCallsign
+
+- type: entity
+  id: RandomHumanoidSpawnerSwatStandartEVA
+  parent: RandomHumanoidSpawnerSwatStandart
+  name: Оперативник СПБсТ
+  suffix: EVA
+  components:
+    - type: Sprite
+      sprite: Andromeda/MissKira/Markers/jobs.rsi
+      state: SwatStandartEVA
+    - type: RandomHumanoidSpawner
+      settings: SwatStandartEVASettings
+
+- type: randomHumanoidSettings
+  id: SwatStandartEVASettings
+  parent: SwatStandartSettings
+  components:
+    - type: GhostRole
+      name: Оперативник СПБсТ
+      description: Вы - Элитный Боец спецназа НаноТразен, оперативник отряда СПБсТ.
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ SwatStandartGearEVA ]

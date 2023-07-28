@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен сигината
+  parent: ChemicalMedipen
+  id: MedipenSigynate
+  description: Специальный медипен для спецназа, содержит сигинат, лечит кислотные повреждения
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenSigynate
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 8
+        reagents:
+        - ReagentId: Sigynate
+          Quantity: 8
+  - type: Tag
+    tags: []

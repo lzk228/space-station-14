@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: ClothingHeadHatCapSwatFlipped
+  name: кепка спецназа перевернутая
+  description: "Это просто кепка с знаменем спецназа. Перевернутая"
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Head/Soft/swatcap_flipped.rsi
+  - type: Clothing
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Head/Soft/swatcap_flipped.rsi
+

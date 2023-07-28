@@ -1,0 +1,53 @@
+## SPBsT Medic
+
+- type: entity
+  id: RandomHumanoidSpawnerSwatMedic
+  name: Медик СПБсТ
+  components:
+    - type: Sprite
+      sprite: Andromeda/MissKira/Markers/jobs.rsi
+      state: SwatMedic
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstPoliceSwatLeader
+      - NamesLastPSWCallsign
+    - type: RandomHumanoidSpawner
+      settings: SwatMedicSettings
+
+- type: randomHumanoidSettings
+  id: SwatMedicSettings
+  randomizeName: false
+  components:
+    - type: GhostRole
+      name: Медик СПБсТ
+      description: Вы - Элитный Боец спецназа НаноТразен, медик отряда СПБсТ.
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ SwatMedicGear ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstPoliceSwatLeader
+      - NamesLastPSWCallsign
+
+- type: entity
+  id: RandomHumanoidSpawnerSwatMedicEVA
+  parent: RandomHumanoidSpawnerSwatMedic
+  name: Медик СПБсТ
+  suffix: EVA
+  components:
+    - type: Sprite
+      sprite: Andromeda/MissKira/Markers/jobs.rsi
+      state: SwatMedicEVA
+    - type: RandomHumanoidSpawner
+      settings: SwatMedicEVASettings
+
+- type: randomHumanoidSettings
+  id: SwatMedicEVASettings
+  parent: SwatMedicSettings
+  components:
+    - type: GhostRole
+      name: Медик СПБсТ
+      description: Вы - Элитный Боец спецназа НаноТразен, медик отряда СПБсТ.
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ SwatMedicGearEVA ]

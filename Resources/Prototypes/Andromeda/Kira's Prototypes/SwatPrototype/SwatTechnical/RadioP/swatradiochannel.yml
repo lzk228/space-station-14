@@ -1,0 +1,7 @@
+- type: radioChannel
+  id: SPBsT
+  name: СПБсТ
+  keycode: 's'
+  frequency: 1802
+  color: '#00677e'
+  longRange: true

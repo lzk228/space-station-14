@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен транексамовой кислоты
+  parent: ChemicalMedipen
+  id: MedipenTranexamicAcid
+  description: Специальный медипен для спецназа, содержит транексамовую кислоту, останавливает кровотечение
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenTranexamicAcid
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 7
+        reagents:
+        - ReagentId: TranexamicAcid
+          Quantity: 7
+  - type: Tag
+    tags: []

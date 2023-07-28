@@ -1,0 +1,17 @@
+- type: entity
+  noSpawn: false
+  parent: ClothingBackpackSwatDuffel
+  id: ClothingBackpackSwatMedicDuffelFilled
+  suffix: Заполненный
+  components:
+  - type:  StorageFill
+    contents:
+      - id: WeaponRifleM4
+      - id: WeaponDisabler
+      - id: Crowbar
+      - id: MedkitCombatSwatFilled
+      - id: MedkitCombatSwatFilled
+      - id: MagazineBoxLightRifle
+      - id: MagazineBoxPistol
+      - id: Flare
+      - id: Flash

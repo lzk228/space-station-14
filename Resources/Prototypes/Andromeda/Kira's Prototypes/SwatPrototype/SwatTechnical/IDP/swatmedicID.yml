@@ -1,0 +1,16 @@
+- type: entity
+  parent: CentcomIDCard
+  id: SwatMedicIDCard
+  name: СПБСТ Медик ID Карта
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: swat_medicID
+  - type: Item
+    heldPrefix: gold
+  - type: IdCard
+    jobTitle: Медик СПБсТ
+  - type: Access
+    groups:
+    - AllAccess

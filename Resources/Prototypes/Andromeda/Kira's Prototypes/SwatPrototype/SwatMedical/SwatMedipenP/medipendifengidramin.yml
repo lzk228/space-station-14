@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен дифенгидрамина
+  parent: ChemicalMedipen
+  id: MedipenDifengidramin
+  description: Специальный медипен для спецназа, содержит Дифенгидрамин, успокаивает и лечит отравление
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenDifengidramin
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Diphenhydramine
+          Quantity: 15
+  - type: Tag
+    tags: []
