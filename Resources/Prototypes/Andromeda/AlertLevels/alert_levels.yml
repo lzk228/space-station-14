@@ -2,7 +2,7 @@
       announcement: alert-level-alpha-announcement
       selectable: false
       sound:
-        path: /Audio/Misc/siren.ogg
+        path: /Audio/Corvax/StationEvents/level.ogg
         params:
           volume: -1 # Corvax: Reduce sound volume
       disableSelection: true
