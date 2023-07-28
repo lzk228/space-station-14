@@ -9,6 +9,8 @@ using Robust.Shared.Enums;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using PlayerData = Content.Server.Players.PlayerData;
+//using Robust.Shared.Audio;  // Andromeda new player join bwoink [WIP]
+
 
 namespace Content.Server.GameTicking
 {
@@ -17,6 +19,7 @@ namespace Content.Server.GameTicking
     {
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
+        //[Dependency] private readonly SharedAudioSystem _audio = default!; // Andromeda new player join bwoink [WIP]
 
         private void InitializePlayer()
         {
@@ -62,6 +65,8 @@ namespace Content.Server.GameTicking
                     _chatManager.SendAdminAnnouncement(firstConnection
                         ? Loc.GetString("player-first-join-message", ("name", args.Session.Name))
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
+
+                     //_audio.PlayGlobal("/Audio/Misc/delta_alt.ogg", Filter.Local(), true, AudioParams.Default.WithVolume(-2f)); // Andromeda new player join bwoink [WIP]
 
                     if (LobbyEnabled && _roundStartCountdownHasNotStartedYetDueToNoPlayers)
                     {

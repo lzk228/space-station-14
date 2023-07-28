@@ -1,6 +1,7 @@
 # Devices which are not portable but don't link up to anything
 - type: entity
   id: AtmosDeviceFanTiny
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: tiny fan
   description: A tiny fan, releasing a thin gust of air.
   placement:
@@ -32,11 +33,3 @@
     - trigger:
         !type:DamageTrigger
         damage: 100
-      behaviors:
-      - !type:ChangeConstructionNodeBehavior
-        node: machineFrame
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Construction
-    graph: Machine
-    node: machine

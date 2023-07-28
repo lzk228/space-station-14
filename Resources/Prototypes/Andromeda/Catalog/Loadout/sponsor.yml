@@ -243,11 +243,6 @@
   sponsorOnly: true
 
 - type: loadout
-  id: ClothingOuterCoatJensenLoadout
-  entity: ClothingOuterCoatJensen
-  sponsorOnly: true
-
-- type: loadout
   id: ClothingUniformJumpsuitOperativeLoadout
   entity: ClothingUniformJumpsuitOperative
   sponsorOnly: true
@@ -310,6 +305,18 @@
   id: ElectricGuitarInstrumentLoadout
   entity: ElectricGuitarInstrument
   sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterArmorVestSponsorLoadout
+  entity: ClothingOuterArmorVestSponsor
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
+- type: loadout
+  id: ClothingHeadHelmetHeavyAltynOldLoadout
+  entity: ClothingHeadHelmetHeavyAltynOld
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
 
 #PANDA1
 - type: loadout
@@ -421,3 +428,54 @@
   entity: ClothingHeadHatKingStation
   sponsorOnly: true
   whitelistJobs: [Passenger]
+
+#flopa2105 + ClothingBeltMilitaryWebbingLoadout
+- type: loadout
+  id: ClothingUnderSocksCoderLoadout
+  entity: ClothingUnderSocksCoder
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterWinterAtmosLoadout
+  entity: ClothingOuterWinterAtmos
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieNukeLoadout
+  entity: PlushieNuke
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHandsGlovesFingerlesssLoadout
+  entity: ClothingHandsGlovesFingerless
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckSyndicakePinLoadout
+  entity: ClothingNeckSyndicakePin
+  sponsorOnly: true
+
+#fonky
+- type: loadout
+  id: ClothingOuterCoatGentleLoadout
+  entity: ClothingOuterCoatGentle
+  sponsorOnly: true
+
+#JNON
+- type: loadout
+  id: WeaponRevolverDeckardLoadout
+  entity: WeaponRevolverDeckard
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]
+
+- type: loadout
+  id: ClothingOuterCoatSecurityOvercoatLoadout
+  entity: ClothingOuterCoatSecurityOvercoat
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]
+
+- type: loadout
+  id: CombatKnifeLoadout
+  entity: CombatKnife
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]

@@ -187,6 +187,8 @@ namespace Content.Server.Cloning
             if (!TryComp<HumanoidAppearanceComponent>(bodyToClone, out var humanoid))
                 return false; // whatever body was to be cloned, was not a humanoid
 
+            var pref = humanoid.LastProfileLoaded; // Andromeda Evil Twin clone system
+
             if (!_prototype.TryIndex<SpeciesPrototype>(humanoid.Species, out var speciesPrototype))
                 return false;
 

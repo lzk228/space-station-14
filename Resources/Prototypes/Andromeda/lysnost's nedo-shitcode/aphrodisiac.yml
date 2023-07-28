@@ -1,7 +1,7 @@
 - type: reagent
   id: Aphrodisiac
-  name: Афродизиак
-  desc: Афродизиак
+  name: афродизиак
+  desc: От этой штуки у вас начинаются похотливые мыслишки...
   physicalDesc: ароматное
   color: "#FF1493"
   metabolisms:

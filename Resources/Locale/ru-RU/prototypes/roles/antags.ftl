@@ -12,3 +12,6 @@ roles-antag-nuclear-operative-commander-name = Командир ядерных �
 roles-antag-nuclear-operative-commander-objective = Приведите свой отряд к уничтожению станции.
 roles-antag-nuclear-operative-name = Ядерный оперативник
 roles-antag-nuclear-operative-objective = Найдите ядерный диск и взорвите станцию.
+
+roles-antag-evil-twin-name = Парадоксальная аномалия
+roles-antag-evil-twin-description = Замените свою копию или подружитесь с ней.

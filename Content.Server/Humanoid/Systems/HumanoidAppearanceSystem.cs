@@ -48,7 +48,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         }
 
         LoadProfile(uid, startingSet.Profile, humanoid);
-        
+
     }
 
     private void OnExamined(EntityUid uid, HumanoidAppearanceComponent component, ExaminedEvent args)
@@ -104,17 +104,17 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
             ? profile.Appearance.SkinColor.WithAlpha(hairAlpha) : profile.Appearance.HairColor;
         var facialHairColor = _markingManager.MustMatchSkin(profile.Species, HumanoidVisualLayers.FacialHair, out var facialHairAlpha, _prototypeManager)
             ? profile.Appearance.SkinColor.WithAlpha(facialHairAlpha) : profile.Appearance.FacialHairColor;
-        
+
         if (_markingManager.Markings.TryGetValue(profile.Appearance.HairStyleId, out var hairPrototype) &&
             _markingManager.CanBeApplied(profile.Species, hairPrototype, _prototypeManager))
         {
             AddMarking(uid, profile.Appearance.HairStyleId, hairColor, false);
         }
-        
+
         if (_markingManager.Markings.TryGetValue(profile.Appearance.FacialHairStyleId, out var facialHairPrototype) &&
             _markingManager.CanBeApplied(profile.Species, facialHairPrototype, _prototypeManager))
         {
-            AddMarking(uid, profile.Appearance.FacialHairStyleId, facialHairColor, false); 
+            AddMarking(uid, profile.Appearance.FacialHairStyleId, facialHairColor, false);
         }
 
         humanoid.MarkingSet.EnsureSpecies(profile.Species, profile.Appearance.SkinColor, _markingManager, _prototypeManager);
@@ -130,7 +130,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
             );
             AddMarking(uid, marking.MarkingId, markingColors, false);
         }
-        
+
         EnsureDefaultMarkings(uid, humanoid);
         SetTTSVoice(uid, profile.Voice, humanoid); // Corvax-TTS
 
@@ -141,6 +141,11 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         }
 
         humanoid.Age = profile.Age;
+
+        // Andromeda evil twin: save the last profile for paradox anomalies.
+        humanoid.LastProfileLoaded = profile;
+        // End Andromeda addition
+
         // Corvax-SpeakerColor-Start
         const string paletteId = "Material";
         var colors = _prototypeManager.Index<ColorPalettePrototype>(paletteId).Colors.Values.ToArray();

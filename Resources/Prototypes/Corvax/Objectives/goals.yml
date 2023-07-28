@@ -22,17 +22,17 @@
   id: StationGoalZoo
   text: station-goal-zoo
 
-- type: stationGoal
-  id: StationGoalSpaceZoo
-  text: station-goal-space-zoo
+#- type: stationGoal
+#  id: StationGoalSpaceZoo
+#  text: station-goal-space-zoo
 
 #- type: stationGoal
 #  id: StationGoalVaccines
 #  text: station-goal-vaccines
 
-- type: stationGoal
-  id: StationGoalSpaceAnimalsDelivery
-  text: station-goal-space-animals-delivery
+#- type: stationGoal
+#  id: StationGoalSpaceAnimalsDelivery
+#  text: station-goal-space-animals-delivery
 
 - type: stationGoal
   id: StationGoalAnomalyResearch
@@ -41,3 +41,7 @@
 - type: stationGoal
   id: StationGoalMiningOres
   text: station-goal-mining-ores
+
+- type: stationGoal
+  id: StationGoalBounty
+  text: station-goal-bounty

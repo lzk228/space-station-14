@@ -178,14 +178,24 @@
       collection: FemaleLaugh
     Hiss:
       collection: FelinidHisses
+      params:
+        volume: -4
     Meow:
       collection: FelinidMeows
+      params:
+        volume: -6
     Mew:
       collection: FelinidMews
+      params:
+        volume: -6
     Growl:
       collection: FelinidGrowls
+      params:
+        volume: -4
     Purr:
       collection: FelinidPurrs
+      params:
+        volume: -6
 
 - type: emoteSounds
   id: MaleFelinid
@@ -198,14 +208,24 @@
       collection: MaleLaugh
     Hiss:
       collection: FelinidHisses
+      params:
+        volume: -4
     Meow:
       collection: FelinidMeows
+      params:
+        volume: -6
     Mew:
       collection: FelinidMews
+      params:
+        volume: -6
     Growl:
       collection: FelinidGrowls
+      params:
+        volume: -4
     Purr:
       collection: FelinidPurrs
+      params:
+        volume: -6
 
 - type: emoteSounds
   id: MaleVulpkanin
