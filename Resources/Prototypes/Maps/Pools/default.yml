@@ -5,12 +5,12 @@
   - Bagel
   - Box
   - Cluster
-  ##- Fland
+  - Core
+  #- Fland
   - Kettle
   - Marathon
   - Meta
-  ##- Moose
-  ##- Omega
+  - Omega
   - Origin
   - Saltern
   - Packed
