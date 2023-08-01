@@ -20,13 +20,13 @@ public sealed class NukeopsRuleComponent : Component
     /// The minimum needed amount of players
     /// </summary>
     [DataField("minPlayers")]
-    public int MinPlayers = 20;
+    public int MinPlayers = 35; // A-13
 
     /// <summary>
     ///     This INCLUDES the operatives. So a value of 3 is satisfied by 2 players & 1 operative
     /// </summary>
     [DataField("playersPerOperative")]
-    public int PlayersPerOperative = 10;
+    public int PlayersPerOperative = 7; // A-13
 
     [DataField("maxOps")]
     public int MaxOperatives = 5;
@@ -55,8 +55,9 @@ public sealed class NukeopsRuleComponent : Component
     [DataField("operativeRoleProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
     public string OperativeRoleProto = "Nukeops";
 
-    [DataField("medicRoleProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
-    public string MedicRoleProto = "NukeopsMedic";
+    // A-13
+    //[DataField("medicRoleProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
+    //public string MedicRoleProto = "NukeopsMedic";
 
     [DataField("commanderStartingGearProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
     public string CommanderStartGearPrototype = "SyndicateCommanderGearFull";

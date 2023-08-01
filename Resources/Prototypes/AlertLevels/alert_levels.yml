@@ -64,11 +64,11 @@
       forceEnableEmergencyLights: true
       shuttleTime: 1200
     # Andromeda Alpha Level
-    alpha:                       
+    alpha:
       announcement: alert-level-alpha-announcement
       selectable: false
       sound:
-        path: /Audio/Corvax/StationEvents/level.ogg
+        path: /Audio/Misc/siren.ogg
         params:
           volume: -1 # Corvax: Reduce sound volume
       disableSelection: true

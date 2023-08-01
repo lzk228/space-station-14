@@ -5,3 +5,7 @@
 - type: lobbyBackground
   id: CMONiana
   background: /Textures/Andromeda/LobbyScreens/cmo_niana.png
+
+- type: lobbyBackground
+  id: Holo
+  background: /Textures/Andromeda/LobbyScreens/holo.png
