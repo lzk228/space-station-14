@@ -2,7 +2,7 @@
   id: SwatStandartGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSwat
-    back: ClothingSwatBackpackFilled
+    back: ClothingSwatBackpackStandartFilled
     shoes: ClothingShoesSwatBoots
     head: ClothingHeadHatBeretSwat
     eyes: ClothingEyesGlassesTacticalSwat
@@ -15,5 +15,5 @@
     pocket1: ClothingHeadHelmetHeavySwat
     pocket2: WeaponFlareGun
   innerclothingskirt: ClothingUniformJumpskirtSwat
-  satchel: ClothingBackpackSwatSatchelFilled
-  duffelbag: ClothingBackpackSwatDuffelFilled
+  satchel: ClothingBackpackSwatSatchelStandartFilled
+  duffelbag: ClothingBackpackSwatDuffelStandartFilled
