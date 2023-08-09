@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Numerics;
 using Content.Server.Administration.Commands;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking.Rules.Components;
@@ -13,6 +14,7 @@ using Content.Server.NPC.Systems;
 using Content.Server.Nuke;
 using Content.Server.Preferences.Managers;
 using Content.Server.Roles;
+using Content.Shared.Zombies;
 using Content.Server.RoundEnd;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
@@ -21,6 +23,7 @@ using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Server.Traitor;
 using Content.Server.Traits.Assorted;
+using Content.Server.Corvax.Sponsors; // Andromeda SponsorAntag
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Dataset;
 using Content.Shared.Humanoid;
@@ -30,7 +33,6 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Nuke;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
-using Content.Shared.Zombies;
 using Robust.Server.GameObjects;
 using Robust.Server.Maps;
 using Robust.Server.Player;
@@ -58,6 +60,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
     [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly MapLoaderSystem _map = default!;
+    [Dependency] private readonly SponsorsManager _sponsors = default!;
     [Dependency] private readonly ShuttleSystem _shuttle = default!;
     [Dependency] private readonly MindSystem _mindSystem = default!;
 
@@ -440,6 +443,10 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             var cmdrPrefList = new List<IPlayerSession>();
             var operatives = new List<IPlayerSession>();
 
+			var listSponsors = new List<IPlayerSession>();
+			var listSponsorsMed = new List<IPlayerSession>();
+            var listSponsorsCmd = new List<IPlayerSession>();
+
             // The LINQ expression ReSharper keeps suggesting is completely unintelligible so I'm disabling it
             // ReSharper disable once ForeachCanBeConvertedToQueryUsingAnotherGetEnumerator
             foreach (var player in everyone)
@@ -453,14 +460,26 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 if (profile.AntagPreferences.Contains(nukeops.OperativeRoleProto))
                 {
                     prefList.Add(player);
+                    if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    {
+                        listSponsors.Add(player);
+                    }
                 }
                 if (profile.AntagPreferences.Contains(nukeops.MedicRoleProto))
 	            {
 	                medPrefList.Add(player);
+					if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    {
+                        listSponsorsMed.Add(player);
+                    }
 	            }
                 if (profile.AntagPreferences.Contains(nukeops.CommanderRolePrototype))
                 {
                     cmdrPrefList.Add(player);
+                    if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    {
+                        listSponsorsCmd.Add(player);
+                    }
                 }
             }
 
@@ -468,16 +487,15 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
 
             for (var i = 0; i < numNukies; i++)
             {
-                // TODO: Please fix this if you touch it.
                 IPlayerSession nukeOp;
                 // Only one commander, so we do it at the start
                 if (i == 0)
                 {
-                    if (cmdrPrefList.Count == 0)
+                    if (cmdrPrefList.Count == 0 && listSponsorsCmd.Count == 0)
                     {
-                        if (medPrefList.Count == 0)
+                        if (medPrefList.Count == 0 && listSponsorsMed.Count == 0)
                         {
-                            if (prefList.Count == 0)
+                            if (prefList.Count == 0 && listSponsors.Count == 0)
                             {
                                 if (everyone.Count == 0)
                                 {
@@ -489,14 +507,30 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                             }
                             else
                             {
-                                nukeOp = _random.PickAndTake(prefList);
+                                if (listSponsors.Count != 0)
+                                {
+                                    nukeOp = _random.PickAndTake(listSponsors);
+		    				    	prefList.Remove(nukeOp);
+                                }
+                                else
+                                {
+                                    nukeOp = _random.PickAndTake(prefList);
+                                }
                                 everyone.Remove(nukeOp);
                                 Logger.InfoS("preset", "Insufficient preferred nukeop commander or agents, picking at random from regular op list.");
                             }
                         }
                         else
                         {
-                            nukeOp = _random.PickAndTake(medPrefList);
+		    				if (listSponsorsMed.Count != 0)
+                            {
+                                nukeOp = _random.PickAndTake(listSponsorsMed);
+		    					medPrefList.Remove(nukeOp);
+                            }
+                            else
+                            {
+                                nukeOp = _random.PickAndTake(medPrefList);
+                            }
                             everyone.Remove(nukeOp);
                             prefList.Remove(nukeOp);
                             Logger.InfoS("preset", "Insufficient preferred nukeop commanders, picking an agent");
@@ -504,7 +538,15 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                     }
                     else
                     {
-                        nukeOp = _random.PickAndTake(cmdrPrefList);
+                        if (listSponsorsCmd.Count != 0)
+                        {
+                        	nukeOp = _random.PickAndTake(listSponsorsCmd);
+		    				cmdrPrefList.Remove(nukeOp);
+                        }
+                        else
+                        {
+                        	nukeOp = _random.PickAndTake(cmdrPrefList);
+                        }
                         everyone.Remove(nukeOp);
                         prefList.Remove(nukeOp);
                         medPrefList.Remove(nukeOp);
@@ -513,9 +555,9 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 }
                 else if (i == 1)
                 {
-                    if (medPrefList.Count == 0)
+                    if (medPrefList.Count == 0 && listSponsorsMed.Count == 0)
                     {
-                        if (prefList.Count == 0)
+                        if (prefList.Count == 0 && listSponsors.Count == 0)
                         {
                             if (everyone.Count == 0)
                             {
@@ -527,14 +569,30 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                         }
                         else
                         {
-                            nukeOp = _random.PickAndTake(prefList);
+		    			    if (listSponsors.Count != 0)
+                            {
+                                nukeOp = _random.PickAndTake(listSponsors);
+		    					prefList.Remove(nukeOp);
+                            }
+                            else
+                            {
+                                nukeOp = _random.PickAndTake(prefList);
+                            }
                             everyone.Remove(nukeOp);
                             Logger.InfoS("preset", "Insufficient preferred nukeop commander or agents, picking at random from regular op list.");
                         }
                     }
                     else
                     {
-                        nukeOp = _random.PickAndTake(medPrefList);
+		    		    if (listSponsorsMed.Count != 0)
+                        {
+                            nukeOp = _random.PickAndTake(listSponsorsMed);
+		    			    medPrefList.Remove(nukeOp);
+                        }
+                        else
+                        {
+                            nukeOp = _random.PickAndTake(medPrefList);
+                        }
                         everyone.Remove(nukeOp);
                         Logger.InfoS("preset", "Insufficient preferred nukeop commanders, picking an agent");
                     }
@@ -542,7 +600,15 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 }
                 else
                 {
-                    nukeOp = _random.PickAndTake(prefList);
+		    	    if (listSponsors.Count != 0)
+                    {
+                        nukeOp = _random.PickAndTake(listSponsors);
+		    		    prefList.Remove(nukeOp);
+                    }
+                    else
+                    {
+                        nukeOp = _random.PickAndTake(prefList);
+                    }
                     everyone.Remove(nukeOp);
                     Logger.InfoS("preset", "Selected a preferred nukeop commander.");
                 }
@@ -653,7 +719,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
         component.NukieOutpost = outpostGrids[0];
 
         // Listen I just don't want it to overlap.
-        if (!_map.TryLoad(mapId, shuttlePath.ToString(), out var grids, new MapLoadOptions {Offset = Vector2.One*1000f}) || !grids.Any())
+        if (!_map.TryLoad(mapId, shuttlePath.ToString(), out var grids, new MapLoadOptions {Offset = Vector2.One * 1000f}) || !grids.Any())
         {
             Logger.ErrorS("nukies", $"Error loading grid {shuttlePath} for nukies!");
             return false;

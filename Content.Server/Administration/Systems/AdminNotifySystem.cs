@@ -1,7 +1,7 @@
 ﻿using Content.Server.Chat.Managers;
-using Content.Server.Singularity.Events;
+//using Content.Server.Singularity.Events;
 using Content.Shared.Mobs;
-using Content.Shared.Singularity.Components;
+//using Content.Shared.Singularity.Components;
 using Robust.Server.GameObjects;
 
 namespace Content.Server.Administration.Systems;
@@ -15,7 +15,7 @@ public sealed class AdminNotifySystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged);
-        SubscribeLocalEvent<ContainmentFieldGeneratorComponent, EventHorizonConsumedEntityEvent>(OnSingularityConsumedEntity);
+        //SubscribeLocalEvent<ContainmentFieldGeneratorComponent, EventHorizonConsumedEntityEvent>(OnSingularityConsumedEntity);
     }
 
     private void OnMobStateChanged(MobStateChangedEvent ev)
@@ -44,8 +44,8 @@ public sealed class AdminNotifySystem : EntitySystem
         _chatManager.SendAdminAlert(message);
     }
 
-    private void OnSingularityConsumedEntity(EntityUid uid, ContainmentFieldGeneratorComponent component, EventHorizonConsumedEntityEvent ev)
-    {
-        _chatManager.SendAdminAlert(Loc.GetString("notify-admin-singulatity-breach", ("target", ToPrettyString(ev.Entity))));
-    }
+    //private void OnSingularityConsumedEntity(EntityUid uid, ContainmentFieldGeneratorComponent component, EventHorizonConsumedEntityEvent ev)
+    //{
+    //    _chatManager.SendAdminAlert(Loc.GetString("notify-admin-singulatity-breach", ("target", ToPrettyString(ev.Entity))));
+    //}
 }

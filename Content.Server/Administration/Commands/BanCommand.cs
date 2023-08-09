@@ -39,11 +39,6 @@ public sealed class BanCommand : LocalizedCommands
             severity = NoteSeverity.High;
         }
 
-			string admin;
-            string target;
-            string reason;
-            uint minutes;
-            
         switch (args.Length)
         {
             case 2:

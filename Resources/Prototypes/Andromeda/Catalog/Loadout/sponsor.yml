@@ -479,3 +479,51 @@
   entity: CombatKnife
   sponsorOnly: true
   whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]
+
+#Shan_Son
+- type: loadout
+  id: ClothingUniformJumpsuitSlavaVDVLoadout
+  entity: ClothingUniformJumpsuitSlavaVDV
+  sponsorOnly: true
+
+#razdacha
+- type: loadout
+  id: OldUSSPGlovesLoadout2
+  entity: ClothingHandsGlovesLeatherUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPCapLoadout2
+  entity: ClothingHeadHatCapUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPOvercoatLoadout2
+  entity: ClothingOuterCoatUSSPOvercoatBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPJumpsuitLoadout2
+  entity: ClothingUniformJumpsuitUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPShoesLoadout2
+  entity: ClothingShoesUSSPBlack
+  sponsorOnly: true
+
+#raz2
+- type: loadout
+  id: ClothingOuterAtmosianBomberJacketLoadout2
+  entity: ClothingOuterAtmosianBomberJacket
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingMaskGasAtmosianLoadout2
+  entity: ClothingMaskGasAtmosian
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingCloakAtmosianLoadout2
+  entity: ClothingCloakAtmosian
+  sponsorOnly: true

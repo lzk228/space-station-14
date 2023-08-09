@@ -9,6 +9,7 @@ using Content.Server.Players;
 using Content.Server.Roles;
 using Content.Server.Shuttles.Components;
 using Content.Server.Traitor.Uplink;
+using Content.Server.Corvax.Sponsors; // Andromeda SponsorAntag
 using Content.Shared.CCVar;
 using Content.Shared.Dataset;
 using Content.Shared.Preferences;
@@ -35,6 +36,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly UplinkSystem _uplink = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+	  [Dependency] private readonly SponsorsManager _sponsors = default!; // SponsorAntag
     [Dependency] private readonly MindSystem _mindSystem = default!;
 
     private ISawmill _sawmill = default!;
@@ -194,6 +196,23 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
             _sawmill.Info("Insufficient ready players to fill up with traitors, stopping the selection.");
             return results;
         }
+		var sponsorPrefList = new List<IPlayerSession>();
+		foreach (var player in prefList)
+        {
+            if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+			{
+				sponsorPrefList.Add(player);
+			}
+        }
+
+		while (sponsorPrefList.Count > 0 && traitorCount > 0)
+		{
+            var player = _random.PickAndTake(sponsorPrefList);
+            prefList.Remove(player);
+			results.Add(player);
+			traitorCount -= 1;
+		}
+		if (traitorCount == 0) return results;
 
         for (var i = 0; i < traitorCount; i++)
         {
@@ -344,6 +363,10 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
             if (chance > 1)
                 chance = 1;
+
+			// Если есть приоритет спонсора для антага DeadSpace
+			if (_sponsors.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+				chance = 1;
 
             // Now that we've calculated our chance, roll and make them a traitor if we roll under.
             // You get one shot.

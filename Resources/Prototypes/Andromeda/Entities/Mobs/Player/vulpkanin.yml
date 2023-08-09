@@ -24,9 +24,9 @@
     - type: CameraRecoil
     - type: Examiner
     - type: CanHostGuardian
-    - type: Faction
+    - type: NpcFactionMember
       factions:
-        - NanoTrasen
+      - NanoTrasen
     #- type: MailReceiver
     #- type: PotentialPsionic
     - type: Respirator
