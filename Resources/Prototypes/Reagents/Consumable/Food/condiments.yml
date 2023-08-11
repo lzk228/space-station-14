@@ -143,7 +143,7 @@
   desc: reagent-desc-table-salt
   physicalDesc: reagent-physical-desc-grainy
   flavor: salty
-  color: "#a1000b"
+  color: "#cfd1d0"
   recognizable: true
   boilingPoint: 1465.0
   meltingPoint: 800.7
@@ -164,7 +164,5 @@
     Food:
       effects:
       # eating salt on its own kinda sucks, kids
-      - !type:SatiateHunger
-        factor: 0.5
       - !type:SatiateThirst
         factor: -0.5

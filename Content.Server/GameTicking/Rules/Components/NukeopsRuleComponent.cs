@@ -55,9 +55,8 @@ public sealed class NukeopsRuleComponent : Component
     [DataField("operativeRoleProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
     public string OperativeRoleProto = "Nukeops";
 
-    // A-13
-    //[DataField("medicRoleProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
-    //public string MedicRoleProto = "NukeopsMedic";
+    [DataField("medicRoleProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
+    public string MedicRoleProto = "NukeopsMedic";
 
     [DataField("commanderStartingGearProto", customTypeSerializer: typeof(PrototypeIdSerializer<StartingGearPrototype>))]
     public string CommanderStartGearPrototype = "SyndicateCommanderGearFull";
@@ -120,7 +119,7 @@ public sealed class NukeopsRuleComponent : Component
     [DataField("operativePlayers")]
     public readonly Dictionary<string, IPlayerSession> OperativePlayers = new();
 
-    [DataField("faction", customTypeSerializer: typeof(PrototypeIdSerializer<FactionPrototype>), required: true)]
+    [DataField("faction", customTypeSerializer: typeof(PrototypeIdSerializer<NpcFactionPrototype>), required: true)]
     public string Faction = default!;
 }
 
