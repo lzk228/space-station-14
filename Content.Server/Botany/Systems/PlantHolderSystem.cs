@@ -301,7 +301,12 @@ namespace Content.Server.Botany.Systems
                         ForceUpdateByExternalCause(uid, component);
                     }
                 }
-
+                var seed = produce.Seed;
+                if (seed != null)
+                {
+                    var nutrientBonus = seed.Potency / 2.5f;
+                    AdjustNutrient(uid, nutrientBonus, component);
+                }
                 EntityManager.QueueDeleteEntity(args.Used);
             }
         }
@@ -374,7 +379,7 @@ namespace Content.Server.Botany.Systems
             }
 
             // Weeds like water and nutrients! They may appear even if there's not a seed planted.
-            if (component.WaterLevel > 10 && component.NutritionLevel > 2)
+            if (component.WaterLevel > 10 && component.NutritionLevel > 5)
             {
                 var chance = 0f;
                 if (component.Seed == null)
@@ -465,7 +470,7 @@ namespace Content.Server.Botany.Systems
             // Make sure the plant is not starving.
             if (_random.Prob(0.35f))
             {
-                if (component.NutritionLevel > 2)
+                if (component.NutritionLevel > 5)
                 {
                     component.Health += healthMod;
                 }
@@ -973,8 +978,8 @@ namespace Content.Server.Botany.Systems
             if (!component.DrawWarnings)
                 return;
 
-            _appearance.SetData(uid, PlantHolderVisuals.WaterLight, component.WaterLevel <= 10, app);
-            _appearance.SetData(uid, PlantHolderVisuals.NutritionLight, component.NutritionLevel <= 2, app);
+            _appearance.SetData(uid, PlantHolderVisuals.WaterLight, component.WaterLevel <= 15, app);
+            _appearance.SetData(uid, PlantHolderVisuals.NutritionLight, component.NutritionLevel <= 8, app);
             _appearance.SetData(uid, PlantHolderVisuals.AlertLight,
                 component.WeedLevel >= 5 || component.PestLevel >= 5 || component.Toxins >= 40 || component.ImproperHeat ||
                 component.ImproperLight || component.ImproperPressure || component.MissingGas > 0, app);
