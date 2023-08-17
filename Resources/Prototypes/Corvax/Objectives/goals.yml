@@ -45,3 +45,7 @@
 - type: stationGoal
   id: StationGoalBounty
   text: station-goal-bounty
+
+- type: stationGoal
+  id: StationGoalExpedition
+  text: station-goal-expedition

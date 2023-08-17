@@ -24,3 +24,12 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Sponsor/salvage_xeno_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCeElite
+  name: элитный плащ старшего инженера
+  description: Выдается самым ответственным и выдающимся старшим инженерам. Пахнет сингулярностью.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Sponsor/ce_elite.rsi  
