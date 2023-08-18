@@ -455,6 +455,21 @@
   entity: ClothingNeckSyndicakePin
   sponsorOnly: true
 
+- type: loadout
+  id: BedsheetCosmosLoadout
+  entity: BedsheetCosmos
+  sponsorOnly: true
+
+- type: loadout
+  id: AcousticGuitarInstrumentLoadout
+  entity: AcousticGuitarInstrument
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBackpackSatchelHoSSponsorLoadout
+  entity: ClothingBackpackSatchelHoSSponsor
+  sponsorOnly: true
+
 #fonky
 - type: loadout
   id: ClothingOuterCoatGentleLoadout
@@ -512,7 +527,7 @@
   entity: ClothingShoesUSSPBlack
   sponsorOnly: true
 
-#raz2
+#razdacha2
 - type: loadout
   id: ClothingOuterAtmosianBomberJacketLoadout2
   entity: ClothingOuterAtmosianBomberJacket
@@ -526,4 +541,22 @@
 - type: loadout
   id: ClothingCloakAtmosianLoadout2
   entity: ClothingCloakAtmosian
+  sponsorOnly: true
+
+#Radrigo
+- type: loadout
+  id: ClothingNeckCloakCeEliteLoadout
+  entity: ClothingNeckCloakCeElite
+  sponsorOnly: true
+  whitelistJobs: [ChiefEngineer]
+
+#sand_arh
+- type: loadout
+  id: PlushieLizardLoadout
+  entity: PlushieLizard
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieSpaceLizardLoadout
+  entity: PlushieSpaceLizard
   sponsorOnly: true

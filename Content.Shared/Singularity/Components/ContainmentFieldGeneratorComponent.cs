@@ -53,7 +53,7 @@ public sealed class ContainmentFieldGeneratorComponent : Component
     /// How many seconds should the generators wait before losing power?
     /// </summary>
     [DataField("threshold")]
-    public float Threshold = 10f;
+    public float Threshold = 600f; // A-13 anti-grief
 
     /// <summary>
     /// How many tiles should this field check before giving up?

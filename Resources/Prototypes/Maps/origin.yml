@@ -55,7 +55,7 @@
             Boxer: [ 1, 1]
             Paramedic: [ 1, 1]
             Psychologist: [ 1, 1]
-            SeniorEngineer: [ 1, 1]
-            SeniorOfficer: [ 1, 1]
-            SeniorPhysician: [ 1, 1]
-            SeniorResearcher: [ 1, 1]
+            SeniorEngineer: [ 1, 1] # A-13 no senior
+            SeniorOfficer: [ 1, 1] # A-13 no senior
+            SeniorPhysician: [ 1, 1] # A-13 no senior
+            SeniorResearcher: [ 1, 1] # A-13 no senior

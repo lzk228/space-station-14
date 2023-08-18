@@ -13,7 +13,7 @@
     CaptainIDStealObjective: 1
     CMOHyposprayStealObjective: 1
 #    RDHardsuitStealObjective: 1
-    NukeDiskStealObjective: 1
+    NukeDiskStealObjective: 0.3
     IDComputerBoardStealObjective: 1
     MagbootsStealObjective: 0.5
     SupplyConsoleBoardStealObjective: 1
@@ -21,12 +21,14 @@
     CaptainGunStealObjective: 0.5
     CaptainJetpackStealObjective: 0.5
     HandTeleporterStealObjective: 0.5
-    TechFabCircuitBoardStealObjective: 1
+    SecretDocumentsStealObjective: 0.5
+    TechFabCircuitBoardStealObjective: 0.5 # A-13
 
 - type: weightedRandom
   id: TraitorObjectiveGroupKill
   weights:
     KillRandomObjective: 1
+    KillRandomHeadObjective: 0.25
 
 - type: weightedRandom
   id: TraitorObjectiveGroupState

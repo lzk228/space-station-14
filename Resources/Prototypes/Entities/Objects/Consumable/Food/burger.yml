@@ -798,7 +798,7 @@
     flavors:
       - bun
       - meaty
-      - acidic
+      - acid
   - type: Sprite
     state: x
   - type: SolutionContainerManager
