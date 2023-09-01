@@ -118,18 +118,18 @@
         spawn:
           MachineFrameDestroyed:
             min: 1
-            max: 1  
+            max: 1
   - type: WiresPanel
   - type: Wires
     BoardName: "MiniGravityGenerator"
-    LayoutId: MiniGravityGenerator        
+    LayoutId: MiniGravityGenerator
   - type: Machine
     board: MiniGravityGeneratorCircuitboard
   - type: ApcPowerReceiver
-    powerLoad: 500
+    powerLoad: 125 # A-13
   - type: GravityGenerator
     idlePower: 15
-    activePower: 500
+    activePower: 125 # A-13
     lightRadiusMin: 0.75
     lightRadiusMax: 2.5
   - type: StaticPrice

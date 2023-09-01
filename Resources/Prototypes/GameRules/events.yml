@@ -337,7 +337,7 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 120
+    earliestStart: 240 # retarded dogshit event
     weight: 2.5
     duration: 1
   - type: ZombieRule
@@ -353,9 +353,9 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 300
+    earliestStart: 180
     weight: 5
-    minimumPlayers: 10
+    minimumPlayers: 35
     reoccurrenceDelay: 25
     duration: 1
   - type: LoneOpsSpawnRule
