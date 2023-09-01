@@ -54,7 +54,7 @@ public enum HarvestType : byte
 */
 
 [DataDefinition]
-public struct SeedChemQuantity
+public partial struct SeedChemQuantity
 {
     [DataField("Min")] public int Min;
     [DataField("Max")] public int Max;
@@ -75,7 +75,7 @@ public struct SeedEvolveConditions
 // TODO reduce the number of friends to a reasonable level. Requires ECS-ing things like plant holder component.
 [Virtual, DataDefinition]
 [Access(typeof(BotanySystem), typeof(PlantHolderSystem), typeof(SeedExtractorSystem), typeof(PlantHolderComponent), typeof(ReagentEffect), typeof(MutationSystem))]
-public class SeedData
+public partial class SeedData
 {
     #region Tracking
 

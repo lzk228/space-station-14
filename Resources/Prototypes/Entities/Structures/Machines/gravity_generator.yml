@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: GravityGenerator
   parent: BaseMachinePowered
   name: gravity generator
@@ -121,15 +121,15 @@
             max: 1
   - type: WiresPanel
   - type: Wires
-    BoardName: "MiniGravityGenerator"
+    BoardName: wires-board-name-minigravitygenerator
     LayoutId: MiniGravityGenerator
   - type: Machine
     board: MiniGravityGeneratorCircuitboard
   - type: ApcPowerReceiver
-    powerLoad: 125 # A-13
+    powerLoad: 500
   - type: GravityGenerator
     idlePower: 15
-    activePower: 125 # A-13
+    activePower: 500
     lightRadiusMin: 0.75
     lightRadiusMax: 2.5
   - type: StaticPrice
