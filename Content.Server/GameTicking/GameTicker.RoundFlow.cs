@@ -23,7 +23,6 @@ using Robust.Shared.Utility;
 using System.Linq;
 using Content.Shared.Database;
 using Robust.Shared.Asynchronous;
-using PlayerData = Content.Server.Players.PlayerData;
 using Content.Server.Voting.Managers;
 using Content.Shared.Voting;
 using Content.Shared.CCVar;

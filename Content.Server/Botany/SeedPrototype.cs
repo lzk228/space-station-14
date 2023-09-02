@@ -62,7 +62,7 @@ public partial struct SeedChemQuantity
 }
 
 [DataDefinition]
-public struct SeedEvolveConditions
+public partial struct SeedEvolveConditions
 {
     [DataField("requiredMinPotency")] public int RequiredMinPotency;
     [DataField("requiredMaxPotency")] public int RequiredMaxPotency;

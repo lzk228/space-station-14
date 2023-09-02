@@ -209,6 +209,12 @@
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
 
+- type: loadout
+  id: ClothingOuterCoatHoSOvercoatLoadout
+  entity: ClothingOuterCoatHoSOvercoat
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, SeniorOfficer]
+
 #Ramsody
 - type: loadout
   id: DrugsBriefcaseFilledLoadout
