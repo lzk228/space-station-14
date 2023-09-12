@@ -600,3 +600,8 @@
   entity: ClothingHeadHatBeretRND
   sponsorOnly: true
   whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
+
+- type: loadout
+  id: ClothingHeadHatBizarreSoftLoadout
+  entity: ClothingHeadHatBizarreSoft
+  sponsorOnly: true
