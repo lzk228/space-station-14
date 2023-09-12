@@ -3,14 +3,16 @@
   maps:
   - Aspid
   #- Bagel
+  - CorvaxSpectrum
   - Box
   - Cluster
   - CorvaxDelta
+  - Origin
   - Fland
   #- Core
+  - Marathon
   - Meta
   - Marathon
-  - Origin
   - Kettle
   - Omega
   - Saltern

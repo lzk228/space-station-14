@@ -361,7 +361,7 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 180
+    earliestStart: 120
     weight: 5
     minimumPlayers: 35
     reoccurrenceDelay: 25
