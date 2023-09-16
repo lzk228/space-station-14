@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   parent: ClothingHeadBase
   id: ClothingHeadHatRedRog
   name: Ободок с рожками
@@ -8,5 +9,3 @@
     sprite: Andromeda/NIKforest/redrog.rsi
   - type: Clothing
     sprite: Andromeda/NIKforest/redrog.rsi
-  - type: 
-    suffix: Андромеда
