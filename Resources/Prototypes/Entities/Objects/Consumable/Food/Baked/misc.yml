@@ -200,8 +200,6 @@
   id: FoodBakedPancake
   description: A fluffy pancake. The softer, superior relative of the waffle.
   components:
-  # - type: Food
-  #   trash: FoodPlateSmall
   - type: Stack
     stackType: Pancake
     count: 1
@@ -247,6 +245,9 @@
       map: ["pancakes9"]
       visible: false
   - type: Appearance
+  - type: Tag
+    tags:
+    - Pancake
 
 - type: entity
   name: blueberry pancake
@@ -254,8 +255,6 @@
   id: FoodBakedPancakeBb
   description: A fluffy and delicious blueberry pancake.
   components:
-  # - type: Food
-  #   trash: FoodPlateSmall
   - type: Stack
     stackType: Pancake
     count: 1
@@ -277,6 +276,9 @@
       map: ["pancakesbb3"]
       visible: false
   - type: Appearance
+  - type: Tag
+    tags:
+    - Pancake
 
 - type: entity
   name: chocolate chip pancake
@@ -284,8 +286,6 @@
   id: FoodBakedPancakeCc
   description: A fluffy and delicious chocolate chip pancake.
   components:
-  # - type: Food
-  #   trash: FoodPlateSmall
   - type: Stack
     stackType: Pancake
     count: 1
@@ -316,6 +316,9 @@
           Quantity: 5
         - ReagentId: Theobromine
           Quantity: 1
+  - type: Tag
+    tags:
+    - Pancake
 
 - type: entity
   name: waffles
@@ -425,7 +428,7 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 1
-      
+
 - type: entity
   name: dumplings
   parent: FoodBakedBase
@@ -433,7 +436,7 @@
   description: Average recipe for meat in doughs.
   components:
   - type: Sprite
-    state: dumplings 
+    state: dumplings
   - type: SolutionContainerManager
     solutions:
       food:
@@ -443,4 +446,27 @@
           Quantity: 8
         - ReagentId: Protein
           Quantity: 2
-            
+
+- type: entity
+  name: chèvre chaud
+  parent: FoodBakedBase
+  id: FoodBakedChevreChaud
+  description: A disk of slightly melted chèvre flopped on top of a crostini, and toasted all-round.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - nutty
+      - creamy
+      - smokey
+  - type: Sprite
+    state: chevrechaud
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 0.5

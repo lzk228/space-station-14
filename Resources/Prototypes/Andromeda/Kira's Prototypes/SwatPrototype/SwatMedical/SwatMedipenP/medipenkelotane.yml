@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен келотана
+  parent: ChemicalMedipen
+  id: MedipenKelotane
+  description: Специальный медипен для спецназа, содержит келотан, помогает лечить ожоги
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenKelotane
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: Kelotane
+          Quantity: 20
+  - type: Tag
+    tags: []

@@ -1,5 +1,5 @@
-ent-ClothingHeadHelmetHardsuitBasic = basic hardsuit helmet
-    .desc = A basic-looking hardsuit helmet that provides minor protection against most sources of damage.
+ent-ClothingHeadHelmetHardsuitBasic = базовый шлем скафандра
+    .desc = Базовый шлем скафандра, обеспечивающий незначительную защиту от большинства источников повреждений.
 ent-ClothingHeadHelmetHardsuitAtmos = шлем скафандра атмос-техника
     .desc = Специальный шлем скафандра, предназначенный для работы в условиях низкого давления и высокой температуры.
 ent-ClothingHeadHelmetHardsuitCap = шлем скафандра капитана
@@ -14,7 +14,7 @@ ent-ClothingHeadHelmetHardsuitMedical = шлем скафандра главно
     .desc = Легкий медицинский шлем скафандра, не стесняющий движений головы.
 ent-ClothingHeadHelmetHardsuitRd = экспериментальный шлем исследовательского скафандра
     .desc = Легкий шлем скафандра, не стесняющий движений головы.
-ent-ClothingHeadHelmetHardsuitSalvage = шлем скафандра утилизатора
+ent-ClothingHeadHelmetHardsuitSalvage = шлем скафандра шахтёра
     .desc = Специальный шлем, предназначенный для работы в опасной среде с низким давлением. Имеет усиленную броню, на случай встречи с дикими животными, а так же двойные прожекторы.
 ent-ClothingHeadHelmetHardsuitSecurity = шлем скафандра службы безопасности
     .desc = Бронированный шлем скафандра для нужд службы безопасности.

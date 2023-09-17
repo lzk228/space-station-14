@@ -1,0 +1,22 @@
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingSwatGasMask
+  name: противогаз спецназа
+  description: Элитный противогаз спецназа, применяется в ходе спец операций, защищает от газов
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Mask/swatgasmask.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Mask/swatgasmask.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.9
+  - type: IdentityBlocker
+  - type: FlashImmunity
+  - type: IngestionBlocker
+  - type: EyeProtection
+    protectionTime: 15

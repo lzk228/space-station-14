@@ -78,3 +78,13 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "every light is blinking at once by Alexander Divine."
   source: "https://soundcloud.com/alexanderdivine/every-light-is-blinking-at-once"
+
+- files: ["hackers.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Hackers by Karl Casey @ White Bat Audio"
+  source: "https://www.youtube.com/watch?v=k8nHWwO1U2Q"
+
+- files: ["Trava-u-Doma.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Trava U Doma(Atomic Heart Remix)"
+  source: "https://www.youtube.com/watch?v=k8nHWwO1U2Q"

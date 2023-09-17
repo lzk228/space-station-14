@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelHoSSponsor
+  name: стильная кожаная сумка
+  description: Выглядит очень стильно и очень кожано.
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Corvax/Sponsor/NEKISH/Clothing/Back/Satchels/hos.rsi

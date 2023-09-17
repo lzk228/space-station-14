@@ -1,0 +1,15 @@
+- type: entity
+  parent: CentcomIDCard
+  id: SwatStandartIDCard
+  name: СПБСТ ID Карта
+  components:
+  - type: Sprite
+    layers:
+    - state: swat_standartID
+  - type: Item
+    heldPrefix: gold
+  - type: IdCard
+    jobTitle: Оперативник СПБсТ
+  - type: Access
+    groups:
+    - AllAccess

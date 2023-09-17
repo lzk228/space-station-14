@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitCargoExpert
+  id: ClothingUniformJumpsuitLadyDMC
   name: костюм леди
   description: Вы чувствуете себя довольно уверенно, не хватает только крюка кошки и РПГ.
   components:

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: ClothingHeadHatCapSwat
+  name: кепка спецназа
+  description: "Это просто кепка спецназа, даёт уверенность в себе."
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Head/Soft/swatcap.rsi
+  - type: Clothing
+    sprite: Andromeda/MissKira/Clothing/swatRSI/Head/Soft/swatcap.rsi

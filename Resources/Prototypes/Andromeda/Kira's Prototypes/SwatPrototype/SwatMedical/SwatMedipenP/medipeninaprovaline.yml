@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен инапровалина
+  parent: ChemicalMedipen
+  id: MedipenInaprovaline
+  description: Специальный медипен для спецназа, содержит инапровалин, не дает задохнуться насмерть
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenInaprovaline
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Inaprovaline
+          Quantity: 15
+  - type: Tag
+    tags: []

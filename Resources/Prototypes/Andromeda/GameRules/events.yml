@@ -17,3 +17,16 @@
 #      path: /Audio/Corvax/Announcements/announce.ogg # Corvax-Announcements
 #      params:
 #        volume: -6
+
+# Rat king, paradox anomaly.
+- type: entity
+  id: MidRoundAntag
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: StationEvent
+      weight: 7
+      reoccurrenceDelay: 5
+      minimumPlayers: 15
+      earliestStart: 25
+    - type: MidRoundAntagRule

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by miss kira for andromeda-13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "medipen"
+    },
+    {
+      "name": "medipenBicaridine"
+    },
+    {
+      "name": "medipenDermaline"
+    },
+    {
+      "name": "medipenDexalinPlus"
+    },
+    {
+      "name": "medipenDifengidramin"
+    },
+    {
+      "name": "medipenDylovene"
+    },
+    {
+      "name": "medipenEphedrine"
+    },
+    {
+      "name": "medipenEpinephrine"
+    },
+    {
+      "name": "medipenInaprovaline"
+    },
+    {
+      "name": "medipenKelotane"
+    },
+    {
+      "name": "medipenLightStimpack"
+    },
+    {
+      "name": "medipenSigynate"
+    },
+    {
+      "name": "medipenTranexamicAcid"
+    },
+    {
+      "name": "medipenTricordrazine"
+    },
+    {
+      "name": "medipen_empty"
+    },
+    {
+      "name": "medipen-inhand-left"
+    },
+    {
+      "name": "medipen-inhand-right"
+    }
+  ]
+}

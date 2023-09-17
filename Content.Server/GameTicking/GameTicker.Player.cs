@@ -2,13 +2,14 @@ using Content.Server.Database;
 using Content.Server.Players;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
+using Content.Shared.Players;
 using Content.Shared.Preferences;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using PlayerData = Content.Server.Players.PlayerData;
+
 
 namespace Content.Server.GameTicking
 {
@@ -27,14 +28,15 @@ namespace Content.Server.GameTicking
         {
             var session = args.Session;
 
-            if (_mindSystem.TryGetMind(session.UserId, out var mind))
+            if (_mind.TryGetMind(session.UserId, out var mindId, out var mind))
             {
                 if (args.OldStatus == SessionStatus.Connecting && args.NewStatus == SessionStatus.Connected)
                     mind.Session = session;
 
                 DebugTools.Assert(mind.Session == session);
-                DebugTools.Assert(session.Data.ContentData()?.Mind is not {} dataMind || dataMind == mind);
             }
+
+            DebugTools.Assert(session.GetMind() == mindId);
 
             switch (args.NewStatus)
             {
@@ -46,7 +48,7 @@ namespace Content.Server.GameTicking
                     if (session.Data.ContentDataUncast == null)
                     {
                         var data = new PlayerData(session.UserId, args.Session.Name);
-                        data.Mind = mind;
+                        data.Mind = mindId;
                         session.Data.ContentDataUncast = data;
                     }
 
@@ -62,6 +64,8 @@ namespace Content.Server.GameTicking
                         ? Loc.GetString("player-first-join-message", ("name", args.Session.Name))
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
 
+                     //_audio.PlayGlobal("/Audio/Misc/delta_alt.ogg", Filter.Local(), true, AudioParams.Default.WithVolume(-2f)); // Andromeda new player join bwoink [WIP]
+
                     if (LobbyEnabled && _roundStartCountdownHasNotStartedYetDueToNoPlayers)
                     {
                         _roundStartCountdownHasNotStartedYetDueToNoPlayers = false;
@@ -75,30 +79,29 @@ namespace Content.Server.GameTicking
                 {
                     _userDb.ClientConnected(session);
 
-                    var data = session.ContentData();
-
-                    DebugTools.AssertNotNull(data);
-
-                    if (data!.Mind == null)
+                    if (mind == null)
                     {
                         if (LobbyEnabled)
-                        {
                             PlayerJoinLobby(session);
-                            return;
-                        }
+                        else
+                            SpawnWaitDb();
 
-                        SpawnWaitDb();
                         break;
                     }
 
-                    if (data.Mind.CurrentEntity == null || Deleted(data.Mind.CurrentEntity))
+                    if (mind.CurrentEntity == null || Deleted(mind.CurrentEntity))
                     {
-                        DebugTools.Assert(data.Mind.CurrentEntity == null, "a mind's current entity has been deleted");
-                        SpawnWaitDb();
+                        DebugTools.Assert(mind.CurrentEntity == null, "a mind's current entity was deleted without updating the mind");
+
+                        // This player is joining the game with an existing mind, but the mind has no entity.
+                        // Their entity was probably deleted sometime while they were disconnected, or they were an observer.
+                        // Instead of allowing them to spawn in, we will dump and their existing mind in an observer ghost.
+                        SpawnObserverWaitDb();
                     }
                     else
                     {
-                        session.AttachToEntity(data.Mind.CurrentEntity);
+                        // Simply re-attach to existing entity.
+                        session.AttachToEntity(mind.CurrentEntity);
                         PlayerJoinGame(session);
                     }
                     break;
@@ -120,7 +123,14 @@ namespace Content.Server.GameTicking
             async void SpawnWaitDb()
             {
                 await _userDb.WaitLoadComplete(session);
+
                 SpawnPlayer(session, EntityUid.Invalid);
+            }
+
+            async void SpawnObserverWaitDb()
+            {
+                await _userDb.WaitLoadComplete(session);
+                JoinAsObserver(session);
             }
 
             async void AddPlayerToDb(Guid id)
@@ -137,9 +147,10 @@ namespace Content.Server.GameTicking
             return (HumanoidCharacterProfile) _prefsManager.GetPreferences(p.UserId).SelectedCharacter;
         }
 
-        public void PlayerJoinGame(IPlayerSession session)
+        public void PlayerJoinGame(IPlayerSession session, bool silent = false)
         {
-            _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-player-join-game-message"));
+            if (!silent)
+                _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-player-join-game-message"));
 
             _playerGameStatuses[session.UserId] = PlayerGameStatus.JoinedGame;
             _db.AddRoundPlayers(RoundId, session.UserId);
@@ -156,7 +167,6 @@ namespace Content.Server.GameTicking
             RaiseNetworkEvent(new TickerJoinLobbyEvent(), client);
             RaiseNetworkEvent(GetStatusMsg(session), client);
             RaiseNetworkEvent(GetInfoMsg(), client);
-            RaiseNetworkEvent(GetPlayerStatus(), client);
             RaiseLocalEvent(new PlayerJoinedLobbyEvent(session));
         }
 

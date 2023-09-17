@@ -2,7 +2,7 @@
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesLady
   name: сапоги леди
-  description: Они довольно удобны, можете попробовать исполнить сальто
+  description: Они довольно удобны, можете попробовать исполнить сальто.
   components:
   - type: Sprite
     sprite: Andromeda/NIKforest/ladyboots.rsi

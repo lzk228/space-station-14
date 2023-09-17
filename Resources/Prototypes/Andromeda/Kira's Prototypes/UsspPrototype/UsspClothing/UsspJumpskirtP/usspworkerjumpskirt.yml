@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtUsspWorker
+  name: юбка-комбинезон рабочего СССП
+  description: Сделано из качественных недорогих материалов, во благо СССП!
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Clothing/usspRSI/usspworkerjumpskirt.rsi
+  - type: Clothing
+    sprite: Andromeda/MissKira/Clothing/usspRSI/usspworkerjumpskirt.rsi

@@ -1,6 +1,7 @@
 using Content.Shared.Corvax.TTS;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.Preferences; // Andromeda evil twin system
 using Robust.Shared.Enums;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -12,7 +13,7 @@ using static Content.Shared.Humanoid.HumanoidAppearanceState;
 namespace Content.Shared.Humanoid;
 
 [NetworkedComponent, RegisterComponent]
-public sealed class HumanoidAppearanceComponent : Component
+public sealed partial class HumanoidAppearanceComponent : Component
 {
     [DataField("markingSet")]
     public MarkingSet MarkingSet = new();
@@ -59,7 +60,7 @@ public sealed class HumanoidAppearanceComponent : Component
     ///     The initial profile and base layers to apply to this humanoid.
     /// </summary>
     [DataField("initial", customTypeSerializer: typeof(PrototypeIdSerializer<HumanoidProfilePrototype>))]
-    public string? Initial { get; }
+    public string? Initial { get; private set; }
 
     /// <summary>
     ///     Skin color of this humanoid.
@@ -96,10 +97,18 @@ public sealed class HumanoidAppearanceComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly)]
     public Color? CachedFacialHairColor;
+
+    // Andromeda evil twin: allow paradox anomalies to be cloned.
+    /// <summary>
+    ///     The last profile loaded onto this entity.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadOnly)]
+    public HumanoidCharacterProfile? LastProfileLoaded;
+    // End Andromeda code
 }
 
 [Serializable, NetSerializable]
-public sealed class HumanoidAppearanceState : ComponentState
+public sealed partial class HumanoidAppearanceState : ComponentState
 {
     public readonly MarkingSet Markings;
     public readonly HashSet<HumanoidVisualLayers> PermanentlyHidden;
@@ -141,7 +150,7 @@ public sealed class HumanoidAppearanceState : ComponentState
 
     [DataDefinition]
     [Serializable, NetSerializable]
-    public readonly struct CustomBaseLayerInfo
+    public readonly partial struct CustomBaseLayerInfo
     {
         public CustomBaseLayerInfo(string? id, Color? color = null)
         {

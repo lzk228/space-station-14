@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен стимпак
+  parent: ChemicalMedipen
+  id: MedipenStimulants
+  description: Специальный медипен для спецназа, содержит стимпак, даёт кратковременное усиление
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenLightStimpack
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 5
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 5
+  - type: Tag
+    tags: []

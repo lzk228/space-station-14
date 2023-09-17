@@ -1,0 +1,19 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorVestSponsor
+  name: легкий трофейный бронежилет
+  description: Стандартная броня, не сможет защитить от серьёзных ранений.
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/armorvestsponsor.rsi
+  - type: Clothing
+    sprite: Andromeda/NIKforest/armorvestsponsor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.9

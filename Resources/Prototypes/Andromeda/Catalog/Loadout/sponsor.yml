@@ -76,19 +76,25 @@
   id: ClothingHeadHatCueballLoadout
   entity: ClothingHeadHatCueball
   sponsorOnly: true
-  whitelistJobs: [ResearchDirector, Scientist]
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
 
 - type: loadout
   id: ClothingNeckHealerCloakLoadout
   entity: ClothingNeckHealerCloak
   sponsorOnly: true
-  whitelistJobs: [ChiefMedicalOfficer, MedicalDoctor, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, ChiefMedicalOfficer, MedicalDoctor, Chemist]
 
 - type: loadout
   id: ClothingNeckMinerCloakLoadout
   entity: ClothingNeckMinerCloak
   sponsorOnly: true
   whitelistJobs: [SalvageSpecialist, Quartermaster]
+
+- type: loadout
+  id: ClothingNeckCleanerCloakLoadout
+  entity: ClothingNeckCleanerCloak
+  sponsorOnly: true
+  whitelistJobs: [Janitor]
 
 # Zluka
 - type: loadout
@@ -111,12 +117,6 @@
   id: ClothingMaskSkullLoadoutZluka
   entity: ClothingMaskSkull
   sponsorOnly: true
-
-- type: loadout
-  id: ClothingNeckCleanerCloakLoadout
-  entity: ClothingNeckCleanerCloak
-  sponsorOnly: true
-  whitelistJobs: [Janitor]
 
 # Verslebas
 - type: loadout
@@ -146,37 +146,37 @@
   id: BluespaceBeakerLoadout
   entity: BluespaceBeaker
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
+  whitelistJobs: [Paramedic, SeniorPhysician, SeniorResearcher, MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
 
 - type: loadout
   id: ClothingEyesHudMedicalLoadout
   entity: ClothingEyesHudMedical
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingHandsGlovesNitrileLoadout
   entity: ClothingHandsGlovesNitrile
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingMaskBreathMedicalLoadout
   entity: ClothingMaskBreathMedical
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: ClothingHeadHatBeretBrigmedicLoadout
   entity: ClothingHeadHatBeretBrigmedic
   sponsorOnly: true
-  whitelistJobs: [MedicalDoctor, ChiefMedicalOfficer, Chemist]
+  whitelistJobs: [Paramedic, SeniorPhysician, MedicalDoctor, ChiefMedicalOfficer, Chemist]
 
 - type: loadout
   id: AnomalyLocatorLoadout
   entity: AnomalyLocator
   sponsorOnly: true
-  whitelistJobs: [ResearchDirector, Scientist]
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
 
 #Naik21
 - type: loadout
@@ -209,6 +209,12 @@
   sponsorOnly: true
   whitelistJobs: [ChiefMedicalOfficer]
 
+- type: loadout
+  id: ClothingOuterCoatHoSOvercoatLoadout
+  entity: ClothingOuterCoatHoSOvercoat
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, SeniorOfficer]
+
 #Ramsody
 - type: loadout
   id: DrugsBriefcaseFilledLoadout
@@ -233,18 +239,8 @@
   sponsorOnly: true
 
 - type: loadout
-  id: ClothingHeadHatUshankaLoadout
-  entity: ClothingHeadHatUshanka
-  sponsorOnly: true
-
-- type: loadout
   id: ClothingHandsGlovesLeatherUSSPBlackLoadout
   entity: ClothingHandsGlovesLeatherUSSPBlack
-  sponsorOnly: true
-
-- type: loadout
-  id: ClothingOuterCoatJensenLoadout
-  entity: ClothingOuterCoatJensen
   sponsorOnly: true
 
 - type: loadout
@@ -311,6 +307,18 @@
   entity: ElectricGuitarInstrument
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingOuterArmorVestSponsorLoadout
+  entity: ClothingOuterArmorVestSponsor
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
+- type: loadout
+  id: ClothingHeadHelmetHeavyAltynOldLoadout
+  entity: ClothingHeadHelmetHeavyAltynOld
+  sponsorOnly: true
+  whitelistJobs: [SalvageSpecialist]
+
 #PANDA1
 - type: loadout
   id: ClothingUniformJumpskirtJanimaidminiLoadout2
@@ -363,25 +371,237 @@
 
 #NIKForest
 - type: loadout
-  id: ClothingHandsGlovesColorBlackLoadout2
-  entity: ClothingHandsGlovesColorBlack
+  id: ClothingOuterArmorGoldCaptainCarapaceLoadout
+  entity: ClothingOuterArmorGoldCaptainCarapace
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
 
 - type: loadout
-  id: ClothingShoesBootsJackLoadout
-  entity: ClothingShoesBootsJack
+  id: ClothingBackpackGoldCaptainLoadout
+  entity: ClothingBackpackGoldCaptain
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
 
 - type: loadout
-  id: ClothingHeadHatOutlawHatLoadout
-  entity: ClothingHeadHatOutlawHat
+  id: ClothingShoesColorGoldBlackLoadout
+  entity: ClothingShoesColorGoldBlack
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
 
 - type: loadout
-  id: ClothingOuterCoatJensenLoadout2
-  entity: ClothingOuterCoatJensen
+  id: ClothingHandsGlovesGoldCaptainLoadout
+  entity: ClothingUniformJumpsuitUSSPBlack
   sponsorOnly: true
-  whitelistJobs: [Botanist]
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingHeadHatGoldCaptainLoadout
+  entity: ClothingHeadHatGoldCaptain
+  sponsorOnly: true
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingUniformJumpskirtGoldCaptainLoadout
+  entity: ClothingUniformJumpskirtGoldCaptain
+  sponsorOnly: true
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingUniformJumpsuitGoldCaptainLoadout
+  entity: ClothingUniformJumpsuitGoldCaptain
+  sponsorOnly: true
+  whitelistJobs: [Captain]
+
+- type: loadout
+  id: ClothingUniformJumpsuitKingStationLoadout
+  entity: ClothingUniformJumpsuitKingStation
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingBackpackKingStationLoadout
+  entity: ClothingBackpackKingStation
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingHeadHatKingStationLoadout
+  entity: ClothingHeadHatKingStation
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+#flopa2105 + ClothingBeltMilitaryWebbingLoadout
+- type: loadout
+  id: ClothingUnderSocksCoderLoadout
+  entity: ClothingUnderSocksCoder
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterWinterAtmosLoadout
+  entity: ClothingOuterWinterAtmos
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieNukeLoadout
+  entity: PlushieNuke
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHandsGlovesFingerlesssLoadout
+  entity: ClothingHandsGlovesFingerless
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckSyndicakePinLoadout
+  entity: ClothingNeckSyndicakePin
+  sponsorOnly: true
+
+- type: loadout
+  id: BedsheetCosmosLoadout
+  entity: BedsheetCosmos
+  sponsorOnly: true
+
+- type: loadout
+  id: AcousticGuitarInstrumentLoadout
+  entity: AcousticGuitarInstrument
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBackpackSatchelHoSSponsorLoadout
+  entity: ClothingBackpackSatchelHoSSponsor
+  sponsorOnly: true
+
+#fonky
+- type: loadout
+  id: ClothingOuterCoatGentleLoadout
+  entity: ClothingOuterCoatGentle
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpskirtTacticalMaidLoadout
+  entity: ClothingUniformJumpskirtTacticalMaid
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieLemirdLoadout
+  entity: PlushieLemird
+  sponsorOnly: true
+
+#JNON
+- type: loadout
+  id: WeaponRevolverDeckardLoadout
+  entity: WeaponRevolverDeckard
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]
+
+- type: loadout
+  id: ClothingOuterCoatSecurityOvercoatLoadout
+  entity: ClothingOuterCoatSecurityOvercoat
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]
+
+- type: loadout
+  id: CombatKnifeLoadout
+  entity: CombatKnife
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity, Detective]
+
+#Shan_Son
+- type: loadout
+  id: ClothingUniformJumpsuitSlavaVDVLoadout
+  entity: ClothingUniformJumpsuitSlavaVDV
+  sponsorOnly: true
+
+#razdacha
+- type: loadout
+  id: OldUSSPGlovesLoadout2
+  entity: ClothingHandsGlovesLeatherUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPCapLoadout2
+  entity: ClothingHeadHatCapUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPOvercoatLoadout2
+  entity: ClothingOuterCoatUSSPOvercoatBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPJumpsuitLoadout2
+  entity: ClothingUniformJumpsuitUSSPBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: OldUSSPShoesLoadout2
+  entity: ClothingShoesUSSPBlack
+  sponsorOnly: true
+
+#razdacha2
+- type: loadout
+  id: ClothingOuterAtmosianBomberJacketLoadout2
+  entity: ClothingOuterAtmosianBomberJacket
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingMaskGasAtmosianLoadout2
+  entity: ClothingMaskGasAtmosian
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingCloakAtmosianLoadout2
+  entity: ClothingCloakAtmosian
+  sponsorOnly: true
+
+#Radrigo
+- type: loadout
+  id: ClothingNeckCloakCeEliteLoadout
+  entity: ClothingNeckCloakCeElite
+  sponsorOnly: true
+  whitelistJobs: [ChiefEngineer]
+
+#sand_arh
+- type: loadout
+  id: PlushieLizardLoadout
+  entity: PlushieLizard
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieSpaceLizardLoadout
+  entity: PlushieSpaceLizard
+  sponsorOnly: true
+
+#STEFANICH
+- type: loadout
+  id: DrinkRumBottleFullLoadout
+  entity: DrinkRumBottleFull
+  sponsorOnly: true
+
+- type: loadout
+  id: CigarGoldCaseLoadout
+  entity: CigarGoldCase
+  sponsorOnly: true
+
+- type: loadout
+  id: FoodPizzaMargheritaLoadout
+  entity: FoodPizzaMargherita
+  sponsorOnly: true
+
+#CaxapoK
+
+- type: loadout
+  id: ToySwordLoadout
+  entity: ToySword
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatBeretRNDLoadout
+  entity: ClothingHeadHatBeretRND
+  sponsorOnly: true
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
+
+- type: loadout
+  id: ClothingHeadHatBizarreSoftLoadout
+  entity: ClothingHeadHatBizarreSoft
+  sponsorOnly: true

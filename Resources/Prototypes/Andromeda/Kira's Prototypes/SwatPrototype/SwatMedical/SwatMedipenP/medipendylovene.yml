@@ -1,0 +1,20 @@
+- type: entity
+  name: медипен диловена
+  parent: ChemicalMedipen
+  id: MedipenDylovene
+  description: Специальный медипен для спецназа, содержит диловен, лечит отравление
+  components:
+  - type: Sprite
+    sprite: Andromeda/MissKira/Medical/medipen.rsi
+    layers:
+    - state: medipenDylovene
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Dylovene
+          Quantity: 15
+  - type: Tag
+    tags: []

@@ -6,5 +6,6 @@ species-name-reptilian = Унатх
 species-name-slime = Слаймолюд
 species-name-diona = Диона
 species-name-arachnid = Арахнид
-species-name-moth = Моль
 species-name-felinid = Фелинид
+species-name-vulpkanin = Вульпканин
+species-name-moth = Ниан

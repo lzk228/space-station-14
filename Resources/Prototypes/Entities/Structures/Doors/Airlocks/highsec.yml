@@ -55,7 +55,6 @@
     denySound:
       path: /Audio/Machines/airlock_deny.ogg
   - type: Weldable
-    fuel: 10
     time: 10
   - type: Airlock
   - type: DoorBolt
@@ -69,7 +68,7 @@
     usesApcPower: true
   - type: WiresPanel
   - type: Wires
-    BoardName: "HighSec Control"
+    BoardName: wires-board-name-highsec
     LayoutId: HighSec
     alwaysRandomize: true
   - type: UserInterface

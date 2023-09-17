@@ -1,0 +1,53 @@
+## SPBsT Leader
+
+- type: entity
+  id: RandomHumanoidSpawnerSwatLeader
+  name: Лидер СПБсТ
+  components:
+    - type: Sprite
+      sprite: Andromeda/MissKira/Markers/jobs.rsi
+      state: SwatLeader
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstPoliceSwatLeader
+      - NamesLastPSWCallsign
+    - type: RandomHumanoidSpawner
+      settings: SwatLeaderSettings
+
+- type: randomHumanoidSettings
+  id: SwatLeaderSettings
+  randomizeName: false
+  components:
+    - type: GhostRole
+      name: Лидер СПБсТ
+      description: Вы - Элитный Боец спецназа НаноТразен, командир отряда СПБсТ.
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ SwatLeaderGear ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstPoliceSwatLeader
+      - NamesLastPSWCallsign
+
+- type: entity
+  id: RandomHumanoidSpawnerSwatLeaderEVA
+  parent: RandomHumanoidSpawnerSwatLeader
+  name: Лидер СПБсТ
+  suffix: EVA
+  components:
+    - type: Sprite
+      sprite: Andromeda/MissKira/Markers/jobs.rsi
+      state: SwatLeaderEVA
+    - type: RandomHumanoidSpawner
+      settings: SwatLeaderEVASettings
+
+- type: randomHumanoidSettings
+  id: SwatLeaderEVASettings
+  parent: SwatLeaderSettings
+  components:
+    - type: GhostRole
+      name: Лидер СПБсТ
+      description: Вы - Элитный Боец спецназа НаноТразен, командир отряда СПБсТ.
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ SwatLeaderGearEVA ]

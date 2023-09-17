@@ -38,7 +38,6 @@
   - type: MovementIgnoreGravity
   - type: Damageable
     damageContainer: Biological
-  - type: Appearance
   - type: Examiner
   - type: NoSlip
   - type: Actions
@@ -81,3 +80,5 @@
 #    - of
     - RevenantAdjective
     - RevenantTheme
+  - type: Speech
+    speechVerb: Ghost

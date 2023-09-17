@@ -86,6 +86,12 @@
       - PosterLegitEnlist # Corvax-Lore
       - PosterContrabandRevolt
       - PosterContrabandRise
+      - PosterContrabandMoth
+      - PosterContrabandCybersun600
+      - PosterContrabandDonk
+      - PosterContrabandEnlistGorlex
+      - PosterContrabandInterdyne
+      - PosterContrabandWaffleCorp
     chance: 1
 
 - type: entity
@@ -139,6 +145,8 @@
       - PosterLegitThereIsNoGasGiant
       - PosterLegitJustAWeekAway
       - PosterLegitSecWatch
-      - poster1_new
-      - poster2_new
+      - PosterLegitVacation
+      - PosterLegitPeriodicTable
+      - PosterLegitRenault
+      - PosterLegitNTTGC
     chance: 1

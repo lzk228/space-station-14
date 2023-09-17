@@ -1,0 +1,14 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeySwat
+  name: ключ шифрования СПБсТ
+  description: Положи туда, откуда взял, или тебя найдут.
+  components:
+    - type: EncryptionKey
+      channels:
+      - SPBsT
+      defaultChannel: SPBsT
+    - type: Sprite
+      layers:
+      - state: crypt_black
+      - state: nano_label

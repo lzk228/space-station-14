@@ -1,12 +1,12 @@
 using System.Linq;
+using System.Numerics;
 using Content.Server.Explosion.Components;
-using Content.Server.Mind.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.Explosion;
-using Content.Shared.FixedPoint;
 using Content.Shared.Maps;
+using Content.Shared.Mind.Components;
 using Content.Shared.Physics;
 using Content.Shared.Projectiles;
 using Content.Shared.Spawners.Components;
@@ -305,7 +305,7 @@ public sealed partial class ExplosionSystem : EntitySystem
         EntityQuery<TagComponent> tagQuery,
         EntityQuery<ProjectileComponent> projectileQuery)
     {
-        var gridBox = Box2.FromDimensions(tile * DefaultTileSize, (DefaultTileSize, DefaultTileSize));
+        var gridBox = Box2.FromDimensions(tile * DefaultTileSize, new Vector2(DefaultTileSize, DefaultTileSize));
         var worldBox = spaceMatrix.TransformBox(gridBox);
         var list = new List<TransformComponent>();
         var state = (list, processed, invSpaceMatrix, lookup.Owner, xformQuery, gridBox);
@@ -434,7 +434,6 @@ public sealed partial class ExplosionSystem : EntitySystem
                 physics,
                 xform,
                 projectileQuery,
-                tagQuery,
                 throwForce);
         }
 

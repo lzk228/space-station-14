@@ -10,5 +10,12 @@ roles-antag-suspicion-suspect-name = Подозреваемый
 roles-antag-suspicion-suspect-objective = Убейте невиновных.
 roles-antag-nuclear-operative-commander-name = Командир ядерных оперативников
 roles-antag-nuclear-operative-commander-objective = Приведите свой отряд к уничтожению станции.
+roles-antag-nuclear-operative-agent-name = Медик ядерных оперативников
+roles-antag-nuclear-operative-agent-objective = Как обычный оперативник, но с приоритетом на медпомощь отряду.
 roles-antag-nuclear-operative-name = Ядерный оперативник
 roles-antag-nuclear-operative-objective = Найдите ядерный диск и взорвите станцию.
+roles-antag-subverted-silicon-name = Взломанный борг
+roles-antag-subverted-silicon-objective = Следуйте своим новым законам и творите зло на станции.
+
+roles-antag-evil-twin-name = Парадоксальная аномалия
+roles-antag-evil-twin-description = Замените свою копию или подружитесь с ней.

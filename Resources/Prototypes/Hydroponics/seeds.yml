@@ -13,7 +13,7 @@
   yield: 3
   potency: 5
   idealLight: 8
-  nutrientConsumption: 0.15
+  nutrientConsumption: 0.40
   chemicals:
     Nutriment:
       Min: 1
@@ -53,7 +53,7 @@
   yield: 3
   potency: 5
   idealLight: 8
-  nutrientConsumption: 0.15
+  nutrientConsumption: 0.40
   chemicals:
     Nutriment:
       Min: 1
@@ -79,7 +79,7 @@
   production: 6
   yield: 2
   idealLight: 9
-  waterConsumption: 6
+  waterConsumption: 0.60
   idealHeat: 298
   slip: true
   chemicals:
@@ -107,7 +107,7 @@
   yield: 3
   potency: 10
   growthStages: 3
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     JuiceCarrot:
       Min: 1
@@ -266,7 +266,7 @@
   yield: 3
   potency: 10
   growthStages: 4
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     Nutriment:
       Min: 1
@@ -332,9 +332,10 @@
   yield: 5
   potency: 1
   growthStages: 3
-  waterConsumption: 6
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
   lightTolerance: 6
-  idealLight: 288
+  idealHeat: 288
 
 - type: seed
   id: tomato
@@ -351,8 +352,8 @@
   production: 6
   yield: 2
   potency: 10
-  waterConsumption: 6
-  nutrientConsumption: 0.25
+  waterConsumption: 0.60
+  nutrientConsumption: 0.40
   idealLight: 8
   idealHeat: 298
   juicy: true
@@ -498,7 +499,7 @@
   potency: 20
   growthStages: 3
   idealLight: 8
-  waterConsumption: 6
+  waterConsumption: 0.60
   idealHeat: 298
   chemicals:
     Nutriment:
@@ -526,7 +527,7 @@
   potency: 20
   growthStages: 3
   idealLight: 8
-  waterConsumption: 6
+  waterConsumption: 0.60
   idealHeat: 298
   chemicals:
     Nutriment:
@@ -558,7 +559,7 @@
   potency: 20
   growthStages: 3
   idealLight: 8
-  waterConsumption: 6
+  waterConsumption: 0.60
   idealHeat: 298
   chemicals:
     Nutriment:
@@ -590,7 +591,8 @@
   potency: 1
   growthStages: 3
   lightTolerance: 6
-  waterConsumption: 6
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
   idealHeat: 288
   chemicals:
     Nutriment:
@@ -620,6 +622,7 @@
   production: 12
   yield: 2
   potency: 20
+  nutrientConsumption: 0.50
   idealLight: 9
   idealHeat: 298
   chemicals:
@@ -652,6 +655,7 @@
   yield: 2
   potency: 20
   growthStages: 3
+  waterConsumption: 0.40
   idealLight: 9
   idealHeat: 298
   chemicals:
@@ -690,6 +694,7 @@
   yield: 2
   potency: 20
   growthStages: 3
+  waterConsumption: 0.40
   idealLight: 9
   idealHeat: 298
   chemicals:
@@ -714,7 +719,7 @@
   potency: 20
   growthStages: 5
   idealLight: 8
-  waterConsumption: 6
+  waterConsumption: 0.60
   idealHeat: 298
   chemicals:
     Histamine:
@@ -775,7 +780,7 @@
   yield: 3
   potency: 10
   growthStages: 3
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     Nutriment:
       Min: 1
@@ -801,7 +806,7 @@
   yield: 3
   potency: 10
   growthStages: 5
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     Aloe:
       Min: 1
@@ -827,7 +832,7 @@
   yield: 3
   potency: 10
   growthStages: 3
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     Ultravasculine:
       Min: 1
@@ -861,7 +866,7 @@
   yield: 3
   potency: 10
   growthStages: 6
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     Nutriment:
       Min: 1
@@ -899,7 +904,7 @@
   yield: 3
   potency: 10
   growthStages: 3
-  waterConsumption: 6
+  waterConsumption: 0.60
   chemicals:
     Stellibinin:
       Min: 1
@@ -928,7 +933,8 @@
   yield: 3
   potency: 10
   growthStages: 2
-  waterConsumption: 6
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
   chemicals:
     Amatoxin:
       Min: 1
@@ -981,7 +987,8 @@
   potency: 5
   growthStages: 3
   idealLight: 5
-  nutrientConsumption: 0.15
+  nutrientConsumption: 0.40
+  waterConsumption: 0.60
   chemicals:
     Nutriment:
       Min: 1
@@ -1008,7 +1015,7 @@
   yield: 3
   potency: 5
   idealLight: 7
-  nutrientConsumption: 0.15
+  nutrientConsumption: 0.40
   chemicals:
     Nutriment:
       Min: 1
@@ -1068,3 +1075,30 @@
       Min: 1
       Max: 5
       PotencyDivisor: 20
+
+- type: seed
+  id: cocoa
+  name: seeds-cocoa-name
+  noun: seeds-noun-seeds
+  displayName: seeds-cocoa-display-name
+  plantRsi: Objects/Specific/Hydroponics/cocoa.rsi
+  packetPrototype: CocoaSeeds
+  productPrototypes:
+    - FoodCocoaPod
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 6
+  idealLight: 7
+  waterConsumption: 6
+  idealHeat: 298
+  chemicals:
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+    Nutriment:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 50

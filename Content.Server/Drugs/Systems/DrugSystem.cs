@@ -3,6 +3,7 @@ using Content.Shared.Eye.Blinding;
 using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using System.Numerics;
 
 namespace Content.Server.Drugs.Systems;
 

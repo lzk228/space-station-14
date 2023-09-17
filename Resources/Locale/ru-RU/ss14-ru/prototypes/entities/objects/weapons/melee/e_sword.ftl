@@ -1,5 +1,5 @@
 ent-EnergySword = энергетический меч
-    .desc = Очень громкий, и столь же опасный. Выключенным может храниться в кармане.
+    .desc = Очень громкий и опасный меч с лучом чистой, концентрированной плазмы. Разрезает небронированные объекты как масло.
 ent-EnergyDagger = ручка
     .desc = Ручка с чёрными чернилами.
     .suffix = Энергокинжал
@@ -8,5 +8,5 @@ ent-EnergyDaggerBox = футляр энергокинжала
     .suffix = Энергокинжал
 ent-EnergyCutlass = абордажная энергосабля
     .desc = Экзотическое энергетическое оружие.
-ent-EnergySwordDouble = Double Bladed Energy Sword
-    .desc = Syndicate Command Interns thought that having one blade on the energy sword was not enough. This can be stored in pockets.
+ent-EnergySwordDouble = двухклинковый энергетический меч
+    .desc = Стажеры из командования Синдиката решили, что одного клинка на энергетическом мече недостаточно. Его можно хранить в кармане.
