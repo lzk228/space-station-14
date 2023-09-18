@@ -9,6 +9,7 @@
     state: icon
   - type: Item
     sprite: Andromeda/NIKforest/plushielemird.rsi
+    size: 30
   - type: ItemCooldown
   - type: EmitSoundOnUse
     sound: /Audio/Items/Toys/meow1.ogg
