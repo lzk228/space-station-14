@@ -36,7 +36,7 @@ public sealed class MutationSystem : EntitySystem
         }
 
         // Add up everything in the bits column and put the number here.
-        const int totalbits = 270;
+        const int totalbits = 265;
 
         // Tolerances (55)
         MutateFloat(ref seed.NutrientConsumption   , 0.05f , 1.2f , 5 , totalbits , severity);
@@ -113,7 +113,7 @@ public sealed class MutationSystem : EntitySystem
         CrossBool(ref result.Sentient, a.Sentient);
         CrossBool(ref result.Ligneous, a.Ligneous);
         CrossBool(ref result.Bioluminescent, a.Bioluminescent);
-        CrossBool(ref result.TurnIntoKudzu, a.TurnIntoKudzu);
+        //CrossBool(ref result.TurnIntoKudzu, a.TurnIntoKudzu);
         CrossBool(ref result.CanScream, a.CanScream);
         result.ExudeGasses = Random(0.5f) ? a.ExudeGasses : result.ExudeGasses;
         result.ConsumeGasses = Random(0.5f) ? a.ConsumeGasses : result.ConsumeGasses;
