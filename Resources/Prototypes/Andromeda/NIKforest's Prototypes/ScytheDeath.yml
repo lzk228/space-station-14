@@ -1,0 +1,24 @@
+- type: entity
+  name: коса смерти
+  parent: BaseItem
+  id: DeathScythe
+  description: Обычная сухая коряга на которой закрепили лезвие косы.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: /Andromeda/NIKforest/scythedeath.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 25
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: 50
+  - type: Clothing
+    sprite: /Andromeda/NIKforest/scythedeath.rsi
+    slots:
+    - back
+  - type: DisarmMalus
