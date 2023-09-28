@@ -15,7 +15,6 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Hands.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
-using Content.Shared.Maps;
 using Content.Shared.Popups;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Tag;
@@ -25,6 +24,8 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Content.Shared.Maps;
 
 namespace Content.Server.Botany.Systems;
 
@@ -318,9 +319,39 @@ public sealed class PlantHolderSystem : EntitySystem
         DoHarvest(uid, args.User, component);
     }
 
-    public void WeedInvasion()
+    // A-13 weeeeeeed
+    public void WeedInvasion(PlantHolderComponent component)
     {
-        // TODO
+        var transform = Transform(component.Owner);
+        var coords = transform.Coordinates;
+
+        foreach (var entity in coords.GetEntitiesInTile())
+        {
+            if (_tagSystem.HasTag(entity, "Weed"))
+                return;
+        }
+
+        if (component.MutationLevel > 15 && component.NutritionLevel > 20)
+        {
+            EntityManager.SpawnEntity("Kudzu", coords);
+            Logger.Info($"Spawning a Kudzu at {coords}");
+            component.MutationLevel -= 5;
+        }
+        else
+        {
+            EntityManager.SpawnEntity("OvergrownWeed", coords);
+            for (var i = 0; i < 4; i++)
+            {
+                if (_random.Prob(0.2f))
+                    continue;
+
+                var direction = (DirectionFlag) (1 << i);
+                coords = transform.Coordinates.Offset(direction.AsDir().ToVec());
+                EntityManager.SpawnEntity("OvergrownWeed", coords);
+            }
+        }
+
+        component.WeedLevel /= 3f;
     }
 
 
@@ -344,6 +375,7 @@ public sealed class PlantHolderSystem : EntitySystem
 
         component.LastCycle = curTime;
 
+        var mutationLevelMemory = component.MutationLevel;
         // Process mutations
         if (component.MutationLevel > 0)
         {
@@ -378,41 +410,16 @@ public sealed class PlantHolderSystem : EntitySystem
             component.Health = 0;
         }
 
-        public void WeedInvasion(PlantHolderComponent component)
+        // There's a chance for a weed explosion to happen if weeds take over.
+        // Plants that are themselves weeds (WeedTolerance > 8) are unaffected.
+        if (component.WeedLevel >= 10 && _random.Prob(0.1f))
         {
-            var transform = Transform(component.Owner);
-            var coords = transform.Coordinates;
-
-            foreach (var entity in coords.GetEntitiesInTile())
-            {
-                if (_tagSystem.HasTag(entity, "Weed"))
-                    return;
-            }
-
-            if (component.MutationLevel > 15 && component.NutritionLevel > 20)
-            {
-                EntityManager.SpawnEntity("Kudzu", coords);
-                Logger.Info($"Spawning a Kudzu at {coords}");
-                component.MutationLevel -= 5;
-            }
-            else
-            {
-                EntityManager.SpawnEntity("OvergrownWeed", coords);
-                for (var i = 0; i < 4; i++)
-                {
-                    if (_random.Prob(0.2f))
-                        continue;
-
-                    var direction = (DirectionFlag) (1 << i);
-                    coords = transform.Coordinates.Offset(direction.AsDir().ToVec());
-                    EntityManager.SpawnEntity("OvergrownWeed", coords);
-                }
-            }
-
-            component.WeedLevel /= 3f;
+            if (component.Seed == null || component.WeedLevel >= component.Seed.WeedTolerance + 2)
+                WeedInvasion(component);
         }
 
-        public void Update(EntityUid uid, PlantHolderComponent? component = null)
+        // If we have no seed planted, or the plant is dead, stop processing here.
+        if (component.Seed == null || component.Dead)
         {
             if (component.UpdateSpriteAfterUpdate)
                 UpdateSprite(uid, component);
@@ -440,13 +447,13 @@ public sealed class PlantHolderSystem : EntitySystem
             component.UpdateSpriteAfterUpdate = true;
         }
 
-            var mutationLevelMemory = component.MutationLevel;
-            // Process mutations
-            if (component.MutationLevel > 0)
-            {
-                Mutate(uid, Math.Min(component.MutationLevel, 25), component);
-                component.MutationLevel = 0;
-            }
+        // Nutrient consumption.
+        if (component.Seed.NutrientConsumption > 0 && component.NutritionLevel > 0 && _random.Prob(0.75f))
+        {
+            component.NutritionLevel -= MathF.Max(0f, component.Seed.NutrientConsumption * HydroponicsSpeedMultiplier);
+            if (component.DrawWarnings)
+                component.UpdateSpriteAfterUpdate = true;
+        }
 
         // Water consumption.
         if (component.Seed.WaterConsumption > 0 && component.WaterLevel > 0 && _random.Prob(0.75f))
@@ -475,8 +482,8 @@ public sealed class PlantHolderSystem : EntitySystem
             }
             else
             {
-                if (component.Seed == null || component.WeedLevel >= component.Seed.WeedTolerance + 2)
-                    WeedInvasion(component);
+                AffectGrowth(uid, -1, component);
+                component.Health -= healthMod;
             }
 
             if (component.DrawWarnings)
@@ -647,19 +654,15 @@ public sealed class PlantHolderSystem : EntitySystem
 
         CheckLevelSanity(uid, component);
 
-            if (component is { Harvest: true, Dead: false })
-                Evolve(uid, component, mutationLevelMemory);
+        if (component is { Harvest: true, Dead: false })
+            Evolve(uid, component, mutationLevelMemory);
 
-            if (component.Seed.Sentient)
-            {
-                var ghostRole = EnsureComp<GhostRoleComponent>(uid);
-                EnsureComp<GhostTakeoverAvailableComponent>(uid);
-                ghostRole.RoleName = MetaData(uid).EntityName;
-                ghostRole.RoleDescription = Loc.GetString("station-event-random-sentience-role-description", ("name", ghostRole.RoleName));
-            }
-
-            if (component.UpdateSpriteAfterUpdate)
-                UpdateSprite(uid, component);
+        if (component.Seed.Sentient)
+        {
+            var ghostRole = EnsureComp<GhostRoleComponent>(uid);
+            EnsureComp<GhostTakeoverAvailableComponent>(uid);
+            ghostRole.RoleName = MetaData(uid).EntityName;
+            ghostRole.RoleDescription = Loc.GetString("station-event-random-sentience-role-description", ("name", ghostRole.RoleName));
         }
 
         if (component.UpdateSpriteAfterUpdate)
@@ -882,6 +885,43 @@ public sealed class PlantHolderSystem : EntitySystem
         }
     }
 
+    // A-13 botany
+    private void Evolve(EntityUid uid, PlantHolderComponent? component = null, float mutationLevelMemory = 0)
+    {
+        if (!Resolve(uid, ref component))
+            return;
+
+        if (!_solutionSystem.TryGetSolution(uid, component.SoilSolutionName, out var solution))
+            return;
+
+        if (component.Seed != null)
+        {
+            EnsureUniqueSeed(uid, component);
+            foreach (var (seedId, seedEvolveConditions) in component.Seed.EvolveTable)
+            {
+                if (!_prototype.TryIndex(seedId, out SeedPrototype? protoSeed))
+                    continue;
+
+                if (component.Seed.Potency >= seedEvolveConditions.RequiredMinPotency &&
+                    component.Seed.Potency < seedEvolveConditions.RequiredMaxPotency &&
+                    component.Health >= seedEvolveConditions.RequiredMinHealth &&
+                    component.Health < seedEvolveConditions.RequiredMaxHealth &&
+                    mutationLevelMemory >= seedEvolveConditions.RequiredMutationLevel &&
+                    (seedEvolveConditions.Reagent == null || solution.ContainsPrototype(seedEvolveConditions.Reagent)))
+                {
+                    component.Seed = protoSeed;
+                    component.Dead = false;
+                    component.Age = (int)protoSeed.Maturation;
+                    component.Health = protoSeed.Endurance;
+                    component.LastCycle = _gameTiming.CurTime;
+
+                    component.UpdateSpriteAfterUpdate = true;
+                    return;
+                }
+            }
+        }
+    }
+
     public void UpdateSprite(EntityUid uid, PlantHolderComponent? component = null)
     {
         if (!Resolve(uid, ref component))
@@ -912,50 +952,7 @@ public sealed class PlantHolderSystem : EntitySystem
                 _appearance.SetData(uid, PlantHolderVisuals.HealthLight, component.Health <= component.Seed.Endurance / 2f);
             }
 
-        private void Evolve(EntityUid uid, PlantHolderComponent? component = null, float mutationLevelMemory = 0)
-        {
-            if (!Resolve(uid, ref component))
-                return;
-
-            if (!_solutionSystem.TryGetSolution(uid, component.SoilSolutionName, out var solution))
-                return;
-
-            if (component.Seed != null)
-            {
-                EnsureUniqueSeed(uid, component);
-                foreach (var (seedId, seedEvolveConditions) in component.Seed.EvolveTable)
-                {
-                    if (!_prototype.TryIndex(seedId, out SeedPrototype? protoSeed))
-                        continue;
-
-                    if (component.Seed.Potency >= seedEvolveConditions.RequiredMinPotency &&
-                        component.Seed.Potency < seedEvolveConditions.RequiredMaxPotency &&
-                        component.Health >= seedEvolveConditions.RequiredMinHealth &&
-                        component.Health < seedEvolveConditions.RequiredMaxHealth &&
-                        mutationLevelMemory >= seedEvolveConditions.RequiredMutationLevel &&
-                        (seedEvolveConditions.ReagentId == null || solution.ContainsReagent(seedEvolveConditions.ReagentId)))
-                    {
-                        component.Seed = protoSeed;
-                        component.Dead = false;
-                        component.Age = (int)protoSeed.Maturation;
-                        component.Health = protoSeed.Endurance;
-                        component.LastCycle = _gameTiming.CurTime;
-
-                        component.UpdateSpriteAfterUpdate = true;
-                        return;
-                    }
-                }
-            }
-        }
-
-        public void UpdateSprite(EntityUid uid, PlantHolderComponent? component = null)
-        {
-            if (!Resolve(uid, ref component))
-                return;
-
-            component.UpdateSpriteAfterUpdate = false;
-
-            if (component.Seed != null && component.Seed.Bioluminescent)
+            if (component.Dead)
             {
                 _appearance.SetData(uid, PlantHolderVisuals.PlantRsi, component.Seed.PlantRsi.ToString(), app);
                 _appearance.SetData(uid, PlantHolderVisuals.PlantState, "dead", app);

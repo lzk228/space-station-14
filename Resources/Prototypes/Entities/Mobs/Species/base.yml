@@ -138,7 +138,7 @@
     - TemporaryBlindness
     - Pacified
     - StaminaModifier
-    - Zoomium
+    #- Zoomium
     - CrazyRussianDrug
   - type: Reflect
     enabled: false

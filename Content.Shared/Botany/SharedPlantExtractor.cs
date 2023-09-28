@@ -1,5 +1,6 @@
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization;
 
@@ -58,11 +59,11 @@ namespace Content.Shared.Botany
     [Serializable, NetSerializable]
     public sealed class PlantExtractorReagentAmountButtonMessage : BoundUserInterfaceMessage
     {
-        public readonly string ReagentId;
+        public readonly ReagentId ReagentId;
         public readonly PlantExtractorReagentAmount Amount;
         public readonly bool FromBuffer;
 
-        public PlantExtractorReagentAmountButtonMessage(string reagentId, PlantExtractorReagentAmount amount, bool fromBuffer)
+        public PlantExtractorReagentAmountButtonMessage(ReagentId reagentId, PlantExtractorReagentAmount amount, bool fromBuffer)
         {
             ReagentId = reagentId;
             Amount = amount;
@@ -126,7 +127,7 @@ namespace Content.Shared.Botany
         /// <summary>
         /// A list of the reagents and their amounts within the buffer, if applicable.
         /// </summary>
-        public readonly IReadOnlyList<Solution.ReagentQuantity> BufferReagents;
+        public readonly IReadOnlyList<ReagentQuantity> BufferReagents;
         public readonly PlantExtractorMode Mode;
         public readonly FixedPoint2? BufferCurrentVolume;
         public bool IsBusy;
@@ -134,7 +135,7 @@ namespace Content.Shared.Botany
         public EntityUid[] ChamberContent;
 
         public PlantExtractorBoundUserInterfaceState(
-            PlantExtractorMode mode, ContainerInfo? beakerContainerInfo, IReadOnlyList<Solution.ReagentQuantity> bufferReagents, FixedPoint2 bufferCurrentVolume, bool isBusy, bool canExtract,
+            PlantExtractorMode mode, ContainerInfo? beakerContainerInfo, IReadOnlyList<ReagentQuantity> bufferReagents, FixedPoint2 bufferCurrentVolume, bool isBusy, bool canExtract,
             EntityUid[] chamberContent)
         {
             BeakerContainerInfo = beakerContainerInfo;

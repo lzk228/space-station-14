@@ -10,6 +10,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
+using Content.Shared.FixedPoint;
 
 
 namespace Content.Client.Botany.UI
@@ -138,20 +139,27 @@ namespace Content.Client.Botany.UI
                 }
             });
 
-            var contents = info.Contents
-                .Select(lineItem =>
-                {
-                    if (!info.HoldsReagents)
-                        return (lineItem.Id, lineItem.Id, lineItem.Quantity);
+            IEnumerable<(string Name, ReagentId Id, FixedPoint2 Quantity)> contents;
 
-                    // Try to get the prototype for the given reagent. This gives us its name.
-                    _prototypeManager.TryIndex(lineItem.Id, out ReagentPrototype? proto);
-                    var name = proto?.LocalizedName ?? Loc.GetString("plant-extractor-window-unknown-reagent-text");
-
-                    return (name, lineItem.Id, lineItem.Quantity);
-
-                })
-                .OrderBy(r => r.Item1);
+            if (info.Entities != null)
+            {
+                contents = info.Entities.Select(x => (x.Id, default(ReagentId), x.Quantity));
+            }
+            else if (info.Reagents != null)
+            {
+                contents = info.Reagents.Select(x =>
+                    {
+                        _prototypeManager.TryIndex(x.Reagent.Prototype, out ReagentPrototype? proto);
+                        var name = proto?.LocalizedName
+                                   ?? Loc.GetString("plant-extractor-window-unknown-reagent-text");
+                        return (name, Id: x.Reagent, x.Quantity);
+                    })
+                    .OrderBy(r => r.Item1);
+            }
+            else
+            {
+                return;
+            }
 
             foreach (var (name, id, quantity) in contents)
             {
@@ -211,10 +219,10 @@ namespace Content.Client.Botany.UI
             };
             bufferHBox.AddChild(bufferVol);
 
-            foreach (var reagent in state.BufferReagents)
+            foreach (var (reagent, quantity) in state.BufferReagents)
             {
                 // Try to get the prototype for the given reagent. This gives us its name.
-                _prototypeManager.TryIndex(reagent.ReagentId, out ReagentPrototype? proto);
+                _prototypeManager.TryIndex(reagent.Prototype, out ReagentPrototype? proto);
                 var name = proto?.LocalizedName ?? Loc.GetString("plant-extractor-window-unknown-reagent-text");
 
                 if (proto != null)
@@ -227,27 +235,27 @@ namespace Content.Client.Botany.UI
                             new Label {Text = $"{name}: "},
                             new Label
                             {
-                                Text = $"{reagent.Quantity}u",
+                                Text = $"{quantity}u",
                             },
 
                             // Padding
                             new Control {HorizontalExpand = true},
 
-                            MakeReagentButton("1", PlantExtractorReagentAmount.U1, reagent.ReagentId, true, "OpenRight"),
-                            MakeReagentButton("5", PlantExtractorReagentAmount.U5, reagent.ReagentId, true, "OpenBoth"),
-                            MakeReagentButton("10", PlantExtractorReagentAmount.U10, reagent.ReagentId, true, "OpenBoth"),
-                            MakeReagentButton("25", PlantExtractorReagentAmount.U25, reagent.ReagentId, true, "OpenBoth"),
-                            MakeReagentButton("33", PlantExtractorReagentAmount.U33, reagent.ReagentId, true, "OpenBoth"),
+                            MakeReagentButton("1", PlantExtractorReagentAmount.U1, reagent, true, "OpenRight"),
+                            MakeReagentButton("5", PlantExtractorReagentAmount.U5, reagent, true, "OpenBoth"),
+                            MakeReagentButton("10", PlantExtractorReagentAmount.U10, reagent, true, "OpenBoth"),
+                            MakeReagentButton("25", PlantExtractorReagentAmount.U25, reagent, true, "OpenBoth"),
+                            MakeReagentButton("33", PlantExtractorReagentAmount.U33, reagent, true, "OpenBoth"),
                             MakeReagentButton(
                             Loc.GetString("plant-extractor-window-buffer-all-amount"),
-                            PlantExtractorReagentAmount.All, reagent.ReagentId, true, "OpenLeft")
+                            PlantExtractorReagentAmount.All, reagent, true, "OpenLeft")
                         }
                     });
                 }
             }
         }
 
-        private ReagentButton MakeReagentButton(string text, PlantExtractorReagentAmount amount, string id, bool isBuffer, string styleClass)
+        private ReagentButton MakeReagentButton(string text, PlantExtractorReagentAmount amount, ReagentId id, bool isBuffer, string styleClass)
         {
             var button = new ReagentButton(text, amount, id, isBuffer, styleClass);
             button.OnPressed += args => OnReagentButtonPressed?.Invoke(args, button);
@@ -264,8 +272,8 @@ namespace Content.Client.Botany.UI
     {
         public PlantExtractorReagentAmount Amount { get; set; }
         public readonly bool IsBuffer;
-        public string Id { get; set; }
-        public ReagentButton(string text, PlantExtractorReagentAmount amount, string id, bool isBuffer, string styleClass)
+        public ReagentId Id { get; set; }
+        public ReagentButton(string text, PlantExtractorReagentAmount amount, ReagentId id, bool isBuffer, string styleClass)
         {
             Text = text;
             Amount = amount;

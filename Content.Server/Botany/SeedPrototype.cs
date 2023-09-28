@@ -69,7 +69,7 @@ public partial struct SeedEvolveConditions
     [DataField("requiredMinHealth")] public int RequiredMinHealth;
     [DataField("requiredMaxHealth")] public int RequiredMaxHealth;
     [DataField("requiredMutationLevel")] public int RequiredMutationLevel;
-    [DataField("requiredReagent")] public string? ReagentId;
+    [DataField("requiredReagent")] public string? Reagent;
 }
 
 // TODO reduce the number of friends to a reasonable level. Requires ECS-ing things like plant holder component.

@@ -19,6 +19,8 @@ using Content.Shared.Random.Helpers;
 using Robust.Shared.Timing;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
+using Content.Shared.Chemistry.Reagent;
+using Content.Shared.FixedPoint;
 
 namespace Content.Server.Botany.Systems
 {
@@ -180,7 +182,7 @@ namespace Content.Server.Botany.Systems
             ClickSound(component);
         }
 
-        private void TransferReagents(PlantExtractorComponent component, string reagentId, FixedPoint2 amount, bool fromBuffer)
+        private void TransferReagents(PlantExtractorComponent component, ReagentId id, FixedPoint2 amount, bool fromBuffer)
         {
             var container = _itemSlotsSystem.GetItemOrNull(component.Owner, SharedPlantExtractor.BeakerContainerId);
             if (container is null ||
@@ -193,26 +195,26 @@ namespace Content.Server.Botany.Systems
             if (fromBuffer) // Buffer to container
             {
                 amount = FixedPoint2.Min(amount, containerSolution.AvailableVolume);
-                amount = bufferSolution.RemoveReagent(reagentId, amount);
-                _solutionContainerSystem.TryAddReagent(container.Value, containerSolution, reagentId, amount, out var _);
+                amount = bufferSolution.RemoveReagent(id, amount);
+                _solutionContainerSystem.TryAddReagent(container.Value, containerSolution, id, amount, out var _);
             }
             else // Container to buffer
             {
-                amount = FixedPoint2.Min(amount, containerSolution.GetReagentQuantity(reagentId));
-                _solutionContainerSystem.TryRemoveReagent(container.Value, containerSolution, reagentId, amount);
-                bufferSolution.AddReagent(reagentId, amount);
+                amount = FixedPoint2.Min(amount, containerSolution.GetReagentQuantity(id));
+                _solutionContainerSystem.RemoveReagent(container.Value, containerSolution, id, amount);
+                bufferSolution.AddReagent(id, amount);
             }
 
             UpdateUiState(component);
         }
 
-        private void DiscardReagents(PlantExtractorComponent chemMaster, string reagentId, FixedPoint2 amount, bool fromBuffer)
+        private void DiscardReagents(PlantExtractorComponent chemMaster, ReagentId id, FixedPoint2 amount, bool fromBuffer)
         {
 
             if (fromBuffer)
             {
                 if (_solutionContainerSystem.TryGetSolution(chemMaster.Owner, SharedPlantExtractor.BufferId, out var bufferSolution))
-                    bufferSolution.RemoveReagent(reagentId, amount);
+                    bufferSolution.RemoveReagent(id, amount);
                 else
                     return;
             }
@@ -222,7 +224,7 @@ namespace Content.Server.Botany.Systems
                 if (container is not null &&
                     _solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSolution))
                 {
-                    _solutionContainerSystem.TryRemoveReagent(container.Value, containerSolution, reagentId, amount);
+                    _solutionContainerSystem.RemoveReagent(container.Value, containerSolution, id, amount);
                 }
                 else
                     return;
@@ -336,10 +338,10 @@ namespace Content.Server.Botany.Systems
 
         private static ContainerInfo BuildContainerInfo(string name, Solution solution)
         {
-            var reagents = solution.Contents
-                .Select(reagent => (reagent.ReagentId, reagent.Quantity)).ToList();
-
-            return new ContainerInfo(name, true, solution.Volume, solution.MaxVolume, reagents);
+            return new ContainerInfo(name, solution.Volume, solution.MaxVolume)
+            {
+                Reagents = solution.Contents
+            };
         }
 
         private bool CanExtract(EntityUid uid)

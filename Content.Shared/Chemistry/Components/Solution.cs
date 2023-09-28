@@ -492,7 +492,7 @@ namespace Content.Shared.Chemistry.Components
             return FixedPoint2.Zero;
         }
 
-        public bool IsBoiling(IPrototypeManager? protoMan)
+/*        public bool IsBoiling(IPrototypeManager? protoMan)
         {
             if (!CanBoil)
                 return false;
@@ -555,7 +555,7 @@ namespace Content.Shared.Chemistry.Components
             outSolution.ValidateSolution();
 
             return outSolution;
-        }
+        }*/
 
         /// <summary>
         ///     Attempts to remove an amount of reagent from the solution.
