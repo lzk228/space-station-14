@@ -357,7 +357,7 @@
       - MiniGravityGeneratorCircuitboard
       - GasRecyclerMachineCircuitboard
       - SeedExtractorMachineCircuitboard
-      - PlantExtractorMachineCircuitboard
+      #- PlantExtractorMachineCircuitboard
       - AnalysisComputerCircuitboard
       - ExosuitFabricatorMachineCircuitboard
       - AnomalyVesselCircuitboard
