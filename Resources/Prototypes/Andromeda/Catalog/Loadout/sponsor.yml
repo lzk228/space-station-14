@@ -660,6 +660,11 @@
   entity: FlashlightLanternPink
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingNeckCobraCloakLoadout
+  entity: ClothingNeckCobraCloak
+  sponsorOnly: true
+
 # AbramMoskov
 - type: loadout
   id: ClothingBackpackSatchelLeatherLoadout
