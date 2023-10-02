@@ -1,9 +1,9 @@
 ﻿using System.Linq;
+using Content.Client.Corvax.Sponsors;
 using Content.Client.Corvax.TTS;
 using Content.Shared.Corvax.TTS;
 using Content.Shared.Preferences;
 using Robust.Shared.Random;
-using Content.Corvax.Interfaces.Client;
 
 namespace Content.Client.Preferences.UI;
 
@@ -11,7 +11,6 @@ public sealed partial class HumanoidProfileEditor
 {
     private IRobustRandom _random = default!;
     private TTSSystem _ttsSys = default!;
-    private IClientSponsorsManager? _sponsorsMgr;
     private List<TTSVoicePrototype> _voiceList = default!;
     private readonly List<string> _sampleText = new()
     {
@@ -23,9 +22,6 @@ public sealed partial class HumanoidProfileEditor
 
     private void InitializeVoice()
     {
-        if (!IoCManager.Instance!.TryResolveType(out _sponsorsMgr))
-            return;
-
         _random = IoCManager.Resolve<IRobustRandom>();
         _ttsSys = _entMan.System<TTSSystem>();
         _voiceList = _prototypeManager
@@ -45,8 +41,7 @@ public sealed partial class HumanoidProfileEditor
 
     private void UpdateTTSVoicesControls()
     {
-        if (Profile is null ||
-            _sponsorsMgr is null)
+        if (Profile is null)
             return;
 
         _voiceButton.Clear();
@@ -65,7 +60,7 @@ public sealed partial class HumanoidProfileEditor
                 firstVoiceChoiceId = i;
 
             if (voice.SponsorOnly &&
-                _sponsorsMgr.TryGetInfo(out var sponsor) &&
+                IoCManager.Resolve<SponsorsManager>().TryGetInfo(out var sponsor) &&
                 !sponsor.AllowedMarkings.Contains(voice.ID))
             {
                 _voiceButton.SetItemDisabled(_voiceButton.GetIdx(i), true);
