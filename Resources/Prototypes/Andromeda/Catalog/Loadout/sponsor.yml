@@ -639,6 +639,41 @@
   entity: ClothingHeadHatBizarreSoft
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingNeckCloakPurpleFoxLoadout
+  entity: ClothingNeckCloakPurpleFox
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatUshankaLoadout
+  entity: ClothingHeadHatUshanka
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingEyesGlassesLoadout
+  entity: ClothingEyesGlasses
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingUniformJumpsuitFlannelLoadout
+  entity: ClothingUniformJumpsuitFlannel
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingOuterCoatBomberLoadout
+  entity: ClothingOuterCoatBomber
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingShoesColorRedLoadout
+  entity: ClothingShoesColorRed
+  sponsorOnly: true
+  whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
 # ilnaz
 - type: loadout
   id: SurvivalKnifeLoadout

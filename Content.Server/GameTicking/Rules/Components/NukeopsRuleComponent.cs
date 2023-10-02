@@ -20,7 +20,7 @@ public sealed partial class NukeopsRuleComponent : Component
     /// The minimum needed amount of players
     /// </summary>
     [DataField("minPlayers")]
-    public int MinPlayers = 35; // A-13
+    public int MinPlayers = 30;
 
     /// <summary>
     ///     This INCLUDES the operatives. So a value of 3 is satisfied by 2 players & 1 operative

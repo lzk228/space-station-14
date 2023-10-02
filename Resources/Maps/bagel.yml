@@ -7534,8 +7534,10 @@ entities:
             0: 34944
           -7,-13:
             0: 2184
+            2: 9984
           -6,-13:
             0: 36232
+            2: 512
           -5,-13:
             0: 36744
           -2,-20:
@@ -8183,6 +8185,7 @@ entities:
             0: 65535
           -7,-12:
             0: 44544
+            2: 34
           -6,-10:
             0: 39144
           13,-14:
@@ -9073,6 +9076,10 @@ entities:
             0: 32768
           -3,-20:
             0: 28672
+          -8,-13:
+            2: 3840
+          -9,-13:
+            2: 3584
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -47159,6 +47166,13 @@ entities:
   - uid: 13017
     components:
     - pos: -67.61676,9.687263
+      parent: 60
+      type: Transform
+- proto: CaptainIDCard
+  entities:
+  - uid: 18024
+    components:
+    - pos: -4.416507,-6.426585
       parent: 60
       type: Transform
 - proto: CarbonDioxideCanister
@@ -126914,6 +126928,13 @@ entities:
       pos: 25.5,-28.5
       parent: 60
       type: Transform
+- proto: SpawnMobGorillaLargo
+  entities:
+  - uid: 13102
+    components:
+    - pos: 45.5,13.5
+      parent: 60
+      type: Transform
 - proto: SpawnMobMcGriff
   entities:
   - uid: 4710
@@ -126965,13 +126986,6 @@ entities:
   - uid: 9220
     components:
     - pos: 40.5,-8.5
-      parent: 60
-      type: Transform
-- proto: SpawnMobRaccoonMorticia
-  entities:
-  - uid: 13102
-    components:
-    - pos: 45.5,13.5
       parent: 60
       type: Transform
 - proto: SpawnMobShiva
