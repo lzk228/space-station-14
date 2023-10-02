@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   name: коса смерти
   parent: BaseItem
   id: DeathScythe
