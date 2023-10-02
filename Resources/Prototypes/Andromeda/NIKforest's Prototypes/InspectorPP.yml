@@ -1,5 +1,6 @@
 - type: entity
   suffix: Андромеда
+  suffix: Андромеда
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitInspectorPP
   name: форма инспектора
