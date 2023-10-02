@@ -7,7 +7,7 @@
   components:
   - type: Sharp
   - type: Sprite
-    sprite: /Andromeda/NIKforest/scythedeath.rsi
+    sprite: Andromeda/NIKforest/scythedeath.rsi
     state: icon
   - type: MeleeWeapon
     attackRate: 1
@@ -19,7 +19,7 @@
   - type: Item
     size: 50
   - type: Clothing
-    sprite: /Andromeda/NIKforest/scythedeath.rsi
+    sprite: Andromeda/NIKforest/scythedeath.rsi
     slots:
     - back
   - type: DisarmMalus
