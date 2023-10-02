@@ -1,3 +1,4 @@
+using Content.Corvax.Interfaces.Server;
 using Content.Server.Database;
 using Content.Server.Players;
 using Content.Shared.GameTicking;
