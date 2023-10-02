@@ -1,4 +1,5 @@
 - type: entity
+  suffix: Андромеда
   id: ClothingBeltProParamedicFilled
   parent: ClothingBeltMedicalParamedic
   suffix: Filled
