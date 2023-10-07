@@ -8,11 +8,11 @@
   - Cluster
   - CorvaxDelta
 #  - Origin
+  - Kettle
+  - Meta
   - Marathon
   - Fland
   #- Core
-  - Meta
-  - Kettle
   - Omega
   - Saltern
   - Packed
