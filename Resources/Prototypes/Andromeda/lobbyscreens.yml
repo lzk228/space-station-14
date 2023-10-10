@@ -13,3 +13,7 @@
 - type: lobbyBackground
   id: ExplosiveKiss
   background: /Textures/Andromeda/LobbyScreens/explosive-kiss.png
+
+- type: lobbyBackground
+  id: NianaBeach
+  background: /Textures/Andromeda/LobbyScreens/niana_beach.png
