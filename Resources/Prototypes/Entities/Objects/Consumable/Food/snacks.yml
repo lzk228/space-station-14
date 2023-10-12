@@ -184,6 +184,9 @@
   - type: Item
   - type: Food
     trash: FoodPacketPistachioTrash
+  - type: Tag
+    tags:
+    - Fruit # Seed of a fruit, you can yell at me
 
 - type: entity
   name: popcorn
@@ -217,6 +220,9 @@
   - type: Item
   - type: Food
     trash: FoodPacketRaisinsTrash
+  - type: Tag
+    tags:
+    - Fruit
 
 - type: entity
   name: bob's semki sunflower seeds
@@ -247,6 +253,9 @@
   - type: Item
   - type: Food
     trash: FoodPacketSusTrash
+  - type: Tag
+    tags:
+    - Meat
 
 - type: entity
   name: syndi-cakes

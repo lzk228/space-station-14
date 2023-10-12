@@ -96051,9 +96051,12 @@ entities:
     - pos: -23.5,-11.5
       parent: 30
       type: Transform
-    - SecondsUntilStateChange: -6313.59
-      state: Closing
+    - state: Closed
       type: Door
+    - enabled: True
+      type: Occluder
+    - canCollide: True
+      type: Physics
   - uid: 21248
     components:
     - pos: -24.5,-11.5
@@ -115328,46 +115331,64 @@ entities:
   entities:
   - uid: 5472
     components:
+    - name: Gravity Generator SMES
+      type: MetaData
     - pos: 12.5,41.5
       parent: 30
       type: Transform
   - uid: 9496
     components:
+    - name: SMES Bank 3
+      type: MetaData
     - pos: -6.5,-34.5
       parent: 30
       type: Transform
   - uid: 9497
     components:
+    - name: SMES Bank 2
+      type: MetaData
     - pos: -7.5,-34.5
       parent: 30
       type: Transform
   - uid: 9498
     components:
+    - name: SMES Bank 1
+      type: MetaData
     - pos: -8.5,-34.5
       parent: 30
       type: Transform
   - uid: 15299
     components:
+    - name: East Solars SMES
+      type: MetaData
     - pos: 51.5,31.5
       parent: 30
       type: Transform
   - uid: 16277
     components:
+    - name: West Solars SMES
+      type: MetaData
     - pos: -65.5,44.5
       parent: 30
       type: Transform
   - uid: 18774
     components:
+    - name: Chapelroid SMES 2
+      type: MetaData
     - pos: -69.5,-63.5
       parent: 30
       type: Transform
   - uid: 18775
     components:
+    - name: Chapelroid SMES 1
+      type: MetaData
     - pos: -69.5,-62.5
       parent: 30
       type: Transform
   - uid: 20046
     components:
+    - name: AI SMES
+      type: MetaData
     - pos: -0.5,84.5
       parent: 30
       type: Transform
@@ -118044,6 +118065,8 @@ entities:
       type: Transform
   - uid: 5471
     components:
+    - name: Gravity Generator Substation
+      type: MetaData
     - pos: 12.5,42.5
       parent: 30
       type: Transform
@@ -118077,6 +118100,8 @@ entities:
       type: Transform
   - uid: 9570
     components:
+    - name: East Engineering Substation
+      type: MetaData
     - pos: 3.5,-37.5
       parent: 30
       type: Transform
@@ -118124,6 +118149,8 @@ entities:
       type: Transform
   - uid: 20154
     components:
+    - name: AI Substation
+      type: MetaData
     - pos: -1.5,84.5
       parent: 30
       type: Transform
@@ -118157,6 +118184,8 @@ entities:
   entities:
   - uid: 20336
     components:
+    - name: Bridge Wallmount Substation
+      type: MetaData
     - pos: -2.5,36.5
       parent: 30
       type: Transform

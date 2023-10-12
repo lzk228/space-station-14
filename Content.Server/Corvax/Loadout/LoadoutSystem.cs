@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Corvax.Sponsors;
 using Content.Server.GameTicking;
 using Content.Server.Hands.Systems;

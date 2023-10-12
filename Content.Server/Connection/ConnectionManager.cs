@@ -1,4 +1,4 @@
-﻿using System.Collections.Immutable;
+using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Content.Server.Corvax.Sponsors;
 using Content.Server.Database;
@@ -144,7 +144,7 @@ namespace Content.Server.Connection
             }
 
             // Corvax-Queue-Start
-            var isQueueEnabled = _cfg.GetCVar(CCCVars.QueueEnabled);
+            var isQueueEnabled = IoCManager.Instance!.TryResolveType<IServerJoinQueueManager>(out var mgr) && mgr.IsEnabled;
             if (_plyMgr.PlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !isPrivileged && !isQueueEnabled)
             // Corvax-Queue-End
             {
