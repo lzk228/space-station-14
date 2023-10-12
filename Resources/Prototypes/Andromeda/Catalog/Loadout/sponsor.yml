@@ -674,6 +674,11 @@
   sponsorOnly: true
   whitelistJobs: [Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
 
+- type: loadout
+  id: ClothingHeadHatCatEarsLoadout
+  entity: ClothingHeadHatCatEars
+  sponsorOnly: true
+
 # ilnaz
 - type: loadout
   id: SurvivalKnifeLoadout
