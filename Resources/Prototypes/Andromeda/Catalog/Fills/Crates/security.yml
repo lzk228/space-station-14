@@ -1,8 +1,0 @@
-- type: entity
-  id: CrateLoyaltyImplanter
-  parent: CrateSecgear
-  components:
-    - type: StorageFill
-      contents:
-        - id: LoyaltyImplanter
-          amount: 6

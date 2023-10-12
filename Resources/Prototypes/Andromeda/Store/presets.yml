@@ -1,7 +1,0 @@
-- type: storePreset
-  id: StorePresetUplinkRevolutionary
-  storeName: Uplink
-  categories:
-    - UplinkRevolutionary
-  currencyWhitelist:
-    - Telecrystal

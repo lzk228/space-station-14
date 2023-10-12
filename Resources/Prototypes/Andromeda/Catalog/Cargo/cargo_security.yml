@@ -1,9 +1,0 @@
-- type: cargoProduct
-  id: SecurityLoyaltyImplanter
-  icon:
-    sprite: Objects/Specific/Chemistry/syringe.rsi
-    state: syringe_base0
-  product: CrateLoyaltyImplanter
-  cost: 3000
-  category: Security
-  group: market
