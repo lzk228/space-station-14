@@ -64,8 +64,8 @@
           False: { visible: false }
   # Machine / Construction stuff
   - type: Wires
-    BoardName: "Plant Extractor"
-    LayoutId: PlantExtractor
+    boardName: "Plant Extractor"
+    layoutId: PlantExtractor
   - type: Machine
     board: PlantExtractorMachineCircuitboard
   - type: ContainerContainer
