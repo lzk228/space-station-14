@@ -40,8 +40,7 @@
     contents:
       - id: BoxSurvivalSecurity
       - id: Flash
-      - id: MagazinePistol
-      
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpackSatchelSecurity

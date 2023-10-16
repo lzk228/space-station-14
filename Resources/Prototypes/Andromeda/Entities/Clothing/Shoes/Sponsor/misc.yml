@@ -2,6 +2,7 @@
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesGildedCuffs # Wyvern
   name: позолоченные манжеты
+  suffix: Андромеда
   description: Красивые и золотистые.
   sponsorOnly: true
   components:

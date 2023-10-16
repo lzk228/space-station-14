@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatCrimsonCoat
+  name: алое модное пальто
+  suffix: Андромеда
+  description: Слегка устаревшее, но не потерявшее свой шарм и изыск пальто.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/OuterClothing/Coats/crimson_coat.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/OuterClothing/Coats/crimson_coat.rsi

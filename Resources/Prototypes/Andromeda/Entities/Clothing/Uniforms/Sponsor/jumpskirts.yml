@@ -2,6 +2,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformReallyBlackSuitSkirt # Wyvern
   name: шикарная чёрная юбка-комбинезон
+  suffix: Андромеда
   description: Шикарный женский костюм сшитый на заказ. Вызывает уважение!
   sponsorOnly: true
   components:
@@ -14,6 +15,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformCMOEliteSuitSkirt # Naik21
   name: юбка-комбинезон элитного Главного врача
+  suffix: Андромеда
   description: Кто сказал что главврачи не могут выглядеть восхитительно?
   sponsorOnly: true
   components:

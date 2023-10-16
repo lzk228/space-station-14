@@ -2,6 +2,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckBANCloak
   name: плащ предводителя клуба Б.А.Н.
+  suffix: Андромеда
   description: Его носит гордый лидер клуба Ботанических и Агрокультурных Нёрдов. Пахнет лимонкой.
   components:
   - type: Sprite
@@ -11,6 +12,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckHealerCloak
   name: торжественный плащ доктора
+  suffix: Андромеда
   description: Вручается самым выдающимся докторам. Не вызывает эпилепсию в 99.9% случаях.
   components:
   - type: Sprite
@@ -20,6 +22,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckMinerCloak
   name: торжественный плащ шахтёра
+  suffix: Андромеда
   description: Вручается самым выдающимся шахтёрам. Не переваривается космическими медведями.
   components:
   - type: Sprite
@@ -29,6 +32,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckCleanerCloak
   name: торжественный плащ уборщика
+  suffix: Андромеда
   description: Вручается самым выдающимся уборщикам. Убивает микробов в радиусе 13 метров от владельца.
   components:
   - type: Sprite
@@ -38,6 +42,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckSyndieCloak
   name: необычный синди-плащ
+  suffix: Андромеда
   description: Если долго всматриваться в букву "S", то можно увидеть оттенки 20 разных телекристаллов.
   components:
   - type: Sprite
@@ -52,3 +57,13 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/cobra_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakJapaneseCloak
+  name: японский плащ
+  suffix: Андромеда
+  description: Модный плащ, созданный в утонченном и прекрасном японском стиле.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/japanese_cloak.rsi

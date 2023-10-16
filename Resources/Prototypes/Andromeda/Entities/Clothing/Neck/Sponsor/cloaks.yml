@@ -2,6 +2,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckBlackCloak
   name: шикарный черный плащ
+  suffix: Андромеда
   description: Если долго вглядываться в этот плащ, он не начнет вглядываться в тебя. Вот досада!
   components:
   - type: Sprite
@@ -11,6 +12,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckGoldCMOCloak
   name: плащ элитного Главного врача
+  suffix: Андромеда
   description: Выдается самым ответственным и выдающимся главврачам. Пахнет хлоркой.
   components:
   - type: Sprite
@@ -20,6 +22,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckSalvageXenoCloak
   name: элитный плащ ксено-охотника
+  suffix: Андромеда
   description: Пропитан кровью и слезами ксеносов.
   components:
   - type: Sprite
@@ -29,6 +32,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakCeElite
   name: элитный плащ инженера
+  suffix: Андромеда
   description: Выдается самым ответственным и выдающимся инженерам. Пахнет сингулярностью.
   components:
   - type: Sprite

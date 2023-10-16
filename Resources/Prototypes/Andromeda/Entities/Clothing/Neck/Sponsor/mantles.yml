@@ -2,6 +2,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckRegalMantle # Wyvern
   name: королевская крылатая мантия
+  suffix: Андромеда
   description: Восхитительная мантия, сшитая на заказ. При создании не пострадала не одна виверна!
   sponsorOnly: true
   components:

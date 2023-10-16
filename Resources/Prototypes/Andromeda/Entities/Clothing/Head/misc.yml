@@ -2,6 +2,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatCueball
   name: экспериментальный голо-шар
+  suffix: Андромеда
   description: Процесс его создания держится в секрете. А вот практические свойства не являются тайной - их попросту нет.
   components:
   - type: Sprite

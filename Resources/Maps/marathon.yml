@@ -14390,7 +14390,7 @@ entities:
       type: Transform
   - uid: 5050
     components:
-    - pos: -22.598747,35.81358
+    - pos: -22.643522,35.88486
       parent: 30
       type: Transform
   - uid: 5615
@@ -42675,7 +42675,7 @@ entities:
   entities:
   - uid: 18695
     components:
-    - pos: -22.536247,35.297955
+    - pos: -22.526005,35.337986
       parent: 30
       type: Transform
 - proto: CarbonDioxideCanister
@@ -51139,6 +51139,13 @@ entities:
     - pos: -9.530638,-23.344732
       parent: 30
       type: Transform
+- proto: ClothingBackpackKingStation
+  entities:
+  - uid: 15999
+    components:
+    - pos: 18.637701,40.517326
+      parent: 30
+      type: Transform
 - proto: ClothingBeltHolster
   entities:
   - uid: 727
@@ -51583,6 +51590,13 @@ entities:
     - pos: -75.44205,-47.16231
       parent: 30
       type: Transform
+- proto: ClothingHeadHatKingStation
+  entities:
+  - uid: 18820
+    components:
+    - pos: 16.278326,39.8767
+      parent: 30
+      type: Transform
 - proto: ClothingHeadHatMimesoftFlipped
   entities:
   - uid: 665
@@ -51926,11 +51940,6 @@ entities:
   - uid: 728
     components:
     - pos: -7.5304756,16.469095
-      parent: 30
-      type: Transform
-  - uid: 15999
-    components:
-    - pos: 18.519112,40.5429
       parent: 30
       type: Transform
 - proto: ClothingNeckScarfStripedGreen
@@ -52623,6 +52632,13 @@ entities:
     - pos: -56.611008,39.67543
       parent: 30
       type: Transform
+- proto: ClothingUniformJumpsuitKingStation
+  entities:
+  - uid: 18827
+    components:
+    - pos: 16.715826,39.767326
+      parent: 30
+      type: Transform
 - proto: ClothingUniformJumpsuitMonasticRobeDark
   entities:
   - uid: 17660
@@ -52672,6 +52688,18 @@ entities:
       type: Transform
     - canCollide: False
       type: Physics
+- proto: ClothingUniformJumpsuitSlavaVDV
+  entities:
+  - uid: 18696
+    components:
+    - pos: 16.340826,36.81859
+      parent: 30
+      type: Transform
+  - uid: 18819
+    components:
+    - pos: 16.231451,36.459213
+      parent: 30
+      type: Transform
 - proto: ComfyChair
   entities:
   - uid: 458
@@ -101546,7 +101574,7 @@ entities:
       type: Transform
   - uid: 4978
     components:
-    - pos: -22.286247,36.00108
+    - pos: -22.307255,35.900486
       parent: 30
       type: Transform
   - uid: 5348

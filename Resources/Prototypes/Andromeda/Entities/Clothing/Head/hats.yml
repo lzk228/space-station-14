@@ -2,6 +2,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatEliteCMOBeret
   name: берет элитного Главного врача
+  suffix: Андромеда
   description: Красивый и хорошо сидит на голове красивого главврача.
   components:
   - type: Sprite
