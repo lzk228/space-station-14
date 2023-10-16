@@ -176,6 +176,18 @@
       collection: FelinidScreams
     Laugh:
       collection: FemaleLaugh
+    Giggle:
+      collection: FemaleLaugh
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
     Hiss:
       collection: FelinidHisses
       params:
@@ -196,6 +208,8 @@
       collection: FelinidPurrs
       params:
         volume: -6
+    DefaultDeathgasp:
+      collection: Deathgasp
 
 - type: emoteSounds
   id: MaleFelinid
@@ -206,6 +220,18 @@
       collection: FelinidScreams
     Laugh:
       collection: MaleLaugh
+    Giggle:
+      collection: MaleLaugh
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
     Hiss:
       collection: FelinidHisses
       params:
@@ -226,6 +252,8 @@
       collection: FelinidPurrs
       params:
         volume: -6
+    DefaultDeathgasp:
+      collection: Deathgasp
 
 - type: emoteSounds
   id: MaleVulpkanin
@@ -236,6 +264,20 @@
       path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
     Laugh:
       collection: MaleLaugh
+    Giggle:
+      collection: MaleLaugh
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    DefaultDeathgasp:
+      collection: Deathgasp
 
 - type: emoteSounds
   id: FemaleVulpkanin
@@ -246,6 +288,20 @@
       path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
     Laugh:
       collection: FemaleLaugh
+    Giggle:
+      collection: FemaleLaugh
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    DefaultDeathgasp:
+      collection: Deathgasp 
 
 - type: emoteSounds
   id: UnisexVox
