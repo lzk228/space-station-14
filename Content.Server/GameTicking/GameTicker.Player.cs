@@ -1,10 +1,10 @@
 using Content.Server.Database;
-using Content.Server.Players;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
 using JetBrains.Annotations;
+using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Enums;
@@ -22,6 +22,7 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+        [Dependency] private readonly ActorSystem _actor = default!;
 
         private void InitializePlayer()
         {
@@ -54,7 +55,7 @@ namespace Content.Server.GameTicking
                     // Always make sure the client has player data.
                     if (session.Data.ContentDataUncast == null)
                     {
-                        var data = new PlayerData(session.UserId, args.Session.Name);
+                        var data = new ContentPlayerData(session.UserId, args.Session.Name);
                         data.Mind = mindId;
                         session.Data.ContentDataUncast = data;
                     }
@@ -112,9 +113,16 @@ namespace Content.Server.GameTicking
                     }
                     else
                     {
-                        // Simply re-attach to existing entity.
-                        session.AttachToEntity(mind.CurrentEntity);
-                        PlayerJoinGame(session);
+                        if (_actor.Attach(mind.CurrentEntity, session))
+                        {
+                            PlayerJoinGame(session);
+                        }
+                        else
+                        {
+                            Log.Error(
+                                $"Failed to attach player {session} with mind {ToPrettyString(mindId)} to its current entity {ToPrettyString(mind.CurrentEntity)}");
+                            SpawnObserverWaitDb();
+                        }
                     }
                     break;
                 }
@@ -157,12 +165,12 @@ namespace Content.Server.GameTicking
             }
         }
 
-        private HumanoidCharacterProfile GetPlayerProfile(IPlayerSession p)
+        private HumanoidCharacterProfile GetPlayerProfile(ICommonSession p)
         {
             return (HumanoidCharacterProfile) _prefsManager.GetPreferences(p.UserId).SelectedCharacter;
         }
 
-        public void PlayerJoinGame(IPlayerSession session, bool silent = false)
+        public void PlayerJoinGame(ICommonSession session, bool silent = false)
         {
             if (!silent)
                 _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-player-join-game-message"));
@@ -173,7 +181,7 @@ namespace Content.Server.GameTicking
             RaiseNetworkEvent(new TickerJoinGameEvent(), session.ConnectedClient);
         }
 
-        private void PlayerJoinLobby(IPlayerSession session)
+        private void PlayerJoinLobby(ICommonSession session)
         {
             _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
             _db.AddRoundPlayers(RoundId, session.UserId);
@@ -193,9 +201,9 @@ namespace Content.Server.GameTicking
 
     public sealed class PlayerJoinedLobbyEvent : EntityEventArgs
     {
-        public readonly IPlayerSession PlayerSession;
+        public readonly ICommonSession PlayerSession;
 
-        public PlayerJoinedLobbyEvent(IPlayerSession playerSession)
+        public PlayerJoinedLobbyEvent(ICommonSession playerSession)
         {
             PlayerSession = playerSession;
         }

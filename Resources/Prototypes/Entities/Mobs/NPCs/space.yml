@@ -46,7 +46,6 @@
     heatDamageThreshold: 500
     coldDamageThreshold: 0
   - type: MeleeWeapon
-    hidden: true
     soundHit:
         path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     angle: 0
@@ -148,7 +147,6 @@
       100: Critical
       150: Dead
   - type: MeleeWeapon
-    hidden: true
     soundHit:
         path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     angle: 0
@@ -254,7 +252,6 @@
         layer:
         - MobLayer
   - type: MeleeWeapon
-    hidden: true
     soundHit:
       path: /Audio/Effects/bite.ogg
     angle: 0

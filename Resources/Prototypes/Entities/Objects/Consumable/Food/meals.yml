@@ -327,6 +327,8 @@
   id: FoodMealRibs
   description: BBQ ribs, slathered in a healthy coating of BBQ sauce. The least vegan thing to ever exist.
   components:
+  - type: Food
+    trash: FoodKebabSkewer
   - type: FlavorProfile
     flavors:
       - meaty
@@ -564,7 +566,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxvol: 65
+        maxVol: 65
         reagents:
         - ReagentId: Nutriment
           Quantity: 30
@@ -581,9 +583,9 @@
     - Fruit
 
 - type: entity
-  name: taco
+  name: soft taco
   parent: FoodMealBase
-  id: FoodMealTaco
+  id: FoodMealSoftTaco
   description: Take a bite!
   components:
   - type: FlavorProfile
@@ -593,10 +595,8 @@
       - meaty
       - onion
   - type: Sprite
-    state: taco
-  - type: Tag
-    tags:
-    - Meat
+    state: softtaco
+
 
 - type: entity
   name: corn in butter
