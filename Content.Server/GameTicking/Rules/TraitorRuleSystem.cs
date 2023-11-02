@@ -198,7 +198,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
             Log.Info("Insufficient ready players to fill up with traitors, stopping the selection.");
             return results;
         }
-		var sponsorPrefList = new List<IPlayerSession>();
+		var sponsorPrefList = new List<ICommonSession>();
 		foreach (var player in prefList)
         {
             if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service

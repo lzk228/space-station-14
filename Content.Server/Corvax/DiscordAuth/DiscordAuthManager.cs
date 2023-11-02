@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using Content.Shared.Corvax.CCCVars;
 using Content.Shared.Corvax.DiscordAuth;
 using JetBrains.Annotations;
-using Robust.Server.Player;
+using Robust.Shared.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
+using Robust.Server.GameObjects;
+using Robust.Server.Player;
 
 namespace Content.Server.Corvax.DiscordAuth;
 
@@ -33,7 +35,7 @@ public sealed class DiscordAuthManager
     /// <summary>
     ///     Raised when player passed verification or if feature disabled
     /// </summary>
-    public event EventHandler<IPlayerSession>? PlayerVerified;
+    public event EventHandler<ICommonSession>? PlayerVerified;
 
     public void Initialize()
     {

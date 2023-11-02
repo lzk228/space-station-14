@@ -30,12 +30,14 @@ public sealed class DrugOverlaySystem : EntitySystem
 
         SubscribeLocalEvent<CrazyRussianDrugComponent, ComponentInit>(OnInitSG);
         SubscribeLocalEvent<CrazyRussianDrugComponent, ComponentShutdown>(OnShutdownSG);
-        SubscribeLocalEvent<CrazyRussianDrugComponent, PlayerAttachedEvent>(OnPlayerAttachedSG);
-        SubscribeLocalEvent<CrazyRussianDrugComponent, PlayerDetachedEvent>(OnPlayerDetachedSG);
+        SubscribeLocalEvent<CrazyRussianDrugComponent, LocalPlayerAttachedEvent>(OnPlayerAttachedSG);
+        SubscribeLocalEvent<CrazyRussianDrugComponent, LocalPlayerDetachedEvent>(OnPlayerDetachedSG);
 
         _overlay = new();
         _mixedGrayscaleOverlay = new MixedGrayscaleOverlay();
     }
+
+    #region SeeingRainbow
 
     private void OnPlayerAttached(EntityUid uid, SeeingRainbowsComponent component, LocalPlayerAttachedEvent args)
     {
@@ -67,12 +69,12 @@ public sealed class DrugOverlaySystem : EntitySystem
 
     #region SeeingGray
 
-    private void OnPlayerAttachedSG(EntityUid uid, CrazyRussianDrugComponent component, PlayerAttachedEvent args)
+    private void OnPlayerAttachedSG(EntityUid uid, CrazyRussianDrugComponent component, LocalPlayerAttachedEvent args)
     {
         _overlayMan.AddOverlay(_mixedGrayscaleOverlay);
     }
 
-    private void OnPlayerDetachedSG(EntityUid uid, CrazyRussianDrugComponent component, PlayerDetachedEvent args)
+    private void OnPlayerDetachedSG(EntityUid uid, CrazyRussianDrugComponent component, LocalPlayerDetachedEvent args)
     {
         _mixedGrayscaleOverlay.Intoxication = 0;
         _overlayMan.RemoveOverlay(_mixedGrayscaleOverlay);

@@ -8,7 +8,7 @@ using Robust.Shared.Containers;
 using Content.Shared.Containers.ItemSlots;
 using Content.Server.Popups;
 using Robust.Server.GameObjects;
-using Content.Server.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Components;
 using System.Linq;
 using Content.Server.Kitchen.Components;
@@ -22,6 +22,7 @@ using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
+using Content.Shared.Random;
 
 namespace Content.Server.Andromeda.Botany.Systems
 {
@@ -40,6 +41,7 @@ namespace Content.Server.Andromeda.Botany.Systems
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly RandomHelperSystem _randomHelper = default!;
 
         public override void Initialize()
         {
@@ -68,9 +70,11 @@ namespace Content.Server.Andromeda.Botany.Systems
         {
             base.Update(frameTime);
 
-            foreach (var (activeComponent, component) in EntityQuery<ActivePlantExtractorComponent, PlantExtractorComponent>())
+            var query = EntityQueryEnumerator<ActivePlantExtractorComponent, PlantExtractorComponent>();
+            while (query.MoveNext(out var uid, out var activeComponent, out var component))
+            //foreach (var (activeComponent, component) in EntityQuery<ActivePlantExtractorComponent, PlantExtractorComponent>())
             {
-                var uid = component.Owner;
+                //var uid = component.Owner;
 
                 if (activeComponent.EndTime > _timing.CurTime)
                     continue;
@@ -289,7 +293,7 @@ namespace Content.Server.Andromeda.Botany.Systems
             foreach (var entity in inputContainer.ContainedEntities.ToList())
             {
                 inputContainer.Remove(entity);
-                entity.RandomOffset(0.4f);
+                _randomHelper.RandomOffset(entity, 0.4f);
             }
 
             UpdateUiState(uid);
@@ -306,7 +310,7 @@ namespace Content.Server.Andromeda.Botany.Systems
 
             if (inputContainer.Remove(ent))
             {
-                ent.RandomOffset(0.4f);
+                _randomHelper.RandomOffset(ent, 0.4f);
                 ClickSound(uid, component);
                 UpdateUiState(uid);
             }

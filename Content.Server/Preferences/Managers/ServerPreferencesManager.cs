@@ -238,11 +238,6 @@ namespace Content.Server.Preferences.Managers
             return maxSlots + extraSlots;
         }
         // Corvax-Sponsors-End
-        
-        public bool HavePreferencesLoaded(ICommonSession session)
-        {
-            return _cachedPlayerPrefs.ContainsKey(session.UserId);
-        }
 
 
         /// <summary>

@@ -612,9 +612,9 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             var cmdrPrefList = new List<ICommonSession>();
             var operatives = new List<ICommonSession>();
 
-			var listSponsors = new List<IPlayerSession>();
-			var listSponsorsMed = new List<IPlayerSession>();
-            var listSponsorsCmd = new List<IPlayerSession>();
+			var listSponsors = new List<ICommonSession>();
+			var listSponsorsMed = new List<ICommonSession>();
+            var listSponsorsCmd = new List<ICommonSession>();
 
             // The LINQ expression ReSharper keeps suggesting is completely unintelligible so I'm disabling it
             // ReSharper disable once ForeachCanBeConvertedToQueryUsingAnotherGetEnumerator
