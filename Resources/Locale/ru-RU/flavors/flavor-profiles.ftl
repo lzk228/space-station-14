@@ -165,7 +165,9 @@ flavor-complex-juice = как сок
 
 flavor-complex-rocksandstones = как скалы и камни
 flavor-complex-water = как вода
-flavor-complex-beer = как моча
+#A-13 Beer start
+flavor-complex-beer = как свежее и освежающее, с легкой горчинкой.
+#A-13 Beer end
 flavor-complex-ale = как хлеб
 flavor-complex-cola = как кола
 flavor-complex-vodka = как забродившее зерно

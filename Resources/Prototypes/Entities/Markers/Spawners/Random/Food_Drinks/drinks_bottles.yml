@@ -31,6 +31,9 @@
       - DrinkWineBottleFull
       - DrinkBeerBottleFull
       - DrinkAleBottleFull
+      - DrinkKvasBottleFull # A-13
+      - DrinkBeerLightBottleFull # A-13
+      - DrinkBeerDarkBottleFull # A-13
     chance: 0.8
     offset: 0.0
     #rare

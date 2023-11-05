@@ -34,3 +34,6 @@
     DrinkWhiskeyBottleFull: 5
     DrinkWineBottleFull: 5
     DrinkChampagneBottleFull: 2 #because the premium drink
+    DrinkKvasBottleFull: 4 #A-13
+    DrinkBeerLightBottleFull: 6 #A-13
+    DrinkBeerDarkBottleFull: 6 #A-13
