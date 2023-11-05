@@ -144,7 +144,7 @@
 # Flater312
 - type: loadout
   id: BluespaceBeakerLoadout
-  entity: BluespaceBeaker
+  entity: BluespaceBeakerSponsor
   sponsorOnly: true
   whitelistJobs: [Paramedic, SeniorPhysician, SeniorResearcher, MedicalDoctor, ChiefMedicalOfficer, Chemist, ResearchDirector, Scientist]
 
@@ -238,6 +238,18 @@
   entity: BananiumHorn
   sponsorOnly: true
   whitelistJobs: [Clown]
+
+- type: loadout
+  id: ClothingEyesBlindfoldLoadout
+  entity: ClothingEyesBlindfold
+  sponsorOnly: true
+  whitelistJobs: [Botanist]
+
+- type: loadout
+  id: BoxFolderClipboardLoadout
+  entity: BoxFolderClipboard
+  sponsorOnly: true
+  whitelistJobs: [Mime]
 
 #Ramsody
 - type: loadout
@@ -352,6 +364,12 @@
   id: ClothingUniformJumpsuitDetectiveGreyLoadout
   entity: ClothingUniformJumpsuitDetectiveGrey
   sponsorOnly: true
+
+- type: loadout
+  id: AdvMopItemLoadout
+  entity: AdvMopItem
+  sponsorOnly: true
+  whitelistJobs: [Janitor]
 
 #PANDA1
 - type: loadout
@@ -679,6 +697,11 @@
   entity: ClothingHeadHatCatEars
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingOuterCoatCrimsonCoatLoadout
+  entity: ClothingOuterCoatCrimsonCoat
+  sponsorOnly: true
+
 # ilnaz
 - type: loadout
   id: SurvivalKnifeLoadout
@@ -729,4 +752,36 @@
 - type: loadout
   id: ClothingUniformJumpsuitDetectiveLoadout
   entity: ClothingUniformJumpsuitDetective
+  sponsorOnly: true
+
+# Ganger7
+- type: loadout
+  id: ClothingNeckCloakBotanistCloakLoadout
+  entity: ClothingNeckCloakBotanistCloak
+  sponsorOnly: true
+
+#nekitsan
+- type: loadout
+  id: FoodSnackChocolateLoadout
+  entity: FoodSnackChocolate
+  sponsorOnly: true
+
+- type: loadout
+  id: DrinkLemonLimeCanLoadout
+  entity: DrinkLemonLimeCan
+  sponsorOnly: true
+
+- type: loadout
+  id: CigPackBlackLoadout
+  entity: CigPackBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: LighterLoadout
+  entity: Lighter
+  sponsorOnly: true
+
+- type: loadout
+  id: CrowbarRedLoadout
+  entity: CrowbarRed
   sponsorOnly: true

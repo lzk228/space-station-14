@@ -2,7 +2,7 @@
   suffix: Андромеда
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitCargoElite
-  name: Бронескафандр отдела снабжения
+  name: бронескафандр отдела снабжения
   description: С элитных миссий.
   components:
   - type: Sprite

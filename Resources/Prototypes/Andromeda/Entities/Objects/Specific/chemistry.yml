@@ -133,3 +133,21 @@
     fillBaseName: beakerlarge
   - type: StaticPrice
     price: 40
+
+- type: entity
+  name: прототип блюспейс мензурки
+  parent: BaseBeakerMetallic
+  description: Выдается хорошо зарекомендовавшим себя врачам и ученым. Но ходят слухи что есть и более улучшенные версии этой мензурки...
+  id: BluespaceBeakerSponsor
+  components:
+  - type: Spillable
+    solution: beaker
+  - type: Sprite
+    sprite: Andromeda/Objects/Specific/Chemistry/beaker_bluespace_sponsor.rsi
+    layers:
+      - state: beakerbluespace
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        canMix: true

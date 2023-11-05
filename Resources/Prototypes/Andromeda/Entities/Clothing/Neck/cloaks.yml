@@ -67,3 +67,31 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/japanese_cloak.rsi
+
+# Botanist cloak with hood START
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBotanistCloak
+  name: ботанический плащ
+  suffix: Андромеда
+  description: Плащ сделанный из натуральных листьев, надежно скрывающий владельца в гуще лесов. А? Где он?
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/botanist_cloak.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodBotanistCloak
+    requiredSlot:
+    - neck
+    slot: head
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodBotanistCloak
+  name: капюшон ботанического плаща
+  description: Капюшон ботанического плаща, позволяющий владельцу стать еще более незаметным и слиться с деревьями.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/botanist_cloak_hood.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Neck/Cloaks/botanist_cloak_hood.rsi
+# Botanist cloak with hood END
