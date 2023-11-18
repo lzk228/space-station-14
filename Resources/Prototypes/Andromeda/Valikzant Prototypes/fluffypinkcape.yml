@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckPinkFluffyCape
+  name: необычный пушистый ПЛАЩ НУ ПОЖАЛУЙСТА ДОБАВЬСЯЕ
+  suffix: Андромеда
+  description: Если долго всматриваться, то можно увидеть слёзы Valikzant'а.
+  components:
+  - type: Sprite
+    sprite: /Uploaded/fluffypinkcape.rsi
