@@ -1,9 +1,9 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckPinkFluffyCape
-  name: необычный пушистый ПЛАЩ НУ ПОЖАЛУЙСТА ДОБАВЬСЯЕ
+  name: пушистый розовый плащ
   suffix: Андромеда
-  description: Если долго всматриваться, то можно увидеть слёзы Valikzant'а.
+  description: Крайне пушистый и теплый розовый плащ, имеющий сзади значок в форме золотой лапы. 
   components:
   - type: Sprite
-    sprite: /Uploaded/fluffypinkcape.rsi
+    sprite: Andromeda/Valikzant/fluffypinkcape.rsi
