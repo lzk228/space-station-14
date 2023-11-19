@@ -371,6 +371,11 @@
   sponsorOnly: true
   whitelistJobs: [Janitor]
 
+- type: loadout
+  id: ClothingNeckChockerLoadout
+  entity: ClothingNeckChocker
+  sponsorOnly: true
+
 #PANDA1
 - type: loadout
   id: ClothingUniformJumpskirtJanimaidminiLoadout2
@@ -537,6 +542,21 @@
 - type: loadout
   id: PlushieLemirdLoadout
   entity: PlushieLemird
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitJournalistLoadout
+  entity: ClothingUniformJumpsuitJournalist
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatJensenLoadout
+  entity: ClothingOuterCoatJensen
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingEyesEyepatchLoadout
+  entity: ClothingEyesEyepatch
   sponsorOnly: true
 
 #JNON
@@ -784,4 +804,31 @@
 - type: loadout
   id: CrowbarRedLoadout
   entity: CrowbarRed
+  sponsorOnly: true
+
+#Kaelthas
+- type: loadout
+  id: ClothingShoesLeatherLoadout
+  entity: ClothingShoesLeather
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterSuitIanLoadout
+  entity: ClothingOuterSuitIan
+  sponsorOnly: true
+  whitelistJobs: [HeadOfPersonnel, Botanist, Bartender, Passenger, Janitor, ServiceWorker, Musician, Librarian, Reporter]
+
+- type: loadout
+  id: ClothingBackpackIanLoadout
+  entity: ClothingBackpackIan
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckNanoTrasenPinLoadout
+  entity: ClothingNeckNanoTrasenPin
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCloakIanCloakLoadout
+  entity: ClothingNeckCloakIanCloak
   sponsorOnly: true

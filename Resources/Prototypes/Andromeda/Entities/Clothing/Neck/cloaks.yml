@@ -95,3 +95,13 @@
   - type: Clothing
     sprite: Andromeda/Clothing/Neck/Cloaks/botanist_cloak_hood.rsi
 # Botanist cloak with hood END
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakIanCloak
+  name: плащ Иана
+  suffix: Андромеда
+  description: При создании плаща не пострадал не один Ианчик! Вуф!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/ian_cloak.rsi
