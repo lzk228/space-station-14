@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckPinkFluffyCape
+  name: пушистый розовый плащ
+  suffix: Андромеда
+  description: Крайне пушистый и теплый розовый плащ, имеющий сзади значок в форме золотой лапы. 
+  components:
+  - type: Sprite
+    sprite: Andromeda/Valikzant/fluffypinkcape.rsi
