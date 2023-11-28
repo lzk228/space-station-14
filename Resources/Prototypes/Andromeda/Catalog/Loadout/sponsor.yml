@@ -832,3 +832,63 @@
   id: ClothingNeckCloakIanCloakLoadout
   entity: ClothingNeckCloakIanCloak
   sponsorOnly: true
+
+#fomka_lomka
+- type: loadout
+  id: ClothingUniformJumpsuitScientistFormalLoadout
+  entity: ClothingUniformJumpsuitScientistFormal
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesBootsLaceupLoadout
+  entity: ClothingShoesBootsLaceup
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckPinkFluffyCapeLoadout
+  entity: ClothingNeckPinkFluffyCape
+  sponsorOnly: true
+
+#miifrii
+- type: loadout
+  id: ClothingUniformJumpskirtSyndieFormalDressLoadout
+  entity: ClothingUniformJumpskirtSyndieFormalDress
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckScarfStripedSyndieRedLoadout
+  entity: ClothingNeckScarfStripedSyndieRed
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingEyesGlassesChemicalLoadout
+  entity: ClothingEyesGlassesChemical
+  sponsorOnly: true
+  whitelistJobs: [Paramedic, SeniorPhysician, ChiefMedicalOfficer, MedicalDoctor, Chemist]
+
+- type: loadout
+  id: PenCentcomLoadout
+  entity: PenCentcom
+  sponsorOnly: true
+
+- type: loadout
+  id: RevolverCapGunLoadout
+  entity: RevolverCapGun
+  sponsorOnly: true
+
+- type: loadout
+  id: BoxCartridgeCapLoadout
+  entity: BoxCartridgeCap
+  sponsorOnly: true
+
+- type: loadout
+  id: RubberStampDeniedLoadout
+  entity: RubberStampDenied
+  sponsorOnly: true
+  whitelistJobs: [Quartermaster]
+
+- type: loadout
+  id: RubberStampApprovedLoadout
+  entity: RubberStampApproved
+  sponsorOnly: true
+  whitelistJobs: [Quartermaster]
