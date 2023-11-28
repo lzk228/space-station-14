@@ -16,13 +16,15 @@
     ClothingOuterPlagueSuit: 1
     ClothingMaskPlague: 1
     ClothingHeadsetService: 2
-    ClothingHandsWeddingRing: 2
-    bouquet: 1
-    ClothingHeadHatWeddingVeill: 2
-    ClothingUniformJumpskirtWeddingDress: 2
-    ClothingShoesWeddingShoes: 2
-    ClothingUniformWeddingtuxedo: 2
-    ClothingShoesWeddingGlaceups: 2
+    ClothingHandsWeddingRing: 2 // A-13
+    bouquet: 1 // A-13
+    ClothingHeadHatWeddingVeill: 2 // A-13
+    ClothingUniformJumpskirtWeddingDress: 2 // A-13
+    ClothingShoesWeddingShoes: 2 // A-13
+    ClothingUniformWeddingtuxedo: 2 // A-13
+    ClothingShoesWeddingGlaceups: 2 // A-13
+    BoxCandle: 2
+    BoxCandleSmall: 2
   emaggedInventory:
     ClothingOuterArmorCult: 1
     ClothingHeadHelmetCult: 1

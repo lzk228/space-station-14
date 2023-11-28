@@ -17,7 +17,7 @@
           Quantity: 5
   - type: DestroyableOnBoil
   - type: Item
-    size: 1
+    size: Tiny
 
 # Muffins/Buns
 

@@ -10,6 +10,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Utility;
 
+
 namespace Content.Server.GameTicking.Rules.Components;
 
 [RegisterComponent, Access(typeof(NukeopsRuleSystem), typeof(LoneOpsSpawnRule))]
@@ -58,8 +59,8 @@ public sealed partial class NukeopsRuleComponent : Component
     /// <summary>
     /// Time to emergency shuttle to arrive if RoundEndBehavior is ShuttleCall.
     /// </summary>
-    [DataField("evacShuttleTime")]
-    public TimeSpan EvacShuttleTime = TimeSpan.FromMinutes(5);
+    [DataField]
+    public TimeSpan EvacShuttleTime = TimeSpan.FromMinutes(3);
 
     /// <summary>
     /// Whether or not to spawn the nuclear operative outpost. Used by LoneOpsSpawn event.
@@ -135,6 +136,9 @@ public sealed partial class NukeopsRuleComponent : Component
 
     [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<DatasetPrototype>))]
     public string EliteNames = "SyndicateNamesElite";
+
+    [DataField]
+    public string OperationName = "Test Operation";
 
     [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<DatasetPrototype>))]
     public string NormalNames = "SyndicateNamesNormal";
