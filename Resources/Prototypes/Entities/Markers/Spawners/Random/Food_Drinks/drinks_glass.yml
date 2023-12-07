@@ -91,6 +91,8 @@
       - DrinkWineGlass
       - DrinkShakeBlue
       - DrinkShakeWhite
+      - DrinkTheMartinez
+      - DrinkMoonshineGlass
       - DrinkBeerLightglass # A-13
       - DrinkBeerDarkglass # A-13
     chance: 0.8

@@ -19,6 +19,12 @@ public sealed class CCCVars
     public static readonly CVarDef<bool>
         QueueEnabled = CVarDef.Create("queue.enabled", false, CVar.SERVERONLY);
 
+    /// <summary>
+    /// Deny any VPN connections.
+    /// </summary>
+    public static readonly CVarDef<bool> PanicBunkerDenyVPN =
+        CVarDef.Create("game.panic_bunker.deny_vpn", false, CVar.SERVERONLY);
+
     /**
      * Sponsors
      */

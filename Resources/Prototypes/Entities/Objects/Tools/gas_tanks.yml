@@ -36,6 +36,10 @@
     damage:
       types:
         Blunt: 10
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 10
   - type: PhysicalComposition
     materialComposition:
       Steel: 400
@@ -142,6 +146,10 @@
     damage:
       types:
         Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -183,6 +191,10 @@
     sprite: Objects/Tanks/emergency_double.rsi
   - type: MeleeWeapon
     attackRate: 0.9
+    damage:
+      types:
+        Blunt: 7.5
+  - type: DamageOtherOnHit
     damage:
       types:
         Blunt: 7.5

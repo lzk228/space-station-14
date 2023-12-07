@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
@@ -10,6 +11,7 @@ using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Database;
 using Content.Shared.Examine;
+using Content.Shared.Throwing;
 using Content.Shared.Toggleable;
 using Content.Shared.Verbs;
 using JetBrains.Annotations;
@@ -36,6 +38,7 @@ namespace Content.Server.Atmos.EntitySystems
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly SharedPhysicsSystem _physics = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] private readonly ThrowingSystem _throwing = default!;
 
         private const float TimerDelay = 0.5f;
         private float _timer = 0f;
@@ -175,9 +178,9 @@ namespace Content.Server.Atmos.EntitySystems
             {
                 _atmosphereSystem.Merge(environment, removed);
             }
-            var impulse = removed.TotalMoles * removed.Temperature;
-            _physics.ApplyLinearImpulse(gasTank, _random.NextAngle().ToWorldVec() * impulse);
-            _physics.ApplyAngularImpulse(gasTank, _random.NextFloat(-3f, 3f));
+            var strength = removed.TotalMoles * MathF.Sqrt(removed.Temperature);
+            var dir = _random.NextAngle().ToWorldVec();
+            _throwing.TryThrow(gasTank, dir * strength, strength);
             _audioSys.PlayPvs(gasTank.Comp.RuptureSound, gasTank);
         }
 

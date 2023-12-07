@@ -10,11 +10,12 @@
   - Cluster
   - CorvaxDelta
 # - Origin
+  - Gemini
   - Marathon
+  - Core
   - Meta
   - Fland
   - Kettle
-# - Core
   - Omega
   - Saltern
   - Packed
