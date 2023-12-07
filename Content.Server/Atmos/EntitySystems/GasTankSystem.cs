@@ -364,8 +364,7 @@ namespace Content.Server.Atmos.EntitySystems
 
             if (environment != null)
                 _atmosphereSystem.Merge(environment, tank.Air);
-
-            _audioSys.Play(tank.RuptureSound, Filter.Pvs(tank.Owner), Transform(tank.Owner).Coordinates, true, AudioParams.Default.WithVariation(0.125f));
+            _audioSys.PlayPvs(tank.RuptureSound, Transform(tank.Owner).Coordinates, AudioParams.Default.WithVariation(0.125f));
             _adminLogger.Add(LogType.CanisterPurged, LogImpact.Medium, $"Gas tank {ToPrettyString(uid):tank} purged its contents of {tank.Air:gas} into the environment.");
             tank.Air.Clear();
         }

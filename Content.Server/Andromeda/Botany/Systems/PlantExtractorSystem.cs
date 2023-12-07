@@ -13,6 +13,7 @@ using Content.Shared.Chemistry.Components;
 using System.Linq;
 using Content.Server.Kitchen.Components;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Interaction;
 using Content.Server.Power.EntitySystems;
@@ -23,6 +24,7 @@ using Robust.Shared.Prototypes;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Content.Shared.Random;
+using Robust.Server.Audio;
 
 namespace Content.Server.Andromeda.Botany.Systems
 {
@@ -79,7 +81,7 @@ namespace Content.Server.Andromeda.Botany.Systems
                 if (activeComponent.EndTime > _timing.CurTime)
                     continue;
 
-                component.AudioStream?.Stop();
+                component.AudioStream = _audioSystem.Stop(component.AudioStream);
                 RemCompDeferred<ActivePlantExtractorComponent>(uid);
 
                 var inputContainer = _containerSystem.EnsureContainer<Container>(uid, SharedPlantExtractor.InputContainerId);
@@ -326,7 +328,7 @@ namespace Content.Server.Andromeda.Botany.Systems
             var active = AddComp<ActivePlantExtractorComponent>(uid);
             active.EndTime = _timing.CurTime + component.WorkTime * component.WorkTimeMultiplier;
 
-            component.AudioStream = _audioSystem.PlayPvs(component.ExtractSound, uid, AudioParams.Default.WithPitchScale(1 / component.WorkTimeMultiplier));
+            component.AudioStream = _audioSystem.PlayPvs(component.ExtractSound, uid, AudioParams.Default.WithPitchScale(1 / component.WorkTimeMultiplier)).Value.Entity;
             _userInterfaceSystem.TrySendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkStartedMessage());
         }
         #endregion

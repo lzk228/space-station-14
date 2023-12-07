@@ -54,31 +54,31 @@
       Max: 15
       PotencyDivisor: 10
 
-- type: seed
-  id: cotton
-  name: seeds-cotton-name
-  noun: seeds-noun-seeds
-  displayName: seeds-cotton-display-name
-  plantRsi: Andromeda/Objects/Specific/Hydroponics/cotton.rsi
-  packetPrototype: CottonSeeds
-  productPrototypes:
-    - MaterialCotton1
-  harvestRepeat: Repeat
-  lifespan: 80
-  maturation: 15
-  production: 10
-  yield: 5
-  potency: 10
-  growthStages: 5
-  waterConsumption: 5
-  lightTolerance: 6
-  idealLight: 12
-  idealHeat: 300
-  chemicals:
-    Fiber:
-      Min: 2
-      Max: 10
-      PotencyDivisor: 10
+#- type: seed
+#  id: cotton
+#  name: seeds-cotton-name
+#  noun: seeds-noun-seeds
+#  displayName: seeds-cotton-display-name
+#  plantRsi: Andromeda/Objects/Specific/Hydroponics/cotton.rsi
+#  packetPrototype: CottonSeeds
+#  productPrototypes:
+#    - MaterialCotton1
+#  harvestRepeat: Repeat
+#  lifespan: 80
+#  maturation: 15
+#  production: 10
+#  yield: 5
+#  potency: 10
+#  growthStages: 5
+#  waterConsumption: 5
+#  lightTolerance: 6
+#  idealLight: 12
+#  idealHeat: 300
+#  chemicals:
+#    Fiber:
+#      Min: 2
+#      Max: 10
+#      PotencyDivisor: 10
 
 - type: seed
   id: slipperyblob
@@ -128,7 +128,7 @@
     Vinegar:
       Min: 5
       Max: 10
-      PotencyDivisor: 10  
+      PotencyDivisor: 10
     Potassium:
       Min: 5
       Max: 10

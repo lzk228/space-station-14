@@ -42,7 +42,7 @@ namespace Content.Server.Andromeda.Botany.Components
         [DataField("extractSound"), ViewVariables(VVAccess.ReadWrite)]
         public SoundSpecifier ExtractSound { get; set; } = new SoundPathSpecifier("/Audio/Machines/blender.ogg");
 
-        public IPlayingAudioStream? AudioStream;
+        public EntityUid? AudioStream;
     }
 
     [Access(typeof(PlantExtractorSystem)), RegisterComponent]

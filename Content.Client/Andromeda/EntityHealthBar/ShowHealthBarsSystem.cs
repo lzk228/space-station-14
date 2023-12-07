@@ -4,6 +4,7 @@ using Robust.Client.Player;
 using Robust.Client.Graphics;
 using Robust.Client.GameObjects;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Player;
 
 namespace Content.Client.Andromeda.EntityHealthBar
 {

@@ -4,9 +4,6 @@
 ent-DeathweedSeeds = пакет семян смертетрава
     .desc = Переполнено смертью.
     .suffix = { "" }
-ent-CottonSeeds = пакет семян хлопка
-    .desc = Незаменим в изготовлении такани.
-    .suffix = { "" }
 ent-SlipperyBlobSeeds = пакет семян жижевика
     .desc = Скользкие на вид.
     .suffix = { "" }
