@@ -10,8 +10,6 @@
     tags:
     - 9x18mm
     - Cartridge9x18mm
-  - type: Item
-    size: 1
   - type: SpaceGarbage
 
 - type: entity

@@ -10,8 +10,6 @@
     sprite: Andromeda/Clothing/OuterClothing/WinterCoats/swatmedicwintercoat.rsi
   - type: TemperatureProtection
     coefficient: 0.1
-  - type: Item
-    size: 40
   - type: Armor
     modifiers:
       coefficients:
@@ -21,8 +19,6 @@
         Heat: 0.75
   - type: ExplosionResistance
     damageCoefficient: 0.7
-  - type: Storage
-    capacity: 40
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

@@ -12,8 +12,6 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
-  - type: Item
-    size: 12
   - type: Clothing
     sprite: Andromeda/Lemird/makarov.rsi
     quickEquip: false

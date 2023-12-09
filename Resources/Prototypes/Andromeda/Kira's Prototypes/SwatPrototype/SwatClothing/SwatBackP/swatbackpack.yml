@@ -7,14 +7,14 @@
   - type: Sprite
     sprite: Andromeda/Clothing/Back/Backpacks/swatbackpack.rsi
     state: icon
-  - type: Item
-    size: 200
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,7,4
   - type: Clothing
     quickEquip: false
     slots:
     - back
-  - type: Storage
-    capacity: 200
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

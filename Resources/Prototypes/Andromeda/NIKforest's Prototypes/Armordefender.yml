@@ -2,7 +2,7 @@
   suffix: Андромеда
   parent: ClothingOuterBase
   id: ClothingOuterDefenderArmor
-  name: Тяжёлая броня рыцаря
+  name: тяжёлая броня рыцаря
   description: Очень бронированная тяжёлая броня, но за это пришлось платить весом и скоростью. На спине можно рассмотреть логотип НТ.
   components:
   - type: Sprite
@@ -12,10 +12,10 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.2
-        Slash: 0.1
-        Piercing: 0.1
-        poison: 0.1
+        Blunt: 0.6
+        Slash: 0.3
+        Piercing: 0.3
+        poison: 0.3
   - type: ClothingSpeedModifier
     walkModifier: 0.4
     sprintModifier: 0.8

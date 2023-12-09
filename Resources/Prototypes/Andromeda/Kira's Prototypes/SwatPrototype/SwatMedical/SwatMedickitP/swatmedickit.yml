@@ -9,6 +9,3 @@
     state: blackkit
   - type: Item
     heldPrefix: blackkit
-    size: 110
-  - type: Storage
-    capacity: 110

@@ -2,7 +2,7 @@
   suffix: Андромеда
   parent: ClothingHeadBase
   id: ClothingHeadHelmetDefenderHelmet
-  name: Тяжёлый шлем рыцаря
+  name: тяжёлый шлем рыцаря
   description: Очень прочный шлем, нужно быть большим и сильным что-бы надеть его. После этого шлема ваша шея будет долго болеть.
   components:
   - type: Sprite

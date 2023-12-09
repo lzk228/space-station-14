@@ -13,8 +13,6 @@
       tags:
         - Cartridge9x18mm
     capacity: 8
-  - type: Item
-    size: 5
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

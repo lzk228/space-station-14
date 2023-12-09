@@ -2,7 +2,7 @@
   suffix: Андромеда
   parent: ClothingHeadBase
   id: ClothingHeadHatRedRog
-  name: Ободок с рожками
+  name: ободок с рожками
   description: Вы теперь одеты как ЧЕРТ.
   components:
   - type: Sprite

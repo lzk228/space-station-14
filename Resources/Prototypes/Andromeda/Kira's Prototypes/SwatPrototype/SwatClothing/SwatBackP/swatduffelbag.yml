@@ -7,14 +7,14 @@
   - type: Sprite
     sprite: Andromeda/Clothing/Back/Duffels/swatduffelbag.rsi
     state: icon
-  - type: Item
-    size: 400
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,7,4
   - type: Clothing
     quickEquip: false
     slots:
     - back
-  - type: Storage
-    capacity: 400
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

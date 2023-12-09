@@ -10,7 +10,6 @@
     state: icon
   - type: Item
     sprite: Andromeda/Lemird/plushielemird.rsi
-    size: 25
   - type: ItemCooldown
   - type: EmitSoundOnUse
     sound:

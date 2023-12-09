@@ -2,7 +2,7 @@
   suffix: Андромеда
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitSummerFitnes
-  name: Фитнес костюм
+  name: фитнесс костюм
   description: Летний костюм для жаркой атмосферы, а также для фитнеса.
   components:
   - type: Sprite

@@ -9,9 +9,3 @@
     sprite: Andromeda/NIKforest/killercoat13th.rsi
   - type: Clothing
     sprite: Andromeda/NIKforest/killercoat13th.rsi
-  - type: Item
-    size: 15
-  - type: Storage
-    capacity: 15
-      
-        

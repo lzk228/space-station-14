@@ -1,6 +1,6 @@
 - type: entity
   suffix: Андромеда
-  name: Великий меч
+  name: великий меч
   parent: BaseItem
   id: GreatSword
   description: Обычно идёт в наборе с рыцарем. А может с ним что-то случилось?
@@ -13,12 +13,12 @@
     attackRate: 1
     damage:
       types:
-        Slash: 45
+        Slash: 25
         Structual: 20
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
-    size: 50
+    size: Normal
   - type: Clothing
     sprite: Andromeda/NIKforest/greatsword.rsi
     slots:

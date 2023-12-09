@@ -8,10 +8,4 @@
   - type: Sprite
     sprite: Andromeda/NIKforest/tradercoat.rsi
   - type: Clothing
-    sprite: Andromeda/NIKforest/tradercoat.rsi
-  - type: Item
-    size: 15
-  - type: Storage
-    capacity: 15
-      
-        
+    sprite: Andromeda/NIKforest/tradercoat.rsi  

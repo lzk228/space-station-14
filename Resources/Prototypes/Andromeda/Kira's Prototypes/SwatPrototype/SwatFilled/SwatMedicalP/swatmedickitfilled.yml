@@ -10,9 +10,6 @@
     state: blackkit
   - type: Item
     heldPrefix: blackkit
-    size: 110
-  - type: Storage
-    capacity: 100
   - type:  StorageFill
     contents:
       - id: HandheldHealthAnalyzer

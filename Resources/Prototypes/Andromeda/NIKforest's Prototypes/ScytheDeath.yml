@@ -17,7 +17,7 @@
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
-    size: 50
+    size: Normal
   - type: Clothing
     sprite: Andromeda/NIKforest/scythedeath.rsi
     slots:
