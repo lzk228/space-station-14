@@ -67,6 +67,7 @@ namespace Content.Server.IoC
             //IoCManager.Register<BansNotificationsSystem>(); // Andromeda BanNotification
             IoCManager.Register<PoissonDiskSampler>();
             IoCManager.Register<DiscordWebhook>();
+            IoCManager.Register<ServerDbEntryManager>();
         }
     }
 }

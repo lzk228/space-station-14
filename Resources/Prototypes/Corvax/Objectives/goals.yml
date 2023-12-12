@@ -22,6 +22,14 @@
   id: StationGoalZoo
   text: station-goal-zoo
 
+- type: stationGoal
+  id: StationGoalMiningOutpost
+  text: station-goal-mining-outpost
+
+- type: stationGoal
+  id: StationGoalContaintment
+  text: station-goal-containment
+
 #- type: stationGoal
 #  id: StationGoalSpaceZoo
 #  text: station-goal-space-zoo
