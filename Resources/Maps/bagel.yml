@@ -47302,9 +47302,9 @@ entities:
       type: Transform
 - proto: CaptainIDCard
   entities:
-  - uid: 19163
+  - uid: 23707
     components:
-    - pos: -4.4016995,-6.5059743
+    - pos: -4.4650254,-6.4908304
       parent: 60
       type: Transform
 - proto: CarbonDioxideCanister
@@ -57888,13 +57888,6 @@ entities:
     - pos: 38.489937,-12.380952
       parent: 60
       type: Transform
-- proto: ClothingBackpackKingStation
-  entities:
-  - uid: 24243
-    components:
-    - pos: -47.332134,25.473799
-      parent: 60
-      type: Transform
 - proto: ClothingBackpackMerc
   entities:
   - uid: 15191
@@ -58350,13 +58343,6 @@ entities:
     - pos: 6.7189946,-5.8832207
       parent: 60
       type: Transform
-- proto: ClothingHeadHatKingStation
-  entities:
-  - uid: 24230
-    components:
-    - pos: -47.22276,23.426924
-      parent: 60
-      type: Transform
 - proto: ClothingHeadHatPaper
   entities:
   - uid: 13642
@@ -58376,13 +58362,6 @@ entities:
   - uid: 2391
     components:
     - pos: 35.082077,-37.5101
-      parent: 60
-      type: Transform
-- proto: ClothingHeadHatRedRog
-  entities:
-  - uid: 24103
-    components:
-    - pos: -10.545783,-18.329142
       parent: 60
       type: Transform
 - proto: ClothingHeadHatRichard
@@ -59484,13 +59463,6 @@ entities:
     - pos: 37.53859,15.558934
       parent: 60
       type: Transform
-- proto: ClothingUniformJumpsuitKingStation
-  entities:
-  - uid: 24231
-    components:
-    - pos: -47.769634,23.723799
-      parent: 60
-      type: Transform
 - proto: ClothingUniformJumpsuitOperative
   entities:
   - uid: 8069
@@ -59514,18 +59486,6 @@ entities:
   - uid: 5761
     components:
     - pos: -53.451748,20.486347
-      parent: 60
-      type: Transform
-- proto: ClothingUniformJumpsuitSlavaVDV
-  entities:
-  - uid: 24180
-    components:
-    - pos: -53.894905,19.750402
-      parent: 60
-      type: Transform
-  - uid: 24186
-    components:
-    - pos: -54.16053,19.422277
       parent: 60
       type: Transform
 - proto: ClothingUniformOveralls

@@ -23,6 +23,9 @@ using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Server.Administration.Managers; // A-13 ghostrole bans
+using Content.Server.Chat.Managers; // A-13 ghostrole bans
+using Content.Shared.Chat; // A-13 ghostrole bans
 
 namespace Content.Server.Ghost.Roles
 {
@@ -37,6 +40,8 @@ namespace Content.Server.Ghost.Roles
         [Dependency] private readonly TransformSystem _transform = default!;
         [Dependency] private readonly SharedMindSystem _mindSystem = default!;
         [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
+        [Dependency] private readonly IBanManager _banManager = default!; // A-13 ghostrole bans
+        [Dependency] private readonly IChatManager _chat = default!; // A-13 ghostrole bans
 
         private uint _nextRoleIdentifier;
         private bool _needsUpdateGhostRoleCount = true;
@@ -390,6 +395,27 @@ namespace Content.Server.Ghost.Roles
                 args.TookRole = false;
                 return;
             }
+
+            // A-13 ghostrole ban start
+            var userId = args.Player.UserId;
+
+            if (_banManager.GetJobBans(userId) is {} bans && bans.Contains("GhostRole"))
+            {
+                if (!_playerManager.TryGetSessionById(userId, out var session))
+                {
+                    args.TookRole = false;
+                    return;
+                }
+
+                var msg = Loc.GetString("ghost-role-banned");
+                var wrappedMsg = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
+
+                _chat.ChatMessageToOne(ChatChannel.Server, msg, wrappedMsg, default, false, session.Channel, Color.Red);
+
+                args.TookRole = false;
+                return;
+            }
+            // A-13 ghostrole ban end
 
             ghostRole.Taken = true;
 

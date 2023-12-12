@@ -512,6 +512,16 @@
   categories:
   - UplinkUtility
 
+- type: listing
+  id: UplinkFFS
+  name: плата консоли системы опознавания Синдиката
+  description: Данная плата позволяет управлять параметрами опознавания шаттла. Незаменимая вещь если вы хотите угнать судно!
+  productEntity: ComputerIFFSyndicateCircuitboard
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkUtility
+
 # Implants
 
 - type: listing

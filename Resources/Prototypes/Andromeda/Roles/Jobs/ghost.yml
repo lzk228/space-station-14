@@ -1,0 +1,6 @@
+- type: job
+  id: GhostRole
+  playTimeTracker: JobGhostRole
+  name: Ghost role
+  description: Who you gonna call? GHOST BUSTERS!
+  canBeAntag: true

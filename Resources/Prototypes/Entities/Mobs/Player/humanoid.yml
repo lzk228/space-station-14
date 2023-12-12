@@ -59,6 +59,9 @@
     - type: GhostRole
       name: ghost-role-information-ert-leader-name
       description: ghost-role-information-ert-leader-description
+      requirements:
+      - !type:OverallPlaytimeRequirement
+        time: 144000 #A-13 ghostrole time (40 hours)
     - type: GhostTakeoverAvailable
     - type: Loadout
       prototypes: [ ERTLeaderGear ]
@@ -137,6 +140,9 @@
     - type: GhostRole
       name: ghost-role-information-ert-janitor-name
       description: ghost-role-information-ert-janitor-description
+      requirements:
+      - !type:OverallPlaytimeRequirement
+        time: 144000 #A-13 ghostrole time (40 hours)
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
@@ -195,6 +201,9 @@
     - type: GhostRole
       name: ghost-role-information-ert-engineer-name
       description: ghost-role-information-ert-engineer-description
+      requirements:
+      - !type:OverallPlaytimeRequirement
+        time: 144000 #A-13 ghostrole time (40 hours)
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
@@ -255,6 +264,9 @@
     - type: GhostRole
       name: ghost-role-information-ert-security-name
       description: ghost-role-information-ert-security-description
+      requirements:
+      - !type:OverallPlaytimeRequirement
+        time: 144000 #A-13 ghostrole time (40 hours)
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
@@ -333,6 +345,9 @@
     - type: GhostRole
       name: ghost-role-information-ert-medical-name
       description: ghost-role-information-ert-medical-description
+      requirements:
+      - !type:OverallPlaytimeRequirement
+        time: 144000 #A-13 ghostrole time (40 hours)
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
@@ -389,6 +404,9 @@
     - type: GhostRole
       name: ghost-role-information-cburn-agent-name
       description: ghost-role-information-cburn-agent-description
+      requirements:
+      - !type:OverallPlaytimeRequirement
+        time: 144000 #A-13 ghostrole time (40 hours)
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
