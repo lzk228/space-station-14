@@ -892,3 +892,40 @@
   entity: RubberStampApproved
   sponsorOnly: true
   whitelistJobs: [Quartermaster]
+
+#bongo_cu
+- type: loadout
+  id: ClothingHeadHatBunnyLoadout
+  entity: ClothingHeadHatBunny
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesSlippersLoadout
+  entity: ClothingShoesSlippers
+  sponsorOnly: true
+
+- type: loadout
+  id: GlowstickRedLoadout
+  entity: GlowstickRed
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHandsGlovesColorWhiteLoadout
+  entity: ClothingHandsGlovesColorWhite
+  sponsorOnly: true
+
+#smileo
+- type: loadout
+  id: ClothingHeadHatRedRogLoadout
+  entity: ClothingHeadHatRedRog
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatSpaceAssholeLoadout
+  entity: ClothingOuterCoatSpaceAsshole
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitAerostaticLoadout
+  entity: ClothingUniformJumpsuitAerostatic
+  sponsorOnly: true

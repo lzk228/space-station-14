@@ -1,15 +1,11 @@
 - type: entity
   suffix: Андромеда
-  parent: ClothingShoesStorageBase
+  parent: ClothingShoesMilitaryBase
   id: ClothingShoesBootsKiller
   name: старые ботинки
-  description: Очень противные на ощюпь.
+  description: Очень противные на ощупь.
   components:
   - type: Sprite
     sprite: Andromeda/NIKforest/killerboots.rsi
   - type: Clothing
     sprite: Andromeda/NIKforest/killerboots.rsi
-  - type: Storage
-    whitelist:
-      tags:
-        - Knife
