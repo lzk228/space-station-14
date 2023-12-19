@@ -216,11 +216,6 @@ public sealed partial class EncryptionKeySystem : EntitySystem
         {
             proto = _protoManager.Index<RadioChannelPrototype>(id);
 
-            // A-13 Syndi key stealth start
-            if (id != defaultChannel && proto.StealthChannel == true)
-                return;
-            // A-13 Syndi key stealth end
-
             var key = id == SharedChatSystem.CommonChannel
                 ? SharedChatSystem.RadioCommonPrefix.ToString()
                 : $"{SharedChatSystem.RadioChannelPrefix}{proto.KeyCode}";

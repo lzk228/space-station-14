@@ -17,7 +17,3 @@
 - type: lobbyBackground
   id: NianaBeach
   background: /Textures/Andromeda/LobbyScreens/niana_beach.png
-
-- type: lobbyBackground
-  id: SexyHOP
-  background: /Textures/Andromeda/LobbyScreens/sexy-hop.jpg

@@ -69,7 +69,6 @@
   frequency: 1213
   color: "#8f4a4b"
   longRange: true
-  stealthChannel: true # A-13 Syndi key stealth
 
 - type: radioChannel
   id: Handheld

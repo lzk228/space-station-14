@@ -35,12 +35,4 @@ public sealed partial class RadioChannelPrototype : IPrototype
     /// </summary>
     [DataField("longRange"), ViewVariables]
     public bool LongRange = false;
-
-    // A-13 Syndi key stealth start
-    /// <summary>
-    ///     Determines the visibility of the key during inspection
-    /// </summary>
-    [DataField("stealthChannel")]
-    public bool? StealthChannel = false;
-    // A-13 Syndi key stealth end
 }

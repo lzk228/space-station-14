@@ -4,18 +4,12 @@ using Content.Shared.Mobs;
 //using Content.Shared.Singularity.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
-using Content.Server.Administration;
-using Content.Server.Administration.Managers;
 
 namespace Content.Server.Administration.Systems;
 
 public sealed class AdminNotifySystem : EntitySystem
 {
     [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly IAdminManager _adminManager = default!;
 
     public override void Initialize()
     {
@@ -49,10 +43,6 @@ public sealed class AdminNotifySystem : EntitySystem
         }
 
         _chatManager.SendAdminAlert(message);
-        _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Andromeda/Effects/newplayerping.ogg"),
-            Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
-            audioParams: new AudioParams { Volume = -5f });
-
     }
 
     //private void OnSingularityConsumedEntity(EntityUid uid, ContainmentFieldGeneratorComponent component, EventHorizonConsumedEntityEvent ev)
