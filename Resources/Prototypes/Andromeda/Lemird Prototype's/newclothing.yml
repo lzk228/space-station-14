@@ -1,4 +1,16 @@
 - type: entity
+  parent: ClothingUniformJumpskirtFemaleJapaneSchoolBlue
+  id: ClothingUniformJumpskirtFemaleJapaneSchoolWhite
+  name: летняя японская школьная форма
+  description: Классический стиль японской школьной формы.
+  suffix: Андромеда
+  components:
+    - type: Sprite
+      sprite: Andromeda/Clothing/Uniforms/Jumpskirt/femalejapaneschoolwhite.rsi
+    - type: Clothing
+      sprite: Andromeda/Clothing/Uniforms/Jumpskirt/femalejapaneschoolwhite.rsi
+
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitStrangeBunny
   name: костюм зайчика

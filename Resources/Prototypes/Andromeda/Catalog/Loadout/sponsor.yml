@@ -929,3 +929,50 @@
   id: ClothingUniformJumpsuitAerostaticLoadout
   entity: ClothingUniformJumpsuitAerostatic
   sponsorOnly: true
+
+#HazardCloud
+- type: loadout
+  id: ClothingOuterAerostaticBomberJacketLoadout
+  entity: ClothingOuterAerostaticBomberJacket
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHandsGlovesCarpglovLoadout
+  entity: ClothingHandsGlovesCarpglov
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCloakCarpcloackLoadout
+  entity: ClothingNeckCloakCarpcloack
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingEyesBinoclardLensesLoadout
+  entity: ClothingEyesBinoclardLenses
+  sponsorOnly: true
+
+#Tomoko_Kuroki
+- type: loadout
+  id: ClothingHandsGlovesColorRedLoadout
+  entity: ClothingHandsGlovesColorRed
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatLabSecurityMedicLoadout
+  entity: ClothingOuterCoatLabSecurityMedic
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitSuperstarCopLoadout
+  entity: ClothingUniformJumpsuitSuperstarCop
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBackpackDuffelSalvageLoadout
+  entity: ClothingBackpackDuffelSalvage
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBeltHolsterLoadout
+  entity: ClothingBeltHolster
+  sponsorOnly: true
