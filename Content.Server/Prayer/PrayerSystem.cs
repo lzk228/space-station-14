@@ -10,6 +10,9 @@ using Content.Shared.Prayer;
 using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
+using Robust.Shared.Audio; // A-13 We Hear All Prayers
+using Robust.Shared.Audio.Systems; // A-13 We Hear All Prayers
+using Content.Server.Administration.Managers; // A-13 We Hear All Prayers
 
 namespace Content.Server.Prayer;
 /// <summary>
@@ -24,6 +27,9 @@ public sealed class PrayerSystem : EntitySystem
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
+    [Dependency] private readonly SharedAudioSystem _audioSystem = default!; // A-13 We Hear All Prayers
+    [Dependency] private readonly IAdminManager _adminManager = default!; // A-13 We Hear All Prayers
+
 
     public override void Initialize()
     {
@@ -103,6 +109,7 @@ public sealed class PrayerSystem : EntitySystem
         _popupSystem.PopupEntity(Loc.GetString(comp.SentMessage), sender.AttachedEntity.Value, sender, PopupType.Medium);
 
         _chatManager.SendAdminAnnouncement($"{Loc.GetString(comp.NotificationPrefix)} <{sender.Name}>: {message}");
+        _audioSystem.PlayGlobal("/Audio/Machines/high_tech_confirm.ogg", Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false, AudioParams.Default.WithVolume(-8f)); // A-13 We Hear All Prayers
         _adminLogger.Add(LogType.AdminMessage, LogImpact.Low, $"{ToPrettyString(sender.AttachedEntity.Value):player} sent prayer ({Loc.GetString(comp.NotificationPrefix)}): {message}");
     }
 }
