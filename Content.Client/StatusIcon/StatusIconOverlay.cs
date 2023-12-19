@@ -29,7 +29,7 @@ public sealed class StatusIconOverlay : Overlay
         _transform = _entity.System<TransformSystem>();
         _statusIcon = _entity.System<StatusIconSystem>();
 
-        _shader = _prototype.Index<ShaderPrototype>("unshaded").Instance();
+        _shader = _prototype.Index<ShaderPrototype>("shaded").Instance(); // A-13 Shaded HUD
     }
 
     protected override void Draw(in OverlayDrawArgs args)

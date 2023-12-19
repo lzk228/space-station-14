@@ -81,15 +81,17 @@ public sealed class StealthSystem : SharedStealthSystem
         var parentXform = Transform(parent);
         var reference = args.Viewport.WorldToLocal(parentXform.WorldPosition);
         reference.X = -reference.X;
-        var visibility = GetVisibility(uid, component);
+        // A-13 Stealth Rework start
+        var originalVisibility = GetVisibility(uid, component);
 
-        // actual visual visibility effect is limited to +/- 1.
-        visibility = Math.Clamp(visibility, -1f, 1f);
+		    // actual visual visibility effect is limited to +/- 1.
+        var visibility = Math.Clamp(originalVisibility, -1f, 1f);
+        // A-13 Stealth Rework end
 
         _shader.SetParameter("reference", reference);
         _shader.SetParameter("visibility", visibility);
 
         visibility = MathF.Max(0, visibility);
-        args.Sprite.Color = new Color(visibility, visibility, 1, 1);
+        args.Sprite.Color = new Color(visibility, visibility, visibility, 1); // A-13 Stealth Rework
     }
 }

@@ -14529,7 +14529,7 @@ entities:
   entities:
   - uid: 5050
     components:
-    - pos: -22.715,35.943394
+    - pos: -22.69485,35.914078
       parent: 30
       type: Transform
   - uid: 9318
@@ -42807,9 +42807,9 @@ entities:
       type: Transform
 - proto: CaptainIDCard
   entities:
-  - uid: 18846
+  - uid: 19494
     components:
-    - pos: -22.524725,35.412144
+    - pos: -22.5386,35.304703
       parent: 30
       type: Transform
 - proto: CarbonDioxideCanister
@@ -52737,7 +52737,7 @@ entities:
   entities:
   - uid: 19764
     components:
-    - pos: -17.516373,23.48914
+    - pos: -17.507723,23.466288
       parent: 30
       type: Transform
 - proto: ClothingUniformJumpskirtColorBlack
@@ -101752,7 +101752,7 @@ entities:
       type: Transform
   - uid: 4978
     components:
-    - pos: -22.337225,35.99027
+    - pos: -22.272976,35.945328
       parent: 30
       type: Transform
   - uid: 5348
@@ -117054,6 +117054,13 @@ entities:
     - pos: -16.5,14.5
       parent: 30
       type: Transform
+- proto: SpawnMobGorillaLargo
+  entities:
+  - uid: 8383
+    components:
+    - pos: 26.5,1.5
+      parent: 30
+      type: Transform
 - proto: SpawnMobKangarooWillow
   entities:
   - uid: 10987
@@ -117108,13 +117115,6 @@ entities:
   - uid: 6921
     components:
     - pos: -22.5,-5.5
-      parent: 30
-      type: Transform
-- proto: SpawnMobRaccoonMorticia
-  entities:
-  - uid: 8383
-    components:
-    - pos: 26.5,1.5
       parent: 30
       type: Transform
 - proto: SpawnMobShiva
