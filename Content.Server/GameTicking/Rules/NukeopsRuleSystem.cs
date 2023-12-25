@@ -622,8 +622,8 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             var cmdrPrefList = new List<ICommonSession>();
             var operatives = new List<ICommonSession>();
 
-			var listSponsors = new List<ICommonSession>();
-			var listSponsorsMed = new List<ICommonSession>();
+			      var listSponsors = new List<ICommonSession>();
+			      var listSponsorsMed = new List<ICommonSession>();
             var listSponsorsCmd = new List<ICommonSession>();
 
             // The LINQ expression ReSharper keeps suggesting is completely unintelligible so I'm disabling it
@@ -639,26 +639,26 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 if (profile.AntagPreferences.Contains(nukeops.OperativeRoleProto.Id))
                 {
                     prefList.Add(player);
-                    if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-                    {
-                        listSponsors.Add(player);
-                    }
+                    //if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    //{
+                    listSponsors.Add(player);
+                    //}
                 }
                 if (profile.AntagPreferences.Contains(nukeops.MedicRoleProto.Id))
 	            {
 	                medPrefList.Add(player);
-					if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-                    {
-                        listSponsorsMed.Add(player);
-                    }
+					//if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    //{
+                  listSponsorsMed.Add(player);
+                    //}
 	            }
                 if (profile.AntagPreferences.Contains(nukeops.CommanderRoleProto.Id))
                 {
                     cmdrPrefList.Add(player);
-                    if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-                    {
-                        listSponsorsCmd.Add(player);
-                    }
+                    //if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    //{
+                    listSponsorsCmd.Add(player);
+                    //}
                 }
             }
 
@@ -690,7 +690,9 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                                 if (listSponsors.Count != 0)
                                 {
                                     nukeOp = _random.PickAndTake(listSponsors);
-		    				    	prefList.Remove(nukeOp);
+		    				    	              prefList.Remove(nukeOp);
+                                    listSponsors.Remove(nukeOp);
+                                    listSponsorsMed.Remove(nukeOp);
                                 }
                                 else
                                 {
@@ -702,10 +704,11 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                         }
                         else
                         {
-		    				if (listSponsorsMed.Count != 0)
+		    				            if (listSponsorsMed.Count != 0)
                             {
                                 nukeOp = _random.PickAndTake(listSponsorsMed);
-		    					medPrefList.Remove(nukeOp);
+		    					              medPrefList.Remove(nukeOp);
+                                listSponsors.Remove(nukeOp);
                             }
                             else
                             {
@@ -713,6 +716,8 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                             }
                             everyone.Remove(nukeOp);
                             prefList.Remove(nukeOp);
+
+
                             Logger.InfoS("preset", "Insufficient preferred nukeop commanders, picking an agent");
                         }
                     }
@@ -720,16 +725,20 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                     {
                         if (listSponsorsCmd.Count != 0)
                         {
-                        	nukeOp = _random.PickAndTake(listSponsorsCmd);
-		    				cmdrPrefList.Remove(nukeOp);
+                            nukeOp = _random.PickAndTake(listSponsorsCmd);
+		    				            cmdrPrefList.Remove(nukeOp);
+                            //Logger.InfoS("sponsor", "733 Line. i=0");
+                            listSponsorsMed.Remove(nukeOp);
+                            listSponsors.Remove(nukeOp);
                         }
                         else
                         {
-                        	nukeOp = _random.PickAndTake(cmdrPrefList);
+                        	   nukeOp = _random.PickAndTake(cmdrPrefList);
                         }
                         everyone.Remove(nukeOp);
                         prefList.Remove(nukeOp);
                         medPrefList.Remove(nukeOp);
+
                         Logger.InfoS("preset", "Selected a preferred nukeop commander.");
                     }
                 }
@@ -749,10 +758,13 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                         }
                         else
                         {
-		    			    if (listSponsors.Count != 0)
+		    			              if (listSponsors.Count != 0)
                             {
                                 nukeOp = _random.PickAndTake(listSponsors);
-		    					prefList.Remove(nukeOp);
+		    					              prefList.Remove(nukeOp);
+                                listSponsors.Remove(nukeOp);
+                                listSponsorsMed.Remove(nukeOp);
+                                //Logger.InfoS("sponsor", $"767 Line. {nukeOp} i=0");
                             }
                             else
                             {
@@ -764,33 +776,38 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                     }
                     else
                     {
-		    		    if (listSponsorsMed.Count != 0)
+		    		            if (listSponsorsMed.Count != 0)
                         {
                             nukeOp = _random.PickAndTake(listSponsorsMed);
-		    			    medPrefList.Remove(nukeOp);
+		    			              medPrefList.Remove(nukeOp);
+                            listSponsors.Remove(nukeOp);
                         }
                         else
                         {
                             nukeOp = _random.PickAndTake(medPrefList);
                         }
                         everyone.Remove(nukeOp);
-                        Logger.InfoS("preset", "Insufficient preferred nukeop commanders, picking an agent");
+
+                        Logger.InfoS("preset", "Insufficient preferred nukeop commanders, picking an agent. And i==1!");
                     }
 
                 }
                 else
                 {
-		    	    if (listSponsors.Count != 0)
+		    	          if (listSponsors.Count != 0)
                     {
                         nukeOp = _random.PickAndTake(listSponsors);
-		    		    prefList.Remove(nukeOp);
+		    		            prefList.Remove(nukeOp);
+                        //Logger.InfoS("sponsor", $"804 Line. {nukeOp} i=1");
+                        listSponsors.Remove(nukeOp);
                     }
                     else
                     {
                         nukeOp = _random.PickAndTake(prefList);
                     }
                     everyone.Remove(nukeOp);
-                    Logger.InfoS("preset", "Selected a preferred nukeop commander.");
+
+                    Logger.InfoS("preset", "Selected a preferred nukeop commander. And i==1!");
                 }
 
                 operatives.Add(nukeOp);

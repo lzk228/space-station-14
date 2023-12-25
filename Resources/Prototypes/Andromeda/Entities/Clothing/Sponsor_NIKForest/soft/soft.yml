@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatKingStation
-  name: Кепка гопника
-  description: Смотря на неё становится не приятно.
+  name: кепка гопника
+  description: Смотря на неё становится неприятно.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Head/Soft/kingstationhat.rsi

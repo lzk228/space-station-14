@@ -178,6 +178,18 @@
   sponsorOnly: true
   whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
 
+- type: loadout
+  id: ClothingBackpackSatchelBrigmedicLoadout
+  entity: ClothingBackpackSatchelBrigmedic
+  sponsorOnly: true
+  whitelistJobs: [Paramedic, SeniorPhysician, ChiefMedicalOfficer, MedicalDoctor, Chemist]
+
+- type: loadout
+  id: ClothingOuterCoatAMGSponsorLoadout
+  entity: ClothingOuterCoatAMGSponsor
+  sponsorOnly: true
+  whitelistJobs: [Paramedic, SeniorPhysician, ChiefMedicalOfficer, MedicalDoctor, Chemist]
+
 #Naik21
 - type: loadout
   id: ClothingNeckGoldCMOCloakLoadout
@@ -250,6 +262,24 @@
   entity: BoxFolderClipboard
   sponsorOnly: true
   whitelistJobs: [Mime]
+
+- type: loadout
+  id: ClothingUniformJumpskirtJanimaidminiLoadout3
+  entity: ClothingUniformJumpskirtJanimaidmini
+  sponsorOnly: true
+  whitelistJobs: [Mime]
+
+- type: loadout
+  id: PlushieLemirdLoadout2
+  entity: PlushieLemird
+  sponsorOnly: true
+  whitelistJobs: [Mime]
+
+- type: loadout
+  id: ClothingMaskMimeLoadout
+  entity: ClothingMaskMime
+  sponsorOnly: true
+  whitelistJobs: [HeadOfPersonnel]
 
 #Ramsody
 - type: loadout
@@ -557,6 +587,21 @@
 - type: loadout
   id: ClothingEyesEyepatchLoadout
   entity: ClothingEyesEyepatch
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatComissLoadout
+  entity: ClothingHeadHatComiss
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingMaskBlueFestivalLoadout
+  entity: ClothingMaskBlueFestival
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpskirtRedVeryLooseDressLoadout
+  entity: ClothingUniformJumpskirtRedVeryLooseDress
   sponsorOnly: true
 
 #JNON
@@ -893,6 +938,16 @@
   sponsorOnly: true
   whitelistJobs: [Quartermaster]
 
+- type: loadout
+  id: ClothingUniformJumpskirtTacticoolSponsorLoadout
+  entity: ClothingUniformJumpskirtTacticoolSponsor
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatMrKillerLoadout
+  entity: ClothingOuterCoatMrKiller
+  sponsorOnly: true
+
 #bongo_cu
 - type: loadout
   id: ClothingHeadHatBunnyLoadout
@@ -949,6 +1004,28 @@
 - type: loadout
   id: ClothingEyesBinoclardLensesLoadout
   entity: ClothingEyesBinoclardLenses
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitStrangeBunnyLoadout
+  entity: ClothingUniformJumpsuitStrangeBunny
+  sponsorOnly: true
+  whitelistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingUniformJumpsuitRedGalaxyLoadout
+  entity: ClothingUniformJumpsuitRedGalaxy
+  sponsorOnly: true
+  blacklistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingHeadHatWitch1Loadout
+  entity: ClothingHeadHatWitch1
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieSlimeLoadout
+  entity: PlushieSlime
   sponsorOnly: true
 
 #Tomoko_Kuroki

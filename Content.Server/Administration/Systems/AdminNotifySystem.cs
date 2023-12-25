@@ -48,10 +48,14 @@ public sealed class AdminNotifySystem : EntitySystem
                 ("origin", ToPrettyString(ev.Origin.Value)));
         }
 
+        if (ev.NewMobState == MobState.Dead)
+        {
+          _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Voice/Human/wilhelm_scream.ogg"),
+              Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
+              audioParams: new AudioParams { Volume = 5f });
+        }
+
         _chatManager.SendAdminAlert(message);
-        _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Andromeda/Effects/newplayerping.ogg"),
-            Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
-            audioParams: new AudioParams { Volume = -5f });
 
     }
 

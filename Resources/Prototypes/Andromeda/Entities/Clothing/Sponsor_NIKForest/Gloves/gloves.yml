@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingHandsBase
   id: ClothingHandsGlovesGoldCaptain
-  name: Золотые перчатки капитана
+  name: золотые перчатки капитана
   description: Выдаются почётным и опытным членам экипажа.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Hands/Gloves/goldcaptaingloves.rsi

@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingOuterBaseLarge
   id: ClothingOuterArmorGoldCaptainCarapace
-  name: Золотой капитанский панцирь
+  name: золотой капитанский панцирь
   description: Выдаётся почётным и опытным членам экипажа.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/OuterClothing/Armor/goldcaptain_carapace.rsi

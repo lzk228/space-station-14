@@ -213,14 +213,14 @@
     Plastic: 20
     Steel: 5
 
-- type: latheRecipe
-  id: ShellTranquilizer
-  result: ShellTranquilizer
-  completetime: 4
-  materials:
-    Plastic: 15
-    Steel: 10
-    Glass: 5
+#- type: latheRecipe
+#  id: ShellTranquilizer
+#  result: ShellTranquilizer
+#  completetime: 4
+#  materials:
+#    Plastic: 15
+#    Steel: 10
+#    Glass: 5
 
 - type: latheRecipe
   id: TargetHuman

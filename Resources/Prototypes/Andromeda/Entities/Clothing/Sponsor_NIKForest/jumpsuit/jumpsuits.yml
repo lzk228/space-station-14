@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitKingStation
-  name: Комбинезон гопника
+  name: комбинезон гопника
   description: Старый комбинезон. Прячьте вещи поглубже в рюкзак.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Uniforms/Jumpsuit/kingstationjumpsuit.rsi
@@ -12,8 +13,9 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitGoldCaptain
-  name: Золотой капитанский комбинезон
+  name: золотой капитанский комбинезон
   description: Выдаётся почётным и опытным членам экипажа.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Uniforms/Jumpsuit/goldcaptainjumpsuit.rsi

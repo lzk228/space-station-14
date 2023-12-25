@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatGoldCaptain
-  name: Золотая капитанская каска
+  name: золотая капитанская каска
   description: Выдаётся почётным и опытным членам экипажа.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Head/Hats/goldcaptainhat.rsi
