@@ -1,0 +1,27 @@
+- type: entity
+  parent: ClothingUniformJumpskirtTacticool
+  id: ClothingUniformJumpskirtTacticoolSponsor
+  name: тактическая юбка-комбинезон
+  description: Очень тактическая!
+  suffix: Спонсор
+  components:
+    - type: Sprite
+      sprite: Clothing/Uniforms/Jumpskirt/tacticool_s.rsi
+    - type: Clothing
+      sprite: Clothing/Uniforms/Jumpskirt/tacticool_s.rsi
+    # Too cool for sensors to be on
+    - type: SuitSensor
+      randomMode: false
+      mode: SensorCords
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatAMGSponsor
+  name: медицинский халат
+  description: Выглядит бронированно, но на самом деле это всего лишь обычная подделка.
+  suffix: Спонсор
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
