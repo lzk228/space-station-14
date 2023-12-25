@@ -639,26 +639,26 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 if (profile.AntagPreferences.Contains(nukeops.OperativeRoleProto.Id))
                 {
                     prefList.Add(player);
-                    //if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-                    //{
-                    listSponsors.Add(player);
-                    //}
+                    if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    {
+                        listSponsors.Add(player);
+                    }
                 }
                 if (profile.AntagPreferences.Contains(nukeops.MedicRoleProto.Id))
-	            {
-	                medPrefList.Add(player);
-					//if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-                    //{
-                  listSponsorsMed.Add(player);
-                    //}
-	            }
+	              {
+	                  medPrefList.Add(player);
+					          if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    {
+                        listSponsorsMed.Add(player);
+                    }
+	              }
                 if (profile.AntagPreferences.Contains(nukeops.CommanderRoleProto.Id))
                 {
                     cmdrPrefList.Add(player);
-                    //if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-                    //{
-                    listSponsorsCmd.Add(player);
-                    //}
+                    if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                    {
+                        listSponsorsCmd.Add(player);
+                    }
                 }
             }
 
@@ -690,7 +690,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                                 if (listSponsors.Count != 0)
                                 {
                                     nukeOp = _random.PickAndTake(listSponsors);
-		    				    	              prefList.Remove(nukeOp);
+                                    prefList.Remove(nukeOp);
                                     listSponsors.Remove(nukeOp);
                                     listSponsorsMed.Remove(nukeOp);
                                 }
