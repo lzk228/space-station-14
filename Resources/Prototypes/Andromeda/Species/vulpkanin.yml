@@ -40,6 +40,9 @@
     Hair:
       points: 1
       required: false
+    Chest:
+      points: 1
+      required: false
     FacialHair:
       points: 1
       required: false
@@ -51,10 +54,10 @@
       points: 1
       required: false
     Legs:
-      points: 1
+      points: 4
       required: false
     Arms:
-      points: 1
+      points: 4
       required: false
     Snout:
       points: 1

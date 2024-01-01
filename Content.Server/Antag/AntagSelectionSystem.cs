@@ -26,6 +26,7 @@ using Robust.Server.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Content.Server.Shuttles.Components;
+using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
 
 namespace Content.Server.Antag;
 
@@ -43,6 +44,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     [Dependency] private readonly StorageSystem _storageSystem = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttle = default!;
+    [Dependency] private readonly SponsorsManager _sponsors = default!; // A-13 SponsorAntag
 
     /// <summary>
     /// Attempts to start the game rule by checking if there are enough players in lobby and readied.
@@ -208,6 +210,27 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             return results;
         }
 
+        // A-13 SponsorAntag start
+        var sponsorPrefList = new List<ICommonSession>();
+    		foreach (var player in prefList)
+        {
+            if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+    			  {
+    				    sponsorPrefList.Add(player);
+    			  }
+        }
+
+    		while (sponsorPrefList.Count > 0 && antagCount > 0)
+    		{
+            var player = _random.PickAndTake(sponsorPrefList);
+            prefList.Remove(player);
+    			  results.Add(player);
+    			  antagCount -= 1;
+            Logger.InfoS("sponsor", "Selected a sponsor antag!");
+    		}
+    		if (antagCount == 0) return results;
+        // A-13 SponsorAntag end
+
         for (var i = 0; i < antagCount; i++)
         {
             results.Add(_random.PickAndTake(prefList));
@@ -302,4 +325,3 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
         }
     }
 }
-

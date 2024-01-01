@@ -26,6 +26,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -45,6 +46,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
+    [Dependency] private readonly SponsorsManager _sponsors = default!; // A-13 SponsorAntag
 
     private int PlayersPerTraitor => _cfg.GetCVar(CCVars.TraitorPlayersPerTraitor);
     private int MaxTraitors => _cfg.GetCVar(CCVars.TraitorMaxTraitors);
@@ -315,9 +317,10 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
             if (chance > 1)
                 chance = 1;
 
-			// Если есть приоритет спонсора для антага DeadSpace
-			if (_sponsors.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-				chance = 1;
+			       // A-13 SponsorAntag start
+			       if (_sponsors.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+				     chance = 1;
+             // A-13 SponsorAntag end
 
             // Now that we've calculated our chance, roll and make them a traitor if we roll under.
             // You get one shot.

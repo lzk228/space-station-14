@@ -80,12 +80,12 @@
     naturalImmunities:
     - OwOnavirus
   - type: Thieving
-    stealthy: true
+    stealthy: false
     stripTimeReduction: 1
   - type: Speech
     speechSounds: Alto
   - type: Stamina
-    excess: 65
+    excess: 85
   - type: OwOAccent
   - type: Perishable
 
