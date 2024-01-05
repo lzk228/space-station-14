@@ -892,7 +892,7 @@ public sealed class PlantHolderSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        if (!_solutionSystem.TryGetSolution(uid, component.SoilSolutionName, out var solution))
+        if (!_solutionContainerSystem.ResolveSolution(uid, component.SoilSolutionName, ref component.SoilSolution, out var solution))
             return;
 
         if (component.Seed != null)

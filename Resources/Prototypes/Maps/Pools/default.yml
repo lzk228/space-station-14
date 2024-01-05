@@ -1,24 +1,23 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Bagel
   - Aspid
   - Atlas
   - CorvaxSilly
+  - Bagel
 # - Barratry
   - Box
   - CorvaxSpectrum
 #  - Cluster
-  - CorvaxAvrite
-  - Meta
-  - CorvaxDelta
+#  - CorvaxAvrite
   - Fland
+  - Core
+  - Gemini
+  - Meta
+#  - CorvaxDelta
   - CorvaxOutpost
 # - Origin
-  - Gemini
 #  - Marathon
-#  - Core
-# - Kettle
   - Omega
   - Saltern
   - Packed

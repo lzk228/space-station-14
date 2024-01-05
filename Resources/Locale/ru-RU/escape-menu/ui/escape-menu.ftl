@@ -6,5 +6,6 @@ ui-escape-rules = Правила
 ui-escape-discord = Discord
 ui-escape-guidebook = Руководство
 ui-escape-wiki = Wiki
+ui-escape-boosty = Стать спонсором
 ui-escape-disconnect = Отключиться
 ui-escape-quit = Выйти

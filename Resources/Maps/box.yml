@@ -479,8 +479,8 @@ entities:
       type: MapGrid
     - type: Broadphase
     - bodyStatus: InAir
-      angularDamping: 0.05
-      linearDamping: 0.05
+      angularDamping: 10000
+      linearDamping: 10000
       fixedRotation: False
       bodyType: Dynamic
       type: Physics
@@ -8405,6 +8405,8 @@ entities:
       type: Joint
     - type: OccluderTree
     - type: Shuttle
+      angularDamping: 10000
+      linearDamping: 10000
     - type: RadiationGridResistance
     - shakeTimes: 10
       type: GravityShake
@@ -8434,8 +8436,8 @@ entities:
       type: MapGrid
     - type: Broadphase
     - bodyStatus: InAir
-      angularDamping: 0.05
-      linearDamping: 0.05
+      angularDamping: 10000
+      linearDamping: 10000
       fixedRotation: False
       bodyType: Dynamic
       type: Physics

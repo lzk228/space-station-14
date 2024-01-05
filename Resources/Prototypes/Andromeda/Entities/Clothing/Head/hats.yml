@@ -9,3 +9,15 @@
     sprite: Andromeda/Clothing/Head/Hats/cmo_sponsor_beret.rsi
   - type: Clothing
     sprite: Andromeda/Clothing/Head/Hats/cmo_sponsor_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatPurpleBeretSponsor
+  name: полицейский берет из карпокожи
+  suffix: Андромеда
+  description: Интересно, чем он?
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Head/Hats/purple_beret.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Head/Hats/purple_beret.rsi

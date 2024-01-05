@@ -14,7 +14,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.05
 
 - type: flavor
   id: beerlight
@@ -32,7 +32,7 @@
     BeerLight: 2
 
 - type: entity
-  parent: DrinkBottleBaseFull
+  parent: DrinkBottleGlassBaseFull
   id: DrinkBeerLightBottleFull
   name: бутылка светлого пива
   description: В нём невидно никаких пузырьков, производитель заверяет, что пузырьки были из-за вкусовой добавки. Почему то все думают, то что это пиво из компании "Лемирд"...

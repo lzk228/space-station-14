@@ -44,6 +44,7 @@
     damage:
       types:
         Piercing: 10
+        Structural: 15
     soundSwing: /Audio/Andromeda/Objects/MantisImplanter/miss.ogg
     soundHit: /Audio/Andromeda/Objects/MantisImplanter/hit.ogg
     heavyWindupModifier: .9

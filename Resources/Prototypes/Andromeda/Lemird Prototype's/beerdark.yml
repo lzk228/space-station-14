@@ -14,7 +14,7 @@
         factor: 3
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.3
+        amount: 0.05
 
 - type: flavor
   id: beerdark
@@ -32,7 +32,7 @@
     BeerDark: 4
 
 - type: entity
-  parent: DrinkBottleBaseFull
+  parent: DrinkBottleGlassBaseFull
   id: DrinkBeerDarkBottleFull
   name: бутылка тёмного пива
   description: это выдающееся тёмное пиво, внутри бутылки которого не видно бурлящих пузырьков. Этот напиток ничем не похож на пиво со вкусом мочи. Он призван удовлетворить самых изысканных ценителей тёмного пива и был создан специально для компании "13lackHawk". Разнообразные ноты и насыщенный вкус делают его идеальным выбором для путешественников в космосе.

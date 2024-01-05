@@ -15,6 +15,22 @@
       mode: SensorCords
 
 - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTacticoolSponsor
+  name: тактический комбинезон
+  description: Невероятно тактический!
+  suffix: Спонсор
+  components:
+    - type: Sprite
+      sprite: Clothing/Uniforms/Jumpsuit/tacticool.rsi
+    - type: Clothing
+      sprite: Clothing/Uniforms/Jumpsuit/tacticool.rsi
+    # Too cool for sensors to be on
+    - type: SuitSensor
+      randomMode: false
+      mode: SensorOff
+
+- type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatAMGSponsor
   name: медицинский халат

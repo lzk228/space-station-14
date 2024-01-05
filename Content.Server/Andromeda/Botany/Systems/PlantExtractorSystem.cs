@@ -25,6 +25,7 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Content.Shared.Random;
 using Robust.Server.Audio;
+using Content.Server.Chemistry.Containers.EntitySystems;
 
 namespace Content.Server.Andromeda.Botany.Systems
 {
@@ -50,7 +51,7 @@ namespace Content.Server.Andromeda.Botany.Systems
             base.Initialize();
 
             SubscribeLocalEvent<PlantExtractorComponent, ComponentStartup>((uid, _, _) => UpdateUiState(uid));
-            SubscribeLocalEvent<PlantExtractorComponent, SolutionChangedEvent>((uid, _, _) => UpdateUiState(uid));
+            SubscribeLocalEvent<PlantExtractorComponent, SolutionContainerChangedEvent>((uid, _, _) => UpdateUiState(uid));
             SubscribeLocalEvent<PlantExtractorComponent, BoundUIOpenedEvent>((uid, _, _) => UpdateUiState(uid));
             SubscribeLocalEvent<PlantExtractorComponent, EntInsertedIntoContainerMessage>((uid, _, _) => UpdateUiState(uid));
             SubscribeLocalEvent<PlantExtractorComponent, EntRemovedFromContainerMessage>((uid, _, _) => UpdateUiState(uid));
@@ -86,7 +87,7 @@ namespace Content.Server.Andromeda.Botany.Systems
 
                 var inputContainer = _containerSystem.EnsureContainer<Container>(uid, SharedPlantExtractor.InputContainerId);
 
-                if (!_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out var bufferSolution))
+                if (!_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
                     continue;
 
                 foreach (var item in inputContainer.ContainedEntities.ToList())
@@ -114,7 +115,7 @@ namespace Content.Server.Andromeda.Botany.Systems
         #region UI
         private void UpdateUiState(EntityUid uid)
         {
-            if (!_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out var bufferSolution))
+            if (!_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
                 return;
 
             if (!TryComp<PlantExtractorComponent>(uid, out var plantExtractorComponent))
@@ -196,8 +197,8 @@ namespace Content.Server.Andromeda.Botany.Systems
         {
             var container = _itemSlotsSystem.GetItemOrNull(component.Owner, SharedPlantExtractor.BeakerContainerId);
             if (container is null ||
-                !_solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSolution) ||
-                !_solutionContainerSystem.TryGetSolution(component.Owner, SharedPlantExtractor.BufferId, out var bufferSolution))
+                !_solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSoln, out var containerSolution) ||
+                !_solutionContainerSystem.TryGetSolution(component.Owner, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
             {
                 return;
             }
@@ -206,12 +207,12 @@ namespace Content.Server.Andromeda.Botany.Systems
             {
                 amount = FixedPoint2.Min(amount, containerSolution.AvailableVolume);
                 amount = bufferSolution.RemoveReagent(id, amount);
-                _solutionContainerSystem.TryAddReagent(container.Value, containerSolution, id, amount, out var _);
+                _solutionContainerSystem.TryAddReagent(containerSoln.Value, id, amount, out var _);
             }
             else // Container to buffer
             {
                 amount = FixedPoint2.Min(amount, containerSolution.GetReagentQuantity(id));
-                _solutionContainerSystem.RemoveReagent(container.Value, containerSolution, id, amount);
+                _solutionContainerSystem.RemoveReagent(containerSoln.Value, id, amount);
                 bufferSolution.AddReagent(id, amount);
             }
 
@@ -223,7 +224,7 @@ namespace Content.Server.Andromeda.Botany.Systems
 
             if (fromBuffer)
             {
-                if (_solutionContainerSystem.TryGetSolution(plantExtractorComponent.Owner, SharedPlantExtractor.BufferId, out var bufferSolution))
+                if (_solutionContainerSystem.TryGetSolution(plantExtractorComponent.Owner, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
                     bufferSolution.RemoveReagent(id, amount);
                 else
                     return;
@@ -232,9 +233,9 @@ namespace Content.Server.Andromeda.Botany.Systems
             {
                 var container = _itemSlotsSystem.GetItemOrNull(plantExtractorComponent.Owner, SharedPlantExtractor.BeakerContainerId);
                 if (container is not null &&
-                    _solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSolution))
+                    _solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSolution, out _))
                 {
-                    _solutionContainerSystem.RemoveReagent(container.Value, containerSolution, id, amount);
+                    _solutionContainerSystem.RemoveReagent(containerSolution.Value, id, amount);
                 }
                 else
                     return;
@@ -340,7 +341,7 @@ namespace Content.Server.Andromeda.Botany.Systems
                 return null;
 
             if (!TryComp(container, out FitsInDispenserComponent? fits)
-                || !_solutionContainerSystem.TryGetSolution(container.Value, fits.Solution, out var solution))
+                || !_solutionContainerSystem.TryGetSolution(container.Value, fits.Solution, out _, out var solution))
             {
                 return null;
             }
@@ -367,7 +368,7 @@ namespace Content.Server.Andromeda.Botany.Systems
         {
             if (TryComp<ExtractableComponent>(uid, out var extractable)
                 && extractable.GrindableSolution is not null
-                && _solutionContainerSystem.TryGetSolution(uid, extractable.GrindableSolution, out var solution))
+                && _solutionContainerSystem.TryGetSolution(uid, extractable.GrindableSolution, out _, out var solution))
             {
                 return solution;
             }
