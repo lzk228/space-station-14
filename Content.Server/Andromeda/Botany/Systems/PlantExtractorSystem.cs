@@ -11,7 +11,7 @@ using Robust.Server.GameObjects;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Components;
 using System.Linq;
-using Content.Server.Kitchen.Components;
+using Content.Shared.Kitchen.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.FixedPoint;
