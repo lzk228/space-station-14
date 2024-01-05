@@ -1062,6 +1062,11 @@
   entity: PlushieSlime
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingHeadHatPurpleBeretSponsorLoadout
+  entity: ClothingHeadHatPurpleBeretSponsor
+  sponsorOnly: true
+
 #Tomoko_Kuroki
 - type: loadout
   id: ClothingHandsGlovesColorRedLoadout

@@ -48261,17 +48261,6 @@ entities:
     - type: Transform
       pos: -67.61676,9.687263
       parent: 60
-<<<<<<< HEAD
-      type: Transform
-- proto: CaptainIDCard
-  entities:
-  - uid: 24374
-    components:
-    - pos: -4.4391813,-6.55546
-      parent: 60
-      type: Transform
-=======
->>>>>>> master
 - proto: CarbonDioxideCanister
   entities:
   - uid: 15245
@@ -130237,17 +130226,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 25.5,-28.5
       parent: 60
-<<<<<<< HEAD
-      type: Transform
-- proto: SpawnMobGorillaLargo
-  entities:
-  - uid: 13102
-    components:
-    - pos: 45.5,13.5
-      parent: 60
-      type: Transform
-=======
->>>>>>> master
 - proto: SpawnMobMcGriff
   entities:
   - uid: 4710
@@ -130301,9 +130279,6 @@ entities:
     - type: Transform
       pos: 40.5,-8.5
       parent: 60
-<<<<<<< HEAD
-      type: Transform
-=======
 - proto: SpawnMobRaccoonMorticia
   entities:
   - uid: 13102
@@ -130311,7 +130286,6 @@ entities:
     - type: Transform
       pos: 45.5,13.5
       parent: 60
->>>>>>> master
 - proto: SpawnMobShiva
   entities:
   - uid: 19794

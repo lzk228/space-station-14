@@ -16,10 +16,10 @@ public sealed partial class AdaptSpaceMob : ReagentEffect
 
     public override void Effect(ReagentEffectArgs args)
     {
-        if (args.EntityManager.HasComponent<SalvageMobRestrictionsComponent>(args.SolutionEntity))
+        /*if (args.EntityManager.HasComponent<SalvageMobRestrictionsComponent>(args.SolutionEntity))
         {
             args.EntityManager.RemoveComponent<SalvageMobRestrictionsComponent>(args.SolutionEntity);
             args.EntityManager.RemoveComponent<GhostTakeoverAvailableComponent>(args.SolutionEntity);
-        }
+        }*/
     }
 }

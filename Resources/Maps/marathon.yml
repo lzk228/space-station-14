@@ -15661,12 +15661,8 @@ entities:
   entities:
   - uid: 5050
     components:
-<<<<<<< HEAD
-    - pos: -22.69485,35.914078
-=======
     - type: Transform
       pos: -22.461006,35.471382
->>>>>>> master
       parent: 30
   - uid: 9318
     components:
@@ -44156,17 +44152,6 @@ entities:
     - type: Transform
       pos: 2.452661,20.541075
       parent: 30
-<<<<<<< HEAD
-      type: Transform
-- proto: CaptainIDCard
-  entities:
-  - uid: 19494
-    components:
-    - pos: -22.5386,35.304703
-      parent: 30
-      type: Transform
-=======
->>>>>>> master
 - proto: CarbonDioxideCanister
   entities:
   - uid: 8772
@@ -105101,12 +105086,8 @@ entities:
       parent: 30
   - uid: 4978
     components:
-<<<<<<< HEAD
-    - pos: -22.272976,35.945328
-=======
     - type: Transform
       pos: -22.273506,35.752632
->>>>>>> master
       parent: 30
   - uid: 5348
     components:
@@ -121298,17 +121279,6 @@ entities:
     - type: Transform
       pos: -16.5,14.5
       parent: 30
-<<<<<<< HEAD
-      type: Transform
-- proto: SpawnMobGorillaLargo
-  entities:
-  - uid: 8383
-    components:
-    - pos: 26.5,1.5
-      parent: 30
-      type: Transform
-=======
->>>>>>> master
 - proto: SpawnMobKangarooWillow
   entities:
   - uid: 10987
@@ -121365,9 +121335,6 @@ entities:
     - type: Transform
       pos: -22.5,-5.5
       parent: 30
-<<<<<<< HEAD
-      type: Transform
-=======
 - proto: SpawnMobRaccoonMorticia
   entities:
   - uid: 8383
@@ -121375,7 +121342,6 @@ entities:
     - type: Transform
       pos: 26.5,1.5
       parent: 30
->>>>>>> master
 - proto: SpawnMobShiva
   entities:
   - uid: 4405
