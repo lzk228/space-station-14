@@ -473,7 +473,7 @@ namespace Content.Shared.Chemistry.Components
         /// </summary>
         /// <param name="toRemove">The reagent to be removed.</param>
         /// <returns>How much reagent was actually removed. Zero if the reagent is not present on the solution.</returns>
-        public FixedPoint2 RemoveReagent(ReagentQuantity toRemove)
+        public FixedPoint2 RemoveReagent(ReagentQuantity toRemove, bool preserveOrder = false)
         {
             if (toRemove.Quantity <= FixedPoint2.Zero)
                 return FixedPoint2.Zero;
@@ -490,7 +490,11 @@ namespace Content.Shared.Chemistry.Components
 
                 if (newQuantity <= 0)
                 {
-                    Contents.RemoveSwap(i);
+                    if (!preserveOrder)
+                        Contents.RemoveSwap(i);
+                    else
+                        Contents.RemoveAt(i);
+
                     Volume -= curQuantity;
                     ValidateSolution();
                     return curQuantity;
@@ -588,9 +592,9 @@ namespace Content.Shared.Chemistry.Components
         /// <param name="reagentId">The reagent to be removed.</param>
         /// <param name="quantity">The amount of reagent to remove.</param>
         /// <returns>How much reagent was actually removed. Zero if the reagent is not present on the solution.</returns>
-        public FixedPoint2 RemoveReagent(ReagentId reagentId, FixedPoint2 quantity)
+        public FixedPoint2 RemoveReagent(ReagentId reagentId, FixedPoint2 quantity, bool preserveOrder = false)
         {
-            return RemoveReagent(new ReagentQuantity(reagentId, quantity));
+            return RemoveReagent(new ReagentQuantity(reagentId, quantity), preserveOrder);
         }
 
         public void RemoveAllSolution()
