@@ -565,6 +565,9 @@
     allowMovement: true
     name: ghost-role-information-hamlet-name
     description: ghost-role-information-hamlet-description
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 # 2h # A-13-RoleTime
   - type: GhostTakeoverAvailable
   - type: InteractionPopup
     successChance: 1
@@ -692,6 +695,9 @@
     prob: 0.25
     name: ghost-role-information-willow-name
     description: ghost-role-information-willow-description
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 # 2h # A-13-RoleTime
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [ BoxingKangarooGear ]
@@ -759,6 +765,9 @@
   - type: GhostRole
     name: ghost-role-information-smile-name
     description: ghost-role-information-smile-description
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 # 2h # A-13-RoleTime
   - type: Grammar
     attributes:
       proper: true
@@ -781,6 +790,9 @@
     allowMovement: true
     name: ghost-role-information-punpun-name
     description: ghost-role-information-punpun-description
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 # 2h # A-13-RoleTime
   - type: GhostTakeoverAvailable
   - type: Butcherable
     butcheringType: Spike

@@ -23,9 +23,9 @@ entities:
   entities:
   - uid: 1
     components:
-    - name: 'NT | ERT-Sirena  '
+    - name: NT | ERT-Dirastal
       type: MetaData
-    - pos: -0.484375,-0.53125
+    - pos: 0,50
       parent: invalid
       type: Transform
     - chunks:
@@ -1694,7 +1694,7 @@ entities:
       pos: -0.5,4.5
       parent: 1
       type: Transform
-    - secondsUntilStateChange: -1149.5178
+    - secondsUntilStateChange: -2164.878
       state: Closing
       type: Door
 - proto: LockerMedicineFilled

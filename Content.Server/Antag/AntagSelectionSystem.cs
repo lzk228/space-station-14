@@ -27,6 +27,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Content.Server.Shuttles.Components;
 using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
+using Content.Server.Roles;
 
 namespace Content.Server.Antag;
 
@@ -104,6 +105,11 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                 if (!_jobs.CanBeAntag(player))
                     continue;
             }
+
+            // A-13 No Thief-Agents system start
+            if (HasComp<ThiefRoleComponent>(player.AttachedEntity))
+                continue;
+            // A-13  No Thief-Agents system end
 
             if (player.AttachedEntity == null || HasComp<HumanoidAppearanceComponent>(player.AttachedEntity))
                 playerList.Add(player);

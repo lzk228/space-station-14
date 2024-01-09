@@ -5,7 +5,12 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingNeckCloakQm
       - id: BoxFolderQmClipboard
+      - id: ClothingHeadsetCargo
+      - id: ClothingUniformJumpsuitQMTurtleneck
+      - id: ClothingUniformJumpskirtQMTurtleneck
+      - id: ClothingHandsGlovesColorBrown
       - id: CargoRequestComputerCircuitboard
       - id: CargoShuttleComputerCircuitboard
       - id: CargoShuttleConsoleCircuitboard
@@ -29,6 +34,8 @@
       - id: NukeDisk
       - id: PinpointerNuclear
       - id: CaptainIDCard
+      - id: ClothingHeadHatCaptain
+      - id: ClothingNeckCloakCap
       - id: ClothingOuterHardsuitCap
       - id: ClothingMaskGasCaptain
       - id: WeaponDisabler
@@ -41,10 +48,14 @@
         prob: 0.25
       - id: ClothingBeltSheathFilled
       - id: DoorRemoteCommand
+      - id: ClothingNeckCloakCapFormal
+      - id: ClothingUniformJumpsuitCapFormal
+      - id: ClothingUniformJumpskirtCapFormalDress
       - id: RubberStampCaptain
       - id: WeaponAntiqueLaser
       - id: JetpackCaptainFilled
       - id: MedalCase
+      - id: ClothingHeadHatCapcap
 
 - type: entity
   id: LockerCaptainFilled
@@ -57,6 +68,9 @@
       - id: NukeDisk
       - id: PinpointerNuclear
       - id: CaptainIDCard
+      - id: ClothingHeadHatCaptain
+      - id: ClothingNeckCloakCap
+      - id: ClothingHandsGlovesCaptain
       - id: WeaponDisabler
       - id: CommsComputerCircuitboard
       - id: ClothingHeadsetAltCommand
@@ -67,14 +81,14 @@
         prob: 0.25
       - id: ClothingBeltSheathFilled
       - id: DoorRemoteCommand
+      - id: ClothingNeckCloakCapFormal
+      - id: ClothingUniformJumpsuitCapFormal
+      - id: ClothingUniformJumpskirtCapFormalDress
       - id: RubberStampCaptain
       - id: WeaponAntiqueLaser
       - id: JetpackCaptainFilled
       - id: MedalCase
-      # Corvax-Resprite-Start
-      - id: ClothingHeadCaptainHat
-      - id: ClothingOuterCoatCaptain
-      # Corvax-Resprite-End
+      - id: ClothingHeadHatCapcap
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -83,6 +97,8 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingNeckCloakHop
+      - id: ClothingHeadHatHopcap
       - id: HoPIDCard
       - id: ClothingHeadsetCommand
       - id: BoxPDA
@@ -90,6 +106,7 @@
       - id: BoxHeadset
       - id: IDComputerCircuitboard
       - id: WeaponDisabler
+      - id: ClothingOuterWinterHoP
       - id: CigarGoldCase
         prob: 0.25
         # Fuck the HoP they don't deserve fucking cigars.
@@ -101,7 +118,6 @@
       - id: BoxEncryptionKeyService
       - id: ClothingBackpackIan
         prob: 0.5
-      - id: ClothingOuterCoatHOP # Corvax-Resprite
       - id: AccessConfigurator
 
 - type: entity
@@ -113,10 +129,14 @@
     contents:
       - id: ClothingOuterHardsuitEngineeringWhite
       - id: ClothingMaskBreath
+      - id: ClothingUniformJumpsuitChiefEngineerTurtle
+      - id: ClothingUniformJumpskirtChiefEngineerTurtle
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
+      - id: ClothingNeckCloakCe
       - id: ClothingEyesGlassesMeson
       - id: ClothingBeltChiefEngineerFilled
+      - id: ClothingHeadHatBeretEngineering
       - id: ClothingShoesBootsMagAdv
       - id: ClothingHandsGlovesColorYellow
       - id: CigarCase
@@ -137,9 +157,13 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingNeckCloakCe
       - id: ClothingEyesGlassesMeson
       - id: ClothingBeltChiefEngineerFilled
+      - id: ClothingHeadHatBeretEngineering
       - id: ClothingHandsGlovesColorYellow
+      - id: ClothingUniformJumpsuitChiefEngineerTurtle
+      - id: ClothingUniformJumpskirtChiefEngineerTurtle
       - id: CigarCase
         prob: 0.15
       - id: DoorRemoteEngineering
@@ -185,8 +209,11 @@
       - id: ClothingHandsGlovesNitrile
       #- name: ClothingEyesHudMedical #Removed until working properly
       - id: ClothingHeadsetAltMedical
+      - id: ClothingCloakCmo
       - id: ClothingBackpackDuffelSurgeryFilled
+      - id: ClothingOuterCoatLabCmo
       - id: ClothingMaskSterile
+      - id: ClothingHeadHatBeretCmo
       - id: Hypospray
       - id: HandheldCrewMonitor
       - id: DoorRemoteMedical
@@ -204,10 +231,13 @@
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
+      - id: ClothingNeckCloakRd
       - id: ClothingHeadsetMedicalScience
       - id: ClothingOuterHardsuitRd
       - id: HandTeleporter
       - id: DoorRemoteResearch
+      - id: ClothingHeadHatBeretRND
+      - id: ClothingHandsGlovesColorPurple
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
       - id: ClothingHeadsetAltScience
@@ -225,11 +255,17 @@
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
+      - id: ClothingNeckCloakRd
       - id: ClothingHeadsetMedicalScience
       - id: HandTeleporter
       - id: DoorRemoteResearch
+      - id: ClothingHeadHatBeretRND
+      - id: ClothingHandsGlovesColorPurple
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
+      - id: ClothingHeadsetAltScience
+      - id: PinpointerAnomaly
+        prob: 0.1
       - id: BoxEncryptionKeyScience
 
 - type: entity
@@ -241,16 +277,14 @@
     contents:
       - id: ClothingEyesHudSecurity
       - id: WeaponDisabler
-      - id: ClothingHeadHatCapHoS # Corvax-SecFashion
-        prob: 0.5
+      - id: ClothingHeadHatBeretHoS
+      - id: ClothingHeadHatHoshat
+      - id: ClothingNeckCloakHos
       - id: ClothingOuterCoatHoSTrench
-      - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
+      - id: ClothingUniformJumpskirtHoSAlt
+      - id: ClothingUniformJumpsuitHoSAlt
       - id: ClothingOuterHardsuitSecurityRed
       - id: ClothingMaskGasSwat
-#      - id: ClothingShoeSlippersDuck # Corvax-Resprite: Need more space for style
-#        prob: 0.2
-      - id: DrinkVacuumFlask
-        prob: 0.8
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
       - id: ClothingEyesGlassesSunglasses
@@ -258,13 +292,14 @@
       - id: CigarGoldCase
         prob: 0.50
       - id: DoorRemoteSecurity
+      - id: ClothingUniformJumpskirtHosFormal
+      - id: ClothingUniformJumpsuitHosFormal
       - id: RubberStampHos
       - id: SecurityTechFabCircuitboard
       - id: JetpackSecurityFilled
       - id: BoxEncryptionKeySecurity
       - id: HoloprojectorSecurity
       - id: BookSecretDocuments
-      - id: BookBusido # Corvax-Books
 
 - type: entity
   id: LockerHeadOfSecurityFilled
@@ -275,10 +310,12 @@
     contents:
       - id: ClothingEyesHudSecurity
       - id: WeaponDisabler
-      - id: ClothingHeadHatCapHoS # Corvax-SecFashion
-        prob: 0.5
+      - id: ClothingHeadHatBeretHoS
+      - id: ClothingHeadHatHoshat
+      - id: ClothingNeckCloakHos
       - id: ClothingOuterCoatHoSTrench
-      - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
+      - id: ClothingUniformJumpskirtHoSAlt
+      - id: ClothingUniformJumpsuitHoSAlt
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
       - id: ClothingEyesGlassesSunglasses
@@ -286,6 +323,8 @@
       - id: CigarGoldCase
         prob: 0.50
       - id: DoorRemoteSecurity
+      - id: ClothingUniformJumpskirtHosFormal
+      - id: ClothingUniformJumpsuitHosFormal
       - id: RubberStampHos
       - id: SecurityTechFabCircuitboard
       - id: BoxEncryptionKeySecurity

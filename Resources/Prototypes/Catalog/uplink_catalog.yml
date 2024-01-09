@@ -458,7 +458,7 @@
   description: uplink-stealth-box-desc
   productEntity: StealthBox
   cost:
-    Telecrystal: 10
+    Telecrystal: 5
   categories:
   - UplinkUtility
 

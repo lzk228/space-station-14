@@ -9,3 +9,6 @@
     sprite: Andromeda/NIKforest/carpgloves.rsi
   - type: Clothing
     sprite: Andromeda/NIKforest/carpgloves.rsi
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-purple
