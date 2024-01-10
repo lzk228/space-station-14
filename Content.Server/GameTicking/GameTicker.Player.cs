@@ -70,12 +70,14 @@ namespace Content.Server.GameTicking
                         ? Loc.GetString("player-first-join-message", ("name", args.Session.Name))
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
 
-                    // New player join system start
+                    RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
+
+                    // A-13 New player join system start
                     if (firstConnection)
                         _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Andromeda/Effects/newplayerping.ogg"),
                             Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
                             audioParams: new AudioParams { Volume = -5f });
-                    // New player join system end
+                    // A-13 New player join system end
 
                     if (LobbyEnabled && _roundStartCountdownHasNotStartedYetDueToNoPlayers)
                     {

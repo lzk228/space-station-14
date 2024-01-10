@@ -187,6 +187,23 @@
   conditions:
     - !type:TileNotBlocked
 
+- type: construction
+  name: steel bench
+  id: ChairSteelBench
+  graph: Seat
+  startNode: start
+  targetNode: chairSteelBench
+  category: construction-category-furniture
+  description: A long chair made for a metro. Really standard design.
+  icon:
+    sprite: Structures/Furniture/chairs.rsi
+    state: steel-bench
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
 #tables
 - type: construction
   name: steel table
@@ -359,7 +376,7 @@
   conditions:
     - !type:TileNotBlocked
 
-#beds
+#bedroom
 - type: construction
   id: Bed
   name: bed
@@ -411,6 +428,23 @@
   conditions:
     - !type:TileNotBlocked
 
+- type: construction
+  id: Dresser
+  name: dresser
+  description: Wooden dresser, can store things inside itself.
+  graph: Dresser
+  startNode: start
+  targetNode: dresser
+  category: construction-category-furniture
+  icon:
+    sprite: Structures/Furniture/furniture.rsi
+    state: dresser
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
 #racks
 - type: construction
   id: Rack
@@ -429,6 +463,7 @@
   conditions:
     - !type:TileNotBlocked
 
+#misc
 - type: construction
   id: MeatSpike
   name: meat spike
