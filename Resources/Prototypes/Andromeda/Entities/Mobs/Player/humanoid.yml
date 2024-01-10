@@ -18,3 +18,19 @@
       Вы классифицируетесь как мелкий антагонист(можете уточнить в ахелп ваши ограничения).
       Вы также можете просто подружиться со своей копией.
   - type: GhostTakeoverAvailable
+
+- type: entity # A-13 PirateRadioSpawn
+  id: RandomHumanoidSpawnerListener
+  name: информатор Синдиката
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/Human/parts.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: SyndicateListener
+
+- type: randomHumanoidSettings
+  id: SyndicateListener
+  components:
+    - type: Loadout
+      prototypes: [SyndicateListenerGear]

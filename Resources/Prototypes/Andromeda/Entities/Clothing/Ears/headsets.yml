@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingHeadsetAltSyndicate
+  id: ClothingHeadsetAltSyndicateListening
+  name: кроваво-красная гарнитура информатора
+  description: Продвинутая и технологичная гарнитура, доступная только информаторам Синдиката.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySyndie
+      - EncryptionKeyStationMaster

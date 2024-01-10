@@ -1,0 +1,17 @@
+- type: entity # A-13 PirateRadioSpawn
+  noSpawn: true
+  parent: MobHumanSyndicateAgent
+  id: MobHumanSyndicateListener
+  name: информатор Синдиката
+  components:
+    - type: Loadout
+      prototypes: [SyndicateListenerGear]
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+    - type: AutoTraitor
+      giveUplink: false
+      giveObjectives: false
+    - type: AutoImplant
+      implants:
+      - DeathAcidifierImplant

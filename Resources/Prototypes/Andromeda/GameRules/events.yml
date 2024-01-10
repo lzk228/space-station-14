@@ -30,3 +30,16 @@
       minimumPlayers: 15
       earliestStart: 25
     - type: MidRoundAntagRule
+
+- type: entity # A-13 Midround Syndicate Listening Station
+  id: PirateRadioSpawn
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    earliestStart: 20
+    weight: 7.5
+    minimumPlayers: 25
+    maxOccurences: 1
+    duration: 1
+  - type: PirateRadioSpawnRule

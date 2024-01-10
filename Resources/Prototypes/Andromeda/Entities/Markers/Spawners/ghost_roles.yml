@@ -1,0 +1,25 @@
+- type: entity # A-13 PirateRadioSpawn
+  noSpawn: true
+  id: SpawnPointGhostSyndicateListener
+  name: спавнер роли призрака
+  suffix: информатор Синдиката
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-information-listeningop-name
+    description: ghost-role-information-listeningop-description
+    rules: ghost-role-information-listeningop-rules
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 331200 # 92 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 40000 # 11.5 hours
+  - type: GhostRoleMobSpawner
+    prototype: MobHumanSyndicateListener
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: Structures/Wallmounts/signs.rsi
+        state: radiation
