@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseStructure
+  id: Roboisseur
+  name: Мистер Дворецкин
+  description: Он делает заказы на экзотические блюда, которые потом доставляются по всей вселенной. Использует самую новейшую систему блюспейс-доставки.
+  components:
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    sprite: Andromeda/Structures/Machines/roboisseur.rsi
+    layers:
+    - state: roboisseur-1
+  - type: Roboisseur
+  - type: Speech
+    speechSounds: Pai
+  - type: Appearance
+  - type: Grammar
+    attributes:
+      gender: male
+      proper: true

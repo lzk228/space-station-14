@@ -9545,18 +9545,6 @@ entities:
       parent: 19193
     - type: InstantAction
       container: 19193
-- proto: AdvancedCapacitorStockPart
-  entities:
-  - uid: 19183
-    components:
-    - type: Transform
-      pos: 23.618336,21.636284
-      parent: 60
-  - uid: 19184
-    components:
-    - type: Transform
-      pos: 23.743336,21.526909
-      parent: 60
 - proto: AirAlarm
   entities:
   - uid: 249
@@ -48261,6 +48249,16 @@ entities:
     - type: Transform
       pos: -67.61676,9.687263
       parent: 60
+  - uid: 19183
+    components:
+    - type: Transform
+      pos: 23.618336,21.636284
+      parent: 60
+  - uid: 19184
+    components:
+    - type: Transform
+      pos: 23.743336,21.526909
+      parent: 60
 - proto: CarbonDioxideCanister
   entities:
   - uid: 15245
@@ -67623,6 +67621,13 @@ entities:
     - type: Transform
       pos: -8.356498,-5.569201
       parent: 60
+- proto: DrinkGildlagerBottleFull
+  entities:
+  - uid: 13012
+    components:
+    - type: Transform
+      pos: 6.371938,-6.0707817
+      parent: 60
 - proto: DrinkGlass
   entities:
   - uid: 23627
@@ -67646,13 +67651,6 @@ entities:
     components:
     - type: Transform
       pos: 6.6877446,-6.3988457
-      parent: 60
-- proto: DrinkGoldschlagerBottleFull
-  entities:
-  - uid: 13012
-    components:
-    - type: Transform
-      pos: 6.371938,-6.0707817
       parent: 60
 - proto: DrinkHotCoffee
   entities:
@@ -110278,10 +110276,25 @@ entities:
     - type: Transform
       pos: -45.496006,-9.58335
       parent: 60
+  - uid: 9474
+    components:
+    - type: Transform
+      pos: -66.53229,9.621169
+      parent: 60
   - uid: 13014
     components:
     - type: Transform
       pos: -45.404285,-9.838601
+      parent: 60
+  - uid: 19181
+    components:
+    - type: Transform
+      pos: 23.305836,21.651909
+      parent: 60
+  - uid: 19182
+    components:
+    - type: Transform
+      pos: 23.430836,21.558159
       parent: 60
 - proto: MicrophoneInstrument
   entities:
@@ -110728,23 +110741,6 @@ entities:
     components:
     - type: Transform
       pos: -8.327919,25.771437
-      parent: 60
-- proto: NanoManipulatorStockPart
-  entities:
-  - uid: 9474
-    components:
-    - type: Transform
-      pos: -66.53229,9.621169
-      parent: 60
-  - uid: 19181
-    components:
-    - type: Transform
-      pos: 23.305836,21.651909
-      parent: 60
-  - uid: 19182
-    components:
-    - type: Transform
-      pos: 23.430836,21.558159
       parent: 60
 - proto: NitrogenCanister
   entities:
@@ -123726,6 +123722,14 @@ entities:
     - type: Transform
       pos: -24.660069,1.386905
       parent: 60
+- proto: Roboisseur
+  entities:
+  - uid: 16450
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 21.5,-34.5
+      parent: 60
 - proto: RockGuitarInstrument
   entities:
   - uid: 21791
@@ -123754,6 +123758,13 @@ entities:
     - type: Transform
       pos: 43.534462,13.459317
       parent: 60
+- proto: SalvageLootSpawner
+  entities:
+  - uid: 5030
+    components:
+    - type: Transform
+      pos: -64.5,9.5
+      parent: 60
 - proto: SalvageMagnet
   entities:
   - uid: 19030
@@ -123761,13 +123772,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 49.5,1.5
-      parent: 60
-- proto: SalvagePartsT2Spawner
-  entities:
-  - uid: 5030
-    components:
-    - type: Transform
-      pos: -64.5,9.5
       parent: 60
 - proto: Saw
   entities:
@@ -130226,6 +130230,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 25.5,-28.5
       parent: 60
+- proto: SpawnMobGorillaLargo
+  entities:
+  - uid: 13102
+    components:
+    - type: Transform
+      pos: 45.5,13.5
+      parent: 60
 - proto: SpawnMobMcGriff
   entities:
   - uid: 4710
@@ -130278,13 +130289,6 @@ entities:
     components:
     - type: Transform
       pos: 40.5,-8.5
-      parent: 60
-- proto: SpawnMobRaccoonMorticia
-  entities:
-  - uid: 13102
-    components:
-    - type: Transform
-      pos: 45.5,13.5
       parent: 60
 - proto: SpawnMobShiva
   entities:
@@ -131148,6 +131152,12 @@ entities:
       parent: 60
 - proto: StoolBar
   entities:
+  - uid: 1201
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 21.5,-34.5
+      parent: 60
   - uid: 2224
     components:
     - type: Transform
@@ -136443,13 +136453,6 @@ entities:
     components:
     - type: Transform
       pos: 10.5,-69.5
-      parent: 60
-- proto: TransmitterSubspaceStockPart
-  entities:
-  - uid: 1201
-    components:
-    - type: Transform
-      pos: -63.585518,9.577888
       parent: 60
 - proto: TrashBag
   entities:
