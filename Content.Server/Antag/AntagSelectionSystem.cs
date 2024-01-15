@@ -106,11 +106,6 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                     continue;
             }
 
-            // A-13 No Thief-Agents system start
-            if (HasComp<ThiefRoleComponent>(player.AttachedEntity))
-                continue;
-            // A-13  No Thief-Agents system end
-
             if (player.AttachedEntity == null || HasComp<HumanoidAppearanceComponent>(player.AttachedEntity))
                 playerList.Add(player);
             else
@@ -119,6 +114,11 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             var pref = (HumanoidCharacterProfile) _prefs.GetPreferences(player.UserId).SelectedCharacter;
             if (pref.AntagPreferences.Contains(antagPrototype))
                 prefList.Add(player);
+
+            // A-13 No Thief-Agents system v2 start
+            if (HasComp<ThiefRoleComponent>(player.AttachedEntity))
+                prefList.Remove(player);
+            // A-13  No Thief-Agents system v2 end
         }
 
         if (playerList.Count == 0)

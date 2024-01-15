@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesColorGoldBlack
-  name: Золотые ботинки
+  name: золотые ботинки
   description: Выдаются почётным и опытным членам экипажа.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Shoes/Color/goldcaptainshoes.rsi

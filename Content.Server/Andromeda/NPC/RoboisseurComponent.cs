@@ -186,6 +186,8 @@ namespace Content.Server.Roboisseur.Roboisseur
             "CombatMedipen",
             "CloningConsoleComputerCircuitboard",
             "CloningPodMachineCircuitboard",
+            "FloorTileItemAstroGrass30",
+            "FloorTileItemAstroIce30",  
         };
 
         [DataField("blacklistedProtos")]

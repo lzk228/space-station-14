@@ -51,6 +51,10 @@
 #  text: station-goal-mining-ores
 
 - type: stationGoal
+  id: StationGoalCooking
+  text: station-goal-cooking
+
+- type: stationGoal
   id: StationGoalBounty
   text: station-goal-bounty
 

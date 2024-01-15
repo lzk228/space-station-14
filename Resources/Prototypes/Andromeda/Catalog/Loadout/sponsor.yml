@@ -766,6 +766,11 @@
   entity: ClothingOuterCoatCrimsonCoat
   sponsorOnly: true
 
+- type: loadout
+  id: BoxFolderClipboardLoadout2
+  entity: BoxFolderClipboard
+  sponsorOnly: true
+
 # ilnaz
 - type: loadout
   id: SurvivalKnifeLoadout
@@ -875,6 +880,11 @@
 - type: loadout
   id: ClothingNeckCloakIanCloakLoadout
   entity: ClothingNeckCloakIanCloak
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHandsGlovesHopLoadout
+  entity: ClothingHandsGlovesHop
   sponsorOnly: true
 
 #fomka_lomka
@@ -1017,6 +1027,11 @@
 - type: loadout
   id: ClothingOuterCoatTraderCoatLoadout
   entity: ClothingOuterCoatTraderCoat
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingHeadHatDogEarsLoadout
+  entity: ClothingHeadHatDogEars
   sponsorOnly: true
 
 #HazardCloud
@@ -1242,3 +1257,16 @@
   id: DrinkTequilaBottleFullLoadout
   entity: DrinkTequilaBottleFull
   sponsorOnly: true
+
+#suhoi_kaktus
+- type: loadout
+  id: ClothingUniformJumpsuitMaleJapaneBlackSchoolLoadout
+  entity: ClothingUniformJumpsuitMaleJapaneBlackSchool
+  sponsorOnly: true
+
+#Gargant
+- type: loadout
+  id: PowerCellMicroreactorLoadout
+  entity: PowerCellMicroreactor
+  sponsorOnly: true
+  whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]

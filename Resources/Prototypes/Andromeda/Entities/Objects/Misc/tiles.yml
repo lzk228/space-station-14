@@ -1,0 +1,19 @@
+- type: entity
+  parent: FloorTileItemAstroGrass
+  id: FloorTileItemAstroGrass30
+  suffix: Полный
+  name: астро-трава
+  description: Искусственная трава, отлично прячущая провода, поставляется с реалистичными НаноТравинками!
+  components:
+  - type: Stack
+    count: 30
+
+- type: entity
+  parent: FloorTileItemAstroIce
+  id: FloorTileItemAstroIce30
+  name: астро-лёд
+  description: Искусственный лёд, такой же скользкий, как настоящий, и при этом легко снимается!
+  suffix: Полный
+  components:
+  - type: Stack
+    count: 30

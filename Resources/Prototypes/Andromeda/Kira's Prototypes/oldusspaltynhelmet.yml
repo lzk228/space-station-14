@@ -3,6 +3,7 @@
   id: ClothingHeadHelmetHeavyAltynOld
   name: старый шлем алтын
   description: Все ещё крепкий советский штурмовой шлем.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Kira/altynhelmet.rsi
