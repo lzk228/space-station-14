@@ -37,3 +37,5 @@
     DrinkKvasBottleFull: 4 #A-13
     DrinkBeerLightBottleFull: 6 #A-13
     DrinkBeerDarkBottleFull: 6 #A-13
+  emaggedInventory:
+    DrinkPoisonWinebottleFull: 2
