@@ -346,8 +346,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 0.05
-      linearDamping: 0.05
+      angularDamping: 10000
+      linearDamping: 10000
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -355,6 +355,8 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      angularDamping: 10000
+      linearDamping: 10000
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -99916,11 +99918,11 @@ entities:
 
         --------------------------------------------------------------------------------------
 
-        [bold]1.[/bold] Limited external forces from the containments power. 
+        [bold]1.[/bold] Limited external forces from the containments power.
 
-        [bold]2.[/bold] An "early warning" system, if you see JUST the PA room run out of power, you know there is an issue. 
+        [bold]2.[/bold] An "early warning" system, if you see JUST the PA room run out of power, you know there is an issue.
 
-        [bold]3.[/bold] Due to being on its own small loop, its much easier to spot faults in the system. 
+        [bold]3.[/bold] Due to being on its own small loop, its much easier to spot faults in the system.
 
 
         While we have listed the upsides we also acknowledge the downside, for it being on its own loop you will need an external force if the system "runs out of juice". Our recommendation for this is simply attaching a generator to said SMES and letting it get to full charge before continuing operations but as said from another of our technicians... "just attach it to the main grid for like, a hot moment, and kickstart the thing!"
@@ -99945,7 +99947,7 @@ entities:
         Dear [bold]engineering team[/bold],
 
 
-        During the production of this station we have overlooked this substation, and as a result does not power any APCs. Please pretend that this was not an oversight, but instead an intended decision. 
+        During the production of this station we have overlooked this substation, and as a result does not power any APCs. Please pretend that this was not an oversight, but instead an intended decision.
 
 
         [italics]It is now a spare substation for any case where one becomes damaged or wear out over time.[/italics]

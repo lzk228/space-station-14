@@ -34,6 +34,9 @@ namespace Content.Server.Roboisseur.Roboisseur
         [ViewVariables(VVAccess.ReadWrite)]
         public EntityPrototype DesiredPrototype = default!;
 
+        [ViewVariables(VVAccess.ReadWrite)]
+        public int DoneTotal = 0;
+
         [DataField("demandMessages")]
         public IReadOnlyList<string> DemandMessages = new[]
         {
@@ -110,23 +113,29 @@ namespace Content.Server.Roboisseur.Roboisseur
             //"FoodMothMacBalls",
             "FoodSoupNettle",
             "FoodBurgerDuck",
-            "FoodBurgerBaseball"
+            "FoodBurgerBaseball",
+            "FoodBurgerGhost",
+            "FoodTacoFish"
         };
 
         [DataField("tier3Protos")]
         public List<String> Tier3Protos = new()
         {
-            "FoodBurgerGhost",
             "FoodSaladWatermelonFruitBowl",
             "FoodBakedCannabisBrownieBatch",
             "FoodPizzaDank",
-            "FoodBurgerBear",
+            //"FoodBurgerBear",
             "FoodBurgerMime",
             "FoodCakeSuppermatter",
             "FoodSoupChiliCold",
             "FoodSoupBisque",
             "FoodCakeSlime",
-            "FoodBurgerCrazy"
+            "FoodBurgerCrazy",
+            "FoodPieFrosty",
+            "FoodTartMime",
+            "FoodSoupBungo",
+            "FoodTartGapple",
+            "FoodCakeLemoon"
         };
 
         [DataField("robossuierRewards")]
@@ -148,7 +157,6 @@ namespace Content.Server.Roboisseur.Roboisseur
             //"FoodFrozenSandwich",
             "ClothingNeckCloakBotanistCloak",
             "ClothingNeckBlackCloak",
-            "ClothingNeckCloakJapaneseCloak",
             "ClothingNeckCloakRose",
             "ClothingUniformJumpsuitBlueGalaxy",
             "ClothingUniformJumpsuitRedGalaxy",
@@ -158,14 +166,26 @@ namespace Content.Server.Roboisseur.Roboisseur
             "ClothingHeadHatRedRog",
             "ClothingHeadHatCueball",
             "CrateHydroponicsSeedsExotic",
+            "CrateVendingMachineRestockChefvendFilled",
             "CrateFunATV",
+            "CrateNPCDuck",
             "ClothingOuterHardsuitLing",
             "ClothingHeadHatFancyCrown",
             "MaterialHideBear",
-            "MaterialHideCorgi",
+            "ClothingOuterSuitIan",
             "ClothingOuterRedRacoon",
             "TeslaToy",
+            "PlushieGhostRevenant",
             "Chainsaw",
+            "MobMousi",
+            "MechRipleyBattery",
+            "ClothingBackpackDuffelHolding",
+            "ClothingShoesBootsMagBlinding",
+            "SheetPlasma",
+            "CognizineChemistryBottle",
+            "CombatMedipen",
+            "CloningConsoleComputerCircuitboard",
+            "CloningPodMachineCircuitboard",
         };
 
         [DataField("blacklistedProtos")]
@@ -245,7 +265,12 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodBreadMeatXeno",
             "FoodCakeBrain",
             "FoodBurgerBrain",
-            "FoodSaladCaesar"
+            //"FoodSaladCaesar",
+            "MobBreadDog",
+            "MobCatCake",
+            "FoodBurgerXeno",
+            "FoodPizzaDonkpocket",
+            "TrashBakedBananaPeel"
         };
     }
 }

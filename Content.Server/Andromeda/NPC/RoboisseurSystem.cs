@@ -9,17 +9,22 @@ using Robust.Server.GameObjects;
 using Content.Server.Materials;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Server.Roboisseur.Roboisseur
 {
     public sealed partial class RoboisseurSystem : EntitySystem
     {
+        //private float _doneTotal = 0;
+
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly ChatSystem _chat = default!;
         [Dependency] private readonly MaterialStorageSystem _material = default!;
         [Dependency] private readonly AppearanceSystem _appearance = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
+        [Dependency] private readonly SharedAudioSystem _audio = default!;
 
         public override void Initialize()
         {
@@ -71,7 +76,7 @@ namespace Content.Server.Roboisseur.Roboisseur
         private void RewardServicer(EntityUid uid, RoboisseurComponent component, int tier)
         {
             var r = new Random();
-            int rewardToDispense = r.Next(350, 600) + 500 * tier;
+            int rewardToDispense = r.Next(500, 750) + 500 * tier;
 
             _material.SpawnMultipleFromMaterial(rewardToDispense, "Credit", Transform(uid).Coordinates);
             if(tier > 1)
@@ -82,6 +87,7 @@ namespace Content.Server.Roboisseur.Roboisseur
                     tier--;
                 }
             }
+            _audio.PlayPvs("/Audio/Effects/teleport_arrival.ogg", uid);
             return;
         }
 
@@ -108,6 +114,11 @@ namespace Content.Server.Roboisseur.Roboisseur
                 MetaData(args.Used)?.EntityPrototype == null)
                 return;
 
+            if (_timing.CurTime < component.StateTime)
+                return;
+
+            component.StateTime = _timing.CurTime + component.StateCD;
+
             var validItem = CheckValidity(MetaData(args.Used).EntityName, component.DesiredPrototype);
             var nextItem = true;
 
@@ -121,10 +132,11 @@ namespace Content.Server.Roboisseur.Roboisseur
             EntityManager.QueueDeleteEntity(args.Used);
 
             int tier = CheckTier(component.DesiredPrototype.ID, component);
+            component.DoneTotal++;
 
-            string message = Loc.GetString(_random.Pick(component.RewardMessages));
+            string message = Loc.GetString(_random.Pick(component.RewardMessages), ("doneTotal", component.DoneTotal));
             if (tier > 1)
-                message = Loc.GetString(_random.Pick(component.RewardMessagesTier2));
+                message = Loc.GetString(_random.Pick(component.RewardMessagesTier2), ("doneTotal", component.DoneTotal));
             _chat.TrySendInGameICMessage(uid, message, InGameICChatType.Speak, true);
 
             RewardServicer(args.User, component, tier);
