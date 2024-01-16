@@ -3,7 +3,7 @@
   maps:
   - Aspid
   - Atlas
-  - CorvaxSilly
+  - Omega
   - Bagel
 # - Barratry
   - Box
@@ -12,14 +12,14 @@
 #  - CorvaxAvrite
   - CorvaxAstra
   - Fland
+  - Marathon
   - Core
   - Gemini
   - Meta
 #  - CorvaxDelta
   - CorvaxOutpost
 # - Origin
-  - Marathon
-  - Omega
+  - CorvaxSilly
   - Saltern
   - Packed
   - Reach

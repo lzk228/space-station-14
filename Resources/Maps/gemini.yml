@@ -551,8 +551,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.05
+      linearDamping: 0.05
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -10348,8 +10348,6 @@ entities:
         chunkSize: 4
     - type: OccluderTree
     - type: Shuttle
-      angularDamping: 10000
-      linearDamping: 10000
     - type: GridPathfinding
     - type: RadiationGridResistance
     - type: GasTileOverlay
@@ -12454,7 +12452,7 @@ entities:
       pos: -9.5,60.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -4047.308
+      secondsUntilStateChange: -4069.9753
       state: Opening
   - uid: 160
     components:
@@ -14189,11 +14187,7 @@ entities:
       pos: 0.5,-22.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -5962.382
-=======
-      secondsUntilStateChange: -85487.99
->>>>>>> master
+      secondsUntilStateChange: -85510.66
       state: Opening
   - uid: 439
     components:
@@ -14580,11 +14574,7 @@ entities:
       pos: -1.5,10.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28922.691
-=======
-      secondsUntilStateChange: -108448.305
->>>>>>> master
+      secondsUntilStateChange: -108470.97
       state: Opening
 - proto: AirlockResearchDirectorLocked
   entities:
@@ -14597,11 +14587,7 @@ entities:
       pos: -2.5,11.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28922.326
-=======
-      secondsUntilStateChange: -108447.94
->>>>>>> master
+      secondsUntilStateChange: -108470.6
       state: Opening
 - proto: AirlockSalvageGlassLocked
   entities:
@@ -14643,11 +14629,7 @@ entities:
       pos: 24.5,72.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -27476.46
-=======
-      secondsUntilStateChange: -107002.07
->>>>>>> master
+      secondsUntilStateChange: -107024.734
       state: Opening
   - uid: 501
     components:
@@ -14682,11 +14664,7 @@ entities:
       pos: 18.5,68.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -43349.875
-=======
-      secondsUntilStateChange: -122875.49
->>>>>>> master
+      secondsUntilStateChange: -122898.16
       state: Opening
   - uid: 505
     components:
@@ -14705,11 +14683,7 @@ entities:
       pos: 23.5,72.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -27476.893
-=======
-      secondsUntilStateChange: -107002.51
->>>>>>> master
+      secondsUntilStateChange: -107025.17
       state: Opening
   - uid: 507
     components:
@@ -14743,11 +14717,7 @@ entities:
       pos: 10.5,6.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28925.258
-=======
-      secondsUntilStateChange: -108450.87
->>>>>>> master
+      secondsUntilStateChange: -108473.53
       state: Opening
   - uid: 511
     components:
@@ -14755,11 +14725,7 @@ entities:
       pos: -0.5,15.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28918.959
-=======
-      secondsUntilStateChange: -108444.57
->>>>>>> master
+      secondsUntilStateChange: -108467.234
       state: Opening
   - uid: 512
     components:
@@ -14769,11 +14735,7 @@ entities:
       pos: 2.5,7.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28379.926
-=======
-      secondsUntilStateChange: -107905.54
->>>>>>> master
+      secondsUntilStateChange: -107928.2
       state: Opening
   - uid: 513
     components:
@@ -14782,11 +14744,7 @@ entities:
       pos: 11.5,3.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -66140.305
-=======
-      secondsUntilStateChange: -145665.94
->>>>>>> master
+      secondsUntilStateChange: -145688.61
       state: Opening
   - uid: 514
     components:
@@ -14794,11 +14752,7 @@ entities:
       pos: 5.5,19.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28935.059
-=======
-      secondsUntilStateChange: -108460.67
->>>>>>> master
+      secondsUntilStateChange: -108483.336
       state: Opening
   - uid: 515
     components:
@@ -14806,11 +14760,7 @@ entities:
       pos: -0.5,16.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28919.191
-=======
-      secondsUntilStateChange: -108444.805
->>>>>>> master
+      secondsUntilStateChange: -108467.47
       state: Opening
   - uid: 516
     components:
@@ -14818,11 +14768,7 @@ entities:
       pos: 13.5,13.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28933.492
-=======
-      secondsUntilStateChange: -108459.1
->>>>>>> master
+      secondsUntilStateChange: -108481.766
       state: Opening
   - uid: 517
     components:
@@ -14830,11 +14776,7 @@ entities:
       pos: 14.5,13.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28933.793
-=======
-      secondsUntilStateChange: -108459.41
->>>>>>> master
+      secondsUntilStateChange: -108482.07
       state: Opening
 - proto: AirlockScienceLocked
   entities:
@@ -14846,11 +14788,7 @@ entities:
       pos: 27.5,13.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28895.293
-=======
-      secondsUntilStateChange: -108420.91
->>>>>>> master
+      secondsUntilStateChange: -108443.57
       state: Opening
   - uid: 519
     components:
@@ -14860,11 +14798,7 @@ entities:
       pos: 30.5,13.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28893.725
-=======
-      secondsUntilStateChange: -108419.336
->>>>>>> master
+      secondsUntilStateChange: -108442
       state: Opening
   - uid: 520
     components:
@@ -14875,11 +14809,7 @@ entities:
       pos: 17.5,15.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28932.459
-=======
-      secondsUntilStateChange: -108458.07
->>>>>>> master
+      secondsUntilStateChange: -108480.734
       state: Opening
   - uid: 521
     components:
@@ -14889,11 +14819,7 @@ entities:
       pos: 30.5,12.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28893.992
-=======
-      secondsUntilStateChange: -108419.6
->>>>>>> master
+      secondsUntilStateChange: -108442.266
       state: Opening
   - uid: 522
     components:
@@ -14903,11 +14829,7 @@ entities:
       pos: 27.5,12.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28895.592
-=======
-      secondsUntilStateChange: -108421.2
->>>>>>> master
+      secondsUntilStateChange: -108443.87
       state: Opening
   - uid: 523
     components:
@@ -14917,11 +14839,7 @@ entities:
       pos: 15.5,19.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -70226.16
-=======
-      secondsUntilStateChange: -149751.78
->>>>>>> master
+      secondsUntilStateChange: -149774.45
       state: Opening
   - uid: 524
     components:
@@ -14931,11 +14849,7 @@ entities:
       pos: 11.5,19.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28936.86
-=======
-      secondsUntilStateChange: -108462.47
->>>>>>> master
+      secondsUntilStateChange: -108485.13
       state: Opening
   - uid: 525
     components:
@@ -14946,11 +14860,7 @@ entities:
       pos: 17.5,14.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28932.725
-=======
-      secondsUntilStateChange: -108458.336
->>>>>>> master
+      secondsUntilStateChange: -108481
       state: Opening
   - uid: 526
     components:
@@ -14961,11 +14871,7 @@ entities:
       pos: 22.5,15.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28930.992
-=======
-      secondsUntilStateChange: -108456.6
->>>>>>> master
+      secondsUntilStateChange: -108479.266
       state: Opening
   - uid: 527
     components:
@@ -14976,11 +14882,7 @@ entities:
       pos: 22.5,14.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -28930.725
-=======
-      secondsUntilStateChange: -108456.336
->>>>>>> master
+      secondsUntilStateChange: -108479
       state: Opening
 - proto: AirlockSecurity
   entities:
@@ -55725,28 +55627,7 @@ entities:
     - type: Transform
       pos: -19.5,49.5
       parent: 2
-<<<<<<< HEAD
-- proto: CapacitorStockPart
-  entities:
-  - uid: 11
-    components:
-    - type: Transform
-      pos: 29.660423,8.725392
-      parent: 2
-  - uid: 12
-    components:
-    - type: Transform
-      pos: 24.866156,6.536001
-      parent: 2
-  - uid: 13
-    components:
-    - type: Transform
-      pos: 29.379913,8.4959955
-      parent: 2
-  - uid: 7897
-=======
   - uid: 8246
->>>>>>> master
     components:
     - type: Transform
       pos: -19.5,50.5
@@ -81829,16 +81710,6 @@ entities:
       pos: 13.7681465,-14.1079645
       parent: 2
 - proto: DrinkGildlagerBottleFull
-<<<<<<< HEAD
-  entities:
-  - uid: 11508
-    components:
-    - type: Transform
-      pos: -13.768314,-7.567894
-      parent: 2
-- proto: DrinkGlass
-=======
->>>>>>> master
   entities:
   - uid: 12382
     components:
@@ -86294,11 +86165,7 @@ entities:
       pos: 19.5,62.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -66721.53
-=======
-      secondsUntilStateChange: -146247.16
->>>>>>> master
+      secondsUntilStateChange: -146269.83
       state: Closing
   - uid: 12990
     components:
@@ -123791,11 +123658,7 @@ entities:
       pos: 29.5,63.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -42492.17
-=======
-      secondsUntilStateChange: -122017.79
->>>>>>> master
+      secondsUntilStateChange: -122040.45
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -126849,26 +126712,7 @@ entities:
       parent: 2
 - proto: MatterBinStockPart
   entities:
-<<<<<<< HEAD
-  - uid: 14
-    components:
-    - type: Transform
-      pos: 24.496393,6.7144213
-      parent: 2
-  - uid: 15
-    components:
-    - type: Transform
-      pos: 11.6682205,34.66155
-      parent: 2
-  - uid: 16
-    components:
-    - type: Transform
-      pos: 24.20313,6.8673525
-      parent: 2
-  - uid: 17756
-=======
   - uid: 18803
->>>>>>> master
     components:
     - type: Transform
       pos: 24.496393,6.7144213
@@ -127092,31 +126936,7 @@ entities:
     - type: Transform
       pos: 21.65911,64.61913
       parent: 2
-<<<<<<< HEAD
-  - uid: 17827
-    components:
-    - type: Transform
-      pos: 29.112154,8.763625
-      parent: 2
-  - uid: 17828
-    components:
-    - type: Transform
-      pos: 24.305136,6.5232573
-      parent: 2
-  - uid: 17829
-    components:
-    - type: Transform
-      pos: 24.585646,6.4595356
-      parent: 2
-  - uid: 17830
-    components:
-    - type: Transform
-      pos: 28.999851,8.529497
-      parent: 2
-  - uid: 26094
-=======
   - uid: 18843
->>>>>>> master
     components:
     - type: Transform
       pos: 29.112154,8.763625
@@ -127203,8 +127023,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -24.5,35.5
       parent: 2
-<<<<<<< HEAD
-=======
 - proto: ModularReceiver
   entities:
   - uid: 18858
@@ -127212,7 +127030,6 @@ entities:
     - type: Transform
       pos: -2.2334843,20.62814
       parent: 2
->>>>>>> master
 - proto: MonkeyCubeWrapped
   entities:
   - uid: 18859
@@ -127545,17 +127362,10 @@ entities:
     - type: Transform
       pos: -53.374184,10.497402
       parent: 2
-<<<<<<< HEAD
-  - uid: 17825
-    components:
-    - type: Transform
-      pos: -16.538208,47.724583
-=======
   - uid: 18885
     components:
     - type: Transform
       pos: 34.303963,69.547195
->>>>>>> master
       parent: 2
 - proto: NettleSeeds
   entities:
@@ -143253,10 +143063,9 @@ entities:
       parent: 2
 - proto: Roboisseur
   entities:
-  - uid: 26862
+  - uid: 27449
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -28.5,-8.5
       parent: 2
 - proto: RockGuitarInstrument
@@ -148894,6 +148703,13 @@ entities:
     - type: Transform
       pos: 12.5,-18.5
       parent: 2
+- proto: SpawnMobGorillaLargo
+  entities:
+  - uid: 22297
+    components:
+    - type: Transform
+      pos: 46.5,14.5
+      parent: 2
 - proto: SpawnMobHamsterHamlet
   entities:
   - uid: 22282
@@ -148977,13 +148793,6 @@ entities:
     components:
     - type: Transform
       pos: -10.5,14.5
-      parent: 2
-- proto: SpawnMobRaccoonMorticia
-  entities:
-  - uid: 22297
-    components:
-    - type: Transform
-      pos: 46.5,14.5
       parent: 2
 - proto: SpawnMobShiva
   entities:
@@ -150503,25 +150312,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: -2.5,56.5
       parent: 2
-<<<<<<< HEAD
-- proto: SpawnMobGorillaLargo
-  entities:
-  - uid: 21171
-    components:
-    - type: Transform
-      pos: 46.5,14.5
-      parent: 2
-- proto: SpawnMobHamsterHamlet
-  entities:
-  - uid: 21153
-=======
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraEngineering
       nameSet: True
       id: Atmos Front
   - uid: 22535
->>>>>>> master
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -150701,11 +150497,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 79.5,4.5
       parent: 2
-<<<<<<< HEAD
-- proto: SpawnMobShiva
-  entities:
-  - uid: 21172
-=======
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
@@ -150722,7 +150513,6 @@ entities:
       nameSet: True
       id: Tool Storage 2
   - uid: 22553
->>>>>>> master
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -151374,6 +151164,7 @@ entities:
       solutions:
         injector:
           temperature: 293.15
+          canBoil: True
           canMix: False
           canReact: True
           maxVol: 15
@@ -152693,29 +152484,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -17.5,39.5
       parent: 2
-<<<<<<< HEAD
-    - type: Tag
-      tags:
-      - Syringe
-    - type: SolutionContainerManager
-      solutions:
-        injector:
-          temperature: 293.15
-          canBoil: True
-          canMix: False
-          canReact: True
-          maxVol: 15
-          name: null
-          reagents:
-          - data: null
-            ReagentId: SpaceDrugs
-            Quantity: 15
-- proto: SyringeEphedrine
-  entities:
-  - uid: 21460
-=======
   - uid: 22862
->>>>>>> master
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -157102,20 +156871,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,45.5
       parent: 2
-<<<<<<< HEAD
-- proto: VariantCubeBox
-  entities:
-  - uid: 17835
-    components:
-    - type: Transform
-      pos: 2.6412878,12.652791
-      parent: 2
-- proto: VehicleKeyJanicart
-  entities:
-  - uid: 22079
-=======
   - uid: 23515
->>>>>>> master
     components:
     - type: MetaData
       flags: PvsPriority

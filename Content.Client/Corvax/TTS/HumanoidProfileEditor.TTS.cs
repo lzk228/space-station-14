@@ -45,7 +45,7 @@ public sealed partial class HumanoidProfileEditor
         };
 
         _voicePlayButton.OnPressed += _ => { PlayTTS(); };
-        IoCManager.Instance!.TryResolveType(out _sponsorsMgr);
+        //IoCManager.Instance!.TryResolveType(out _sponsorsMgr);
     }
 
     private void UpdateTTSVoicesControls()

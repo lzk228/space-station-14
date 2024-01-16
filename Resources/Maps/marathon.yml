@@ -55437,10 +55437,6 @@ entities:
     - type: Transform
       pos: -43.5,19.5
       parent: 30
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -55459,15 +55455,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 9578
     components:
     - type: Transform
       pos: -22.5,-44.5
       parent: 30
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -55486,15 +55482,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 16813
     components:
     - type: Transform
       pos: -54.5,41.5
       parent: 30
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -55513,15 +55509,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 20467
     components:
     - type: Transform
       pos: 3.5,-44.5
       parent: 30
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -55540,6 +55536,10 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 22442
     components:
     - type: Transform
@@ -55577,10 +55577,6 @@ entities:
     - type: Transform
       pos: -31.5,-38.5
       parent: 30
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -55599,6 +55595,10 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
 - proto: CrateEngineeringCableMV
   entities:
   - uid: 10220
@@ -116592,6 +116592,13 @@ entities:
     - type: Transform
       pos: 39.487907,-67.53489
       parent: 30
+- proto: Roboisseur
+  entities:
+  - uid: 9041
+    components:
+    - type: Transform
+      pos: -9.5,10.5
+      parent: 30
 - proto: SalvageMagnet
   entities:
   - uid: 2040
@@ -121281,6 +121288,13 @@ entities:
     - type: Transform
       pos: -16.5,14.5
       parent: 30
+- proto: SpawnMobGorillaLargo
+  entities:
+  - uid: 8383
+    components:
+    - type: Transform
+      pos: 26.5,1.5
+      parent: 30
 - proto: SpawnMobKangarooWillow
   entities:
   - uid: 10987
@@ -121336,13 +121350,6 @@ entities:
     components:
     - type: Transform
       pos: -22.5,-5.5
-      parent: 30
-- proto: SpawnMobRaccoonMorticia
-  entities:
-  - uid: 8383
-    components:
-    - type: Transform
-      pos: 26.5,1.5
       parent: 30
 - proto: SpawnMobShiva
   entities:

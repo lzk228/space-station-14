@@ -61532,10 +61532,6 @@ entities:
     - type: Transform
       pos: -65.5,-19.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61554,15 +61550,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 3600
     components:
     - type: Transform
       pos: 15.5,-43.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61581,15 +61577,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 6582
     components:
     - type: Transform
       pos: 5.5,13.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61608,15 +61604,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 17023
     components:
     - type: Transform
       pos: -4.5,29.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61635,6 +61631,10 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
 - proto: CrateEngineeringCableHV
   entities:
   - uid: 3440
@@ -61642,10 +61642,6 @@ entities:
     - type: Transform
       pos: 32.5,-52.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61664,15 +61660,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 11479
     components:
     - type: Transform
       pos: -11.5,-31.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61691,15 +61687,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 20420
     components:
     - type: Transform
       pos: 63.5,-39.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61718,6 +61714,10 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
 - proto: CrateEngineeringCableLV
   entities:
   - uid: 2034
@@ -61725,10 +61725,6 @@ entities:
     - type: Transform
       pos: -32.5,-30.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61747,6 +61743,10 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
 - proto: CrateEngineeringCableMV
   entities:
   - uid: 3756
@@ -61754,10 +61754,6 @@ entities:
     - type: Transform
       pos: 60.5,-30.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61776,15 +61772,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 11680
     components:
     - type: Transform
       pos: -4.5,-48.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61803,15 +61799,15 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
   - uid: 19314
     components:
     - type: Transform
       pos: 27.5,16.5
       parent: 60
-    - type: Construction
-      containers:
-      - EntityStorageComponent
-      - entity_storage
     - type: EntityStorage
       air:
         volume: 200
@@ -61830,6 +61826,10 @@ entities:
         - 0
         - 0
         - 0
+    - type: Construction
+      containers:
+      - EntityStorageComponent
+      - entity_storage
 - proto: CrateEngineeringSecure
   entities:
   - uid: 3669
@@ -123786,7 +123786,7 @@ entities:
       parent: 60
 - proto: Roboisseur
   entities:
-  - uid: 16450
+  - uid: 16532
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -131219,12 +131219,6 @@ entities:
       parent: 60
 - proto: StoolBar
   entities:
-  - uid: 1201
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 21.5,-34.5
-      parent: 60
   - uid: 2224
     components:
     - type: Transform
@@ -131306,6 +131300,12 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -11.5,-53.5
+      parent: 60
+  - uid: 16531
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 21.5,-34.5
       parent: 60
   - uid: 16674
     components:

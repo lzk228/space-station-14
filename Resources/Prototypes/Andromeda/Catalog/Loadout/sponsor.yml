@@ -1065,7 +1065,11 @@
   id: ClothingUniformJumpsuitRedGalaxyLoadout
   entity: ClothingUniformJumpsuitRedGalaxy
   sponsorOnly: true
-  blacklistJobs: [Passenger]
+
+- type: loadout
+  id: ClothingUniformJumpsuitBlueGalaxyLoadout
+  entity: ClothingUniformJumpsuitBlueGalaxy
+  sponsorOnly: true
 
 - type: loadout
   id: ClothingHeadHatWitch1Loadout

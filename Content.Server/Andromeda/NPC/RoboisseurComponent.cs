@@ -98,7 +98,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodBurgerEmpowered",
             "FoodSoupClown",
             "FoodSoupChiliClown",
-            "FoodBurgerSuper",
+            // cuz of broken microwave "FoodBurgerSuper",
             "FoodNoodlesCopy",
             //"FoodMothMallow",
             //"FoodPizzaCorncob",
@@ -187,7 +187,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "CloningConsoleComputerCircuitboard",
             "CloningPodMachineCircuitboard",
             "FloorTileItemAstroGrass30",
-            "FloorTileItemAstroIce30",  
+            "FloorTileItemAstroIce30",
         };
 
         [DataField("blacklistedProtos")]
@@ -272,7 +272,8 @@ namespace Content.Server.Roboisseur.Roboisseur
             "MobCatCake",
             "FoodBurgerXeno",
             "FoodPizzaDonkpocket",
-            "TrashBakedBananaPeel"
+            "TrashBakedBananaPeel",
+            "FoodBurgerSuper", // broken microwave
         };
     }
 }
