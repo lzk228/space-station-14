@@ -81,10 +81,6 @@
     ClothingHandsGlovesColorGreen: 2
     ClothingHandsGlovesColorOrange: 2
     ClothingHandsGlovesColorPurple: 2
-  contrabandInventory:
-    ClothingMaskNeckGaiter: 2
-    ClothingUniformJumpsuitTacticool: 1
-    ClothingUniformJumpskirtTacticool: 1
     # Andromeda-Start
     ClothingNeckChokerHeart: 2
     ClothingNeckChokerSpike: 2
@@ -92,3 +88,8 @@
     ClothingUnderwearTopBraWhite: 5
     ClothingUnderwearBottomBoxersWhite: 5
     # Andromeda-End
+  contrabandInventory:
+    ClothingMaskNeckGaiter: 2
+    ClothingUniformJumpsuitTacticool: 1
+    ClothingUniformJumpskirtTacticool: 1
+
