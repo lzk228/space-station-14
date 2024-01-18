@@ -1,4 +1,4 @@
-﻿- type: job
+- type: job
   id: TechnicalAssistant
   name: job-name-technical-assistant
   description: job-description-technical-assistant
@@ -28,6 +28,9 @@
     id: TechnicalAssistantPDA
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtColorYellow
   satchel: ClothingBackpackSatchelEngineeringFilled
   duffelbag: ClothingBackpackDuffelEngineeringFilled

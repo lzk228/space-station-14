@@ -27,6 +27,9 @@
     belt: ChemBag
     pocket1: HandLabeler
     # the purple glasses?
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtChemistry
   satchel: ClothingBackpackSatchelChemistryFilled
   duffelbag: ClothingBackpackDuffelChemistryFilled

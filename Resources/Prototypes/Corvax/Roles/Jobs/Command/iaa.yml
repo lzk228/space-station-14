@@ -34,8 +34,11 @@
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
     neck: ClothingNeckLawyerbadge
-  inhand:
-    - BriefcaseIAAFilled
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearToplaceBra # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesLace # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
   satchel: ClothingBackpackSatchelIAAFilled
   duffelbag: ClothingBackpackDuffelIAAFilled
+  inhand:
+    - BriefcaseIAAFilled

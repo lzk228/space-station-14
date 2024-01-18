@@ -43,6 +43,9 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"pocket1", "POCKET1"},
         {"pocket2", "POCKET2"},
         {"suitstorage", "SUITSTORAGE"},
+	    {"socks", "SOCKS"}, // Andromeda-Underwear
+	    {"underweart", "UNDERWEART"}, // Andromeda-Underwear
+	    {"underwearb", "UNDERWEARB"}, // Andromeda-Underwear
     };
 
     [Dependency] private readonly IResourceCache _cache = default!;

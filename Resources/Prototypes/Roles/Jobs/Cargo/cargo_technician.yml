@@ -22,6 +22,9 @@
     id: CargoPDA
     ears: ClothingHeadsetCargo
     pocket1: AppraisalTool
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtCargo
   satchel: ClothingBackpackSatchelCargoFilled
   duffelbag: ClothingBackpackDuffelCargoFilled
