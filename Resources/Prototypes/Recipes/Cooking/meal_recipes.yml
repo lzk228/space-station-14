@@ -186,7 +186,8 @@
   time: 10
   solids:
     FoodBreadBun: 1
-    Ectoplasm: 1
+    #Ectoplasm: 1 fuck it i wanna easier animated Food
+    ClothingOuterGhostSheet: 1
 
 - type: microwaveMealRecipe
   id: RecipeHumanBurger
@@ -1371,7 +1372,7 @@
   name: cat cake recipe
   result: MobCatCake
   time: 15
-  reagents: 
+  reagents:
     Milk: 15
     Cognizine: 5
   solids:

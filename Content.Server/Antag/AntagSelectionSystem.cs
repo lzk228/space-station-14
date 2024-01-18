@@ -115,9 +115,9 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             if (pref.AntagPreferences.Contains(antagPrototype))
                 prefList.Add(player);
 
-            // A-13 No Thief-Agents system v2 start
-            if (HasComp<ThiefRoleComponent>(player.AttachedEntity))
-                prefList.Remove(player);
+            // A-13 No Thief-Agents system v2 start [NOT WORKING]
+            //if (HasComp<ThiefRoleComponent>(player.AttachedEntity))
+            //    prefList.Remove(player);
             // A-13  No Thief-Agents system v2 end
         }
 

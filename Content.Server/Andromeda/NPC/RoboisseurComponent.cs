@@ -114,7 +114,6 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodSoupNettle",
             "FoodBurgerDuck",
             "FoodBurgerBaseball",
-            "FoodBurgerGhost",
             "FoodTacoFish"
         };
 
@@ -274,6 +273,8 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodPizzaDonkpocket",
             "TrashBakedBananaPeel",
             "FoodBurgerSuper", // broken microwave
+            "FoodBurgerGhost",
+            "FoodDonkpocketPizzaWarm",
         };
     }
 }
