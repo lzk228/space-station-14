@@ -32,8 +32,8 @@
     torso:
       part: TorsoAnimal
       connections:
-      - l-hand
       - r-hand
+      - l-hand
       - legs
       organs:
         lungs: OrganAnimalLungs
