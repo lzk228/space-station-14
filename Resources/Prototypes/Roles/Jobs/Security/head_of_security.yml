@@ -52,6 +52,9 @@
     ears: ClothingHeadsetAltSecurity
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal
+    underwearb: ClothingUnderwearBottomBoxersHOS # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraHOS # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesHOS # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtHoS
   satchel: ClothingBackpackSatchelHOSFilled
   duffelbag: ClothingBackpackDuffelHOSFilled

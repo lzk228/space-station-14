@@ -43,6 +43,9 @@
     outerClothing: ClothingOuterArmorCaptainCarapace
     id: CaptainPDA
     ears: ClothingHeadsetAltCommand
+    underwearb: ClothingUnderwearBottomBoxersCap # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraCap # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesCap # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtCaptain
   satchel: ClothingBackpackSatchelCaptainFilled
   duffelbag: ClothingBackpackDuffelCaptainFilled

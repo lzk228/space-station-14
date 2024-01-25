@@ -8,6 +8,9 @@
     id: CluwnePDA
     gloves: ClothingHandsGlovesCluwne
     pocket1: CluwneHorn
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
 
 - type: startingGear
   id: HoloClownGear
