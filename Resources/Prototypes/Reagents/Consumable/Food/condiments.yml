@@ -87,8 +87,7 @@
   group: Foods
   desc: reagent-desc-ketchunaise
   physicalDesc: reagent-physical-desc-saucey
-  #I love it when people just make up fake prototypes.
-  #flavor: piquant
+  flavor: ketchunaise
   color: "#fba399"
   boilingPoint: 110.0
   meltingPoint: -9.0
@@ -100,7 +99,7 @@
   group: Foods
   desc: reagent-desc-mayo
   physicalDesc: reagent-physical-desc-thick
-  flavor: sour
+  flavor: mayonnaise
   color: "#f9f5e5"
   boilingPoint: 110.0
   meltingPoint: -9.0
@@ -112,7 +111,7 @@
   group: Foods
   desc: reagent-desc-mustard
   physicalDesc: reagent-physical-desc-thick
-  flavor: sour
+  flavor: mustard
   color: "#ffdb58"
   recognizable: true
 
