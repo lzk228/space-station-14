@@ -47,6 +47,9 @@
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetCE
     belt: ClothingBeltUtilityEngineering
+    underwearb: ClothingUnderwearBottomBoxersCE # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraCE # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesCE # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtChiefEngineer
   satchel: ClothingBackpackSatchelChiefEngineerFilled
   duffelbag: ClothingBackpackDuffelChiefEngineerFilled

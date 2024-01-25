@@ -1,0 +1,56 @@
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesWhite
+  name: трусики
+  description: Стандартное нижнее бельё Nanotrasen для сотрудниц станции. Painted white.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/panties.rsi
+
+#etc
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesThong
+  name: стринги
+  description: Для рисковых девушек.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/thong.rsi
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesNeko
+  name: неко трусики
+  description: Для "кошко" девочек.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/nekopanties.rsi
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesLace
+  name: кружевные трусики
+  description: Для серьёзных леди.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/lacepanties.rsi
+
+# SpaceNinja
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesSpaceNinja
+  name: повязка на пах
+  description: Кусок обычной ткани. Вроде бы сделано только для девушек.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/SpaceNinja/panties.rsi
+
+# DeathSquad
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesDeathSquad
+  name: трусики эскадрона смерти
+  description: Самые технологичные трусики в галактике.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/deathpanties.rsi

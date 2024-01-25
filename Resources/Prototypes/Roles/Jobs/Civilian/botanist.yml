@@ -24,6 +24,9 @@
     ears: ClothingHeadsetService
     outerClothing: ClothingOuterApronBotanist
     belt: ClothingBeltPlantFilled
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtHydroponics
   satchel: ClothingBackpackSatchelHydroponicsFilled
   duffelbag: ClothingBackpackDuffelHydroponicsFilled

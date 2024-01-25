@@ -20,6 +20,9 @@
     gloves: ClothingHandsGlovesBoxingRed
     shoes: ClothingShoesColorRed
     belt: ClothingBeltChampion
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraSports # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   innerClothingSkirt: UniformShortsRedWithTop
   satchel: ClothingBackpackSatchelFilled
   duffelbag: ClothingBackpackDuffelFilled
