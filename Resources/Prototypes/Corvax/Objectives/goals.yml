@@ -26,9 +26,9 @@
   id: StationGoalMiningOutpost
   text: station-goal-mining-outpost
 
-- type: stationGoal
-  id: StationGoalContaintment
-  text: station-goal-containment
+#- type: stationGoal
+#  id: StationGoalContaintment
+#  text: station-goal-containment
 
 #- type: stationGoal
 #  id: StationGoalSpaceZoo

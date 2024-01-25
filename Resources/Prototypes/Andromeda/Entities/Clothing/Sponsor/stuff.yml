@@ -41,3 +41,18 @@
     sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatDetectiveSponsor
+  name: кожаный тренч
+  suffix: Спонсор
+  description: Вы все никак не можете отделаться от чувства что где-то вы его уже видели... но где?
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/detective.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/detective.rsi
+  - type: StorageFill
+    contents:
+    - id: FlippoEngravedLighter

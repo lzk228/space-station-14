@@ -1112,6 +1112,21 @@
   entity: ClothingBeltHolster
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingShoesBootsJackLoadout
+  entity: ClothingShoesBootsJack
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieMothLoadout
+  entity: PlushieMoth
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatDetectiveSponsorLoadout
+  entity: ClothingOuterCoatDetectiveSponsor
+  sponsorOnly: true
+
 #SansZana
 - type: loadout
   id: ClothingUniformJumpsuitStrangeBunnyLoadout2

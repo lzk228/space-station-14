@@ -179,7 +179,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "MobMousi",
             "MechRipleyBattery",
             "ClothingBackpackDuffelHolding",
-            "ClothingShoesBootsMagBlinding",
+            "ClothingShoesBootsSpeed",
             "SheetPlasma",
             "CognizineChemistryBottle",
             "CombatMedipen",
