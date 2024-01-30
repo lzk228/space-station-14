@@ -27,9 +27,9 @@
     id: ParamedicPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltParamedicFilled
-    underwearb: ClothingUnderwearBottomBoxersSeniorDoctor # Andromeda-Underwear
-  underweart: ClothingUnderwearTopSeniorDoctor # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesSeniorDoctor # Andromeda-Underwear
+    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
+  underweart: ClothingUnderwearTopBraSportsAlternative # Andromeda-Underwear
+  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
   innerClothingSkirt: ClothingUniformJumpskirtParamedic
   satchel: ClothingBackpackSatchelParamedicFilled
   duffelbag: ClothingBackpackDuffelParamedicFilled

@@ -11,13 +11,13 @@
 #  - Cluster
 #  - CorvaxAvrite
   - CorvaxAstra
-  - Fland
   - Marathon
-  - Core
-  - Gemini
   - Meta
+  - Fland
+  - Gemini
+  - Core
 #  - CorvaxDelta
-  - CorvaxOutpost
+#  - CorvaxOutpost
 # - Origin
   - CorvaxSilly
   - Saltern
