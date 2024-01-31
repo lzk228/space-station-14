@@ -16,6 +16,7 @@ using Content.Server.Antag;
 using Robust.Server.Audio;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Random;
+using Content.Server.Andromeda.Roles; // A-13
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -52,7 +53,7 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
         var query = EntityQueryEnumerator<ThiefRuleComponent, GameRuleComponent>();
         while (query.MoveNext(out var uid, out var thief, out var gameRule))
         {
-            //Chance to not lauch gamerule  
+            //Chance to not lauch gamerule
             if (_random.Prob(thief.RuleChance))
             {
                 if (!GameTicker.IsGameRuleAdded(uid, gameRule))
@@ -122,12 +123,16 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
             PrototypeId = thiefRule.ThiefPrototypeId
         });
 
-        //Add Pacified  
+        //Add Pacified
         //To Do: Long-term this should just be using the antag code to add components.
         if (addPacified) //This check is important because some servers may want to disable the thief's pacifism. Do not remove.
         {
             EnsureComp<PacifiedComponent>(mind.OwnedEntity.Value);
         }
+
+        // A-13 No Thief-Agents system v5
+        EnsureComp<ThiefCheckComponent>(mind.OwnedEntity.Value);
+        // A-13 No Thief-Agents system v5
 
         // Notificate player about new role assignment
         if (_mindSystem.TryGetSession(mindId, out var session))

@@ -27,7 +27,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Content.Server.Shuttles.Components;
 using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
-using Content.Server.Roles;
+using Content.Server.Andromeda.Roles; // A-13
 
 namespace Content.Server.Antag;
 
@@ -114,11 +114,6 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             var pref = (HumanoidCharacterProfile) _prefs.GetPreferences(player.UserId).SelectedCharacter;
             if (pref.AntagPreferences.Contains(antagPrototype))
                 prefList.Add(player);
-
-            // A-13 No Thief-Agents system v2 start [NOT WORKING]
-            //if (HasComp<ThiefRoleComponent>(player.AttachedEntity))
-            //    prefList.Remove(player);
-            // A-13  No Thief-Agents system v2 end
         }
 
         if (playerList.Count == 0)
@@ -174,6 +169,14 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             // Role prevents antag.
             if (!_jobs.CanBeAntag(player))
                 continue;
+
+            // A-13 No Thief-Agents system v5 start
+            if (HasComp<ThiefCheckComponent>(player.AttachedEntity))
+            {
+                Logger.InfoS("ANTAG", "Skipping player cuz he is already a thief.");
+                continue;
+            }
+            // A-13  No Thief-Agents system v5 end
 
             // Latejoin
             if (player.AttachedEntity != null && pendingQuery.HasComponent(player.AttachedEntity.Value))
