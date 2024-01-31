@@ -815,7 +815,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
-    access: [["Hydroponics"]]
+    access: [["Hydroponics"], ["Kitchen"]]
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -1401,7 +1401,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
-    access: [["Hydroponics"]]
+    access: [["Hydroponics"], ["Kitchen"]]
 
 - type: entity
   parent: VendingMachine
@@ -2009,4 +2009,3 @@
     ejectDelay: 2
   - type: AccessReader
     access: [["SyndicateAgent"]]
-

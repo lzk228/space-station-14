@@ -42,7 +42,7 @@ public sealed class LemonkaSystem : EntitySystem
             return;
 
         var potency = produceComponent.Seed?.Potency ?? 5;
-        var totalIntensity = MathF.Sqrt(potency) * 9;
+        var totalIntensity = MathF.Sqrt(potency) * 3;
         _explosionSystem.QueueExplosion(uid, "Default", totalIntensity, 1.5f, 120, canCreateVacuum:false);
     }
 }

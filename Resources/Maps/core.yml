@@ -346,8 +346,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.05
+      linearDamping: 0.05
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -355,8 +355,6 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      angularDamping: 10000
-      linearDamping: 10000    
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -14679,11 +14677,7 @@ entities:
       pos: -16.5,19.5
       parent: 2
     - type: Door
-<<<<<<< HEAD
-      secondsUntilStateChange: -30235.438
-=======
       secondsUntilStateChange: -30242.922
->>>>>>> master
       state: Opening
   - uid: 4196
     components:
@@ -18745,41 +18739,49 @@ entities:
   - uid: 3578
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -56.5,-1.5
       parent: 2
   - uid: 3579
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -56.5,-3.5
       parent: 2
   - uid: 3580
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -56.5,4.5
       parent: 2
   - uid: 3602
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -56.5,6.5
       parent: 2
   - uid: 6351
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -41.5,-58.5
       parent: 2
   - uid: 6376
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -53.5,-65.5
       parent: 2
   - uid: 6377
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -53.5,-58.5
       parent: 2
   - uid: 6378
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: -41.5,-65.5
       parent: 2
   - uid: 7393
@@ -64535,7 +64537,6 @@ entities:
       solutions:
         drink:
           temperature: 293.15
-          canBoil: True
           canMix: False
           canReact: True
           maxVol: 50
@@ -100842,11 +100843,11 @@ entities:
 
         --------------------------------------------------------------------------------------
 
-        [bold]1.[/bold] Limited external forces from the containments power.
+        [bold]1.[/bold] Limited external forces from the containments power. 
 
-        [bold]2.[/bold] An "early warning" system, if you see JUST the PA room run out of power, you know there is an issue.
+        [bold]2.[/bold] An "early warning" system, if you see JUST the PA room run out of power, you know there is an issue. 
 
-        [bold]3.[/bold] Due to being on its own small loop, its much easier to spot faults in the system.
+        [bold]3.[/bold] Due to being on its own small loop, its much easier to spot faults in the system. 
 
 
         While we have listed the upsides we also acknowledge the downside, for it being on its own loop you will need an external force if the system "runs out of juice". Our recommendation for this is simply attaching a generator to said SMES and letting it get to full charge before continuing operations but as said from another of our technicians... "just attach it to the main grid for like, a hot moment, and kickstart the thing!"
@@ -100921,7 +100922,7 @@ entities:
         Dear [bold]engineering team[/bold],
 
 
-        During the production of this station we have overlooked this substation, and as a result does not power any APCs. Please pretend that this was not an oversight, but instead an intended decision.
+        During the production of this station we have overlooked this substation, and as a result does not power any APCs. Please pretend that this was not an oversight, but instead an intended decision. 
 
 
         [italics]It is now a spare substation for any case where a substation or APC becomes damaged or wears out over time.[/italics]
@@ -110531,14 +110532,6 @@ entities:
     - type: Transform
       pos: 58.457176,26.640175
       parent: 2
-- proto: Roboisseur
-  entities:
-  - uid: 21460
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -21.5,9.5
-      parent: 2
 - proto: RobustHarvestChemistryBottle
   entities:
   - uid: 20603
@@ -114404,13 +114397,6 @@ entities:
     - type: Transform
       pos: 41.5,-27.5
       parent: 2
-- proto: SpawnMobGorillaLargo
-  entities:
-  - uid: 5733
-    components:
-    - type: Transform
-      pos: 37.5,15.5
-      parent: 2
 - proto: SpawnMobMcGriff
   entities:
   - uid: 4990
@@ -114439,6 +114425,13 @@ entities:
     components:
     - type: Transform
       pos: 52.5,-10.5
+      parent: 2
+- proto: SpawnMobRaccoonMorticia
+  entities:
+  - uid: 5733
+    components:
+    - type: Transform
+      pos: 37.5,15.5
       parent: 2
 - proto: SpawnMobShiva
   entities:
@@ -115356,12 +115349,6 @@ entities:
     components:
     - type: Transform
       pos: -37.5,24.5
-      parent: 2
-  - uid: 21461
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -21.5,9.5
       parent: 2
 - proto: StorageCanister
   entities:

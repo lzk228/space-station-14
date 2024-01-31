@@ -114572,10 +114572,11 @@ entities:
       parent: 30
 - proto: Roboisseur
   entities:
-  - uid: 14843
+  - uid: 14844
     components:
     - type: Transform
-      pos: -9.5,8.5
+      rot: -1.5707963267948966 rad
+      pos: -9.5,7.5
       parent: 30
 - proto: SalvageMagnet
   entities:

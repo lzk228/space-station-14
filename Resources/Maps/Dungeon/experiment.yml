@@ -2261,20 +2261,6 @@ entities:
     - type: Transform
       pos: 17.5,31.5
       parent: 1653
-- proto: AloeSeeds
-  entities:
-  - uid: 1379
-    components:
-    - type: Transform
-      pos: 16.516748,9.567207
-      parent: 1653
-- proto: AmbrosiaVulgarisSeeds
-  entities:
-  - uid: 1380
-    components:
-    - type: Transform
-      pos: 16.688623,9.410957
-      parent: 1653
 - proto: AnomalyScanner
   entities:
   - uid: 658
@@ -6312,6 +6298,13 @@ entities:
     - type: Transform
       pos: 17.452066,13.392001
       parent: 1653
+- proto: ClothingHeadHatCueball
+  entities:
+  - uid: 1474
+    components:
+    - type: Transform
+      pos: 1.5061505,26.883219
+      parent: 1653
 - proto: ClothingHeadHatWeldingMaskFlame
   entities:
   - uid: 661
@@ -6530,6 +6523,13 @@ entities:
     - type: Transform
       pos: 19.52091,32.612823
       parent: 1653
+- proto: DeathNettleSeeds
+  entities:
+  - uid: 1114
+    components:
+    - type: Transform
+      pos: 16.668823,9.400122
+      parent: 1653
 - proto: DisposalTrunk
   entities:
   - uid: 1436
@@ -6681,20 +6681,6 @@ entities:
     - type: Transform
       pos: 22.57765,4.50994
       parent: 1653
-- proto: EggplantSeeds
-  entities:
-  - uid: 1384
-    components:
-    - type: Transform
-      pos: 16.626123,7.6609573
-      parent: 1653
-- proto: EggySeeds
-  entities:
-  - uid: 1383
-    components:
-    - type: Transform
-      pos: 16.422998,7.8484573
-      parent: 1653
 - proto: EmergencyLight
   entities:
   - uid: 1605
@@ -6818,6 +6804,13 @@ entities:
     components:
     - type: Transform
       pos: 6.6041045,15.74082
+      parent: 1653
+- proto: FleshbushSeeds
+  entities:
+  - uid: 1150
+    components:
+    - type: Transform
+      pos: 16.653198,7.6657467
       parent: 1653
 - proto: Floodlight
   entities:
@@ -7380,6 +7373,47 @@ entities:
     components:
     - type: Transform
       pos: 21.9839,4.619315
+      parent: 1653
+- proto: LemonKa
+  entities:
+  - uid: 1152
+    components:
+    - type: Transform
+      pos: 21.53644,9.634497
+      parent: 1653
+- proto: LemoonSeeds
+  entities:
+  - uid: 1113
+    components:
+    - type: Transform
+      pos: 16.496948,9.603247
+      parent: 1653
+- proto: LifeweedLeaves
+  entities:
+  - uid: 1379
+    components:
+    - type: Transform
+      pos: 15.455196,8.634497
+      parent: 1653
+  - uid: 1380
+    components:
+    - type: Transform
+      pos: 15.455196,8.634497
+      parent: 1653
+  - uid: 1383
+    components:
+    - type: Transform
+      pos: 15.455196,8.634497
+      parent: 1653
+  - uid: 1384
+    components:
+    - type: Transform
+      pos: 15.455196,8.634497
+      parent: 1653
+  - uid: 1472
+    components:
+    - type: Transform
+      pos: 15.455196,8.634497
       parent: 1653
 - proto: LockerElectricalSuppliesFilled
   entities:
@@ -9042,6 +9076,13 @@ entities:
     components:
     - type: Transform
       pos: 1.560874,26.710463
+      parent: 1653
+- proto: SlipperyBlobSeeds
+  entities:
+  - uid: 1151
+    components:
+    - type: Transform
+      pos: 16.403198,7.8844967
       parent: 1653
 - proto: SmartFridge
   entities:

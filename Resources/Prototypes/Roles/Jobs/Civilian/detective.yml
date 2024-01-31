@@ -13,7 +13,7 @@
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hop
-  canBeAntag: true
+  canBeAntag: false # A-13
   access:
   - Brig
   - Maintenance

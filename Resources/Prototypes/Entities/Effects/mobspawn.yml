@@ -107,6 +107,12 @@
     - FoodOnionRed
     - FoodWatermelon
     - FoodGatfruit
+    - SlipperyBlob
+    - SlipperyBlob
+    - FoodNamelessMushroom
+    - FoodNamelessMushroom
     rarePrototypes:
     - MobLuminousEntity
     - MobLuminousObject
+    - LemonKa
+    - LifeweedLeaves

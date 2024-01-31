@@ -549,7 +549,7 @@
   idPrefix: UNTH
   entries:
   - name: bounty-food
-    amount: 30
+    amount: 10 # A-13 easier cuz of mister cyka dvoretskin
     whitelist:
       tags:
       - Meat

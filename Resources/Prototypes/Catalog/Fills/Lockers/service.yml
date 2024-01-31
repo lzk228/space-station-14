@@ -108,7 +108,9 @@
       - id: ClothingUniformOveralls
       - id: ClothingHeadHatTrucker
         prob: 0.1
-      #- id: PlantExtractorMachineCircuitboard
+      - id: PlantExtractorMachineCircuitboard
+      - id: UnstableMutagenChemistryBottle
+        prob: 0.1
 
 - type: entity
   id: LockerBotanistLoot

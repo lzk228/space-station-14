@@ -2763,11 +2763,6 @@ entities:
       parent: 588
 - proto: BannerSecurity
   entities:
-  - uid: 553
-    components:
-    - type: Transform
-      pos: 30.5,8.5
-      parent: 588
   - uid: 1619
     components:
     - type: Transform
@@ -3170,13 +3165,6 @@ entities:
     components:
     - type: Transform
       pos: 24.420084,44.539436
-      parent: 588
-- proto: BookSecurity
-  entities:
-  - uid: 522
-    components:
-    - type: Transform
-      pos: 32.41844,8.400207
       parent: 588
 - proto: BoxFolderBlack
   entities:
@@ -6857,6 +6845,13 @@ entities:
     - type: Transform
       pos: 8.533231,42.775993
       parent: 588
+- proto: Chainsaw
+  entities:
+  - uid: 376
+    components:
+    - type: Transform
+      pos: 14.569005,43.582558
+      parent: 588
 - proto: Chair
   entities:
   - uid: 357
@@ -7249,13 +7244,6 @@ entities:
     - type: Transform
       pos: 21.5,43.5
       parent: 588
-- proto: ClothingBeltChampion
-  entities:
-  - uid: 1236
-    components:
-    - type: Transform
-      pos: 10.581136,39.53631
-      parent: 588
 - proto: ClothingEyesGlassesMeson
   entities:
   - uid: 1108
@@ -7269,13 +7257,6 @@ entities:
     components:
     - type: Transform
       pos: 10.432637,44.476112
-      parent: 588
-- proto: ClothingHeadBandRed
-  entities:
-  - uid: 1295
-    components:
-    - type: Transform
-      pos: 12.571781,39.694115
       parent: 588
 - proto: ClothingHeadHatFedoraBrown
   entities:
@@ -7324,12 +7305,26 @@ entities:
     - type: Transform
       pos: 34.666565,24.66942
       parent: 588
+- proto: ClothingNeckBlackCloak
+  entities:
+  - uid: 511
+    components:
+    - type: Transform
+      pos: 10.362285,39.61387
+      parent: 588
 - proto: ClothingNeckLawyerbadge
   entities:
   - uid: 326
     components:
     - type: Transform
       pos: 21.586027,4.583762
+      parent: 588
+- proto: ClothingNeckMinerCloak
+  entities:
+  - uid: 1069
+    components:
+    - type: Transform
+      pos: 12.663434,39.622215
       parent: 588
 - proto: ClothingNeckTieDet
   entities:
@@ -7352,6 +7347,58 @@ entities:
     - type: Transform
       pos: 13.396446,12.479115
       parent: 588
+- proto: ClothingOuterHardsuitCargoElite
+  entities:
+  - uid: 1032
+    components:
+    - type: Transform
+      pos: 32.6911,8.555989
+      parent: 588
+  - uid: 1035
+    components:
+    - type: Transform
+      pos: 32.6911,8.555989
+      parent: 588
+  - uid: 1068
+    components:
+    - type: Transform
+      pos: 32.6911,8.555989
+      parent: 588
+- proto: ClothingOuterHardsuitLing
+  entities:
+  - uid: 1070
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 9.657697,43.41479
+      parent: 588
+    - type: GroupExamine
+      group:
+      - hoverMessage: ""
+        contextText: verb-examine-group-other
+        icon: /Textures/Interface/examine-star.png
+        components:
+        - Armor
+        - ClothingSpeedModifier
+        entries:
+        - message: Понижает вашу скорость на [color=yellow]20%[/color].
+          priority: 0
+          component: ClothingSpeedModifier
+        - message: >-
+            Обеспечивает следующую защиту:
+
+            - [color=yellow]Ударный[/color] урон снижается на [color=lightblue]5%[/color].
+
+            - [color=yellow]Режущий[/color] урон снижается на [color=lightblue]5%[/color].
+
+            - [color=yellow]Колющий[/color] урон снижается на [color=lightblue]0%[/color].
+
+            - [color=yellow]Высокотемпературный[/color] урон снижается на [color=lightblue]50%[/color].
+
+            - [color=orange]Взрывной[/color] урон снижается на [color=lightblue]80%[/color].
+          priority: 0
+          component: Armor
+        title: null
 - proto: ClothingOuterRobesJudge
   entities:
   - uid: 370
@@ -7379,6 +7426,23 @@ entities:
     components:
     - type: Transform
       pos: 10.673761,44.53288
+      parent: 588
+- proto: ClothingUniformJumpsuitCargoExpert
+  entities:
+  - uid: 375
+    components:
+    - type: Transform
+      pos: 32.300476,8.571614
+      parent: 588
+  - uid: 1029
+    components:
+    - type: Transform
+      pos: 32.300476,8.571614
+      parent: 588
+  - uid: 1030
+    components:
+    - type: Transform
+      pos: 32.300476,8.571614
       parent: 588
 - proto: ClothingUniformJumpsuitColorMaroon
   entities:
@@ -7533,6 +7597,40 @@ entities:
     components:
     - type: Transform
       pos: 14.5,47.5
+      parent: 588
+- proto: DeathNettle
+  entities:
+  - uid: 1022
+    components:
+    - type: Transform
+      pos: 31.300968,20.69847
+      parent: 588
+- proto: DeathweedLeaves
+  entities:
+  - uid: 954
+    components:
+    - type: Transform
+      pos: 30.472746,42.536488
+      parent: 588
+  - uid: 968
+    components:
+    - type: Transform
+      pos: 30.472746,42.536488
+      parent: 588
+  - uid: 988
+    components:
+    - type: Transform
+      pos: 30.472746,42.536488
+      parent: 588
+  - uid: 997
+    components:
+    - type: Transform
+      pos: 30.472746,42.536488
+      parent: 588
+  - uid: 1010
+    components:
+    - type: Transform
+      pos: 30.472746,42.536488
       parent: 588
 - proto: DebugSMES
   entities:
@@ -8430,6 +8528,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,43.5
       parent: 588
+- proto: FoodAmbrosiaDeus
+  entities:
+  - uid: 1028
+    components:
+    - type: Transform
+      pos: 31.457218,19.526594
+      parent: 588
 - proto: FoodBowlBigTrash
   entities:
   - uid: 1840
@@ -8957,6 +9062,47 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.765976,19.912766
       parent: 588
+- proto: LandMineExplosive
+  entities:
+  - uid: 1120
+    components:
+    - type: Transform
+      pos: 29.455212,10.402653
+      parent: 588
+- proto: LemonKa
+  entities:
+  - uid: 1011
+    components:
+    - type: Transform
+      pos: 31.488468,21.620344
+      parent: 588
+- proto: LifeweedLeaves
+  entities:
+  - uid: 522
+    components:
+    - type: Transform
+      pos: 30.472746,44.536488
+      parent: 588
+  - uid: 602
+    components:
+    - type: Transform
+      pos: 30.472746,44.536488
+      parent: 588
+  - uid: 603
+    components:
+    - type: Transform
+      pos: 30.472746,44.536488
+      parent: 588
+  - uid: 604
+    components:
+    - type: Transform
+      pos: 30.472746,44.536488
+      parent: 588
+  - uid: 950
+    components:
+    - type: Transform
+      pos: 30.472746,44.536488
+      parent: 588
 - proto: Lighter
   entities:
   - uid: 1220
@@ -9242,6 +9388,24 @@ entities:
     - type: Transform
       pos: 25.484175,4.4865713
       parent: 588
+- proto: PillAphrodisiac
+  entities:
+  - uid: 1107
+    components:
+    - type: Transform
+      pos: 13.324326,42.78635
+      parent: 588
+  - uid: 1109
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 13.839951,42.770725
+      parent: 588
+  - uid: 1110
+    components:
+    - type: Transform
+      pos: 13.511826,42.583225
+      parent: 588
 - proto: PillCanister
   entities:
   - uid: 1481
@@ -9260,6 +9424,22 @@ entities:
     components:
     - type: Transform
       pos: 14.537998,42.878975
+      parent: 588
+- proto: PlasmaReinforcedWindowDirectional
+  entities:
+  - uid: 1119
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 28.5,8.5
+      parent: 588
+- proto: PlushieLemird
+  entities:
+  - uid: 1102
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 13.51753,43.484028
       parent: 588
 - proto: PlushieNuke
   entities:
@@ -11084,13 +11264,6 @@ entities:
     - type: Transform
       pos: 24.466219,48.441994
       parent: 588
-- proto: SpeedLoaderMagnum
-  entities:
-  - uid: 950
-    components:
-    - type: Transform
-      pos: 28.703945,8.421182
-      parent: 588
 - proto: StasisBed
   entities:
   - uid: 1425
@@ -12354,12 +12527,26 @@ entities:
     - type: Transform
       pos: 22.543945,6.5464144
       parent: 588
+- proto: WeaponLauncherRocket
+  entities:
+  - uid: 553
+    components:
+    - type: Transform
+      pos: 28.521265,8.507357
+      parent: 588
 - proto: WeaponShotgunKammerer
   entities:
   - uid: 583
     components:
     - type: Transform
       pos: 26.57963,35.4414
+      parent: 588
+- proto: WeaponTurretHostile
+  entities:
+  - uid: 265
+    components:
+    - type: Transform
+      pos: 30.5,8.5
       parent: 588
 - proto: WindoorAssemblySecure
   entities:
