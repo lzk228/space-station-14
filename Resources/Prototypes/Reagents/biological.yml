@@ -38,6 +38,10 @@
   plantMetabolism:
     - !type:PlantAdjustWater
       amount: 0.5
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
 
 - type: reagent
   parent: Blood
@@ -72,6 +76,10 @@
       effects:
       - !type:SatiateHunger
         factor: 1.5
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
 
 - type: reagent
   parent: Blood
@@ -140,6 +148,10 @@
   plantMetabolism:
   - !type:PlantAdjustWater
     amount: 0.5
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
 
 - type: reagent
   id: Fat
@@ -150,6 +162,10 @@
   color: "#d8d8b0"
   physicalDesc: reagent-physical-desc-exotic-smelling
   slippery: false
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
 
 - type: reagent
   id: Vomit
@@ -168,3 +184,7 @@
       - !type:AdjustReagent
         reagent: Nutriment
         amount: 0.1
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6

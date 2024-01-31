@@ -110,7 +110,7 @@ namespace Content.Server.GameTicking
         {
             foreach (var player in _playerManager.Sessions)
             {
-                RaiseNetworkEvent(GetStatusMsg(player), player.ConnectedClient);
+                RaiseNetworkEvent(GetStatusMsg(player), player.Channel);
             }
         }
 
@@ -165,7 +165,7 @@ namespace Content.Server.GameTicking
                 _playerGameStatuses[playerUserId] = status;
                 if (!_playerManager.TryGetSessionById(playerUserId, out var playerSession))
                     continue;
-                RaiseNetworkEvent(GetStatusMsg(playerSession), playerSession.ConnectedClient);
+                RaiseNetworkEvent(GetStatusMsg(playerSession), playerSession.Channel);
             }
         }
 
@@ -184,7 +184,7 @@ namespace Content.Server.GameTicking
 
             var status = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
             _playerGameStatuses[player.UserId] = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
-            RaiseNetworkEvent(GetStatusMsg(player), player.ConnectedClient);
+            RaiseNetworkEvent(GetStatusMsg(player), player.Channel);
             // update server info to reflect new ready count
             UpdateInfoText();
         }

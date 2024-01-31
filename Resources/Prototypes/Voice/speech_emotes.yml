@@ -221,7 +221,7 @@
 - type: emote
   id: Click
   category: Vocal
-  chatMessages: [click.]
+  chatMessages: [клацает.] # Corvax-Localization
   chatTriggers:
    - click
    - click.
@@ -229,6 +229,14 @@
    - clicks
    - clicks.
    - clicks!
+   # Corvax-Localization-Start
+   - клац
+   - клац.
+   - клац!
+   - клацает
+   - клацает.
+   - клацает!
+   # Corvax-Localization-End
 
 # hand emotes
 - type: emote

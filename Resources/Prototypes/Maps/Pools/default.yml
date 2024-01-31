@@ -1,7 +1,6 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Aspid
   - Atlas
   - Omega
   - Bagel
@@ -14,7 +13,6 @@
   - Marathon
   - Meta
   - Fland
-  - Gemini
   - Core
 #  - CorvaxDelta
 #  - CorvaxOutpost

@@ -194,13 +194,16 @@
     startDelay: 30
   - type: MeteorSwarmRule
 
-# Andromeda MidRoundAntagRule
 #- type: entity
 #  id: MouseMigration
 #  parent: BaseGameRule
 #  noSpawn: true
 #  components:
 #  - type: StationEvent
+#    startAnnouncement: station-event-vent-creatures-start-announcement
+#    startAudio:
+#      path: /Audio/Announcements/attention.ogg
+#    startDelay: 10
 #    earliestStart: 30
 #    minimumPlayers: 35
 #    weight: 5
@@ -208,13 +211,11 @@
 #  - type: VentCrittersRule
 #    entries:
 #    - id: MobMouse
-#      prob: 0.015
+#      prob: 0.02
 #    - id: MobMouse1
-#      prob: 0.015
+#      prob: 0.02
 #    - id: MobMouse2
-#      prob: 0.015
-#    - id: MobRatServant
-#      prob: 0.015
+#      prob: 0.02
 #    specialEntries:
 #    - id: SpawnPointGhostRatKing
 #      prob: 0.005
@@ -226,6 +227,10 @@
   noSpawn: true
   components:
   - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    startDelay: 10
     weight: 5
     duration: 50
   - type: VentCrittersRule
@@ -335,7 +340,10 @@
   noSpawn: true
   components:
   - type: StationEvent
-    id: VentCritters
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    startDelay: 10
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
@@ -355,6 +363,10 @@
   noSpawn: true
   components:
   - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    startDelay: 10
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -374,11 +386,10 @@
   noSpawn: true
   components:
   - type: StationEvent
-    startAnnouncement: station-event-spider-spawn-start-announcement
+    startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/aliens.ogg # Corvax-Announcements
-      params:
-        volume: -4
+      path: /Audio/Announcements/attention.ogg
+    startDelay: 10
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -394,6 +405,10 @@
   noSpawn: true
   components:
   - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    startDelay: 10
     earliestStart: 20
     minimumPlayers: 15
     weight: 1
@@ -409,8 +424,9 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 240 # retarded dogshit event
-    weight: 2.5
+    earliestStart: 180 # retarded dogshit event
+    minimumPlayers: 15
+    weight: 5
     duration: 1
   - type: ZombieRule
     minStartDelay: 0 #let them know immediately
@@ -469,7 +485,7 @@
   id: IonStorm
   components:
   - type: StationEvent
-    weight: 5
+    weight: 10
     earliestStart: 20
     reoccurrenceDelay: 60
     duration: 1
