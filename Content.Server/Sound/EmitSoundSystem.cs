@@ -1,6 +1,7 @@
 ﻿using Content.Server.Explosion.EntitySystems;
 using Content.Server.Sound.Components;
 using Content.Server.UserInterface;
+using Content.Shared.Ghost;
 using Content.Shared.Sound;
 using Robust.Shared.Random;
 
@@ -44,6 +45,11 @@ public sealed class EmitSoundSystem : SharedEmitSoundSystem
 
     private void HandleEmitSoundOnUIOpen(EntityUid uid, EmitSoundOnUIOpenComponent component, AfterActivatableUIOpenEvent args)
     {
+        // A-13 ghost ui fix
+        if (HasComp<GhostComponent>(args.User))
+            return;
+        // A-13 ghost ui fix
+
         TryEmitSound(uid, component, args.User, false);
     }
 

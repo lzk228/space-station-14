@@ -98,7 +98,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodBurgerEmpowered",
             "FoodSoupClown",
             "FoodSoupChiliClown",
-            // cuz of broken microwave "FoodBurgerSuper",
+            "FoodBurgerSuper",
             "FoodNoodlesCopy",
             //"FoodMothMallow",
             //"FoodPizzaCorncob",
@@ -114,7 +114,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodSoupNettle",
             "FoodBurgerDuck",
             "FoodBurgerBaseball",
-            "FoodTacoFish"
+            "FoodTacoFish",
         };
 
         [DataField("tier3Protos")]
@@ -272,9 +272,9 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodBurgerXeno",
             "FoodPizzaDonkpocket",
             "TrashBakedBananaPeel",
-            "FoodBurgerSuper", // broken microwave
             "FoodBurgerGhost",
             "FoodDonkpocketPizzaWarm",
+            "FoodBurgerMothRoach"
         };
     }
 }

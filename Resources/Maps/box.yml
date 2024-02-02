@@ -480,8 +480,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 0.05
-      linearDamping: 0.05
+      angularDamping: 10000
+      linearDamping: 10000
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -8487,6 +8487,8 @@ entities:
           stiffness: 380.5899
     - type: OccluderTree
     - type: Shuttle
+      angularDamping: 10000
+      linearDamping: 10000
     - type: RadiationGridResistance
     - type: GravityShake
       shakeTimes: 10

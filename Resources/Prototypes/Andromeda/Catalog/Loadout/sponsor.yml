@@ -1289,3 +1289,30 @@
   entity: PowerCellMicroreactor
   sponsorOnly: true
   whitelistJobs: [SeniorResearcher, ResearchDirector, Scientist]
+
+#loremaster
+- type: loadout
+  id: ClothingMaskRedFestivalLoadout
+  entity: ClothingMaskRedFestival
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingOuterCoatSyndieCapLoadout
+  entity: ClothingOuterCoatSyndieCap
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpsuitSyndieFormalLoadout
+  entity: ClothingUniformJumpsuitSyndieFormal
+  sponsorOnly: true
+
+- type: loadout
+  id: DrinkDetFlaskLoadout
+  entity: DrinkDetFlask
+  sponsorOnly: true
+
+#sha99y
+- type: loadout
+  id: ClothingNeckCloakFireLoadout
+  entity: ClothingNeckCloakFire
+  sponsorOnly: true

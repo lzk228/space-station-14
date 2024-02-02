@@ -284,19 +284,28 @@ namespace Content.Server.Voting.Managers
         private void SendUpdateCanCallVote(ICommonSession player)
         {
             var msg = new MsgVoteCanCall();
-            msg.CanCall = CanCallVote(player, null, out var isAdmin, out var timeSpan);
+            msg.CanCall = CanCallVote(player, null, out var isAdmin, out var timeSpan, out var hasExtraPermissions); // A-13
             msg.WhenCanCallVote = timeSpan;
 
             if (isAdmin)
             {
-                msg.VotesUnavailable = Array.Empty<(StandardVoteType, TimeSpan)>();
+                // A-13 admin vote restriction start
+                if (hasExtraPermissions)
+                {
+                    msg.VotesUnavailable = Array.Empty<(StandardVoteType, TimeSpan)>();
+                }
+                else
+                {
+                    msg.VotesUnavailable = new[] { (StandardVoteType.Preset, TimeSpan.Zero) };
+                }
+                // A-13 admin vote restriction end
             }
             else
             {
                 var votesUnavailable = new List<(StandardVoteType, TimeSpan)>();
                 foreach (var v in _standardVoteTypeValues)
                 {
-                    if (CanCallVote(player, v, out _, out var typeTimeSpan))
+                    if (CanCallVote(player, v, out _, out var typeTimeSpan, out _)) // A-13
                         continue;
                     votesUnavailable.Add((v, typeTimeSpan));
                 }
@@ -310,15 +319,18 @@ namespace Content.Server.Voting.Managers
             ICommonSession initiator,
             StandardVoteType? voteType,
             out bool isAdmin,
-            out TimeSpan timeSpan)
+            out TimeSpan timeSpan,
+            out bool hasExtraPermissions) // A-13
         {
             isAdmin = false;
+            hasExtraPermissions = false; // A-13
             timeSpan = default;
 
             // Admins can always call votes.
             if (_adminMgr.HasAdminFlag(initiator, AdminFlags.Admin))
             {
                 isAdmin = true;
+                hasExtraPermissions = _adminMgr.HasAdminFlag(initiator, AdminFlags.Permissions); // A-13 admin vote restriction
                 return true;
             }
 
@@ -352,7 +364,7 @@ namespace Content.Server.Voting.Managers
 
         public bool CanCallVote(ICommonSession initiator, StandardVoteType? voteType = null)
         {
-            return CanCallVote(initiator, voteType, out _, out _);
+            return CanCallVote(initiator, voteType, out _, out _, out _); // A-13
         }
 
         private void EndVote(VoteReg v)
@@ -370,7 +382,7 @@ namespace Content.Server.Voting.Managers
                 .Select(e => e.Data)
                 .ToImmutableArray();
             // Store all votes in order for webhooks
-            var voteTally = new List<int>(); 
+            var voteTally = new List<int>();
             foreach(var entry in v.Entries)
             {
                 voteTally.Add(entry.Votes);

@@ -189,7 +189,7 @@ namespace Content.Server.GameTicking
             var client = session.Channel;
             RaiseNetworkEvent(new TickerJoinLobbyEvent(), client);
             RaiseNetworkEvent(GetStatusMsg(session), client);
-            RaiseNetworkEvent(GetInfoMsg(), client);
+            RaiseNetworkEvent(GetInfoMsg(session), client); // // A-13 Show Gamemode To Admins Only System
             RaiseLocalEvent(new PlayerJoinedLobbyEvent(session));
         }
 

@@ -105,3 +105,15 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/ian_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakFire
+  name: плащ гуррен дана
+  suffix: Андромеда
+  description: Магма течёт в наших венах, раскаляя сердца!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/sha99y_cloak.rsi
+  - type: TypingIndicatorClothing
+    proto: alien
