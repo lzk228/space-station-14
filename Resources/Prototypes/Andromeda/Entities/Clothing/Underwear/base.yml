@@ -27,6 +27,8 @@
     tags:
     - underwearb
     - ClothMade
+  - type: StealTarget
+    stealGroup: Panties
 
 - type: entity
   abstract: true

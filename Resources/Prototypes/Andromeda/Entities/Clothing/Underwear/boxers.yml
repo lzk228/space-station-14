@@ -6,6 +6,8 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/boxers.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 # SpaceNinja
 - type: entity
@@ -16,6 +18,8 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/SpaceNinja/boxers.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 # DeathSquad
 - type: entity
@@ -26,3 +30,5 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/deathboxers.rsi
+  - type: StealTarget
+    stealGroup: Panties

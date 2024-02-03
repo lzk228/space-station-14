@@ -98,9 +98,9 @@
   - type: StealCondition
     stealGroup: Stamp
     minCollectionSize: 5
-    maxCollectionSize: 15
+    maxCollectionSize: 10
   - type: Objective
-    difficulty: 1.0
+    difficulty: 2.0
 
 - type: entity
   noSpawn: true
@@ -489,15 +489,15 @@
   - type: Objective
     difficulty: 2.5
 
-- type: entity
-  noSpawn: true
-  parent: BaseThiefStealAnimalObjective
-  id: BingusStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: AnimalBingus
-  - type: Objective
-    difficulty: 1
+#- type: entity
+#  noSpawn: true
+#  parent: BaseThiefStealAnimalObjective
+#  id: BingusStealObjective
+#  components:
+#  - type: StealCondition
+#    stealGroup: AnimalBingus
+#  - type: Objective
+#    difficulty: 1
 
 - type: entity
   noSpawn: true
@@ -620,3 +620,30 @@
       sprite: Structures/Furniture/chairs.rsi
       state: shuttle
   - type: EscapeShuttleCondition
+
+# A-13
+
+- type: entity
+  noSpawn: true
+  parent: BaseThiefStealCollectionObjective
+  id: PantiesStealCollectionObjective
+  description: При успешном выполнении не забудьте злорадно похихикать!
+  components:
+  - type: StealCondition
+    stealGroup: Panties
+    minCollectionSize: 10
+    maxCollectionSize: 25
+  - type: Objective
+    difficulty: 0.5
+
+#- type: entity
+#  noSpawn: true
+#  parent: BaseThiefStealCollectionObjective
+#  id: HeadPantiesStealCollectionObjective
+#  components:
+#  - type: StealCondition
+#    stealGroup: HeadPanties
+#    minCollectionSize: 3
+#    maxCollectionSize: 5
+#  - type: Objective
+#    difficulty: 1.0

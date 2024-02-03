@@ -3,4 +3,5 @@
   playTimeTracker: JobGhostRole
   name: Ghost role
   description: Who you gonna call? GHOST BUSTERS!
+  setPreference: false
   canBeAntag: true

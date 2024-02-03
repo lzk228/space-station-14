@@ -2,10 +2,12 @@
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomPantiesWhite
   name: трусики
-  description: Стандартное нижнее бельё Nanotrasen для сотрудниц станции. Painted white.
+  description: Стандартное нижнее бельё белого цвета от NanoTrasen для сотрудниц станции.
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/panties.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 #etc
 - type: entity
@@ -16,6 +18,8 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/thong.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 - type: entity
   parent: ClothingUnderwearBottomBase
@@ -25,6 +29,8 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/nekopanties.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 - type: entity
   parent: ClothingUnderwearBottomBase
@@ -34,6 +40,8 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/lacepanties.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 # SpaceNinja
 - type: entity
@@ -44,6 +52,8 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/SpaceNinja/panties.rsi
+  - type: StealTarget
+    stealGroup: Panties
 
 # DeathSquad
 - type: entity
@@ -54,3 +64,5 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Bottom/deathpanties.rsi
+  - type: StealTarget
+    stealGroup: Panties

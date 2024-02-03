@@ -9,3 +9,15 @@
     sprite: Andromeda/Clothing/OuterClothing/Coats/crimson_coat.rsi
   - type: Clothing
     sprite: Andromeda/Clothing/OuterClothing/Coats/crimson_coat.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatChronicle
+  name: пальто хроника
+  suffix: Андромеда
+  description: На рукаве данного плаща вышита надпись "Times New Roman".
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/OuterClothing/Coats/insp_coat.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/OuterClothing/Coats/insp_coat.rsi

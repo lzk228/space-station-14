@@ -93,6 +93,8 @@
     BibleStealObjective: 1
     ClothingNeckGoldmedalStealObjective: 1              #other
     ClothingNeckClownmedalStealObjective: 0.5
+    PantiesStealCollectionObjective: 1.3 # A-13
+    #HeadPantiesStealCollectionObjective: 1 # A-13
 
 - type: weightedRandom
   id: ThiefObjectiveGroupStructure
@@ -112,7 +114,7 @@
   id: ThiefObjectiveGroupAnimal
   weights:
     IanStealObjective: 1
-    BingusStealObjective: 1
+    #BingusStealObjective: 1
     McGriffStealObjective: 1
     WalterStealObjective: 1
     MortyStealObjective: 1

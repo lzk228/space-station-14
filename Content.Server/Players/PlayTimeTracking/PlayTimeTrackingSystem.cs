@@ -17,6 +17,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Server.Administration.Managers; // A-13
 
 namespace Content.Server.Players.PlayTimeTracking;
 
@@ -31,12 +32,16 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly MindSystem _minds = default!;
     [Dependency] private readonly PlayTimeTrackingManager _tracking = default!;
+    [Dependency] private readonly IAdminManager _adminManager = default!; // A-13
+
+    private const string AGhost = "AdminObserver"; // A-13
 
     public override void Initialize()
     {
         base.Initialize();
 
         _tracking.CalcTrackers += CalcTrackers;
+        _adminManager.OnPermsChanged += AdminManager_OnPermsChanged; // A-13
 
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundEnd);
         SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerAttached);
@@ -49,6 +54,14 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnPlayerJoinedLobby);
     }
 
+    // A-13 Tracking Admin Time system start
+    private void AdminManager_OnPermsChanged(Administration.AdminPermsChangedEventArgs obj)
+    {
+        if (_minds.TryGetSession(obj.Player.GetMind(), out var session))
+            _tracking.QueueRefreshTrackers(session);
+    }
+    // A-13 Tracking Admin Time system end
+
     public override void Shutdown()
     {
         base.Shutdown();
@@ -58,14 +71,28 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
     private void CalcTrackers(ICommonSession player, HashSet<string> trackers)
     {
-        if (_afk.IsAfk(player))
+        if (_afk.IsAfk(player) || player.AttachedEntity == null) // A-13
             return;
 
+        // A-13 Tracking Admin Time system start
+        if (_adminManager.IsAdmin(player, includeDeAdmin: false))
+        {
+            trackers.Add(PlayTimeTrackingShared.TrackerAdmin);
+            if (player.AttachedEntity is { Valid: true } attachedEntity &&
+                Comp<MetaDataComponent>(attachedEntity).EntityPrototype?.ID == AGhost)
+                trackers.Add(PlayTimeTrackingShared.TrackerAGhost);
+        }
+
         if (!IsPlayerAlive(player))
+        {
+            trackers.Add(PlayTimeTrackingShared.TrackerObserver);
             return;
+        }
+        // A-13 Tracking Admin Time system end
 
         trackers.Add(PlayTimeTrackingShared.TrackerOverall);
         trackers.UnionWith(GetTimedRoles(player));
+        trackers.Add(PlayTimeTrackingShared.TrackerOverall); // A-13
     }
 
     private bool IsPlayerAlive(ICommonSession session)

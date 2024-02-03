@@ -346,7 +346,7 @@ public sealed class PlantHolderSystem : EntitySystem
             Logger.Info($"Spawning a Kudzu at {coords}");
             component.MutationLevel -= 5;
         }
-        else
+        else if(component.NutritionLevel < 80)
         {
             EntityManager.SpawnEntity("OvergrownWeed", coords);
             for (var i = 0; i < 4; i++)

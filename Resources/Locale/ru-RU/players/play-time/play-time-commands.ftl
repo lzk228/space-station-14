@@ -50,3 +50,6 @@ cmd-playtime_flush-help =
     Если пользователь передан, то только этот пользователь будет обработан.
 cmd-playtime_flush-error-args = Ожидается ноль или один аргумент
 cmd-playtime_flush-arg-user = [user name]
+
+# A-13 aghost tracking time
+cmd-playtime_getrole-arg-role = <role|'Overall'|'AdminTime'|'AGhostTime'|'ObserverTime'>

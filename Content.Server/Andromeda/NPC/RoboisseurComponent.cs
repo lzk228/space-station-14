@@ -115,6 +115,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodBurgerDuck",
             "FoodBurgerBaseball",
             "FoodTacoFish",
+            "FoodBurgerClown",
         };
 
         [DataField("tier3Protos")]
@@ -159,7 +160,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "ClothingNeckCloakRose",
             "ClothingUniformJumpsuitBlueGalaxy",
             "ClothingUniformJumpsuitRedGalaxy",
-            "ClothingUniformJumpsuitStrangeBunny",
+            //"ClothingUniformJumpsuitStrangeBunny",
             "ClothingUniformReallyBlackSuitSkirt",
             "ClothingNeckRegalMantle",
             "ClothingHeadHatRedRog",
@@ -183,8 +184,8 @@ namespace Content.Server.Roboisseur.Roboisseur
             "SheetPlasma",
             "CognizineChemistryBottle",
             "CombatMedipen",
-            "CloningConsoleComputerCircuitboard",
-            "CloningPodMachineCircuitboard",
+            //"CloningConsoleComputerCircuitboard",
+            //"CloningPodMachineCircuitboard",
             "FloorTileItemAstroGrass30",
             "FloorTileItemAstroIce30",
         };
@@ -274,7 +275,8 @@ namespace Content.Server.Roboisseur.Roboisseur
             "TrashBakedBananaPeel",
             "FoodBurgerGhost",
             "FoodDonkpocketPizzaWarm",
-            "FoodBurgerMothRoach"
+            "FoodBurgerMothRoach",
+            "FoodBurgerBear",
         };
     }
 }

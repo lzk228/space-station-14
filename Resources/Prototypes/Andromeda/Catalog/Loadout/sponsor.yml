@@ -1316,3 +1316,20 @@
   id: ClothingNeckCloakFireLoadout
   entity: ClothingNeckCloakFire
   sponsorOnly: true
+
+#wiki
+- type: loadout
+  id: ClothingOuterCoatChronicleLoadout
+  entity: ClothingOuterCoatChronicle
+  sponsorOnly: true
+
+- type: loadout
+  id: GoldenPenLoadout
+  entity: GoldenPen
+  sponsorOnly: true
+
+#FurryTime
+- type: loadout
+  id: ClothingUniformJumpsuitBlackWhiteStripeSportLoadout
+  entity: ClothingUniformJumpsuitBlackWhiteStripeSport
+  sponsorOnly: true

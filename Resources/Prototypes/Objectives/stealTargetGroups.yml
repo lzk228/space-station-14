@@ -420,3 +420,18 @@
   sprite:
     sprite: Mobs/Animals/crab.rsi
     state: crab
+
+# A-13
+- type: stealTargetGroup
+  id: Panties
+  name: трусов
+  sprite:
+    sprite: Andromeda/Clothing/Underwear/Bottom/nekopanties.rsi
+    state: icon
+
+#- type: stealTargetGroup
+#  id: HeadPanties
+#  name: трусов глав
+#  sprite:
+#    sprite: Andromeda/Clothing/Underwear/Bottom/heads/capitan/panties.rsi
+#    state: icon

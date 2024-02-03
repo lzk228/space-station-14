@@ -893,7 +893,7 @@
   suffix: Hyroponics
   components:
   - type: AccessReader
-    access: [["Hydroponics"]]
+    access: [["Hydroponics"], ["Kitchen"]]
 
 - type: entity
   parent: VendingMachine
@@ -1401,7 +1401,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
-    access: [["Hydroponics"], ["Kitchen"]]
+    access: [["Hydroponics"]]
 
 - type: entity
   parent: VendingMachine

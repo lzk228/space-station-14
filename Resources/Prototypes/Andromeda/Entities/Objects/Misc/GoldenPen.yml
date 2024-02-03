@@ -1,0 +1,30 @@
+- type: entity
+  name: позолоченная ручка
+  parent: BaseItem
+  id: GoldenPen
+  suffix: Андромеда
+  description: Лишь истинный ценитель письма может удостоиться этого предмета.
+  components:
+  - type: Tag
+    tags:
+    - Write
+    - Pen
+  - type: Sprite
+    sprite: Andromeda/Objects/Misc/golden_pen.rsi
+    state: pen
+  - type: Item
+    sprite: Andromeda/Objects/Misc/golden_pen.rsi
+    heldPrefix: pen
+    size: Tiny
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
+  - type: EmbeddableProjectile
+    offset: 0.3,0.0
+    removalTime: 0.0
+  - type: ThrowingAngle
+    angle: 315
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 3
