@@ -248,5 +248,25 @@ corvax-chatsan-word-124 = лкм
 corvax-chatsan-replacement-124 = левая рука
 corvax-chatsan-word-125 = пкм
 corvax-chatsan-replacement-125 = правая рука
+# A-13 start
 corvax-chatsan-word-126 = ку
 corvax-chatsan-replacement-126 = привет
+# A-13 end
+corvax-chatsan-word-127 = гойда
+corvax-chatsan-replacement-127 = { "" }
+corvax-chatsan-word-128 = гoйда
+corvax-chatsan-replacement-128 = { "" }
+corvax-chatsan-word-129 = гойдa
+corvax-chatsan-replacement-129 = { "" }
+corvax-chatsan-word-130 = гoйдa
+corvax-chatsan-replacement-130 = { "" }
+# A-13 start
+corvax-chatsan-word-131 = http
+corvax-chatsan-replacement-131 = { "" }
+corvax-chatsan-word-132 = discord
+corvax-chatsan-replacement-132 = { "" }
+corvax-chatsan-word-133 = .com
+corvax-chatsan-replacement-133 = { "" }
+corvax-chatsan-word-134 = .ru
+corvax-chatsan-replacement-134 = { "" }
+# A-13 end

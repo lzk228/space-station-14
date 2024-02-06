@@ -308,7 +308,7 @@
     accent-pirate-replaced-30: accent-pirate-replacement-30
     accent-pirate-replaced-31: accent-pirate-replacement-31
     accent-pirate-replaced-32: accent-pirate-replacement-32
-    
+
 - type: accent
   id: cowboy
   wordReplacements:
@@ -411,7 +411,7 @@
     accent-cowboy-words-97: accent-cowboy-replacement-97
     accent-cowboy-words-98: accent-cowboy-replacement-98
     accent-cowboy-words-99: accent-cowboy-replacement-99
-  
+
 
 # For the chat sanitization system
 - type: accent
@@ -586,4 +586,12 @@
     corvax-chatsan-word-124: corvax-chatsan-replacement-124
     corvax-chatsan-word-125: corvax-chatsan-replacement-125
     corvax-chatsan-word-126: corvax-chatsan-replacement-126 # A-13
+    corvax-chatsan-word-127: corvax-chatsan-replacement-127
+    corvax-chatsan-word-128: corvax-chatsan-replacement-128
+    corvax-chatsan-word-129: corvax-chatsan-replacement-129
+    corvax-chatsan-word-130: corvax-chatsan-replacement-130
+    corvax-chatsan-word-131: corvax-chatsan-replacement-131 # A-13
+    corvax-chatsan-word-132: corvax-chatsan-replacement-132 # A-13
+    corvax-chatsan-word-133: corvax-chatsan-replacement-133 # A-13
+    corvax-chatsan-word-134: corvax-chatsan-replacement-134 # A-13
     # Corvax-ChatSanitize-End

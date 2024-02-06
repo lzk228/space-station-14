@@ -24,12 +24,13 @@
     solution: tank
   - type: ReagentTank
     tankType: Fuel
-  - type: DamageOnToolInteract
-    tools:
-    - Welding
-    weldingDamage:
-      types:
-        Heat: 10
+  # A-13 Anti-Eblan System
+  #- type: DamageOnToolInteract 
+  #  tools:
+  #  - Welding
+  #  weldingDamage:
+  #    types:
+  #      Heat: 10
   - type: PacifismDangerousAttack
   - type: Explosive
     explosionType: Default
@@ -213,4 +214,3 @@
       fillBaseName: generictank-1- # Corvax-Resprite
     - type: ExaminableSolution
       solution: tank
-

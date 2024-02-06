@@ -77,6 +77,8 @@
   - type: DeleteOnTrigger
   - type: StaticPrice
     price: 0
+  - type: EmbeddableProjectile # A-13
+    deleteOnRemove: true # A-13
 
 - type: entity
   parent: ShardBase

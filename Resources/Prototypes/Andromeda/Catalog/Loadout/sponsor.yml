@@ -406,6 +406,16 @@
   entity: ClothingNeckChocker
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingHeadHatBeretSecurityMedicLoadout
+  entity: ClothingHeadHatBeretSecurityMedic
+  sponsorOnly: true
+
+- type: loadout
+  id: FlippoEngravedLighterLoadout
+  entity: FlippoEngravedLighter
+  sponsorOnly: true
+
 #PANDA1
 - type: loadout
   id: ClothingUniformJumpskirtJanimaidminiLoadout2
@@ -1332,4 +1342,45 @@
 - type: loadout
   id: ClothingUniformJumpsuitBlackWhiteStripeSportLoadout
   entity: ClothingUniformJumpsuitBlackWhiteStripeSport
+  sponsorOnly: true
+
+#Anti_
+- type: loadout
+  id: ClothingUnderwearTopSpaceNinjaLoadout
+  entity: ClothingUnderwearTopSpaceNinja
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUnderwearSocksGartersLoadout
+  entity: ClothingUnderwearSocksGarters
+  sponsorOnly: true
+
+- type: loadout
+  id: FoamCrossbowLoadout
+  entity: FoamCrossbow
+  sponsorOnly: true
+
+- type: loadout
+  id: BoxDonkSoftBoxLoadout
+  entity: BoxDonkSoftBox
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBackpackSatchelGeneticsLoadout
+  entity: ClothingBackpackSatchelGenetics
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesColorOrangeLoadout
+  entity: ClothingShoesColorOrange
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpskirtPerformerLoadout
+  entity: ClothingUniformJumpskirtPerformer
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpskirtPinkWhiteStripSportLoadout
+  entity: ClothingUniformJumpskirtPinkWhiteStripSport
   sponsorOnly: true

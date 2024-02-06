@@ -61,3 +61,7 @@
 - type: stationGoal
   id: StationGoalExpedition
   text: station-goal-expedition
+
+- type: stationGoal
+  id: StationGoalMeteorDefence
+  text: station-goal-meteor-defence
