@@ -22,6 +22,7 @@
       - id: RubberStampQm
       - id: ClothingHeadsetAltCargo
       - id: BoxEncryptionKeyCargo
+      - id: PrinterDocFlatpack # Corvax-Printer
 
 - type: entity
   id: LockerCaptainFilledHardsuit
@@ -119,6 +120,7 @@
       - id: ClothingBackpackIan
         prob: 0.5
       - id: AccessConfigurator
+      - id: PrinterDocFlatpack # Corvax-Printer
 
 - type: entity
   id: LockerChiefEngineerFilledHardsuit
@@ -192,7 +194,6 @@
       - id: ClothingHeadHatBeretCmo
       - id: ClothingOuterHardsuitMedical
       - id: Hypospray
-      - id: HandheldCrewMonitor
       - id: DoorRemoteMedical
       - id: RubberStampCMO
       - id: MedicalTechFabCircuitboard
@@ -215,7 +216,6 @@
       - id: ClothingMaskSterile
       - id: ClothingHeadHatBeretCmo
       - id: Hypospray
-      - id: HandheldCrewMonitor
       - id: DoorRemoteMedical
       - id: RubberStampCMO
       - id: MedicalTechFabCircuitboard
@@ -244,6 +244,7 @@
       - id: PinpointerAnomaly
         prob: 0.1
       - id: BoxEncryptionKeyScience
+      - id: EncryptionKeyBinary
 
 - type: entity
   id: LockerResearchDirectorFilled
@@ -267,6 +268,7 @@
       - id: PinpointerAnomaly
         prob: 0.1
       - id: BoxEncryptionKeyScience
+      - id: EncryptionKeyBinary
 
 - type: entity
   id: LockerHeadOfSecurityFilledHardsuit
