@@ -117,3 +117,13 @@
     sprite: Andromeda/Clothing/Neck/Cloaks/sha99y_cloak.rsi
   - type: TypingIndicatorClothing
     proto: alien
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhitehole
+  name: плащ белой дыры
+  suffix: Андромеда
+  description: Пахнет собакой.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/cloak_whitehole.rsi

@@ -21,3 +21,15 @@
     sprite: Andromeda/Clothing/Head/Hats/purple_beret.rsi
   - type: Clothing
     sprite: Andromeda/Clothing/Head/Hats/purple_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretWhitehole
+  name: эфирный берет
+  suffix: Андромеда
+  description: Пахнет зефиром.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Head/Hats/beret_whitehole.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Head/Hats/beret_whitehole.rsi

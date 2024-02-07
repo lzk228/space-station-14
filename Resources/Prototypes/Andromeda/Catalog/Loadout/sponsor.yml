@@ -1096,6 +1096,16 @@
   entity: ClothingHeadHatPurpleBeretSponsor
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingHeadHatBeretWhiteholeLoadout
+  entity: ClothingHeadHatBeretWhitehole
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCloakWhiteholeLoadout
+  entity: ClothingNeckCloakWhitehole
+  sponsorOnly: true
+
 #Tomoko_Kuroki
 - type: loadout
   id: ClothingHandsGlovesColorRedLoadout

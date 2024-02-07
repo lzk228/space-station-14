@@ -11,10 +11,10 @@
     - Pen
   - type: Sprite
     sprite: Andromeda/Objects/Misc/golden_pen.rsi
-    state: pen
+    state: icon
   - type: Item
     sprite: Andromeda/Objects/Misc/golden_pen.rsi
-    heldPrefix: pen
+    heldPrefix: icon
     size: Tiny
   - type: PhysicalComposition
     materialComposition:

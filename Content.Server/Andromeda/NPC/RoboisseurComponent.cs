@@ -167,7 +167,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "ClothingHeadHatCueball",
             "CrateHydroponicsSeedsExotic",
             "CrateVendingMachineRestockChefvendFilled",
-            "CrateFunATV",
+            //"CrateFunATV",
             "CrateNPCDuck",
             "ClothingOuterHardsuitLing",
             "ClothingHeadHatFancyCrown",

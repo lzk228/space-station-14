@@ -480,8 +480,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.05
+      linearDamping: 0.05
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -8487,8 +8487,6 @@ entities:
           stiffness: 380.5899
     - type: OccluderTree
     - type: Shuttle
-      angularDamping: 10000
-      linearDamping: 10000
     - type: RadiationGridResistance
     - type: GravityShake
       shakeTimes: 10
@@ -42746,6 +42744,11 @@ entities:
     - type: Transform
       pos: 81.5,-63.5
       parent: 8364
+  - uid: 10005
+    components:
+    - type: Transform
+      pos: -26.5,-29.5
+      parent: 8364
   - uid: 10107
     components:
     - type: Transform
@@ -43566,6 +43569,11 @@ entities:
     - type: Transform
       pos: 47.5,18.5
       parent: 8364
+  - uid: 10603
+    components:
+    - type: Transform
+      pos: -26.5,-28.5
+      parent: 8364
   - uid: 10760
     components:
     - type: Transform
@@ -44096,6 +44104,11 @@ entities:
     - type: Transform
       pos: 45.5,37.5
       parent: 8364
+  - uid: 11610
+    components:
+    - type: Transform
+      pos: -26.5,-27.5
+      parent: 8364
   - uid: 11990
     components:
     - type: Transform
@@ -44265,6 +44278,16 @@ entities:
     components:
     - type: Transform
       pos: -45.5,12.5
+      parent: 8364
+  - uid: 12680
+    components:
+    - type: Transform
+      pos: -26.5,-26.5
+      parent: 8364
+  - uid: 12681
+    components:
+    - type: Transform
+      pos: -26.5,-25.5
       parent: 8364
   - uid: 13102
     components:
@@ -44561,6 +44584,11 @@ entities:
     - type: Transform
       pos: -43.5,12.5
       parent: 8364
+  - uid: 13431
+    components:
+    - type: Transform
+      pos: -26.5,-24.5
+      parent: 8364
   - uid: 13442
     components:
     - type: Transform
@@ -44820,6 +44848,11 @@ entities:
     components:
     - type: Transform
       pos: -24.5,-70.5
+      parent: 8364
+  - uid: 14696
+    components:
+    - type: Transform
+      pos: -26.5,-23.5
       parent: 8364
   - uid: 14925
     components:
@@ -45110,6 +45143,31 @@ entities:
     components:
     - type: Transform
       pos: -49.5,17.5
+      parent: 8364
+  - uid: 16364
+    components:
+    - type: Transform
+      pos: -26.5,-22.5
+      parent: 8364
+  - uid: 16365
+    components:
+    - type: Transform
+      pos: -26.5,-21.5
+      parent: 8364
+  - uid: 16366
+    components:
+    - type: Transform
+      pos: -26.5,-20.5
+      parent: 8364
+  - uid: 16367
+    components:
+    - type: Transform
+      pos: -27.5,-20.5
+      parent: 8364
+  - uid: 16368
+    components:
+    - type: Transform
+      pos: -28.5,-20.5
       parent: 8364
   - uid: 16504
     components:
@@ -45646,6 +45704,16 @@ entities:
     - type: Transform
       pos: 9.5,-74.5
       parent: 8364
+  - uid: 17715
+    components:
+    - type: Transform
+      pos: -29.5,-20.5
+      parent: 8364
+  - uid: 17722
+    components:
+    - type: Transform
+      pos: -30.5,-20.5
+      parent: 8364
   - uid: 17755
     components:
     - type: Transform
@@ -45680,6 +45748,26 @@ entities:
     components:
     - type: Transform
       pos: 46.5,-38.5
+      parent: 8364
+  - uid: 18286
+    components:
+    - type: Transform
+      pos: -31.5,-20.5
+      parent: 8364
+  - uid: 18649
+    components:
+    - type: Transform
+      pos: -32.5,-20.5
+      parent: 8364
+  - uid: 18694
+    components:
+    - type: Transform
+      pos: -33.5,-20.5
+      parent: 8364
+  - uid: 18695
+    components:
+    - type: Transform
+      pos: -34.5,-20.5
       parent: 8364
   - uid: 18722
     components:
@@ -45775,6 +45863,11 @@ entities:
     components:
     - type: Transform
       pos: -24.5,-66.5
+      parent: 8364
+  - uid: 19044
+    components:
+    - type: Transform
+      pos: -35.5,-20.5
       parent: 8364
   - uid: 19053
     components:
@@ -85637,19 +85730,17 @@ entities:
     - type: Transform
       pos: 34.5,-53.5
       parent: 8364
-- proto: FoodBoxDonkpocketGondola
-  entities:
-  - uid: 27155
-    components:
-    - type: Transform
-      pos: 26.502972,-87.37317
-      parent: 8364
 - proto: FoodBoxDonkpocketPizza
   entities:
   - uid: 21146
     components:
     - type: Transform
       pos: 51.57733,-33.333336
+      parent: 8364
+  - uid: 27155
+    components:
+    - type: Transform
+      pos: 26.502972,-87.37317
       parent: 8364
 - proto: FoodBoxDonut
   entities:
@@ -126362,6 +126453,43 @@ entities:
       parent: 8364
     - type: AtmosDevice
       joinedGrid: 8364
+- proto: OxygenTank
+  entities:
+  - uid: 21419
+    components:
+    - type: MetaData
+      name: empty tank
+    - type: Transform
+      pos: 79.5,-43.5
+      parent: 8364
+  - uid: 21420
+    components:
+    - type: MetaData
+      name: empty tank
+    - type: Transform
+      pos: 79.5,-43.5
+      parent: 8364
+  - uid: 21421
+    components:
+    - type: MetaData
+      name: empty tank
+    - type: Transform
+      pos: 79.5,-43.5
+      parent: 8364
+  - uid: 21422
+    components:
+    - type: MetaData
+      name: empty tank
+    - type: Transform
+      pos: 79.5,-43.5
+      parent: 8364
+  - uid: 21423
+    components:
+    - type: MetaData
+      name: empty tank
+    - type: Transform
+      pos: 79.5,-43.5
+      parent: 8364
 - proto: OxygenTankFilled
   entities:
   - uid: 20121
@@ -140063,7 +140191,7 @@ entities:
       parent: 8364
 - proto: Roboisseur
   entities:
-  - uid: 9843
+  - uid: 19213
     components:
     - type: Transform
       pos: 35.5,-11.5
@@ -174366,43 +174494,6 @@ entities:
     components:
     - type: Transform
       pos: -12.460218,-61.460724
-      parent: 8364
-- proto: YellowOxygenTank
-  entities:
-  - uid: 21419
-    components:
-    - type: MetaData
-      name: empty tank
-    - type: Transform
-      pos: 79.5,-43.5
-      parent: 8364
-  - uid: 21420
-    components:
-    - type: MetaData
-      name: empty tank
-    - type: Transform
-      pos: 79.5,-43.5
-      parent: 8364
-  - uid: 21421
-    components:
-    - type: MetaData
-      name: empty tank
-    - type: Transform
-      pos: 79.5,-43.5
-      parent: 8364
-  - uid: 21422
-    components:
-    - type: MetaData
-      name: empty tank
-    - type: Transform
-      pos: 79.5,-43.5
-      parent: 8364
-  - uid: 21423
-    components:
-    - type: MetaData
-      name: empty tank
-    - type: Transform
-      pos: 79.5,-43.5
       parent: 8364
 - proto: Zipties
   entities:
