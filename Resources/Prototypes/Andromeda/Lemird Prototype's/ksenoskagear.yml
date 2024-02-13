@@ -1,0 +1,46 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitJacketKsenoFamle
+  name: костюм горничной ксенодевочки
+  description: Изящный наряд, лишь для лучших ксенодевочек...
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ksenoskajumpsuit.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/ksenoskajumpsuit.rsi
+  - type: SuitSensor
+    controlsLocked: false
+    randomMode: false
+    mode: SensorCords
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: ClothingHeadKsenoFamle
+  name: наколка горничной ксенодевочки
+  description: Изящный головной убор, лишь для лучших ксенодевочек...
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ksenoskahead.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/ksenoskahead.rsi
+  - type: SuitSensor
+    controlsLocked: false
+    randomMode: false
+    mode: SensorCords
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadsetScience
+  id: ClothingHeadsetKsenoska
+  name: гарнитура горничной ксенодевочки
+  description: Изящная гарнитура, лишь для лучших ксенодевочек...
+  suffix: Неснимаемый
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/ksenoskaspechmodule.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/ksenoskaspechmodule.rsi
+  - type: Unremoveable
