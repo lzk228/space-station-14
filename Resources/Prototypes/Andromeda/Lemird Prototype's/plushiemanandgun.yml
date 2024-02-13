@@ -1,0 +1,36 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieMaleAndGun
+  name: плюшевый злобный пацан
+  description: Ну конечно тяжело когда зарплату понизили и тебе трудно, но иногда можно обо всём забыть и просто взять бензопилу. 
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushiemaleandgun.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Lemird/plushiemaleandgun.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/chainsawsound.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/chainsawsound.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/chainsawsound.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/chainsawsound.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/chainsawsound.ogg
+  - type: UseDelay
+    delay: 1.0
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Andromeda/Lemird/Misc/chainsawsound.ogg
+    damage:
+      types:
+        Blunt: 0

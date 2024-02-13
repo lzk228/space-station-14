@@ -1,0 +1,13 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieGirl
+  name: плюшевая библиотекарша
+  description: Тихая и скромная игрушка. Идеально подходит для библиотеки.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushiegirl.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Lemird/plushiegirl.rsi
