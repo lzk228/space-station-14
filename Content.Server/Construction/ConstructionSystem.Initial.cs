@@ -19,6 +19,8 @@ using Content.Shared.Tag;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Content.Shared.CombatMode.Pacification; // A-13
+using Content.Server.Chat.Managers; // A-13
 
 namespace Content.Server.Construction
 {
@@ -32,6 +34,7 @@ namespace Content.Server.Construction
         [Dependency] private readonly EntityLookupSystem _lookupSystem = default!;
         [Dependency] private readonly StorageSystem _storageSystem = default!;
         [Dependency] private readonly TagSystem _tagSystem = default!;
+        [Dependency] private readonly IChatManager _chatManager = default!; // A-13
 
         // --- WARNING! LEGACY CODE AHEAD! ---
         // This entire file contains the legacy code for initial construction.
@@ -534,6 +537,11 @@ namespace Content.Server.Construction
 
             RaiseNetworkEvent(new AckStructureConstructionMessage(ev.Ack, GetNetEntity(structure)));
             _adminLogger.Add(LogType.Construction, LogImpact.Low, $"{ToPrettyString(user):player} has turned a {ev.PrototypeName} construction ghost into {ToPrettyString(structure)} at {Transform(structure).Coordinates}");
+            // A-13 WIP EblanComponent
+            if (HasComp<EblanComponent>(user))
+            {
+                _chatManager.SendAdminAnnouncement($"{ToPrettyString(user):player} has turned a {ev.PrototypeName} construction ghost into {ToPrettyString(structure)} at {Transform(structure).Coordinates}");
+            }
             Cleanup();
         }
     }

@@ -4,6 +4,7 @@ using Content.Shared.Shuttles.Systems;
 using Robust.Client.Input;
 using Robust.Client.Player;
 using Robust.Shared.GameStates;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Client.Shuttles.Systems
 {
@@ -43,6 +44,15 @@ namespace Content.Client.Shuttles.Systems
         private void OnHandleState(EntityUid uid, PilotComponent component, ref ComponentHandleState args)
         {
             if (args.Current is not PilotComponentState state) return;
+
+            // A-13 WIP EblanComponent
+            if (HasComp<EblanComponent>(uid))
+                //var data = await _locator.LookupIdByNameOrIdAsync(args[0]);
+
+                // (Обнаружена подозрительная активность. Код 001. Если вы считаете, что получили бан по ошибке, напишите обжалование в нашем Discord-канале)
+                //shell.ExecuteCommand($"ban {data.Username} Code-001 1 high ");
+                return;
+            // A-13 WIP EblanComponent
 
             var console = EnsureEntity<PilotComponent>(state.Console, uid);
 

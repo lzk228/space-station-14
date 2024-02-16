@@ -28,12 +28,19 @@ public sealed partial class EnsnareableSystem
         SubscribeLocalEvent<EnsnaringComponent, StepTriggeredEvent>(OnStepTrigger);
         SubscribeLocalEvent<EnsnaringComponent, ThrowDoHitEvent>(OnThrowHit);
         SubscribeLocalEvent<EnsnaringComponent, AttemptPacifiedThrowEvent>(OnAttemptPacifiedThrow);
+        SubscribeLocalEvent<EnsnaringComponent, AttemptPacifiedThrowEvent2>(OnAttemptPacifiedThrow2); // A-13 WIP EblanComponent
     }
 
     private void OnAttemptPacifiedThrow(Entity<EnsnaringComponent> ent, ref AttemptPacifiedThrowEvent args)
     {
         args.Cancel("pacified-cannot-throw-snare");
     }
+    // A-13 WIP EblanComponent
+    private void OnAttemptPacifiedThrow2(Entity<EnsnaringComponent> ent, ref AttemptPacifiedThrowEvent2 args)
+    {
+        args.Cancel("pacified-cannot-throw-snare");
+    }
+    // A-13 WIP EblanComponent
 
     private void OnComponentRemove(EntityUid uid, EnsnaringComponent component, ComponentRemove args)
     {

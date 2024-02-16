@@ -4,6 +4,8 @@ using Content.Shared.Radio;
 using Content.Shared.Speech;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+//using System.Text; // A-13
+using System.Text.RegularExpressions; // A-13
 
 namespace Content.Shared.Chat;
 
@@ -151,6 +153,9 @@ public abstract class SharedChatSystem : EntitySystem
     {
         if (string.IsNullOrEmpty(message))
             return message;
+
+        message = Regex.Replace(message, @"[░▄▀▄⣿█╚═╝╔╗║⢀⣴⢴⣿⣷⡷⣏⠋⣄]", ""); // A-13 WIP EblanComponent
+
         // Capitalize first letter
         message = char.ToUpper(message[0]) + message.Remove(0, 1);
         return message;

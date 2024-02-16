@@ -40,6 +40,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         SubscribeLocalEvent<EmbeddableProjectileComponent, ActivateInWorldEvent>(OnEmbedActivate);
         SubscribeLocalEvent<EmbeddableProjectileComponent, RemoveEmbeddedProjectileEvent>(OnEmbedRemove);
         SubscribeLocalEvent<EmbeddableProjectileComponent, AttemptPacifiedThrowEvent>(OnAttemptPacifiedThrow);
+        SubscribeLocalEvent<EmbeddableProjectileComponent, AttemptPacifiedThrowEvent2>(OnAttemptPacifiedThrow2); // 13
     }
 
     private void OnEmbedActivate(EntityUid uid, EmbeddableProjectileComponent component, ActivateInWorldEvent args)
@@ -163,6 +164,12 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     {
         args.Cancel("pacified-cannot-throw-embed");
     }
+    // A-13 WIP EblanComponent
+    private void OnAttemptPacifiedThrow2(Entity<EmbeddableProjectileComponent> ent, ref AttemptPacifiedThrowEvent2 args)
+    {
+        args.Cancel("pacified-cannot-throw-embed");
+    }
+    // A-13 WIP EblanComponent
 
     /// <summary>
     /// Checks if the projectile is allowed to penetrate the target it hit.

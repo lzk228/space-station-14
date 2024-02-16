@@ -5,6 +5,7 @@ using Content.Shared.Explosion.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Server.Explosion.EntitySystems;
 
@@ -171,7 +172,10 @@ public sealed partial class TriggerSystem
         if (args.Handled || HasComp<AutomatedTimerComponent>(uid) || component.UseVerbInstead)
             return;
 
-        _popupSystem.PopupEntity(Loc.GetString("trigger-activated", ("device", uid)), args.User, args.User);
+        // A-13 WIP EblanComponent
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        // A-13 WIP EblanComponent
 
         HandleTimerTrigger(
             uid,
