@@ -43,6 +43,9 @@
     neck: ClothingNeckNanoTrasenPin
     pocket1: FlashlightSeclite
     pocket2: CombatKnife
+    underwearb: ClothingUnderwearBottomBoxersWhite
+  underweart: ClothingUnderwearTopBraWhite
+  underwearb: ClothingUnderwearBottomPantiesWhite
 
 - type: randomHumanoidSettings
   id: ERTJuggernautSettings
