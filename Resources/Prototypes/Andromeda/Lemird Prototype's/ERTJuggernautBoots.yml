@@ -36,5 +36,5 @@
 - type: soundCollection
   id: ExosuitWalkERT
   files:
-  - /Uploaded/Audio/Andromeda/Lemird/SoundCollection/ExosuitWalkERT/heavy_exosuit_walk1.ogg
-  - /Uploaded/Audio/Andromeda/Lemird/SoundCollection/ExosuitWalkERT/heavy_exosuit_walk2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ExosuitWalkERT/heavy_exosuit_walk1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/ExosuitWalkERT/heavy_exosuit_walk2.ogg
