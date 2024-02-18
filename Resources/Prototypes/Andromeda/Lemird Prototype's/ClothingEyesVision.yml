@@ -1,0 +1,81 @@
+- type: entity
+  name: прибор ночного видения
+  id: ClothingEyesVision
+  parent: BaseItem
+  description: Прибор ночного видения. Обеспечивает изображение местности в условиях низкой освещенности.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+    state: icon
+  - type: Clickable
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+    quickEquip: true
+    slots: [ Eyes ]
+  - type: Item
+    size: Small
+  - type: GroupExamine
+  - type: EyeProtection
+  - type: UseDelay
+    delay: 4
+  - type: PNV
+
+- type: entity
+  name: прибор ночного видения синдиката
+  id: ClothingEyesVisionSyndicate
+  parent: ClothingEyesVision
+  description: Прибор ночного видения. Используется синдикатом.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Andromeda/Lemird/nvgsynd.rsi
+    state: icon
+  - type: Clickable
+  - type: Clothing
+    sprite: Andromeda/Lemird/nvgsynd.rsi
+    quickEquip: true
+    slots: [ Eyes ]
+  - type: GroupExamine
+  - type: FlashImmunity
+  - type: UseDelay
+    delay: 4
+  - type: PNV
+
+- type: entity
+  name: прибор ночного видения ОБР
+  id: ClothingEyesVisionERT
+  parent: ClothingEyesVision
+  description: Визор и прибор ночного видения в одном изделии.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Andromeda/Lemird/nvgert.rsi
+    state: icon
+  - type: Clothing
+    sprite: Andromeda/Lemird/nvgert.rsi
+  - type: ShowSecurityIcons
+  - type: FlashImmunity
+
+- type: entity
+  name: прибор ночного видения ОБР джаггернаута
+  id: ClothingEyesVisionERTJuggernaut
+  parent: ClothingEyesVision
+  description: Один его взгляд может убить тебя.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Andromeda/Lemird/nvgjugert.rsi
+    state: icon
+  - type: Clothing
+    sprite: Andromeda/Lemird/nvgjugert.rsi
+  - type: ShowSecurityIcons
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: FlashImmunity
+  - type: Unremoveable
+  - type: Tag
+    tags:
+    - HudMedical
+    - HudSecurity
