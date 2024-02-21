@@ -33,3 +33,5 @@
     - trigger:
         !type:DamageTrigger
         damage: 100
+  - type: ApcPowerReceiver
+    powerLoad: 0
