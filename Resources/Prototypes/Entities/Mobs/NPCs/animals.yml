@@ -58,12 +58,12 @@
     damage:
       types:
         Piercing: 5
-  - type: NightVision #A-13
-    isToggle: true #A-13
-    color: "#808080" #A-13
   - type: Tag
     tags:
     - VimPilot
+  - type: NightVision #A-13
+    isToggle: true #A-13
+    color: "#808080" #A-13
 
 - type: entity
   name: bee
