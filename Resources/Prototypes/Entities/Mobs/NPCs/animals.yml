@@ -58,11 +58,9 @@
     damage:
       types:
         Piercing: 5
-#A-13 PNV start
-  - type: NightVision
-    isToggle: true
-    color: "#808080"
-#A-13 PNV end
+  - type: NightVision #A-13
+    isToggle: true #A-13
+    color: "#808080" #A-13
   - type: Tag
     tags:
     - VimPilot
