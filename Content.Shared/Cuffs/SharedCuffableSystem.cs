@@ -5,6 +5,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
 using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.Buckle.Components;
+using Content.Shared.CombatMode.Pacification; // A-13
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Damage;
 using Content.Shared.Database;
@@ -562,6 +563,12 @@ namespace Content.Shared.Cuffs
             var attempt = new UncuffAttemptEvent(user, target);
             RaiseLocalEvent(user, ref attempt, true);
 
+            // A-13 EblanComponent
+            if (HasComp<EblanComponent>(user) && user == target)
+            {
+                return;
+            }
+            // A-13
             if (attempt.Cancelled)
             {
                 return;
