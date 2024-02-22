@@ -58,8 +58,6 @@
     damage:
       types:
         Piercing: 5
-  - type: Puller
-    needsHands: true
 #A-13 PNV start
   - type: NightVision
     isToggle: true
