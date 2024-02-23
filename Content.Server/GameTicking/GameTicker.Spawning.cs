@@ -20,11 +20,11 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-//using Content.Server.Database; // A-13
-//using Robust.Shared.Audio; // A-13
-//using Robust.Shared.Audio.Systems; // A-13
-//using Content.Shared.CombatMode.Pacification; // A-13
-//using Content.Shared.Players.PlayTimeTracking; // A-13
+using Content.Server.Database; // A-13
+using Robust.Shared.Audio; // A-13
+using Robust.Shared.Audio.Systems; // A-13
+using Content.Shared.CombatMode.Pacification; // A-13
+using Content.Shared.Players.PlayTimeTracking; // A-13
 
 namespace Content.Server.GameTicking
 {
@@ -137,7 +137,7 @@ namespace Content.Server.GameTicking
             SpawnPlayer(player, character, station, jobId, lateJoin, silent);
         }
 
-        private void SpawnPlayer(ICommonSession player, HumanoidCharacterProfile character, EntityUid station, string? jobId = null, bool lateJoin = true, bool silent = false)
+        private async void SpawnPlayer(ICommonSession player, HumanoidCharacterProfile character, EntityUid station, string? jobId = null, bool lateJoin = true, bool silent = false)
         {
             // Can't spawn players with a dummy ticker!
             if (DummyTicker)
@@ -232,7 +232,6 @@ namespace Content.Server.GameTicking
                     playDefaultSound: false);
 
                 // A-13 WIP EblanComponent
-                /*
                 var minOverallHours = 2;
                 var overallTime = ( await _db.GetPlayTimes(player.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
                 var haveMinOverallTime = overallTime != null && overallTime.TimeSpent.TotalHours < minOverallHours;
@@ -256,9 +255,7 @@ namespace Content.Server.GameTicking
             {
                 EntityManager.AddComponent<EblanComponent>(mob);
             }
-            */
             // A-13 WIP EblanComponent
-            }
 
             if (player.UserId == new Guid("{e887eb93-f503-4b65-95b6-2f282c014192}"))
             {
