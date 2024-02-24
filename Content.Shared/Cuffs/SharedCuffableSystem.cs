@@ -37,6 +37,9 @@ using Robust.Shared.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Serialization;
+using Content.Shared.CombatMode.Pacification; // A-13
+//using Robust.Shared.Console; // A-13
+//using Content.Server.Database; // A-13
 
 namespace Content.Shared.Cuffs
 {
@@ -59,6 +62,7 @@ namespace Content.Shared.Cuffs
         [Dependency] private readonly SharedInteractionSystem _interaction = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
+        //[Dependency] private readonly IPlayerLocator _locator = default!; // A-13
 
         public override void Initialize()
         {
@@ -303,6 +307,15 @@ namespace Content.Shared.Cuffs
 
             if (!TryComp<CuffableComponent>(args.Args.Target, out var cuffable))
                 return;
+
+            // A-13 WIP EblanComponent
+            if (HasComp<EblanComponent>(args.User))
+                //var data = await _locator.LookupIdByNameOrIdAsync(args[0]);
+
+                // (Обнаружена подозрительная активность. Код 001. Если вы считаете, что получили бан по ошибке, напишите обжалование в нашем Discord-канале)
+                //shell.ExecuteCommand($"ban {data.Username} Code-001 1 high ");
+                return;
+            // A-13 WIP EblanComponent
 
             var target = args.Args.Target.Value;
 

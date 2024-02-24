@@ -15,6 +15,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using JetBrains.Annotations;
 using Robust.Shared.Player;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Server.GameTicking
 {
@@ -207,6 +208,11 @@ namespace Content.Server.GameTicking
 
             if (playerEntity != null && viaCommand)
                 _adminLogger.Add(LogType.Mind, $"{EntityManager.ToPrettyString(playerEntity.Value):player} is attempting to ghost via command");
+
+            // A-13 WIP EblanComponent
+            if (playerEntity != null && EntityManager.HasComponent<EblanComponent>(playerEntity.Value))
+                return false;
+            // A-13 WIP EblanComponent
 
             var handleEv = new GhostAttemptHandleEvent(mind, canReturnGlobal);
             RaiseLocalEvent(handleEv);

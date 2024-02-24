@@ -1,7 +1,7 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Packed
+  - Aspid
   - Omega
   - Bagel
 # - Barratry
@@ -9,6 +9,7 @@
   - CorvaxAstra
   - CorvaxSpectrum
   - Cluster
+  - Packed
 #  - CorvaxAvrite
   - Marathon
   - Meta
