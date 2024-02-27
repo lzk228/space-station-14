@@ -12,6 +12,7 @@ using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Server.Chat
 {
@@ -30,6 +31,11 @@ namespace Content.Server.Chat
             // Checks to see if the CannotSuicide tag exits, ghosts instead.
             if (_tagSystem.HasTag(victim, "CannotSuicide"))
                 return false;
+
+            // A-13 WIP EblanComponent
+            if (EntityManager.HasComponent<EblanComponent>(victim))
+                return false;
+            // A-13 WIP EblanComponent
 
             // Checks to see if the player is dead.
             if (!TryComp<MobStateComponent>(victim, out var mobState) || _mobState.IsDead(victim, mobState))

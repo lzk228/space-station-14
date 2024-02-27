@@ -11,6 +11,7 @@ using Robust.Shared.Map;
 using System.Xml.Schema;
 using CableCuttingFinishedEvent = Content.Shared.Tools.Systems.CableCuttingFinishedEvent;
 using SharedToolSystem = Content.Shared.Tools.Systems.SharedToolSystem;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Server.Power.EntitySystems;
 
@@ -55,6 +56,11 @@ public sealed partial class CableSystem : EntitySystem
 
         if (_electrocutionSystem.TryDoElectrifiedAct(uid, args.User))
             return;
+
+        // A-13 WIP EblanComponent
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        // A-13 WIP EblanComponent
 
         _adminLogs.Add(LogType.CableCut, LogImpact.Medium, $"The {ToPrettyString(uid)} at {xform.Coordinates} was cut by {ToPrettyString(args.User)}.");
 

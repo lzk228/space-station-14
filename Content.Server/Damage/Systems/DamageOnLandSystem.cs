@@ -14,6 +14,7 @@ namespace Content.Server.Damage.Systems
             base.Initialize();
             SubscribeLocalEvent<DamageOnLandComponent, LandEvent>(DamageOnLand);
             SubscribeLocalEvent<DamageOnLandComponent, AttemptPacifiedThrowEvent>(OnAttemptPacifiedThrow);
+            SubscribeLocalEvent<DamageOnLandComponent, AttemptPacifiedThrowEvent2>(OnAttemptPacifiedThrow2); // A-13 WIP EblanComponent
         }
 
         /// <summary>
@@ -27,6 +28,16 @@ namespace Content.Server.Damage.Systems
                 args.Cancel("pacified-cannot-throw");
             }
         }
+        // A-13 WIP EblanComponent
+        private void OnAttemptPacifiedThrow2(Entity<DamageOnLandComponent> ent, ref AttemptPacifiedThrowEvent2 args)
+        {
+            // Allow healing projectiles, forbid any that do damage:
+            if (ent.Comp.Damage.Any())
+            {
+                args.Cancel("pacified-cannot-throw");
+            }
+        }
+        // A-13 WIP EblanComponent
 
         private void DamageOnLand(EntityUid uid, DamageOnLandComponent component, ref LandEvent args)
         {

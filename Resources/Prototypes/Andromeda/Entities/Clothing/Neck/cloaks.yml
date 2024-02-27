@@ -127,3 +127,13 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/cloak_whitehole.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSinitsa
+  name: плащ=синица
+  suffix: Андромеда
+  description: Эту синичку можно натянуть как плащ, да вы не ослышались и я не шучу! НАТЯНИТЕ ЕЁ!!!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/cloak_sinitsa.rsi

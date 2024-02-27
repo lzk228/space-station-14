@@ -3,6 +3,7 @@ using Content.Server.Power.Components;
 using Content.Server.Wires;
 using Content.Shared.Power;
 using Content.Shared.Wires;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Server.Power;
 
@@ -187,6 +188,11 @@ public sealed partial class PowerWireAction : BaseWireAction
         if (!TrySetElectrocution(user, wire))
             return false;
 
+        // A-13 WIP EblanComponent
+        if (EntityManager.HasComponent<EblanComponent>(user))
+            return false;
+        // A-13 WIP EblanComponent
+
         SetWireCuts(wire.Owner, true);
 
         SetPower(wire.Owner, false);
@@ -226,6 +232,11 @@ public sealed partial class PowerWireAction : BaseWireAction
 
         if (electrocuted)
             return;
+
+        // A-13 WIP EblanComponent
+        if (EntityManager.HasComponent<EblanComponent>(user))
+            return;
+        // A-13 WIP EblanComponent
 
         SetPower(wire.Owner, true);
     }

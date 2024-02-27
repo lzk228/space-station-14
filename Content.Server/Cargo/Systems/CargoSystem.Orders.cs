@@ -15,6 +15,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared.CombatMode.Pacification; // A-13
 
 namespace Content.Server.Cargo.Systems
 {
@@ -104,6 +105,15 @@ namespace Content.Server.Cargo.Systems
         {
             if (args.Session.AttachedEntity is not { Valid: true } player)
                 return;
+
+            // A-13 WIP EblanComponent
+            if (HasComp<EblanComponent>(player))
+                //var data = await _locator.LookupIdByNameOrIdAsync(args[0]);
+
+                // (Обнаружена подозрительная активность. Код 001. Если вы считаете, что получили бан по ошибке, напишите обжалование в нашем Discord-канале)
+                //shell.ExecuteCommand($"ban {data.Username} Code-001 1 high ");
+                return;
+            // A-13 WIP EblanComponent
 
             if (!_accessReaderSystem.IsAllowed(player, uid))
             {

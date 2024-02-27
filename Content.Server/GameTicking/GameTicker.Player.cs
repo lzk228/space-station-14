@@ -11,6 +11,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Players.PlayTimeTracking; // A-13
 
 
 namespace Content.Server.GameTicking
@@ -62,21 +63,26 @@ namespace Content.Server.GameTicking
                     // timer time must be > tick length
                     // Timer.Spawn(0, args.Session.JoinGame); // Corvax-Queue: Moved to `JoinQueueManager`
 
-                    var record = await _dbManager.GetPlayerRecordByUserId(args.Session.UserId);
-                    var firstConnection = record != null &&
-                                          Math.Abs((record.FirstSeenTime - record.LastSeenTime).TotalMinutes) < 1;
+                    // A-13 WIP EblanComponent
+                    var minOverallHours = 2;
+                    var overallTime = ( await _db.GetPlayTimes(args.Session.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
+                    var haveMinOverallTime = overallTime != null && overallTime.TimeSpent.TotalHours < minOverallHours;
+                    // A-13 WIP EblanComponent
 
-                    _chatManager.SendAdminAnnouncement(firstConnection
+                    //var record = await _dbManager.GetPlayerRecordByUserId(args.Session.UserId);
+                    //var firstConnection = record != null && Math.Abs((record.FirstSeenTime - record.LastSeenTime).TotalMinutes) < 120; // A-13 WIP EblanComponent
+
+                    _chatManager.SendAdminAnnouncement(haveMinOverallTime
                         ? Loc.GetString("player-first-join-message", ("name", args.Session.Name))
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
 
                     RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
 
                     // A-13 New player join system start
-                    if (firstConnection)
+                    if (haveMinOverallTime)
                         _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Andromeda/Effects/newplayerping.ogg"),
                             Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
-                            audioParams: new AudioParams { Volume = -5f });
+                            audioParams: new AudioParams { Volume = -10f });
                     // A-13 New player join system end
 
                     if (LobbyEnabled && _roundStartCountdownHasNotStartedYetDueToNoPlayers)

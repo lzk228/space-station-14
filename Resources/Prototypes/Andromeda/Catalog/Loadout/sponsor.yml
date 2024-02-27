@@ -1394,3 +1394,21 @@
   id: ClothingUniformJumpskirtPinkWhiteStripSportLoadout
   entity: ClothingUniformJumpskirtPinkWhiteStripSport
   sponsorOnly: true
+
+- type: loadout
+  id: ClothingNeckCloakSinitsaLoadout
+  entity: ClothingNeckCloakSinitsa
+  sponsorOnly: true
+
+#_Evil_
+- type: loadout
+  id: ClothingEyesGlassesSecurityLoadout
+  entity: ClothingEyesGlassesSecurity
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity]
+
+- type: loadout
+  id: ClothingUniformJumpskirtSeniorOfficerLoadout
+  entity: ClothingUniformJumpskirtSeniorOfficer
+  sponsorOnly: true
+  whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity]
