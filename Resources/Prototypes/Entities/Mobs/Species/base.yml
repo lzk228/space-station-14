@@ -271,6 +271,7 @@
     - Pacified
     - StaminaModifier
   - type: Blindable
+  - type: NightVision #A-13
   # Other
   - type: Temperature
     heatDamageThreshold: 325

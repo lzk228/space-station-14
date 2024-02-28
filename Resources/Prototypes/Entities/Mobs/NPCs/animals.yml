@@ -61,6 +61,9 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: NightVision #A-13
+    isToggle: true #A-13
+    color: "#808080" #A-13
 
 - type: entity
   name: bee
@@ -2123,6 +2126,11 @@
   - type: Bloodstream
     bloodMaxVolume: 150
     bloodReagent: CopperBlood
+#A-13 PNV start
+  - type: NightVision
+    isToggle: true
+    color: "#808080"
+#A-13 PNV end
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid

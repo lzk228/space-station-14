@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckSharfVetra
+  name: шарф ветра
+  description: Прелестный шарф, сделанный из приятной и лёгкой ткани. Ткань на столько лёгкая, что даже без движения, шарф развивается на ветру
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/sharfvetra.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/sharfvetra.rsi

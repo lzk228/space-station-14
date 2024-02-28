@@ -1,0 +1,23 @@
+- type: entity
+  id: NVToggleAction
+  name: Переключение ПНВ
+  description: Переключает ваше ПНВ
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+      state: icon
+    event: !type:NVInstantActionEvent
+
+- type: entity
+  id: SwitchNightVision
+  name: Переключение ночного зрения
+  description: Переключает ночное зрение
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Andromeda/Lemird/nv.rsi
+      state: nv
+    event: !type:NVInstantActionEvent

@@ -1,0 +1,229 @@
+- type: entity
+  id: MobKsenoFemale
+  parent: SimpleSpaceMobBase
+  abstract: true
+  components:
+  - type: CombatMode
+  - type: Inventory
+    templateId: ksenofemale
+    speciesId: ksenofemale
+  - type: InventorySlots
+  - type: Cuffable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Stripping
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: kseno
+      sprite: Andromeda/Lemird/ksenoska.rsi
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Andromeda/Lemird/ksenoska.rsi
+      state: kseno_cuff
+      visible: false
+    - map: [ "ears" ]
+    - map: [ "id" ]
+    - map: [ "head" ]
+      sprite: "Andromeda/Lemird/ksenoska.rsi"
+      state: "kseno_crempai"
+      visible: false
+  - type: Hands
+  - type: Speech
+    speechSounds: Lizard
+    speechVerb: Reptilian
+  - type: Body
+    prototype: Reptilian
+    requiredLegs: 2
+  - type: CreamPied
+  - type: FireVisuals
+    sprite: Andromeda/Lemird/ksenoska.rsi
+    normalState: kseno_burn
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatXeno
+      amount: 5
+  - type: LizardAccent
+  - type: Puller
+  - type: CanHostGuardian
+  - type: NPCRetaliation
+    attackMemoryLength: 10
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+      - Passive
+      - PetsNT
+  - type: GhostRole
+    prob: 0.05
+    makeSentient: true
+    name: Ксеноска
+    description: Уникальное животное! Только вот зачем...
+  - type: GhostTakeoverAvailable
+  - type: IdExaminable
+  - type: AlwaysRevolutionaryConvertible
+  - type: Vocal
+    sounds:
+      Male: UnisexReptilian
+      Female: UnisexReptilian
+      Unsexed: UnisexReptilian
+  - type: TypingIndicator
+    proto: alien
+  - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
+    molsPerSecondPerUnitMass: 0.0005
+  - type: Stamina
+    critThreshold: 150
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      25: 0.5
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+
+- type: entity
+  name: Хвостик
+  parent: MobKsenoFemale
+  id: MobKsenodeska
+  description: Милый питомец для отдела РнД. Готова изучать самые разные аномалии.
+  suffix: Андромеда
+  components:
+  - type: GhostRole
+    prob: 1
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Хвостик
+    description: Уникальное животное специально сделанное для РнД! Только вот зачем...
+  - type: GhostTakeoverAvailable
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 3
+    - id: DrinkTequilaBottleFull
+      amount: 1
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+  - type: Loadout
+    prototypes: [ MobKsenoFamleGear ]
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      250: Dead
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Blunt: 13
+
+- type: startingGear
+  id: MobKsenoFamleGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitJacketKsenoFamle
+    id: ResearchAssistantIDCard
+    ears: ClothingHeadsetKsenoska
+    head: ClothingHeadKsenoFamle
+
+- type: entity
+  name: спавнер горничной ксенодевочки
+  id: SpawnMobKsenoFemale
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Andromeda/Lemird/ksenoska.rsi
+        state: kseno
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobKsenodeska
+
+- type: inventoryTemplate
+  id: ksenofemale
+  slots:
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    slotGroup: MainHotbar
+    uiWindowPos: 0,0
+    strippingWindowPos: 0,0
+    displayName: Head
+  - name: ears
+    slotTexture: ears
+    slotFlags: EARS
+    slotGroup: MainHotbar
+    stripTime: 3
+    uiWindowPos: 1,2
+    strippingWindowPos: 1,2
+    displayName: Ears
+  - name: jumpsuit
+    slotTexture: uniform
+    slotFlags: INNERCLOTHING
+    stripTime: 6
+    uiWindowPos: 0,2
+    strippingWindowPos: 0,2
+    displayName: Jumpsuit
+  - name: id
+    slotTexture: id
+    slotFlags: IDCARD
+    slotGroup: SecondHotbar
+    stripTime: 6
+    uiWindowPos: 2,1
+    strippingWindowPos: 2,4
+    dependsOn: jumpsuit
+    displayName: ID
+  - name: pocket1
+    slotTexture: pocket
+    slotFlags: POCKET
+    slotGroup: MainHotbar
+    stripTime: 3
+    uiWindowPos: 0,3
+    strippingWindowPos: 0,4
+    dependsOn: jumpsuit
+    displayName: Pocket 1
+    stripHidden: true
+  - name: pocket2
+    slotTexture: pocket
+    slotFlags: POCKET
+    slotGroup: MainHotbar
+    stripTime: 3
+    uiWindowPos: 2,3
+    strippingWindowPos: 1,4
+    dependsOn: jumpsuit
+    displayName: Pocket 2
+    stripHidden: true

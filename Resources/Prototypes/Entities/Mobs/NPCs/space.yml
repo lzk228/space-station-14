@@ -67,6 +67,11 @@
   - type: GhostTakeoverAvailable
   - type: Speech
     speechVerb: LargeMob
+#A-13 PNV start
+  - type: NightVision
+    isToggle: true
+    color: "#808080"
+#A-13 PNV end
 
 - type: entity
   name: space bear

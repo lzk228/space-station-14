@@ -114,6 +114,11 @@
   - type: Grammar
     attributes:
       gender: male
+#A-13 PNV start
+  - type: NightVision
+    isToggle: true
+    color: "#808080"
+#A-13 PNV end
 
 - type: entity
   id: MobRatKingBuff

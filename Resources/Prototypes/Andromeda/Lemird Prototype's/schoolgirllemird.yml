@@ -1,0 +1,12 @@
+- type: entity
+  parent: PlushieLemird
+  id: PlushieLemirdSchoolGirl
+  name: плюшевая школьница Лемирд
+  description: Вы яростно обучаетесь и хотите познать гранит науки? Тогда... Попросите купить эту школьную милую игрушку! С ней у вас будут лишь положительные эмоции на учёбе!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushielemirdschoolgirl.rsi
+    state: icon
+  - type: Item
+    sprite: Andromeda/Lemird/plushielemirdschoolgirl.rsi

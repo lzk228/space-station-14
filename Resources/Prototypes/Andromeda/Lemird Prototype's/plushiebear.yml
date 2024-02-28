@@ -1,0 +1,13 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieBear
+  name: плюшевый бобовый мишка
+  description: Верный друг психолога и его наркотрипов когда пациентов нет, а смена затянулась. На этикетке написано что может вызывать тошноту, но там же и написано что игрушка для детей от 3 лет...
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/plushiebear.rsi
+    size: Small
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushiebear.rsi
+    state: icon

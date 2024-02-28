@@ -1,0 +1,13 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieMaleToy
+  name: плюшевая игрушка пацанчика
+  description: Сзади указано "Лор", это его имя, наверное. Похож на героя из какого то комикса... Но, его явно вы раньше не видели.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/maletoy.rsi
+    size: Small
+  - type: Sprite
+    sprite: Andromeda/Lemird/maletoy.rsi
+    state: icon
