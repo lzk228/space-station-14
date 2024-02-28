@@ -1,4 +1,4 @@
-﻿using Content.Server.Chat.Systems;
+using Content.Server.Chat.Systems;
 using Content.Server.Speech.Muting;
 using Content.Shared.Mobs;
 using Content.Server.EUI;
@@ -6,6 +6,7 @@ using Robust.Server.Player;
 using Content.Server.Andromeda.DeathReminder.DeathReminderEui;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mind;
+using Content.Shared.Speech.Muting;
 
 namespace Content.Server.Mobs;
 

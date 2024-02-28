@@ -11,7 +11,6 @@
     size: Normal
   - type: Tag
     tags:
-      - DroneUsable
       - RawMaterial
   - type: Damageable
     damageContainer: Inorganic
@@ -128,7 +127,6 @@
   - type: Tag
     tags:
       - ClothMade
-      - DroneUsable
       - Gauze
       - RawMaterial
   - type: Construction
@@ -193,7 +191,6 @@
   - type: Tag
     tags:
       - ClothMade
-      - DroneUsable
       - RawMaterial
 
 - type: entity
@@ -241,7 +238,6 @@
   - type: Tag
     tags:
     - Wooden
-    - DroneUsable
     - RawMaterial
   - type: Extractable
     grindableSolutionName: wood
@@ -423,11 +419,9 @@
   - type: Tag
     tags:
       - ClothMade
-      - DroneUsable
       - RawMaterial
 #  - type: Extractable
 #    grindableSolutionName: fiber
-
 
 - type: entity
   parent: MaterialCotton
@@ -504,7 +498,7 @@
   parent: MaterialBase
   id: MaterialWebSilk
   name: silk
-  description: A webby material
+  description: A webby material.
   suffix: Full
   components:
   - type: PhysicalComposition
@@ -538,7 +532,6 @@
   - type: Tag
     tags:
       - ClothMade
-      - DroneUsable
       - RawMaterial
 
 - type: entity

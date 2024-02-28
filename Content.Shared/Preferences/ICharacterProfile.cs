@@ -1,4 +1,6 @@
 using Content.Shared.Humanoid;
+using Robust.Shared.Configuration;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Preferences
 {

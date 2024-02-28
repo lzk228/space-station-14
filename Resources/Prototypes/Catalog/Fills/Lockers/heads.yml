@@ -214,7 +214,6 @@
       - id: ClothingHeadsetAltMedical
       - id: ClothingCloakCmo
       - id: ClothingBackpackDuffelSurgeryFilled
-      - id: ClothingOuterCoatLabCmo
       - id: ClothingMaskSterile
       - id: ClothingHeadHatBeretCmo
       - id: ClothingOuterHardsuitMedical
@@ -259,7 +258,6 @@
       - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
       - id: ClothingNeckCloakRd
-      - id: ClothingHeadsetMedicalScience
       - id: ClothingOuterHardsuitRd
       - id: HandTeleporter
       - id: DoorRemoteResearch
@@ -271,6 +269,7 @@
       - id: PinpointerAnomaly
         prob: 0.1
       - id: BoxEncryptionKeyScience
+      - id: ClothingHeadsetAltScience
       - id: EncryptionKeyBinary
 
 - type: entity
@@ -283,8 +282,6 @@
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
-      - id: ClothingNeckCloakRd
-      - id: ClothingHeadsetMedicalScience
       - id: HandTeleporter
       - id: DoorRemoteResearch
       - id: ClothingHeadHatBeretRND
@@ -295,6 +292,7 @@
       - id: PinpointerAnomaly
         prob: 0.1
       - id: BoxEncryptionKeyScience
+      - id: ClothingHeadsetAltScience
       - id: EncryptionKeyBinary
 
 - type: entity
@@ -310,8 +308,8 @@
       - id: ClothingHeadHatHoshat
       - id: ClothingNeckCloakHos
       - id: ClothingOuterCoatHoSTrench
-      - id: ClothingUniformJumpskirtHoSAlt
-      - id: ClothingUniformJumpsuitHoSAlt
+      - id: ClothingMaskNeckGaiter
+      - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
       - id: ClothingOuterHardsuitSecurityRed
       - id: ClothingMaskGasSwat
       - id: ClothingBeltSecurityFilled
@@ -343,8 +341,8 @@
       - id: ClothingHeadHatHoshat
       - id: ClothingNeckCloakHos
       - id: ClothingOuterCoatHoSTrench
-      - id: ClothingUniformJumpskirtHoSAlt
-      - id: ClothingUniformJumpsuitHoSAlt
+      - id: ClothingMaskNeckGaiter
+      - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
       - id: ClothingEyesGlassesSunglasses

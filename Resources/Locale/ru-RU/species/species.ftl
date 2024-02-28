@@ -10,3 +10,4 @@ species-name-felinid = Фелинид
 species-name-vulpkanin = Вульпканин
 species-name-moth = Ниан
 species-name-skeleton = Скелет
+species-name-vox = Вокс
