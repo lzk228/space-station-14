@@ -556,10 +556,10 @@ namespace Content.Shared.Preferences
         }
         // Corvax-TTS-End
 
-        public ICharacterProfile Validated(IConfigurationManager configManager, IPrototypeManager prototypeManager, string[] sponsorPrototypes)
+        public ICharacterProfile Validated(IConfigurationManager configManager, IPrototypeManager prototypeManager)
         {
             var profile = new HumanoidCharacterProfile(this);
-            profile.EnsureValid(configManager, prototypeManager, sponsorPrototypes); // Corvax-Sponsors
+            profile.EnsureValid(configManager, prototypeManager);
             return profile;
         }
 
