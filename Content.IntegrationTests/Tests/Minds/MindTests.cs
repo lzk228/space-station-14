@@ -1,4 +1,4 @@
-#nullable enable
+﻿#nullable enable
 using System.Linq;
 using Content.Server.Ghost;
 using Content.Server.Ghost.Roles;
