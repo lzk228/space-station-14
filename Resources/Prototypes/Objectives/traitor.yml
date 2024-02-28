@@ -164,13 +164,13 @@
   - type: StealCondition
     stealGroup: Hypospray
 
-- type: entity
-  noSpawn: true
-  parent: BaseCMOStealObjective
-  id: CMOCrewMonitorStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: HandheldCrewMonitor
+#- type: entity
+#  noSpawn: true
+#  parent: BaseCMOStealObjective
+#  id: CMOCrewMonitorStealObjective
+#  components:
+#  - type: StealCondition
+#    stealGroup: HandheldCrewMonitor
 
 ## rd
 

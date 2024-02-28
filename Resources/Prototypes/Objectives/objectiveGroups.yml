@@ -12,7 +12,7 @@
   weights:
     CaptainIDStealObjective: 1
     CMOHyposprayStealObjective: 1
-    CMOCrewMonitorStealObjective: 1
+    #CMOCrewMonitorStealObjective: 1 # A-13
     RDHardsuitStealObjective: 1
     NukeDiskStealObjective: 0.5
     MagbootsStealObjective: 1
