@@ -1,0 +1,17 @@
+- type: entity
+  parent: BaseFlatpack
+  id: RoboisseurFlatpack
+  name: упакованный Мистер Дворецкин
+  description: Упаковка, при помощи которой можно установить Мистера Дворецкина.
+  components:
+  - type: Flatpack
+    entity: Roboisseur
+
+- type: entity
+  parent: BaseFlatpack
+  id: PlantExtractorFlatpack
+  name: упакованный ботанический экстрактор
+  description: Упаковка, при помощи которой можно установить ботанический экстрактор.
+  components:
+  - type: Flatpack
+    entity: plant_extractor

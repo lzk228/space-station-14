@@ -56,3 +56,23 @@
   - type: StorageFill
     contents:
     - id: FlippoEngravedLighter
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesDeathSquadSponsor
+  name: технологичные трусики
+  description: Самые технологичные трусики в галактике.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Bottom/deathpanties.rsi
+  - type: StealTarget
+    stealGroup: Panties
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopDeathBraSponsor
+  name: технологичный лифчик
+  description: Самые технологичный лифчик в галактике.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Underwear/Top/deathbra.rsi

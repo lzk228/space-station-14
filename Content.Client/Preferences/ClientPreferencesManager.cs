@@ -4,10 +4,8 @@ using System.Linq;
 using Content.Client.Corvax.Sponsors;
 using Content.Shared.Preferences;
 using Robust.Client;
-using Robust.Shared.Configuration;
 using Robust.Shared.IoC;
 using Robust.Shared.Network;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Client.Preferences

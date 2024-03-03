@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: ChefvendInventory
   startingInventory: # A-13 kitchen buff
+    RoboisseurFlatpack: 1 # A-13
     ReagentContainerFlour: 4
     ReagentContainerCornmeal: 4
     ReagentContainerSugar: 4

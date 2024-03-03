@@ -7,6 +7,7 @@ public sealed class GhostRoleTimeTracker : EntitySystem
 {
     private const string UnknownRoleName = "game-ticker-unknown-role";
     private const string GhostRoleTracker = "JobGhostRole";
+    private const string GhostRoleProto = "GhostRole";
 
     public override void Initialize()
     {
@@ -18,6 +19,6 @@ public sealed class GhostRoleTimeTracker : EntitySystem
     private void OnMindGetAllRoles(EntityUid uid, GhostRoleMarkerRoleComponent component, ref MindGetAllRolesEvent args)
     {
         string name = component.Name == null ? UnknownRoleName : component.Name;
-        args.Roles.Add(new RoleInfo(component, name, false, GhostRoleTracker));
+        args.Roles.Add(new RoleInfo(component, name, false, GhostRoleTracker, GhostRoleProto));
     }
 }

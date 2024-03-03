@@ -1412,3 +1412,30 @@
   entity: ClothingUniformJumpskirtSeniorOfficer
   sponsorOnly: true
   whitelistJobs: [SecurityOfficer, Warden, HeadOfSecurity]
+
+#Sergey_Mixailov
+- type: loadout
+  id: ClothingUnderwearTopNekoBraLoadout
+  entity: ClothingUnderwearTopNekoBra
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUnderwearBottomPantiesNekoLoadout
+  entity: ClothingUnderwearBottomPantiesNeko
+  sponsorOnly: true
+
+- type: loadout
+  id: SpaceCash1000Loadout
+  entity: SpaceCash1000
+  sponsorOnly: true
+
+#solevoitoropiga
+- type: loadout
+  id: ClothingUnderwearBottomPantiesDeathSquadSponsorLoadout
+  entity: ClothingUnderwearBottomPantiesDeathSquadSponsor
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUnderwearTopDeathBraSponsorLoadout
+  entity: ClothingUnderwearTopDeathBraSponsor
+  sponsorOnly: true

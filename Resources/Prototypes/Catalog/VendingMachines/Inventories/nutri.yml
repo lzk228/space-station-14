@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: NutriMaxInventory
   startingInventory:
+    PlantExtractorFlatpack: 1
     HydroponicsToolSpade: 4
     HydroponicsToolMiniHoe: 4
     HydroponicsToolClippers: 4

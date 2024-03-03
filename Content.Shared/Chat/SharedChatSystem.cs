@@ -159,7 +159,7 @@ public abstract class SharedChatSystem : EntitySystem
         if (string.IsNullOrEmpty(message))
             return message;
 
-        message = Regex.Replace(message, @"[░▄▀▄⣿█╚═╝╔╗║⢀⣴⢴⣿⣷⡷⣏⠋⣄]", ""); // A-13 WIP EblanComponent
+        message = Regex.Replace(message, @"[░▓▐▄▀▄⣿█╚═╝╔╗║⢀⣴⢴⣿⣷⡷⣏⠋⣄]", ""); // A-13 WIP EblanComponent
 
         // Capitalize first letter
         message = char.ToUpper(message[0]) + message.Remove(0, 1);
