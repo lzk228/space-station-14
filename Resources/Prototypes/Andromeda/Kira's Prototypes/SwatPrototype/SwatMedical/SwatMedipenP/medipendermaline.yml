@@ -2,7 +2,8 @@
   name: медипен дермалина
   parent: ChemicalMedipen
   id: MedipenDermaline
-  description: Специальный медипен для спецназа, содержит дермалин, лечит от физических травм
+  description: Специальный медипен для спецназа, содержит дермалин, лечит от физических травм.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Dermaline
           Quantity: 10
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenDermaline_empty
   - type: Tag
     tags: []

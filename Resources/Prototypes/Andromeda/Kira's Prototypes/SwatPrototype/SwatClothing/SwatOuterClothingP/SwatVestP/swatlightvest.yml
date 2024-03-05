@@ -2,7 +2,8 @@
   parent: ClothingOuterStorageBase
   id: ClothingOuterLightVestSwat
   name: лёгкий бронежилет спецназа
-  description: Облёгченный тактический специальный бронежилет для спецназа, применяемый в ходе специальных операций
+  description: Облёгченный тактический специальный бронежилет для спецназа, применяемый в ходе специальных операций.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/swatRSI/OuterClothing/Vests/swatlightvest.rsi

@@ -7,6 +7,11 @@
   - type:  StorageFill
     contents:
       - id: WeaponRifleM4
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineBoxLightRifle
+      - id: Defibrillator
       - id: WeaponDisabler
       - id: Crowbar
       - id: MedkitCombatSwatFilled

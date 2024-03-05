@@ -2,16 +2,24 @@
   name: медипен спецназа
   parent: ChemicalMedipen
   id: MedipenSwat
-  description: Специальный медипен для спецназа, содержит не содержит ничего, излучает безысходность
+  description: Специальный медипен для спецназа, содержит не содержит ничего, излучает безысходность.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
     layers:
-    - state: medipen
+    - state: medipenSpecial
       map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenSpecial_empty
   - type: SolutionContainerManager
     solutions:
       pen:
         maxVol: 20
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 20
   - type: Tag
     tags: []

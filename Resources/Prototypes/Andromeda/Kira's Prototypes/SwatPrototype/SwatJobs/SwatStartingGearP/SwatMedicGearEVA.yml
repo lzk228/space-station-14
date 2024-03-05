@@ -14,6 +14,10 @@
     belt: ClothingBeltSwatMedicWeddingFilled
     pocket1: ClothingHeadHelmetHeavySwat
     pocket2: WeaponFlareGun
+  inhand:
+    - MedkitCombatSwatFilled
   innerclothingskirt: ClothingUniformJumpskirtMedicSwat
   satchel: ClothingBackpackSwatMedicSatchelFilled
   duffelbag: ClothingBackpackSwatMedicDuffelFilled
+  underweart: ClothingUnderwearTopBraWhite
+  underwearb: ClothingUnderwearBottomPantiesWhite

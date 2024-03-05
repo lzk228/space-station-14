@@ -2,7 +2,8 @@
   name: медипен стимпак
   parent: ChemicalMedipen
   id: MedipenStimulants
-  description: Специальный медипен для спецназа, содержит стимпак, даёт кратковременное усиление
+  description: Специальный медипен для спецназа, содержит стимпак, даёт кратковременное усиление.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Stimulants
           Quantity: 5
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenLightStimpack_empty
   - type: Tag
     tags: []

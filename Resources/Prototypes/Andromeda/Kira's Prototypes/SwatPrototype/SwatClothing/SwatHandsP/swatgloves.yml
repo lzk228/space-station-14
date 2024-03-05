@@ -3,6 +3,7 @@
   id: ClothingHandsGlovesSwat
   name: перчатки спецназа
   description: Тактические перчатки спецназа, способные защитить от неприятности по типу электричества.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/swatRSI/Hands/Gloves/SwatGloves.rsi

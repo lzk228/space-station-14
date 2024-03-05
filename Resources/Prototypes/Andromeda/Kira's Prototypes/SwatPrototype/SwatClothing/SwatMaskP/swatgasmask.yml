@@ -2,7 +2,8 @@
   parent: ClothingMaskGas
   id: ClothingSwatGasMask
   name: противогаз спецназа
-  description: Элитный противогаз спецназа, применяется в ходе спец операций, защищает от газов
+  description: Элитный противогаз спецназа, применяется в ходе спец операций, защищает от газов.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Mask/swatgasmask.rsi

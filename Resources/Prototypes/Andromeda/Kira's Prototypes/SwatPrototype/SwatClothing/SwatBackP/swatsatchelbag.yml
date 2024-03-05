@@ -3,6 +3,7 @@
   id: ClothingBackpackSwatSatchel
   name: сумка спецназа
   description: Элитная сумка спецназа, используется чтобы переносить боекомплект и личные вещи спецназовца.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Back/Satchels/swatsatchelbag.rsi
@@ -10,7 +11,7 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,7,4
+    - 0,0,6,8
   - type: Clothing
     quickEquip: false
     slots:

@@ -3,6 +3,7 @@
   id: SwatStandartPDA
   name: КПК СПБСТ
   description: На задней стороне написано K.I.R.A Arsenal и чтобы это могло значить?
+  suffix: Андромеда
   components:
   - type: Pda
     id: SwatStandartIDCard

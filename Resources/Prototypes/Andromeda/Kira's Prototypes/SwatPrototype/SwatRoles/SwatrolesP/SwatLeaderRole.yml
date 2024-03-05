@@ -3,6 +3,7 @@
 - type: entity
   id: RandomHumanoidSpawnerSwatLeader
   name: Лидер СПБсТ
+  suffix: Роль ОБР, Андромеда
   components:
     - type: Sprite
       sprite: Andromeda/MissKira/Markers/jobs.rsi
@@ -17,6 +18,10 @@
 - type: randomHumanoidSettings
   id: SwatLeaderSettings
   randomizeName: false
+  speciesBlacklist:
+  - Diona
+  - Dwarf
+  - SlimePerson
   components:
     - type: GhostRole
       name: Лидер СПБсТ
@@ -33,7 +38,7 @@
   id: RandomHumanoidSpawnerSwatLeaderEVA
   parent: RandomHumanoidSpawnerSwatLeader
   name: Лидер СПБсТ
-  suffix: EVA
+  suffix: EVA, Роль ОБР, Андромеда
   components:
     - type: Sprite
       sprite: Andromeda/MissKira/Markers/jobs.rsi

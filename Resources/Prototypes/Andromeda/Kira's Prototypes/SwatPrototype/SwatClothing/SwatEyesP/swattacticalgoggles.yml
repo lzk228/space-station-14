@@ -2,7 +2,8 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesTacticalSwat
   name: тактические очки спецназа
-  description: Элитные тактические очки спецназа, защищают от любого воздействия на глаза, и даже могут защитить от лазера, однако они не защитят всё ваше тело, так что будьте осторожнее с лазерами
+  description: Элитные тактические очки спецназа, защищают от любого воздействия на глаза, и даже могут защитить от лазера, однако они не защитят всё ваше тело, так что будьте осторожнее с лазерами.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Eyes/Glasses/swattacticalgoggles.rsi

@@ -2,7 +2,8 @@
   parent: ClothingHeadBase
   id: ClothingHeadHelmetHeavySwat
   name: штурмовой шлем спецназа
-  description: Крепкий и тяжелый шлем спецназа, используемый в штурмовых операциях, хорошо защищает от пуль и осколков, компания производитель NT S-Arms
+  description: Крепкий и тяжелый шлем спецназа, используемый в штурмовых операциях, хорошо защищает от пуль и осколков, компания производитель NT S-Arms.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Head/Helmets/swathelmet.rsi

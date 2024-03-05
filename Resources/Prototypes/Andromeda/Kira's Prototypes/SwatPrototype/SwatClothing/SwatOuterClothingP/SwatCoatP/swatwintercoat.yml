@@ -3,6 +3,7 @@
   id: ClothingOuterSwatWinterCoat
   name: зимнее бронепальто спецназа
   description: Синие опознавательные знаки, крепкий и универсальный бронежилет, кажется это СПБсТ!
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/OuterClothing/WinterCoats/swatwintercoat.rsi

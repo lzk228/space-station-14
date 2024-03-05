@@ -3,6 +3,7 @@
   id: ClothingUniformJumpskirtSwat
   name: юбка-комбинезон спецназа
   description: Синие опозновательные знаки указывают на принадлежность к спецназу. Эти люди приходят в самый напряженный момент с полным боекомплектом.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Uniforms/Jumpskirt/swatj.rsi

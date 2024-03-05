@@ -2,7 +2,8 @@
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatCapSwat
   name: кепка спецназа
-  description: "Это просто кепка спецназа, даёт уверенность в себе."
+  description: Это просто кепка спецназа, даёт уверенность в себе.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/swatRSI/Head/Soft/swatcap.rsi

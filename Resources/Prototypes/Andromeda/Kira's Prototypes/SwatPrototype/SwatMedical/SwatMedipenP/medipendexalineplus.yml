@@ -2,7 +2,8 @@
   name: медипен дексалина+
   parent: ChemicalMedipen
   id: MedipenDexalinePlus
-  description: Специальный медипен для спецназа, содержит дексалин плюс, лечит удушение
+  description: Специальный медипен для спецназа, содержит дексалин плюс, лечит удушение.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: DexalinPlus
           Quantity: 20
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenDexalinPlus_empty
   - type: Tag
     tags: []

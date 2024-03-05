@@ -2,7 +2,8 @@
   name: медипен сигината
   parent: ChemicalMedipen
   id: MedipenSigynate
-  description: Специальный медипен для спецназа, содержит сигинат, лечит кислотные повреждения
+  description: Специальный медипен для спецназа, содержит сигинат, лечит кислотные повреждения.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Sigynate
           Quantity: 8
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenSigynate_empty
   - type: Tag
     tags: []

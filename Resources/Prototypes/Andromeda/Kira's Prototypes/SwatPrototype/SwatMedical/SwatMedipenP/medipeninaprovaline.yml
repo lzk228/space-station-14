@@ -2,7 +2,8 @@
   name: медипен инапровалина
   parent: ChemicalMedipen
   id: MedipenInaprovaline
-  description: Специальный медипен для спецназа, содержит инапровалин, не дает задохнуться насмерть
+  description: Специальный медипен для спецназа, содержит инапровалин, не дает задохнуться насмерть.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Inaprovaline
           Quantity: 15
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenInaprovaline_empty
   - type: Tag
     tags: []

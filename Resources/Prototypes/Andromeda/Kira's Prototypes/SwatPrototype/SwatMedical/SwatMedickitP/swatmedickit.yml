@@ -1,11 +1,17 @@
 - type: entity
   name: боевая аптечка спецназа
-  description: "Для боевых задач и наших жизней, очень тяжелое"
+  description: Для боевых задач и наших жизней, очень тяжелое.
   noSpawn: false
   parent: MedkitCombat
   id: MedkitCombatSwat
+  suffix: Андромеда
   components:
   - type: Sprite
     state: blackkit
   - type: Item
+    size: Large
     heldPrefix: blackkit
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,7,4

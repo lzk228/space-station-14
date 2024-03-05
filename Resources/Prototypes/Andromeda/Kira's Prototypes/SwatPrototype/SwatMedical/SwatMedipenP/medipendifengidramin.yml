@@ -2,7 +2,8 @@
   name: медипен дифенгидрамина
   parent: ChemicalMedipen
   id: MedipenDifengidramin
-  description: Специальный медипен для спецназа, содержит Дифенгидрамин, успокаивает и лечит отравление
+  description: Специальный медипен для спецназа, содержит Дифенгидрамин, успокаивает и лечит отравление.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Diphenhydramine
           Quantity: 15
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenDifengidramin_empty
   - type: Tag
     tags: []

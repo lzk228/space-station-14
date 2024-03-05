@@ -7,6 +7,10 @@
   - type:  StorageFill
     contents:
       - id: WeaponRifleM4
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineBoxLightRifle
       - id: WeaponDisabler
       - id: Crowbar
       - id: BoxHandcuff

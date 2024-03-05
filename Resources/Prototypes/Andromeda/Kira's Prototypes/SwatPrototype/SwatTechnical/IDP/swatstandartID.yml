@@ -2,6 +2,7 @@
   parent: CentcomIDCard
   id: SwatStandartIDCard
   name: СПБСТ ID Карта
+  suffix: Андромеда
   components:
   - type: Sprite
     layers:

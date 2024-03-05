@@ -3,6 +3,7 @@
   id: ClothingOuterBioSwat
   name: костюм биологической защиты спецназа
   description: Универсальный костюм биологической защиты, может быть прострелен.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/OuterClothing/Bio/swatbio.rsi

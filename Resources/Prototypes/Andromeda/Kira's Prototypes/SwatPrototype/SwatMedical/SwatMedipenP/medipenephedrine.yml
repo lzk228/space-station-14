@@ -2,7 +2,8 @@
   name: медипен эфедрина
   parent: ChemicalMedipen
   id: MedipenEphedrine
-  description: Специальный медипен для спецназа, содержит эфедрин, повышает скорость реакции
+  description: Специальный медипен для спецназа, содержит эфедрин, повышает скорость реакции.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Ephedrine
           Quantity: 10
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenEphedrine_empty
   - type: Tag
     tags: []

@@ -3,6 +3,7 @@
   id: ClothingBackpackSwatDuffel
   name: вещмешок спецназа
   description: Большой вещмешок используемый спецназом для переноса боекомплекта или вооружения со снаряжением, очень большой.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Back/Duffels/swatduffelbag.rsi
@@ -10,7 +11,7 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,7,4
+    - 0,0,8,8
   - type: Clothing
     quickEquip: false
     slots:

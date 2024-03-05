@@ -3,6 +3,7 @@
   id: ClothingUniformJumpskirtMedicSwat
   name: юбка-комбинезон медика спецназа
   description: Синий и голубой, кажется вы встретились с медиком спецназа, или это все же медсестра?
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Uniforms/Jumpskirt/swatmedicjumpskirt.rsi

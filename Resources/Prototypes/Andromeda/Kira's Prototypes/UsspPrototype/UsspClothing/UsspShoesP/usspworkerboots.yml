@@ -3,6 +3,7 @@
   id: ClothingShoesUsspWorkerBoots
   name: ботинки рабочего СССП
   description: Лёгкие ботинки рабочего СССП, чистые и опрятные после чистки.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/usspRSI/usspworkerboots.rsi
