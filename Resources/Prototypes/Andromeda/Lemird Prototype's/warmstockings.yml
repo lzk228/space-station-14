@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearWarmstockings
+  name: тёплые чулки
+  description: Великолепные чулки, сшиты из высококачественного меха овец и гигантских молей. Хотите совратить вашего парня, оденьте эти чулочки.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/warmstockings.rsi

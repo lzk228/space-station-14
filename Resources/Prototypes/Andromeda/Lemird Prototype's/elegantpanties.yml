@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomElegantpanties
+  name: элегантные трусики
+  description: Приятное нижнее бельё, сшитое из высококачественного шёлка. Они такие же тёплые, как и бра, смотрите не намокните.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/elegantpanties.rsi
+  - type: StealTarget
+    stealGroup: Panties
