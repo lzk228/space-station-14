@@ -30,8 +30,6 @@
     - id: FoodMeatCorgi
       amount: 2
     - id: MaterialHideCorgi
-  - type: Puller
-    needsHands: false
   - type: Tag
     tags:
     - CannotSuicide
@@ -112,8 +110,6 @@
   - type: NpcFactionMember
     factions:
       - PetsNT
-  - type: Puller
-    needsHands: false
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
@@ -135,8 +131,6 @@
   - type: NpcFactionMember
     factions:
       - PetsNT
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       proper: true
@@ -163,8 +157,6 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       gender: male
@@ -183,8 +175,6 @@
     attributes:
       proper: true
       gender: male
-  - type: Puller
-    needsHands: false
   - type: Tag
     tags:
     - CannotSuicide
@@ -342,8 +332,6 @@
         Base: paperwork_dead
       Dead:
         Base: paperwork_dead
-  - type: Puller
-    needsHands: false
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -438,8 +426,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/snake_hiss.ogg
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       proper: true
@@ -463,8 +449,6 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: possum_old
-  - type: Puller
-    needsHands: false
   - type: DamageStateVisuals
     states:
       Alive:
@@ -482,8 +466,6 @@
     attributes:
       proper: true
       gender: female
-  - type: Puller
-    needsHands: false
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Animals/possum.rsi
@@ -510,8 +492,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/raccoon_chatter.ogg
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       proper: true
@@ -534,8 +514,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/pig_oink.ogg
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       proper: true
@@ -558,8 +536,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/fox_squeak.ogg
-  - type: Puller
-    needsHands: false
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -589,8 +565,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: hamster-0
-  - type: Puller
-    needsHands: false
   - type: SpriteMovement
     movementLayers:
       movement:
@@ -644,8 +618,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/snake_hiss.ogg
-  - type: Puller
-    needsHands: false
   - type: NpcFactionMember
     factions:
       - PetsNT
@@ -711,8 +683,6 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/kangaroo_grunt.ogg
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       proper: true
@@ -750,8 +720,6 @@
     thresholds:
       0: Alive
       200: Dead
-  - type: Puller
-    needsHands: false
   - type: FootstepModifier
     footstepSoundCollection:
       path: /Audio/Effects/Footsteps/slime1.ogg
@@ -827,8 +795,6 @@
     - !type:OverallPlaytimeRequirement
       time: 7200 # 2h # A-13-RoleTime
   - type: GhostTakeoverAvailable
-  - type: Puller
-    needsHands: false
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -870,8 +836,6 @@
     tags:
     - VimPilot
     - CannotSuicide
-  - type: Puller
-    needsHands: false
   - type: Grammar
     attributes:
       proper: true
