@@ -19,7 +19,7 @@
   name: Набор тяжёлой винтовки
   description: Крупнокалиберная винтовка, использующая современный калибр .70. Данная винтовка не имеет никаких нюансов, может быть взведена и использована в любой момент. Лучше взять её в обе руки перед выстрелом, поставляется в чехле под гитары с тремя магазинами, и очками в подарок.
   icon: { sprite: /Textures/Andromeda/Lemird/barrettm82.rsi, state: base }
-  productEntity: GuitarCaseSindicate
+  productEntity: GuitarCaseSyndicate
   cost:
     Telecrystal: 15
   categories:

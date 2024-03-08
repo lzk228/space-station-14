@@ -24,7 +24,7 @@
     - id: ElectricGuitarInstrument
 
 - type: entity
-  id: GuitarCaseSindicate
+  id: GuitarCaseSyndicate
   parent: GuitarCase
   suffix: Андромеда, Cиндикат
   components:
