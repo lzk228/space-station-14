@@ -32,6 +32,8 @@
     speechVerb: LargeMob
   - type: CombatMode
   - type: MobMover
+  - type: Puller
+    needsHands: false
   - type: InputMover
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
