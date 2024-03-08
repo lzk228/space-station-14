@@ -1,0 +1,37 @@
+- type: entity
+  id: GuitarCase
+  name: гитарный чехол
+  description: Обычный чехол для гитары, обычно используется для того чтобы переносить в нём гитары. Достаточно вместителен.
+  parent: ClothingBackpack
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/guitarcase.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/guitarcase.rsi
+  - type: Item
+    sprite: Andromeda/Lemird/guitarcase.rsi
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,3,3
+  - type: StorageFill
+    contents:
+    - id: AcousticGuitarInstrument
+    - id: BassGuitarInstrument
+    - id: RockGuitarInstrument
+    - id: ElectricGuitarInstrument
+
+- type: entity
+  id: GuitarCaseSindicate
+  parent: GuitarCase
+  suffix: Андромеда, Cиндикат
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperBarrettM82
+      - id: MagazineSniperBarrettM82AR
+      - id: MagazineBarrettM82HighVelocity
+      - id: MagazineSniperBarrettM82
+      - id: ClothingEyesGlassesSunglasses

@@ -13,3 +13,14 @@
     whitelist:
       tags:
       - NukeOpsUplink
+
+- type: listing
+  id: UplinkBarrettBundle
+  name: Набор тяжёлой винтовки
+  description: Достаточно большая суммка под большую пушку, в паре с тремя магазинами под неё. Очки в подарок.
+  icon: { sprite: /Textures/Andromeda/Lemird/barrettm82.rsi, state: base }
+  productEntity: GuitarCaseSindicate
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkBundles
