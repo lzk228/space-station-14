@@ -1,11 +1,11 @@
-#name: Diff RSIs
+# name: Diff RSIs #Для возвращения необходимо удалить 2 отступа
 #
-#on:
+# on: #Для возвращения необходимо удалить 2 отступа
 #  pull_request_target:
 #    paths:
 #      - '**.rsi/**.png'
 #
-#jobs:
+# jobs: #Для возвращения необходимо удалить 2 отступа
 #  diff:
 #    name: Diff
 #    runs-on: ubuntu-latest
