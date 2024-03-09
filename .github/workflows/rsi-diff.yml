@@ -10,6 +10,9 @@ jobs:
     name: Diff
     runs-on: ubuntu-latest
     steps:
+      - name: Prevent RSI Diff Action #A-13
+        uses: ./.github/workflows/prevent-rsi-diff.yml #A-13
+
       - name: Checkout
         uses: actions/checkout@v3.6.0
 
@@ -64,6 +67,3 @@ jobs:
           edit-mode: append
           body: |
             Edit: diff updated after ${{ github.event.pull_request.head.sha }}
-
-      - name: Prevent RSI Diff Action #A-13
-        uses: ./.github/workflows/prevent-rsi-diff.yml #A-13
