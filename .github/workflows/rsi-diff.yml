@@ -1,24 +1,21 @@
-name: Diff RSIs
+name: Test
 
 on:
   pull_request_target:
     paths:
-      - '**.rsi/**.png'
 
 jobs:
   diff:
-    name: Diff
+    name: Test
     runs-on: ubuntu-latest
     steps:
-      - name: Prevent RSI Diff Action #A-13
-        uses: ./.github/workflows/prevent-rsi-diff.yml #A-13
 
       - name: Checkout
-        uses: actions/checkout@v3.6.0
+        uses: no
 
       - name: Get changed files
         id: files
-        uses: Ana06/get-changed-files@v1.2
+        uses: no
         with:
           format: 'space-delimited'
 
