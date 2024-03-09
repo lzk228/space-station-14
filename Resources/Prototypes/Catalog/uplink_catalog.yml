@@ -1418,10 +1418,10 @@
 - type: listing
   id: UplinkSyndicateStamp
   name: uplink-syndicate-stamp-name
-  description: uplink-syndicate-stamp-desc
+  description: Позволяет ставить практически любую печать, переключается нажатием. #A-13
   productEntity: RubberStampSyndicate
   cost:
-    Telecrystal: 2
+    Telecrystal: 8 #A-13
   categories:
   - UplinkMisc
 
