@@ -30,7 +30,7 @@ public sealed class StampStateHandlerSystem : EntitySystem
             component.CurrentStateIndex = (component.CurrentStateIndex + 1) % lenght;
             stampComponent.StampState = component.StampStateCollection[component.CurrentStateIndex];
             stampComponent.StampedName = component.StampNameCollection[component.CurrentStateIndex];
-            stampComponent.StampedColor = GetStampColor(stampComponent.StampState); // Добавьте эту строку
+            stampComponent.StampedColor = GetStampColor(stampComponent.StampState);
 
             var sign = Loc.GetString(stampComponent.StampedName);
             var stampChangeMessage = Loc.GetString("stamp-state-handler-component-state-change", ("name", sign));
@@ -50,8 +50,6 @@ public sealed class StampStateHandlerSystem : EntitySystem
                 return Color.FromHex("#850000");
             case "paper_stamp-cap":
                 return Color.FromHex("#3681bb");
-            case "paper_stamp-centcom":
-                return Color.FromHex("#006600");
             case "paper_stamp-chaplain":
                 return Color.FromHex("#d70601");
             case "paper_stamp-clown":
