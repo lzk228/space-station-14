@@ -63,7 +63,7 @@
       emergencyLightColor: DarkViolet
       forceEnableEmergencyLights: true
       shuttleTime: 1200
-    # Andromeda Alpha Level
+    #A-13 Alpha code start
     alpha:
       announcement: alert-level-alpha-announcement
       selectable: false
@@ -76,3 +76,18 @@
       emergencyLightColor: lime
       forceEnableEmergencyLights: true
       shuttleTime: 120000
+    #A-13 Alpha code end
+    #A-13 White code start
+    white:
+      announcement: alert-level-white-announcement
+      selectable: false
+      sound:
+        path: /Audio/Misc/siren.ogg
+        params:
+          volume: -1
+      disableSelection: true
+      color: white
+      emergencyLightColor: white
+      forceEnableEmergencyLights: false
+      shuttleTime: 1200
+    #A-13 White code end
