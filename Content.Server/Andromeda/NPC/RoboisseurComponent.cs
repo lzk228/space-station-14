@@ -27,6 +27,8 @@ namespace Content.Server.Roboisseur.Roboisseur
         ///     Antispam.
         /// </summary>
         public TimeSpan StateTime = default!;
+        public DateTime TimerStartTime { get; set; }
+        public TimeSpan TimerDuration { get; } = TimeSpan.FromMinutes(25);
 
         [DataField("stateCD")]
         public TimeSpan StateCD = TimeSpan.FromSeconds(5);
@@ -36,6 +38,16 @@ namespace Content.Server.Roboisseur.Roboisseur
 
         [ViewVariables(VVAccess.ReadWrite)]
         public int DoneTotal = 0;
+
+        [DataField("timerRunNow")]
+        public IReadOnlyList<string> TimerRunNow = new[]
+        {
+            "roboisseur-timerenablenow-1",
+            "roboisseur-timerenablenow-2",
+            "roboisseur-timerenablenow-3",
+            "roboisseur-timerenablenow-4",
+            "roboisseur-timerenablenow-5"
+        };
 
         [DataField("demandMessages")]
         public IReadOnlyList<string> DemandMessages = new[]

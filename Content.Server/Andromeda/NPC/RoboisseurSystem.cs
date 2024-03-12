@@ -9,8 +9,9 @@ using Robust.Server.GameObjects;
 using Content.Server.Materials;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Content.Shared.Verbs;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Roboisseur.Roboisseur
 {
@@ -30,10 +31,10 @@ namespace Content.Server.Roboisseur.Roboisseur
         {
             base.Initialize();
 
-
             SubscribeLocalEvent<RoboisseurComponent, ComponentInit>(OnInit);
             SubscribeLocalEvent<RoboisseurComponent, InteractHandEvent>(OnInteractHand);
             SubscribeLocalEvent<RoboisseurComponent, InteractUsingEvent>(OnInteractUsing);
+            SubscribeLocalEvent<RoboisseurComponent, GetVerbsEvent<Verb>>(AddResetOrderVerb);
         }
 
 
@@ -49,6 +50,10 @@ namespace Content.Server.Roboisseur.Roboisseur
 
             foreach (var roboisseur in EntityQuery<RoboisseurComponent>())
             {
+                if (DateTime.Now - roboisseur.TimerStartTime >= roboisseur.TimerDuration)
+                {
+                    roboisseur.TimerStartTime = DateTime.MinValue;
+                }
                 roboisseur.Accumulator += frameTime;
                 roboisseur.BarkAccumulator += frameTime;
                 if (roboisseur.BarkAccumulator >= roboisseur.BarkTime.TotalSeconds)
@@ -79,7 +84,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             int rewardToDispense = r.Next(500, 750) + 500 * tier;
 
             _material.SpawnMultipleFromMaterial(rewardToDispense, "Credit", Transform(uid).Coordinates);
-            if(tier > 1)
+            if (tier > 1)
             {
                 while (tier != 0)
                 {
@@ -110,8 +115,7 @@ namespace Content.Server.Roboisseur.Roboisseur
 
         private void OnInteractUsing(EntityUid uid, RoboisseurComponent component, InteractUsingEvent args)
         {
-            if (HasComp<MobStateComponent>(args.Used) ||
-                MetaData(args.Used)?.EntityPrototype == null)
+            if (HasComp<MobStateComponent>(args.Used) || MetaData(args.Used)?.EntityPrototype == null)
                 return;
 
             if (_timing.CurTime < component.StateTime)
@@ -182,6 +186,21 @@ namespace Content.Server.Roboisseur.Roboisseur
             return _random.Pick(GetAllProtos(component));
         }
 
+        private string GetRandomDesiredItem(RoboisseurComponent component, bool reset)
+        {
+            List<string> allProtos = new List<string>();
+            if (reset)
+            {
+                allProtos.AddRange(component.Tier2Protos);
+                allProtos.AddRange(component.Tier3Protos);
+            }
+            else
+            {
+                allProtos = GetAllProtos(component);
+            }
+            return _random.Pick(allProtos);
+        }
+
         public List<string> GetAllProtos(RoboisseurComponent component)
         {
 
@@ -195,6 +214,48 @@ namespace Content.Server.Roboisseur.Roboisseur
                 allProtos.Remove(proto);
 
             return allProtos;
+        }
+
+        private void AddResetOrderVerb(EntityUid uid, RoboisseurComponent component, GetVerbsEvent<Verb> args)
+        {
+            if (!args.CanAccess || !args.CanInteract)
+            {
+                return;
+            }
+            Verb verb = new()
+            {
+                Act = () => ResetOrder(uid, component, args.User),
+                Text = Loc.GetString("roboisseur-reset-order-verb-get-data-text"),
+                Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+            };
+            args.Verbs.Add(verb);
+        }
+
+        private void ResetOrder(EntityUid uid, RoboisseurComponent component, EntityUid user)
+        {
+            if (DateTime.Now - component.TimerStartTime < component.TimerDuration)
+            {
+                if (component.TimerRunNow.Count > 0)
+                {
+                    string message = Loc.GetString(_random.Pick(component.TimerRunNow), ("timerRunNow", component.TimerRunNow));
+                    _chat.TrySendInGameICMessage(uid, message, InGameICChatType.Speak, true);
+                }
+                return;
+            }
+
+            var protoString = GetRandomDesiredItem(component, true);
+
+            if (_prototypeManager.TryIndex<EntityPrototype>(protoString, out var proto))
+            {
+                component.DesiredPrototype = proto;
+                component.TimerStartTime = DateTime.Now;
+            }
+            else
+            {
+                Log.Error("Roboisseur can't index prototype " + protoString);
+            }
+
+            component.TimerStartTime = DateTime.Now;
         }
     }
 
