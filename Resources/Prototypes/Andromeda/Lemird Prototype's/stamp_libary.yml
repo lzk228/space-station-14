@@ -1,0 +1,21 @@
+- type: entity
+  name: печать библиотекаря
+  parent: BaseItem
+  id: RubberStampLibrary
+  description: Печать из резины, для проставления печатей на важных документах.
+  suffix: Андромеда
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-library
+    stampState: "paper_stamp-library"
+    stampedColor: "#8b4513"
+    sound:
+      path: /Audio/Items/Stamp/thick_stamp_sub.ogg
+      params:
+        volume: -2
+        maxDistance: 5
+  - type: Sprite
+    sprite: Andromeda/Lemird/stamp-library.rsi
+    state: stamp-library
+  - type: Item
+    size: Tiny

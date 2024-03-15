@@ -64,12 +64,16 @@ public sealed class StampStateHandlerSystem : EntitySystem
                 return Color.FromHex("#cc0000");
             case "paper_stamp-mime":
                 return Color.FromHex("#777777");
+            case "paper_stamp-library":
+                return Color.FromHex("#8b4513");
             case "paper_stamp-qm":
                 return Color.FromHex("#a23e3e");
             case "paper_stamp-rd":
                 return Color.FromHex("#1f66a0");
             case "paper_stamp-warden":
                 return Color.FromHex("#5b0000");
+            case "paper_stamp-detective":
+                return Color.FromHex("#754d36");
             case "paper_stamp-trader":
                 return Color.FromHex("#000000");
             default:
