@@ -1,215 +1,215 @@
 - type: construction
-  name: baseball bat
+  name: бейсбольная бита #A-13 Translation
   id: bat
   graph: WoodenBat
   startNode: start
   targetNode: bat
   category: construction-category-weapons
-  description: A robust baseball bat.
+  description: Прочная бейсбольная бита. #A-13 Translation
   icon:
     sprite: Objects/Weapons/Melee/baseball_bat.rsi
     state: icon
   objectType: Item
 
 - type: construction
-  name: ghost sheet
+  name: призрачное покрывало #A-13 Translation
   id: ghost_sheet
   graph: GhostSheet
   startNode: start
   targetNode: ghost_sheet
   category: construction-category-clothing
-  description: Become a spooky ghost. Boo!
+  description: Станьте жутким призраком. Бу! #A-13 Translation
   icon:
     sprite: Clothing/OuterClothing/Misc/ghostsheet.rsi
     state: icon
   objectType: Item
 
 - type: construction
-  name: makeshift handcuffs
+  name: самодельные наручники #A-13 Translation
   id: makeshifthandcuffs
   graph: makeshifthandcuffs
   startNode: start
   targetNode: cuffscable
   category: construction-category-tools
-  description: "Homemade handcuffs crafted from spare cables."
+  description: "Самодельные наручники из запасных кабелей." #A-13 Translation
   icon: { sprite: Objects/Misc/cablecuffs.rsi, state: cuff }
   objectType: Item
 
 - type: construction
-  name: makeshift stunprod
+  name: шок-палка #A-13 Translation
   id: makeshiftstunprod
   graph: makeshiftstunprod
   startNode: start
   targetNode: msstunprod
   category: construction-category-weapons
-  description: "Homemade stunprod."
+  description: "Электрошокер в домашних условиях." #A-13 Translation
   icon: { sprite: Objects/Weapons/Melee/stunprod.rsi, state: stunprod_off }
   objectType: Item
 
 - type: construction
-  name: muzzle
+  name: намордник #A-13 Translation
   id: muzzle
   graph: Muzzle
   startNode: start
   targetNode: muzzle
   category: construction-category-tools
   objectType: Item
-  description: "A muzzle to shut your victim up."
+  description: "Намордник чтобы заткнуть жертву." #A-13 Translation
   icon:
     sprite: Clothing/Mask/muzzle.rsi
     state: icon
 
 - type: construction
-  name: improvised pneumatic cannon
+  name: импровизированная пневматическая пушка #A-13 Translation
   id: pneumaticcannon
   graph: PneumaticCannon
   startNode: start
   targetNode: cannon
   category: construction-category-weapons
   objectType: Item
-  description: This son of a gun can fire anything that fits in it using just a little gas.
+  description: Этот сукин сын может выстрелить из всего, что в него поместится, используя лишь немного газа. #A-13 Translation
   icon:
     sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
     state: icon
 
 - type: construction
-  name: gauze
+  name: марлевый бинт #A-13 Translation
   id: gauze
   graph: Gauze
   startNode: start
   targetNode: gauze
   category: construction-category-tools
   objectType: Item
-  description: When you've really got nothing left.
+  description: Когда у тебя действительно ничего не осталось. #A-13 Translation
   icon:
     sprite: Objects/Specific/Medical/medical.rsi
     state: gauze
 
 - type: construction
-  name: blindfold
+  name: повязка на глаза #A-13 Translation
   id: blindfold
   graph: Blindfold
   startNode: start
   targetNode: blindfold
   category: construction-category-tools
   objectType: Item
-  description: Better hope everyone turns a blind eye to you crafting this sussy item...
+  description: Лучше надеяться что все закроют глаза на то, как вы создаете эту изящную вещь... #A-13 Translation
   icon:
     sprite: Clothing/Eyes/Misc/blindfold.rsi
     state: icon
 
 - type: construction
-  name: hairflower
+  name: цветок для волос #A-13 Translation
   id: hairflower
   graph: hairflower
   startNode: start
   targetNode: hairflower
   category: construction-category-clothing
-  description: "A red flower for beautiful ladies."
+  description: "Красный цветок для прекрасных дам." #A-13 Translation
   icon:
     sprite: Clothing/Head/Misc/hairflower.rsi
     state: icon
   objectType: Item
 
 - type: construction
-  name: flower crown
+  name: венок #A-13 Translation
   id: flowercrown
   graph: flowercrown
   startNode: start
   targetNode: flowercrown
   category: construction-category-clothing
-  description: "A coronet of fresh and fragrant flowers."
+  description: "Корона из свежих и ароматных цветов." #A-13 Translation
   icon:
     sprite: Clothing/Head/Misc/flower-crown.rsi
     state: icon
   objectType: Item
 
 - type: construction
-  name: flower wreath
+  name: цветочный венок #A-13 Translation
   id: flowerwreath
   graph: flowerwreath
   startNode: start
   targetNode: flowerwreath
   category: construction-category-clothing
-  description: "A wreath of colourful flowers."
+  description: "Венок из ярких цветов." #A-13 Translation
   icon:
     sprite: Clothing/Neck/Misc/flower-wreath.rsi
     state: icon
   objectType: Item
 
 - type: construction
-  name: damp rag
+  name: тряпка #A-13 Translation
   id: rag
   graph: Rag
   startNode: start
   targetNode: rag
   category: construction-category-tools
   objectType: Item
-  description: A damp rag to clean up the ground. Better than slipping around all day.
+  description: Тряпка которую можно намочить, или кого то мочить ею. #A-13 Translation
   icon:
     sprite: Objects/Specific/Janitorial/rag.rsi
     state: rag
 
 - type: construction
-  name: improvised shotgun
+  name: импровизированное ружье #A-13 Translation
   id: improvisedshotgun
   graph: ImprovisedShotgunGraph
   startNode: start
   targetNode: shotgun
   category: construction-category-weapons
   objectType: Item
-  description: A shitty, single-shot shotgun made from salvaged and hand-crafted gun parts. Ammo not included.
+  description: Дерьмовый однозарядный дробовик, сделанный из утилизированных и изготовленных вручную частей оружия. Боеприпасы не включены. #A-13 Translation
   icon:
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
     state: icon
 
 - type: construction
-  name: rifle stock
+  name: ружейное ложе #A-13 Translation
   id: riflestock
   graph: RifleStockGraph
   startNode: start
   targetNode: riflestock
   category: construction-category-weapons
   objectType: Item
-  description: A stock carved out of wood, vital for improvised firearms.
+  description: Ложа, вырезанная из дерева, необходимая для импровизированного огнестрельного оружия. #A-13 Translation
   icon:
     sprite: Objects/Misc/rifle_stock.rsi
     state: icon
 
 - type: construction
-  name: improvised explosive device
+  name: Импровизированное взрывное устройство #A-13 Translation
   id: improvisedexplosive
   graph: ImprovisedExplosive
   startNode: start
   targetNode: ied
   category: construction-category-weapons
   objectType: Item
-  description: A weak, improvised incendiary device.
+  description: Слабое самодельное зажигательное устройство. #A-13 Translation
   icon:
     sprite: Objects/Weapons/Bombs/ied.rsi
     state: icon
 
 - type: construction
-  name: cotton woven cloth
+  name: хлопчатобумажная ткань #A-13 Translation
   id: CottonWovenCloth
   graph: CottonObjects
   startNode: start
   targetNode: cottoncloth
   category: construction-category-misc
-  description: "A homemade piece of cotton cloth, it feels coarse."
+  description: "Кусок хлопчатобумажной ткани, сделанный своими руками, на ощупь грубый." #A-13 Translation
   icon:
     sprite: Objects/Materials/materials.rsi
     state: cloth_3
   objectType: Item
 
 - type: construction
-  name: straw hat
+  name: соломенная шляпа #A-13 Translation
   id: strawHat
   graph: StrawHat
   startNode: start
   targetNode: strawhat
   category: construction-category-clothing
-  description: A fancy hat for hot days! Not recommended to wear near fires.
+  description: Шикарная шапка для жарких дней! Не рекомендуется носить вблизи огня. #A-13 Translation
   icon:
     sprite: Clothing/Head/Hats/straw_hat.rsi
     state: icon

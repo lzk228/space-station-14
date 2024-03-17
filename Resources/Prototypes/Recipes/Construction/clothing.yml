@@ -1,87 +1,87 @@
 - type: construction
-  name: clown hardsuit
+  name: скафандр клоуна #A-13 Translation
   id: ClownHardsuit
   graph: ClownHardsuit
   startNode: start
   targetNode: clownHardsuit
   category: construction-category-clothing
-  description: A modified hardsuit fit for a clown.
+  description: Модифицированный скафандр подходящий для клоуна. #A-13 Translation
   icon: { sprite: Clothing/OuterClothing/Hardsuits/clown.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: mime hardsuit
+  name: скафандр мима #A-13 Translation
   id: MimeHardsuit
   graph: MimeHardsuit
   startNode: start
   targetNode: mimeHardsuit
   category: construction-category-clothing
-  description: A modified hardsuit fit for a mime.
+  description: Модифицированный скафандр подходящий для мима. #A-13 Translation
   icon: { sprite: Clothing/OuterClothing/Hardsuits/mime.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: bone armor
+  name: костяной доспех #A-13 Translation
   id: BoneArmor
   graph: BoneArmor
   startNode: start
   targetNode: armor
   category: construction-category-clothing
-  description: Armor made of bones.
+  description: Доспехи сделанный из костей. #A-13 Translation
   icon: { sprite: Clothing/OuterClothing/Armor/bone_armor.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: bone helmet
+  name: костяной шлем #A-13 Translation
   id: BoneHelmet
   graph: BoneHelmet
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Helmet made of bones.
+  description: Шлем сделанный из костей. #A-13 Translation
   icon: { sprite: Clothing/Head/Helmets/bone_helmet.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: banana clown mask
+  name: банановая маска клоуна #A-13 Translation
   id: BananaClownMask
   graph: BananaClownMask
   startNode: start
   targetNode: mask
   category: construction-category-clothing
-  description: A clown mask upgraded with banana peels.
+  description: Маска клоуна, дополненна банановой кожурой. #A-13 Translation
   icon: { sprite: Clothing/Mask/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: banana clown suit
+  name: банановый костюм клоуна #A-13 Translation
   id: BananaClownJumpsuit
   graph: BananaClownJumpsuit
   startNode: start
   targetNode: jumpsuit
   category: construction-category-clothing
-  description: A clown suit upgraded with banana peels.
+  description: Костюм клоуна, украшенный банановой кожурой. #A-13 Translation
   icon: { sprite: Clothing/Uniforms/Jumpsuit/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: banana clown shoes
+  name: банановые клоунские туфли #A-13 Translation
   id: BananaClownShoes
   graph: BananaClownShoes
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: A pair of clown shoes upgraded with banana peels.
+  description: Пара клоунских туфель, украшенных банановой кожурой. #A-13 Translation
   icon: { sprite: Clothing/Shoes/Specific/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: medsec hud
+  name: медицинско-охранный визор #A-13 Translation
   id: ClothingEyesHudMedSec
   graph: HudMedSec
   startNode: start
   targetNode: medsecHud
   category: construction-category-clothing
-  description: Two huds joined by arms
+  description: Два визора, соединенные руками. #A-13 Translation
   icon: { sprite: Clothing/Eyes/Hud/medsec.rsi, state: icon }
   objectType: Item

@@ -1,17 +1,17 @@
 ﻿- type: construction
-  name: metal rod
+  name: металический стержень #A-13 Translation
   id: MetalRod
   graph: MetalRod
   startNode: start
   targetNode: MetalRod
   category: construction-category-materials
-  description: A sturdy metal rod that can be used for various purposes.
+  description: Прочный металлический стержень, который можно использовать для различных целей. #A-13 Translation
   icon: { sprite: Objects/Materials/parts.rsi, state: rods }
   objectType: Item
 
 - type: construction
-  name: reinforced glass
-  description: A reinforced sheet of glass.
+  name: бронестекло #A-13 Translation
+  description: Бронированный лист стекла. #A-13 Translation
   id: SheetRGlass
   graph: Glass
   startNode: start
@@ -21,8 +21,8 @@
   objectType: Item
 
 - type: construction
-  name: plasma glass
-  description: A sheet of translucent plasma.
+  name: плазменное стекло #A-13 Translation
+  description: Лист полупрозрачной плазмы. #A-13 Translation
   id: SheetPGlass
   graph: Glass
   startNode: start
@@ -32,8 +32,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced plasma glass
-  description: A reinforced sheet of translucent plasma.
+  name: плазменное бронестекло #A-13 Translation
+  description: Бронированный слой полупрозрачной плазмы. #A-13 Translation
   id: SheetRPGlass
   graph: Glass
   startNode: start
@@ -43,19 +43,19 @@
   objectType: Item
 
 - type: construction
-  name: durathread
+  name: дюраткань #A-13 Translation
   id: MaterialDurathread
   graph: Durathread
   startNode: start
   targetNode: MaterialDurathread
   category: construction-category-materials
-  description: A high-quality thread used to make durable clothes.
+  description: Высококачественная нить используемая для изготовления прочной одежды. #A-13 Translation
   icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
   objectType: Item
 
 - type: construction
-  name: uranium glass
-  description: A sheet of uranium glass.
+  name: урановое стекло #A-13 Translation
+  description: Лист уранового стекла. #A-13 Translation
   id: SheetUGlass
   graph: Glass
   startNode: start
@@ -65,8 +65,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced uranium glass
-  description: A reinforced sheet of uranium glass.
+  name: урановое бронестекло #A-13 Translation
+  description: Бронированный лист уранового стекла. #A-13 Translation
   id: SheetRUGlass
   graph: Glass
   startNode: start
