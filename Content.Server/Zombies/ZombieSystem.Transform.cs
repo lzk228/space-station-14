@@ -18,6 +18,7 @@ using Content.Server.Temperature.Components;
 using Content.Shared.CombatMode;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage;
+using Content.Shared.Devour.Components; //A-13 Dragon fix full
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.CombatMode.Pacification;
@@ -117,7 +118,10 @@ namespace Content.Server.Zombies
             //This is needed for stupid entities that fuck up combat mode component
             //in an attempt to make an entity not attack. This is the easiest way to do it.
             var combat = EnsureComp<CombatModeComponent>(target);
-            RemComp<PacifiedComponent>(target);
+            //A-13 Dragon fix full start
+            if (!HasComp<DevouredComponent>(target))
+                RemComp<PacifiedComponent>(target);
+            //A-13 Dragon fix full end
             _combat.SetCanDisarm(target, false, combat);
             _combat.SetInCombatMode(target, true, combat);
 
