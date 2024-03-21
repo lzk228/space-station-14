@@ -539,6 +539,7 @@
       reagents:
       - ReagentId: ShamblersJuice
         Quantity: 5
+  - type: AntiRottingContaine
   - type: MeleeChemicalInjector
     transferAmount: 8
     solution: melee
@@ -612,6 +613,18 @@
     spawned:
     - id: FoodMeatDragon
       amount: 0
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 500
+    damage:
+      groups:
+        Burn: -0.9
+        Brute: -0.9
+        Toxin: -0.3
+      types:
+        Bloodloss: -0.3
   - type: Metabolizer
     solutionOnBody: false
     updateFrequency: 0.25
@@ -622,12 +635,22 @@
   - type: Devourer
     foodPreference: Humanoid
     shouldStoreDevoured: true
-    devourTime: 13
     chemical: Ichor
-    healRate: 30.0
-    whitelist:
-      components:
-      - MobState
+    healRate: 15.0
+    digestibleStates:
+    - Alive
+    - Critical
+    - Dead
+    passiveDevourHealing:
+      groups:
+        Brute: -0.45
+        Burn: -0.45
+        Toxin: -0.15
+      types:
+        Bloodloss: -0.1
+    stomachDamage:
+        types:
+          Caustic: 1
   - type: MobState
 
 - type: emoteSounds
