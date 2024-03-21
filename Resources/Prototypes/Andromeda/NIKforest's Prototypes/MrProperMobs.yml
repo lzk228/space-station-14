@@ -617,7 +617,7 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 500
+    damageCap: 200
     damage:
       groups:
         Burn: -0.9
