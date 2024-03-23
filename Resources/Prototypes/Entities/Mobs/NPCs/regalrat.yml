@@ -10,8 +10,6 @@
     baseSprintSpeed : 5.00
   - type: InputMover
   - type: MobMover
-  - type: Puller
-    needsHands: false
   - type: HTN
     rootTask:
       task: SimpleHostileCompound

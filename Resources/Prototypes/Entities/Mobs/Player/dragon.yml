@@ -32,8 +32,6 @@
     speechVerb: LargeMob
   - type: CombatMode
   - type: MobMover
-  - type: Puller
-    needsHands: false
   - type: InputMover
   - type: AntiRottingContainer #A-13 Dragon fix full
   - type: MovementSpeedModifier
