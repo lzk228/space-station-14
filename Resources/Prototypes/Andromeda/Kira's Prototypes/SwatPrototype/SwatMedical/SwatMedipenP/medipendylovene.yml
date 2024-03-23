@@ -2,7 +2,8 @@
   name: медипен диловена
   parent: ChemicalMedipen
   id: MedipenDylovene
-  description: Специальный медипен для спецназа, содержит диловен, лечит отравление
+  description: Специальный медипен для спецназа, содержит диловен, лечит отравление.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Dylovene
           Quantity: 15
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenDylovene_empty
   - type: Tag
     tags: []

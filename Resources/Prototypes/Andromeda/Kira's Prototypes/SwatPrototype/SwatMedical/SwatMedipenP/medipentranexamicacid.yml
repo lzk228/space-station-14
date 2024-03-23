@@ -2,7 +2,8 @@
   name: медипен транексамовой кислоты
   parent: ChemicalMedipen
   id: MedipenTranexamicAcid
-  description: Специальный медипен для спецназа, содержит транексамовую кислоту, останавливает кровотечение
+  description: Специальный медипен для спецназа, содержит транексамовую кислоту, останавливает кровотечение.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: TranexamicAcid
           Quantity: 7
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenTranexamicAcid_empty
   - type: Tag
     tags: []

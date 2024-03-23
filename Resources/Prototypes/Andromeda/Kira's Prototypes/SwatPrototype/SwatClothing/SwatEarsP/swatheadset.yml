@@ -2,6 +2,7 @@
   parent: ClothingHeadset
   id: ClothingHeadsetSwat
   name: полноразмерная гарнитура спецназа
+  suffix: Андромеда
   components:
   - type: ContainerFill
     containers:

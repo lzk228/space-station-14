@@ -2,7 +2,8 @@
   name: медипен келотана
   parent: ChemicalMedipen
   id: MedipenKelotane
-  description: Специальный медипен для спецназа, содержит келотан, помогает лечить ожоги
+  description: Специальный медипен для спецназа, содержит келотан, помогает лечить ожоги.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Kelotane
           Quantity: 20
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenKelotane_empty
   - type: Tag
     tags: []

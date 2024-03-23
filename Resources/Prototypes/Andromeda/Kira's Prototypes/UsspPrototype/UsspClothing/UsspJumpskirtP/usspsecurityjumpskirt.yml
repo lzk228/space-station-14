@@ -3,6 +3,7 @@
   id: ClothingUniformJumpskirtUsspSecurity
   name: юбка-комбинезон охранника СССП
   description: Сделано из качественных материалов, уплотнён прочной кожей и тканью, во благо СССП!
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/usspRSI/usspsecurityjumpskirt.rsi

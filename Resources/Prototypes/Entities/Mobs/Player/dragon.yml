@@ -33,6 +33,7 @@
   - type: CombatMode
   - type: MobMover
   - type: InputMover
+  - type: AntiRottingContainer #A-13 Dragon fix full
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 5
@@ -111,22 +112,52 @@
       types:
         Piercing: 15
         Slash: 15
+  #A-13 Dragon fix full start
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 500
+    damage:
+      groups:
+        Burn: -0.9
+        Brute: -0.9
+        Toxin: -0.3
+      types:
+        Bloodloss: -0.3
+  #A-13 Dragon fix full end
   - type: Devourer
     foodPreference: Humanoid
     shouldStoreDevoured: true
     chemical: Ichor
     healRate: 15.0
+    #A-13 Dragon fix full start
+    digestibleStates:
+    - Alive
+    - Critical
+    - Dead
+    passiveDevourHealing: #Количество пассивного исцеления, добавляемое за каждую съеденную сущность предпочтительного типа еды.
+      groups:
+        Brute: -0.45
+        Burn: -0.45
+        Toxin: -0.15
+      types:
+        Bloodloss: -0.1
+    stomachDamage: #Дамаг сущностям которые находятся в желудке.
+        types:
+          Caustic: 1
+    #A-13 Dragon fix full end
     whitelist:
       components:
       - MobState
       - Door
       tags:
       - Wall
-#A-13 PNV start
+  #A-13 PNV start
   - type: NightVision
     isToggle: true
-    color: "#808080"
-#A-13 PNV end
+    color: "#DC143C"
+  #A-13 PNV end
   - type: Tag
     tags:
     - CannotSuicide

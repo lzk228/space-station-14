@@ -1,32 +1,32 @@
 - type: construction
-  name: potato battery
+  name: картофельная батарея #A-13 Translation
   id: PowerCellPotato
   graph: PowerCellPotato
   startNode: start
   targetNode: potatobattery
   category: construction-category-misc
-  description: A truly ingenious source of power.
+  description: Поистине гениальный источник силы. #A-13 Translation
   icon: { sprite: Objects/Power/power_cells.rsi, state: potato }
   objectType: Item
 
 - type: construction
-  name: potato artificial intelligence
+  name: картофельный искусственный интеллект #A-13 Translation
   id: PotatoAI
   graph: PotatoAI
   startNode: start
   targetNode: potatoai
   category: construction-category-misc
-  description: The potato happens to be the perfect power source for this chip.
+  description: Картофель оказался идеальным источником питания для этого чипа. #A-13 Translation
   icon: { sprite: Objects/Fun/pai.rsi, state: icon-potato-off }
   objectType: Item
   
 - type: construction
-  name: supercompact AI chip
+  name: сверхкомпактный AI-чип #A-13 Translation
   id: PotatoAIChip
   graph: PotatoAIChip
   startNode: start
   targetNode: potatoaichip
   category: construction-category-misc
-  description: A masterfully(?) crafted AI chip, requiring a similarly improvised power source.
+  description: Мастерски(?) созданный ИИ-чип, требующий такого же импровизированного источника питания. #A-13 Translation
   icon: { sprite: Objects/Misc/potatoai_chip.rsi, state: icon }
   objectType: Item

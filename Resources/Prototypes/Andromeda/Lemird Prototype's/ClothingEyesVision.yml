@@ -41,6 +41,8 @@
   - type: UseDelay
     delay: 4
   - type: PNV
+  - type: ShowSyndicateIcons
+  - type: ShowSecurityIcons
 
 - type: entity
   name: прибор ночного видения ОБР

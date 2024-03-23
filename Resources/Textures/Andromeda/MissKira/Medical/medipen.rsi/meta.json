@@ -1,14 +1,14 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by miss kira for andromeda-13",
+  "copyright": "Made by miss kira for andromeda-13 + Lemird",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "medipen"
+      "name": "medipenSpecial"
     },
     {
       "name": "medipenBicaridine"
@@ -50,7 +50,46 @@
       "name": "medipenTricordrazine"
     },
     {
-      "name": "medipen_empty"
+      "name": "medipenSpecial_empty"
+    },
+    {
+      "name": "medipenBicaridine_empty"
+    },
+    {
+      "name": "medipenDermaline_empty"
+    },
+    {
+      "name": "medipenDexalinPlus_empty"
+    },
+    {
+      "name": "medipenDifengidramin_empty"
+    },
+    {
+      "name": "medipenDylovene_empty"
+    },
+    {
+      "name": "medipenEphedrine_empty"
+    },
+    {
+      "name": "medipenEpinephrine_empty"
+    },
+    {
+      "name": "medipenInaprovaline_empty"
+    },
+    {
+      "name": "medipenKelotane_empty"
+    },
+    {
+      "name": "medipenLightStimpack_empty"
+    },
+    {
+      "name": "medipenSigynate_empty"
+    },
+    {
+      "name": "medipenTranexamicAcid_empty"
+    },
+    {
+      "name": "medipenTricordrazine_empty"
     },
     {
       "name": "medipen-inhand-left"

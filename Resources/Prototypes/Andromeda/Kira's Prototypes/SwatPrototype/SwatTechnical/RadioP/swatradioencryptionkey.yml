@@ -3,6 +3,7 @@
   id: EncryptionKeySwat
   name: ключ шифрования СПБсТ
   description: Положи туда, откуда взял, или тебя найдут.
+  suffix: Андромеда
   components:
     - type: EncryptionKey
       channels:

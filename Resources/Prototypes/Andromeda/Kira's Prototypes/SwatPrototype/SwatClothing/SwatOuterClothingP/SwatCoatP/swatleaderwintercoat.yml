@@ -3,6 +3,7 @@
   id: ClothingOuterSwatLeaderWinterCoat
   name: зимнее бронепальто лидера спецназа
   description: Синие опознавательные знаки, золотые вкрапления, тяжелый бронежилет, кажется это Лидер СПБсТ!
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/OuterClothing/WinterCoats/swatleaderwintercoat.rsi

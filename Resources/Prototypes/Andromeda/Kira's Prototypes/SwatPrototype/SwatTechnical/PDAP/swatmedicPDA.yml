@@ -3,6 +3,7 @@
   id: SwatMedicPDA
   name: КПК Медика СПБСТ
   description: На задней стороне написано K.I.R.A Medical, что бы это могло значить? Пахнет больницей.
+  suffix: Андромеда
   components:
   - type: Pda
     id: SwatMedicIDCard

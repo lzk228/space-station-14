@@ -11,9 +11,10 @@
       - id: Crowbar
       - id: BoxHandcuff
       - id: MedkitFilled
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
       - id: MagazineBoxLightRifle
-      - id: MagazineBoxLightRifle
-      - id: MagazineBoxPistol
       - id: Flare
       - id: Flare
       - id: Flare

@@ -609,7 +609,8 @@
   categories:
     - UplinkUtility
 
-- type: listing # A-13
+#A-13 IFFS start
+- type: listing 
   id: UplinkFFS
   name: плата консоли системы опознавания Синдиката
   description: Данная плата позволяет управлять параметрами опознавания шаттла. Незаменимая вещь если вы хотите угнать судно!
@@ -618,6 +619,7 @@
     Telecrystal: 5
   categories:
   - UplinkUtility
+#A-13 IFFS end
 
 # Implants
 
@@ -1418,7 +1420,7 @@
 - type: listing
   id: UplinkSyndicateStamp
   name: uplink-syndicate-stamp-name
-  description: uplink-syndicate-stamp-desc
+  description: Позволяет ставить практически любую печать, даже печать торговца, переключается нажатием. #A-13
   productEntity: RubberStampSyndicate
   cost:
     Telecrystal: 2

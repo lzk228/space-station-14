@@ -3,6 +3,7 @@
 - type: entity
   id: RandomHumanoidSpawnerSwatMedic
   name: Медик СПБсТ
+  suffix: Роль ОБР, Андромеда
   components:
     - type: Sprite
       sprite: Andromeda/MissKira/Markers/jobs.rsi
@@ -17,6 +18,10 @@
 - type: randomHumanoidSettings
   id: SwatMedicSettings
   randomizeName: false
+  speciesBlacklist:
+  - Diona
+  - Dwarf
+  - SlimePerson
   components:
     - type: GhostRole
       name: Медик СПБсТ
@@ -33,7 +38,7 @@
   id: RandomHumanoidSpawnerSwatMedicEVA
   parent: RandomHumanoidSpawnerSwatMedic
   name: Медик СПБсТ
-  suffix: EVA
+  suffix: EVA, Роль ОБР, Андромеда
   components:
     - type: Sprite
       sprite: Andromeda/MissKira/Markers/jobs.rsi

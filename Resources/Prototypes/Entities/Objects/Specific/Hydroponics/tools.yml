@@ -47,6 +47,11 @@
   id: HydroponicsToolScythe
   description: A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow.
   components:
+  #A-13 Random chance for bevel start
+  - type: Tag 
+    tags:
+    - BotanyScythe
+  #A-13 Random chance for bevel end
   - type: Sharp
   - type: Sprite
     sprite: Objects/Tools/Hydroponics/scythe.rsi
@@ -64,6 +69,11 @@
     - back
   - type: StaticPrice
     price: 40
+
+#A-13 Random chance for bevel start
+- type: Tag
+  id: BotanyScythe
+#A-13 Random chance for bevel end
 
 - type: entity
   name: hatchet
@@ -121,6 +131,7 @@
     sprite: Objects/Specific/Hydroponics/Equipment/plant_bag.rsi
     state: icon
   - type: Item
+    size: Large
     storedRotation: -90
   - type: Clothing
     quickEquip: false
@@ -128,7 +139,7 @@
     - belt
   - type: Storage
     grid:
-    - 0,0,7,4
+    - 0,0,9,6
     maxItemSize: Small
     quickInsert: true
     areaInsert: true

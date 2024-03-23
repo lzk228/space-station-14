@@ -1,10 +1,10 @@
 - type: construction
   id: ClosetSteel
-  name: closet
+  name: шкаф #A-13 Translation
   graph: ClosetSteel
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: A tall steel box that cannot be locked.
+  description: Высокий стальной шкаф который невозможно запереть. #A-13 Translation
   icon: { sprite: Structures/Storage/closet.rsi, state: generic_icon }
   objectType: Structure

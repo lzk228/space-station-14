@@ -1,64 +1,64 @@
 - type: construction
-  name: cleanbot
+  name: чистобот #A-13 Translation
   id: cleanbot
   graph: CleanBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot wanders around the station, mopping up any puddles it sees.
+  description: Этот бот бродит по станции, зачищая все лужи которые видит. #A-13 Translation
   icon:
     sprite: Mobs/Silicon/Bots/cleanbot.rsi
     state: cleanbot
 
 - type: construction
-  name: honkbot
+  name: хонкбот #A-13 Translation
   id: honkbot
   graph: HonkBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot honks and slips people.
+  description: Этот бот хонкает, очень скользкий. #A-13 Translation
   icon:
     sprite: Mobs/Silicon/Bots/honkbot.rsi
     state: honkbot
 
 - type: construction
-  name: jonkbot
+  name: кринжбот #A-13 Translation
   id: jonkbot
   graph: JonkBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This cursed bot honks, laughs and slips people.
+  description: Этот проклятый бот хонкает, смеется и очень скользкий. #A-13 Translation
   icon:
     sprite: Mobs/Silicon/Bots/honkbot.rsi
     state: jonkbot
 
 - type: construction
-  name: medibot
+  name: медибот #A-13 Translation
   id: medibot
   graph: MediBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot can help supply basic healing.
+  description: Этот бот может помочь обеспечить базовое лечение. #A-13 Translation
   icon:
     sprite: Mobs/Silicon/Bots/medibot.rsi
     state: medibot
 
 - type: construction
-  name: mimebot
+  name: мимбот #A-13 Translation
   id: mimebot
   graph: MimeBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot knows how to wave.
+  description: Этот бот умеет махать руками. #A-13 Translation
   icon:
     sprite: Mobs/Silicon/Bots/mimebot.rsi
     state: mimebot

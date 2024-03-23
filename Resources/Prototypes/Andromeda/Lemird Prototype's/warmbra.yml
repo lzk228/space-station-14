@@ -1,0 +1,9 @@
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearWarmbra
+  name: тёплое бра
+  description: Хорошо сшитое бра, поможет вам согрется в холодном космосе. Очаруйте свою вторую половинку, этим элегантным бра.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/warmbra.rsi

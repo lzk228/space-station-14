@@ -3,6 +3,7 @@
   id: ClothingOuterSwatMedicWinterCoat
   name: зимнее бронепальто медика спецназа
   description: Синие опознавательные знаки, медицинский крестик, разгрузка совмещенная с бронежилетом, кажется это Медик СПБсТ!
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/OuterClothing/WinterCoats/swatmedicwintercoat.rsi

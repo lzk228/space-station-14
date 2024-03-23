@@ -3,6 +3,7 @@
   id: ClothingOuterMediumVestSwat
   name: бронежилет спецназа
   description: Комбинированный бронежилет спецназа, включащий в себя броне-наплечи, Обладает 3 Уровнем Защиты.
+  suffix: Андромеда, 3-го типа
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/swatRSI/OuterClothing/Vests/swatmediumvest.rsi

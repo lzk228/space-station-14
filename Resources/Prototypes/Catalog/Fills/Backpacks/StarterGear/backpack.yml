@@ -227,6 +227,7 @@
     - type: StorageFill
       contents:
         - id: BoxSurvival
+        - id: RubberStampLibrary #A-13 Library stamp
         - id: BookRandom
 
 - type: entity

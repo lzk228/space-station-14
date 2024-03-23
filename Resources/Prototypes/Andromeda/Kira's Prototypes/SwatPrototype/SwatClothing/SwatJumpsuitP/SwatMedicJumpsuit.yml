@@ -3,6 +3,7 @@
   id: ClothingUniformJumpsuitMedicSwat
   name: комбинезон медика спецназа
   description: Синий и голубой, кажется вы встретились с Медиком Спецназа!
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Uniforms/Jumpsuit/swatmedicjumpsuit.rsi

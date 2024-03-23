@@ -3,6 +3,7 @@
   id: ClothingHeadHatBeretMedicSwat
   name: берет медика спецназа
   description: Специализированный берет Медика спецназа.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Head/Hats/swatmedicberet.rsi

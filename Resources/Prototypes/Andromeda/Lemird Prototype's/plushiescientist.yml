@@ -1,0 +1,31 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieScientist
+  name: плюшевый учёный
+  description: Плюшевая игрушка учёного, выглядит мило, но кажется он не менее уставший чем научный руководитель.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/plushiescientist.rsi
+    size: Small
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushiescientist.rsi
+    state: icon
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/plushiescientist.ogg
+    params:
+      variation: 0.125
+      pitch: 0.75
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/plushiescientist.ogg
+    params:
+      variation: 0.125
+      pitch: 0.75
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/plushiescientist.ogg
+    params:
+      variation: 0.125
+      pitch: 0.75

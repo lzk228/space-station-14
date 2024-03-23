@@ -2,7 +2,8 @@
   name: медипен бикаридина
   parent: ChemicalMedipen
   id: MedipenBicaridine
-  description: Специальный медипен для спецназа, содержит бикаридин, лечит от механических травм
+  description: Специальный медипен для спецназа, содержит бикаридин, лечит от механических травм.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Medical/medipen.rsi
@@ -16,5 +17,9 @@
         reagents:
         - ReagentId: Bicaridine
           Quantity: 14
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipenBicaridine_empty
   - type: Tag
     tags: []

@@ -1,12 +1,12 @@
 ﻿- type: construction
-  name: alien artifact
+  name: инопланетный артефакт #A-13 Translation
   id: Artifact
   graph: Artifact
   startNode: start
   targetNode: done
   category: construction-category-misc
   objectType: Item
-  description: A strange alien artifact
+  description: Странный инопланетный артефакт. #A-13 Translation
   icon:
     sprite: Objects/Specific/Xenoarchaeology/item_artifacts.rsi
     state: ano01

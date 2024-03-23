@@ -3,6 +3,7 @@
   id: ClothingUniformJumpskirtUsspWorker
   name: юбка-комбинезон рабочего СССП
   description: Сделано из качественных недорогих материалов, во благо СССП!
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/usspRSI/usspworkerjumpskirt.rsi

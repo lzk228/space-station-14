@@ -1,76 +1,76 @@
 - type: construction
-  name: livestock crate
+  name: ящик для скота #A-13 Translation
   id: CrateLivestock
   graph: CrateLivestock
   startNode: start
   targetNode: cratelivestock
   category: construction-category-storage
-  description: A wooden crate for holding livestock.
+  description: Деревянный ящик для содержания скота. #A-13 Translation
   icon: { sprite: Structures/Storage/Crates/livestock.rsi, state: base }
   objectType: Structure
 
 - type: construction
-  name: steel crate
+  name: стальной ящик #A-13 Translation
   id: CrateGenericSteel
   graph: CrateGenericSteel
   startNode: start
   targetNode: crategenericsteel
   category: construction-category-storage
-  description: A metal crate for storing things.
+  description: Металлический ящик для хранения вещей. #A-13 Translation
   icon: { sprite: Structures/Storage/Crates/generic.rsi, state: icon }
   objectType: Structure
 
 - type: construction
-  name: secure crate
+  name: безопасный ящик #A-13 Translation
   id: CrateSecure
   graph: CrateSecure
   startNode: start
   targetNode: cratesecure
   category: construction-category-storage
-  description: A secure metal crate for storing things. Requires no special access, can be configured with an Access Configurator.
+  description: Надежный металлический ящик для хранения вещей. Не требует специального доступа, может быть настроен с помощью Конфигуратора доступа. #A-13 Translation
   icon: { sprite: Structures/Storage/Crates/secure.rsi, state: icon }
   objectType: Structure
 
 - type: construction
-  name: plastic crate
+  name: пластиковый ящик #A-13 Translation
   id: CratePlastic
   graph: CratePlastic
   startNode: start
   targetNode: crateplastic
   category: construction-category-storage
-  description: A plastic crate for storing things.
+  description: Пластиковый ящик для хранения вещей. #A-13 Translation
   icon: { sprite: Structures/Storage/Crates/plastic.rsi, state: icon }
   objectType: Structure
 
 - type: construction
-  name: cardboard box
+  name: картонная коробка #A-13 Translation
   id: BigBox
   graph: BaseBigBox
   startNode: start
   targetNode: basebigbox
   category: construction-category-storage
-  description: A big box for storing things or hiding in.
+  description: Большой ящик, в котором можно хранить вещи, или прятаться. #A-13 Translation
   icon: { sprite: Structures/Storage/closet.rsi, state: cardboard }
   objectType: Structure
 
 - type: construction
-  name: cardboard box
+  name: картонная коробка #A-13 Translation
   id: BoxCardboard
   graph: BoxCardboard
   startNode: start
   targetNode: boxcardboard
   category: construction-category-storage
-  description: A small box for storing things.
+  description: Небольшая коробочка для хранения вещей. #A-13 Translation
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   objectType: Item
 
 - type: construction
-  name: coffin
+  name: гроб #A-13 Translation
   id: CrateCoffin
   graph: CrateCoffin
   startNode: start
   targetNode: cratecoffin
   category: construction-category-storage
-  description: A coffin for storing corpses.
+  description: Гроб для хранения трупов. #A-13 Translation
   icon: { sprite: Structures/Storage/Crates/coffin.rsi, state: base }
   objectType: Structure

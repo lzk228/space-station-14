@@ -98,5 +98,5 @@
 #A-13 PNV start
   - type: NightVision
     isToggle: true
-    color: "#808080"
+    color: "#DDA0DD"
 #A-13 PNV end

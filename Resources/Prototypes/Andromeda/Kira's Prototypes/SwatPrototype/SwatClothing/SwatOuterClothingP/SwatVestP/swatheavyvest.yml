@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterHeavyVestSwat
-  name: бронежилет спецназа
-  description: По настоящему тяжелый бронежилет спецназа, дающий значительную защиту в совокупности с бронёй на голову, обладает защитой 4-ого класса
+  name: улучшенный бронежилет спецназа
+  description: По настоящему тяжелый бронежилет спецназа, дающий значительную защиту в совокупности с бронёй на голову, обладает защитой 4-ого класса.
+  suffix: Андромеда, 4-го типа
   components:
   - type: Sprite
     sprite: Andromeda/MissKira/Clothing/swatRSI/OuterClothing/Vests/swatheavyvest.rsi

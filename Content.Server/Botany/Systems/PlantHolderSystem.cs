@@ -194,6 +194,17 @@ public sealed class PlantHolderSystem : EntitySystem
             return;
         }
 
+        //A-13 Random chance for bevel start
+        if (_tagSystem.HasTag(args.Used, "BotanyScythe") && component.Harvest == true)
+        {
+            if (component.Seed != null)
+            {
+                component.YieldMod *= _random.Next(2,3);
+            }
+            DoHarvest(uid, args.User, component);
+        }
+        //A-13 Random chance for bevel end
+
         if (_tagSystem.HasTag(args.Used, "Hoe"))
         {
             if (component.WeedLevel > 0)

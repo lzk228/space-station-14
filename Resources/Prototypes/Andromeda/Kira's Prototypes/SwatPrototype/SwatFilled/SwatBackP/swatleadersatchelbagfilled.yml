@@ -7,6 +7,11 @@
   - type:  StorageFill
     contents:
       - id: WeaponSubmachineGunMP5
+      - id: MagazineCaselessRifle
+      - id: MagazineCaselessRifle
+      - id: MagazineCaselessRifle
+      - id: MagazineCaselessRifle
+      - id: MagazineBoxCaselessRifleBig
       - id: WeaponDisabler
       - id: Crowbar
       - id: BoxHandcuff

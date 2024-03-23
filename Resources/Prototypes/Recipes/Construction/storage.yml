@@ -1,8 +1,8 @@
 #bureaucracy
 - type: construction
   id: FilingCabinet
-  name: filing cabinet
-  description: A cabinet for all your filing needs.
+  name: картотечный шкаф #A-13 Translation
+  description: Картотечный шкаф для всех ваших бюрократических потребностей. #A-13 Translation
   graph: FilingCabinet
   startNode: start
   targetNode: filingCabinet
@@ -18,8 +18,8 @@
 
 - type: construction
   id: TallCabinet
-  name: tall cabinet
-  description: A cabinet for all your filing needs.
+  name: высокий шкаф #A-13 Translation
+  description: Высокий шкаф для всех ваших потребностей. #A-13 Translation
   graph: FilingCabinet
   startNode: start
   targetNode: tallCabinet
@@ -35,8 +35,8 @@
 
 - type: construction
   id: ChestDrawer
-  name: chest drawer
-  description: A small drawer for all your filing needs, Now with wheels!
+  name: комод #A-13 Translation
+  description: Небольшой комод для хранения всех необходимых документов теперь на колёсиках! #A-13 Translation
   graph: FilingCabinet
   startNode: start
   targetNode: chestDrawer

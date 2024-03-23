@@ -11,9 +11,11 @@
     outerClothing: ClothingOuterLightVestSwat
     id: SwatStandartPDA
     ears: ClothingHeadsetSwat
-    belt: ClothingBeltSwatWeddingFilled
+    belt: ClothingBeltSwatWeddingStandartFilled
     pocket1: ClothingHeadHelmetHeavySwat
     pocket2: WeaponFlareGun
   innerclothingskirt: ClothingUniformJumpskirtSwat
   satchel: ClothingBackpackSwatSatchelStandartFilled
   duffelbag: ClothingBackpackSwatDuffelStandartFilled
+  underweart: ClothingUnderwearTopBraWhite
+  underwearb: ClothingUnderwearBottomPantiesWhite

@@ -1,10 +1,10 @@
 - type: construction
-  name: bananium horn
+  name: бананиумовый клаксон #A-13 Translation
   id: HornBananium
   graph: BananiumHorn
   startNode: start
   targetNode: bananiumHorn
   category: construction-category-weapons
-  description: An air horn made from bananium.
+  description: Клаксон, сделанный из бананиума. #A-13 Translation
   icon: { sprite: Objects/Fun/bananiumhorn.rsi, state: icon }
   objectType: Item

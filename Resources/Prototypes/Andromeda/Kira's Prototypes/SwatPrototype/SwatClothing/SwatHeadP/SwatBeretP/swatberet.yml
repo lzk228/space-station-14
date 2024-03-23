@@ -2,7 +2,8 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretSwat
   name: берет спецназа
-  description: Элитный и чёрный берет спецназа, обозначающий ветеранство и профессионализм, осталось только не опозорить его
+  description: Элитный и чёрный берет спецназа, обозначающий ветеранство и профессионализм, осталось только не опозорить его.
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Head/Hats/swatberet.rsi
