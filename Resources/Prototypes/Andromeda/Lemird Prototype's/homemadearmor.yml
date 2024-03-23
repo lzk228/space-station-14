@@ -1,0 +1,114 @@
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: ClothingOuterArmorSteel
+  name: самодельный стальной бронежилет
+  description: Самодельный стальной бронежилет, имеет минимальную защиту, слегка неудобная и слегка тяжеловатая.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/stealchestplate.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/stealchestplate.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.85
+        Piercing: 0.90
+        Heat: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: Construction
+    graph: HomemadeArmorSteel
+    node: steelarmor
+
+- type: construction
+  name: самодельный стальной бронежилет
+  id: ClothingOuterArmorSteel
+  graph: HomemadeArmorSteel
+  startNode: start
+  targetNode: steelarmor
+  category: construction-category-clothing
+  description: "Стальной бронежилет, делается из стали и кабелей, минимально защищает носителя, немного тяжеловат."
+  icon: { sprite: Andromeda/Lemird/stealchestplate.rsi, state: icon }
+  objectType: Item
+
+- type: constructionGraph
+  id: HomemadeArmorSteel
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: steelarmor
+          steps:
+          - material: Steel
+            amount: 5
+            doAfter: 20
+          - material: Cable
+            amount: 10
+            doAfter: 10
+
+    - node: steelarmor
+      entity: ClothingOuterArmorSteel
+
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: ClothingOuterArmorPlasteel
+  name: самодельный пластальной бронежилет
+  description: Самодельный пластальной бронежилет, хорошо защищает от ударов и в целом неплохо может защитить носителя, к сожалению крайне тяжёлый.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/plastealchestplate.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/plastealchestplate.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.75
+        Piercing: 0.80
+        Heat: 0.90
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: ClothingSpeedModifier
+    walkModifier: 0.60
+    sprintModifier: 0.60
+  - type: Construction
+    graph: HomemadeArmorPlasteel
+    node: plasteelarmor
+
+- type: construction
+  name: самодельный пластальной бронежилет
+  id: ClothingOuterArmorPlasteel
+  graph: HomemadeArmorPlasteel
+  startNode: start
+  targetNode: plasteelarmor
+  category: construction-category-clothing
+  description: "Пластальной бронежилет, делается из стали, пластали и кабелей, хорошо защищает от ударов и в целом может стоять рядом с обычным бронежилетом, но крайне тяжёлый."
+  icon: { sprite: Andromeda/Lemird/plastealchestplate.rsi, state: icon }
+  objectType: Item
+
+- type: constructionGraph
+  id: HomemadeArmorPlasteel
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: plasteelarmor
+          steps:
+          - material: Plasteel
+            amount: 5
+            doAfter: 30
+          - material: Steel
+            amount: 2
+            doAfter: 20
+          - material: Cable
+            amount: 20
+            doAfter: 10
+
+    - node: plasteelarmor
+      entity: ClothingOuterArmorPlasteel
