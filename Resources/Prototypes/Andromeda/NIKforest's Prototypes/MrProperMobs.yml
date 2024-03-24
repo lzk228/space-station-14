@@ -486,6 +486,7 @@
 - type: entity
   name: Ликвид
   id: MobLiquid
+  suffix: Андромеда
   parent: SimpleMobBase
   description: Это живая газировка? От него летит куча пузырьков из газировки. Выглядит злым.
   components:
@@ -928,7 +929,7 @@
     - SimpleHostile
   - type: Sprite
     drawdepth: Mobs
-    sprite: Andromeda/NIKforest/spacedevilsmall.rsi
+    sprite: Andromeda/NIKforest/spacedevil2.rsi
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: running
