@@ -539,7 +539,7 @@
       reagents:
       - ReagentId: ShamblersJuice
         Quantity: 5
-  - type: AntiRottingContaine
+  - type: AntiRottingContainer
   - type: MeleeChemicalInjector
     transferAmount: 8
     solution: melee
