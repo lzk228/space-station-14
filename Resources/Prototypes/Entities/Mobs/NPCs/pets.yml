@@ -193,6 +193,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: bingus
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -256,6 +258,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: mcgriff
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -355,6 +359,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: walter
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
