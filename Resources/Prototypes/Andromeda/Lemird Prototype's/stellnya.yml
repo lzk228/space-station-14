@@ -5,9 +5,6 @@
   description: "Вы видели всё в своей жизни если видели это... Однако они такие милые!~"
   suffix: Андромеда
   components:
-  - type: Tag
-    tags:
-      - DroneUsable
   - type: Sprite
     sprite: Andromeda/Lemird/stellnya.rsi
   - type: Clothing

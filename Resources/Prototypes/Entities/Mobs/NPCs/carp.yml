@@ -169,6 +169,8 @@
       name: ghost-role-information-sentient-carp-name
       description: ghost-role-information-sentient-carp-description
     - type: GhostTakeoverAvailable
+    - type: Puller
+      needsHands: false
     - type: HTN
       rootTask:
         task: DragonCarpCompound
