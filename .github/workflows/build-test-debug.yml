@@ -2,11 +2,11 @@ name: Build & Test Debug
 
 on:
   push:
-    branches: [ master, staging, trying ]
+    branches: [ master-andromeda, staging, trying ] #A-13 Actions fix
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master ]
+    branches: [ master-andromeda ] #A-13 Actions fix
 
 jobs:
   build:
