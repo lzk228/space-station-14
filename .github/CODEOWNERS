@@ -1,10 +1,10 @@
 # Last match in file takes precedence.
 
 # Ping for all PRs
-* @Lemirda
+* @13lackHawk
 
 # Ping for all PRs that include translations/editing fluent strings
-*.ftl @Lemirda
+*.ftl @13lackHawk
 
 # Ping for all prototypes
-*.yml @Lemirda
+*.yml @13lackHawk
