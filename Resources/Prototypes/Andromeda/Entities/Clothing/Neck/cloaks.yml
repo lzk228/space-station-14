@@ -137,3 +137,13 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/cloak_sinitsa.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakColony
+  name: плащ колонии
+  suffix: Андромеда
+  description: Для любителей приносить свободу. For the end is our glory.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/cloak_colony.rsi    

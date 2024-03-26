@@ -1106,6 +1106,11 @@
   entity: ClothingNeckCloakWhitehole
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingHeadHatBeretHoSSponsorLoadout
+  entity: ClothingHeadHatBeretHoSSponsor
+  sponsorOnly: true
+
 #Tomoko_Kuroki
 - type: loadout
   id: ClothingHandsGlovesColorRedLoadout
@@ -1429,6 +1434,16 @@
   entity: SpaceCash1000
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingHandsGlovesLatexLoadout
+  entity: ClothingHandsGlovesLatex
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUnderwearSocksFishnettightsLoadout
+  entity: ClothingUnderwearSocksFishnettights
+  sponsorOnly: true
+
 #solevoitoropiga
 - type: loadout
   id: ClothingUnderwearBottomPantiesDeathSquadSponsorLoadout
@@ -1438,4 +1453,31 @@
 - type: loadout
   id: ClothingUnderwearTopDeathBraSponsorLoadout
   entity: ClothingUnderwearTopDeathBraSponsor
+  sponsorOnly: true
+
+#Kivchik
+- type: loadout
+  id: ClothingEyesSalesmanLoadout
+  entity: ClothingEyesSalesman
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesColorBlackLoadout
+  entity: ClothingShoesColorBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: PlushieLemirdSchoolGirlLoadout
+  entity: PlushieLemirdSchoolGirl
+  sponsorOnly: true
+
+- type: loadout
+  id: SuperSynthesizerInstrumentLoadout
+  entity: SuperSynthesizerInstrument
+  sponsorOnly: true
+
+#DoReMe
+- type: loadout
+  id: ClothingNeckCloakColonyLoadout
+  entity: ClothingNeckCloakColony
   sponsorOnly: true

@@ -119,7 +119,7 @@
   yield: 2
   potency: 10
   growthStages: 6
-  waterConsumption: 10
+  waterConsumption: 3
   chemicals:
     ChlorineTrifluoride:
       Min: 1

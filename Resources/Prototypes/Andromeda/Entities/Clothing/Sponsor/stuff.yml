@@ -76,3 +76,20 @@
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Underwear/Top/deathbra.rsi
+
+- type: entity
+  parent: ClothingHeadHatBeretHoS
+  id: ClothingHeadHatBeretHoSSponsor
+  name: черный берет
+  suffix: Андромеда
+  description: Черный кожаный берет.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/beret_hos.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/beret_hos.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
