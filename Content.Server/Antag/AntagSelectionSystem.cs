@@ -17,8 +17,9 @@ using Robust.Shared.Random;
 using System.Linq;
 using Content.Shared.Chat;
 using Robust.Shared.Enums;
-using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
-using Content.Server.Andromeda.Roles; // A-13
+using Content.Server.Corvax.Sponsors; //A-13
+using Content.Server.Andromeda.Roles; //A-13
+using Robust.Server.Player; //A-13
 
 namespace Content.Server.Antag;
 
@@ -29,6 +30,8 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     [Dependency] private readonly JobSystem _jobs = default!;
     [Dependency] private readonly MindSystem _mindSystem = default!;
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; //A-13
+    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13
 
     #region Eligible Player Selection
     /// <summary>
@@ -170,14 +173,6 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
         if (!pref.AntagPreferences.Contains(antagPrototype.Id) && !ignorePreferences)
             return false;
 
-            // A-13 No Thief-Agents system v5 start
-            if (HasComp<ThiefCheckComponent>(player.AttachedEntity))
-            {
-                Logger.InfoS("ANTAG", "Skipping player cuz he is already a thief.");
-                continue;
-            }
-            // A-13  No Thief-Agents system v5 end
-
         return true;
     }
     #endregion
@@ -212,6 +207,16 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                 playerList.Remove(chosenPlayer);
             }
 
+            // A-13 No Thief-Agents system v5 start
+            var allPlayers = _playerSystem.Sessions.ToList();
+            foreach (var player in allPlayers)
+                if (HasComp<ThiefCheckComponent>(player.AttachedEntity))
+                {
+                    Logger.InfoS("ANTAG", "Skipping player cuz he is already a thief.");
+                    continue;
+                }
+            // A-13  No Thief-Agents system v5 end
+
             //If we have reached the desired number of players, skip
             if (chosenPlayers.Count >= count)
                 continue;
@@ -227,7 +232,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
     /// <param name="eligiblePlayers">List of eligible players</param>
     /// <param name="count">How many to choose</param>
     /// <returns>Up to the specified count of elements from the provided list</returns>
-    public List<EntityUid> ChooseAntags(int count, List<EntityUid> eligiblePlayers)
+    public List<EntityUid> ChooseAntags(int count, List<EntityUid> eligiblePlayers, List<ICommonSession> prefList) //A-13
     {
         var chosenPlayers = new List<EntityUid>();
 
@@ -239,32 +244,12 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             chosenPlayers.Add(RobustRandom.PickAndTake(eligiblePlayers));
         }
 
-        // A-13 SponsorAntag start
-        var sponsorPrefList = new List<ICommonSession>();
-    		foreach (var player in eligiblePlayers)
+        for (var i = 0; i < count; i++)
         {
-            if (_sponsors.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
-    			  {
-    				    sponsorPrefList.Add(player);
-    			  }
-        }
-
-    		while (sponsorPrefList.Count > 0 && antagCount > 0)
-    		{
-            var player = _random.PickAndTake(sponsorPrefList);
-            prefList.Remove(player);
-    			  chosenPlayers.Add(player);
-    			  antagCount -= 1;
-            Logger.InfoS("sponsor", "Selected a sponsor antag!");
-    		}
-    		if (antagCount == 0) return chosenPlayers;
-        // A-13 SponsorAntag end
-
-        for (var i = 0; i < antagCount; i++)
-        {
-            chosenPlayers.Add(_random.PickAndTake(eligiblePlayers));
+            chosenPlayers.Add(RobustRandom.PickAndTake(eligiblePlayers));
             Log.Info("Selected a preferred antag.");
         }
+
         return chosenPlayers;
     }
 
@@ -284,6 +269,28 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             {
                 playerList.Remove(chosenPlayer);
             }
+
+            // A-13 SponsorAntag start
+            var sponsorPrefList = new List<ICommonSession>();
+            var allPlayers = _playerSystem.Sessions.ToList();
+            foreach (var player in allPlayers)
+            {
+                if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                {
+                    sponsorPrefList.Add(player);
+                }
+            }
+
+            while (sponsorPrefList.Count > 0 && count > 0)
+            {
+                var player = RobustRandom.PickAndTake(sponsorPrefList);
+                eligiblePlayerLists.Remove(player);
+                chosenPlayers.Add(player);
+                count -= 1;
+                Logger.InfoS("sponsor", "Selected a sponsor antag!");
+            }
+            if (count == 0) return chosenPlayers;
+            // A-13 SponsorAntag end
 
             //If we have reached the desired number of players, skip
             if (chosenPlayers.Count >= count)
