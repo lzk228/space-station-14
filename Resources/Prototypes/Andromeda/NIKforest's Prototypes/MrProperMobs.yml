@@ -1,0 +1,1015 @@
+- type: entity
+  id: LeftHandInte
+  name: animal hands
+  parent: [PartAnimal, BaseLeftHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "l_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Left
+
+- type: entity
+  id: RightHandInte
+  name: animal hands
+  parent: [PartAnimal, BaseRightHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "r_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Right
+
+- type: body
+  id: Inte
+  name: "Inte"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - l-hand
+      - r-hand
+      - legs
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAnimalHeart
+        kidneys: OrganAnimalKidneys
+    l-hand:
+      part: LeftHandInte
+    r-hand:
+      part: RightHandInte
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
+
+- type: entity
+  name: Интекорри
+  id: Intechcorri
+  parent: SimpleMobBase
+  description: От его уродливого рта видны следы крови, она старая или новая?
+  suffix: Андромеда
+  components:
+  - type: NameIdentifier
+  - type: Stripping
+  - type: Strippable
+  - type: CombatMode
+  - type: NpcFactionMember
+    factions:
+      - SimpleHostile
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -0.25
+  - type: Hunger
+    baseDecayRate: 0.1
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/NIKforest/intechcorri.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: running
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: running-unshaded
+      shader: unshaded
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      170: Critical
+      180: Dead
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 15
+        Piercing: 10
+  - type: Stamina
+    critThreshold: 200
+  - type: Bloodstream
+    bloodMaxVolume: 250
+  - type: Hands
+  - type: Speech
+    speechSounds: bass
+  - type: Body
+    prototype: Inte
+    requiredLegs: 1
+  - type: Vocal
+    sounds:
+      Male: UnisexDwarf
+      Female: UnisexDwarf
+      Unsexed: UnisexDwarf
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 1
+  - type: Puller
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    name: Интекорри
+    description: Вы, должны копировать поведение людей. На агрессию отвечать агрессией. Повторяйте что они говорят. Вам нравятся блестяшки
+  - type: GhostTakeoverAvailable
+
+- type: entity
+  name: Паучок
+  parent: [ SimpleMobBase, MobCombat ]
+  id: MobLittleSpider
+  description: Маленький, миленький. Он такой безобидный, на внешний вид.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: littlespider
+      sprite: Andromeda/NIKforest/littlespider.rsi
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: littlespider
+      Dead:
+        Base: littlespider_dead
+  - type: CombatMode
+  - type: Food
+  - type: Item
+    size: Tiny
+  - type: Body
+    prototype: AnimalHemocyanin
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 1
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 3
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: Toxin
+        Quantity: 3
+  - type: MeleeChemicalInjector
+    transferAmount: 2
+    solution: melee
+  - type: ReplacementAccent
+    accent: xeno
+  - type: NoSlip
+  - type: IgnoreSpiderWeb
+  - type: Bloodstream
+    bloodMaxVolume: 50
+    bloodReagent: CopperBlood
+  - type: Speech
+    speechVerb: Arachnid
+    speechSounds: Arachnid
+  - type: Vocal
+    sounds:
+      Male: UnisexArachnid
+      Female: UnisexArachnid
+      Unsexed: UnisexArachnid
+  - type: TypingIndicator
+    proto: spider
+  - type: Tag
+    tags:
+    - FootstepSound
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 89
+    damage:
+      types:
+        Poison: -0.10
+      groups:
+        Brute: -0.10
+        Burn: -0.10
+
+- type: entity
+  id: LeftHandHonker
+  name: animal hands
+  parent: [PartAnimal, BaseLeftHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "l_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Left
+
+- type: entity
+  id: RightHandHonker
+  name: animal hands
+  parent: [PartAnimal, BaseRightHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "r_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Right
+
+- type: body
+  id: BatyaHonker
+  name: "Honk Honk"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - l-hand
+      - r-hand
+      - legs
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAnimalHeart
+        kidneys: OrganAnimalKidneys
+    l-hand:
+      part: LeftHandHonker
+    r-hand:
+      part: RightHandHonker
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
+
+- type: entity
+  name: Батя Хонк
+  id: MobBatyaHonker
+  parent: SimpleMobBase
+  description: Он выглядит большим и опасным. От него пахнет пивом и пирогами.
+  suffix: Андромеда
+  components:
+  - type: NameIdentifier
+  - type: Stripping
+  - type: Strippable
+  - type: CombatMode
+  - type: NpcFactionMember
+    factions:
+      - SimpleHostile
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -0.25
+  - type: Hunger
+    baseDecayRate: 0.1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/NIKforest/rewokhonkovich.rsi
+    scale: 1.1, 1.1
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: running
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: running-unshaded
+      shader: unshaded
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepClown
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.7
+      150: 0.5
+  - type: Tag
+    tags:
+      - FootstepSound
+  - type: NoSlip
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+  - type: Stamina
+    critThreshold: 350
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh2.ogg
+    angle: 0
+    attackRate: 0.75
+    animation: WeaponArcFist
+    damage:
+      types:
+        Blunt: 20
+  - type: Bloodstream
+    bloodMaxVolume: 250
+  - type: Hands
+  - type: Speech
+    speechSounds: Cluwne
+  - type: Body
+    prototype: BatyaHonker
+    requiredLegs: 1
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 10
+  - type: Puller
+  - type: Vocal
+    sounds:
+      Male: UnisexDwarf
+      Female: UnisexDwarf
+      Unsexed: UnisexDwarf
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    name: Батя Хонк
+    description: Вы большой ХОНК.
+  - type: GhostTakeoverAvailable
+
+- type: entity
+  name: Тень
+  id: MobBadShadow
+  parent: SimpleMobBase
+  description: Прозрачная и жуткая фигура.
+  suffix: Андромеда
+  components:
+  - type: NameIdentifier
+  - type: NpcFactionMember
+    factions:
+      - SimpleHostle
+  - type: Deathgasp
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/NIKforest/badshadow.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: running
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: running-unshaded
+      shader: unshaded
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      5: Dead
+  - type: Puller
+  - type: GhostTakeoverAvailable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: body
+  id: Liquid
+  name: "Liquid"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - legs
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAnimalHeart
+        kidneys: OrganAnimalKidneys
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
+
+- type: entity
+  name: Ликвид
+  id: MobLiquid
+  suffix: Андромеда
+  parent: SimpleMobBase
+  description: Это живая газировка? От него летит куча пузырьков из газировки. Выглядит злым.
+  components:
+  - type: NameIdentifier
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 100
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: CombatMode
+  - type: NpcFactionMember
+    factions:
+      - SimpleNeutral
+  - type: Deathgasp
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/NIKforest/liguid.rsi
+    scale: 0.5, 0.5
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Blunt: 17
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 25
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: ShamblersJuice
+        Quantity: 5
+  - type: AntiRottingContainer
+  - type: MeleeChemicalInjector
+    transferAmount: 8
+    solution: melee
+  - type: Physics
+    bodyStatus: InAir
+  - type: NoSlip
+  - type: MovementAlwaysTouching
+  - type: CanMoveInAir
+  - type: Stamina
+    critThreshold: 200
+  - type: Bloodstream
+    bloodMaxVolume: 100
+    bloodReagent: ShamblersJuice
+  - type: Speech
+    speechSounds: LiquidSpeech
+  - type: ZombieImmune
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ ShamblersJuice, SodaWater, GrapeSoda, PwrGame, DrGibb, SpaceMountainWind, RootBear, SpaceUp, Starkist, EnergyDrink ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          groups:
+            Burn: -5
+            Brute: -10.5
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaled: true
+        damage:
+          types:
+            Heat: 5
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "slime-hurt-by-water-popup" ]
+        probability: 0.25
+  - type: Body
+    prototype: Liquid
+    requiredLegs: 1
+  - type: Vocal
+    sounds:
+      Male: LuqidVoice
+      Female: LuqidVoice
+      Unsexed: LuqidVoice
+  - type: Puller
+  - type: GhostTakeoverAvailable
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: running
+      Dead:
+        Base: dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatDragon
+      amount: 0
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 200
+    damage:
+      groups:
+        Burn: -0.9
+        Brute: -0.9
+        Toxin: -0.3
+      types:
+        Bloodloss: -0.3
+  - type: Metabolizer
+    solutionOnBody: false
+    updateFrequency: 0.25
+    metabolizerTypes: [ Dragon ]
+    groups:
+    - id: Medicine
+    - id: Poison
+  - type: Devourer
+    foodPreference: Humanoid
+    shouldStoreDevoured: true
+    chemical: Ichor
+    healRate: 15.0
+    digestibleStates:
+    - Alive
+    - Critical
+    - Dead
+    passiveDevourHealing:
+      groups:
+        Brute: -0.45
+        Burn: -0.45
+        Toxin: -0.15
+      types:
+        Bloodloss: -0.1
+    stomachDamage:
+        types:
+          Caustic: 1
+  - type: MobState
+
+- type: emoteSounds
+  id: LuqidVoice
+  sounds:
+    Scream:
+       path: /Audio/Andromeda/Liquid/Liquid/scream.ogg
+  params:
+    variation: 0.125
+    pitch: 0.75
+
+- type: speechSounds
+  id: LiquidSpeech
+  saySound:
+    path: /Audio/Andromeda/Liquid/LiquidSpeech/say.ogg
+  askSound:
+    path: /Audio/Andromeda/Liquid/LiquidSpeech/ask.ogg
+  exclaimSound:
+    path: /Audio/Andromeda/Liquid/LiquidSpeech/exclaim.ogg
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackCosmoDevil
+  name: рюкзак из космического черта
+  description: Это труп космического черта, с глазом.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/cosmobackpack.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,19,9
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackCosmoDevilFake
+  name: рюкзак из космического черта
+  description: Это труп космического черта, с глазом.
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/NIKforest/fakebackpack.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,19,9
+  - type: Unremoveable
+
+- type: startingGear
+  id: MobCosmoDevil
+  equipment:
+    back: ClothingBackpackCosmoDevilFake
+
+- type: entity
+  id: RightHandSpaceDevil
+  name: animal hands
+  parent: [PartAnimal, BaseRightHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "r_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Right
+
+- type: body
+  id: SpaceDevil
+  name: "SpaceDevil"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - r-hand
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAnimalHeart
+        kidneys: OrganAnimalKidneys
+    r-hand:
+      part: RightHandSpaceDevil
+
+- type: entity
+  name: космический чёрт
+  id: MobSpaceDevil
+  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  description: Чёрная фигура с огромным глазом. Оно смотрит на тебя и моргает.
+  suffix: Андромеда
+  components:
+  - type: UserInterface
+    interfaces:
+      - key: enum.RadarConsoleUiKey.Key
+        type: RadarConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      - key: enum.RadarConsoleUiKey.Key
+        toggleAction: ActionAGhostShowRadar
+  - type: RadarConsole
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/NIKforest/spacedevil.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: running
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+          - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseSprintSpeed: 8
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 50
+  - type: Bloodstream
+    bloodMaxVolume: 150
+    bloodReagent: Cryoxadone
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Stripping
+  - type: Hands
+  - type: Inventory
+    templateId: CosmoDevil
+    speciesId: CosmoDevil
+  - type: InventorySlots
+  - type: Loadout
+    prototypes: [ MobCosmoDevil ]
+  - type: Body
+    prototype: SpaceDevil
+    requiredLegs: 1
+  - type: Gun
+    fireRate: 0.4
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: CombatMode
+  - type: Puller
+    needsHands: false
+  - type: InteractionPopup
+    successChance: 0.3
+    interactSuccessString: petting-success-slimes
+    interactFailureString: petting-failure-generic
+    interactSuccessSound:
+      path: /Audio/Animals/lizard_happy.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ClothingBackpackCosmoDevil:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute from base.yml.
+    allowedStates:
+    - Alive
+    damageCap: 89
+    damage:
+      types:
+        Poison: -0.05
+      groups:
+        Brute: -0.05
+        Burn: -0.05
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.7
+      150: 0.5
+  - type: PointLight
+    color: "#00BFFFFF"
+
+- type: inventoryTemplate
+  id: CosmoDevil
+  slots:
+    - name: back
+      slotTexture: back
+      slotFlags: BACK
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 3,0
+      strippingWindowPos: 0,6
+      displayName: Back
+
+- type: entity
+  id: LeftHandSpaceDevilSmall
+  name: animal hands
+  parent: [PartAnimal, BaseLeftHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "l_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Left
+
+- type: entity
+  id: RightHandSpaceDevilSmall
+  name: animal hands
+  parent: [PartAnimal, BaseRightHand]
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: "r_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Right
+
+- type: body
+  id: SpaceDevilSmall
+  name: "SpaceDevil"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - r-hand
+      - l-hand
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAnimalHeart
+        kidneys: OrganAnimalKidneys
+    l-hand:
+      part: LeftHandSpaceDevilSmall
+    r-hand:
+      part: RightHandSpaceDevilSmall
+
+- type: entity
+  name: космический чертёнок
+  id: MobSpaceDevilSmall
+  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  description: Чёрная фигура с глазом. Оно смотрит на тебя и не моргает. Оно хочет твои вещи
+  suffix: Андромеда
+  components:
+  - type: UserInterface
+    interfaces:
+      - key: enum.RadarConsoleUiKey.Key
+        type: RadarConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      - key: enum.RadarConsoleUiKey.Key
+        toggleAction: ActionAGhostShowRadar
+  - type: RadarConsole
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/NIKforest/spacedevil2.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: running
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+          - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      70: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseSprintSpeed: 8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 70
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Bloodstream
+    bloodMaxVolume: 70
+    bloodReagent: Cryoxadone
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Stripping
+  - type: Hands
+  - type: Body
+    prototype: SpaceDevilSmall
+    requiredLegs: 1
+  - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute from base.yml.
+    allowedStates:
+    - Alive
+    damageCap: 89
+    damage:
+      types:
+        Poison: -0.05
+      groups:
+        Brute: -0.05
+        Burn: -0.05
+  - type: Gun
+    fireRate: 0.5
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: CombatMode
+  - type: GhostRole
+    name: Космический чертёнок
+    description: Вы космический чертёнок. Слушайте приказы космического черта и обворуйте станцию. Вам нельзя убивать людей, только оглушать и воровать их личные вещи.
+  - type: GhostTakeoverAvailable
+  - type: Puller
+    needsHands: false
+  - type: InteractionPopup
+    successChance: 0.3
+    interactSuccessString: petting-success-slimes
+    interactFailureString: petting-failure-generic
+    interactSuccessSound:
+      path: /Audio/Animals/lizard_happy.ogg
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      65: 0.5
+  - type: PointLight
+    color: "#00BFFFFF"
+    radius: 3

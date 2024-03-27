@@ -433,6 +433,8 @@
         layer:
         - SmallMobLayer
   - type: GhostTakeoverAvailable
+  - type: Puller
+    needsHands: false
   - type: Speech
     speechVerb: Moth
     speechSounds: Squeak
@@ -720,6 +722,8 @@
     offspring:
     - id: MobCow
   - type: ReproductivePartner
+  - type: Puller
+    needsHands: false
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -799,6 +803,8 @@
       movement:
         state: crab
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -867,6 +873,8 @@
         - MobMask
         layer:
         - MobLayer
+  - type: Puller
+    needsHands: false
   - type: Tag
     tags:
     # let moths eat wool directly
@@ -995,6 +1003,8 @@
       state: crawling
       sprite: Mobs/Animals/gorilla.rsi
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -1147,6 +1157,8 @@
     templateId: monkey
     speciesId: monkey
   - type: InventorySlots
+  - type: Puller
+    needsHands: false
   - type: Cuffable
   - type: RotationVisuals
     defaultRotation: 90
@@ -1217,8 +1229,6 @@
     spawned:
     - id: FoodMeat
       amount: 3
-  - type: Puller
-    needsHands: false
   - type: CanHostGuardian
   - type: NPCRetaliation
     attackMemoryLength: 10
@@ -1879,6 +1889,8 @@
       state: penguin
       sprite: Mobs/Animals/penguin.rsi
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2062,6 +2074,8 @@
       movement:
         state: tarantula
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2247,6 +2261,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: possum
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2322,6 +2338,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: raccoon
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2386,6 +2404,8 @@
       movement:
         state: fox
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2445,6 +2465,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: corgi
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Speech
     speechVerb: Canine
   - type: Fixtures
@@ -2596,6 +2618,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: cat
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2788,6 +2812,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 1
     baseSprintSpeed : 1
+  - type: Puller
+    needsHands: false
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/sloth.rsi
@@ -2852,6 +2878,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: ferret
   - type: Physics
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
@@ -2910,6 +2938,8 @@
     name: ghost-role-information-hamster-name
     description: ghost-role-information-hamster-description
   - type: GhostTakeoverAvailable
+  - type: Puller
+    needsHands: false
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Squeak
@@ -3047,6 +3077,8 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: pig
       sprite: Mobs/Animals/pig.rsi
+  - type: Puller
+    needsHands: false
   - type: Fixtures
     fixtures:
       fix1:
