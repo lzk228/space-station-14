@@ -390,12 +390,12 @@
 - type: emote
   id: Weh
   category: Vocal
-  chatMessages: [Weh!]
+  chatMessages: [издаёт вех!]
 
 - type: emote
   id: Chirp
   category: Vocal
-  chatMessages: [chirps!]
+  chatMessages: [чирикает!]
   chatTriggers:
     - chirp
     - chirp!
@@ -409,3 +409,8 @@
     - chirping
     - chirping.
     - chirping!
+    # Corvax-Localization-Start
+    - чирикает
+    - чирикает.
+    - чирикает!
+    # Corvax-Localization-End

@@ -36,10 +36,6 @@
                         <Button Name="DiscordButton" Text="{Loc 'connecting-discord'}"
                                 HorizontalAlignment="Center"
                                 VerticalExpand="True" VerticalAlignment="Bottom" />
-                        <Button Name="RedialButton" Text="{Loc 'connecting-redial'}"
-                                Disabled="True"
-                                HorizontalAlignment="Center"
-                                VerticalExpand="True" VerticalAlignment="Bottom" />
                     </BoxContainer>
                 </Control>
                 <Label Name="ConnectingAddress" StyleClasses="LabelSubText" HorizontalAlignment="Center" />

@@ -28,6 +28,7 @@
   - Chemistry
   - ChiefMedicalOfficer
   - Brig
+  - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

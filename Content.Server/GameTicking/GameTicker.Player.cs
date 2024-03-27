@@ -1,4 +1,5 @@
 using Content.Server.Database;
+using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
@@ -77,6 +78,11 @@ namespace Content.Server.GameTicking
                         : Loc.GetString("player-join-message", ("name", args.Session.Name)));
 
                     RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
+
+                    //if (firstConnection && _configurationManager.GetCVar(CCVars.AdminNewPlayerJoinSound))
+                    //    _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/newplayerping.ogg"),
+                    //        Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
+                    //        audioParams: new AudioParams { Volume = -5f });
 
                     // A-13 New player join system start
                     if (haveMinOverallTime)

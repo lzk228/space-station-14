@@ -114,9 +114,9 @@
         - ReagentId: Nutriment
           Quantity: 3
         - ReagentId: Sugar
-          Quantity: 2
+          Quantity: 5
         - ReagentId: Laughter
-          Quantity: 2
+          Quantity: 5
   - type: Extractable
     juiceSolution:
       reagents:
@@ -126,6 +126,9 @@
     sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
   - type: Produce
     seedId: laughinPea
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: tower-cap log
@@ -260,6 +263,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Banana
 
 - type: entity
   name: mimana
@@ -416,6 +420,7 @@
   - type: Tag
     tags:
     - Carrot
+    - Vegetable
   - type: SolutionContainerManager
     solutions:
       food:
@@ -461,6 +466,9 @@
     sprite: Objects/Specific/Hydroponics/cabbage.rsi
   - type: Produce
     seedId: cabbage
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: garlic
@@ -486,6 +494,9 @@
     sprite: Objects/Specific/Hydroponics/garlic.rsi
   - type: Produce
     seedId: garlic
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: lemon
@@ -661,6 +672,8 @@
   - type: Tag
     tags:
     - Potato
+    - Vegetable
+
 
 - type: entity
   name: tomato
@@ -715,6 +728,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegetable
 
 - type: entity
   name: blue tomato
@@ -759,6 +773,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegetable
 
 - type: entity
   name: blood tomato
@@ -801,6 +816,7 @@
   - type: Tag
     tags:
     - Fruit # Fuck you they're a fruit
+    - Vegetable
 
 - type: entity
   name: eggplant
@@ -827,6 +843,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegetable
 
 - type: entity
   name: apple
@@ -915,6 +932,7 @@
   - type: Tag
     tags:
     - Corn
+    - Vegetable
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/corn.rsi
   - type: Produce
@@ -977,6 +995,9 @@
   - type: SliceableFood
     count: 5
     slice: FoodOnionSlice
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: red onion
@@ -990,7 +1011,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 14
+        maxVol: 18
         reagents:
         - ReagentId: Nutriment
           Quantity: 10
@@ -1003,8 +1024,11 @@
   - type: Produce
     seedId: onionred
   - type: SliceableFood
-    count: 4
+    count: 5
     slice: FoodOnionRedSlice
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: chanterelle cluster
@@ -1022,6 +1046,9 @@
     sprite: Objects/Specific/Hydroponics/chanterelle.rsi
   - type: Produce
     seedId: chanterelle
+  - type: Tag
+    tags:
+    - Vegetable
 
 # Slices
 
@@ -1077,7 +1104,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 3
+        maxVol: 5
         reagents:
         - ReagentId: Nutriment
           Quantity: 2
@@ -1100,7 +1127,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 3
+        maxVol: 5
         reagents:
         - ReagentId: Nutriment
           Quantity: 2
@@ -1133,6 +1160,9 @@
       sprite: Objects/Specific/Hydroponics/chili.rsi
     - type: Produce
       seedId: chili
+    - type: Tag
+      tags:
+      - Vegetable
 
 - type: entity
   name: chilly pepper
@@ -1184,6 +1214,9 @@
     seedId: aloe
   - type: Extractable
     grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: poppy
@@ -1423,6 +1456,19 @@
   - type: Tag
     tags:
     - Fruit # It's in the name
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-Gatfruit-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-Gatfruit-botanist
+      jobRequired:
+        - Botanist
+        - Borg
+# Corvax-HiddenDesc-End
 
 - type: entity
   name: rice bushel
@@ -1463,6 +1509,9 @@
       reagents:
       - ReagentId: MilkSoy
         Quantity: 5
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: spaceman's trumpet
@@ -1516,6 +1565,9 @@
       reagents:
       - ReagentId: CarpoToxin
         Quantity: 2
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: watermelon
@@ -1608,9 +1660,6 @@
       reagents:
       - ReagentId: JuiceWatermelon
         Quantity: 4
-  - type: Tag
-    tags:
-    - Fruit
 
 - type: entity
   name: grapes
@@ -1639,6 +1688,9 @@
       reagents:
       - ReagentId: JuiceGrape
         Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
 
 - type: entity
   name: berries
@@ -1711,7 +1763,6 @@
     tags:
     - Recyclable
     - Trash
-    - Fruit
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1750,6 +1801,9 @@
     sprite: Objects/Specific/Hydroponics/pea.rsi
   - type: Produce
     seedId: pea
+  - type: Tag
+    tags:
+    - Vegetable
 
 - type: entity
   name: pumpkin
@@ -1798,6 +1852,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegetable
 
 - type: entity
   name: cotton boll
@@ -1826,3 +1881,4 @@
   - type: Tag
     tags:
     - ClothMade
+    - CottonBoll

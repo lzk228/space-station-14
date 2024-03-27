@@ -602,8 +602,6 @@
     - CannotSuicide
     - Hamster
     - VimPilot
-  - type: StealTarget
-    stealGroup: AnimalHamlet
 
 - type: entity
   name: Shiva
@@ -773,8 +771,6 @@
     attributes:
       proper: true
       gender: female
-  - type: StealTarget
-    stealGroup: AnimalSmile
   - type: TTS # Corvax-TTS
     voice: Dryad
 
@@ -814,8 +810,6 @@
     attributes:
       proper: true
       gender: male
-  - type: StealTarget
-    stealGroup: AnimalPunPun
 
 - type: entity
   name: Tropico

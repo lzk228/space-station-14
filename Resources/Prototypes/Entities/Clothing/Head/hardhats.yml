@@ -62,6 +62,9 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 #A-13 Hardhats update start
   - type: Armor 
     modifiers:

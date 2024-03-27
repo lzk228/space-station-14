@@ -10,11 +10,12 @@ using Content.Shared.Humanoid;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Salvage.Expeditions;
-using Robust.Shared.Audio;
+using Content.Shared.Shuttles.Components;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
-using Robust.Shared.Random;
+using Robust.Shared.Random; // A-13 exp music
+using Robust.Shared.Audio; // A-13 exp music
 
 namespace Content.Server.Salvage;
 
@@ -155,11 +156,11 @@ public sealed partial class SalvageSystem
             else if (comp.Stage < ExpeditionStage.MusicCountdown && remaining < TimeSpan.FromMinutes(2))
             {
                 // TODO: Some way to play audio attached to a map for players.
-                // Parkstation-ExpeditionMusic Start
+                // A-13 Exp music start
                 if (_prototypeManager.TryIndex<SoundCollectionPrototype>(comp.Sound, out var sound))
                     comp.Stream = _audio.PlayGlobal(new SoundPathSpecifier(_random.Pick(sound.PickFiles), AudioParams.Default.WithVolume(-6)),
                         Filter.BroadcastMap(Comp<MapComponent>(uid).MapId), true).Value.Entity;
-                // Parkstation-ExpeditionMusic End
+                // A-13 Exp music end
                 comp.Stage = ExpeditionStage.MusicCountdown;
                 Dirty(uid, comp);
                 Announce(uid, Loc.GetString("salvage-expedition-announcement-countdown-minutes", ("duration", TimeSpan.FromMinutes(2).Minutes)));
@@ -192,7 +193,7 @@ public sealed partial class SalvageSystem
                             if (shuttleXform.MapUid != uid || HasComp<FTLComponent>(shuttleUid))
                                 continue;
 
-                            _shuttle.FTLTravel(shuttleUid, shuttle, member, ftlTime);
+                            _shuttle.FTLToDock(shuttleUid, shuttle, member, ftlTime);
                         }
 
                         break;

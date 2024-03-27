@@ -2,9 +2,9 @@
   id: StationGoalShuttle
   text: station-goal-shuttle
 
-- type: stationGoal
-  id: StationGoalSingularity
-  text: station-goal-singularity
+#- type: stationGoal
+#  id: StationGoalSingularity
+#  text: station-goal-singularity
 
 - type: stationGoal
   id: StationGoalSolarPanels
@@ -45,6 +45,10 @@
 - type: stationGoal
   id: StationGoalAnomalyResearch
   text: station-goal-anomaly-research
+
+- type: stationGoal
+  id: StationGoalTesla
+  text: station-goal-tesla
 
 #- type: stationGoal
 #  id: StationGoalMiningOres
