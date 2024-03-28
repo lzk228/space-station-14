@@ -207,16 +207,6 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                 playerList.Remove(chosenPlayer);
             }
 
-            // A-13 No Thief-Agents system v5 start
-            var allPlayers = _playerSystem.Sessions.ToList();
-            foreach (var player in allPlayers)
-                if (HasComp<ThiefCheckComponent>(player.AttachedEntity))
-                {
-                    Logger.InfoS("ANTAG", "Skipping player cuz he is already a thief.");
-                    continue;
-                }
-            // A-13  No Thief-Agents system v5 end
-
             //If we have reached the desired number of players, skip
             if (chosenPlayers.Count >= count)
                 continue;
@@ -275,7 +265,7 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             var allPlayers = _playerSystem.Sessions.ToList();
             foreach (var player in allPlayers)
             {
-                if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+                if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots >= 7) //Checker
                 {
                     sponsorPrefList.Add(player);
                 }
@@ -284,12 +274,16 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             while (sponsorPrefList.Count > 0 && count > 0)
             {
                 var player = RobustRandom.PickAndTake(sponsorPrefList);
-                eligiblePlayerLists.Remove(player);
+                playerList.Remove(player);
                 chosenPlayers.Add(player);
                 count -= 1;
-                Logger.InfoS("sponsor", "Selected a sponsor antag!");
+                Logger.InfoS("SPONSOR", "Selected a sponsor antag!");
             }
-            if (count == 0) return chosenPlayers;
+            // If we have reached the desired number of players, exit the loop
+            if (chosenPlayers.Count >= count)
+            {
+                break;
+            }
             // A-13 SponsorAntag end
 
             //If we have reached the desired number of players, skip
