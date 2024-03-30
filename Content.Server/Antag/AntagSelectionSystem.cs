@@ -265,8 +265,11 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             var allPlayers = _playerSystem.Sessions.ToList();
             foreach (var player in allPlayers)
             {
+                // A-13 Use this for tests only
+                //if (player.UserId == new Guid("{c48a881f-25c0-4ea6-8489-1aaba1831ce3}"))
                 if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots >= 7) //Checker
                 {
+                    Logger.InfoS("SPONSOR", "Selected a sponsor antag!1");
                     sponsorPrefList.Add(player);
                 }
             }
@@ -280,10 +283,10 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                 Logger.InfoS("SPONSOR", "Selected a sponsor antag!");
             }
             // If we have reached the desired number of players, exit the loop
-            if (chosenPlayers.Count >= count)
-            {
-                break;
-            }
+            //if (chosenPlayers.Count >= count)
+            //{
+            //    break;
+            //}
             // A-13 SponsorAntag end
 
             //If we have reached the desired number of players, skip
