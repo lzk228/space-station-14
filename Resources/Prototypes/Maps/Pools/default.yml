@@ -4,10 +4,10 @@
   - Aspid
   - Omega
   - Bagel
-# - Barratry
+#  - Barratry
   - Box
   - CorvaxAstra
-  - CorvaxSpectrum
+#  - CorvaxSpectrum
   - Cluster
   - Packed
 #  - CorvaxAvrite
@@ -17,9 +17,9 @@
   - Fland
   - Core
 #  - CorvaxOutpost
-# - Origin
+#  - Origin
   - CorvaxSilly
   - Atlas
   - Saltern
-  #- Reach
-  #- Train <- return after station anchoring PR is finished and merged
+#  - Reach
+#  - Train <- return after station anchoring PR is finished and merged
