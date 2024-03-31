@@ -753,6 +753,7 @@
       - key: enum.RadarConsoleUiKey.Key
         toggleAction: ActionAGhostShowRadar
   - type: RadarConsole
+    followEntity: true
   - type: NpcFactionMember
     factions:
     - SimpleHostile
@@ -924,6 +925,7 @@
       - key: enum.RadarConsoleUiKey.Key
         toggleAction: ActionAGhostShowRadar
   - type: RadarConsole
+    followEntity: true
   - type: NpcFactionMember
     factions:
     - SimpleHostile
