@@ -255,17 +255,30 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
             }
 
             // A-13 SponsorAntag start
-            /*
             var sponsorPrefList = new List<ICommonSession>();
-            var allPlayers = _playerSystem.Sessions.ToList();
-            foreach (var player in allPlayers)
+            foreach (var player in playerList)
             {
-                // A-13 Use this for tests only
-                //if (player.UserId == new Guid("{c48a881f-25c0-4ea6-8489-1aaba1831ce3}"))
-                if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsor) && sponsor.ExtraSlots >= 7) //Checker
+                try
                 {
-                    Logger.InfoS("SPONSOR", "Selected a sponsor antag!1");
-                    sponsorPrefList.Add(player);
+                    Log.Info($"[AntagSelection] Проверка спонсорской информации для пользователя с ID: {player.UserId}");
+                    //if (player.UserId == new Guid("{Ваш UserId}")) Используется лишь для тестов, проверку ниже необходимо будет закомментировать.
+                    if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsorData))
+                    {
+                        Log.Info($"[AntagSelection] Информация о спонсоре найдена: ExtraSlots = {sponsorData.ExtraSlots}");
+                        if (sponsorData.ExtraSlots >= 7)
+                        {
+                            Log.Info($"[AntagSelection] Игрок {player} прошел проверку на спонсорство.");
+                            sponsorPrefList.Add(player);
+                        }
+                    }
+                    else
+                    {
+                        Log.Warning($"[AntagSelection] Информация о спонсоре для пользователя с ID: {player.UserId} не найдена.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"[AntagSelection] Ошибка при получении информации о спонсоре для пользователя с ID: {player.UserId}: {ex}");
                 }
             }
 
@@ -275,15 +288,9 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
                 playerList.Remove(player);
                 chosenPlayers.Add(player);
                 count -= 1;
-                Logger.InfoS("SPONSOR", "Selected a sponsor antag!");
+                Log.Info($"[AntagSelection] Игрок {player} выбран как спонсорский антаг. Оставшиеся слоты: {count}");
             }
-            // If we have reached the desired number of players, exit the loop
-            //if (chosenPlayers.Count >= count)
-            //{
-            //    break;
-            //}
             // A-13 SponsorAntag end
-            */
 
             //If we have reached the desired number of players, skip
             if (chosenPlayers.Count >= count)
