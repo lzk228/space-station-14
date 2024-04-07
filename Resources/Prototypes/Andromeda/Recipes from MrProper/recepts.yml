@@ -1,0 +1,17 @@
+- type: microwaveMealRecipe
+  id: RecipeCaesarSalad
+  name: olivie salad recipe
+  result: FoodSaladOlivie
+  time: 5
+  reagents:
+    Mayo: 5
+    Egg: 12
+    TableSalt: 5
+    Blackpepper: 5
+  solids:
+    FoodBowlBig: 1
+    FoodPotato: 2
+    FoodCarrot: 2
+    FoodMeat: 1
+    FoodPeaPod: 2
+    FoodOnionSlice: 1
