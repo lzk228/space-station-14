@@ -2,7 +2,7 @@
   name: cалат оливье
   parent: FoodBowlBase
   id: FoodSaladOlivie
-  description: Традиционное салатное блюдо в русской кухне
+  description: Традиционное салатное блюдо в русской кухне.
   suffix: Андромеда
   components:
   - type: FlavorProfile
@@ -12,10 +12,10 @@
       - egg
       - meaty
   - type: Sprite
-    sprite: Andromeda/Resources/Textures/Andromeda/NIKforest/olivie.rsi
+    sprite: Andromeda/NIKforest/olivie.rsi
     layers:
     - state: bowl
-    - state: fruit
+    - state: olivie
   - type: SolutionContainerManager
     solutions:
       food:
@@ -32,7 +32,7 @@
     - Meat
 
 - type: microwaveMealRecipe
-  id: RecipeCaesarSalad
+  id: RecipeOlivieSalad
   name: olivie salad recipe
   result: FoodSaladOlivie
   time: 5
