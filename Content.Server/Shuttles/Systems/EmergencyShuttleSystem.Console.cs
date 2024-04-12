@@ -160,22 +160,16 @@ public sealed partial class EmergencyShuttleSystem
             if (!EarlyLaunchAuthorized)
                 AnnounceLaunch();
         }
-
-        // Andromeda Emergency
-        if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency60 && trashcheck60 == 0)
+        // Andromeda Emergency start
+        if (!_launchedShuttles && !_announced && _consoleAccumulator <= _AndromedaEmergency60 && trashcheck60 == 0)
         {
-            if (_announced == false)
-            {
-                _chatSystem.DispatchGlobalAnnouncement(
-                    Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
-                    playSound: false,
-                    colorOverride: DangerColor);
-                _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
-                trashcheck60++;
-            }
+            _chatSystem.DispatchGlobalAnnouncement(
+                Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
+                playSound: false,
+                colorOverride: DangerColor);
+            _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
+            trashcheck60++;
         }
-
-        // Andromeda Emergency
         if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency30 && trashcheck30 == 0)
         {
             if (_announced == false)
@@ -188,6 +182,7 @@ public sealed partial class EmergencyShuttleSystem
                 trashcheck30++;
             }
         }
+        // Andromeda Emergency end
 
         // Imminent departure
         if (!_launchedShuttles && _consoleAccumulator <= ShuttleSystem.DefaultStartupTime)
