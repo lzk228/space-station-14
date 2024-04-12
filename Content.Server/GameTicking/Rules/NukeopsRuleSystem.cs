@@ -205,7 +205,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             }
         }
 
-        ev.AddLine(Loc.GetString("nukeops-list-start"));
+        //ev.AddLine(Loc.GetString("nukeops-list-start"));
 
         var nukiesQuery = EntityQueryEnumerator<NukeopsRoleComponent, MindContainerComponent>();
         while (nukiesQuery.MoveNext(out var nukeopsUid, out _, out var mindContainer))
