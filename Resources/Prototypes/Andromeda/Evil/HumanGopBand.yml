@@ -1,5 +1,3 @@
-# Гопник
-
 - type: entity
   id: MobGop
   name: гопник
@@ -41,8 +39,6 @@
   inhand:
     - ScalpelShiv
 
-# Заключенный
-
 - type: entity
   name: заключённый
   parent: MobGop
@@ -60,8 +56,6 @@
     shoes: ClothingShoesColorBlack
   inhand:
     - ScalpelShiv
-
-# Карманник
 
 - type: entity
   name: карманник
@@ -106,8 +100,6 @@
     outerClothing: ClothingOuterBlackHoodie
   inhand:
     - ScalpelShiv
-
-# Вышибала
 
 - type: entity
   name: вышибала
@@ -160,8 +152,6 @@
     gloves: ClothingHandsGlovesFingerless
   inhand:
     - CrowbarRed
-
-# Главарь
 
 - type: entity
   name: главарь
