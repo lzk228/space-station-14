@@ -528,7 +528,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивй красный стол #A-13 Translation
+  name: красивый красный стол #A-13 Translation
   id: TableFancyRed
   graph: Table
   startNode: start
