@@ -4,9 +4,9 @@
   suffix: Андромеда
   parent: MobSalvager
   components:
-    - type: Sprite
-      sprite: Mobs/Species/Human/parts.rsi
-      state: full
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: gop
     - type: RandomMetadata
       nameSegments: [ corvax_names_death_commando ]
     - type: Loadout
@@ -45,6 +45,9 @@
   id: MobGopPrisoner
   suffix: Андромеда
   components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: prisoner
     - type: Loadout
       prototypes: [ MobGopPrisonerGear ]
     - type: InitialInfectedExempt
@@ -63,6 +66,9 @@
   id: MobGopPickpocket
   suffix: Андромеда
   components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: pickpocket
     - type: Loadout
       prototypes: [ MobGopPickpocketGear ]
     - type: InitialInfectedExempt
@@ -107,6 +113,9 @@
   id: MobGopSecurity
   suffix: Андромеда
   components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: security
     - type: Loadout
       prototypes: [ MobGopSecurityGear ]
     - type: InitialInfectedExempt
@@ -159,6 +168,9 @@
   id: MobGopLeader
   suffix: Андромеда
   components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: leader
     - type: Loadout
       prototypes: [ MobGopLeaderGear ]
     - type: InitialInfectedExempt

@@ -8,19 +8,19 @@
   },
   "states": [
     {
-      "name": "icon"
+      "name": "gop"
     },
     {
-      "name": "equipped-BACKPACK",
-      "directions": 4
+      "name": "prisoner"
     },
     {
-      "name": "inhand-left",
-      "directions": 4
+      "name": "pickpocket"
     },
     {
-      "name": "inhand-right",
-      "directions": 4
+      "name": "security"
+    },
+    {
+      "name": "leader"
     }
   ]
 }
