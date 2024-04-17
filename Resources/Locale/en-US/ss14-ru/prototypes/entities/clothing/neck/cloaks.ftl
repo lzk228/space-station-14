@@ -50,3 +50,7 @@ ent-ClothingNeckCloakEnby = treasure hunter cloak
     .desc = This cloak belonged to a greedy treasure hunter.
 ent-ClothingNeckCloakPan = chef's cloak
     .desc = Meant to be worn alongside a frying pan.
+ent-ClothingNeckCloakSec = security's cloak
+    .desc = This cloak was made by special order from NanoTrasen, for respectable employees. It's as red as blood, so no one knows how hard you worked for the prize.
+ent-ClothingNeckCloakBarmen = barmen's cloak
+    .desc = Rumor has it that only the best bartenders wore this coat.
