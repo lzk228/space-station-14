@@ -151,8 +151,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakSec
-  name: security's cloak
-  description: This cloak was made by special order from NanoTrasen, for respectable employees. It's as red as blood, so no one knows how hard you worked for the prize.
+  name: плащ порядочного сотрудника безопасности
+  description: тот плащ был сшит по специальному заказу НаноТрейзен, для порядочных сотрудников. Он такой же красный, как и кровь, чтобы никто не знал, сколько вы старались, ради премии.
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/Sec.rsi
@@ -160,8 +160,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakBarmen
-  name: barmen's cloak
-  description: Rumor has it that only the best bartenders wore this coat.
+  name: плащ бармена
+  description: Ходят слухи, что этот плащ носили только лучшие бармены! Но вы в этом не уверенны.
   components:
   - type: Sprite
     sprite: Andromeda/Clothing/Neck/Cloaks/Barmen.rsi 
