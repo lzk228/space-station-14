@@ -14,7 +14,7 @@
     - type: InitialInfectedExempt
 
 - type: entity
-  noSpawn: false
+  noSpawn: true
   parent: ClothingBackpackKingStation
   id: ClothingBackpackKingStationFilledGopnik
   suffix: Заполненный, Андромеда
@@ -74,7 +74,7 @@
     - type: InitialInfectedExempt
 
 - type: entity
-  noSpawn: false
+  noSpawn: true
   parent: ClothingBackpackKingStation
   id: ClothingBackpackKingStationFilledPP
   suffix: Заполненный, Андромеда
@@ -131,7 +131,7 @@
     sprite: Andromeda/Evil/kingstationbackpackred.rsi
 
 - type: entity
-  noSpawn: false
+  noSpawn: true
   parent: ClothingBackpackKingStationRed
   id: ClothingBackpackKingStationRedFilledGopnik
   suffix: Заполненный, Андромеда
