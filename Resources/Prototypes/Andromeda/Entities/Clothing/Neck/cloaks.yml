@@ -155,7 +155,7 @@
   description: Этот плащ был сшит по специальному заказу НаноТрейзен, для порядочных сотрудников. Он такой же красный, как и кровь, чтобы никто не знал, сколько вы старались, ради премии.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/Neck/Cloaks/Sec.rsi
+    sprite: Andromeda/Evrozor/Clothing/security_cloak.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -164,5 +164,5 @@
   description: Ходят слухи, что этот плащ носили только лучшие бармены! Но вы в этом не уверенны.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/Neck/Cloaks/Barmen.rsi 
+    sprite: Andromeda/Evrozor/Clothing/barmen_cloak.rsi
 
