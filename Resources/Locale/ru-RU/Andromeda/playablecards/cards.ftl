@@ -1,13 +1,13 @@
 card-folded = Данная карта перевернута
 redjoker-description = На данной карте изображен красный джокер
 blackjoker-description = На данной карте изображен черный джокер
-redkingc-description = На данной карте изображен черви король
+redkingc-description = На данной карте изображен червовывй король
 blackkingp-description = На данной карте изображен пиковый король
-redqueenc-description = На данной карте изображена черви дама
+redqueenc-description = На данной карте изображена червовая дама
 blackqueenp-description = На данной карте изображена пиковая дама
-redjackc-description = На данной карте изображен черви валет
+redjackc-description = На данной карте изображен червовая валет
 blackjackp-description = На данной карте изображен пиковый валет
-redtenc-description = На данной карте изображена черви десятка
+redtenc-description = На данной карте изображена червовая десятка
 blacktenp-description = На данной карте изображена пиковая десятка
 redkingb-description = На данной карте изображен бубновый король
 blackkingt-description = На данной карте изображен трефовый король
@@ -19,46 +19,40 @@ redtenb-description = На данной карте изображена бубн
 blacktent-description = На данной карте изображена трефовая десятка
 redsevenb-description = На данной карте изображена бубновая семерка
 blacksevent-description = На данной карте изображена трефовая семерка
-redsevenc-description = На данной карте изображена черви семерка
+redsevenc-description = На данной карте изображена червовая семерка
 blacksevenp-description = На данной карте изображена пиковая семерка
 redsixb-description = На данной карте изображена бубновая шестерка
 blacksixt-description = На данной карте изображена трефовая шестерка
-redsixc-description = На данной карте изображена черви шестерка
+redsixc-description = На данной карте изображена червовая шестерка
 blacksixp-description = На данной карте изображена пиковая шестерка
 redaceb-description = На данной карте изображена бубновый туз
 blackacet-description = На данной карте изображена трефовый туз
-redacec-description = На данной карте изображена черви туз
+redacec-description = На данной карте изображена червовая туз
 blackacep-description = На данной карте изображена пиковый туз
 rednineb-description = На данной карте изображена бубновая девятка
 blackninet-description = На данной карте изображена трефовая девятка
-redninec-description = На данной карте изображена черви девятка
+redninec-description = На данной карте изображена червовая девятка
 blackninep-description = На данной карте изображена пиковая девятка
 redeightb-description = На данной карте изображена бубновая восьмерка
 blackeightt-description = На данной карте изображена трефовая восьмерка
-redeightc-description = На данной карте изображена черви восьмерка
+redeightc-description = На данной карте изображена червовая восьмерка
 blackeightp-description = На данной карте изображена пиковая восьмерка
-
 redfiveb-description = На данной карте изображена бубновая пятерка
 blackfivet-description = На данной карте изображена трефовая пятерка
-redfivec-description = На данной карте изображена черви пятерка
+redfivec-description = На данной карте изображена червовая пятерка
 blackfivep-description = На данной карте изображена пиковая пятерка
-
 redfourb-description = На данной карте изображена бубновая четверка
 blackfourt-description = На данной карте изображена трефовая четверка
-redfourc-description = На данной карте изображена черви четверка
+redfourc-description = На данной карте изображена червовая четверка
 blackfourp-description = На данной карте изображена пиковая четверка
-
 redthreeb-description = На данной карте изображена бубновая тройка
 blackthreet-description = На данной карте изображена трефовая тройка
-redthreec-description = На данной карте изображена черви тройка
+redthreec-description = На данной карте изображена червовая тройка
 blackthreep-description = На данной карте изображена пиковая тройка
-
 redtwob-description = На данной карте изображена бубновая двойка
 blacktwot-description = На данной карте изображена трефовая двойка
-redtwoc-description = На данной карте изображена черви двойка
+redtwoc-description = На данной карте изображена червовая двойка
 blacktwop-description = На данной карте изображена пиковая двойка
-
-
 ent-PlayableCardJokerRed = Игральная карта
     .desc = Вы можете сыграть ею в карты.
     .suffix = Джокер, ИгральныеКарты, Красный
