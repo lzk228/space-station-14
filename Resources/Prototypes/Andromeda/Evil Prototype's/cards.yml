@@ -3,7 +3,7 @@
   parent: BaseItem
   id: PlayableCardJokerRed
   name: playablecard
-  suffix: Joker, PlayableCards, Red
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -36,7 +36,7 @@
   parent: BaseItem
   id: PlayableCardJokerBlack
   name: playablecard
-  suffix: Joker, PlayableCards, Black
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -69,7 +69,7 @@
   parent: BaseItem
   id: PlayableCardAceRedB
   name: playablecard
-  suffix: Ace, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -102,7 +102,7 @@
   parent: BaseItem
   id: PlayableCardAceBlackP
   name: playablecard
-  suffix: Ace, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -135,7 +135,7 @@
   parent: BaseItem
   id: PlayableCardAceRedC
   name: playablecard
-  suffix: Ace, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -168,7 +168,7 @@
   parent: BaseItem
   id: PlayableCardAceBlackT
   name: playablecard
-  suffix: Ace, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -201,7 +201,7 @@
   parent: BaseItem
   id: PlayableCardKingRedC
   name: playablecard
-  suffix: King, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -234,7 +234,7 @@
   parent: BaseItem
   id: PlayableCardKingBlackP
   name: playablecard
-  suffix: King, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -267,7 +267,7 @@
   parent: BaseItem
   id: PlayableCardKingRedB
   name: playablecard
-  suffix: King, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -300,7 +300,7 @@
   parent: BaseItem
   id: PlayableCardKingBlackT
   name: playablecard
-  suffix: King, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -333,7 +333,7 @@
   parent: BaseItem
   id: PlayableCardQueenRedC
   name: playablecard
-  suffix: Queen, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -366,7 +366,7 @@
   parent: BaseItem
   id: PlayableCardQueenBlackT
   name: playablecard
-  suffix: Queen, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -399,7 +399,7 @@
   parent: BaseItem
   id: PlayableCardQueenRedB
   name: playablecard
-  suffix: Queen, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -432,7 +432,7 @@
   parent: BaseItem
   id: PlayableCardQueenBlackP
   name: playablecard
-  suffix: Queen, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -465,7 +465,7 @@
   parent: BaseItem
   id: PlayableCardJackRedB
   name: playablecard
-  suffix: Jack, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -498,7 +498,7 @@
   parent: BaseItem
   id: PlayableCardJackBlackT
   name: playablecard
-  suffix: Jack, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -531,7 +531,7 @@
   parent: BaseItem
   id: PlayableCardJackRedC
   name: playablecard
-  suffix: Jack, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -564,7 +564,7 @@
   parent: BaseItem
   id: PlayableCardJackBlackP
   name: playablecard
-  suffix: Jack, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -597,7 +597,7 @@
   parent: BaseItem
   id: PlayableCardTenRedB
   name: playablecard
-  suffix: Ten, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -630,7 +630,7 @@
   parent: BaseItem
   id: PlayableCardTenBlackP
   name: playablecard
-  suffix: Ten, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -663,7 +663,7 @@
   parent: BaseItem
   id: PlayableCardTenRedC
   name: playablecard
-  suffix: Ten, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -696,7 +696,7 @@
   parent: BaseItem
   id: PlayableCardTenBlackT
   name: playablecard
-  suffix: Ten, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -729,7 +729,7 @@
   parent: BaseItem
   id: PlayableCardNineRedB
   name: playablecard
-  suffix: Nine, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -762,7 +762,7 @@
   parent: BaseItem
   id: PlayableCardNineBlackP
   name: playablecard
-  suffix: Nine, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -795,7 +795,7 @@
   parent: BaseItem
   id: PlayableCardNineRedC
   name: playablecard
-  suffix: Nine, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -828,7 +828,7 @@
   parent: BaseItem
   id: PlayableCardNineBlackT
   name: playablecard
-  suffix: Nine, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -861,7 +861,7 @@
   parent: BaseItem
   id: PlayableCardEightRedB
   name: playablecard
-  suffix: Eight, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -894,7 +894,7 @@
   parent: BaseItem
   id: PlayableCardEightBlackP
   name: playablecard
-  suffix: Eight, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -927,7 +927,7 @@
   parent: BaseItem
   id: PlayableCardEightRedC
   name: playablecard
-  suffix: Eight, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -960,7 +960,7 @@
   parent: BaseItem
   id: PlayableCardEightBlackT
   name: playablecard
-  suffix: Eight, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -993,7 +993,7 @@
   parent: BaseItem
   id: PlayableCardSevenRedB
   name: playablecard
-  suffix: Seven, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1026,7 +1026,7 @@
   parent: BaseItem
   id: PlayableCardSevenBlackP
   name: playablecard
-  suffix: Seven, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1059,7 +1059,7 @@
   parent: BaseItem
   id: PlayableCardSevenRedC
   name: playablecard
-  suffix: Seven, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1092,7 +1092,7 @@
   parent: BaseItem
   id: PlayableCardSevenBlackT
   name: playablecard
-  suffix: Seven, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1125,7 +1125,7 @@
   parent: BaseItem
   id: PlayableCardSixRedB
   name: playablecard
-  suffix: Six, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1158,7 +1158,7 @@
   parent: BaseItem
   id: PlayableCardSixBlackP
   name: playablecard
-  suffix: Six, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1191,7 +1191,7 @@
   parent: BaseItem
   id: PlayableCardSixRedC
   name: playablecard
-  suffix: Six, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1224,7 +1224,7 @@
   parent: BaseItem
   id: PlayableCardSixBlackT
   name: playablecard
-  suffix: Six, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1257,7 +1257,7 @@
   parent: BaseItem
   id: PlayableCardFiveRedB
   name: playablecard
-  suffix: Five, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1290,7 +1290,7 @@
   parent: BaseItem
   id: PlayableCardFiveBlackP
   name: playablecard
-  suffix: Five, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1323,7 +1323,7 @@
   parent: BaseItem
   id: PlayableCardFiveRedC
   name: playablecard
-  suffix: Five, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1356,7 +1356,7 @@
   parent: BaseItem
   id: PlayableCardFiveBlackT
   name: playablecard
-  suffix: Five, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1389,7 +1389,7 @@
   parent: BaseItem
   id: PlayableCardFourRedB
   name: playablecard
-  suffix: Four, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1422,7 +1422,7 @@
   parent: BaseItem
   id: PlayableCardFourBlackP
   name: playablecard
-  suffix: Four, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1455,7 +1455,7 @@
   parent: BaseItem
   id: PlayableCardFourRedC
   name: playablecard
-  suffix: Four, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1488,7 +1488,7 @@
   parent: BaseItem
   id: PlayableCardFourBlackT
   name: playablecard
-  suffix: Four, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1521,7 +1521,7 @@
   parent: BaseItem
   id: PlayableCardThreeRedB
   name: playablecard
-  suffix: Three, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1554,7 +1554,7 @@
   parent: BaseItem
   id: PlayableCardThreeBlackP
   name: playablecard
-  suffix: Three, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1587,7 +1587,7 @@
   parent: BaseItem
   id: PlayableCardThreeRedC
   name: playablecard
-  suffix: Three, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1620,7 +1620,7 @@
   parent: BaseItem
   id: PlayableCardThreeBlackT
   name: playablecard
-  suffix: Three, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1653,7 +1653,7 @@
   parent: BaseItem
   id: PlayableCardTwoRedB
   name: playablecard
-  suffix: Two, PlayableCards, Diamonds
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1686,7 +1686,7 @@
   parent: BaseItem
   id: PlayableCardTwoBlackP
   name: playablecard
-  suffix: Two, PlayableCards, Spades
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1719,7 +1719,7 @@
   parent: BaseItem
   id: PlayableCardTwoRedC
   name: playablecard
-  suffix: Two, PlayableCards, Hearts
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
@@ -1752,7 +1752,7 @@
   parent: BaseItem
   id: PlayableCardTwoBlackT
   name: playablecard
-  suffix: Two, PlayableCards, Clubs
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda\Evil\playablecard.rsi
