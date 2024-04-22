@@ -6,7 +6,7 @@
   suffix: Андромеда
   components: 
   - type: Sprite
-    sprite: Andromeda/Evrozor/plushies/robomechanic.rsi
+    sprite: Andromeda/Evrozor/plushies/plushie_robomechanic.rsi
     state: icon
   - type: Extractable
     juiceSolution:
