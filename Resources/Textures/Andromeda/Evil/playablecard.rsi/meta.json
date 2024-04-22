@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "By EvilBug for Andromeda13",
+  "copyright": "By EvilBug for Andromeda 13",
   "size": {
     "x": 32,
     "y": 32
@@ -171,8 +171,18 @@
     },
     {
       "name": "blacktwot"
+    },
+    {
+      "name": "sindiback"
+    },
+    {
+      "name": "sindibackred"
+    },
+    {
+      "name": "sindijack"
+    },
+    {
+      "name": "sindijackred"
     }
-
-
   ]
 }

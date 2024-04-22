@@ -1781,6 +1781,108 @@
     - PlayableCard
 
 - type: entity
+  noSpawn: false
+  parent: BaseItem
+  id: PlayableCardSindiJack
+  name: playablecard
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: sindijack
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: sindijack-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: sindijack}
+        front:
+          True: {state: sindijack}
+          False: {state: back}
+  - type: Sharp
+  - type: Utensil
+    types:
+      - Knife
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 10
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Tool
+    qualities:
+      - Slicing
+    useSound:
+      path: /Audio/Items/Culinary/chop.ogg
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: false
+  parent: BaseItem
+  id: PlayableCardSindiJackRed
+  name: playablecard
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: sindijack
+      map: ["front"]
+    - state: sindibackred
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: sindijackred-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: sindibackred}
+          False: {state: sindijackred}
+        front:
+          True: {state: sindijackred}
+          False: {state: sindibackred}
+  - type: Sharp
+  - type: Utensil
+    types:
+      - Knife
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 12
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 10
+  - type: Tool
+    qualities:
+      - Slicing
+    useSound:
+      path: /Audio/Items/Culinary/chop.ogg
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
   id: CardBin
   parent: [ BaseStorageItem, BaseBagOpenClose ]
   name: card box
@@ -1803,9 +1905,7 @@
       sprite: Andromeda\Evil\cardbin.rsi
       visible: false
   - type: Item
-    size: Large
-    shape:
-    - 0,0,5,8
+    size: Small
   - type: Clothing
     quickEquip: false
     slots:
@@ -1941,3 +2041,551 @@
     - id: PlayableCardTwoBlackP
     - id: PlayableCardTwoRedC
     - id: PlayableCardTwoBlackT
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackSatchelLeather
+  id: ClothingBackpackSatchelLeatherDealer
+  name: набор карточного дилера
+  suffix: Заполненный, Андромеда
+  components:
+  - type:  StorageFill
+    contents:
+      - id: CardBinFool
+      - id: CardBinFool
+      - id: CardBinPoker
+      - id: CardBinPoker
+      - id: PokerChipsVStack5
+      - id: PokerChipsVStack5
+      - id: PokerChipsXStack5
+      - id: PokerChipsXStack5
+      - id: PokerChipsLStack5
+      - id: PokerChipsLStack5
+      - id: PokerChipsCStack5
+      - id: PokerChipsCStack5
+      - id: PokerChipsDStack5
+      - id: PokerChipsDStack5
+      - id: PokerChipsMStack5
+      - id: PokerChipsMStack5
+
+- type: stack
+  id: PokerChipsVStack
+  name: покерные фишки 5
+  icon: { sprite: "/Andromeda/Evil/pokerchipsv.rsi", state: poker5 }
+  spawn: PokerChipsStack1
+  maxCount: 5
+  itemSize: 1
+
+- type: stack
+  id: PokerChipsXStack
+  name: покерные фишки 10
+  icon: { sprite: "/Andromeda/Evil/pokerchipsx.rsi", state: poker5 }
+  spawn: PokerChipsStack1
+  maxCount: 5
+  itemSize: 1
+
+- type: stack
+  id: PokerChipsLStack
+  name: покерные фишки 50
+  icon: { sprite: "/Andromeda/Evil/pokerchipsl.rsi", state: poker5 }
+  spawn: PokerChipsStack1
+  maxCount: 5
+  itemSize: 1
+
+- type: stack
+  id: PokerChipsCStack
+  name: покерные фишки 100
+  icon: { sprite: "/Andromeda/Evil/pokerchipsc.rsi", state: poker5 }
+  spawn: PokerChipsStack1
+  maxCount: 5
+  itemSize: 1
+
+- type: stack
+  id: PokerChipsDStack
+  name: покерные фишки 500
+  icon: { sprite: "/Andromeda/Evil/pokerchipsd.rsi", state: poker5 }
+  spawn: PokerChipsStack1
+  maxCount: 5
+  itemSize: 1
+
+- type: stack
+  id: PokerChipsMStack
+  name: покерные фишки 1000
+  icon: { sprite: "/Andromeda/Evil/pokerchipsm.rsi", state: poker5 }
+  spawn: PokerChipsStack1
+  maxCount: 5
+  itemSize: 1
+
+- type: entity
+  noSpawn: true
+  id: PokerChipsV
+  name: покерные фишки (5 кредитов)
+  suffix: Андромеда, Фишки
+  parent: BaseTabletopPiece
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Andromeda\Evil\pokerchipsv.rsi
+    state: poker5
+    layers:
+    - state: poker5
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\pokerchipsv.rsi
+    size: Small
+  - type: Stack
+    stackType: PokerChipsVStack
+    baseLayer: base
+    layerStates:
+    - poker0
+    - poker1
+    - poker2
+    - poker3
+    - poker4
+    - poker5
+
+- type: entity
+  noSpawn: true
+  id: PokerChipsX
+  name: покерные фишки (10 кредитов)
+  suffix: Андромеда, Фишки
+  parent: BaseTabletopPiece
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Andromeda\Evil\pokerchipsx.rsi
+    state: poker5
+    layers:
+    - state: poker5
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\pokerchipsx.rsi
+    size: Small
+  - type: Stack
+    stackType: PokerChipsXStack
+    baseLayer: base
+    layerStates:
+    - poker0
+    - poker1
+    - poker2
+    - poker3
+    - poker4
+    - poker5
+
+- type: entity
+  noSpawn: true
+  id: PokerChipsL
+  name: покерные фишки (50 кредитов)
+  suffix: Андромеда, Фишки
+  parent: BaseTabletopPiece
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Andromeda\Evil\pokerchipsl.rsi
+    state: poker5
+    layers:
+    - state: poker5
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\pokerchipsl.rsi
+    size: Small
+  - type: Stack
+    stackType: PokerChipsLStack
+    baseLayer: base
+    layerStates:
+    - poker0
+    - poker1
+    - poker2
+    - poker3
+    - poker4
+    - poker5
+
+- type: entity
+  noSpawn: true
+  id: PokerChipsC
+  name: покерные фишки (100 кредитов)
+  suffix: Андромеда, Фишки
+  parent: BaseTabletopPiece
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Andromeda\Evil\pokerchipsc.rsi
+    state: poker5
+    layers:
+    - state: poker5
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\pokerchipsc.rsi
+    size: Small
+  - type: Stack
+    stackType: PokerChipsCStack
+    baseLayer: base
+    layerStates:
+    - poker0
+    - poker1
+    - poker2
+    - poker3
+    - poker4
+    - poker5
+
+- type: entity
+  noSpawn: true
+  id: PokerChipsD
+  name: покерные фишки (500 кредитов)
+  suffix: Андромеда, Фишки
+  parent: BaseTabletopPiece
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Andromeda\Evil\pokerchipsd.rsi
+    state: poker5
+    layers:
+    - state: poker5
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\pokerchipsd.rsi
+    size: Small
+  - type: Stack
+    stackType: PokerChipsDStack
+    baseLayer: base
+    layerStates:
+    - poker0
+    - poker1
+    - poker2
+    - poker3
+    - poker4
+    - poker5
+
+- type: entity
+  noSpawn: true
+  id: PokerChipsM
+  name: покерные фишки (1000 кредитов)
+  suffix: Андромеда, Фишки
+  parent: BaseTabletopPiece
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Andromeda\Evil\pokerchipsm.rsi
+    state: poker5
+    layers:
+    - state: poker5
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\pokerchipsm.rsi
+    size: Small
+  - type: Stack
+    stackType: PokerChipsMStack
+    baseLayer: base
+    layerStates:
+    - poker0
+    - poker1
+    - poker2
+    - poker3
+    - poker4
+    - poker5
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsV
+  id: PokerChipsVStack1
+  components:
+  - type: Sprite
+    state: poker0
+  - type: Stack
+    count: 1
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsV
+  id: PokerChipsVStack2
+  components:
+  - type: Sprite
+    state: poker1
+  - type: Stack
+    count: 2
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsV
+  id: PokerChipsVStack3
+  components:
+  - type: Sprite
+    state: poker2
+  - type: Stack
+    count: 3
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsV
+  id: PokerChipsVStack4
+  components:
+  - type: Sprite
+    state: poker3
+  - type: Stack
+    count: 4
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsV
+  id: PokerChipsVStack5
+  components:
+  - type: Sprite
+    state: poker4
+  - type: Stack
+    count: 5
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsX
+  id: PokerChipsXStack1
+  components:
+  - type: Sprite
+    state: poker0
+  - type: Stack
+    count: 1
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsX
+  id: PokerChipsXStack2
+  components:
+  - type: Sprite
+    state: poker1
+  - type: Stack
+    count: 2
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsX
+  id: PokerChipsXStack3
+  components:
+  - type: Sprite
+    state: poker2
+  - type: Stack
+    count: 3
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsX
+  id: PokerChipsXStack4
+  components:
+  - type: Sprite
+    state: poker3
+  - type: Stack
+    count: 4
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsX
+  id: PokerChipsXStack5
+  components:
+  - type: Sprite
+    state: poker4
+  - type: Stack
+    count: 5
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsL
+  id: PokerChipsLStack1
+  components:
+  - type: Sprite
+    state: poker0
+  - type: Stack
+    count: 1
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsL
+  id: PokerChipsLStack2
+  components:
+  - type: Sprite
+    state: poker1
+  - type: Stack
+    count: 2
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsL
+  id: PokerChipsLStack3
+  components:
+  - type: Sprite
+    state: poker2
+  - type: Stack
+    count: 3
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsL
+  id: PokerChipsLStack4
+  components:
+  - type: Sprite
+    state: poker3
+  - type: Stack
+    count: 4
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsL
+  id: PokerChipsLStack5
+  components:
+  - type: Sprite
+    state: poker4
+  - type: Stack
+    count: 5
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsC
+  id: PokerChipsCStack1
+  components:
+  - type: Sprite
+    state: poker0
+  - type: Stack
+    count: 1
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsC
+  id: PokerChipsCStack2
+  components:
+  - type: Sprite
+    state: poker1
+  - type: Stack
+    count: 2
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsC
+  id: PokerChipsCStack3
+  components:
+  - type: Sprite
+    state: poker2
+  - type: Stack
+    count: 3
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsC
+  id: PokerChipsCStack4
+  components:
+  - type: Sprite
+    state: poker3
+  - type: Stack
+    count: 4
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsC
+  id: PokerChipsCStack5
+  components:
+  - type: Sprite
+    state: poker4
+  - type: Stack
+    count: 5
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsD
+  id: PokerChipsDStack1
+  components:
+  - type: Sprite
+    state: poker0
+  - type: Stack
+    count: 1
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsD
+  id: PokerChipsDStack2
+  components:
+  - type: Sprite
+    state: poker1
+  - type: Stack
+    count: 2
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsD
+  id: PokerChipsDStack3
+  components:
+  - type: Sprite
+    state: poker2
+  - type: Stack
+    count: 3
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsD
+  id: PokerChipsDStack4
+  components:
+  - type: Sprite
+    state: poker3
+  - type: Stack
+    count: 4
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsD
+  id: PokerChipsDStack5
+  components:
+  - type: Sprite
+    state: poker4
+  - type: Stack
+    count: 5
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsM
+  id: PokerChipsMStack1
+  components:
+  - type: Sprite
+    state: poker0
+  - type: Stack
+    count: 1
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsM
+  id: PokerChipsMStack2
+  components:
+  - type: Sprite
+    state: poker1
+  - type: Stack
+    count: 2
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsM
+  id: PokerChipsMStack3
+  components:
+  - type: Sprite
+    state: poker2
+  - type: Stack
+    count: 3
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsM
+  id: PokerChipsMStack4
+  components:
+  - type: Sprite
+    state: poker3
+  - type: Stack
+    count: 4
+
+- type: entity
+  noSpawn: true
+  parent: PokerChipsM
+  id: PokerChipsMStack5
+  components:
+  - type: Sprite
+    state: poker4
+  - type: Stack
+    count: 5
