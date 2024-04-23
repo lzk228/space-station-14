@@ -232,7 +232,7 @@ namespace Content.Server.Communications
             //A-13 Eblan system update start
             if (HasComp<EblanComponent>(mob))
             {
-                _popupSystem.PopupCursor(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
+                _popupSystem.PopupEntity(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
                 return;
             }
             //A-13 Eblan system update end
@@ -266,7 +266,7 @@ namespace Content.Server.Communications
                 //A-13 Eblan system update start
                 if (HasComp<EblanComponent>(mob))
                 {
-                    _popupSystem.PopupCursor(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
+                    _popupSystem.PopupEntity(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
                     return;
                 }
                 //A-13 Eblan system update end
