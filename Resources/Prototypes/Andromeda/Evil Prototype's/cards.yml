@@ -1933,6 +1933,29 @@
   - type: Dumpable
 
 - type: entity
+  id: CardBin2
+  parent: CardBin
+  name: card box
+  suffix: Пустой, Андромеда
+  description: What secrets lie at the bottom of its endless stack?
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\cardbin.rsi
+    layers:
+    - state: closed2
+    - state: open2
+      map: ["openLayer"]
+      visible: false
+    - state: card1
+      map: ["card1"]
+      sprite: Andromeda\Evil\cardbin.rsi
+      visible: false
+    - state: card2
+      map: ["card2"]
+      sprite: Andromeda\Evil\cardbin.rsi
+      visible: false
+
+- type: entity
   noSpawn: true
   parent: CardBin
   id: CardBinFool
@@ -1980,7 +2003,7 @@
 
 - type: entity
   noSpawn: true
-  parent: CardBin
+  parent: CardBin2
   id: CardBinPoker
   name: колода карт (покер)
   suffix: Заполненный, Андромеда
@@ -2051,28 +2074,28 @@
   components:
   - type:  StorageFill
     contents:
-      - id: CardBinFool
-      - id: CardBinFool
       - id: CardBinPoker
       - id: CardBinPoker
+      - id: AppraisalTool
       - id: PokerChipsVStack5
       - id: PokerChipsVStack5
       - id: PokerChipsXStack5
       - id: PokerChipsXStack5
+      - id: PokerChipsXStack5
+      - id: PokerChipsLStack5
       - id: PokerChipsLStack5
       - id: PokerChipsLStack5
       - id: PokerChipsCStack5
       - id: PokerChipsCStack5
+      - id: PokerChipsCStack5
       - id: PokerChipsDStack5
-      - id: PokerChipsDStack5
-      - id: PokerChipsMStack5
       - id: PokerChipsMStack5
 
 - type: stack
   id: PokerChipsVStack
   name: покерные фишки 5
   icon: { sprite: "/Andromeda/Evil/pokerchipsv.rsi", state: poker5 }
-  spawn: PokerChipsStack1
+  spawn: PokerChipsVStack1
   maxCount: 5
   itemSize: 1
 
@@ -2080,7 +2103,7 @@
   id: PokerChipsXStack
   name: покерные фишки 10
   icon: { sprite: "/Andromeda/Evil/pokerchipsx.rsi", state: poker5 }
-  spawn: PokerChipsStack1
+  spawn: PokerChipsXStack1
   maxCount: 5
   itemSize: 1
 
@@ -2088,7 +2111,7 @@
   id: PokerChipsLStack
   name: покерные фишки 50
   icon: { sprite: "/Andromeda/Evil/pokerchipsl.rsi", state: poker5 }
-  spawn: PokerChipsStack1
+  spawn: PokerChipsLStack1
   maxCount: 5
   itemSize: 1
 
@@ -2096,7 +2119,7 @@
   id: PokerChipsCStack
   name: покерные фишки 100
   icon: { sprite: "/Andromeda/Evil/pokerchipsc.rsi", state: poker5 }
-  spawn: PokerChipsStack1
+  spawn: PokerChipsCStack1
   maxCount: 5
   itemSize: 1
 
@@ -2104,7 +2127,7 @@
   id: PokerChipsDStack
   name: покерные фишки 500
   icon: { sprite: "/Andromeda/Evil/pokerchipsd.rsi", state: poker5 }
-  spawn: PokerChipsStack1
+  spawn: PokerChipsDStack1
   maxCount: 5
   itemSize: 1
 
@@ -2112,7 +2135,7 @@
   id: PokerChipsMStack
   name: покерные фишки 1000
   icon: { sprite: "/Andromeda/Evil/pokerchipsm.rsi", state: poker5 }
-  spawn: PokerChipsStack1
+  spawn: PokerChipsMStack1
   maxCount: 5
   itemSize: 1
 

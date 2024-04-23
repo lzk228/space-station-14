@@ -11,6 +11,9 @@
       "name": "closed"
     },
     {
+      "name": "closed2"
+    },
+    {
       "name": "card1"
     },
     {
@@ -18,6 +21,9 @@
     },
     {
       "name": "open"
+    },
+    {
+      "name": "open2"
     }
   ]
 }
