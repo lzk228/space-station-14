@@ -234,7 +234,7 @@ namespace Content.Server.Kitchen.EntitySystems
             //A-13 Eblan system update start
             if (HasComp<EblanComponent>(userUid))
             {
-                _popupSystem.PopupCursor(Loc.GetString("Вы не можете вешать тела на крюк, вы наиграли ещё слишком мало.", ("user", Identity.Entity(userUid, EntityManager))),
+                _popupSystem.PopupEntity(Loc.GetString("Вы не можете вешать тела на крюк, вы наиграли ещё слишком мало.", ("user", Identity.Entity(userUid, EntityManager))),
                     userUid, userUid);
                 return false;
             }
