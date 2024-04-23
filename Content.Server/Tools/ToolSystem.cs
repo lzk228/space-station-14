@@ -44,7 +44,7 @@ namespace Content.Server.Tools
             if (component.Qualities.Contains(WeldingQualityId) && EntityManager.HasComponent<EblanComponent>(args.User))
             {
                 args.Cancel();
-                _popupSystem.PopupEntity(Loc.GetString("Вы наиграли слишком мало времени, вы не можете пользоваться сваркой."), args.User, PopupType.Large);
+                _popupSystem.PopupCursor(Loc.GetString("Вы наиграли слишком мало времени, вы не можете пользоваться сваркой."), args.User, PopupType.Large);
             }
         }
         //A-13 Eblan system update end
