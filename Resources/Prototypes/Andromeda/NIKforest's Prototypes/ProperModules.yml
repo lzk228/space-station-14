@@ -91,7 +91,7 @@
 - type: entity
   id: BorgModuleWayFixProper
   parent: [ BaseBorgModuleProper, BaseProviderBorgModule ]
-  name: Очищающий путь модуль пропера
+  name: Ремонтный модуль пропера
   components:
   - type: Sprite
     layers:
