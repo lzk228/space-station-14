@@ -1,0 +1,39 @@
+- type: entity
+  name: священная книга похоти
+  description: Эта книга притягивает любовь, а также ее создает. 
+  parent: BaseItem
+  id: HornyBible
+  components:
+#  - type: Prayable
+#    bibleUserOnly: true
+  - type: Sprite
+    sprite: Andromeda/Evrozor/other/horny_bible.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evrozor/other/horny_bible.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Tag
+    tags:
+    - Book
+  - type: SolutionContainerManager
+    solutions:
+      essence:
+        maxVol: 300000
+        reagents:
+        - ReagentId: Aphrodisiac
+          Quantity: 300000
+  - type: InjectableSolution
+    solution: essence
+  - type: RefillableSolution
+    solution: essence
+#  - type: ExaminableSolution
+#    solution: essence
+  - type: Hypospray
+    solutionName: essence
+    transferAmount: 10
+  - type: UseDelay
+    delay: 0.5
+  
