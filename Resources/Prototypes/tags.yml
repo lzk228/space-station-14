@@ -1318,3 +1318,6 @@
 
 - type: Tag
   id: WriteIgnoreStamps
+
+- type: tag
+  id: BorgModuleProper
