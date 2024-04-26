@@ -36,7 +36,3 @@
     wideAnimationRotation: 180
     soundHit:
       collection: MaleYawn
-  - type: Food
-    useSound:
-      collection: MaleYawn
-  
