@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesWindings
+  name: обмотки
+  description: Пара лоскутных тряпок, для обматывания ног.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Waufuf/Shoes/windings.rs
+  - type: Clothing
+    sprite: Andromeda/Waufuf/Shoes/windings.rs
+  - type: Matchbox
