@@ -1,0 +1,42 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieRD
+  name: плюшевый научный руководитель
+  description: Плюшевый научный руководитель, постоянно ходит как обкуренный, выглядит сонным.
+  suffix: Андромеда
+  components:
+  - type: Item
+    sprite: Andromeda/Lemird/plushierd.rsi
+    size: Small
+  - type: Sprite
+    sprite: Andromeda/Lemird/plushierd.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      collection: MaleYawn
+    params:
+      variation: 0.125
+      pitch: 0.75
+  - type: EmitSoundOnLand
+    sound:
+      collection: MaleYawn
+    params:
+      variation: 0.125
+      pitch: 0.75
+  - type: EmitSoundOnActivate
+    sound:
+      collection: MaleYawn
+    params:
+      variation: 0.125
+      pitch: 0.75
+  - type: EmitSoundOnCollide
+    sound:
+      collection: MaleYawn
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: MaleYawn
+  - type: Food
+    useSound:
+      collection: MaleYawn
+  

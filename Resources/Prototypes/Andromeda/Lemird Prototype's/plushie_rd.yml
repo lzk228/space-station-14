@@ -9,7 +9,7 @@
     sprite: Andromeda/Lemird/plushierd.rsi
     size: Small
   - type: Sprite
-    sprite: Andromeda/Evrozor/plushies/plushie_rd.rsi
+    sprite: Andromeda/Lemird/plushierd.rsi
     state: icon
   - type: EmitSoundOnUse
     sound:
