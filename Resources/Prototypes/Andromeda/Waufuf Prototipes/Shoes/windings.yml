@@ -5,7 +5,7 @@
   description: Пара лоскутных тряпок, для обматывания ног.
   components:
   - type: Sprite
-    sprite: Andromeda/Waufuf/Shoes/windings.rs
+    sprite: Andromeda/Waufuf/Shoes/windings.rsi
   - type: Clothing
-    sprite: Andromeda/Waufuf/Shoes/windings.rs
+    sprite: Andromeda/Waufuf/Shoes/windings.rsi
   - type: Matchbox
