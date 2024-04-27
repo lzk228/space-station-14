@@ -102,7 +102,7 @@ public sealed class FatigueSystem : EntitySystem
     {
         if (!Resolve(uid, ref component, false) || component.Deleted)
         {
-            Log.Info($"Для {uid} были удалены все типы усталости потому что компонент был удалён.");
+            Log.Warning($"Для {uid} были удалены все типы усталости потому что компонент был удалён.");
             _alerts.ClearAlertCategory(uid, AlertCategory.Fatigue);
             return;
         }
@@ -129,7 +129,6 @@ public sealed class FatigueSystem : EntitySystem
         if (!Deleted(uid) && TryComp<FatigueComponent>(uid, out var fatigueComp))
         {
             _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComp);
-            Log.Info($"Для игрока {uid} была вызвана проверка метода UpdateMovementSpeed.");
 
             if (HasComp<NearsightedComponent>(uid))
             {
@@ -138,7 +137,7 @@ public sealed class FatigueSystem : EntitySystem
             }
             else
             {
-                Log.Info($"Игрок {uid} не имеет компонента NearsightedComponent.");
+                Log.Info($"Игрок {uid} не имеет компонента NearsightedComponent, поэтому HasNearsightedComponent остаётся на false.");
             }
 
             _fatigueSystem.CheckAndUpdateNearsighted(uid, fatigueComp);
@@ -210,6 +209,22 @@ public sealed class FatigueSystem : EntitySystem
             {
                 Log.Info($"Усталость для {uid} уменьшена с {oldFatigue} до {fatigueComp.CurrentFatigue}.");
             }
+
+            if (fatigueComp.CurrentFatigue <= 0)
+            {
+                Log.Info($"Усталость для {uid} достигла 0, пытаемся усыпить игрока.");
+                if (!HasComp<ForcedSleepingComponent>(uid))
+                {
+                    EntityManager.AddComponent<ForcedSleepingComponent>(uid);
+                    Log.Info($"Игрок {uid} уснул потому что его усталость достигла 0");
+                    fatigueComp.CurrentFatigue = 30;
+                    Timer.Spawn(60000, () => RemoveForcedSleep(uid));
+                }
+                else
+                {
+                    Log.Warning($"Игрок {uid} уже имеет активный ForcedSleepingComponent, невозможно выполнить команду.");
+                }
+            }
         }
         else
         {
@@ -240,6 +255,14 @@ public sealed class FatigueSystem : EntitySystem
         else
         {
             Log.Error($"Попытка восстановить усталость была совершена для {uid}, но FatigueComponent не найден.");
+        }
+    }
+    private void RemoveForcedSleep(EntityUid uid)
+    {
+        if (HasComp<ForcedSleepingComponent>(uid))
+        {
+            EntityManager.RemoveComponent<ForcedSleepingComponent>(uid);
+            Log.Info($"ForcedSleepingComponent удален у {uid} после 1 минуты сна.");
         }
     }
 }

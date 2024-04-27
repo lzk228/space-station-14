@@ -63,7 +63,7 @@ public sealed partial class FatigueComponent : Component
     [DataField("fatigueMessagesTypeThree")]
     public List<string> FatigueMessagesTypeThree { get; set; } = new()
     {
-        "Каждый шаг дается с огромным трудом...",
+        "Каждый шаг даётся с огромным трудом...",
         "Вы уже чувствуете как засыпаете...",
         "Вы чувствуете как ваши веки стали тяжёлыми...",
         "Вы понимаете что долго так не может продолжаться...",
