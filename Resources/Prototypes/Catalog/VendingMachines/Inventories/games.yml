@@ -17,8 +17,8 @@
     PaperCNCSheet: 6
     MysteryFigureBox: 2
     BooksBag: 3
-    CardBinFool: 3
-    CardBinPoker: 3
+    CardBinFool: 3 #А-13 CardGame
+    CardBinPoker: 3 #А-13 CardGame
   emaggedInventory:
-    PlayableCardSindiJack: 2
-    PlayableCardSindiJackRed: 2
+    PlayableCardSindiJack: 2 #А-13 CardGame
+    PlayableCardSindiJackRed: 2 #А-13 CardGame

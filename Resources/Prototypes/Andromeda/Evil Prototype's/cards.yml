@@ -1,3 +1,6 @@
+- type: Tag
+  id: PlayableCard
+
 - type: entity
   noSpawn: true
   parent: BaseItem
