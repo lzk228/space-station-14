@@ -44,7 +44,6 @@
   - type: Polymorphable
   - type: StatusIcon
   - type: Fatigue #A-13 Fatigue
-  - type: FatigueVision #A-13 Fatigue
   - type: TTS # Corvax-TTS
 
 # Used for mobs that have health and can take damage.

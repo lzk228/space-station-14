@@ -5,13 +5,13 @@ using Content.Shared.Popups;
 using Content.Shared.Andromeda.Lemird.Fatigue;
 using Content.Server.Guardian;
 using Content.Shared.Alert;
+using Content.Shared.Andromeda.Lemird.Nearsighted;
 
 namespace Content.Server.Andromeda.Fatigue;
 public sealed class FatigueSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly FatigueMovementSpeedSystem _fatigueMovementSpeedSystem = default!;
@@ -38,6 +38,7 @@ public sealed class FatigueSystem : EntitySystem
                     RecoverFatigue(fatigueComponent.Owner);
                     _fatigueMovementSpeedSystem.UpdateMovementSpeed(fatigueComponent.Owner, fatigueComponent);
                     _fatigueSystem.SetStaminaAlert(fatigueComponent.Owner, fatigueComponent);
+                    _fatigueSystem.CheckAndUpdateNearsighted(fatigueComponent.Owner, fatigueComponent);
                     fatigueComponent.LastRecoverTime = _gameTiming.CurTime;
                 }
             }
@@ -48,6 +49,7 @@ public sealed class FatigueSystem : EntitySystem
                     DecreaseFatigue(fatigueComponent.Owner);
                     _fatigueMovementSpeedSystem.UpdateMovementSpeed(fatigueComponent.Owner, fatigueComponent);
                     _fatigueSystem.SetStaminaAlert(fatigueComponent.Owner, fatigueComponent);
+                    _fatigueSystem.CheckAndUpdateNearsighted(fatigueComponent.Owner, fatigueComponent);
                     fatigueComponent.LastDecreaseTime = _gameTiming.CurTime;
                 }
             }
@@ -87,6 +89,7 @@ public sealed class FatigueSystem : EntitySystem
             Log.Info($"Для {uid} было выбрано значение усталости: {component.CurrentFatigue}.");
             component.LastDecreaseTime = _gameTiming.CurTime;
             _fatigueSystem.SetStaminaAlert(uid, component);
+            Timer.Spawn(10000, () => CheckerBaseSystem(uid));
         }
         else
         {
@@ -119,6 +122,55 @@ public sealed class FatigueSystem : EntitySystem
             alertType = AlertType.Fatigue5;
 
         _alerts.ShowAlert(uid, alertType);
+    }
+
+    private void CheckerBaseSystem(EntityUid uid)
+    {
+        if (!Deleted(uid) && TryComp<FatigueComponent>(uid, out var fatigueComp))
+        {
+            _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComp);
+            Log.Info($"Для игрока {uid} была вызвана проверка метода UpdateMovementSpeed.");
+
+            if (HasComp<NearsightedComponent>(uid))
+            {
+                fatigueComp.HasNearsightedComponent = true;
+                Log.Info($"Для игрока {uid} было назначено HasNearsightedComponent true.");
+            }
+            else
+            {
+                Log.Info($"Игрок {uid} не имеет компонента NearsightedComponent.");
+            }
+
+            _fatigueSystem.CheckAndUpdateNearsighted(uid, fatigueComp);
+        }
+    }
+
+    private void CheckAndUpdateNearsighted(EntityUid uid, FatigueComponent fatigueComponent)
+    {
+        if (fatigueComponent.HasNearsightedComponent)
+        {
+            Log.Info($"Игрок {uid} уже имеет компонент затемнения зрения от игры, выходим из метода добавления компонента усталости.");
+            return;
+        }
+
+        if (fatigueComponent.CurrentFatigue <= 45 && !fatigueComponent.NearsightedAddedBySystem && !fatigueComponent.HasNearsightedComponent)
+        {
+            if (!EntityManager.HasComponent<NearsightedComponent>(uid))
+            {
+                AddComp<NearsightedComponent>(uid);
+                fatigueComponent.NearsightedAddedBySystem = true;
+                Log.Info($"Для {uid} был добавлен компонент затемнения зрения потому что он имеет очков усталости меньше 45");
+            }
+        }
+        else if (fatigueComponent.CurrentFatigue > 45 && fatigueComponent.NearsightedAddedBySystem && !fatigueComponent.HasNearsightedComponent)
+        {
+            if (EntityManager.HasComponent<NearsightedComponent>(uid))
+            {
+                RemComp<NearsightedComponent>(uid);
+                fatigueComponent.NearsightedAddedBySystem = false;
+                Log.Info($"Для {uid} был удалён компонент затемнения зрения потому что он имеет очков усталости больше 45");
+            }
+        }
     }
 
     private void OnSleepStateChanged(EntityUid uid, SleepingComponent component, SleepStateChangedEvent args)

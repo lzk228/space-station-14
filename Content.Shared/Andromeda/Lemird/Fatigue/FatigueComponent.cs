@@ -32,6 +32,12 @@ public sealed partial class FatigueComponent : Component
     [DataField("isSleeping")]
     public bool IsSleeping { get; set; } = false;
 
+    [DataField("hasNearsightedComponent")]
+    public bool HasNearsightedComponent { get; set; } = false;
+
+    [DataField("nearsightedAddedBySystem")]
+    public bool NearsightedAddedBySystem { get; set; } = false;
+
     [DataField("fatigueMessagesTypeOne")]
     public List<string> FatigueMessagesTypeOne { get; set; } = new()
     {
