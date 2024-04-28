@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  parent: SimpleMobBase
   id: BaseMobGrizzly
   suffix: Андромеда
   name: Гризли
@@ -8,6 +8,7 @@
   components:
   - type: Bloodstream
     bloodMaxVolume: 850
+  - type: NoSlip
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -33,13 +34,20 @@
   - type: Speech
     speechVerb: LargeMob
   - type: CombatMode
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      2000: 0.7
+      2500: 0.5
   - type: MobMover
+  - type: FireVisuals
+    sprite: Andromeda/NIKforest/grizzly.rsi
+    normalState: alive_burn
   - type: Flammable
     fireSpread: true
     canResistFire: true
     damage: #per second, scales with number of fire 'stacks'
       types:
-        Heat: 1
+        Heat: 9
   - type: ThermalRegulator
     metabolismHeat: 800
     radiatedHeat: 100
@@ -50,7 +58,7 @@
     thermalRegulationTemperatureThreshold: 25
   - type: Temperature
     heatDamageThreshold: 325
-    coldDamageThreshold: 260
+    coldDamageThreshold: 220
     currentTemperature: 310.15
     specificHeat: 42
     coldDamage:
@@ -67,9 +75,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4
-    weightlessModifier: 3
   - type: Sprite
-    sprite: Andromeda/NIKforest/Grizzly.rsi
+    sprite: Andromeda/NIKforest/grizzly.rsi
     noRot: true
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
@@ -105,8 +112,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      900: Critical
-      1000: Dead
+      2900: Critical
+      3000: Dead
   - type: Metabolizer
     solutionOnBody: false
     updateFrequency: 0.25
