@@ -188,7 +188,7 @@
   category: cargoproduct-category-name-service
   group: market
 
-- type: cargoProduct # А-13 ОбниМат
+- type: cargoProduct # А-13 Плант-О-Мат
   id: PlantMatte
   icon:
     sprite: Andromeda\Evil\plantmatte.rsi
