@@ -194,6 +194,6 @@
     sprite: Andromeda\Evil\plantmatte.rsi
     state: off
   product: PlantMatte
-  cost: 2000
+  cost: 1500
   category: cargoproduct-category-name-service
   group: market
