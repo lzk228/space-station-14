@@ -120,6 +120,9 @@
     groups:
     - id: Medicine
     - id: Poison
+  - type: Vocal
+    sounds:
+      Unsexed: Bear
   - type: Butcherable
     spawned:
     - id: FoodMeatBear
