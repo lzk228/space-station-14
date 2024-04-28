@@ -2,6 +2,7 @@
   name: Бурый медведь
   id: MobBrownBear
   parent: SimpleMobBase
+  suffix: Андромеда
   description: Выглядит дружелюбно. Почему бы тебе не обнять его?
   components:
   - type: Sprite
