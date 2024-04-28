@@ -32,7 +32,7 @@
     quickEquip: false
     sprite: Andromeda/Lemird/plushielemird.rsi
     slots:
-    - NECK
+    - HEAD
 
 - type: soundCollection
   id: PlushieLemird

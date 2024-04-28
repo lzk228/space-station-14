@@ -14,4 +14,4 @@
     quickEquip: false
     sprite: Andromeda/Lemird/plushielemirdschoolgirl.rsi
     slots:
-    - NECK
+    - HEAD
