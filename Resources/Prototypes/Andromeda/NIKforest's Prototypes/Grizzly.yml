@@ -4,7 +4,6 @@
   suffix: Андромеда
   name: Гризли
   description: Выглядит большим и страшным. Вы чувствуете страх когда вы смотрите ему в глаза.
-  abstract: true
   components:
   - type: Bloodstream
     bloodMaxVolume: 850
