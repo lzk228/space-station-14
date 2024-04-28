@@ -5,6 +5,7 @@ using Content.Shared.Popups;
 using Content.Shared.Andromeda.Lemird.Fatigue;
 using Content.Server.Guardian;
 using Content.Shared.Alert;
+using Content.Shared.Movement.Components;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
 
 namespace Content.Server.Andromeda.Fatigue;
@@ -126,8 +127,11 @@ public sealed class FatigueSystem : EntitySystem
 
     private void CheckerBaseSystem(EntityUid uid)
     {
-        if (!Deleted(uid) && TryComp<FatigueComponent>(uid, out var fatigueComp))
+        if (!Deleted(uid) && TryComp<FatigueComponent>(uid, out var fatigueComp) && TryComp<MovementSpeedModifierComponent>(uid, out var moveMod))
         {
+            fatigueComp.OriginalWalkSpeed = moveMod.BaseWalkSpeed;
+            fatigueComp.OriginalSprintSpeed = moveMod.BaseSprintSpeed;
+
             _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComp);
 
             if (HasComp<NearsightedComponent>(uid))
@@ -190,6 +194,7 @@ public sealed class FatigueSystem : EntitySystem
             fatigueComp.LastDecreaseTime = _gameTiming.CurTime;
         }
     }
+
     private void DecreaseFatigue(EntityUid uid)
     {
         if (Deleted(uid))
@@ -197,6 +202,9 @@ public sealed class FatigueSystem : EntitySystem
 
         if (TryComp<FatigueComponent>(uid, out var fatigueComp))
         {
+            if (fatigueComp.IsSleeping)
+                return;
+
             var oldFatigue = fatigueComp.CurrentFatigue;
             fatigueComp.CurrentFatigue -= 3;
 
@@ -218,7 +226,7 @@ public sealed class FatigueSystem : EntitySystem
                     EntityManager.AddComponent<ForcedSleepingComponent>(uid);
                     Log.Info($"Игрок {uid} уснул потому что его усталость достигла 0");
                     fatigueComp.CurrentFatigue = 30;
-                    Timer.Spawn(60000, () => RemoveForcedSleep(uid));
+                    Timer.Spawn(60000, () => RemoveForcedSleep(uid, fatigueComp));
                 }
                 else
                 {
@@ -257,11 +265,15 @@ public sealed class FatigueSystem : EntitySystem
             Log.Error($"Попытка восстановить усталость была совершена для {uid}, но FatigueComponent не найден.");
         }
     }
-    private void RemoveForcedSleep(EntityUid uid)
+
+    private void RemoveForcedSleep(EntityUid uid, FatigueComponent fatigueComponent)
     {
         if (HasComp<ForcedSleepingComponent>(uid))
         {
             EntityManager.RemoveComponent<ForcedSleepingComponent>(uid);
+            _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
+            _fatigueSystem.SetStaminaAlert(uid, fatigueComponent);
+            _fatigueSystem.CheckAndUpdateNearsighted(uid, fatigueComponent);
             Log.Info($"ForcedSleepingComponent удален у {uid} после 1 минуты сна.");
         }
     }

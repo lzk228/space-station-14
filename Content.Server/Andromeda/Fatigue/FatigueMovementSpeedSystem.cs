@@ -1,3 +1,4 @@
+using System.Threading;
 using Content.Server.Andromeda.Fatigue;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
@@ -14,26 +15,51 @@ public sealed class FatigueMovementSpeedSystem : EntitySystem
             return;
 
         var fatigueLevel = fatigueComp.CurrentFatigue;
-        if (fatigueLevel <= 45 && fatigueLevel > 0)
+
+        if (fatigueLevel > 45 && fatigueLevel <= 60)
         {
+            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.8f; // 20% снижение скорости
+            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.8f; // 20% снижение скорости
+
+            _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
+
             if (!fatigueComp.SpeedReduced)
             {
-                fatigueComp.OriginalWalkSpeed = moveMod.BaseWalkSpeed;
-                fatigueComp.OriginalSprintSpeed = moveMod.BaseSprintSpeed;
-
-                var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.6f;
-                var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.6f;
-
-                _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
-
                 fatigueComp.SpeedReduced = true;
             }
         }
-        else if (fatigueLevel > 45 && fatigueComp.SpeedReduced)
+        else if (fatigueLevel > 20 && fatigueLevel <= 45)
+        {
+            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.6f; // 40% снижение скорости
+            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.6f; // 40% снижение скорости
+
+            _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
+
+            if (!fatigueComp.SpeedReduced)
+            {
+                fatigueComp.SpeedReduced = true;
+            }
+        }
+        else if (fatigueLevel > 0 && fatigueLevel <= 20)
+        {
+            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.45f; // 55% снижение скорости
+            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.45f; // 55% снижение скорости
+
+            _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
+
+            if (!fatigueComp.SpeedReduced)
+            {
+                fatigueComp.SpeedReduced = true;
+            }
+        }
+        else if (fatigueLevel > 60 || fatigueComp.SpeedReduced == false)
         {
             _movementSpeedModifierSystem.ChangeBaseSpeed(uid, fatigueComp.OriginalWalkSpeed, fatigueComp.OriginalSprintSpeed, moveMod.Acceleration);
 
-            fatigueComp.SpeedReduced = false;
+            if (fatigueComp.SpeedReduced)
+            {
+                fatigueComp.SpeedReduced = false;
+            }
         }
     }
 }
