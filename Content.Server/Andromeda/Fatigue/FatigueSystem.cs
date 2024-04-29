@@ -11,6 +11,7 @@ using Content.Shared.Eye.Blinding.Systems;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Traits.Assorted;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Content.Shared.NukeOps;
 
 namespace Content.Server.Andromeda.Fatigue;
 public sealed class FatigueSystem : EntitySystem
@@ -20,9 +21,6 @@ public sealed class FatigueSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly FatigueMovementSpeedSystem _fatigueMovementSpeedSystem = default!;
-    private const float DecreaseIntervalMinutes = 1f; //Исправить на 5
-    private const float RecoverIntervalSeconds = 30f;
-    private const float FatiguePopupIntervalMinutes = 1f; //Исправить на 10
 
     public override void Initialize()
     {
@@ -36,11 +34,11 @@ public sealed class FatigueSystem : EntitySystem
     {
         foreach (var fatigueComponent in EntityManager.EntityQuery<FatigueComponent>())
         {
+            var uid = fatigueComponent.Owner;
             if (fatigueComponent.IsSleeping)
             {
-                if ((_gameTiming.CurTime - fatigueComponent.LastRecoverTime).TotalSeconds >= RecoverIntervalSeconds)
+                if ((_gameTiming.CurTime - fatigueComponent.LastRecoverTime).TotalSeconds >= fatigueComponent.RecoverIntervalSeconds)
                 {
-                    var uid = fatigueComponent.Owner;
                     RecoverFatigue(uid);
                     _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
                     SetStaminaAlert(uid, fatigueComponent);
@@ -51,9 +49,8 @@ public sealed class FatigueSystem : EntitySystem
             }
             else
             {
-                if ((_gameTiming.CurTime - fatigueComponent.LastDecreaseTime).TotalMinutes >= DecreaseIntervalMinutes)
+                if ((_gameTiming.CurTime - fatigueComponent.LastDecreaseTime).TotalMinutes >= fatigueComponent.DecreaseIntervalMinutes)
                 {
-                    var uid = fatigueComponent.Owner;
                     DecreaseFatigue(uid);
                     _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
                     SetStaminaAlert(uid, fatigueComponent);
@@ -62,11 +59,10 @@ public sealed class FatigueSystem : EntitySystem
                     fatigueComponent.LastDecreaseTime = _gameTiming.CurTime;
                 }
             }
-            if ((_gameTiming.CurTime - fatigueComponent.LastPopupTime).TotalMinutes >= FatiguePopupIntervalMinutes)
+            if ((_gameTiming.CurTime - fatigueComponent.LastPopupTime).TotalMinutes >= fatigueComponent.FatiguePopupIntervalMinutes)
             {
                 if (fatigueComponent.CurrentFatigue <= 60 && fatigueComponent.CurrentFatigue > 45)
                 {
-                    var uid = fatigueComponent.Owner;
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeOne);
                     _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Small);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
@@ -74,7 +70,6 @@ public sealed class FatigueSystem : EntitySystem
                 }
                 else if (fatigueComponent.CurrentFatigue <= 45 && fatigueComponent.CurrentFatigue > 20)
                 {
-                    var uid = fatigueComponent.Owner;
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeTwo);
                     _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Medium);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
@@ -82,7 +77,6 @@ public sealed class FatigueSystem : EntitySystem
                 }
                 else if (fatigueComponent.CurrentFatigue <= 20 && fatigueComponent.CurrentFatigue > 0)
                 {
-                    var uid = fatigueComponent.Owner;
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeThree);
                     _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Large);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
@@ -101,7 +95,9 @@ public sealed class FatigueSystem : EntitySystem
             Log.Info($"Для {uid} было выбрано значение усталости: {component.CurrentFatigue}.");
             component.LastDecreaseTime = _gameTiming.CurTime;
             SetStaminaAlert(uid, component);
-            Timer.Spawn(5000, () => CheckerBaseSystem(uid));
+            Timer.Spawn(1000, () => CheckerNukeOperative(uid));
+            Timer.Spawn(2000, () => CheckerTraitor(uid, component));
+            Timer.Spawn(3000, () => CheckerBaseSystem(uid));
         }
         else
         {
@@ -112,11 +108,27 @@ public sealed class FatigueSystem : EntitySystem
 
     private void OnShutdown(EntityUid uid, FatigueComponent component, ComponentShutdown args)
     {
-        component.CurrentFatigue = 100;
-        _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, component);
-        CheckAndUpdateNearsighted(uid, component);
-        CheckAndUpdateTemporaryBlindness(uid, component);
-        _alerts.ClearAlertCategory(uid, AlertCategory.Fatigue);
+        if (HasComp<CanHostGuardianComponent>(uid))
+        {
+            if (TryComp<MovementSpeedModifierComponent>(uid, out var moveMod))
+            {
+                if (component.OriginalWalkSpeed == 0 || component.OriginalSprintSpeed == 0)
+                {
+                    component.OriginalWalkSpeed = moveMod.BaseWalkSpeed;
+                    component.OriginalSprintSpeed = moveMod.BaseSprintSpeed;
+                }
+
+                component.CurrentFatigue = 100;
+                _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, component);
+                CheckAndUpdateNearsighted(uid, component);
+                CheckAndUpdateTemporaryBlindness(uid, component);
+                _alerts.ClearAlertCategory(uid, AlertCategory.Fatigue);
+            }
+        }
+        else
+        {
+            return;
+        }
     }
 
     private void SetStaminaAlert(EntityUid uid, FatigueComponent? component = null)
@@ -143,6 +155,24 @@ public sealed class FatigueSystem : EntitySystem
             alertType = AlertType.Fatigue5;
 
         _alerts.ShowAlert(uid, alertType);
+    }
+
+    private void CheckerNukeOperative(EntityUid uid)
+    {
+        if (HasComp<NukeOperativeComponent>(uid))
+        {
+            RemComp<FatigueComponent>(uid);
+            Log.Warning($"У сущности {uid} есть NukeOperativeComponent, поэтому компонент усталости был удалён.");
+        }
+    }
+
+    private void CheckerTraitor(EntityUid uid, FatigueComponent component)
+    {
+        if (component.IsAntag)
+        {
+            RemComp<FatigueComponent>(uid);
+            Log.Warning($"Сущность {uid} является антагом, поэтому компонент усталости был удалён.");
+        }
     }
 
     private void CheckerBaseSystem(EntityUid uid)

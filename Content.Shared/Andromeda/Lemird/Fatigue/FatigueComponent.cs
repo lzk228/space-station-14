@@ -11,6 +11,15 @@ public sealed partial class FatigueComponent : Component
     [DataField("maxFatigue"), ViewVariables(VVAccess.ReadWrite)]
     public int MaxFatigue { get; set; } = 100;
 
+    [DataField("decreaseIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
+    public float DecreaseIntervalMinutes = 5f;
+
+    [DataField("recoverIntervalSeconds"), ViewVariables(VVAccess.ReadWrite)]
+    public float RecoverIntervalSeconds = 30f;
+
+    [DataField("fatiguePopupIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
+    public float FatiguePopupIntervalMinutes = 10f;
+
     [DataField("lastDecreaseTime")]
     public TimeSpan LastDecreaseTime { get; set; }
 
@@ -43,6 +52,9 @@ public sealed partial class FatigueComponent : Component
 
     [DataField("temporaryBlindnessAddedBySystem")]
     public bool TemporaryBlindnessAddedBySystem { get; set; } = false;
+
+    [DataField("isAntag")]
+    public bool IsAntag { get; set; } = false;
 
     [DataField("fatigueMessagesTypeOne")]
     public List<string> FatigueMessagesTypeOne { get; set; } = new()
