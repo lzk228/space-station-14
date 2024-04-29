@@ -10,6 +10,7 @@ using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Eye.Blinding.Systems;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Traits.Assorted;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Content.Server.Andromeda.Fatigue;
 public sealed class FatigueSystem : EntitySystem
@@ -19,7 +20,6 @@ public sealed class FatigueSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly FatigueMovementSpeedSystem _fatigueMovementSpeedSystem = default!;
-    [Dependency] private readonly FatigueSystem _fatigueSystem = default!;
     private const float DecreaseIntervalMinutes = 1f; //Исправить на 5
     private const float RecoverIntervalSeconds = 30f;
     private const float FatiguePopupIntervalMinutes = 1f; //Исправить на 10
@@ -28,6 +28,7 @@ public sealed class FatigueSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<FatigueComponent, ComponentStartup>(OnComponentStartup);
+        SubscribeLocalEvent<FatigueComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<SleepingComponent, SleepStateChangedEvent>(OnSleepStateChanged);
     }
 
@@ -39,11 +40,12 @@ public sealed class FatigueSystem : EntitySystem
             {
                 if ((_gameTiming.CurTime - fatigueComponent.LastRecoverTime).TotalSeconds >= RecoverIntervalSeconds)
                 {
-                    RecoverFatigue(fatigueComponent.Owner);
-                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(fatigueComponent.Owner, fatigueComponent);
-                    _fatigueSystem.SetStaminaAlert(fatigueComponent.Owner, fatigueComponent);
-                    _fatigueSystem.CheckAndUpdateNearsighted(fatigueComponent.Owner, fatigueComponent);
-                    _fatigueSystem.CheckAndUpdateTemporaryBlindness(fatigueComponent.Owner, fatigueComponent);
+                    var uid = fatigueComponent.Owner;
+                    RecoverFatigue(uid);
+                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
+                    SetStaminaAlert(uid, fatigueComponent);
+                    CheckAndUpdateNearsighted(uid, fatigueComponent);
+                    CheckAndUpdateTemporaryBlindness(uid, fatigueComponent);
                     fatigueComponent.LastRecoverTime = _gameTiming.CurTime;
                 }
             }
@@ -51,11 +53,12 @@ public sealed class FatigueSystem : EntitySystem
             {
                 if ((_gameTiming.CurTime - fatigueComponent.LastDecreaseTime).TotalMinutes >= DecreaseIntervalMinutes)
                 {
-                    DecreaseFatigue(fatigueComponent.Owner);
-                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(fatigueComponent.Owner, fatigueComponent);
-                    _fatigueSystem.SetStaminaAlert(fatigueComponent.Owner, fatigueComponent);
-                    _fatigueSystem.CheckAndUpdateNearsighted(fatigueComponent.Owner, fatigueComponent);
-                    _fatigueSystem.CheckAndUpdateTemporaryBlindness(fatigueComponent.Owner, fatigueComponent);
+                    var uid = fatigueComponent.Owner;
+                    DecreaseFatigue(uid);
+                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
+                    SetStaminaAlert(uid, fatigueComponent);
+                    CheckAndUpdateNearsighted(uid, fatigueComponent);
+                    CheckAndUpdateTemporaryBlindness(uid, fatigueComponent);
                     fatigueComponent.LastDecreaseTime = _gameTiming.CurTime;
                 }
             }
@@ -63,24 +66,27 @@ public sealed class FatigueSystem : EntitySystem
             {
                 if (fatigueComponent.CurrentFatigue <= 60 && fatigueComponent.CurrentFatigue > 45)
                 {
+                    var uid = fatigueComponent.Owner;
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeOne);
-                    _popupSystem.PopupCursor(Loc.GetString(message), fatigueComponent.Owner, PopupType.Small);
+                    _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Small);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
-                    Log.Info($"Для {fatigueComponent.Owner} показано сообщение первого типа: {message}");
+                    Log.Info($"Для {uid} показано сообщение первого типа: {message}");
                 }
                 else if (fatigueComponent.CurrentFatigue <= 45 && fatigueComponent.CurrentFatigue > 20)
                 {
+                    var uid = fatigueComponent.Owner;
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeTwo);
-                    _popupSystem.PopupCursor(Loc.GetString(message), fatigueComponent.Owner, PopupType.Medium);
+                    _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Medium);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
-                    Log.Info($"Для {fatigueComponent.Owner} показано сообщение второго типа: {message}");
+                    Log.Info($"Для {uid} показано сообщение второго типа: {message}");
                 }
                 else if (fatigueComponent.CurrentFatigue <= 20 && fatigueComponent.CurrentFatigue > 0)
                 {
+                    var uid = fatigueComponent.Owner;
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeThree);
-                    _popupSystem.PopupCursor(Loc.GetString(message), fatigueComponent.Owner, PopupType.Large);
+                    _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Large);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
-                    Log.Info($"Для {fatigueComponent.Owner} показано сообщение третьего типа: {message}");
+                    Log.Info($"Для {uid} показано сообщение третьего типа: {message}");
                 }
             }
         }
@@ -94,7 +100,7 @@ public sealed class FatigueSystem : EntitySystem
             component.CurrentFatigue = _random.Next(minFatigue, component.MaxFatigue + 1);
             Log.Info($"Для {uid} было выбрано значение усталости: {component.CurrentFatigue}.");
             component.LastDecreaseTime = _gameTiming.CurTime;
-            _fatigueSystem.SetStaminaAlert(uid, component);
+            SetStaminaAlert(uid, component);
             Timer.Spawn(5000, () => CheckerBaseSystem(uid));
         }
         else
@@ -102,6 +108,15 @@ public sealed class FatigueSystem : EntitySystem
             RemComp<FatigueComponent>(uid);
             Log.Warning($"У сущности {uid} отсутствует компонент CanHostGuardianComponent, поэтому компонент усталости были удалены.");
         }
+    }
+
+    private void OnShutdown(EntityUid uid, FatigueComponent component, ComponentShutdown args)
+    {
+        component.CurrentFatigue = 100;
+        _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, component);
+        CheckAndUpdateNearsighted(uid, component);
+        CheckAndUpdateTemporaryBlindness(uid, component);
+        _alerts.ClearAlertCategory(uid, AlertCategory.Fatigue);
     }
 
     private void SetStaminaAlert(EntityUid uid, FatigueComponent? component = null)
@@ -149,25 +164,25 @@ public sealed class FatigueSystem : EntitySystem
                 Log.Info($"Игрок {uid} не имеет компонента NearsightedComponent, поэтому HasNearsightedComponent остаётся на false.");
             }
 
-            _fatigueSystem.CheckAndUpdateNearsighted(uid, fatigueComp);
+            CheckAndUpdateNearsighted(uid, fatigueComp);
 
             if (HasComp<PermanentBlindnessComponent>(uid))
             {
-                fatigueComp.HasTemporaryBlindnessComponent = true;
-                Log.Info($"Игрок {uid} имеет PermanentBlindnessComponent, поэтому HasTemporaryBlindnessComponent становится true.");
+                fatigueComp.HasPermanentBlindnessComponent = true;
+                Log.Info($"Игрок {uid} имеет PermanentBlindnessComponent, поэтому HasPermanentBlindnessComponent становится true.");
             }
             else
             {
-                Log.Info($"Игрок {uid} не имеет PermanentBlindnessComponent, поэтому HasTemporaryBlindnessComponent остаётся на false.");
+                Log.Info($"Игрок {uid} не имеет PermanentBlindnessComponent, поэтому HasPermanentBlindnessComponent остаётся на false.");
             }
 
-            _fatigueSystem.CheckAndUpdateTemporaryBlindness(uid, fatigueComp);
+            CheckAndUpdateTemporaryBlindness(uid, fatigueComp);
         }
     }
 
     private void CheckAndUpdateTemporaryBlindness(EntityUid uid, FatigueComponent fatigueComponent)
     {
-        if (fatigueComponent.HasTemporaryBlindnessComponent || fatigueComponent.HasNearsightedComponent)
+        if (fatigueComponent.HasPermanentBlindnessComponent || fatigueComponent.HasNearsightedComponent)
         {
             Log.Warning($"Игрок {uid} уже имеет компонент затемнения зрения от игры, выходим из метода добавления компонента затемнения.");
             return;
@@ -181,14 +196,14 @@ public sealed class FatigueSystem : EntitySystem
                 fatigueComponent.TemporaryBlindnessAddedBySystem = false;
             }
 
-            if (EntityManager.HasComponent<TemporaryBlindnessComponent>(uid))
+            if (!fatigueComponent.TemporaryBlindnessAddedBySystem)
             {
                 Log.Warning($"Игрок {uid} должен иметь первую степень затемнения, но имеет уже вторую степень затемнения.");
                 RemComp<TemporaryBlindnessComponent>(uid);
             }
         }
 
-        if (fatigueComponent.CurrentFatigue <= 20 && fatigueComponent.CurrentFatigue > 0 && !fatigueComponent.TemporaryBlindnessAddedBySystem && !fatigueComponent.HasTemporaryBlindnessComponent && !fatigueComponent.HasNearsightedComponent)
+        if (fatigueComponent.CurrentFatigue <= 20 && fatigueComponent.CurrentFatigue > 0 && !fatigueComponent.TemporaryBlindnessAddedBySystem && !fatigueComponent.HasPermanentBlindnessComponent && !fatigueComponent.HasNearsightedComponent)
         {
             if (!EntityManager.HasComponent<NearsightedComponent>(uid) && !EntityManager.HasComponent<PermanentBlindnessComponent>(uid) && !EntityManager.HasComponent<TemporaryBlindnessComponent>(uid))
             {
@@ -196,8 +211,13 @@ public sealed class FatigueSystem : EntitySystem
                 fatigueComponent.TemporaryBlindnessAddedBySystem = true;
                 Log.Info($"Для {uid} был добавлен компонент затемнения зрения второй степени потому что он имеет очков усталости меньше или ровно 20.");
             }
+            else
+            {
+                Log.Error($"По каким то причинам не удалось добавить комопонент затемнения зрения второй степени, вызываем метод заново.");
+                Timer.Spawn(TimeSpan.FromSeconds(5), () => CheckAndUpdateTemporaryBlindness(uid, fatigueComponent));
+            }
         }
-        else if (fatigueComponent.CurrentFatigue > 20 && fatigueComponent.TemporaryBlindnessAddedBySystem && !fatigueComponent.HasTemporaryBlindnessComponent && !fatigueComponent.HasNearsightedComponent)
+        else if (fatigueComponent.CurrentFatigue > 20 && fatigueComponent.TemporaryBlindnessAddedBySystem && !fatigueComponent.HasPermanentBlindnessComponent && !fatigueComponent.HasNearsightedComponent)
         {
             if (EntityManager.HasComponent<TemporaryBlindnessComponent>(uid) && !EntityManager.HasComponent<NearsightedComponent>(uid) && !EntityManager.HasComponent<PermanentBlindnessComponent>(uid))
             {
@@ -210,7 +230,7 @@ public sealed class FatigueSystem : EntitySystem
 
     private void CheckAndUpdateNearsighted(EntityUid uid, FatigueComponent fatigueComponent)
     {
-        if (fatigueComponent.HasNearsightedComponent || fatigueComponent.HasTemporaryBlindnessComponent)
+        if (fatigueComponent.HasNearsightedComponent || fatigueComponent.HasPermanentBlindnessComponent)
         {
             Log.Warning($"Игрок {uid} уже имеет компонент затемнения зрения от игры, выходим из метода добавления компонента затемнения.");
             return;
@@ -224,7 +244,7 @@ public sealed class FatigueSystem : EntitySystem
                 fatigueComponent.NearsightedAddedBySystem = false;
             }
 
-            if (EntityManager.HasComponent<NearsightedComponent>(uid))
+            if (!fatigueComponent.HasNearsightedComponent)
             {
                 Log.Warning($"Игрок {uid} уже имеет вторую степень затемнения зрения, удаляем компонент затемнения зрения первой степени.");
                 RemComp<NearsightedComponent>(uid);
@@ -347,9 +367,9 @@ public sealed class FatigueSystem : EntitySystem
         {
             EntityManager.RemoveComponent<ForcedSleepingComponent>(uid);
             _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
-            _fatigueSystem.SetStaminaAlert(uid, fatigueComponent);
-            _fatigueSystem.CheckAndUpdateNearsighted(uid, fatigueComponent);
-            _fatigueSystem.CheckAndUpdateTemporaryBlindness(uid, fatigueComponent);
+            SetStaminaAlert(uid, fatigueComponent);
+            CheckAndUpdateNearsighted(uid, fatigueComponent);
+            CheckAndUpdateTemporaryBlindness(uid, fatigueComponent);
             Log.Info($"ForcedSleepingComponent удален у {uid} после 1 минуты принудительного сна.");
         }
     }

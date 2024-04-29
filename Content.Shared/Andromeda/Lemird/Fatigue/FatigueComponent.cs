@@ -38,8 +38,8 @@ public sealed partial class FatigueComponent : Component
     [DataField("nearsightedAddedBySystem")]
     public bool NearsightedAddedBySystem { get; set; } = false;
 
-    [DataField("hasTemporaryBlindnessComponent")]
-    public bool HasTemporaryBlindnessComponent { get; set; } = false;
+    [DataField("hasPermanentBlindnessComponent")]
+    public bool HasPermanentBlindnessComponent { get; set; } = false;
 
     [DataField("temporaryBlindnessAddedBySystem")]
     public bool TemporaryBlindnessAddedBySystem { get; set; } = false;
