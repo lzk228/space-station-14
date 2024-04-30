@@ -11,11 +11,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\plushiepaintor.rsi
+    sprite: Andromeda/Evil/plushiepaintor.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda\Evil\plushiepaintor.rsi
+    sprite: Andromeda/Evil/plushiepaintor.rsi
   - type: Storage
     maxItemSize: Small
     grid:
@@ -52,7 +52,7 @@
       collection: PaintorUse
   - type: Clothing
     quickEquip: false
-    sprite: Andromeda\Evil\plushiepaintor.rsi
+    sprite: Andromeda/Evil/plushiepaintor.rsi
     slots:
     - HEAD
 
@@ -64,11 +64,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\plushieselectionist.rsi
+    sprite: Andromeda/Evil/plushieselectionist.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda\Evil\plushieselectionist.rsi
+    sprite: Andromeda/Evil/plushieselectionist.rsi
   - type: Storage
     maxItemSize: Small
     grid:
@@ -95,11 +95,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\plushiecadet.rsi
+    sprite: Andromeda/Evil/plushiecadet.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda\Evil\plushiecadet.rsi
+    sprite: Andromeda/Evil/plushiecadet.rsi
 
 - type: entity
   parent: BasePlushie
@@ -109,11 +109,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\plushieadv.rsi
+    sprite: Andromeda/Evil/plushieadv.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda\Evil\plushieadv.rsi
+    sprite: Andromeda/Evil/plushieadv.rsi
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
@@ -138,8 +138,8 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\plushiefelsci.rsi
+    sprite: Andromeda/Evil/plushiefelsci.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda\Evil\plushiefelsci.rsi
+    sprite: Andromeda/Evil/plushiefelsci.rsi

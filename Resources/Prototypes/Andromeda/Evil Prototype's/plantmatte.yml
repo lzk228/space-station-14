@@ -50,7 +50,7 @@
   - type: Sprite
     drawdepth: Overdoors
     offset: "0.0,0.3"
-    sprite: Andromeda\Evil\susplant.rsi
+    sprite: Andromeda/Evil/susplant.rsi
     state: susplant1
     noRot: true
   - type: PointLight
@@ -64,7 +64,7 @@
   - type: Sprite
     drawdepth: Overdoors
     offset: "0.0,0.3"
-    sprite: Andromeda\Evil\susplant.rsi
+    sprite: Andromeda/Evil/susplant.rsi
     state: susplant2
     noRot: true
 
@@ -75,7 +75,7 @@
   - type: Sprite
     drawdepth: Overdoors
     offset: "0.0,0.3"
-    sprite: Andromeda\Evil\susplant.rsi
+    sprite: Andromeda/Evil/susplant.rsi
     state: susplant3
     noRot: true
 
