@@ -188,8 +188,9 @@
   category: cargoproduct-category-name-service
   group: market
 
-# А-13 Плант-О-Мат start
+# А-13 ЦветоМат start
 - type: cargoProduct
+  name: цветомат
   id: VendingMachinePottedPlant
   icon:
     sprite: Andromeda\Evil\plantmatte.rsi
@@ -198,9 +199,11 @@
   cost: 6500
   category: cargoproduct-category-name-service
   group: market
-# А-13 Плант-О-Мат end
+# А-13 ЦветоМат end
+
 # А-13 ОбниМат start
 - type: cargoProduct
+  name: обнимат
   id: VendingMachinePlushieToys
   icon:
     sprite: Andromeda\Evil\vendingmachineplushietoys.rsi

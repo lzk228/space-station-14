@@ -1,3 +1,8 @@
+- type: soundCollection
+  id: PaintorUse
+  files:
+  - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/karandash.ogg
+
 - type: entity
   parent: BasePlushie
   id: PlushiePaintor
@@ -42,16 +47,14 @@
   - type: EmitSoundOnUse
     sound:
       collection: PaintorUse
+  - type: EmitSoundOnCollide
+    sound:
+      collection: PaintorUse
   - type: Clothing
     quickEquip: false
     sprite: Andromeda\Evil\plushiepaintor.rsi
     slots:
     - HEAD
-
-- type: soundCollection
-  id: PaintorUse
-  files:
-  - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/karandash.ogg
 
 - type: entity
   parent: BasePlushie
@@ -113,16 +116,19 @@
     sprite: Andromeda\Evil\plushieadv.rsi
   - type: EmitSoundOnUse
     sound:
-      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
   - type: EmitSoundOnLand
     sound:
-      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
   - type: EmitSoundOnActivate
     sound:
-      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
   - type: EmitSoundOnTrigger
     sound:
-      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
 
 - type: entity
   parent: BasePlushie

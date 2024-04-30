@@ -3,6 +3,7 @@
   id: VendingMachinePlushieToys
   name: ОбниМат
   description: Если долго всматриваться в эту плюше-мягкую бездну, то можно сгибнуть от умиления!
+  suffix: Андромеда
   components:
   - type: VendingMachine
     pack: VendingMachinePlushieToysInventory
