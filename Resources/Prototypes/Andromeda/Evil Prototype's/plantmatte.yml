@@ -1,8 +1,9 @@
 - type: entity
   parent: VendingMachine
-  id: PlantMatte
-  name: цвет-о-мат
+  id: VendingMachinePottedPlant
+  name: ЦветоМат
   description: Растения в горшках – лучшие психологи в соотношении цена/качество!
+  suffix: Андромеда
   components:
   - type: VendingMachine
     pack: PlantMatteInventory
