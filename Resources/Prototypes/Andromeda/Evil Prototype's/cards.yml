@@ -9,14 +9,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redjoker
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -42,14 +42,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackjoker
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -75,14 +75,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redaceb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -108,14 +108,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackacep
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -141,14 +141,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redacec
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -174,14 +174,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackacet
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -207,14 +207,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redkingc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -240,14 +240,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackkingp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -273,14 +273,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redkingb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -306,14 +306,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackkingt
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -339,14 +339,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redqueenc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -372,14 +372,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackqueent
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -405,14 +405,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redqueenb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -438,14 +438,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackqueenp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -471,14 +471,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redjackb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -504,14 +504,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackjackt
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -537,14 +537,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redjackc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -570,14 +570,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackjackp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -603,14 +603,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redtenb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -636,14 +636,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacktenp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -669,14 +669,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redtenc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -702,14 +702,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacktent
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -735,14 +735,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: rednineb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -768,14 +768,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackninep
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -801,14 +801,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redninec
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -834,14 +834,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackninet
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -867,14 +867,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redeightb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -900,14 +900,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackeightp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -933,14 +933,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redeightc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -966,14 +966,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackeightt
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -999,14 +999,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redsevenb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1032,14 +1032,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacksevenp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1065,14 +1065,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redsevenc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1098,14 +1098,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacksevent
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1131,14 +1131,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redsixb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1164,14 +1164,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacksixp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1197,14 +1197,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redsixc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1230,14 +1230,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacksixt
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1263,14 +1263,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redfiveb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1296,14 +1296,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackfivep
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1329,14 +1329,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redfivec
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1362,14 +1362,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackfivet
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1395,14 +1395,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redfourb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1428,14 +1428,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackfourp
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1461,14 +1461,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redfourc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1494,14 +1494,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackfourt
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1527,14 +1527,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redthreeb
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1560,14 +1560,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackthreep
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1593,14 +1593,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redthreec
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1626,14 +1626,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blackthreet
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1659,14 +1659,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redtwob
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1692,14 +1692,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacktwop
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1725,14 +1725,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: redtwoc
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1758,14 +1758,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: blacktwot
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1791,14 +1791,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: sindijack
       map: ["front"]
     - state: back
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1840,14 +1840,14 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     layers:
     - state: sindijack
       map: ["front"]
     - state: sindibackred
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\playablecard.rsi
+    sprite: Andromeda/Evil/playablecard.rsi
     size: Tiny
   - type: Appearance
   - type: FoldableCard
@@ -1894,7 +1894,7 @@
   description: What secrets lie at the bottom of its endless stack?
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\cardbin.rsi
+    sprite: Andromeda/Evil/cardbin.rsi
     layers:
     - state: closed
     - state: open
@@ -1902,11 +1902,11 @@
       visible: false
     - state: card1
       map: ["card1"]
-      sprite: Andromeda\Evil\cardbin.rsi
+      sprite: Andromeda/Evil/cardbin.rsi
       visible: false
     - state: card2
       map: ["card2"]
-      sprite: Andromeda\Evil\cardbin.rsi
+      sprite: Andromeda/Evil/cardbin.rsi
       visible: false
   - type: Item
     size: Small
@@ -1953,11 +1953,11 @@
       visible: false
     - state: card1
       map: ["card1"]
-      sprite: Andromeda\Evil\cardbin.rsi
+      sprite: Andromeda/Evil/cardbin.rsi
       visible: false
     - state: card2
       map: ["card2"]
-      sprite: Andromeda\Evil\cardbin.rsi
+      sprite: Andromeda/Evil/cardbin.rsi
       visible: false
 
 - type: entity
@@ -2159,13 +2159,13 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Andromeda\Evil\pokerchipsv.rsi
+    sprite: Andromeda/Evil/pokerchipsv.rsi
     state: poker5
     layers:
     - state: poker5
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\pokerchipsv.rsi
+    sprite: Andromeda/Evil/pokerchipsv.rsi
     size: Small
   - type: Stack
     stackType: PokerChipsVStack
@@ -2187,13 +2187,13 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Andromeda\Evil\pokerchipsx.rsi
+    sprite: Andromeda/Evil/pokerchipsx.rsi
     state: poker5
     layers:
     - state: poker5
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\pokerchipsx.rsi
+    sprite: Andromeda/Evil/pokerchipsx.rsi
     size: Small
   - type: Stack
     stackType: PokerChipsXStack
@@ -2215,13 +2215,13 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Andromeda\Evil\pokerchipsl.rsi
+    sprite: Andromeda/Evil/pokerchipsl.rsi
     state: poker5
     layers:
     - state: poker5
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\pokerchipsl.rsi
+    sprite: Andromeda/Evil/pokerchipsl.rsi
     size: Small
   - type: Stack
     stackType: PokerChipsLStack
@@ -2243,13 +2243,13 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Andromeda\Evil\pokerchipsc.rsi
+    sprite: Andromeda/Evil/pokerchipsc.rsi
     state: poker5
     layers:
     - state: poker5
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\pokerchipsc.rsi
+    sprite: Andromeda/Evil/pokerchipsc.rsi
     size: Small
   - type: Stack
     stackType: PokerChipsCStack
@@ -2271,13 +2271,13 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Andromeda\Evil\pokerchipsd.rsi
+    sprite: Andromeda/Evil/pokerchipsd.rsi
     state: poker5
     layers:
     - state: poker5
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\pokerchipsd.rsi
+    sprite: Andromeda/Evil/pokerchipsd.rsi
     size: Small
   - type: Stack
     stackType: PokerChipsDStack
@@ -2299,13 +2299,13 @@
   components:
   - type: Sprite
     noRot: true
-    sprite: Andromeda\Evil\pokerchipsm.rsi
+    sprite: Andromeda/Evil/pokerchipsm.rsi
     state: poker5
     layers:
     - state: poker5
       map: ["base"]
   - type: Item
-    sprite: Andromeda\Evil\pokerchipsm.rsi
+    sprite: Andromeda/Evil/pokerchipsm.rsi
     size: Small
   - type: Stack
     stackType: PokerChipsMStack

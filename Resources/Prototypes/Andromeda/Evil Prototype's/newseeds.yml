@@ -4,7 +4,7 @@
   noun: seeds-noun-seeds
   displayName: стебли мясной пшеницы
   suffix: Андромеда
-  plantRsi: Andromeda\Evil\meatwheat.rsi
+  plantRsi: Andromeda/Evil/meatwheat.rsi
   packetPrototype: MeatWheatSeeds
   productPrototypes:
     - MeatWheatBushel
@@ -29,7 +29,7 @@
     - type: Seed
       seedId: meatwheat
     - type: Sprite
-      sprite: Andromeda\Evil\meatwheat.rsi
+      sprite: Andromeda/Evil/meatwheat.rsi
 
 - type: entity
   name: сноп мясной пшеницы
@@ -39,7 +39,7 @@
   parent: FoodProduceBase
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\meatwheat.rsi
+    sprite: Andromeda/Evil/meatwheat.rsi
   - type: SolutionContainerManager
     solutions:
       food:

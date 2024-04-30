@@ -14,7 +14,7 @@
     pack: VendingMachinePlushieToysAds
   - type: Speech
   - type: Sprite
-    sprite: Andromeda\Evil\vendingmachineplushietoys.rsi
+    sprite: Andromeda/Evil/vendingmachineplushietoys.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
