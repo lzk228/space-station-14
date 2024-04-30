@@ -199,3 +199,14 @@
   category: cargoproduct-category-name-service
   group: market
 # А-13 Плант-О-Мат end
+# А-13 ОбниМат start
+- type: cargoProduct
+  id: VendingMachinePlushieToys
+  icon:
+    sprite: Andromeda\Evil\vendingmachineplushietoys.rsi
+    state: off
+  product: VendingMachinePlushieToys
+  cost: 8000
+  category: cargoproduct-category-name-service
+  group: market
+# А-13 ОбниМат end
