@@ -188,3 +188,14 @@
   category: cargoproduct-category-name-service
   group: market
 
+# А-13 Плант-О-Мат start
+- type: cargoProduct
+  id: PlantMatte
+  icon:
+    sprite: Andromeda\Evil\plantmatte.rsi
+    state: off
+  product: PlantMatte
+  cost: 6500
+  category: cargoproduct-category-name-service
+  group: market
+# А-13 Плант-О-Мат end
