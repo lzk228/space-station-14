@@ -143,3 +143,79 @@
   - type: Item
     size: Small
     sprite: Andromeda/Evil/plushiefelsci.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeMar
+  name: плюшевый мародер
+  description: Смотря на эту плюшку, видно тонны робаста. Данная персона сотворить многое... как минимум взорваться от своей же чайна-лейк!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukemar.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukemar.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeCom
+  name: плюшевый командир нюкеров
+  description: Его плюшевая мания величия сильнее, чем у ГСБ! Так и хочется его зотискать.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukecom.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukecom.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeMed
+  name: плюшевый медик нюкеров
+  description: Пушистый и мягкий как облачко! Однако, кажется, что эта плюшка пропитана афродизиаком...? Её явно не стоит нюхать... 
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukemed.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukemed.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeJagg
+  name: плюшевый джаггернаут
+  description: Всматриваясь в эту перекаченную пухом плюшку, вы ощущаете, что она вглядывается в душу вам...
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukejagg.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukejagg.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
