@@ -14,7 +14,7 @@
     pack: VendingMachinePottedPlantAds
   - type: Speech
   - type: Sprite
-    sprite: Andromeda\Evil\plantmatte.rsi
+    sprite: Andromeda/Evil/plantmatte.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
