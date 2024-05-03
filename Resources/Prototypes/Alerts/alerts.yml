@@ -475,7 +475,7 @@
   icons:
   - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
     state: fatigue-1
-  name: Боррость
+  name: Бодрость
   description: Вы полны сил! Бегайте, прыгайте, хонкайте!
 
 - type: alert
