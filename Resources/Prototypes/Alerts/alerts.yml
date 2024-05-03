@@ -475,7 +475,7 @@
   icons:
   - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
     state: fatigue-1
-  name: Бордрость
+  name: Боррость
   description: Вы полны сил! Бегайте, прыгайте, хонкайте!
 
 - type: alert
@@ -494,7 +494,7 @@
   - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
     state: fatigue-3
   name: Усталость
-  description: Вы чувствуете то что начинаете чаще втыкать в одну точку, а ноги уже буквально переваливаются...
+  description: Вы чувствуете то что начинаете чаще втыкать в одну точку, а ноги уже буквально подкашиваются...
 
 - type: alert
   id: Fatigue4
@@ -503,7 +503,7 @@
   - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
     state: fatigue-4
   name: Сильная усталость
-  description: Вы чувствуете как глаза буквалньо закрываются сами, а голова уже начинает плохо работать...
+  description: Вы чувствуете как глаза буквально закрываются сами, а голова уже начинает плохо работать...
 
 - type: alert
   id: Fatigue5

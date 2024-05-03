@@ -1945,7 +1945,7 @@
   description: What secrets lie at the bottom of its endless stack?
   components:
   - type: Sprite
-    sprite: Andromeda\Evil\cardbin.rsi
+    sprite: Andromeda/Evil/cardbin.rsi
     layers:
     - state: closed2
     - state: open2
