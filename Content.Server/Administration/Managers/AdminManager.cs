@@ -343,11 +343,13 @@ namespace Content.Server.Administration.Managers
             }
             else if (e.NewStatus == SessionStatus.Disconnected)
             {
-                if (_admins.TryGetValue(e.Session, out var reg)) //A-13 AdminNotifications
+                //A-13 AdminNotifications start
+                if (_admins.TryGetValue(e.Session, out var reg))
                 {
-                    //A-13 AdminNotifications start
                     var logoutEvent = new AdminLoggedOutEvent(e.Session);
                     _entityManager.EventBus.RaiseEvent(EventSource.Local, logoutEvent);
+                    _admins.Remove(e.Session);
+
                     if (_cfg.GetCVar(CCVars.AdminAnnounceLogout))
                     {
                         if (reg.Data.Stealth)
@@ -361,8 +363,8 @@ namespace Content.Server.Administration.Managers
                                 ("name", e.Session.Name)));
                         }
                     }
-                    //A-13 AdminNotifications end
                 }
+                //A-13 AdminNotifications end
             }
         }
 
@@ -381,6 +383,14 @@ namespace Content.Server.Administration.Managers
                 IsSpecialLogin = specialLogin,
                 RankId = rankId
             };
+
+            //A-13 AdminNotifications start
+            if (session.ContentData()?.ExplicitlyDeadminned == true)
+            {
+                reg.Data.Active = true;
+                session.ContentData()!.ExplicitlyDeadminned = false;
+            }
+            //A-13 AdminNotifications end
 
             _admins.Add(session, reg);
 
