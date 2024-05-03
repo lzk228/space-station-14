@@ -15,7 +15,7 @@ public sealed partial class FatigueComponent : Component
     public float DecreaseIntervalMinutes = 5f;
 
     [DataField("recoverIntervalSeconds"), ViewVariables(VVAccess.ReadWrite)]
-    public float RecoverIntervalSeconds = 30f;
+    public float RecoverIntervalSeconds = 10f;
 
     [DataField("fatiguePopupIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
     public float FatiguePopupIntervalMinutes = 10f;
