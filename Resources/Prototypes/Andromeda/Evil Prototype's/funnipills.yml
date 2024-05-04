@@ -1,0 +1,29 @@
+- type: entity
+  name: Афродизиак
+  parent: Pill
+  id: FunniPill
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        reagents:
+        - ReagentId: Potassium
+          Quantity: 10
+        - ReagentId: Vinegar
+          Quantity: 10
+
+- type: entity
+  name: подозрительная таблеточница
+  description: Подозрительная таблеточница, с не менее подозрительными таблетками...
+  parent: PillCanister
+  id: FunniPillCanister
+  suffix: Андромеда, Заполненный
+  components:
+  - type: StorageFill
+    contents:
+    - id: FunniPill
+      prob: 1
+      maxAmount: 10
