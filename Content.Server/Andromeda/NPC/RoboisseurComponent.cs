@@ -11,7 +11,7 @@ public sealed partial class RoboisseurComponent : Component
 
     [ViewVariables(VVAccess.ReadOnly)]
     [DataField("impatient")]
-    public Boolean Impatient { get; set; } = false;
+    public bool Impatient { get; set; } = false;
 
     [ViewVariables]
     [DataField("resetTime")]
@@ -77,7 +77,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("rewardMessages")]
-    public IReadOnlyList<String> RewardMessages = new[]
+    public IReadOnlyList<string> RewardMessages = new[]
     {
         "roboisseur-thanks-1",
         "roboisseur-thanks-2",
@@ -87,7 +87,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("rewardMessagesTier2")]
-    public IReadOnlyList<String> RewardMessagesTier2 = new[]
+    public IReadOnlyList<string> RewardMessagesTier2 = new[]
     {
         "roboisseur-thanks-second-1",
         "roboisseur-thanks-second-2",
@@ -97,7 +97,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("rejectMessages")]
-    public IReadOnlyList<String> RejectMessages = new[]
+    public IReadOnlyList<string> RejectMessages = new[]
     {
         "roboisseur-deny-1",
         "roboisseur-deny-2",
@@ -105,7 +105,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("tier2Protos")]
-    public List<String> Tier2Protos = new()
+    public List<string> Tier2Protos = new()
     {
         "FoodBurgerEmpowered",
         "FoodSoupClown",
@@ -131,7 +131,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("tier3Protos")]
-    public List<String> Tier3Protos = new()
+    public List<string> Tier3Protos = new()
     {
         "FoodSaladWatermelonFruitBowl",
         "FoodBakedCannabisBrownieBatch",
@@ -151,7 +151,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("robossuierRewards")]
-    public IReadOnlyList<String> RobossuierRewards = new[]
+    public IReadOnlyList<string> RobossuierRewards = new[]
     {
         //"DrinkIceCreamGlass",
         //"FoodFrozenPopsicleOrange",
@@ -203,7 +203,7 @@ public sealed partial class RoboisseurComponent : Component
     };
 
     [DataField("blacklistedProtos")]
-    public IReadOnlyList<String> BlacklistedProtos = new[]
+    public IReadOnlyList<string> BlacklistedProtos = new[]
     {
         //"FoodMothPesto",
         "FoodBurgerSpell",

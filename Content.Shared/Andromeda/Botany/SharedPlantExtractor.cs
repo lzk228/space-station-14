@@ -142,7 +142,7 @@ public sealed class PlantExtractorBoundUserInterfaceState : BoundUserInterfaceSt
         Mode = mode;
         BufferCurrentVolume = bufferCurrentVolume;
         IsBusy = isBusy;
-        CanExtract= canExtract;
+        CanExtract = canExtract;
         ChamberContent = chamberContent;
     }
 }
