@@ -22,7 +22,6 @@ public sealed partial class RoboisseurSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly MaterialStorageSystem _material = default!;
-    [Dependency] private readonly AppearanceSystem _appearance = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
@@ -109,7 +108,7 @@ public sealed partial class RoboisseurSystem : EntitySystem
         if (CheckTier(component.DesiredPrototype.ID, component) > 1)
             message = Loc.GetString(_random.Pick(component.DemandMessagesTier2), ("item", component.DesiredPrototype.Name));
 
-        _chat.TrySendInGameICMessage(component.Owner, message, InGameICChatType.Speak, false);
+        _chat.TrySendInGameICMessage(uid, message, InGameICChatType.Speak, false);
     }
 
     private void OnInteractUsing(EntityUid uid, RoboisseurComponent component, InteractUsingEvent args)
