@@ -12,6 +12,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Andromeda.Fatigue;
+
 public sealed class FatigueSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
