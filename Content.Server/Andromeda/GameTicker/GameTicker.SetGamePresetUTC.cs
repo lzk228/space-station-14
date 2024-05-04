@@ -1,4 +1,3 @@
-using System;
 using Robust.Shared.Timing;
 
 namespace Content.Server.GameTicking

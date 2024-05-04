@@ -4,7 +4,6 @@ using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Player;
 
-
 namespace Content.Client.Andromeda.Lemird.NV;
 
 public sealed class NightVisionSystem : EntitySystem

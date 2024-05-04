@@ -7,10 +7,8 @@ using Content.Server.Guardian;
 using Content.Shared.Alert;
 using Content.Shared.Movement.Components;
 using Content.Shared.Eye.Blinding.Components;
-using Content.Shared.Eye.Blinding.Systems;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Traits.Assorted;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Content.Shared.NukeOps;
 
 namespace Content.Server.Andromeda.Fatigue;

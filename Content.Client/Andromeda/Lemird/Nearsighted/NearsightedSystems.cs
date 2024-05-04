@@ -1,4 +1,3 @@
-using Content.Client.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Tag;

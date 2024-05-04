@@ -1,7 +1,6 @@
 using Content.Server.EUI;
 using Content.Shared.Cloning;
 using Content.Shared.Eui;
-using Content.Server.Mind;
 
 namespace Content.Server.Andromeda.DeathReminder.DeathReminderEui
 {

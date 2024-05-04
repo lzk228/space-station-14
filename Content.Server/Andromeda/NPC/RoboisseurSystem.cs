@@ -3,7 +3,6 @@ using Content.Shared.Mobs.Components;
 using Content.Server.Chat.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Content.Shared.Random.Helpers;
 using Content.Shared.Kitchen;
 using Robust.Server.GameObjects;
 using Content.Server.Materials;
