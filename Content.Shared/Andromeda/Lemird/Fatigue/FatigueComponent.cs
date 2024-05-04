@@ -1,5 +1,3 @@
-using Robust.Shared.GameStates;
-
 namespace Content.Shared.Andromeda.Lemird.Fatigue;
 
 [RegisterComponent]
