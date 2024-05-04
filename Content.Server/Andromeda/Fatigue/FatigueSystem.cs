@@ -1,15 +1,15 @@
-using Content.Shared.Bed.Sleep;
-using Robust.Shared.Random;
-using Robust.Shared.Timing;
-using Content.Shared.Popups;
-using Content.Shared.Andromeda.Lemird.Fatigue;
 using Content.Server.Guardian;
 using Content.Shared.Alert;
-using Content.Shared.Movement.Components;
-using Content.Shared.Eye.Blinding.Components;
+using Content.Shared.Andromeda.Lemird.Fatigue;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
-using Content.Shared.Traits.Assorted;
+using Content.Shared.Bed.Sleep;
+using Content.Shared.Eye.Blinding.Components;
+using Content.Shared.Movement.Components;
 using Content.Shared.NukeOps;
+using Content.Shared.Popups;
+using Content.Shared.Traits.Assorted;
+using Robust.Shared.Random;
+using Robust.Shared.Timing;
 
 namespace Content.Server.Andromeda.Fatigue;
 public sealed class FatigueSystem : EntitySystem

@@ -1,12 +1,12 @@
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Content.Shared.Andromeda.CCVar;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Robust.Shared;
 using Robust.Shared.Configuration;
-using System.Net.Http;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Text;
 
 namespace Content.Server.Andromeda.BansNotifications
 {

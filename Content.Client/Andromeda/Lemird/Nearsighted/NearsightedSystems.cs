@@ -1,5 +1,5 @@
-using Content.Shared.Inventory.Events;
 using Content.Shared.Andromeda.Lemird.Nearsighted;
+using Content.Shared.Inventory.Events;
 using Content.Shared.Tag;
 using Robust.Client.Graphics;
 
