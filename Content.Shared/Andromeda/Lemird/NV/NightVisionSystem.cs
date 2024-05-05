@@ -1,10 +1,10 @@
 using Content.Shared.Actions;
 using Content.Shared.Inventory;
-using Content.Shared.Andromeda.NightVision;
+using Content.Shared.Andromeda.Lemird.NV;
 using JetBrains.Annotations;
 
 
-namespace Content.Shared.Andromeda.NightVision;
+namespace Content.Shared.Andromeda.Lemird.NV;
 
 public sealed class NightVisionSystem : EntitySystem
 {
