@@ -161,10 +161,8 @@
         - id: BarberScissors
           prob: 0.05
 # A-13 FunniPills start
-        - id: FunniPill
-          prob: 0.2
         - id: FunniPillCanister
-          prob: 0.1
+          prob: 0.15
 # A-13 FunniPills end
         # Syndicate loot
         - id: null
@@ -267,10 +265,8 @@
         - id: ModularReceiver
           prob: 0.1
 # A-13 FunniPills start
-        - id: FunniPill
-          prob: 0.2
         - id: FunniPillCanister
-          prob: 0.1
+          prob: 0.15
 # A-13 FunniPills end
         # Syndicate loot
         - id: null
