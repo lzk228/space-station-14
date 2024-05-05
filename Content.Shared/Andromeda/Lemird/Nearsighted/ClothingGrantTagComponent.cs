@@ -1,4 +1,4 @@
-namespace Content.Shared.Andromeda.Nearsighted;
+namespace Content.Shared.Andromeda.Lemird.Nearsighted;
 
 [RegisterComponent]
 public sealed partial class ClothingGrantTagComponent : Component

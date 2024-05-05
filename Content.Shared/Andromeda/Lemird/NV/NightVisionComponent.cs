@@ -1,9 +1,9 @@
 using Content.Shared.Actions;
-using Content.Shared.Andromeda.NightVision;
+using Content.Shared.Andromeda.Lemird.NV;
 using Robust.Shared.GameStates;
 
 
-namespace Content.Shared.Andromeda.NightVision;
+namespace Content.Shared.Andromeda.Lemird.NV;
 
 [RegisterComponent]
 [NetworkedComponent, AutoGenerateComponentState]

@@ -2,17 +2,16 @@ using Content.Shared.Bed.Sleep;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Shared.Popups;
-using Content.Shared.Andromeda.Fatigue;
+using Content.Shared.Andromeda.Lemird.Fatigue;
 using Content.Server.Guardian;
 using Content.Shared.Alert;
 using Content.Shared.Movement.Components;
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Eye.Blinding.Systems;
-using Content.Shared.Andromeda.Nearsighted;
+using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Traits.Assorted;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Content.Shared.NukeOps;
-using Content.Shared.Rejuvenate;
 
 namespace Content.Server.Andromeda.Fatigue;
 public sealed class FatigueSystem : EntitySystem
@@ -29,7 +28,6 @@ public sealed class FatigueSystem : EntitySystem
         SubscribeLocalEvent<FatigueComponent, ComponentStartup>(OnComponentStartup);
         SubscribeLocalEvent<FatigueComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<SleepingComponent, SleepStateChangedEvent>(OnSleepStateChanged);
-        SubscribeLocalEvent<FatigueComponent, RejuvenateEvent>(OnRejuvenate);
     }
 
     public override void Update(float frameTime)
@@ -92,7 +90,7 @@ public sealed class FatigueSystem : EntitySystem
     {
         if (HasComp<CanHostGuardianComponent>(uid))
         {
-            var minFatigue = 75;
+            var minFatigue = 50;
             component.CurrentFatigue = _random.Next(minFatigue, component.MaxFatigue + 1);
             //Log.Info($"Для {uid} было выбрано значение усталости: {component.CurrentFatigue}.");
             component.LastDecreaseTime = _gameTiming.CurTime;
@@ -126,22 +124,6 @@ public sealed class FatigueSystem : EntitySystem
                 CheckAndUpdateTemporaryBlindness(uid, component);
                 _alerts.ClearAlertCategory(uid, AlertCategory.Fatigue);
             }
-        }
-        else
-        {
-            return;
-        }
-    }
-
-    private void OnRejuvenate(EntityUid uid, FatigueComponent component, RejuvenateEvent args)
-    {
-        if (HasComp<FatigueComponent>(uid))
-        {
-            component.CurrentFatigue = 100;
-            _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, component);
-            CheckAndUpdateNearsighted(uid, component);
-            CheckAndUpdateTemporaryBlindness(uid, component);
-            SetStaminaAlert(uid, component);
         }
         else
         {
