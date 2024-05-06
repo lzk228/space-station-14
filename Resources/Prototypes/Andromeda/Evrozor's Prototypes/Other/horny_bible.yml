@@ -1,8 +1,9 @@
 - type: entity
   name: священная книга похоти
-  description: Эта книга наполняет окружающих чувством любви. 
+  description: Эта книга наполняет окружающих чувством любви. [WIP]
   parent: BaseItem
   id: HornyBible
+  suffix: Андромеда, WIP
   components:
 #  - type: Prayable
 #    bibleUserOnly: true
@@ -30,7 +31,7 @@
     generated:
       reagents:
       - ReagentId: Aphrodisiac
-        Quantuty: 30
+        Quantity: 30
   - type: InjectableSolution
     solution: essence
   - type: RefillableSolution
