@@ -1,8 +1,9 @@
 - type: entity
+  noSpawn: true
   name: афродизиак
   description: Повышает потенцию как никто другой! Скушайте! 
   parent: Pill
-  id: FunniPill1 # Горячая бума (просто продолжительный бум)
+  id: FunniPill1
   suffix: Андромеда
   components:
   - type: SolutionContainerManager
@@ -18,8 +19,9 @@
           Quantity: 10
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill2 # Горячие пчелки (Ммм, эти жала такие горячие...) (пчелки + острые ощущения)
+  id: FunniPill2
   components:
   - type: SolutionContainerManager
     solutions:
@@ -36,8 +38,9 @@
           Quantity: 5
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill3 # Блевучая бука (ипекак + мини взрыв)
+  id: FunniPill3
   components:
   - type: SolutionContainerManager
     solutions:
@@ -54,8 +57,9 @@
           Quantity: 5
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill4 # Взрывная свежесть (взрыв + нееемножечко льда)
+  id: FunniPill4
   components:
   - type: SolutionContainerManager
     solutions:
@@ -72,8 +76,9 @@
           Quantity: 10
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill5 # Ежик в тумане (Дымок + немного драгов (асуждаем))
+  id: FunniPill5
   components:
   - type: SolutionContainerManager
     solutions:
@@ -92,8 +97,9 @@
           Quantity: 17
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill6 # Горячая Диона (Очень сильная бума... не убьет, но урон будет)
+  id: FunniPill6
   components:
   - type: SolutionContainerManager
     solutions:
@@ -114,8 +120,9 @@
           Quantity: 1
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill7 # Пенный ежик (наркота и пенка)
+  id: FunniPill7
   components:
   - type: SolutionContainerManager
     solutions:
@@ -136,8 +143,9 @@
           Quantity: 10
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill8 # Охлаждающая свежесть
+  id: FunniPill8
   components:
   - type: SolutionContainerManager
     solutions:
@@ -152,8 +160,9 @@
           Quantity: 10
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill9 # Шокиум (Электризующе! Попробуйте!)
+  id: FunniPill9
   components:
   - type: SolutionContainerManager
     solutions:
@@ -168,8 +177,9 @@
           Quantity: 10
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill10 # Унатх Гена (запрещена к обороту, асуждаем)
+  id: FunniPill10
   components:
   - type: SolutionContainerManager
     solutions:
@@ -188,8 +198,9 @@
           Quantity: 5
 
 - type: entity
+  noSpawn: true
   parent: FunniPill1
-  id: FunniPill11 # Походный ковер
+  id: FunniPill11
   components:
   - type: SolutionContainerManager
     solutions:
@@ -206,6 +217,7 @@
           Quantity: 5
 
 - type: entity
+  noSpawn: true
   name: подозрительная таблеточница
   description: Подозрительная таблеточница, с не менее подозрительными таблетками...
   parent: PillCanister
