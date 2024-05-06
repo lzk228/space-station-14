@@ -1,8 +1,11 @@
-namespace Content.Shared.Andromeda.Lemird.Fatigue;
+namespace Content.Shared.Andromeda.Fatigue;
 
 [RegisterComponent]
 public sealed partial class FatigueComponent : Component
 {
+    [DataField("uid")]
+    public EntityUid Uid;
+
     [DataField("currentFatigue"), ViewVariables(VVAccess.ReadWrite)]
     public int CurrentFatigue { get; set; }
 
@@ -10,7 +13,7 @@ public sealed partial class FatigueComponent : Component
     public int MaxFatigue { get; set; } = 100;
 
     [DataField("decreaseIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
-    public float DecreaseIntervalMinutes = 0.5f;
+    public float DecreaseIntervalMinutes = 2f;
 
     [DataField("recoverIntervalSeconds"), ViewVariables(VVAccess.ReadWrite)]
     public float RecoverIntervalSeconds = 1f;
