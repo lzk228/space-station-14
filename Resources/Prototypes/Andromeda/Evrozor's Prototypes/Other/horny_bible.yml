@@ -3,7 +3,7 @@
   description: Эта книга наполняет окружающих чувством любви.
   parent: BaseItem
   id: HornyBible
-  suffix: Андромеда
+  suffix: Андромеда, НЕ МАППИТЬ!
   components:
 #  - type: Prayable
 #    bibleUserOnly: true
