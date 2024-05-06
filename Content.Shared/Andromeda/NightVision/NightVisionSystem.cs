@@ -2,7 +2,7 @@ using Content.Shared.Actions;
 using Content.Shared.Inventory;
 using JetBrains.Annotations;
 
-namespace Content.Shared.Andromeda.Lemird.NV;
+namespace Content.Shared.Andromeda.NightVision;
 
 public sealed class NightVisionSystem : EntitySystem
 {
@@ -54,7 +54,6 @@ public sealed class NightVisionSystem : EntitySystem
 
 [ByRefEvent]
 public record struct NightVisionnessChangedEvent(bool NightVision);
-
 
 public sealed class CanVisionAttemptEvent : CancellableEntityEventArgs, IInventoryRelayEvent
 {

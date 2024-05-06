@@ -1,5 +1,4 @@
 using Content.Server.GameTicking;
-using Content.Server.GameTicking.Rules;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.StationEvents.Components;
 using Robust.Server.GameObjects;
@@ -12,8 +11,6 @@ public sealed class PirateRadioSpawnRule : StationEventSystem<PirateRadioSpawnRu
 {
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly MapLoaderSystem _map = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly TraitorRuleSystem _TraitorRuleSystem = default!;
 
     protected override void Started(EntityUid uid, PirateRadioSpawnRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
