@@ -205,6 +205,6 @@
 - type: soundCollection
   id: FootstepObmotki
   files:
-  - /Audio/Effects/Footsteps/rags_step1.ogg
-  - /Audio/Effects/Footsteps/rags_step2.ogg
-  - /Audio/Effects/Footsteps/rags_step3.ogg
+  - /WaufufAudio/Effects/rags_step1.ogg
+  - /WaufufAudio/Effects/rags_step2.ogg
+  - /WaufufAudio/Effects/rags_step3.ogg
