@@ -10,3 +10,6 @@
   - type: Clothing
     sprite: Andromeda/Waufuf/Shoes/windings.rsi
   - type: Matchbox
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepObmotki
