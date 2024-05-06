@@ -3,7 +3,7 @@
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesWindings
   name: обмотки
-  description: Пара лоскутных тряпок, для обматывания ног.
+  description: Пара лоскутов прочной ткани, предназначенные для обматывания ног.
   components:
   - type: Sprite
     sprite: Andromeda/Waufuf/Shoes/windings.rsi
