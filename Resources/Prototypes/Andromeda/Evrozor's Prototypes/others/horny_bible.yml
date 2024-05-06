@@ -7,11 +7,11 @@
 #  - type: Prayable
 #    bibleUserOnly: true
   - type: Sprite
-    sprite: Andromeda/Evrozor/other/horny_bible.rsi
+    sprite: Andromeda/Evrozor/Other/horny_bible.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evrozor/other/horny_bible.rsi
+    sprite: Andromeda/Evrozor/Other/horny_bible.rsi
   - type: Clothing
     slots:
     - Belt
