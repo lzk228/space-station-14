@@ -1,6 +1,6 @@
 - type: entity
   name: священная книга похоти
-  description: Эта книга притягивает любовь, а также ее создает. 
+  description: Эта книга наполняет окружающих чувством любви. 
   parent: BaseItem
   id: HornyBible
   components:
@@ -21,10 +21,16 @@
   - type: SolutionContainerManager
     solutions:
       essence:
-        maxVol: 300000
+        maxVol: 300
         reagents:
         - ReagentId: Aphrodisiac
-          Quantity: 300000
+          Quantity: 300
+  - type: SolutionRegeneration
+    solution: essence
+    generated:
+      reagents:
+      - ReagentId: Aphrodisiac
+        Quantuty: 30
   - type: InjectableSolution
     solution: essence
   - type: RefillableSolution
