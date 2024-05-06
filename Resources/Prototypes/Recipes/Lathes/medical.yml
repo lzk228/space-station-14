@@ -210,7 +210,7 @@
   result: Jug
   completetime: 4
   materials:
-    Plastic: 400
+    Glass: 500
 
 - type: latheRecipe
   id: RollerBedSpawnFolded

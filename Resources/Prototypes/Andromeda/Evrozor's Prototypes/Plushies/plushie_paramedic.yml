@@ -6,5 +6,5 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evrozor/plushies/plushie_paramedic.rsi
+    sprite: Andromeda/Evrozor/Plushies/plushie_paramedic.rsi
     state: icon
