@@ -1,8 +1,8 @@
-- type: entity # Таблетка "Горячая бума"
-  name: Афродизиак
+- type: entity
+  name: афродизиак
   description: Повышает потенцию как никто другой! Скушайте! 
   parent: Pill
-  id: FunniPill1
+  id: FunniPill1 # Горячая бума (просто продолжительный бум)
   suffix: Андромеда
   components:
   - type: SolutionContainerManager
@@ -17,9 +17,9 @@
         - ReagentId: Vinegar
           Quantity: 10
 
-- type: entity # Таблетка "Горячие пчелки"
+- type: entity
   parent: FunniPill1
-  id: FunniPill2
+  id: FunniPill2 # Горячие пчелки (Ммм, эти жала такие горячие...) (пчелки + острые ощущения)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -35,9 +35,9 @@
         - ReagentId: Frostoil
           Quantity: 5
 
-- type: entity # Таблетка "Взрывной желудок"
+- type: entity
   parent: FunniPill1
-  id: FunniPill3
+  id: FunniPill3 # Блевучая бука (ипекак + мини взрыв)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -53,9 +53,9 @@
         - ReagentId: Potassium
           Quantity: 5
 
-- type: entity # Таблетка "Взрывная свежесть"
+- type: entity
   parent: FunniPill1
-  id: FunniPill4
+  id: FunniPill4 # Взрывная свежесть (взрыв + нееемножечко льда)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -68,10 +68,12 @@
           Quantity: 5
         - ReagentId: Potassium
           Quantity: 5
+        - ReagentId: Ice
+          Quantity: 10
 
-- type: entity # Таблетка "Ежик в тумане"
+- type: entity
   parent: FunniPill1
-  id: FunniPill5
+  id: FunniPill5 # Ежик в тумане (Дымок + немного драгов (асуждаем))
   components:
   - type: SolutionContainerManager
     solutions:
@@ -89,9 +91,9 @@
         - ReagentId: SpaceDrugs
           Quantity: 17
 
-- type: entity # Таблетка "Горячая Диона" (Очень сильная бума... не убьет, но урон будет)
+- type: entity
   parent: FunniPill1
-  id: FunniPill6
+  id: FunniPill6 # Горячая Диона (Очень сильная бума... не убьет, но урон будет)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -111,9 +113,9 @@
         - ReagentId: Chlorine
           Quantity: 1
 
-- type: entity # Таблетка "Ежик в пене"
+- type: entity
   parent: FunniPill1
-  id: FunniPill7
+  id: FunniPill7 # Пенный ежик (наркота и пенка)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -133,9 +135,9 @@
         - ReagentId: SpaceDrugs
           Quantity: 10
 
-- type: entity # Таблетка "Охлаждающая свежесть"
+- type: entity
   parent: FunniPill1
-  id: FunniPill8
+  id: FunniPill8 # Охлаждающая свежесть
   components:
   - type: SolutionContainerManager
     solutions:
@@ -149,9 +151,9 @@
         - ReagentId: MuteToxin
           Quantity: 10
 
-- type: entity # Таблетка "шокиум". Электризующе! Попробуйте!
+- type: entity
   parent: FunniPill1
-  id: FunniPill9
+  id: FunniPill9 # Шокиум (Электризующе! Попробуйте!)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -165,9 +167,9 @@
         - ReagentId: Licoxide
           Quantity: 10
 
-- type: entity # Тяжелая наркота "Унатх Гена" (запрещена к обороту, асуждаем)
+- type: entity
   parent: FunniPill1
-  id: FunniPill10
+  id: FunniPill10 # Унатх Гена (запрещена к обороту, асуждаем)
   components:
   - type: SolutionContainerManager
     solutions:
@@ -185,9 +187,9 @@
         - ReagentId: Laughter
           Quantity: 5
 
-- type: entity # Таблетка "Походный ковер"
+- type: entity
   parent: FunniPill1
-  id: FunniPill11
+  id: FunniPill11 # Походный ковер
   components:
   - type: SolutionContainerManager
     solutions:
@@ -213,35 +215,35 @@
   - type: StorageFill
     contents:
     - id: FunniPill1
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill2
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill3
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill4
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill5
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill6
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill7
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill8
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill9
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill10
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
     - id: FunniPill11
-      prob: 0.15
-      maxAmount: 5
+      prob: 0.25
+      maxAmount: 3
