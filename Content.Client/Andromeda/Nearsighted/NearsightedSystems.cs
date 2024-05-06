@@ -1,10 +1,9 @@
-using Content.Client.Andromeda.Lemird.Nearsighted;
+using Content.Shared.Andromeda.Nearsighted;
 using Content.Shared.Inventory.Events;
-using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Tag;
 using Robust.Client.Graphics;
 
-namespace Content.Client.Andromeda.Lemird.Nearsighted;
+namespace Content.Client.Andromeda.Nearsighted;
 
 public sealed class NearsightedSystem : EntitySystem
 {
@@ -22,7 +21,6 @@ public sealed class NearsightedSystem : EntitySystem
         SubscribeLocalEvent<GotEquippedEvent>(OnEquip);
         SubscribeLocalEvent<GotUnequippedEvent>(OnUnEquip);
     }
-
 
     private void OnStartup(EntityUid uid, NearsightedComponent component, ComponentStartup args)
     {
@@ -48,7 +46,6 @@ public sealed class NearsightedSystem : EntitySystem
             args.Slot == "eyes")
             UpdateShader(nearsighted, false);
     }
-
 
     private void UpdateShader(NearsightedComponent component, bool booLean)
     {

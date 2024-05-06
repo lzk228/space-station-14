@@ -1,9 +1,9 @@
 using Content.Shared.Clothing.Components;
 using Content.Shared.Inventory.Events;
-using Robust.Shared.Serialization.Manager;
 using Content.Shared.Tag;
+using Robust.Shared.Serialization.Manager;
 
-namespace Content.Shared.Andromeda.Lemird.Nearsighted;
+namespace Content.Shared.Andromeda.Nearsighted;
 
 public sealed class ClothingGrantingSystem : EntitySystem
 {
@@ -41,7 +41,7 @@ public sealed class ClothingGrantingSystem : EntitySystem
             if (HasComp(args.Equipee, newComp.GetType()))
                 continue;
 
-            newComp.Owner = args.Equipee;
+            uid = args.Equipee;
 
             var temp = (object) newComp;
             _serializationManager.CopyTo(data.Component, ref temp);

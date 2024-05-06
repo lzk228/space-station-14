@@ -1,11 +1,10 @@
-using Content.Shared.Andromeda.Lemird.NV;
+using Content.Shared.Andromeda.NightVision;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 
-
-namespace Content.Client.Andromeda.Lemird.NV;
+namespace Content.Client.Andromeda.NightVision;
 
 public sealed class NightVisionOverlay : Overlay
 {
@@ -13,7 +12,6 @@ public sealed class NightVisionOverlay : Overlay
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly ILightManager _lightManager = default!;
-
 
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
@@ -29,6 +27,7 @@ public sealed class NightVisionOverlay : Overlay
 
         _nightvisionColor = color;
     }
+
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
         if (!_entityManager.TryGetComponent(_playerManager.LocalPlayer?.ControlledEntity, out EyeComponent? eyeComp))

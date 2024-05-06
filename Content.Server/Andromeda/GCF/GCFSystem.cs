@@ -7,8 +7,9 @@ using Robust.Shared.Timing;
 namespace Content.Server.Andromeda.GCF;
 
 /// <summary>
-///     Handles periodically GCF (Garbage Collector)
+/// Handles periodically GCF (Garbage Collector)
 /// </summary>
+
 public sealed class GCFSystem : EntitySystem
 {
     [Dependency] private readonly IChatManager _chat = default!;
@@ -16,7 +17,7 @@ public sealed class GCFSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
 
     private bool _gcfEnabled;
-	private bool _gcfNotify;
+    private bool _gcfNotify;
     private float _gcfTime;
 
     [ViewVariables(VVAccess.ReadWrite)]
@@ -27,7 +28,7 @@ public sealed class GCFSystem : EntitySystem
         base.Initialize();
         _cfg.OnValueChanged(CCVars.GCFFrequency, SetTimeGCF, true);
         _cfg.OnValueChanged(CCVars.GCFEnabled, SetEnabledGCF, true);
-		_cfg.OnValueChanged(CCVars.GCFNotify, SetEnabledNotify, true);
+        _cfg.OnValueChanged(CCVars.GCFNotify, SetEnabledNotify, true);
 
         RecalculateNextGCFTime();
     }
@@ -41,8 +42,8 @@ public sealed class GCFSystem : EntitySystem
 
         if (_nextGCFTime != TimeSpan.Zero && _timing.CurTime > _nextGCFTime)
         {
-			GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
-			GC.Collect(2, GCCollectionMode.Forced, true, true);
+            GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+            GC.Collect(2, GCCollectionMode.Forced, true, true);
             AnnounceGCF();
             RecalculateNextGCFTime();
         }
@@ -68,9 +69,9 @@ public sealed class GCFSystem : EntitySystem
 
     private void AnnounceGCF()
     {
-		if (!_gcfNotify)
-			return;
-        _chat.SendAdminAnnouncement("Автоочистка завершена успешно");
+        if (!_gcfNotify)
+            return;
+        _chat.SendAdminAnnouncement("GCF смогла выполнить отчистку сервера.");
     }
 
     private void RecalculateNextGCFTime()
