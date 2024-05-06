@@ -13,3 +13,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepObmotki
+
+- type: soundCollection
+  id: FootstepObmotki
+  files:
+  - /Waufuf Audio/Effects/rags_step1.ogg
+  - /Waufuf Audio/Effects/rags_step2.ogg
+  - /Waufuf Audio/Effects/rags_step3.ogg
