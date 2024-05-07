@@ -1,5 +1,5 @@
 - type: seed
-  id: meatwheat
+  id: meatwheat # Мясная пшеница
   name: мясная пшеница
   noun: seeds-noun-seeds
   displayName: стебли мясной пшеницы
@@ -54,3 +54,58 @@
   - type: Tag
     tags:
     - Wheat
+
+- type: seed
+  id: mintplant # Мята
+  name: мята
+  noun: seeds-noun-seeds
+  displayName: куст мяты
+  suffix: Андромеда
+  plantRsi: Andromeda/Evil/mint.rsi
+  packetPrototype: MintPlantSeeds
+  productPrototypes:
+    - MintPlantLeaves
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 2
+  potency: 5
+  idealLight: 9
+  chemicals:
+    MintExtract:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 20
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (мята)
+  suffix: Андромеда
+  id: MintPlantSeeds
+  components:
+    - type: Seed
+      seedId: mintplant
+    - type: Sprite
+      sprite: Andromeda/Evil/mint.rsi
+
+- type: entity
+  name: листы мяты
+  description: Приятно пахнущие мятные листы.
+  suffix: Андромеда
+  id: MintPlantLeaves
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/mint.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: MintExtract
+          Quantity: 20
+  - type: Produce
+    seedId: mintplant
+  - type: Tag
+    tags:
+    - Fruit # Для ботанической сумки ЭТО фрукт

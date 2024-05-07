@@ -1,0 +1,108 @@
+- type: reagent
+  id: MintExtract
+  name: Экстракт мяты
+  parent: BaseJuice
+  desc: Приятно пахнущий мятный экстракт
+  physicalDesc: мятное
+  flavor: мятно
+  color: "#18ad45"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+
+- type: reagent
+  id: CatNipExtract
+  name: Экстракт котовика
+  parent: BaseJuice
+  desc: Подозрительно муррчащий экстракт котовика
+  physicalDesc: котомятное
+  flavor: котомятно
+  color: "#18ad45"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -1
+    Narcotic:
+      effects:
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 5
+        refresh: false
+        conditions:
+        - !type:OrganType
+          type: Felinid #Разобраться с метаболизмом и прописать другой тип
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.25
+        sprintSpeedModifier: 1.25
+        conditions:
+        - !type:OrganType
+          type: Felinid #Разобраться с метаболизмом и прописать другой тип
+      - !type:Emote
+        emote: Meow
+        showInChat: true
+        probability: 0.5
+        conditions:
+        - !type:OrganType
+          type: Felinid #Разобраться с метаболизмом и прописать другой тип
+
+- type: reagent
+  id: MilkThatMakesYouMurr
+  name: Милоко
+  group: Special
+  desc: Чистая сущность фелинидов. Заставляет вас Муррчать!
+  physicalDesc: муррчащее
+  flavor: муррчащее
+  color: "#dcf0ea"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:Emote
+        emote: CatMeow #Разобраться со звуками Молей
+        showInChat: true
+        probability: 0.25
+      - !type:Polymorph
+        prototype: CatPoly
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+      - !type:AdjustReagent
+        reagent: MilkThatMakesYouMurr
+        amount: -20
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+
+- type: polymorph
+  id: CatPoly
+  configuration:
+    entity: MobCat
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 30
+
+- type: reaction
+  id: MilkThatMakesYouMurr
+  reactants:
+    MintExtract:
+      amount: 1
+    Milk:
+      amount: 1
+  products:
+    MilkThatMakesYouMurr: 2
