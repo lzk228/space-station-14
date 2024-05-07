@@ -42,20 +42,20 @@
         refresh: false
         conditions:
         - !type:OrganType
-          type: Felinid #Разобраться с метаболизмом и прописать другой тип
+          type: Human #Разобраться с метаболизмом и прописать другой тип
       - !type:MovespeedModifier
         walkSpeedModifier: 1.25
         sprintSpeedModifier: 1.25
         conditions:
         - !type:OrganType
-          type: Felinid #Разобраться с метаболизмом и прописать другой тип
+          type: Human #Разобраться с метаболизмом и прописать другой тип
       - !type:Emote
         emote: Meow
         showInChat: true
         probability: 0.5
         conditions:
         - !type:OrganType
-          type: Felinid #Разобраться с метаболизмом и прописать другой тип
+          type: Human #Разобраться с метаболизмом и прописать другой тип
 
 - type: reagent
   id: MilkThatMakesYouMurr
