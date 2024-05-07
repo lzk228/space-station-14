@@ -74,6 +74,7 @@
       festive: Objects/Weapons/Bombs/c4gift.rsi
   - type: Sticky
     unstickDelay: 10
+  - type: C4DetonationByUnstick
 
 - type: entity
   name: seismic charge
