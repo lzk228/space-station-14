@@ -11,13 +11,10 @@ namespace Content.Shared.Andromeda.Voomra.C4;
 public sealed class C4DetonationByUnstickSystem : EntitySystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    // [Dependency] private readonly ILogManager _log = default!;
-    // private ISawmill _sawmill = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        // _sawmill = _log.GetSawmill(GetType().Name);
 
         SubscribeLocalEvent<C4DetonationByUnstickComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<C4DetonationByUnstickComponent, ComponentRemove>(OnComponentRemove);
@@ -46,7 +43,6 @@ public sealed class C4DetonationByUnstickSystem : EntitySystem
     private void DoAltVerbs(C4DetonationByUnstickComponent component, EntityUid user)
     {
         component.Detonation = !component.Detonation;
-        // _adminLogger.Add(LogType.Verb, verb.Impact, $"{ToPrettyString(user):user} {executionText} the [{verbText:verb}] verb targeting {ToPrettyString(target):target}");
         _adminLogger.Add(LogType.Verb, $"{ToPrettyString(user):user} {(component.Detonation ? "ВКЛЮЧИЛ" : "ВЫКЛЮЧИЛ")} детонацию С4 при её снятии");
     }
 }
