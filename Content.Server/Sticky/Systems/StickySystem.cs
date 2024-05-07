@@ -140,9 +140,7 @@ public sealed class StickySystem : EntitySystem
         if (TryComp<C4DetonationByUnstickComponent>(uid, out var c4Comp))
         {
             if (c4Comp.Detonation && TryComp<ActiveTimerTriggerComponent>(uid, out var activateComp))
-            {
                 activateComp.TimeRemaining = 0;
-            }
         }
         //A-13 Detonation of C4 during detaching end
 

@@ -1,5 +1,3 @@
-using Content.Shared.Administration.Logs;
-using Content.Shared.Database;
 using Content.Shared.Verbs;
 
 namespace Content.Shared.Andromeda.Voomra.C4;
@@ -10,8 +8,6 @@ namespace Content.Shared.Andromeda.Voomra.C4;
 /// /// <seealso cref="T:Content.Shared.Andromeda.Voomra.C4.C4DetonationByUnstickComponent"/>
 public sealed class C4DetonationByUnstickSystem : EntitySystem
 {
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-
     public override void Initialize()
     {
         base.Initialize();
@@ -38,13 +34,12 @@ public sealed class C4DetonationByUnstickSystem : EntitySystem
             Text = Loc.GetString("verb-c4-detonation-by-unstick", ("status", component.Detonation
                 ? Loc.GetString("verb-c4-detonation-by-unstick-status-on")
                 : Loc.GetString("verb-c4-detonation-by-unstick-status-off"))),
-            Act = () => DoAltVerbs(component, args.User)
+            Act = () => DoAltVerbs(component)
         });
     }
 
-    private void DoAltVerbs(C4DetonationByUnstickComponent component, EntityUid user)
+    private void DoAltVerbs(C4DetonationByUnstickComponent component)
     {
         component.Detonation = !component.Detonation;
-        _adminLogger.Add(LogType.Verb, $"{ToPrettyString(user):user} {(component.Detonation ? "ВКЛЮЧИЛ" : "ВЫКЛЮЧИЛ")} детонацию С4 при её снятии");
     }
 }
