@@ -5,7 +5,7 @@ using Content.Shared.Verbs;
 namespace Content.Shared.Andromeda.Voomra.C4;
 
 /// <summary>
-///     Система управления детонированием C4 при попытке открепить её
+///     Detonation control system C4 when trying to detach it
 /// </summary>
 /// /// <seealso cref="T:Content.Shared.Andromeda.Voomra.C4.C4DetonationByUnstickComponent"/>
 public sealed class C4DetonationByUnstickSystem : EntitySystem

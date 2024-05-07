@@ -136,7 +136,7 @@ public sealed class StickySystem : EntitySystem
 
         var delay = (float) component.UnstickDelay.TotalSeconds;
 
-        //A-13 Детонация C4 при откреплении start
+        //A-13 Detonation of C4 during detaching start
         if (TryComp<C4DetonationByUnstickComponent>(uid, out var c4Comp))
         {
             if (c4Comp.Detonation && TryComp<ActiveTimerTriggerComponent>(uid, out var activateComp))
@@ -144,7 +144,7 @@ public sealed class StickySystem : EntitySystem
                 activateComp.TimeRemaining = 0;
             }
         }
-        //A-13 Детонация C4 при откреплении end
+        //A-13 Detonation of C4 during detaching end
 
         if (delay > 0)
         {
