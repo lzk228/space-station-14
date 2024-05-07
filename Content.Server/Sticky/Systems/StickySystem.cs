@@ -1,9 +1,9 @@
 using Content.Server.Popups;
 using Content.Server.Sticky.Components;
 using Content.Server.Sticky.Events;
-using Content.Shared.Andromeda.Voomra.C4;
+using Content.Shared.Andromeda.Voomra.C4; //A-13 Detonation of C4 during detaching
 using Content.Shared.DoAfter;
-using Content.Shared.Explosion.Components;
+using Content.Shared.Explosion.Components; //A-13 Detonation of C4 during detaching
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Sticky;
