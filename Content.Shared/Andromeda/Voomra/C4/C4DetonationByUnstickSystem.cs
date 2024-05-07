@@ -35,7 +35,9 @@ public sealed class C4DetonationByUnstickSystem : EntitySystem
     {
         args.Verbs.Add(new AlternativeVerb
         {
-            Text = $"Детонация при попытке снятия: {(component.Detonation ? "ВКЛ" : "ВЫКЛ")}",
+            Text = Loc.GetString("verb-c4-detonation-by-unstick", ("status", component.Detonation
+                ? Loc.GetString("verb-c4-detonation-by-unstick-status-on")
+                : Loc.GetString("verb-c4-detonation-by-unstick-status-off"))),
             Act = () => DoAltVerbs(component, args.User)
         });
     }
