@@ -17,6 +17,6 @@
 - type: soundCollection
   id: FootstepObmotki
   files:
-  - /Audio/Andromeda/Waufuf/rags_step1.ogg
-  - /Audio/Andromeda/Waufuf/rags_step2.ogg
-  - /Audio/Andromeda/Waufuf/rags_step3.ogg
+  - /Audio/Andromeda/Waufuf/ragsstep1.ogg
+  - /Audio/Andromeda/Waufuf/ragsstep2.ogg
+  - /Audio/Andromeda/Waufuf/ragsstep3.ogg
