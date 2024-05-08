@@ -65,9 +65,11 @@
   packetPrototype: MintPlantSeeds
   productPrototypes:
     - MintPlantLeaves
+  harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
   production: 6
+  growthStages: 5
   yield: 2
   potency: 5
   idealLight: 9
@@ -75,7 +77,7 @@
     MintExtract:
       Min: 1
       Max: 20
-      PotencyDivisor: 20
+      PotencyDivisor: 5
 
 - type: entity
   parent: SeedBase
