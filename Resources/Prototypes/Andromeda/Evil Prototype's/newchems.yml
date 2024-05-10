@@ -1,6 +1,6 @@
 - type: reagent
   id: MintExtract
-  name: Экстракт мяты
+  name: экстракт мяты
   parent: BaseJuice
   desc: Приятно пахнущий мятный экстракт
   physicalDesc: мятное
@@ -14,12 +14,12 @@
           types:
             Poison: -1
       - !type:MovespeedModifier
-        walkSpeedModifier: 1.1
-        sprintSpeedModifier: 1.1
+        walkSpeedModifier: 1.05
+        sprintSpeedModifier: 1.05
 
 - type: reagent
   id: CatNipExtract
-  name: Экстракт котовика
+  name: экстракт котовика
   parent: BaseJuice
   desc: Подозрительно муррчащий экстракт котовика
   physicalDesc: котомятное
@@ -42,24 +42,31 @@
         refresh: false
         conditions:
         - !type:OrganType
-          type: Human #Разобраться с метаболизмом и прописать другой тип
+          type: Animal
       - !type:MovespeedModifier
-        walkSpeedModifier: 1.25
-        sprintSpeedModifier: 1.25
+        walkSpeedModifier: 1.15
+        sprintSpeedModifier: 1.15
         conditions:
         - !type:OrganType
-          type: Human #Разобраться с метаболизмом и прописать другой тип
+          type: Animal
       - !type:Emote
         emote: Meow
         showInChat: true
-        probability: 0.5
+        probability: 0.05
         conditions:
         - !type:OrganType
-          type: Human #Разобраться с метаболизмом и прописать другой тип
+          type: Animal
+      - !type:Emote
+        emote: Mew
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
 
 - type: reagent
   id: MilkThatMakesYouMurr
-  name: Милоко
+  name: милоко
   group: Special
   desc: Чистая сущность фелинидов. Заставляет вас Муррчать!
   physicalDesc: муррчащее
@@ -69,10 +76,57 @@
     Poison:
       metabolismRate: 0.5
       effects:
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MilkThatMakesYouMurr
+          max: 10
+        visualType: Medium
+        messages: ["Вы ощущаете приятное муррчание", "Вы чувствуете желание муррчать", "Вы чувствуете слабое желание гладить Лемирду"]
+        probability: 0.15
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MilkThatMakesYouMurr
+          min: 11
+          max: 20
+        visualType: Medium
+        messages: ["Ваше желание муррчать усиливается", "Вы отчаянно муррчите", "Вы очень хотите погладить Лемирду"]
+        probability: 0.15
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MilkThatMakesYouMurr
+          min: 21
+          max: 30
+        visualType: Medium
+        messages: ["Вы очень хотите потискать Лемирду", "Вы хотите поиграть с клубком ниток"]
+        probability: 0.15
       - !type:Emote
-        emote: CatMeow #Разобраться со звуками Молей
+        emote: CatMeow
         showInChat: true
+        conditions:
+        - !type:OrganType
+          type: Animal
+          shouldHave: false
         probability: 0.25
+      - !type:Emote
+        emote: Meow
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Emote
+        emote: Mew
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
       - !type:Polymorph
         prototype: CatPoly
         conditions:
@@ -100,7 +154,7 @@
 - type: reaction
   id: MilkThatMakesYouMurr
   reactants:
-    MintExtract:
+    CatNipExtract:
       amount: 1
     Milk:
       amount: 1

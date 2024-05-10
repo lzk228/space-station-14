@@ -1,0 +1,219 @@
+- type: entity
+  parent: FoodBowlBase
+  id: FoodBowlBaseNew
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/food/salads.rsi
+
+- type: entity
+  name: селедка под шубой
+  parent: FoodBowlBaseNew
+  id: SalCoat
+  description: Созданная по рецепту из далёкой древности, с добавлением космических ингредиентов, она... Это что, карп в шубе?! Только не показывайте его нианам!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - fishy
+      - mayonnaise
+      - egg
+  - type: Sprite
+    layers:
+    - state: bowl
+    - state: salcoat
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 10
+
+- type: entity
+  name: крабовый салат
+  parent: FoodBowlBaseNew
+  id: SalCrab
+  description: У него есть всё, чего нет у оливье! Кукуруза, достоинство и две большие клешни!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - fishy
+      - mayonnaise
+      - egg
+  - type: Sprite
+    layers:
+    - state: bowl
+    - state: salcrab
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 10
+
+- type: entity
+  name: салат мимоза
+  parent: FoodBowlBaseNew
+  id: SalMime
+  description: Смотря этот салат, вы понимаете, что будете молчаливо осуждены, если выберете другое блюдо!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - fishy
+      - mayonnaise
+      - egg
+  - type: Sprite
+    layers:
+    - state: bowlmime
+    - state: salmime
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: MuteToxin
+          Quantity: 10
+
+- type: microwaveMealRecipe
+  id: RecipeSalCoat
+  name: рецепт селедки под шубой
+  result: SalCoat
+  time: 5
+  solids:
+    FoodBowlBig: 1
+    FoodPotato: 1
+    FoodCarrot: 1
+    FoodEgg: 2
+    FoodMeatFish: 1
+  reagents:
+    Mayo: 15
+
+- type: microwaveMealRecipe
+  id: RecipeSalCrab
+  name: рецепт крабового салата
+  result: SalCrab
+  time: 5
+  solids:
+    FoodBowlBig: 1
+    FoodCorn: 1
+    FoodEgg: 2
+    FoodMeatCrab: 1
+  reagents:
+    Mayo: 10
+    Rice: 10
+
+- type: microwaveMealRecipe
+  id: RecipeSalMime
+  name: рецепт салата мимоза
+  result: SalMime
+  time: 5
+  solids:
+    FoodBowlBig: 1
+    FoodPotato: 1
+    FoodCarrot: 1
+    FoodEgg: 1
+    FoodMeatFish: 1
+    FoodPineapple: 1
+  reagents:
+    Mayo: 10
+
+- type: entity
+  parent: FoodTinBase
+  id: FoodTinCondMilk
+  name: банка сгущенки
+  description: Целая банка знаменитой сгущёнки! Вызывает у многих людей приятные воспоминания о прошлом.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Milk
+          Quantity: 15
+        - ReagentId: Sugar
+          Quantity: 5
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tincondmilk.rsi
+  - type: FlavorProfile
+    flavors:
+    - sweet
+    - milk
+  - type: Food
+    trash: FoodTinCondMilkTrash
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinCondMilkTrash
+  name: банка сгущенки
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tincondmilk.rsi
+
+- type: entity
+  parent: FoodTinBase
+  id: FoodTinPorrige
+  name: консервированная каша
+  description: Старая консерва, заполненная самой настоящей кашей! Судя по внешнему виду гречка с тушенкой, приправленная специями! Слово "вульпятина" почему-то зачеркнуто.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Protein
+          Quantity: 10
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tinporrige.rsi
+  - type: FlavorProfile
+    flavors:
+    - meaty
+    - spicy
+  - type: Food
+    trash: FoodTinPorrigeTrash
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinPorrigeTrash
+  name: консервированная каша
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tinporrige.rsi
+
+- type: entity
+  parent: FoodTinBase
+  id: FoodTinErp
+  name: консервированная хорнятина
+  description: КРАЙНЕ подозрительная консерва, с возбуждающим ароматом. На обратной стороне можно заметить чтото про натуральный вульпяшные ингредиенты.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Aphrodisiac
+          Quantity: 20
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tinerp.rsi
+  - type: FlavorProfile
+    flavors:
+    - meaty
+    - spicy
+  - type: Food
+    trash: FoodTinErpTrash
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinErpTrash
+  name: консервированная хорнятина
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tinerp.rsi
