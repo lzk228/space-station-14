@@ -191,16 +191,18 @@
 - type: entity
   parent: FoodTinBase
   id: FoodTinErp
-  name: консервированная хорнятина
-  description: КРАЙНЕ подозрительная консерва, с возбуждающим ароматом. На обратной стороне можно заметить чтото про натуральные вульпяшные ингредиенты.
+  name: консервированная ебихотня
+  description: КРАЙНЕ подозрительная консерва, с возбуждающим ароматом, вы ощущаете себя ебихотой. На обратной стороне можно заметить чтото про натуральные вульпяшные ингредиенты.
   components:
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 30
         reagents:
         - ReagentId: Aphrodisiac
           Quantity: 20
+        - ReagentId: Ephedrine
+          Quantity: 10
   - type: Sprite
     sprite: Andromeda/Evil/food/tinerp.rsi
   - type: FlavorProfile
