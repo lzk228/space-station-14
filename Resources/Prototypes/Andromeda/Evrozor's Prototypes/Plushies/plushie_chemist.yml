@@ -6,5 +6,5 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evrozor/plushies/plushie_chemist.rsi
+    sprite: Andromeda/Evrozor/Plushies/plushie_chemist.rsi
     state: icon
