@@ -95,6 +95,7 @@
   id: TileMeister3000Circuitboard
   name: плитмастер3000 (машинная плата)
   description: Печатная плата для ПлитМастер 3000.
+  suffix: Андромеда
   components:
     - type: MachineBoard
       prototype: TileMeister3000
