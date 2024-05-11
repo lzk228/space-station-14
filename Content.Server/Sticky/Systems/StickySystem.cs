@@ -1,7 +1,9 @@
 using Content.Server.Popups;
 using Content.Server.Sticky.Components;
 using Content.Server.Sticky.Events;
+using Content.Shared.Andromeda.Voomra.C4; //A-13 Detonation of C4 during detaching
 using Content.Shared.DoAfter;
+using Content.Shared.Explosion.Components; //A-13 Detonation of C4 during detaching
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Sticky;
@@ -133,6 +135,15 @@ public sealed class StickySystem : EntitySystem
             return;
 
         var delay = (float) component.UnstickDelay.TotalSeconds;
+
+        //A-13 Detonation of C4 during detaching start
+        if (TryComp<C4DetonationByUnstickComponent>(uid, out var c4Comp))
+        {
+            if (c4Comp.Detonation && TryComp<ActiveTimerTriggerComponent>(uid, out var activateComp))
+                activateComp.TimeRemaining = 0;
+        }
+        //A-13 Detonation of C4 during detaching end
+
         if (delay > 0)
         {
             // show message to user
