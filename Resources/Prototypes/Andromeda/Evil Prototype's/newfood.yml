@@ -11,12 +11,15 @@
   parent: FoodBowlBaseNew
   id: SalCoat
   description: Созданная по рецепту из далёкой древности, с добавлением космических ингредиентов, она... Это что, карп в шубе?! Только не показывайте его нианам!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
       - fishy
       - mayonnaise
       - egg
+      - potato
+      - carrot
   - type: Sprite
     layers:
     - state: bowl
@@ -24,10 +27,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 40
+        maxVol: 30
         reagents:
         - ReagentId: Nutriment
-          Quantity: 30
+          Quantity: 20
         - ReagentId: Vitamin
           Quantity: 10
 
@@ -36,12 +39,14 @@
   parent: FoodBowlBaseNew
   id: SalCrab
   description: У него есть всё, чего нет у оливье! Кукуруза, достоинство и две большие клешни!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
-      - fishy
+      - crabby
       - mayonnaise
       - egg
+      - corn
   - type: Sprite
     layers:
     - state: bowl
@@ -49,24 +54,26 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 40
+        maxVol: 30
         reagents:
         - ReagentId: Nutriment
-          Quantity: 30
+          Quantity: 15
         - ReagentId: Vitamin
-          Quantity: 10
+          Quantity: 15
 
 - type: entity
   name: салат мимоза
   parent: FoodBowlBaseNew
   id: SalMime
   description: Смотря этот салат, вы понимаете, что будете молчаливо осуждены, если выберете другое блюдо!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
       - fishy
       - mayonnaise
       - egg
+      - medicine
   - type: Sprite
     layers:
     - state: bowlmime
@@ -129,6 +136,7 @@
   id: FoodTinCondMilk
   name: банка сгущенки
   description: Целая банка знаменитой сгущёнки! Вызывает у многих людей приятные воспоминания о прошлом.
+  suffix: Андромеда
   components:
   - type: SolutionContainerManager
     solutions:
@@ -152,6 +160,7 @@
   parent: FoodTinBaseTrash
   id: FoodTinCondMilkTrash
   name: банка сгущенки
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Evil/food/tincondmilk.rsi
@@ -161,6 +170,7 @@
   id: FoodTinPorrige
   name: консервированная каша
   description: Старая консерва, заполненная самой настоящей кашей! Судя по внешнему виду гречка с тушенкой, приправленная специями! Слово "вульпятина" почему-то зачеркнуто.
+  suffix: Андромеда
   components:
   - type: SolutionContainerManager
     solutions:
@@ -184,6 +194,7 @@
   parent: FoodTinBaseTrash
   id: FoodTinPorrigeTrash
   name: консервированная каша
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Evil/food/tinporrige.rsi
@@ -191,16 +202,17 @@
 - type: entity
   parent: FoodTinBase
   id: FoodTinErp
-  name: консервированная ебихотня
-  description: КРАЙНЕ подозрительная консерва, с возбуждающим ароматом, вы ощущаете себя ебихотой. На обратной стороне можно заметить чтото про натуральные вульпяшные ингредиенты.
+  name: консервированная хорнятина
+  description: КРАЙНЕ подозрительная консерва, с возбуждающим ароматом, вы буквально ощущаете себя ебихотой. На обратной стороне можно заметить что-то про натуральные вульпяшные ингредиенты.
+  suffix: Андромеда
   components:
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 20
         reagents:
         - ReagentId: Aphrodisiac
-          Quantity: 20
+          Quantity: 10
         - ReagentId: Ephedrine
           Quantity: 10
   - type: Sprite
@@ -209,6 +221,7 @@
     flavors:
     - meaty
     - spicy
+    - punishment
   - type: Food
     trash: FoodTinErpTrash
 
@@ -216,6 +229,7 @@
   parent: FoodTinBaseTrash
   id: FoodTinErpTrash
   name: консервированная хорнятина
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Evil/food/tinerp.rsi

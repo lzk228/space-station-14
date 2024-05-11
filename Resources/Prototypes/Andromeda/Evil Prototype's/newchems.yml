@@ -3,8 +3,9 @@
   name: экстракт мяты
   parent: BaseJuice
   desc: Приятно пахнущий мятный экстракт
+  suffix: Андромеда
   physicalDesc: мятное
-  flavor: мятно
+  flavor: minty
   color: "#18ad45"
   metabolisms:
     Medicine:
@@ -22,8 +23,9 @@
   name: экстракт котовика
   parent: BaseJuice
   desc: Подозрительно муррчащий экстракт котовика
+  suffix: Андромеда
   physicalDesc: котомятное
-  flavor: котомятно
+  flavor: minty
   color: "#18ad45"
   metabolisms:
     Medicine:
@@ -69,8 +71,9 @@
   name: милоко
   group: Special
   desc: Чистая сущность фелинидов. Заставляет вас Муррчать!
+  suffix: Андромеда
   physicalDesc: муррчащее
-  flavor: муррчащее
+  flavor: magical
   color: "#dcf0ea"
   metabolisms:
     Poison:
