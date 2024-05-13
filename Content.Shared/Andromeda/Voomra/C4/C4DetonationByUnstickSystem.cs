@@ -1,3 +1,4 @@
+using Content.Shared.Examine;
 using Content.Shared.Explosion.Components;
 using Content.Shared.Verbs;
 
@@ -16,6 +17,7 @@ public sealed class C4DetonationByUnstickSystem : EntitySystem
         SubscribeLocalEvent<C4DetonationByUnstickComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<C4DetonationByUnstickComponent, ComponentRemove>(OnComponentRemove);
         SubscribeLocalEvent<C4DetonationByUnstickComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerbs);
+        SubscribeLocalEvent<C4DetonationByUnstickComponent, ExaminedEvent>(OnExamined);
     }
 
     private void OnComponentInit(EntityUid uid, C4DetonationByUnstickComponent component, ComponentInit args)
@@ -45,5 +47,11 @@ public sealed class C4DetonationByUnstickSystem : EntitySystem
     private void DoAltVerbs(C4DetonationByUnstickComponent component)
     {
         component.Detonation = !component.Detonation;
+    }
+
+    private void OnExamined(EntityUid uid, C4DetonationByUnstickComponent component, ExaminedEvent args)
+    {
+        if (component.Detonation)
+            args.PushMarkup(Loc.GetString("examine-c4-detonation-by-unstick"));
     }
 }
