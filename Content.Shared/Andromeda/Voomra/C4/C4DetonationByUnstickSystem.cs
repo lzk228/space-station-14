@@ -1,3 +1,4 @@
+using Content.Shared.Explosion.Components;
 using Content.Shared.Verbs;
 
 namespace Content.Shared.Andromeda.Voomra.C4;
@@ -29,6 +30,9 @@ public sealed class C4DetonationByUnstickSystem : EntitySystem
 
     private void OnGetAltVerbs(EntityUid uid, C4DetonationByUnstickComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
+        if (HasComp<ActiveTimerTriggerComponent>(uid))
+            return;
+
         args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("verb-c4-detonation-by-unstick", ("status", component.Detonation
