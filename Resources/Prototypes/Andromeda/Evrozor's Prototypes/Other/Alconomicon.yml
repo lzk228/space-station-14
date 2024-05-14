@@ -20,23 +20,23 @@
   - type: SolutionContainerManager
     solutions:
       essence:
-        maxVol: 300
+        maxVol: 50
         reagents:
         - ReagentId: Ethanol
-          Quantity: 300
+          Quantity: 50
   - type: SolutionRegeneration
     solution: essence
     generated:
       reagents:
       - ReagentId: Ethanol
-        Quantity: 20
+        Quantity: 7
   - type: InjectableSolution
     solution: essence
   - type: RefillableSolution
     solution: essence
   - type: Hypospray
     solutionName: essence
-    transferAmount: 25
+    transferAmount: 7
   - type: UseDelay
     delay: 40
   
