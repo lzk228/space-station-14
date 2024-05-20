@@ -40,7 +40,7 @@
 #    solution: essence
   - type: Hypospray
     solutionName: essence
-    transferAmount: 30
+    transferAmount: 10
   - type: UseDelay
-    delay: 1.5
+    delay: 60
   
