@@ -135,7 +135,7 @@
     FoodBreadBun: 1
     FoodMeat: 2
     FoodCheeseSlice: 2
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodCabbage: 1
     CrayonGreen: 1
     Flare: 1
@@ -177,7 +177,7 @@
   solids:
     FoodBreadBun: 1
     FoodMeat: 1
-    FoodChili: 3
+    FoodChiliPepper: 3
 
 - type: microwaveMealRecipe
   id: RecipeGhostBurger
@@ -676,7 +676,7 @@
   solids:
     FoodRiceBoiled: 1
     FoodMeatCutlet: 3
-    FoodChili: 2
+    FoodChiliPepper: 2
 
 - type: microwaveMealRecipe
   id: RecipeEggRice
@@ -895,7 +895,7 @@
   solids:
     FoodBowlBig: 1
     FoodBungo: 2
-    FoodChili: 1
+    FoodChiliPepper: 1
 
 #Pies
 
@@ -966,7 +966,7 @@
   time: 15
   solids:
     FoodDoughPie: 1
-    FoodChilly: 3
+    FoodChillyPepper: 3
     FoodPlateTin: 1
 
 - type: microwaveMealRecipe
@@ -1064,7 +1064,7 @@
   solids:
     FoodDough: 1
     FoodCheeseSlice: 2
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodMeatFish: 2
 
 - type: microwaveMealRecipe
@@ -1505,7 +1505,7 @@
   time: 20
   solids:
     FoodBowlBig: 1
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodMeatCutlet: 1
     FoodOnionSlice: 1
     FoodTomato: 1
@@ -1538,7 +1538,7 @@
   time: 30
   solids:
     FoodBowlBig: 1
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodMeatCutlet: 1
     FoodOnionSlice: 1
     FoodTomato: 1
@@ -1553,7 +1553,7 @@
   #reagents:
     #blackpepper: 5
   solids:
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodCheeseSlice: 2
 
 - type: microwaveMealRecipe
@@ -1573,7 +1573,7 @@
   result: FoodMealEnchiladas
   time: 20
   solids:
-    FoodChili: 2
+    FoodChiliPepper: 2
     FoodMeatCutlet: 1
     FoodCorn: 1
 
@@ -1705,6 +1705,14 @@
     LeavesCannabis: 1
 
 - type: microwaveMealRecipe
+  id: RecipeDriedCannabisRainbow
+  name: dried rainbow cannabis leaves recipe
+  result: LeavesCannabisRainbowDried
+  time: 10
+  solids:
+    LeavesCannabisRainbow: 1
+
+- type: microwaveMealRecipe
   id: RecipeTrashBakedBananaPeel
   name: baked banana peel recipe
   result: TrashBakedBananaPeel
@@ -1741,7 +1749,7 @@
   result: FoodMeatHawaiianKebab
   time: 5
   solids:
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodMeatCutlet: 1
     FoodPineappleSlice: 1
     FoodKebabSkewer: 1
@@ -1752,7 +1760,7 @@
   result: FoodMeatFiestaKebab
   time: 5
   solids:
-    FoodChili: 1
+    FoodChiliPepper: 1
     FoodCorn: 1
     FoodMeatCutlet: 1
     FoodTomato: 1

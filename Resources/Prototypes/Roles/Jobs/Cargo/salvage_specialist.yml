@@ -22,12 +22,8 @@
   id: SalvageSpecialistGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
-    back: ClothingBackpackSalvageFilled
-    shoes: ClothingShoesBootsSalvage
     id: SalvagePDA
     ears: ClothingHeadsetCargo
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  satchel: ClothingBackpackSatchelSalvageFilled
-  duffelbag: ClothingBackpackDuffelSalvageFilled

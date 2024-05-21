@@ -1,11 +1,13 @@
 using System.Linq;
 using Content.Client.Corvax.Sponsors;
 using Content.Client.Corvax.TTS;
+using Content.Client.Lobby;
+using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Corvax.TTS;
 using Content.Shared.Preferences;
 using Robust.Shared.Random;
 
-namespace Content.Client.Preferences.UI;
+namespace Content.Client.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {
@@ -30,17 +32,15 @@ public sealed partial class HumanoidProfileEditor
 
     private void InitializeVoice()
     {
-        _random = IoCManager.Resolve<IRobustRandom>();
-        _ttsSys = _entMan.System<TTSSystem>();
         _voiceList = _prototypeManager
             .EnumeratePrototypes<TTSVoicePrototype>()
             .Where(o => o.RoundStart)
             .OrderBy(o => Loc.GetString(o.Name))
             .ToList();
 
-        _voiceButton.OnItemSelected += args =>
+        VoiceButton.OnItemSelected += args =>
         {
-            _voiceButton.SelectId(args.Id);
+            VoiceButton.SelectId(args.Id);
             SetVoice(_voiceList[args.Id].ID);
         };
 
@@ -53,7 +53,7 @@ public sealed partial class HumanoidProfileEditor
         if (Profile is null)
             return;
 
-        _voiceButton.Clear();
+        VoiceButton.Clear();
 
         var firstVoiceChoiceId = 1;
         for (var i = 0; i < _voiceList.Count; i++)
@@ -63,7 +63,7 @@ public sealed partial class HumanoidProfileEditor
                 continue;
 
             var name = Loc.GetString(voice.Name);
-            _voiceButton.AddItem(name, i);
+            VoiceButton.AddItem(name, i);
 
             if (firstVoiceChoiceId == 1)
                 firstVoiceChoiceId = i;
@@ -72,23 +72,23 @@ public sealed partial class HumanoidProfileEditor
                 IoCManager.Resolve<SponsorsManager>().TryGetInfo(out var sponsor) &&
                 !sponsor.AllowedMarkings.Contains(voice.ID))
             {
-                _voiceButton.SetItemDisabled(_voiceButton.GetIdx(i), true);
+                VoiceButton.SetItemDisabled(VoiceButton.GetIdx(i), true);
             }
         }
 
         var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.Voice);
-        if (!_voiceButton.TrySelectId(voiceChoiceId) &&
-            _voiceButton.TrySelectId(firstVoiceChoiceId))
+        if (!VoiceButton.TrySelectId(voiceChoiceId) &&
+            VoiceButton.TrySelectId(firstVoiceChoiceId))
         {
             SetVoice(_voiceList[firstVoiceChoiceId].ID);
         }
     }
 
-    private void PlayTTS()
+    private void PlayPreviewTTS()
     {
-        if (_previewDummy is null || Profile is null)
+        if (Profile is null)
             return;
 
-        _ttsSys.RequestGlobalTTS(_random.Pick(_sampleText), Profile.Voice);
+        _entManager.System<TTSSystem>().RequestPreviewTTS(Profile.Voice);
     }
 }

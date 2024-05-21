@@ -49,21 +49,12 @@ namespace Content.Shared.Chemistry.Components
         public bool CanReact { get; set; } = true;
 
         /// <summary>
-        ///     If reactions can occur via mixing.
-        /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("canMix")]
-        public bool CanMix { get; set; } = false;
-
-        /// <summary>
         ///     If solution can boil out.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("canBoil")]
-        public bool CanBoil { get; set; } = true;
-
-        /// <summary>
-        ///     Volume needed to fill this container.
+        [ViewVariables(VVAccess.ReadWrite)]             // A-13 boil system NOT WORKING but who cares
+        [DataField("canBoil")]                          // A-13 boil system NOT WORKING but who cares
+        public bool CanBoil { get; set; } = true;       // A-13 boil system NOT WORKING but who cares
+        ///     Volume needed to fill this container.   
         /// </summary>
         [ViewVariables]
         public FixedPoint2 AvailableVolume => MaxVolume - Volume;

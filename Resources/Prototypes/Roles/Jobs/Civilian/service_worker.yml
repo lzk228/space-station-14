@@ -1,4 +1,4 @@
-﻿- type: job
+- type: job
   id: ServiceWorker
   name: job-name-serviceworker
   description: job-description-serviceworker
@@ -18,14 +18,9 @@
 - type: startingGear
   id: ServiceWorkerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitBartender
-    back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
     id: ServiceWorkerPDA
     ears: ClothingHeadsetService
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtBartender
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled

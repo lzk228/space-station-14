@@ -20,6 +20,8 @@
         prob: 0.50
       - id: DoorRemoteCargo
       - id: RubberStampQm
+      - id: RubberStampDenied
+      - id: RubberStampApproved
       - id: ClothingHeadsetAltCargo
       - id: BoxEncryptionKeyCargo
       - id: PrinterDocFlatpack # Corvax-Printer
@@ -140,6 +142,8 @@
       - id: DoorRemoteService
       - id: ClothingNeckGoldmedal
       - id: RubberStampHop
+      - id: RubberStampDenied
+      - id: RubberStampApproved
       - id: BoxEncryptionKeyPassenger
       - id: BoxEncryptionKeyService
       - id: ClothingBackpackIan
@@ -298,7 +302,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingEyesHudSecurity
       - id: WeaponDisabler
       - id: ClothingHeadHatBeretHoS
       - id: ClothingHeadHatHoshat
@@ -310,7 +313,7 @@
       - id: ClothingMaskGasSwat
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingEyesGlassesSunglasses
+      - id: ClothingEyesGlassesSecurity
       - id: ClothingShoesBootsJack
       - id: CigarGoldCase
         prob: 0.50
@@ -331,7 +334,6 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingEyesHudSecurity
       - id: WeaponDisabler
       - id: ClothingHeadHatBeretHoS
       - id: ClothingHeadHatHoshat
@@ -341,7 +343,7 @@
       - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingEyesGlassesSunglasses
+      - id: ClothingEyesGlassesSecurity
       - id: ClothingShoesBootsJack
       - id: CigarGoldCase
         prob: 0.50

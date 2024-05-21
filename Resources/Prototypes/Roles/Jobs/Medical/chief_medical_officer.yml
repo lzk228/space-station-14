@@ -39,16 +39,9 @@
 - type: startingGear
   id: CMOGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCMO
-    back: ClothingBackpackCMOFilled
-    shoes: ClothingShoesColorBrown
-    outerClothing: ClothingOuterCoatLabCmo
     id: CMOPDA
     ears: ClothingHeadsetCMO
     belt: ClothingBeltMedicalFilled
     underwearb: ClothingUnderwearBottomBoxersCMO # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraCMO # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesCMO # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtCMO
-  satchel: ClothingBackpackSatchelCMOFilled
-  duffelbag: ClothingBackpackDuffelCMOFilled

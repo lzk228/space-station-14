@@ -19,9 +19,6 @@
 - type: startingGear
   id: AtmosphericTechnicianGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitAtmos
-    back: ClothingBackpackAtmosphericsFilled
-    shoes: ClothingShoesColorWhite
     eyes: ClothingEyesGlassesMeson
     id: AtmosPDA
     belt: ClothingBeltUtilityEngineering
@@ -29,6 +26,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtAtmos
-  satchel: ClothingBackpackSatchelAtmosphericsFilled
-  duffelbag: ClothingBackpackDuffelAtmosphericsFilled

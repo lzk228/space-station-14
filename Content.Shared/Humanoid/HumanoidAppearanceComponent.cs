@@ -93,13 +93,11 @@ public sealed partial class HumanoidAppearanceComponent : Component
     [ViewVariables(VVAccess.ReadOnly)]
     public Color? CachedFacialHairColor;
 
-    // Andromeda evil twin: allow paradox anomalies to be cloned.
     /// <summary>
-    ///     The last profile loaded onto this entity.
+    ///     Which layers of this humanoid that should be hidden on equipping a corresponding item..
     /// </summary>
-    //[ViewVariables(VVAccess.ReadOnly)]
-    //public HumanoidCharacterProfile? LastProfileLoaded;
-    // End Andromeda code
+    [DataField]
+    public HashSet<HumanoidVisualLayers> HideLayersOnEquip = [HumanoidVisualLayers.Hair];
 }
 
 [DataDefinition]

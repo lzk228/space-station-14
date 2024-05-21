@@ -21,9 +21,6 @@
 - type: startingGear
   id: ParamedicGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitParamedic
-    back: ClothingBackpackParamedicFilled
-    shoes: ClothingShoesColorBlue
     id: ParamedicPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalEMTFilled
@@ -31,6 +28,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraSportsAlternative # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtParamedic
-  satchel: ClothingBackpackSatchelParamedicFilled
-  duffelbag: ClothingBackpackDuffelParamedicFilled

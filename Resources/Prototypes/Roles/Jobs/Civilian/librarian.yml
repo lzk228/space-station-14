@@ -13,8 +13,6 @@
 - type: startingGear
   id: LibrarianGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitLibrarian
-    back: ClothingBackpackLibrarianFilled
     shoes: ClothingShoesBootsLaceup
     id: LibrarianPDA
     ears: ClothingHeadsetService
@@ -23,6 +21,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtLibrarian
-  satchel: ClothingBackpackSatchelLibrarianFilled
-  duffelbag: ClothingBackpackDuffelLibrarianFilled

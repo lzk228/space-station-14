@@ -58,10 +58,7 @@
 - type: startingGear
   id: HoPGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitHoP
-    back: ClothingBackpackHOPFilled
     shoes: ClothingShoesColorBrown
-    head: ClothingHeadHatHopcap
     id: HoPPDA
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
@@ -69,6 +66,3 @@
     underwearb: ClothingUnderwearBottomBoxersHOP # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraHOP # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesHOP # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtHoP
-  satchel: ClothingBackpackSatchelHOPFilled
-  duffelbag: ClothingBackpackDuffelHOPFilled

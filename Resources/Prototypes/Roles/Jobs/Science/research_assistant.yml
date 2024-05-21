@@ -19,8 +19,6 @@
 - type: startingGear
   id: ResearchAssistantGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitColorWhite
-    back: ClothingBackpackScienceFilled
     shoes: ClothingShoesColorWhite
     id: ResearchAssistantPDA
     ears: ClothingHeadsetScience
@@ -28,6 +26,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtColorWhite
-  satchel: ClothingBackpackSatchelScienceFilled
-  duffelbag: ClothingBackpackDuffelScienceFilled

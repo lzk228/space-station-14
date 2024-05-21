@@ -1,4 +1,4 @@
-﻿- type: vendingMachineInventory
+- type: vendingMachineInventory
   id: DinnerwareInventory
   startingInventory: # A-13 kitchen buff
     ButchCleaver: 1
@@ -6,11 +6,12 @@
     RollingPin: 4
     Spoon: 4
     Fork: 4
-    FoodBowlBig: 20
-    FoodPlate: 20
-    FoodPlateSmall: 20
-    FoodPlateTin: 10
-    FoodKebabSkewer: 10
+    PairedChopsticks: 4
+    FoodBowlBig: 20 # A-13 kitchen buff
+    FoodPlate: 20 # A-13 kitchen buff
+    FoodPlateSmall: 20 # A-13 kitchen buff
+    FoodPlateTin: 10 # A-13 kitchen buff
+    FoodKebabSkewer: 10 # A-13 kitchen buff
     DrinkGlass: 5
     Beaker: 5
     LargeBeaker: 5

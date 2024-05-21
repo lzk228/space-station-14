@@ -1,4 +1,6 @@
 using System.Linq;
+using Content.Server.Administration;
+using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Afk.Events;
 using Content.Server.GameTicking;
@@ -52,6 +54,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         SubscribeLocalEvent<UnAFKEvent>(OnUnAFK);
         SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnPlayerJoinedLobby);
+        _adminManager.OnPermsChanged += AdminPermsChanged;
     }
 
     // A-13 Tracking Admin Time system start
@@ -67,6 +70,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         base.Shutdown();
 
         _tracking.CalcTrackers -= CalcTrackers;
+        _adminManager.OnPermsChanged -= AdminPermsChanged;
     }
 
     private void CalcTrackers(ICommonSession player, HashSet<string> trackers)
@@ -156,6 +160,11 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     private void OnAFK(ref AFKEvent ev)
     {
         _tracking.QueueRefreshTrackers(ev.Session);
+    }
+
+    private void AdminPermsChanged(AdminPermsChangedEventArgs admin)
+    {
+        _tracking.QueueRefreshTrackers(admin.Player);
     }
 
     private void OnPlayerAttached(PlayerAttachedEvent ev)

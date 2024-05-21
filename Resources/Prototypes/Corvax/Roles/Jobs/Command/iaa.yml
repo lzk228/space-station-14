@@ -27,18 +27,12 @@
 - type: startingGear
   id: IAAGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
-    back: ClothingBackpackIAAFilled
     shoes: ClothingShoesColorBlack
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
-    neck: ClothingNeckLawyerbadge
+  inhand:
+    - BriefcaseIAAFilled
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearToplaceBra # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesLace # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
-  satchel: ClothingBackpackSatchelIAAFilled
-  duffelbag: ClothingBackpackDuffelIAAFilled
-  inhand:
-    - BriefcaseIAAFilled

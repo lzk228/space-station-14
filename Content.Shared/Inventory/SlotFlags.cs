@@ -30,4 +30,6 @@ public enum SlotFlags
     UNDERWEARB = 1 << 10, // Andromeda-Underwear
     SOCKS = 1 << 10, // Andromeda-Underwear
     All = ~NONE,
+
+    WITHOUT_POCKET = All & ~POCKET
 }

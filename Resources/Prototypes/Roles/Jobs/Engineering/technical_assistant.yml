@@ -22,8 +22,6 @@
 - type: startingGear
   id: TechnicalAssistantGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitColorYellow
-    back: ClothingBackpackEngineeringFilled
     shoes: ClothingShoesBootsWork
     id: TechnicalAssistantPDA
     belt: ClothingBeltUtilityEngineering
@@ -32,6 +30,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtColorYellow
-  satchel: ClothingBackpackSatchelEngineeringFilled
-  duffelbag: ClothingBackpackDuffelEngineeringFilled

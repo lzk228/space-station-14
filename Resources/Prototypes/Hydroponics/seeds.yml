@@ -471,7 +471,6 @@
   nutrientConsumption: 0.40
   idealLight: 8
   idealHeat: 298
-  juicy: true
   splatPrototype: PuddleSplatter
   chemicals:
     Nutriment:
@@ -506,7 +505,6 @@
   nutrientConsumption: 0.70
   idealLight: 8
   idealHeat: 298
-  juicy: true
   splatPrototype: PuddleSplatter
   chemicals:
     Nutriment:
@@ -531,8 +529,10 @@
   packetPrototype: BloodTomatoSeeds
   productPrototypes:
     - FoodBloodTomato
+  mutationPrototypes:
+    - killerTomato
   harvestRepeat: Repeat
-  lifespan: 25
+  lifespan: 60
   maturation: 8
   production: 6
   yield: 2
@@ -541,7 +541,6 @@
   nutrientConsumption: 0.70
   idealLight: 8
   idealHeat: 298
-  juicy: true
   splatPrototype: PuddleSplatter
   chemicals:
     Blood:
@@ -549,6 +548,37 @@
       Max: 10
       PotencyDivisor: 10
     Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+
+- type: seed
+  id: killerTomato
+  name: seeds-killertomato-name
+  noun: seeds-noun-seeds
+  displayName: seeds-killertomato-display-name
+  plantRsi: Objects/Specific/Hydroponics/tomatokiller.rsi
+  packetPrototype: KillerTomatoSeeds
+  productPrototypes:
+    - MobTomatoKiller
+  harvestRepeat: Repeat
+  lifespan: 25
+  maturation: 15
+  production: 6
+  yield: 2
+  potency: 10
+  waterConsumption: 0.60
+  nutrientConsumption: 0.70
+  idealLight: 8
+  idealHeat: 298
+  growthStages: 2
+  splatPrototype: PuddleSplatter
+  chemicals:
+    Blood:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    JuiceTomato:
       Min: 1
       Max: 4
       PotencyDivisor: 25
@@ -837,6 +867,8 @@
   packetPrototype: CannabisSeeds
   productPrototypes:
     - LeavesCannabis
+  mutationPrototypes:
+    - rainbowCannabis
   harvestRepeat: Repeat
   lifespan: 75
   maturation: 8
@@ -866,6 +898,51 @@
       requiredMinHealth: 0
       requiredMaxHealth: 20
       requiredMutationLevel: 0
+
+- type: seed
+  id: rainbowCannabis
+  name: seeds-rainbow-cannabis-name
+  noun: seeds-noun-seeds
+  displayName: seeds-rainbow-cannabis-display-name
+  plantRsi: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+  packetPrototype: RainbowCannabisSeeds
+  productPrototypes:
+    - LeavesCannabisRainbow
+  harvestRepeat: Repeat
+  lifespan: 75
+  maturation: 8
+  production: 12
+  yield: 2
+  potency: 20
+  growthStages: 3
+  waterConsumption: 0.40
+  idealLight: 9
+  idealHeat: 298
+  chemicals:
+    SpaceDrugs:
+      Min: 1
+      Max: 15
+      PotencyDivisor: 10
+    Lipolicide:
+      Min: 1
+      Max: 15
+      PotencyDivisor: 10
+    MindbreakerToxin:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Happiness:
+      Min: 1
+      Max: 5
+#     PotencyDivisor: 20
+#   ColorfulReagent:
+#     Min: 0
+#     Max: 5
+#     PotencyDivisor: 20
+    Psicodine:
+      Min: 0
+      Max: 5
+      PotencyDivisor: 33
 
 - type: seed
   id: tobacco
@@ -962,7 +1039,7 @@
   plantRsi: Objects/Specific/Hydroponics/chili.rsi
   packetPrototype: ChiliSeeds
   productPrototypes:
-    - FoodChili
+    - FoodChiliPepper
   mutationPrototypes:
     - chilly
   harvestRepeat: Repeat
@@ -995,7 +1072,7 @@
   plantRsi: Objects/Specific/Hydroponics/chilly.rsi
   packetPrototype: ChillySeeds
   productPrototypes:
-    - FoodChilly
+    - FoodChillyPepper
   harvestRepeat: Repeat
   lifespan: 25
   maturation: 6
@@ -1599,6 +1676,8 @@
   packetPrototype: CottonSeeds
   productPrototypes:
     - CottonBol
+  mutationPrototypes:
+    - pyrotton
   lifespan: 25
   maturation: 8
   production: 3
@@ -1613,3 +1692,29 @@
       Max: 10
       PotencyDivisor: 20
 
+- type: seed
+  id: pyrotton
+  name: seeds-pyrotton-name
+  noun: seeds-noun-seeds
+  displayName: seeds-pyrotton-display-name
+  plantRsi: Objects/Specific/Hydroponics/pyrotton.rsi
+  packetPrototype: PyrottonSeeds
+  productPrototypes:
+    - PyrottonBol
+  lifespan: 25
+  maturation: 8
+  production: 3
+  yield: 2
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.80
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+    Phlogiston:
+      Min: 4
+      Max: 8
+      PotencyDivisor: 30

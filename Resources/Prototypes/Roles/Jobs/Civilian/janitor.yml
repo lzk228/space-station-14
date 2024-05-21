@@ -18,26 +18,18 @@
 - type: startingGear
   id: JanitorGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitJanitor
-    back: ClothingBackpackFilled
     shoes: ClothingShoesGaloshes
-    head: ClothingHeadHatPurplesoft
     id: JanitorPDA
-    gloves: ClothingHandsGlovesJanitor
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtJanitor
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: JanitorMaidGear
   equipment:
     jumpsuit: ClothingUniformJumpskirtJanimaid
-    back: ClothingBackpackFilled
     id: JanitorPDA
     gloves: ClothingHandsGlovesJanitor
     head: ClothingHeadHatCatEars
@@ -46,6 +38,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtJanimaid
-  satchel: ClothingBackpackSatchelFilled
-  duffelbag: ClothingBackpackDuffelFilled

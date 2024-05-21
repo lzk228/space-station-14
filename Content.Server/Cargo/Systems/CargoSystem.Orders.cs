@@ -103,7 +103,7 @@ namespace Content.Server.Cargo.Systems
 
         private void OnApproveOrderMessage(EntityUid uid, CargoOrderConsoleComponent component, CargoConsoleApproveOrderMessage args)
         {
-            if (args.Session.AttachedEntity is not { Valid: true } player)
+            if (args.Actor is not { Valid: true } player)
                 return;
 
             // A-13 WIP EblanComponent
@@ -117,7 +117,7 @@ namespace Content.Server.Cargo.Systems
 
             if (!_accessReaderSystem.IsAllowed(player, uid))
             {
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-order-not-allowed"));
+                ConsolePopup(args.Actor, Loc.GetString("cargo-console-order-not-allowed"));
                 PlayDenySound(uid, component);
                 return;
             }
@@ -129,7 +129,7 @@ namespace Content.Server.Cargo.Systems
                 !TryComp(station, out StationDataComponent? stationData) ||
                 !TryGetOrderDatabase(station, out var orderDatabase))
             {
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-station-not-found"));
+                ConsolePopup(args.Actor, Loc.GetString("cargo-console-station-not-found"));
                 PlayDenySound(uid, component);
                 return;
             }
@@ -144,7 +144,7 @@ namespace Content.Server.Cargo.Systems
             // Invalid order
             if (!_protoMan.HasIndex<EntityPrototype>(order.ProductId))
             {
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-invalid-product"));
+                ConsolePopup(args.Actor, Loc.GetString("cargo-console-invalid-product"));
                 PlayDenySound(uid, component);
                 return;
             }
@@ -155,7 +155,7 @@ namespace Content.Server.Cargo.Systems
             // Too many orders, avoid them getting spammed in the UI.
             if (amount >= capacity)
             {
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-too-many"));
+                ConsolePopup(args.Actor, Loc.GetString("cargo-console-too-many"));
                 PlayDenySound(uid, component);
                 return;
             }
@@ -166,7 +166,7 @@ namespace Content.Server.Cargo.Systems
             if (cappedAmount != order.OrderQuantity)
             {
                 order.OrderQuantity = cappedAmount;
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-snip-snip"));
+                ConsolePopup(args.Actor, Loc.GetString("cargo-console-snip-snip"));
                 PlayDenySound(uid, component);
             }
 
@@ -175,18 +175,25 @@ namespace Content.Server.Cargo.Systems
             // Not enough balance
             if (cost > bank.Balance)
             {
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-insufficient-funds", ("cost", cost)));
+                ConsolePopup(args.Actor, Loc.GetString("cargo-console-insufficient-funds", ("cost", cost)));
                 PlayDenySound(uid, component);
                 return;
             }
 
-            var tradeDestination = TryFulfillOrder(stationData, order, orderDatabase);
+            var ev = new FulfillCargoOrderEvent((station.Value, stationData), order, (uid, component));
+            RaiseLocalEvent(ref ev);
+            ev.FulfillmentEntity ??= station.Value;
 
-            if (tradeDestination == null)
+            if (!ev.Handled)
             {
-                ConsolePopup(args.Session, Loc.GetString("cargo-console-unfulfilled"));
-                PlayDenySound(uid, component);
-                return;
+                ev.FulfillmentEntity = TryFulfillOrder((station.Value, stationData), order, orderDatabase);
+
+                if (ev.FulfillmentEntity == null)
+                {
+                    ConsolePopup(args.Actor, Loc.GetString("cargo-console-unfulfilled"));
+                    PlayDenySound(uid, component);
+                    return;
+                }
             }
 
             _idCardSystem.TryFindIdCard(player, out var idCard);
@@ -194,7 +201,16 @@ namespace Content.Server.Cargo.Systems
             order.SetApproverData(idCard.Comp?.FullName, idCard.Comp?.JobTitle);
             _audio.PlayPvs(component.ConfirmSound, uid);
 
-            ConsolePopup(args.Session, Loc.GetString("cargo-console-trade-station", ("destination", MetaData(tradeDestination.Value).EntityName)));
+            var approverName = idCard.Comp?.FullName ?? Loc.GetString("access-reader-unknown-id");
+            var approverJob = idCard.Comp?.JobTitle ?? Loc.GetString("access-reader-unknown-id");
+            var message = Loc.GetString("cargo-console-unlock-approved-order-broadcast",
+                ("productName", Loc.GetString(order.ProductName)),
+                ("orderAmount", order.OrderQuantity),
+                ("approverName", approverName),
+                ("approverJob", approverJob),
+                ("cost", cost));
+            _radio.SendRadioMessage(uid, message, component.AnnouncementChannel, uid, escapeMarkup: false);
+            ConsolePopup(args.Actor, Loc.GetString("cargo-console-trade-station", ("destination", MetaData(ev.FulfillmentEntity.Value).EntityName)));
 
             // Log order approval
             _adminLogger.Add(LogType.Action, LogImpact.Low,
@@ -202,10 +218,10 @@ namespace Content.Server.Cargo.Systems
 
             orderDatabase.Orders.Remove(order);
             DeductFunds(bank, cost);
-            UpdateOrders(station.Value, orderDatabase);
+            UpdateOrders(station.Value);
         }
 
-        private EntityUid? TryFulfillOrder(StationDataComponent stationData, CargoOrderData order, StationCargoOrderDatabaseComponent orderDatabase)
+        private EntityUid? TryFulfillOrder(Entity<StationDataComponent> stationData, CargoOrderData order, StationCargoOrderDatabaseComponent orderDatabase)
         {
             // No slots at the trade station
             _listEnts.Clear();
@@ -265,7 +281,7 @@ namespace Content.Server.Cargo.Systems
 
         private void OnAddOrderMessage(EntityUid uid, CargoOrderConsoleComponent component, CargoConsoleAddOrderMessage args)
         {
-            if (args.Session.AttachedEntity is not { Valid: true } player)
+            if (args.Actor is not { Valid: true } player)
                 return;
 
             if (args.Amount <= 0)
@@ -313,9 +329,9 @@ namespace Content.Server.Cargo.Systems
                 !TryComp<StationCargoOrderDatabaseComponent>(station, out var orderDatabase) ||
                 !TryComp<StationBankAccountComponent>(station, out var bankAccount)) return;
 
-            if (_uiSystem.TryGetUi(consoleUid, CargoConsoleUiKey.Orders, out var bui))
+            if (_uiSystem.HasUi(consoleUid, CargoConsoleUiKey.Orders))
             {
-                _uiSystem.SetUiState(bui, new CargoConsoleInterfaceState(
+                _uiSystem.SetUiState(consoleUid, CargoConsoleUiKey.Orders, new CargoConsoleInterfaceState(
                     MetaData(station.Value).EntityName,
                     GetOutstandingOrderCount(orderDatabase),
                     orderDatabase.Capacity,
@@ -325,9 +341,9 @@ namespace Content.Server.Cargo.Systems
             }
         }
 
-        private void ConsolePopup(ICommonSession session, string text)
+        private void ConsolePopup(EntityUid actor, string text)
         {
-            _popup.PopupCursor(text, session);
+            _popup.PopupCursor(text, actor);
         }
 
         private void PlayDenySound(EntityUid uid, CargoOrderConsoleComponent component)
@@ -337,7 +353,7 @@ namespace Content.Server.Cargo.Systems
 
         private static CargoOrderData GetOrderData(CargoConsoleAddOrderMessage args, CargoProductPrototype cargoProduct, int id)
         {
-            return new CargoOrderData(id, cargoProduct.Product, cargoProduct.Cost, args.Amount, args.Requester, args.Reason);
+            return new CargoOrderData(id, cargoProduct.Product, cargoProduct.Name, cargoProduct.Cost, args.Amount, args.Requester, args.Reason);
         }
 
         public static int GetOutstandingOrderCount(StationCargoOrderDatabaseComponent component)
@@ -358,7 +374,7 @@ namespace Content.Server.Cargo.Systems
         /// Updates all of the cargo-related consoles for a particular station.
         /// This should be called whenever orders change.
         /// </summary>
-        private void UpdateOrders(EntityUid dbUid, StationCargoOrderDatabaseComponent _)
+        private void UpdateOrders(EntityUid dbUid)
         {
             // Order added so all consoles need updating.
             var orderQuery = AllEntityQuery<CargoOrderConsoleComponent>();
@@ -386,19 +402,20 @@ namespace Content.Server.Cargo.Systems
         public bool AddAndApproveOrder(
             EntityUid dbUid,
             string spawnId,
+            string name,
             int cost,
             int qty,
             string sender,
             string description,
             string dest,
             StationCargoOrderDatabaseComponent component,
-            StationDataComponent stationData
+            Entity<StationDataComponent> stationData
         )
         {
             DebugTools.Assert(_protoMan.HasIndex<EntityPrototype>(spawnId));
             // Make an order
             var id = GenerateOrderId(component);
-            var order = new CargoOrderData(id, spawnId, cost, qty, sender, description);
+            var order = new CargoOrderData(id, spawnId, name, cost, qty, sender, description);
 
             // Approve it now
             order.SetApproverData(dest, sender);
@@ -414,7 +431,7 @@ namespace Content.Server.Cargo.Systems
         private bool TryAddOrder(EntityUid dbUid, CargoOrderData data, StationCargoOrderDatabaseComponent component)
         {
             component.Orders.Add(data);
-            UpdateOrders(dbUid, component);
+            UpdateOrders(dbUid);
             return true;
         }
 
@@ -432,7 +449,7 @@ namespace Content.Server.Cargo.Systems
             {
                 orderDB.Orders.RemoveAt(sequenceIdx);
             }
-            UpdateOrders(dbUid, orderDB);
+            UpdateOrders(dbUid);
         }
 
         public void ClearOrders(StationCargoOrderDatabaseComponent component)

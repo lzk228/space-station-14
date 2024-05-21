@@ -18,7 +18,6 @@
   id: MusicianGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitMusician
-    back: ClothingBackpackMusicianFilled
     eyes: ClothingEyesGlassesSunglasses
     shoes: ClothingShoesBootsLaceup
     id: MusicianPDA
@@ -26,5 +25,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-  satchel: ClothingBackpackSatchelMusicianFilled
-  duffelbag: ClothingBackpackDuffelMusicianFilled

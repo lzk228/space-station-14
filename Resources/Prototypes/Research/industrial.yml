@@ -14,7 +14,8 @@
   - BorgModuleMining
   - OreProcessorIndustrialMachineCircuitboard
   - OreBagOfHolding
-  - SalvageMagnetMachineCircuitboard
+  - ClothingMaskWeldingGas
+  - SalvageMagnetMachineCircuitboard # A-13
 
 - type: technology
   id: AdvancedPowercells
@@ -53,6 +54,7 @@
   recipeUnlocks:
   - AutolatheHyperConvectionMachineCircuitboard
   - ProtolatheHyperConvectionMachineCircuitboard
+  - CircuitImprinterHyperConvectionMachineCircuitboard
   - SheetifierMachineCircuitboard
 
 - type: technology

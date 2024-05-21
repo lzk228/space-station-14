@@ -40,10 +40,6 @@
 - type: startingGear
   id: ChiefEngineerGear
   equipment:
-    head: ClothingHeadHatHardhatWhite
-    jumpsuit: ClothingUniformJumpsuitChiefEngineer
-    back: ClothingBackpackChiefEngineerFilled
-    shoes: ClothingShoesColorBrown
     id: CEPDA
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetCE
@@ -51,6 +47,3 @@
     underwearb: ClothingUnderwearBottomBoxersCE # Andromeda-Underwear
   underweart: ClothingUnderwearTopBraCE # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesCE # Andromeda-Underwear
-  innerClothingSkirt: ClothingUniformJumpskirtChiefEngineer
-  satchel: ClothingBackpackSatchelChiefEngineerFilled
-  duffelbag: ClothingBackpackDuffelChiefEngineerFilled

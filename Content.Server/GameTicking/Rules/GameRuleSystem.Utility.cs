@@ -1,11 +1,14 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using Content.Server.GameTicking.Components;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Station.Components;
+using Content.Shared.Random.Helpers;
+using Robust.Server.GameObjects;
 using Robust.Shared.Collections;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Random;
-using System.Linq; // A-13
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -16,29 +19,12 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
         return EntityQueryEnumerator<ActiveGameRuleComponent, T, GameRuleComponent>();
     }
 
-    protected bool TryRoundStartAttempt(RoundStartAttemptEvent ev, string localizedPresetName)
+    /// <summary>
+    /// Queries all gamerules, regardless of if they're active or not.
+    /// </summary>
+    protected EntityQueryEnumerator<T, GameRuleComponent> QueryAllRules()
     {
-        var query = EntityQueryEnumerator<ActiveGameRuleComponent, T, GameRuleComponent>();
-        while (query.MoveNext(out _, out _, out _, out var gameRule))
-        {
-            var minPlayers = gameRule.MinPlayers;
-            if (!ev.Forced && ev.Players.Length < minPlayers)
-            {
-                ChatManager.SendAdminAnnouncement(Loc.GetString("preset-not-enough-ready-players",
-                    ("readyPlayersCount", ev.Players.Length), ("minimumPlayers", minPlayers),
-                    ("presetName", localizedPresetName)));
-                ev.Cancel();
-                continue;
-            }
-
-            if (ev.Players.Length == 0)
-            {
-                ChatManager.DispatchServerAnnouncement(Loc.GetString("preset-no-one-ready"));
-                ev.Cancel();
-            }
-        }
-
-        return !ev.Cancelled;
+        return EntityQueryEnumerator<T, GameRuleComponent>();
     }
 
     /// <summary>
@@ -99,17 +85,23 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
         targetCoords = EntityCoordinates.Invalid;
         targetGrid = EntityUid.Invalid;
 
-        var possibleTargets = station.Comp.Grids;
-        if (possibleTargets.Count == 0)
+        // Weight grid choice by tilecount
+        var weights = new Dictionary<Entity<MapGridComponent>, float>();
+        foreach (var possibleTarget in station.Comp.Grids)
+        {
+            if (!TryComp<MapGridComponent>(possibleTarget, out var comp))
+                continue;
+
+            weights.Add((possibleTarget, comp), _map.GetAllTiles(possibleTarget, comp).Count());
+        }
+
+        if (weights.Count == 0)
         {
             targetGrid = EntityUid.Invalid;
             return false;
         }
 
-        targetGrid = possibleTargets.First(); // A-13 spawn events only at station
-
-        if (!TryComp<MapGridComponent>(targetGrid, out var gridComp))
-            return false;
+        (targetGrid, var gridComp) = RobustRandom.Pick(weights);
 
         var found = false;
         var aabb = gridComp.LocalAABB;
@@ -120,8 +112,7 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
             var randomY = RobustRandom.Next((int) aabb.Bottom, (int) aabb.Top);
 
             tile = new Vector2i(randomX, randomY);
-            if (_atmosphere.IsTileSpace(targetGrid, Transform(targetGrid).MapUid, tile,
-                    mapGridComp: gridComp)
+            if (_atmosphere.IsTileSpace(targetGrid, Transform(targetGrid).MapUid, tile)
                 || _atmosphere.IsTileAirBlocked(targetGrid, tile, mapGridComp: gridComp))
             {
                 continue;
