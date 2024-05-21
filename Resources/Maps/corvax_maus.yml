@@ -14901,38 +14901,22 @@ entities:
   - uid: 9417
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -97.5,-19.5
-=======
       pos: -30.5,-45.5
->>>>>>> master
       parent: 2
   - uid: 9419
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -95.5,-19.5
-=======
       pos: -40.5,-45.5
->>>>>>> master
       parent: 2
   - uid: 9420
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -89.5,-19.5
-=======
       pos: -41.5,-45.5
->>>>>>> master
       parent: 2
   - uid: 9421
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -87.5,-19.5
-=======
       pos: -42.5,-45.5
->>>>>>> master
       parent: 2
   - uid: 9422
     components:
@@ -14947,29 +14931,17 @@ entities:
   - uid: 9424
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -54.5,10.5
-=======
       pos: -28.5,-44.5
->>>>>>> master
       parent: 2
   - uid: 9425
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -54.5,14.5
-=======
       pos: -28.5,-43.5
->>>>>>> master
       parent: 2
   - uid: 9426
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -36.5,-30.5
-=======
       pos: -28.5,-46.5
->>>>>>> master
       parent: 2
   - uid: 9427
     components:
@@ -15049,11 +15021,7 @@ entities:
   - uid: 9514
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: -38.5,-33.5
-=======
       pos: -25.5,-51.5
->>>>>>> master
       parent: 2
   - uid: 9515
     components:
@@ -83130,19 +83098,7 @@ entities:
     - type: Transform
       pos: -36.5,-2.5
       parent: 2
-<<<<<<< HEAD
-  - uid: 12862
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -34.5,-37.5
-      parent: 2
-- proto: StorageCanister
-  entities:
-  - uid: 3085
-=======
   - uid: 12195
->>>>>>> master
     components:
     - type: Transform
       pos: -35.5,-2.5

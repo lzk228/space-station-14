@@ -4656,12 +4656,8 @@ entities:
   - uid: 157
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: 22.5,30.5
-=======
       rot: 3.141592653589793 rad
       pos: 37.5,2.5
->>>>>>> master
       parent: 30
 - proto: AsteroidRock
   entities:
@@ -4680,9 +4676,6 @@ entities:
   - uid: 1511
     components:
     - type: Transform
-<<<<<<< HEAD
-      pos: 15.5,30.5
-=======
       pos: -50.5,12.5
       parent: 30
 - proto: AtmosDeviceFanTiny
@@ -4697,36 +4690,41 @@ entities:
     components:
     - type: Transform
       pos: -15.5,4.5
->>>>>>> master
       parent: 30
   - uid: 6874
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: -21.5,26.5
       parent: 30
   - uid: 6898
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: -19.5,26.5
       parent: 30
   - uid: 6968
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: 13.5,-24.5
       parent: 30
   - uid: 6971
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: 15.5,-24.5
       parent: 30
   - uid: 6990
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: 21.5,-24.5
       parent: 30
   - uid: 7003
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: 23.5,-24.5
       parent: 30
   - uid: 7942
@@ -4987,11 +4985,6 @@ entities:
       solutions:
         beaker:
           temperature: 293.15
-<<<<<<< HEAD
-          canBoil: True
-          canMix: True
-=======
->>>>>>> master
           canReact: True
           maxVol: 50
           name: null
@@ -23670,11 +23663,6 @@ entities:
       solutions:
         drink:
           temperature: 293.15
-<<<<<<< HEAD
-          canBoil: True
-          canMix: False
-=======
->>>>>>> master
           canReact: True
           maxVol: 30
           name: null
@@ -44454,14 +44442,6 @@ entities:
     - type: Transform
       pos: -23.5,-8.5
       parent: 30
-- proto: Roboisseur
-  entities:
-  - uid: 7960
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -23.5,2.5
-      parent: 30
 - proto: SalvageMagnet
   entities:
   - uid: 5614
@@ -46329,13 +46309,6 @@ entities:
     - type: Transform
       pos: 35.5,6.5
       parent: 30
-- proto: SpawnMobGorillaLargo
-  entities:
-  - uid: 5430
-    components:
-    - type: Transform
-      pos: -29.5,20.5
-      parent: 30
 - proto: SpawnMobMcGriff
   entities:
   - uid: 8666
@@ -46361,6 +46334,13 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-15.5
+      parent: 30
+- proto: SpawnMobRaccoonMorticia
+  entities:
+  - uid: 5430
+    components:
+    - type: Transform
+      pos: -29.5,20.5
       parent: 30
 - proto: SpawnMobShiva
   entities:
