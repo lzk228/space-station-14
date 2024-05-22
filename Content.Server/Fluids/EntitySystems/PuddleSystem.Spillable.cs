@@ -32,7 +32,9 @@ public sealed partial class PuddleSystem
         SubscribeLocalEvent<SpillableComponent, SolutionContainerOverflowEvent>(OnOverflow);
         SubscribeLocalEvent<SpillableComponent, SpillDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<SpillableComponent, AttemptPacifiedThrowEvent>(OnAttemptPacifiedThrow);
-        SubscribeLocalEvent<SpillableComponent, AttemptPacifiedThrowEvent2>(OnAttemptPacifiedThrow2); // A-13
+        //A-13 disable start
+        // SubscribeLocalEvent<SpillableComponent, AttemptPacifiedThrowEvent2>(OnAttemptPacifiedThrow2); // A-13
+        //A-13 disable end
     }
 
     private void OnOverflow(Entity<SpillableComponent> entity, ref SolutionContainerOverflowEvent args)
@@ -161,20 +163,23 @@ public sealed partial class PuddleSystem
 
         args.Cancel("pacified-cannot-throw-spill");
     }
-    // A-13 WIP EblanComponent
-    private void OnAttemptPacifiedThrow2(Entity<SpillableComponent> ent, ref AttemptPacifiedThrowEvent2 args)
-    {
-        // Don’t care about closed containers.
-        if (_openable.IsClosed(ent))
-            return;
 
-        // Don’t care about empty containers.
-        if (!_solutionContainerSystem.TryGetSolution(ent.Owner, ent.Comp.SolutionName, out _, out var solution) || solution.Volume <= 0)
-            return;
-
-        args.Cancel("pacified-cannot-throw-spill");
-    }
+    //A-13 disable start
     // A-13 WIP EblanComponent
+    // private void OnAttemptPacifiedThrow2(Entity<SpillableComponent> ent, ref AttemptPacifiedThrowEvent2 args)
+    // {
+    //     // Don’t care about closed containers.
+    //     if (_openable.IsClosed(ent))
+    //         return;
+    //
+    //     // Don’t care about empty containers.
+    //     if (!_solutionContainerSystem.TryGetSolution(ent.Owner, ent.Comp.SolutionName, out _, out var solution) || solution.Volume <= 0)
+    //         return;
+    //
+    //     args.Cancel("pacified-cannot-throw-spill");
+    // }
+    // A-13 WIP EblanComponent
+    //A-13 disable end
 
     private void OnDoAfter(Entity<SpillableComponent> entity, ref SpillDoAfterEvent args)
     {

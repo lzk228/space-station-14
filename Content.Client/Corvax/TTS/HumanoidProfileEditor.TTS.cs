@@ -2,7 +2,7 @@ using System.Linq;
 using Content.Client.Corvax.Sponsors;
 using Content.Client.Corvax.TTS;
 using Content.Client.Lobby;
-using Content.Corvax.Interfaces.Shared;
+// using Content.Corvax.Interfaces.Shared; //A-13 disable
 using Content.Shared.Corvax.TTS;
 using Content.Shared.Preferences;
 using Robust.Shared.Random;
@@ -44,7 +44,7 @@ public sealed partial class HumanoidProfileEditor
             SetVoice(_voiceList[args.Id].ID);
         };
 
-        _voicePlayButton.OnPressed += _ => { PlayTTS(); };
+        // _voicePlayButton.OnPressed += _ => { PlayTTS(); }; //A-13 disable
         //IoCManager.Instance!.TryResolveType(out _sponsorsMgr);
     }
 

@@ -37,20 +37,22 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
         if (HasComp<ThiefRoleComponent>(mindId))
             return;
 
+        //A-13 disable start
         // Assign thief roles
-        _roleSystem.MindAddRole(mindId, new ThiefRoleComponent
-        {
-            PrototypeId = thiefRule.ThiefPrototypeId,
-        }, silent: true);
+        // _roleSystem.MindAddRole(mindId, new ThiefRoleComponent
+        // {
+        //     PrototypeId = thiefRule.ThiefPrototypeId,
+        // }, silent: true);
 
         //Add Pacified
         //To Do: Long-term this should just be using the antag code to add components.
-        if (addPacified) //This check is important because some servers may want to disable the thief's pacifism. Do not remove.
-        {
-            EnsureComp<PacifiedComponent>(thief);
-        }
+        // if (addPacified) //This check is important because some servers may want to disable the thief's pacifism. Do not remove.
+        // {
+            // EnsureComp<PacifiedComponent>(thief);
+        // }
 
-        EnsureComp<ThiefCheckComponent>(thief); //A-13 No Thief-Agents system v5
+        // EnsureComp<ThiefCheckComponent>(thief); //A-13 No Thief-Agents system v5
+        //A-13 disable end
 
         //Generate objectives
         GenerateObjectives(mindId, mind, ent);

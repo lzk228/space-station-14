@@ -16,7 +16,8 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.GameTicking.Components;
-using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
+using Content.Server.Corvax.Sponsors;
+using Robust.Shared.Timing; // A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 

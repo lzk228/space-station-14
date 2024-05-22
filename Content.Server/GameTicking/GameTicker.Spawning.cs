@@ -59,9 +59,6 @@ namespace Content.Server.GameTicking
             return spawnableStations;
         }
 
-        private void SpawnPlayers(List<ICommonSession> readyPlayers,
-            Dictionary<NetUserId, HumanoidCharacterProfile> profiles,
-            bool force)
         //A-13 Eblan system update start
         private async Task CheckPlayTimeAndAddEblanComponent(ICommonSession session, EntityUid mob)
         {
@@ -251,7 +248,7 @@ namespace Content.Server.GameTicking
 
             _mind.TransferTo(newMind, mob);
 
-            await CheckPlayTimeAndAddEblanComponent(player, mob); //A-13 Eblan system update
+            CheckPlayTimeAndAddEblanComponent(player, mob); //A-13 Eblan system update
 
             if (lateJoin && !silent)
             {
