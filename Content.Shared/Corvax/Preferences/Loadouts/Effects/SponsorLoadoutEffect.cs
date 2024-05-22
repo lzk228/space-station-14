@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Content.Corvax.Interfaces.Shared;
+// using Content.Corvax.Interfaces.Shared; //A-13 disabled
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
@@ -20,27 +20,31 @@ public sealed partial class SponsorLoadoutEffect : LoadoutEffect
     {
         reason = null;
 
-        var sponsorProtos = GetPrototypes(session, collection);
-        if (!sponsorProtos.Contains(proto.ID))
-        {
-            reason = FormattedMessage.FromMarkup(Loc.GetString("loadout-sponsor-only"));
-            return false;
-        }
+        //A-13 disable start
+        // var sponsorProtos = GetPrototypes(session, collection);
+        // if (!sponsorProtos.Contains(proto.ID))
+        // {
+        //     reason = FormattedMessage.FromMarkup(Loc.GetString("loadout-sponsor-only"));
+        //     return false;
+        // }
+        //A-13 disable end
 
         return true;
     }
 
-    public List<string> GetPrototypes(ICommonSession session, IDependencyCollection collection)
-    {
-        if (!collection.TryResolveType<ISharedSponsorsManager>(out var sponsorsManager))
-            return new List<string>();
-
-        var net = collection.Resolve<INetManager>();
-
-        if (net.IsClient)
-            return sponsorsManager.GetClientPrototypes();
-
-        sponsorsManager.TryGetServerPrototypes(session.UserId, out var props);
-        return props ?? [];
-    }
+    //A-13 disable start
+    // public List<string> GetPrototypes(ICommonSession session, IDependencyCollection collection)
+    // {
+    //     if (!collection.TryResolveType<ISharedSponsorsManager>(out var sponsorsManager))
+    //         return new List<string>();
+    //
+    //     var net = collection.Resolve<INetManager>();
+    //
+    //     if (net.IsClient)
+    //         return sponsorsManager.GetClientPrototypes();
+    //
+    //     sponsorsManager.TryGetServerPrototypes(session.UserId, out var props);
+    //     return props ?? [];
+    // }
+    //A-13 disable end
 }

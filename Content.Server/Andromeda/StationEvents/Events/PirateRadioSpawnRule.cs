@@ -5,6 +5,7 @@ using Robust.Server.GameObjects;
 using Robust.Server.Maps;
 using Robust.Shared.Map;
 using System.Linq;
+using Content.Server.GameTicking.Components;
 using Robust.Server.Player;
 
 namespace Content.Server.StationEvents.Events;

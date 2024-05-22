@@ -103,11 +103,13 @@ namespace Content.Server.Preferences.Managers
             var curPrefs = prefsData.Prefs!;
             var session = _playerManager.GetSessionById(userId);
 
+            //A-13 disable start
             // Corvax-Sponsors-Start: Ensure removing sponsor markings if client somehow bypassed client filtering
             // WARN! It's not removing markings from DB!
-            var allowedMarkings = _sponsors.TryGetInfo(message.MsgChannel.UserId, out var sponsor) ? sponsor.AllowedMarkings : new string[]{};
-            profile.EnsureValid(allowedMarkings);
+            // var allowedMarkings = _sponsors.TryGetInfo(message.MsgChannel.UserId, out var sponsor) ? sponsor.AllowedMarkings : new string[]{};
+            // profile.EnsureValid(allowedMarkings);
             // Corvax-Sponsors-End
+            //A-13 disable end
 
             var profiles = new Dictionary<int, ICharacterProfile>(curPrefs.Characters)
             {
@@ -201,14 +203,16 @@ namespace Content.Server.Preferences.Managers
                 async Task LoadPrefs()
                 {
                     var prefs = await GetOrCreatePreferencesAsync(session.UserId, cancel);
+                    //A-13 disable start
                     // Corvax-Sponsors-Start: Remove sponsor markings from expired sponsors
-                    var collection = IoCManager.Instance!;
-                    foreach (var (_, profile) in prefs.Characters)
-                    {
-                        var allowedMarkings = _sponsors.TryGetInfo(session.UserId, out var sponsor) ? sponsor.AllowedMarkings : new string[]{};
-                        profile.EnsureValid(allowedMarkings);
-                    }
+                    // var collection = IoCManager.Instance!;
+                    // foreach (var (_, profile) in prefs.Characters)
+                    // {
+                    //     var allowedMarkings = _sponsors.TryGetInfo(session.UserId, out var sponsor) ? sponsor.AllowedMarkings : new string[]{};
+                    //     profile.EnsureValid(allowedMarkings);
+                    // }
                     // Corvax-Sponsors-End
+                    //A-13 disable end
                     prefsData.Prefs = prefs;
                 }
             }
@@ -318,10 +322,10 @@ namespace Content.Server.Preferences.Managers
             // Clean up preferences in case of changes to the game,
             // such as removed jobs still being selected.
 
-            var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes) ? prototypes.ToArray() : []; // Corvax-Sponsors
+            // var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes) ? prototypes.ToArray() : []; // Corvax-Sponsors
             return new PlayerPreferences(prefs.Characters.Select(p =>
             {
-                return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, sponsorPrototypes));
+                return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, /*sponsorPrototypes*/[])); //A-13 disable
             }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor);
         }
 

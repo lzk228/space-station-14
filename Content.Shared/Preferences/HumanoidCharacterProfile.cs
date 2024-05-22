@@ -456,7 +456,6 @@ namespace Content.Shared.Preferences
 
             name = name.Trim();
 
-            var configManager = IoCManager.Resolve<IConfigurationManager>();
             if (configManager.GetCVar(CCVars.RestrictedNames))
             {
                 name = RestrictedNameRegex.Replace(name, string.Empty);
@@ -483,7 +482,7 @@ namespace Content.Shared.Preferences
                 flavortext = FormattedMessage.RemoveMarkup(FlavorText);
             }
 
-            var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex, sponsorMarkings);
+            var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex, sponsorPrototypes); //A-13 upstream
 
             var prefsUnavailableMode = PreferenceUnavailable switch
             {
