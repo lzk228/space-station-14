@@ -3,89 +3,89 @@
   files:
   - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/karandash.ogg
 
-- type: entity
-  parent: BasePlushie
-  id: PlushiePaintor
-  name: плюшевый грустный художник
-  description: Это маленький плюшевый художник, ваш грустный брат по рисованию. Он вам с радостью поможет.
-  suffix: Андромеда
-  components:
-  - type: Sprite
-    sprite: Andromeda/Evil/plushiepaintor.rsi
-    state: icon
-  - type: Item
-    size: Small
-    sprite: Andromeda/Evil/plushiepaintor.rsi
-  - type: Storage
-    maxItemSize: Small
-    grid:
-    - 0,0,1,1
-    whitelist:
-      components:
-        - Paint
-        - Crayon
-  - type: UserInterface
-    interfaces:
-    - key: enum.StorageUiKey.Key
-      type: StorageBoundUserInterface
-  - type: PointLight
-    netsync: false
-    radius: 1.5
-    energy: 1.0
-    color: "#9932CC"
-  - type:  StorageFill
-    contents:
-      - id: SprayPaintPurple
-      - id: CrayonPurple
-      - id: CrayonRainbow
-  - type: EmitSoundOnLand
-    sound:
-      collection: PaintorUse
-  - type: EmitSoundOnActivate
-    sound:
-      collection: PaintorUse
-  - type: EmitSoundOnUse
-    sound:
-      collection: PaintorUse
-  - type: EmitSoundOnCollide
-    sound:
-      collection: PaintorUse
-  - type: Clothing
-    quickEquip: false
-    sprite: Andromeda/Evil/plushiepaintor.rsi
-    slots:
-    - HEAD
+#- type: entity
+#  parent: BasePlushie
+#  id: PlushiePaintor
+#  name: плюшевый грустный художник
+#  description: Это маленький плюшевый художник, ваш грустный брат по рисованию. Он вам с радостью поможет.
+#  suffix: Андромеда
+#  components:
+#  - type: Sprite
+#    sprite: Andromeda/Evil/plushiepaintor.rsi
+#    state: icon
+#  - type: Item
+#    size: Small
+#    sprite: Andromeda/Evil/plushiepaintor.rsi
+#  - type: Storage
+#    maxItemSize: Small
+#    grid:
+#    - 0,0,1,1
+#    whitelist:
+#      components:
+#        - Paint
+#        - Crayon
+#  - type: UserInterface
+#    interfaces:
+#    - key: enum.StorageUiKey.Key
+#      type: StorageBoundUserInterface
+#  - type: PointLight
+#    netsync: false
+#    radius: 1.5
+#    energy: 1.0
+#    color: "#9932CC"
+#  - type:  StorageFill
+#    contents:
+#      - id: SprayPaintPurple
+#      - id: CrayonPurple
+#      - id: CrayonRainbow
+#  - type: EmitSoundOnLand
+#    sound:
+#      collection: PaintorUse
+#  - type: EmitSoundOnActivate
+#    sound:
+#      collection: PaintorUse
+#  - type: EmitSoundOnUse
+#    sound:
+#      collection: PaintorUse
+#  - type: EmitSoundOnCollide
+#    sound:
+#      collection: PaintorUse
+#  - type: Clothing
+#    quickEquip: false
+#    sprite: Andromeda/Evil/plushiepaintor.rsi
+#    slots:
+#    - HEAD
 
-- type: entity
-  parent: BasePlushie
-  id: PlushieSelectionist
-  name: плюшевый селекционер
-  description: Растрепанный исследователь-ботаник, весь в работе над селекцией растений.
-  suffix: Андромеда
-  components:
-  - type: Sprite
-    sprite: Andromeda/Evil/plushieselectionist.rsi
-    state: icon
-  - type: Item
-    size: Small
-    sprite: Andromeda/Evil/plushieselectionist.rsi
-  - type: Storage
-    maxItemSize: Small
-    grid:
-    - 0,0,0,0
-    whitelist:
-      components:
-        - Produce
-        - Seed
-  - type: UserInterface
-    interfaces:
-    - key: enum.StorageUiKey.Key
-      type: StorageBoundUserInterface
-  - type: PointLight
-    netsync: false
-    radius: 1.5
-    energy: 1.0
-    color: "#55eb63"
+#- type: entity
+#  parent: BasePlushie
+#  id: PlushieSelectionist
+#  name: плюшевый селекционер
+#  description: Растрепанный исследователь-ботаник, весь в работе над селекцией растений.
+#  suffix: Андромеда
+#  components:
+#  - type: Sprite
+#    sprite: Andromeda/Evil/plushieselectionist.rsi
+#    state: icon
+#  - type: Item
+#    size: Small
+#    sprite: Andromeda/Evil/plushieselectionist.rsi
+#  - type: Storage
+#    maxItemSize: Small
+#    grid:
+#    - 0,0,0,0
+#    whitelist:
+#      components:
+#        - Produce
+#        - Seed
+#  - type: UserInterface
+#    interfaces:
+#    - key: enum.StorageUiKey.Key
+#      type: StorageBoundUserInterface
+#  - type: PointLight
+#    netsync: false
+#    radius: 1.5
+#    energy: 1.0
+#    color: "#55eb63"
 
 - type: entity
   parent: BasePlushie
@@ -186,7 +186,7 @@
   parent: BasePlushie
   id: PlushieNukeMed
   name: плюшевый медик нюкеров
-  description: Пушистый и мягкий как облачко! Однако, кажется, что эта плюшка пропитана кислотой?... Её явно не стоит нюхать... 
+  description: Пушистый и мягкий как облачко! Однако, кажется, что эта плюшка пропитана кислотой?... Её явно не стоит нюхать...
   suffix: Андромеда
   components:
   - type: Sprite
