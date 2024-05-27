@@ -12,6 +12,8 @@
     normalState: normal-unshaded
   - type: Advertise
     pack: VendingMachinePottedPlantAds
+  - type: SpeakOnUIClosed
+    pack: VendingMachinePottedPlantThx
   - type: Speech
   - type: Sprite
     sprite: Andromeda/Evil/plantmatte.rsi
@@ -24,13 +26,16 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
-- type: advertisementsPack
+- type: messagePack
   id: VendingMachinePottedPlantAds
-  advertisements:
+  messages:
     - Мы точно не торгуем контрабандными видами!
     - Ощути себя садовником!
     - У нас растения на вынос – буквально!
-  thankyous:
+
+- type: messagePack
+  id: VendingMachinePottedPlantThx
+  messages:
     - Растения – цветы жизни!
     - Тебе грустно? Полей росток!
     - Ставка на зелёное!
