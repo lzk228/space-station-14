@@ -42,7 +42,7 @@
     delay: 4
   - type: PNV
   - type: ShowSyndicateIcons
-  - type: ShowSecurityIcons
+#  - type: ShowSecurityIcons #A-13 upstream.disable
 
 - type: entity
   name: прибор ночного видения ОБР
@@ -56,7 +56,7 @@
     state: icon
   - type: Clothing
     sprite: Andromeda/Lemird/nvgert.rsi
-  - type: ShowSecurityIcons
+#  - type: ShowSecurityIcons #A-13 upstream.disable
   - type: FlashImmunity
 
 - type: entity
@@ -71,7 +71,7 @@
     state: icon
   - type: Clothing
     sprite: Andromeda/Lemird/nvgjugert.rsi
-  - type: ShowSecurityIcons
+#  - type: ShowSecurityIcons #A-13 upstream.disable
   - type: ShowHealthBars
     damageContainers:
     - Biological

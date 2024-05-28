@@ -3,11 +3,9 @@
   startingInventory:
     PlantExtractorFlatpack: 1 # A-13
     HydroponicsToolScythe: 1 #A-13
-    HydroponicsToolHatchet: 4
     HydroponicsToolSpade: 4
     HydroponicsToolMiniHoe: 4
     HydroponicsToolClippers: 4
-    HydroponicsToolScythe: 4
     HydroponicsToolHatchet: 4
     Dropper: 4
     PlantBag: 3

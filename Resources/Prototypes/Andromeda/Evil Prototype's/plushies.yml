@@ -22,12 +22,16 @@
     - 0,0,1,1
     whitelist:
       components:
-        - Paint
-        - Crayon
+      - Paint
+      - Crayon
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
   - type: UserInterface
     interfaces:
-    - key: enum.StorageUiKey.Key
-      type: StorageBoundUserInterface
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
   - type: PointLight
     netsync: false
     radius: 1.5
@@ -35,9 +39,10 @@
     color: "#9932CC"
   - type:  StorageFill
     contents:
-      - id: SprayPaintPurple
-      - id: CrayonPurple
-      - id: CrayonRainbow
+    # - id: SprayPaintPurple TODO: fix when added back
+    - id: CrayonPurple
+    - id: CrayonRainbow
+    - id: CrayonPurple
   - type: EmitSoundOnLand
     sound:
       collection: PaintorUse
@@ -75,12 +80,16 @@
     - 0,0,0,0
     whitelist:
       components:
-        - Produce
-        - Seed
+      - Produce
+      - Seed
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
   - type: UserInterface
     interfaces:
-    - key: enum.StorageUiKey.Key
-      type: StorageBoundUserInterface
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
   - type: PointLight
     netsync: false
     radius: 1.5
@@ -186,7 +195,7 @@
   parent: BasePlushie
   id: PlushieNukeMed
   name: плюшевый медик нюкеров
-  description: Пушистый и мягкий как облачко! Однако, кажется, что эта плюшка пропитана кислотой?... Её явно не стоит нюхать... 
+  description: Пушистый и мягкий как облачко! Однако, кажется, что эта плюшка пропитана кислотой?... Её явно не стоит нюхать...
   suffix: Андромеда
   components:
   - type: Sprite
