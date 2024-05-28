@@ -328,7 +328,7 @@ public sealed class PlantExtractorSystem : EntitySystem
         active.EndTime = _timing.CurTime + component.WorkTime * component.WorkTimeMultiplier;
 
         component.AudioStream = _audioSystem.PlayPvs(component.ExtractSound, uid, AudioParams.Default.WithPitchScale(1 / component.WorkTimeMultiplier)).Value.Entity;
-         _userInterfaceSystem.ServerSendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkStartedMessage()); //A-13 disable
+         _userInterfaceSystem.ServerSendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkStartedMessage());
     }
     #endregion
 

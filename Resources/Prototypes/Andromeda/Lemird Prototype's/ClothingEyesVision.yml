@@ -1,7 +1,7 @@
 - type: entity
   name: прибор ночного видения
   id: ClothingEyesVision
-  parent: BaseItem
+  parent: [BaseItem, ShowSecurityIcons]
   description: Прибор ночного видения. Обеспечивает изображение местности в условиях низкой освещенности.
   suffix: Андромеда
   components:
@@ -42,7 +42,6 @@
     delay: 4
   - type: PNV
   - type: ShowSyndicateIcons
-#  - type: ShowSecurityIcons #A-13 upstream.disable
 
 - type: entity
   name: прибор ночного видения ОБР
@@ -56,7 +55,6 @@
     state: icon
   - type: Clothing
     sprite: Andromeda/Lemird/nvgert.rsi
-#  - type: ShowSecurityIcons #A-13 upstream.disable
   - type: FlashImmunity
 
 - type: entity
@@ -71,7 +69,6 @@
     state: icon
   - type: Clothing
     sprite: Andromeda/Lemird/nvgjugert.rsi
-#  - type: ShowSecurityIcons #A-13 upstream.disable
   - type: ShowHealthBars
     damageContainers:
     - Biological
