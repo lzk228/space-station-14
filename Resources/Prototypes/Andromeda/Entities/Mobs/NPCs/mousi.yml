@@ -124,8 +124,8 @@
         - MobLayer
   - type: UserInterface
     interfaces:
-    - key: enum.StrippingUiKey.Key
-      type: StrippableBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
   - type: InteractionPopup
     successChance: 0.8
     interactSuccessString: hugging-success-generic-mousi
@@ -180,8 +180,8 @@
       Male: Mouse
       Female: Mouse
       Unsexed: Mouse
-  #- type: TTS
-  #  voice: mana
+  - type: TTS
+    voice: mana
   - type: GhostRole
     allowMovement: true
     allowSpeech: true

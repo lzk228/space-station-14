@@ -48,8 +48,8 @@
   - type: ActivatableUIRequiresPower
   - type: UserInterface
     interfaces:
-    - key: enum.PlantExtractorUiKey.Key
-      type: PlantExtractorBoundUserInterface
+      enum.PlantExtractorUiKey.Key:
+        type: PlantExtractorBoundUserInterface
   - type: ApcPowerReceiver
     powerLoad: 350
   - type: Appearance
@@ -59,7 +59,7 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
-  # Machine / Construction stuff
+   #Machine / Construction stuff
   - type: Wires
     boardName: "Plant Extractor"
     layoutId: PlantExtractor

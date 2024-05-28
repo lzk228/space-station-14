@@ -106,7 +106,7 @@ public sealed class PlantExtractorSystem : EntitySystem
             }
 
             UpdateUiState(uid);
-            // _userInterfaceSystem.TrySendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkCompletedMessage()); //A-13 disable
+             _userInterfaceSystem.ServerSendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkCompletedMessage());
         }
     }
 
@@ -140,7 +140,7 @@ public sealed class PlantExtractorSystem : EntitySystem
             canExtract,
             GetNetEntityArray(inputContainer.ContainedEntities.ToArray()));
 
-        // _userInterfaceSystem.TrySetUiState(uid, PlantExtractorUiKey.Key, state); //A-13 disable
+         _userInterfaceSystem.SetUiState(uid, PlantExtractorUiKey.Key, state);
     }
     #endregion
 
@@ -328,7 +328,7 @@ public sealed class PlantExtractorSystem : EntitySystem
         active.EndTime = _timing.CurTime + component.WorkTime * component.WorkTimeMultiplier;
 
         component.AudioStream = _audioSystem.PlayPvs(component.ExtractSound, uid, AudioParams.Default.WithPitchScale(1 / component.WorkTimeMultiplier)).Value.Entity;
-        // _userInterfaceSystem.TrySendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkStartedMessage()); //A-13 disable
+         _userInterfaceSystem.ServerSendUiMessage(uid, PlantExtractorUiKey.Key, new PlantExtractorWorkStartedMessage());
     }
     #endregion
 

@@ -12,6 +12,8 @@
     normalState: normal-unshaded
   - type: Advertise
     pack: VendingMachinePlushieToysAds
+  - type: SpeakOnUIClosed
+    pack: VendingMachinePlushieToysThx
   - type: Speech
   - type: Sprite
     sprite: Andromeda/Evil/vendingmachineplushietoys.rsi
@@ -24,15 +26,18 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
-- type: advertisementsPack
+- type: messagePack
   id: VendingMachinePlushieToysAds
-  advertisements:
+  messages:
     - Подходят для не шуточной драки!
     - Мягче подушки!
     - Лучший друг или лучшая подруга для сна!
     - Порадуйте других людей этой умилительной плюшевой куклой!
     - Вы должны их взять лишь потому что их можно жмякать!
-  thankyous:
+
+- type: messagePack
+  id: VendingMachinePlushieToysThx
+  messages:
     - Смотрите и лапайте!
     - Смотрите не умрите от милоты!
     - Слышали их стоны?
@@ -56,7 +61,7 @@
     PlushieSpaceLizard: 2
     PlushieVox: 2
     PlushieSlime: 2
-    PlushieRouny: 2 
+    PlushieRouny: 2
     PlushieMoth: 2
     PlushieDiona: 2
     PlushieGhost: 2
