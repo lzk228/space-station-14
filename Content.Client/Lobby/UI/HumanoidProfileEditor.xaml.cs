@@ -675,7 +675,7 @@ namespace Content.Client.Lobby.UI
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
-            //UpdateTTSVoicesControls(); // Corvax-TTS
+            //UpdateTTSVoicesControls(); // Corvax-TTS DISABLE BY A-13 IN UPSTREAM
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
@@ -1072,7 +1072,7 @@ namespace Content.Client.Lobby.UI
             }
 
             UpdateGenderControls();
-            //UpdateTTSVoicesControls(); // Corvax-TTS
+            //UpdateTTSVoicesControls(); // Corvax-TTS DISABLE BY A-13 IN UPSTREAM
             Markings.SetSex(newSex);
             ReloadPreview();
             SetDirty();
