@@ -36,7 +36,7 @@
     mask: ClothingMaskGasJuggernautERT
     eyes: ClothingEyesVisionERTJuggernaut
     gloves: ClothingHandsGlovesCombat
-#    outerClothing: ClothingOuterHardsuitExosuit
+    outerClothing: ClothingOuterHardsuitExosuit
     id: ERTJuggernautPDA
     ears: ClothingHeadsetAltCentCom
     belt: ERTJuggernautBeltMercWebbing

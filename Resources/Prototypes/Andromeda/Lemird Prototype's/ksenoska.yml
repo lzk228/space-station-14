@@ -27,8 +27,8 @@
   - type: Strippable
   - type: UserInterface
     interfaces:
-    - key: enum.StrippingUiKey.Key
-      type: StrippableBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -104,51 +104,51 @@
           True: {visible: true}
           False: {visible: false}
 
-#- type: entity
-#  name: Хвостик
-#  parent: MobKsenoFemale
-#  id: MobKsenodeska
-#  description: Милый питомец для отдела РнД. Готова изучать самые разные аномалии.
-#  suffix: Андромеда
-#  components:
-#  - type: GhostRole
-#    prob: 1
-#    makeSentient: true
-#    allowSpeech: true
-#    allowMovement: true
-#    name: Хвостик
-#    description: Уникальное животное специально сделанное для РнД! Только вот зачем...
-#  - type: GhostTakeoverAvailable
-#  - type: Butcherable
-#    butcheringType: Spike
-#    spawned:
-#    - id: FoodMeat
-#      amount: 3
-#    - id: DrinkTequilaBottleFull
-#      amount: 1
-#  - type: Tag
-#    tags:
-#    - CannotSuicide
-#    - DoorBumpOpener
-#  - type: Loadout
-#    prototypes: [ MobKsenoFamleGear ]
-#  - type: Grammar
-#    attributes:
-#      proper: true
-#      gender: female
-#  - type: MobThresholds
-#    thresholds:
-#      0: Alive
-#      150: Critical
-#      250: Dead
-#  - type: MeleeWeapon
-#    soundHit:
-#        path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
-#    angle: 0
-#    animation: WeaponArcClaw
-#    damage:
-#      types:
-#        Blunt: 13
+- type: entity
+  name: Хвостик
+  parent: MobKsenoFemale
+  id: MobKsenodeska
+  description: Милый питомец для отдела РнД. Готова изучать самые разные аномалии.
+  suffix: Андромеда
+  components:
+  - type: GhostRole
+    prob: 1
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Хвостик
+    description: Уникальное животное специально сделанное для РнД! Только вот зачем...
+  - type: GhostTakeoverAvailable
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 3
+    - id: DrinkTequilaBottleFull
+      amount: 1
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+  - type: Loadout
+    prototypes: [ MobKsenoFamleGear ]
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      250: Dead
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh1.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Blunt: 13
 
 - type: startingGear
   id: MobKsenoFamleGear
@@ -158,20 +158,20 @@
     ears: ClothingHeadsetKsenoska
     head: ClothingHeadKsenoFamle
 
-#- type: entity
-#  name: спавнер горничной ксенодевочки
-#  id: SpawnMobKsenoFemale
-#  parent: MarkerBase
-#  components:
-#  - type: Sprite
-#    layers:
-#      - state: green
-#      - sprite: Andromeda/Lemird/ksenoska.rsi
-#        state: kseno
-#      - state: ai
-#  - type: ConditionalSpawner
-#    prototypes:
-#      - MobKsenodeska
+- type: entity
+  name: спавнер горничной ксенодевочки
+  id: SpawnMobKsenoFemale
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Andromeda/Lemird/ksenoska.rsi
+        state: kseno
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobKsenodeska
 
 - type: inventoryTemplate
   id: ksenofemale

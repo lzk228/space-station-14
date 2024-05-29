@@ -248,7 +248,7 @@ namespace Content.Server.GameTicking
 
             _mind.TransferTo(newMind, mob);
 
-            CheckPlayTimeAndAddEblanComponent(player, mob); //A-13 Eblan system update
+            _ = CheckPlayTimeAndAddEblanComponent(player, mob); //A-13 Eblan system update
 
             if (lateJoin && !silent)
             {
