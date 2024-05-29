@@ -2,7 +2,7 @@
   noSpawn: false
   parent: ClothingBeltSwatWedding
   id: ClothingBeltSwatWeddingStandartFilled
-  suffix: Заполненный, Стандарт
+  suffix: Андромеда, Заполненный, Стандарт
   components:
   - type:  StorageFill
     contents:

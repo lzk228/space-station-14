@@ -1,22 +1,22 @@
-#- type: entity
-#  noSpawn: false
-#  parent: ClothingBackpackSwatDuffel
-#  id: ClothingBackpackSwatDuffelStandartFilled
-#  suffix: Заполненный, Стандарт
-#  components:
-#  - type:  StorageFill
-#    contents:
-#      - id: WeaponRifleM4
-#      - id: WeaponDisabler
-#      - id: Crowbar
-#      - id: BoxHandcuff
-#      - id: MedkitFilled
-#      - id: MagazineLightRifle
-#      - id: MagazineLightRifle
-#      - id: MagazineLightRifle
-#      - id: MagazineBoxLightRifle
-#      - id: Flare
-#      - id: Flare
-#      - id: Flare
-#      - id: Flash
-#      - id: Flash
+- type: entity
+  noSpawn: false
+  parent: ClothingBackpackSwatDuffel
+  id: ClothingBackpackSwatDuffelStandartFilled
+  suffix: Андромеда, Заполненный, Стандарт
+  components:
+  - type:  StorageFill
+    contents:
+      - id: WeaponRifleM4
+      - id: WeaponDisabler
+      - id: Crowbar
+      - id: BoxHandcuff
+      - id: MedkitFilled
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineLightRifle
+      - id: MagazineBoxLightRifle
+      - id: Flare
+      - id: Flare
+      - id: Flare
+      - id: Flash
+      - id: Flash

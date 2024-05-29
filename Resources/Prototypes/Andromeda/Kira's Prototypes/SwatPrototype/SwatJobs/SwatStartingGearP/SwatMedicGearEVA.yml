@@ -17,7 +17,7 @@
   inhand:
     - MedkitCombatSwatFilled
   innerclothingskirt: ClothingUniformJumpskirtMedicSwat
-#  satchel: ClothingBackpackSwatMedicSatchelFilled
-#  duffelbag: ClothingBackpackSwatMedicDuffelFilled
+  satchel: ClothingBackpackSwatMedicSatchelFilled
+  duffelbag: ClothingBackpackSwatMedicDuffelFilled
   underweart: ClothingUnderwearTopBraWhite
   underwearb: ClothingUnderwearBottomPantiesWhite
