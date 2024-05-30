@@ -46,7 +46,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
 
     // arbitrary random number to give late joining some mild interest.
-    public static float LateJoinRandomChance = 0.5f;
+    public const float LateJoinRandomChance = 0.5f;
 
     /// <inheritdoc/>
     public override void Initialize()
