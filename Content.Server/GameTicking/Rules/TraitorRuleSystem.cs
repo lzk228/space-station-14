@@ -16,8 +16,6 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.GameTicking.Components;
-using Content.Server.Corvax.Sponsors;
-using Robust.Shared.Timing; // A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -32,8 +30,6 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // A-13 SponsorAntag
 
     public const int MaxPicks = 20;
 
