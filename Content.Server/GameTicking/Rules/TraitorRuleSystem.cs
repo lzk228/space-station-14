@@ -17,7 +17,6 @@ using System.Linq;
 using System.Text;
 using Content.Server.GameTicking.Components;
 using Robust.Server.Player; // A-13 SponsorAntag
-using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -33,7 +32,6 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
     [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // A-13 SponsorAntag
 
     public const int MaxPicks = 20;
 

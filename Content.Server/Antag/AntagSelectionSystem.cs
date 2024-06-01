@@ -25,7 +25,6 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Content.Shared.Chat;
-using Content.Server.Corvax.Sponsors; //A-13 SponsorAntag
 using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
 
 namespace Content.Server.Antag;
@@ -42,7 +41,6 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private readonly RoleSystem _role = default!;
     [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; //A-13 SponsorAntag
     [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
 
     // arbitrary random number to give late joining some mild interest.

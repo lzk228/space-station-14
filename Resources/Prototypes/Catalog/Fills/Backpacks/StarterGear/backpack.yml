@@ -48,8 +48,8 @@
   - type: StorageFill
     contents:
       - id: BoxSurvivalMedical
-      - id: BodyBag_Folded # A-13 lives matter
-      - id: BodyBag_Folded # A-13 lives matter
+      - id: BodyBagFolded # A-13 lives matter
+      - id: BodyBagFolded # A-13 lives matter
 
 - type: entity
   noSpawn: true
@@ -60,8 +60,8 @@
     contents:
       - id: BoxSurvivalMedical
       - id: EmergencyRollerBedSpawnFolded
-      - id: BodyBag_Folded # A-13 lives matter
-      - id: BodyBag_Folded # A-13 lives matter
+      - id: BodyBagFolded # A-13 lives matter
+      - id: BodyBagFolded # A-13 lives matter
 
 - type: entity
   noSpawn: true
@@ -128,8 +128,8 @@
     contents:
       - id: BoxSurvivalMedical
       - id: Flash
-      - id: BodyBag_Folded # A-13 lives matter
-      - id: BodyBag_Folded # A-13 lives matter
+      - id: BodyBagFolded # A-13 lives matter
+      - id: BodyBagFolded # A-13 lives matter
       #- id: TelescopicBaton
 
 - type: entity
@@ -219,7 +219,7 @@
       - id: BoxSurvival
       - id: Bible
       - id: RubberStampChaplain
-  
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpack
