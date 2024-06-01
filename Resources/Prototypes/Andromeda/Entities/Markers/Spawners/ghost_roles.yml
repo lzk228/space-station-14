@@ -9,6 +9,8 @@
     name: ghost-role-information-listeningop-name
     description: ghost-role-information-listeningop-description
     rules: ghost-role-information-listeningop-rules
+    raffle:
+      settings: default
     requirements:
     - !type:OverallPlaytimeRequirement
       time: 331200 # 92 hours
