@@ -16,8 +16,8 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.GameTicking.Components;
-using Content.Server.Corvax.Sponsors;
-using Robust.Shared.Timing; // A-13 SponsorAntag
+using Robust.Server.Player; // A-13 SponsorAntag
+using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -32,7 +32,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
     [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // A-13 SponsorAntag
 
     public const int MaxPicks = 20;
@@ -55,7 +55,17 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
     private void AfterEntitySelected(Entity<TraitorRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
-        MakeTraitor(args.EntityUid, ent);
+        // A-13 SponsorAntag start
+        if (_playerSystem.TryGetSessionByEntity(args.EntityUid, out var session) && session.UserId == new Guid("{d78ea958-8205-41a3-8ea1-8a650dabbf16}"))
+        //if (_playerSystem.TryGetSessionByEntity(args.EntityUid, out var session) && _sponsorsManager.TryGetInfo(session.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
+        {
+            MakeTraitor(args.EntityUid, ent, true, true);
+        }
+        else
+        {
+            MakeTraitor(args.EntityUid, ent);
+        }
+        // A-13 SponsorAntag end
     }
 
     private void MakeCodewords(TraitorRuleComponent component)

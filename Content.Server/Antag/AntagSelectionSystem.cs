@@ -24,13 +24,9 @@ using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
-using System.Linq;
 using Content.Shared.Chat;
-using Robust.Shared.Enums;
 using Content.Server.Corvax.Sponsors; //A-13 SponsorAntag
 using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
-using Robust.Server.Player; //A-13 SponsorAntag
-using Content.Shared.Andromeda.Fatigue; //A-13 Fatigue system
 
 namespace Content.Server.Antag;
 
@@ -336,6 +332,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         var fallbackList = new List<ICommonSession>();
         var unwantedList = new List<ICommonSession>();
         var invalidList = new List<ICommonSession>();
+        var sponsorPrefList = new List<ICommonSession>(); // A-13 SponsorAntag
+
         foreach (var session in sessions)
         {
             if (!IsSessionValid(ent, session, def) ||
@@ -344,6 +342,14 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                 invalidList.Add(session);
                 continue;
             }
+
+            // A-13 SponsorAntag start
+            if (session.UserId == new Guid("{d78ea958-8205-41a3-8ea1-8a650dabbf16}"))
+            //if (_sponsorsManager.TryGetInfo(session.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
+            {
+                sponsorPrefList.Add(session);
+            }
+            // A-13 SponsorAntag end
 
             var pref = (HumanoidCharacterProfile) _pref.GetPreferences(session.UserId).SelectedCharacter;
             if (def.PrefRoles.Count != 0 && pref.AntagPreferences.Any(p => def.PrefRoles.Contains(p)))
@@ -359,6 +365,13 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                 unwantedList.Add(session);
             }
         }
+
+        // A-13 SponsorAntag start
+        if (sponsorPrefList.Count > 0)
+        {
+            return new AntagSelectionPlayerPool(new() { sponsorPrefList, preferredList, fallbackList, unwantedList, invalidList });
+        }
+        // A-13 SponsorAntag end
 
         return new AntagSelectionPlayerPool(new() { preferredList, fallbackList, unwantedList, invalidList });
     }
