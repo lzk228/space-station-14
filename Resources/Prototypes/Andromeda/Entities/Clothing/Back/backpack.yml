@@ -1,0 +1,26 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackWhiteCaptain
+  name: белый рюкзак капитана
+  description: Элитный белый рюкзак, выданный за выслугу лет капитану.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Backpacks/whitecapbackpack.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackWhiteDuffelCaptain
+  name: белый вещмешок капитана
+  description: Элитный белый вещмешок, выданный за выслугу лет капитану.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Duffels/whitecapduffel.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackWhiteSatchelCaptain
+  name: белая сумка капитана
+  description: Элитная белая сумка, выданная за выслугу лет капитану.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Back/Satchels/whitecapsatchel.rsi

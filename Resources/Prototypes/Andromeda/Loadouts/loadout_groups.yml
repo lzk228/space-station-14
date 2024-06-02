@@ -1,0 +1,17 @@
+#Command
+
+- type: loadoutGroup
+  id: CaptainGloves
+  name: Капитан, перчатки
+  minLimit: 0
+  loadouts:
+  - CaptainGloves
+  - CaptainWhiteGloves
+  - CaptainGoldenGloves
+
+- type: loadoutGroup
+  id: CaptainShoes
+  name: Капитан, ботинки
+  minLimit: 0
+  loadouts:
+  - CaptainGoldenBoots

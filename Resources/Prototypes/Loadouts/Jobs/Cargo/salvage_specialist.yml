@@ -36,6 +36,29 @@
   equipment:
     outerClothing: ClothingOuterWinterMiner
 
+# A-13 salvage specialist start
+- type: loadoutEffectGroup
+  id: SalvageElite
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 180000 # 50 Hours
+
+- type: loadout
+  id: SalvageSpecialistEliteHardsuit
+  equipment: SalvageSpecialistEliteHardsuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SalvageElite
+
+- type: startingGear
+  id: SalvageSpecialistEliteHardsuit
+  equipment:
+    outerClothing: ClothingOuterHardsuitCargoElite
+# A-13 salvage specialist end
+
 # Shoes
 - type: loadout
   id: SalvageBoots

@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsWhiteGlovesCaptain
+  name: белые перчатки капитана
+  description: Элитные перчатки для почётного капитана.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Hands/whitecapgloves.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Hands/whitecapgloves.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-regal-blue
+  - type: FingerprintMask

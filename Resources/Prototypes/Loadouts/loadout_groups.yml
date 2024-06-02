@@ -43,6 +43,11 @@
   loadouts:
   - CaptainHead
   - CaptainCap
+  # A-13 Captain Loadout start
+  - CaptainWhiteHead
+  - CaptainWhiteBeret
+  - CaptainGoldenHead
+  # A-13 Captain Loadout end
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -52,6 +57,11 @@
   - CaptainJumpskirt
   - CaptainFormalSuit
   - CaptainFormalSkirt
+  # A-13 Captain Loadout start
+  - CaptainWhiteJumpsuit
+  - CaptainGoldenJumpsuit
+  - CaptainGoldenJumpskirt
+  # A-13 Captain Loadout end
 
 - type: loadoutGroup
   id: CaptainNeck
@@ -61,6 +71,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - CaptainFormalWhiteCloak # A-13 Captain Loadout
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -69,6 +80,12 @@
   - CaptainBackpack
   - CaptainSatchel
   - CaptainDuffel
+  # A-13 Captain Loadout start
+  - CaptainWhiteBackpack
+  - CaptainWhiteSatchel
+  - CaptainWhiteDuffel
+  - CaptainGoldenBackpack
+  # A-13 Captain Loadout end
 
 - type: loadoutGroup
   id: CaptainOuterClothing
@@ -76,6 +93,11 @@
   loadouts:
   - CaptainOuterClothing
   - CaptainWintercoat
+  # A-13 Captain Loadout start
+  - CaptainWhiteOuterClothing
+  - CaptainWhiteCoat
+  - CaptainGoldenOuterClothing
+  # A-13 Captain Loadout end
 
 - type: loadoutGroup
   id: HoPHead
@@ -560,6 +582,7 @@
   minLimit: 0
   loadouts:
   - SalvageSpecialistWintercoat
+  - SalvageSpecialistEliteHardsuit # A-13
 
 - type: loadoutGroup
   id: SalvageSpecialistShoes
@@ -585,6 +608,12 @@
   - ChiefEngineerJumpskirt
   - ChiefEngineerTurtleneck
   - ChiefEngineerTurtleneckSkirt
+  # A-13 CE loadout start
+  - DarkChiefEngineerJumpsuit
+  - DarkChiefEngineerJumpskirt
+  - DarkChiefEngineerTurtleneck
+  - DarkChiefEngineerTurtleneckSkirt
+  # A-13 CE loadout end
 
 - type: loadoutGroup
   id: ChiefEngineerBackpack
@@ -601,6 +630,10 @@
   loadouts:
   - ChiefEngineerCloak
   - ChiefEngineerMantle
+  # A-13 CE loadout start
+  - DarkChiefEngineerCloak
+  - DarkChiefEngineerMantle
+  # A-13 CE loadout end
 
 - type: loadoutGroup
   id: ChiefEngineerOuterClothing

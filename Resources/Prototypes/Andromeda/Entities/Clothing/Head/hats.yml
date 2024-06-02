@@ -33,3 +33,25 @@
     sprite: Andromeda/Clothing/Head/Hats/beret_whitehole.rsi
   - type: Clothing
     sprite: Andromeda/Clothing/Head/Hats/beret_whitehole.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadWhiteBeretCap
+  name: белый берет капитана
+  description: Белый берет ветерана капитанской деятельности.
+  components:
+    - type: Sprite
+      sprite: Andromeda/Clothing/Head/Hats/whiteberetcap.rsi
+    - type: Clothing
+      sprite: Andromeda/Clothing/Head/Hats/whiteberetcap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadWhiteCaptainHat
+  name: белая фуражка капитана
+  description: Вселяет уважение, мать вашу!
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Head/Hats/whitecapcap.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Head/Hats/whitecapcap.rsi
