@@ -1062,6 +1062,7 @@
   loadouts:
   - ChiefMedicalOfficerCloak
   - ChiefMedicalOfficerMantle
+  - HealerCloak # A-13
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerShoes
