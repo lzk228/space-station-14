@@ -2,6 +2,7 @@
   id: Cargo
   description: department-Cargo-description
   color: "#A46106"
+  sort: 0 # A-13 upgraded chat system
   roles:
   - CargoTechnician
   - Quartermaster
@@ -11,6 +12,7 @@
   id: Civilian
   description: department-Civilian-description
   color: "#9FED58"
+  sort: 2 # A-13 upgraded chat system
   weight: -10
   roles:
   - Bartender
@@ -36,6 +38,7 @@
   id: Command
   description: department-Command-description
   color: "#334E6D"
+  sort: 1 # A-13 upgraded chat system
   roles:
   - Captain
   - IAA # Corvax-IAA
@@ -53,6 +56,7 @@
   id: Engineering
   description: department-Engineering-description
   color: "#EFB341"
+  sort: 0 # A-13 upgraded chat system
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
@@ -63,6 +67,7 @@
   id: Medical
   description: department-Medical-description
   color: "#52B4E9"
+  sort: 0 # A-13 upgraded chat system
   roles:
   - Chemist
   - ChiefMedicalOfficer
@@ -75,6 +80,7 @@
   id: Security
   description: department-Security-description
   color: "#DE3A3A"
+  sort: 0 # A-13 upgraded chat system
   weight: 20
   roles:
   - HeadOfSecurity
@@ -88,6 +94,7 @@
   id: Science
   description: department-Science-description
   color: "#D381C9"
+  sort: 0 # A-13 upgraded chat system
   roles:
   - ResearchDirector
   - Scientist
@@ -97,6 +104,7 @@
   id: Specific
   description: department-Specific-description
   color: "#9FED58"
+  sort: 0 # A-13 upgraded chat system
   weight: 10
   roles:
   - Boxer
