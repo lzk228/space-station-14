@@ -138,3 +138,49 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 4
     baseSprintSpeed : 4
+
+- type: entity
+  name: Муха-цекатуха
+  parent: MobXenoSpitter
+  id: MobXenoRavagerFlyC
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/ravagerflyc.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      110: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      55: 0.7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 6
+    baseSprintSpeed : 6
+
+- type: entity
+  name: Муха-ядотуха
+  parent: MobXenoSpitter
+  id: MobXenoRavagerFlyP
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/ravagerflyp.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      110: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      55: 0.7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 6
+    baseSprintSpeed : 6
