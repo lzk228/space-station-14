@@ -141,8 +141,9 @@
 
 - type: entity
   name: Муха-цекатуха
-  parent: MobXenoSpitter
+  parent: [ MobXenoRavager, FlyingMobBase ]
   id: MobXenoRavagerFlyC
+  suffix: Андромеда
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -154,18 +155,23 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      110: Dead
+      50: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      55: 0.7
+      30: 0.7
   - type: MovementSpeedModifier
     baseWalkSpeed : 6
     baseSprintSpeed : 6
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 20
 
 - type: entity
-  name: Муха-ядотуха
-  parent: MobXenoSpitter
+  name: Ядовитая муха
+  parent: [ MobXenoRavager, FlyingMobBase ]
   id: MobXenoRavagerFlyP
+  suffix: Андромеда
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -177,10 +183,44 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      110: Dead
+      50: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      55: 0.7
+      30: 0.7
   - type: MovementSpeedModifier
     baseWalkSpeed : 6
     baseSprintSpeed : 6
+  - type: MeleeWeapon
+    damage:
+      types:
+        Poison: 10
+        Caustic: 5
+
+- type: entity
+  name: Ледяная муха
+  parent: [ MobXenoRavager, FlyingMobBase ]
+  id: MobXenoRavagerFlyI
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/ravagerflyi.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 6
+    baseSprintSpeed : 6
+  - type: MeleeWeapon
+    damage:
+      types:
+        Cold: 10
+        Shock: 5
