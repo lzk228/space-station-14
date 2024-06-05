@@ -126,7 +126,6 @@ public sealed partial class SingleMarkingPicker : BoxContainer
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
-        IoCManager.Instance!.TryResolveType(out _sponsorsManager); // Corvax-Sponsors
 
         MarkingList.OnItemSelected += SelectMarking;
         AddButton.OnPressed += _ =>
