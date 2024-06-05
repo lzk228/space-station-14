@@ -24,6 +24,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
 
 namespace Content.Server.IoC
 {
@@ -57,6 +58,8 @@ namespace Content.Server.IoC
             IoCManager.Register<PlayTimeTrackingManager>();
             IoCManager.Register<UserDbDataManager>();
             IoCManager.Register<TTSManager>(); // Corvax-TTS
+            IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
+            IoCManager.Register<AndromedaSponsorManager>(); // A-13 Sponsor service
             IoCManager.Register<ServerInfoManager>();
             IoCManager.Register<PoissonDiskSampler>();
             IoCManager.Register<DiscordWebhook>();

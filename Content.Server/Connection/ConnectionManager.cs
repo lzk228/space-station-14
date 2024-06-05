@@ -1,8 +1,8 @@
 using System.Collections.Immutable;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using Content.Corvax.Interfaces.Server;
-using Content.Corvax.Interfaces.Shared;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
+using Content.Corvax.Interfaces.Server; // Corvax-VPNGuard
 using Content.Server.Database;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
@@ -46,11 +46,11 @@ namespace Content.Server.Connection
         [Dependency] private readonly IServerNetManager _netMgr = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
+        [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; // A-13 Sponsor service
         [Dependency] private readonly ILocalizationManager _loc = default!;
         [Dependency] private readonly ServerDbEntryManager _serverDbEntry = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
-        private ISharedSponsorsManager? _sponsorsMgr; // Corvax-Sponsors
         private IServerVPNGuardManager? _vpnGuardMgr; // Corvax-VPNGuard
 
         private readonly Dictionary<NetUserId, TimeSpan> _temporaryBypasses = [];
@@ -283,7 +283,7 @@ namespace Content.Server.Connection
         public async Task<bool> HavePrivilegedJoin(NetUserId userId)
         {
             var adminBypass = _cfg.GetCVar(CCVars.AdminBypassMaxPlayers) && await _dbManager.GetAdminDataForAsync(userId) != null;
-            var havePriorityJoin = _sponsorsMgr != null && _sponsorsMgr.HaveServerPriorityJoin(userId); // Corvax-Sponsors
+            var havePriorityJoin = _sponsorsManager.IsSponsor(userId); // A-13 Sponsor service
             var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
                             ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
                             status == PlayerGameStatus.JoinedGame;
