@@ -87,6 +87,7 @@
     stripTimeReduction: 1
   - type: Speech
     speechSounds: Alto
+    allowedEmotes: ['Meow','Mew','Growl','Purr','Hiss']
   - type: Stamina
     excess: 85
   - type: OwOAccent
