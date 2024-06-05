@@ -224,3 +224,107 @@
       types:
         Cold: 10
         Shock: 5
+
+- type: entity
+  name: Бронированный плевака
+  parent: [ MobXenoSpitter, FlyingMobBase ]
+  id: MobXenoSpitterB
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/spitterpsyb.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.5
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcidBigB
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.75
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+
+- type: entity
+  name: Штурмовой плевака
+  parent: [ MobXenoSpitter, FlyingMobBase ]
+  id: MobXenoSpitterR
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/spitterpsyr.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      70: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      35: 0.7
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.4
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcidBigR
+    capacity: 2
+    count: 1
+  - type: Gun
+    fireRate: 0.75
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+
+- type: entity
+  id: BulletAcidBigB
+  name: большой кислотный плевок
+  parent: BaseBullet
+  noSpawn: true
+  components:
+    - type: Projectile
+      damage:
+        types:
+          Caustic: 5
+          Poison: 5
+    - type: Sprite
+      sprite: Andromeda/Evil/xeno/projectiles.rsi
+      layers:
+        - state: xeno_toxic_bigb
+    - type: Ammo
+      muzzleFlash: null
+
+- type: entity
+  id: BulletAcidBigR
+  name: большой кислотный плевок
+  parent: BaseBullet
+  noSpawn: true
+  components:
+    - type: Projectile
+      damage:
+        types:
+          Caustic: 5
+          Poison: 5
+    - type: Sprite
+      sprite: Andromeda/Evil/xeno/projectiles.rsi
+      layers:
+        - state: xeno_toxic_bigr
+    - type: Ammo
+      muzzleFlash: null
