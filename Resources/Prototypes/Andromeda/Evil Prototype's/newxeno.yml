@@ -226,7 +226,7 @@
         Shock: 5
 
 - type: entity
-  name: Бронированный плевака
+  name: Плевака-броненосец
   parent: [ MobXenoSpitter, FlyingMobBase ]
   id: MobXenoSpitterB
   suffix: Андромеда
@@ -260,7 +260,7 @@
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
 
 - type: entity
-  name: Штурмовой плевака
+  name: Плевака-штурмовик
   parent: [ MobXenoSpitter, FlyingMobBase ]
   id: MobXenoSpitterR
   suffix: Андромеда
