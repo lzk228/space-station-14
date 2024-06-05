@@ -3,7 +3,6 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Notes;
 using Content.Server.Afk;
-using Content.Server.Andromeda;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Corvax.DiscordAuth;
@@ -28,6 +27,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
 
 namespace Content.Server.IoC
 {
@@ -64,8 +64,8 @@ namespace Content.Server.IoC
             IoCManager.Register<JoinQueueManager>(); // Corvax-Queue
             IoCManager.Register<TTSManager>(); // Corvax-TTS
             IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
+            IoCManager.Register<AndromedaSponsorManager>(); // A-13 Sponsor service
             IoCManager.Register<ServerInfoManager>();
-            //IoCManager.Register<BansNotificationsSystem>(); // Andromeda BanNotification
             IoCManager.Register<PoissonDiskSampler>();
             IoCManager.Register<DiscordWebhook>();
             IoCManager.Register<ServerDbEntryManager>();

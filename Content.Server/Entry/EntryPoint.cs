@@ -27,6 +27,7 @@ using Content.Server.Voting.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.Kitchen;
 using Content.Shared.Localizations;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
 using Robust.Server;
 using Robust.Server.ServerStatus;
 using Robust.Shared.Configuration;
@@ -110,6 +111,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<SponsorsManager>().Initialize(); // Corvax-Sponsors
                 IoCManager.Resolve<JoinQueueManager>().Initialize(); // Corvax-Queue
                 IoCManager.Resolve<TTSManager>().Initialize(); // Corvax-TTS
+                IoCManager.Resolve<AndromedaSponsorManager>().LoadSponsors(); // A-13 Sponsor service
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
                 IoCManager.Resolve<ServerApi>().Initialize();
 

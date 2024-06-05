@@ -1,7 +1,7 @@
 using System.Collections.Immutable;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using Content.Server.Corvax.Sponsors;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
 using Content.Server.Database;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
@@ -45,7 +45,7 @@ namespace Content.Server.Connection
         [Dependency] private readonly IServerNetManager _netMgr = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
+        [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; // A-13 Sponsor service
         [Dependency] private readonly ILocalizationManager _loc = default!;
         [Dependency] private readonly ServerDbEntryManager _serverDbEntry = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -263,7 +263,7 @@ namespace Content.Server.Connection
         public async Task<bool> HavePrivilegedJoin(NetUserId userId)
         {
             var adminBypass = _cfg.GetCVar(CCVars.AdminBypassMaxPlayers) && await _dbManager.GetAdminDataForAsync(userId) != null;
-            var havePriorityJoin = _sponsorsManager.TryGetInfo(userId, out var sponsor) && sponsor.HavePriorityJoin; // Corvax-Sponsors
+            var havePriorityJoin = _sponsorsManager.IsSponsor(userId); // A-13 Sponsor service
             var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
                             ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
                             status == PlayerGameStatus.JoinedGame;

@@ -1,5 +1,6 @@
 using System.Linq;
-using Content.Client.Corvax.Sponsors;
+using Robust.Client.Player; // A-13 Sponsor service
+using Content.Shared.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -19,8 +20,8 @@ public sealed partial class MarkingPicker : Control
 {
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
-
+    [Dependency] private readonly GetSponsorAllowedMarkingsMethod _getSponsorAllowedMarkingsMethod = default!; // A-13 Sponsor service
+    [Dependency] private readonly IPlayerManager _playerManager = default!; // A-13 Sponsor service
     public Action<MarkingSet>? OnMarkingAdded;
     public Action<MarkingSet>? OnMarkingRemoved;
     public Action<MarkingSet>? OnMarkingColorChange;
@@ -226,16 +227,45 @@ public sealed partial class MarkingPicker : Control
 
             var item = CMarkingsUnused.AddItem($"{GetMarkingName(marking)}", marking.Sprites[0].Frame0());
             item.Metadata = marking;
-            // Corvax-Sponsors-Start
-            if (marking.SponsorOnly)
+
+            // A-13 Sponsor service start
+            var player = _playerManager.LocalSession;
+            var validatedFile = _getSponsorAllowedMarkingsMethod.FileIsValid();
+
+            if (player != null)
             {
-                item.Disabled = true;
-                if (_sponsorsManager.TryGetInfo(out var sponsor))
+                bool isSponsor = _getSponsorAllowedMarkingsMethod.IsSponsor(player.UserId);
+                if (validatedFile == true)
                 {
-                    item.Disabled = !sponsor.AllowedMarkings.Contains(marking.ID);
+                    if (isSponsor == true)
+                    {
+                        bool allowedMarkings = _getSponsorAllowedMarkingsMethod.GetSponsorAllowedMarkings(player.UserId);
+
+                        if (marking.SponsorOnly)
+                        {
+                            item.Disabled = !allowedMarkings;
+                            Logger.Info($"{player} is bad player, allowedMarking = {allowedMarkings}");
+                        }
+                    }
+                    else
+                    {
+                        if (marking.SponsorOnly)
+                        {
+                            item.Disabled = true;
+                            Logger.Error($"Blocking all sponsor item, its doesn't sponsor");
+                        }
+                    }
+                }
+                else
+                {
+                    if (marking.SponsorOnly)
+                    {
+                        item.Disabled = true;
+                        Logger.Error($"Blocking all sponsor item, file valid");
+                    }
                 }
             }
-            // Corvax-Sponsors-End
+            // A-13 Sponsor service end
         }
 
         CMarkingPoints.Visible = _currentMarkings.PointsLeft(_selectedMarkingCategory) != -1;

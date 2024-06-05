@@ -24,9 +24,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
-using Content.Shared.Chat;
-using Content.Server.Corvax.Sponsors; //A-13 SponsorAntag
-using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
+using Content.Server.Andromeda.AndromedaSponsorService; //A-13 SponsorAntag
 
 namespace Content.Server.Antag;
 
@@ -42,7 +40,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private readonly RoleSystem _role = default!;
     [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; //A-13 SponsorAntag
+    [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; //A-13 SponsorAntag
     [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
 
     // arbitrary random number to give late joining some mild interest.
@@ -344,10 +342,14 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             }
 
             // A-13 SponsorAntag start
-            if (session.UserId == new Guid("{d78ea958-8205-41a3-8ea1-8a650dabbf16}"))
-            //if (_sponsorsManager.TryGetInfo(session.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
+            if (_sponsorsManager.IsSponsor(session.UserId))
             {
-                sponsorPrefList.Add(session);
+                bool allowedAntag = _sponsorsManager.GetSponsorAllowedAntag(session.UserId);
+
+                if (allowedAntag == true)
+                {
+                    sponsorPrefList.Add(session);
+                }
             }
             // A-13 SponsorAntag end
 
