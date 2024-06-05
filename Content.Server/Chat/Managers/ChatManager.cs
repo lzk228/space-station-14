@@ -61,7 +61,6 @@ namespace Content.Server.Chat.Managers
 
         public void Initialize()
         {
-            IoCManager.Instance!.TryResolveType(out _sponsorsManager); // Corvax-Sponsors
             _netManager.RegisterNetMessage<MsgChatMessage>();
             _netManager.RegisterNetMessage<MsgDeleteChatMessagesBy>();
 
