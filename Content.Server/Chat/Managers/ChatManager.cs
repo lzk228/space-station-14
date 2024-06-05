@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
+using Content.Corvax.Interfaces.Shared;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
@@ -45,8 +46,8 @@ namespace Content.Server.Chat.Managers
         [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; // A-13 Sponsor service
         [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly IPlayerManager _playerManager = default!;
 
         /// <summary>
         /// The maximum length a player-sent message can be sent
@@ -60,6 +61,7 @@ namespace Content.Server.Chat.Managers
 
         public void Initialize()
         {
+            IoCManager.Instance!.TryResolveType(out _sponsorsManager); // Corvax-Sponsors
             _netManager.RegisterNetMessage<MsgChatMessage>();
             _netManager.RegisterNetMessage<MsgDeleteChatMessagesBy>();
 
@@ -152,6 +154,14 @@ namespace Content.Server.Chat.Managers
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Admin announcement: {message}");
         }
 
+        public void SendAdminAnnouncementMessage(ICommonSession player, string message, bool suppressLog = true)
+        {
+            var wrappedMessage = Loc.GetString("chat-manager-send-admin-announcement-wrap-message",
+                ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")),
+                ("message", FormattedMessage.EscapeText(message)));
+            ChatMessageToOne(ChatChannel.Admin, message, wrappedMessage, default, false, player.Channel);
+        }
+
         public void SendAdminAlert(string message)
         {
             var clients = _adminManager.ActiveAdmins.Select(p => p.Channel);
@@ -160,7 +170,6 @@ namespace Content.Server.Chat.Managers
                 ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")), ("message", FormattedMessage.EscapeText(message)));
 
             ChatMessageToMany(ChatChannel.AdminAlert, message, wrappedMessage, default, false, true, clients);
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Admin notification: {message}");
         }
 
         public void SendAdminAlert(EntityUid player, string message)

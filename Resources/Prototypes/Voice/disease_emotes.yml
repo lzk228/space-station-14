@@ -72,4 +72,10 @@
   id: Snore
   name: chat-emote-name-snore
   category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
   chatMessages: ["chat-emote-msg-snore"]

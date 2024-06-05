@@ -1,3 +1,4 @@
+using Content.Corvax.Interfaces.Server;
 using Content.Server.Database;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -62,7 +63,10 @@ namespace Content.Server.GameTicking
 
                     // Make the player actually join the game.
                     // timer time must be > tick length
-                    // Timer.Spawn(0, args.Session.JoinGame); // Corvax-Queue: Moved to `JoinQueueManager`
+                    // Corvax-Queue-Start
+                    if (!IoCManager.Instance!.TryResolveType<IServerJoinQueueManager>(out _))
+                        Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Corvax-Queue-End
 
                     // A-13 WIP EblanComponent
                     var minOverallHours = 2;

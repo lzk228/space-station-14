@@ -13,6 +13,7 @@
   icon: "JobIconIAA"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  radioBold: true # A-13 upgraded chat system
   access:
   - Service
   - Brig

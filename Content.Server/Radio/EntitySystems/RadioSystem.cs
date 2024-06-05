@@ -15,6 +15,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Content.Shared.Access.Components; // A-13 upgraded chat system
+using Content.Shared.Inventory; // A-13 upgraded chat system
+using Content.Shared.PDA; // A-13 upgraded chat system
+using System.Globalization; // A-13 upgraded chat system
+using Content.Server.Popups; // A-13 upgraded chat system
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -29,6 +34,8 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly PopupSystem _popup = default!; // A-13 upgraded chat system
+    [Dependency] private readonly InventorySystem _inventorySystem = default!; // A-13 upgraded chat system
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -80,6 +87,9 @@ public sealed class RadioSystem : EntitySystem
 
         name = FormattedMessage.EscapeText(name);
 
+        // A-13 upgraded chat system
+        var formattedName = $"[color={GetIdCardColor(messageSource)}]{GetIdCardName(messageSource)}{name}[/color]";
+
         SpeechVerbPrototype speech;
         if (mask != null
             && mask.Enabled
@@ -95,13 +105,20 @@ public sealed class RadioSystem : EntitySystem
             ? FormattedMessage.EscapeText(message)
             : message;
 
+        // A-13 upgraded chat system start
+        if (GetIdCardIsBold(messageSource))
+        {
+            content = $"[bold]{content}[/bold]";
+        }
+        // A-13 upgraded chat system end
+
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
             ("color", channel.Color),
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
             ("channel", $"\\[{channel.LocalizedName}\\]"),
-            ("name", name),
+            ("name", formattedName),  // A-13 upgraded chat system
             ("message", content));
 
         // most radios are relayed to chat, so lets parse the chat message beforehand
@@ -161,6 +178,50 @@ public sealed class RadioSystem : EntitySystem
         _replay.RecordServerMessage(chat);
         _messages.Remove(message);
     }
+
+    // A-13 upgraded chat system start
+    private IdCardComponent? GetIdCard(EntityUid senderUid)
+    {
+        if (!_inventorySystem.TryGetSlotEntity(senderUid, "id", out var idUid))
+            return null;
+
+        if (EntityManager.TryGetComponent(idUid, out PdaComponent? pda) && pda.ContainedId is not null)
+        {
+            // PDA
+            if (TryComp<IdCardComponent>(pda.ContainedId, out var idComp))
+                return idComp;
+        }
+        else if (EntityManager.TryGetComponent(idUid, out IdCardComponent? id))
+        {
+            // ID Card
+            return id;
+        }
+
+        return null;
+    }
+
+    private string GetIdCardName(EntityUid senderUid)
+    {
+        var idCardTitle = Loc.GetString("chat-radio-no-id");
+        idCardTitle = GetIdCard(senderUid)?.JobTitle ?? idCardTitle;
+
+        var textInfo = CultureInfo.CurrentCulture.TextInfo;
+        idCardTitle = textInfo.ToTitleCase(idCardTitle);
+
+        return $"\\[{idCardTitle}\\] ";
+    }
+
+    private string GetIdCardColor(EntityUid senderUid)
+    {
+        var color = GetIdCard(senderUid)?.JobColor;
+        return (!string.IsNullOrEmpty(color)) ? color : "#9FED58";
+    }
+
+    private bool GetIdCardIsBold(EntityUid senderUid)
+    {
+        return GetIdCard(senderUid)?.RadioBold ?? false;
+    }
+   // A-13 upgraded chat system end
 
     /// <inheritdoc cref="TelecomServerComponent"/>
     private bool HasActiveServer(MapId mapId, string channelId)

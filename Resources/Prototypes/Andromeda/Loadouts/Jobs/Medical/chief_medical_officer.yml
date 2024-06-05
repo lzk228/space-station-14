@@ -1,0 +1,22 @@
+# playtime healer neck loadout
+- type: loadoutEffectGroup
+  id: CMOHealerCloak
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChiefMedicalOfficer
+      time: 360000 # 100 Hours
+
+# Neck
+- type: loadout
+  id: HealerCloak
+  equipment: HealerCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CMOHealerCloak
+
+- type: startingGear
+  id: HealerCloak
+  equipment:
+    neck: ClothingNeckHealerCloak

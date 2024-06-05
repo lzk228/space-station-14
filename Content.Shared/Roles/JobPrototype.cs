@@ -64,6 +64,11 @@ namespace Content.Shared.Roles
         [DataField("canBeAntag")]
         public bool CanBeAntag { get; private set; } = true;
 
+        // A-13 Upgraded Chat System start
+        [DataField("radioBold")]
+        public bool RadioIsBold { get; } = false;
+        // A-13 Upgraded Chat System end
+
         /// <summary>
         ///     Whether this job is a head.
         ///     The job system will try to pick heads before other jobs on the same priority level.

@@ -35,6 +35,16 @@ public sealed partial class IdCardComponent : Component
     [AutoNetworkedField]
     public List<LocId> JobDepartments = new();
 
+    // A-13 Upgraded Chat System start
+    [DataField("jobColor")]
+    [AutoNetworkedField]
+    public string? JobColor;
+
+    [DataField("radioBold")]
+    [AutoNetworkedField]
+    public bool? RadioBold;
+    // A-13 Upgraded Chat System end
+
     /// <summary>
     /// Determines if accesses from this card should be logged by <see cref="AccessReaderComponent"/>
     /// </summary>

@@ -167,3 +167,32 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evrozor/Clothing/barmen_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCEDark
+  name: темный плащ старшего инженера
+  description: Элитный темный плащ для старшего инженера, выдается только лучшим из лучших.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/CE_dark.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleCEDark
+  name: темная мантия старшего инженера
+  description: Элитная темная мантия для старшего инженера, выдается только самым крутым инженерам.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/CEmantle_dark.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Neck/Cloaks/CEmantle_dark.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCapFormal
+  name: белый роскошный плащ капитана
+  description: Роскошный плащ почётного капитана за выслугу лет.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Neck/Cloaks/whitecapcloakformal.rsi

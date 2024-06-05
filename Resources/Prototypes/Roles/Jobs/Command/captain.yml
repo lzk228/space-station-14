@@ -22,6 +22,7 @@
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  radioBold: true # A-13 upgraded chat system
   accessGroups:
   - AllAccess
   special:

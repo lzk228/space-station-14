@@ -28,6 +28,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
+    allowedEmotes: ['Hiss'] # A-13 emo fix
   - type: TypingIndicator
     proto: lizard
   - type: Vocal

@@ -1,0 +1,54 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitChiefEngineerDark
+  name: темный комбинезон старшего инженера
+  description: Элитная униформа темного цвета для старшего инженера, выдается лучшим из лучших.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/ce_dark.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/ce_dark.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitChiefEngineerTurtleDark
+  name: темная водолазка старшего инженера
+  description: Элитная водолазка темного цвета для старшего инженера, выдается лучшим из лучших.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/ce_dark_turtle.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/ce_dark_turtle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtChiefEngineerDark
+  name: темная юбка-комбинезон старшего инженера
+  description: Элитная униформа темного цвета для старшего инженера, выдается лучшим из лучших.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/ce_dark.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/ce_dark.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtChiefEngineerTurtleDark
+  name: темная водолазка старшего инженера
+  description: Элитная водолазка темного цвета для старшего инженера, выдается лучшим из лучших.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/ce_dark_turtle.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpskirt/ce_dark_turtle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformWhiteJumpsuitCaptain
+  name: белая униформа капитана
+  description: Роскошный белый костюм с золотыми украшениями, вселяет уважение в сердца экипажа.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/whitecaptain.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/whitecaptain.rsi

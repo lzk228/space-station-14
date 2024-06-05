@@ -24,6 +24,13 @@ public sealed partial class DepartmentPrototype : IPrototype
      DataField("roles", customTypeSerializer: typeof(PrototypeIdListSerializer<JobPrototype>))]
     public List<string> Roles = new();
 
+    // A-13 upgraded chat system start
+    /// <summary>
+    ///     Used in cases when job is in two or more departments and need to choose one.
+    /// </summary>
+    [DataField("sort")] public int Sort = default!;
+    // A-13 upgraded chat system end
+
     /// <summary>
     /// Whether this is a primary department or not.
     /// For example, CE's primary department is engineering since Command has primary: false.

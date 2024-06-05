@@ -126,6 +126,7 @@ public sealed partial class MarkingPicker : Control
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
+        IoCManager.Instance!.TryResolveType(out _sponsorsManager); // Corvax-Sponsors
 
         CMarkingCategoryButton.OnItemSelected +=  OnCategoryChange;
         CMarkingsUnused.OnItemSelected += item =>

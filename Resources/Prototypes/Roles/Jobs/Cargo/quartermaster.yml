@@ -20,6 +20,7 @@
   icon: "JobIconQuarterMaster"
   supervisors: job-supervisors-captain
   canBeAntag: false
+  radioBold: true # A-13 upgraded chat system
   access:
   - Cargo
   - Salvage

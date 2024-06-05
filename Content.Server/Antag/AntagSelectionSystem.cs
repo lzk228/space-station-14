@@ -25,6 +25,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Content.Server.Andromeda.AndromedaSponsorService; //A-13 SponsorAntag
+using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
 
 namespace Content.Server.Antag;
 

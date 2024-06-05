@@ -85,7 +85,7 @@ public static class ClientPackaging
         var inputPass = graph.Input;
 
         // Corvax-Secrets-Start: Add Corvax interfaces to Magic ACZ
-        var assemblies = new List<string> { "Content.Client", "Content.Shared", "Content.Shared.Database" };
+        var assemblies = new List<string> { "Content.Client", "Content.Shared", "Content.Shared.Database", "Content.Corvax.Interfaces.Client", "Content.Corvax.Interfaces.Shared" };
         if (UseSecrets)
             assemblies.AddRange(new[] { "Content.Corvax.Shared", "Content.Corvax.Client" });
         // Corvax-Secrets-End
@@ -97,8 +97,27 @@ public static class ClientPackaging
             assemblies, // Corvax-Secrets
             cancel: cancel);
 
-        await RobustClientPackaging.WriteClientResources(contentDir, pass, cancel);
+        await WriteClientResources(contentDir, pass, cancel); // Corvax-Secrets: Support content resource ignore to ignore server-only prototypes
 
         inputPass.InjectFinished();
     }
+
+    // Corvax-Secrets-Start
+    public static IReadOnlySet<string> ContentClientIgnoredResources { get; } = new HashSet<string>
+    {
+        "CorvaxSecretsServer"
+    };
+
+    private static async Task WriteClientResources(
+        string contentDir,
+        AssetPass pass,
+        CancellationToken cancel = default)
+    {
+        var ignoreSet = RobustClientPackaging.ClientIgnoredResources
+            .Union(RobustSharedPackaging.SharedIgnoredResources)
+            .Union(ContentClientIgnoredResources).ToHashSet();
+
+        await RobustSharedPackaging.DoResourceCopy(Path.Combine(contentDir, "Resources"), pass, ignoreSet, cancel: cancel);
+    }
+    // Corvax-Secrets-End
 }

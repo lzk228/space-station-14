@@ -1,7 +1,14 @@
 # vocal emotes
 - type: emote
   id: Hiss
-  name: Hiss
+  name: Шипение
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
   category: Vocal
   chatMessages: [шипит.]
   chatTriggers:
@@ -32,7 +39,14 @@
 
 - type: emote
   id: Meow
-  name: Meow
+  name: Мяукание
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
   category: Vocal
   chatMessages: [мяукает.]
   chatTriggers:
@@ -68,7 +82,14 @@
 
 - type: emote
   id: Mew
-  name: Mew
+  name: Мявкание
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
   category: Vocal
   chatMessages: [mews.]
   chatTriggers:
@@ -87,7 +108,14 @@
 
 - type: emote
   id: Growl
-  name: Growl
+  name: Рык
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
   category: Vocal
   chatMessages: [рычит.]
   chatTriggers:
@@ -118,7 +146,14 @@
 
 - type: emote
   id: Purr
-  name: Purr
+  name: Мурчание
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
   category: Vocal
   chatMessages: [мурлыкает.]
   chatTriggers:

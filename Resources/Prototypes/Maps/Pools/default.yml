@@ -2,25 +2,25 @@
   id: DefaultMapPool
   maps:
   - Aspid
-  - Omega
+  - Cluster
   - Bagel
 #  - Barratry
-  - Box
+  - Train
   - CorvaxDelta
-  - CorvaxAstra
-  - CorvaxAvrite
-#  - CorvaxSpectrum
-  - Cluster
-  - Packed
   - Marathon
+  - Box
+  - CorvaxAstra
+#  - CorvaxAvrite
+#  - CorvaxSpectrum
+#  - Oasis
+  - Omega
+  - Packed
 #  - CorvaxOutpost
   - Meta
   - Fland
-  - Train
   - Core
 #  - Origin
   - CorvaxSilly
   - Atlas
-  - Oasis
   - Saltern
 #  - Reach

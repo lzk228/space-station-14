@@ -1,9 +1,7 @@
-using Content.Client.Administration.Managers;
+﻿using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
 using Content.Client.Clickable;
-using Content.Client.Corvax.JoinQueue;
-using Content.Client.Corvax.Sponsors;
 using Content.Client.Corvax.TTS;
 using Content.Client.Eui;
 using Content.Client.GhostKick;
@@ -53,8 +51,6 @@ namespace Content.Client.IoC
             collection.Register<DocumentParsingManager>();
             collection.Register<ContentReplayPlaybackManager, ContentReplayPlaybackManager>();
             collection.Register<ISharedPlaytimeManager, JobRequirementsManager>();
-            collection.Register<SponsorsManager>(); // Corvax-Sponsors
-            collection.Register<JoinQueueManager>(); // Corvax-Queue
         }
     }
 }

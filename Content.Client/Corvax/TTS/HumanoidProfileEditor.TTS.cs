@@ -1,34 +1,16 @@
 using System.Linq;
-using Content.Client.Corvax.Sponsors;
 using Content.Client.Corvax.TTS;
 using Content.Client.Lobby;
-// using Content.Corvax.Interfaces.Shared; //A-13 disable
+using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Corvax.TTS;
 using Content.Shared.Preferences;
-using Robust.Shared.Random;
 
 namespace Content.Client.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {
-    private IRobustRandom _random = default!;
-    private TTSSystem _ttsSys = default!;
-    private List<TTSVoicePrototype> _voiceList = default!;
-    private readonly List<string> _sampleText = new()
-    {
-        "Съешь же ещё этих мягких французских булок, да выпей чаю.",
-        "Клоун, прекрати разбрасывать банановые кожурки офицерам под ноги!",
-        "Капитан, вы уверены что хотите назначить клоуна на должность главы персонала?",
-        "Эс Бэ! Тут человек в сером костюме, с тулбоксом и в маске! Помогите!!",
-        "Учёные, тут странная аномалия в баре! Она уже съела мима!",
-        "Я надеюсь что инженеры внимательно следят за сингулярностью...",
-        "Вы слышали эти странные крики в техах? Мне кажется туда ходить небезопасно.",
-        "Вы не видели Гамлета? Мне кажется он забегал к вам на кухню.",
-        "Здесь есть доктор? Человек умирает от отравленного пончика! Нужна помощь!",
-        "Вам нужно согласие и печать квартирмейстера, если вы хотите сделать заказ на партию дробовиков.",
-        "Возле эвакуационного шаттла разгерметизация! Инженеры, нам срочно нужна ваша помощь!",
-        "Бармен, налей мне самого крепкого вина, которое есть в твоих запасах!"
-    };
+    private ISharedSponsorsManager? _sponsorsMgr;
+    private List<TTSVoicePrototype> _voiceList = new();
 
     private void InitializeVoice()
     {
@@ -44,8 +26,9 @@ public sealed partial class HumanoidProfileEditor
             SetVoice(_voiceList[args.Id].ID);
         };
 
-        // _voicePlayButton.OnPressed += _ => { PlayTTS(); }; //A-13 disable
-        //IoCManager.Instance!.TryResolveType(out _sponsorsMgr);
+        //VoicePlayButton.OnPressed += _ => PlayPreviewTTS(); // A-13 disable
+
+        IoCManager.Instance!.TryResolveType(out _sponsorsMgr);
     }
 
     private void UpdateTTSVoicesControls()
@@ -68,9 +51,10 @@ public sealed partial class HumanoidProfileEditor
             if (firstVoiceChoiceId == 1)
                 firstVoiceChoiceId = i;
 
-            if (voice.SponsorOnly &&
-                IoCManager.Resolve<SponsorsManager>().TryGetInfo(out var sponsor) &&
-                !sponsor.AllowedMarkings.Contains(voice.ID))
+            if (_sponsorsMgr is null)
+                continue;
+            if (voice.SponsorOnly && _sponsorsMgr != null &&
+                !_sponsorsMgr.GetClientPrototypes().Contains(voice.ID))
             {
                 VoiceButton.SetItemDisabled(VoiceButton.GetIdx(i), true);
             }

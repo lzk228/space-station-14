@@ -8,6 +8,7 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom # Corvax-JobSupervisors
   canBeAntag: false
+  radioBold: true # A-13 upgraded chat system
   accessGroups:
   - AllAccess
   access:
@@ -30,4 +31,3 @@
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearToplaceBra # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesLace # Andromeda-Underwear
-

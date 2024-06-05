@@ -1,0 +1,248 @@
+# playtime white cap loadout
+- type: loadoutEffectGroup
+  id: CaptainSenior
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 360000 # 100 Hours
+
+# Jumpsuit
+- type: loadout
+  id: CaptainWhiteJumpsuit
+  equipment: CaptainWhiteJumpsuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformWhiteJumpsuitCaptain
+
+# Head
+- type: loadout
+  id: CaptainWhiteHead
+  equipment: CaptainWhiteHead
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteHead
+  equipment:
+    head: ClothingHeadWhiteCaptainHat
+
+- type: loadout
+  id: CaptainWhiteBeret
+  equipment: CaptainWhiteBeret
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteBeret
+  equipment:
+    head: ClothingHeadWhiteBeretCap
+
+# Neck
+- type: loadout
+  id: CaptainFormalWhiteCloak
+  equipment: CaptainFormalWhiteCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainFormalWhiteCloak
+  equipment:
+    neck: ClothingNeckCloakWhiteCapFormal
+
+# Back
+- type: loadout
+  id: CaptainWhiteBackpack
+  equipment: CaptainWhiteBackpack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteBackpack
+  equipment:
+    back: ClothingBackpackWhiteCaptain
+
+- type: loadout
+  id: CaptainWhiteSatchel
+  equipment: CaptainWhiteSatchel
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteSatchel
+  equipment:
+    back: ClothingBackpackWhiteSatchelCaptain
+
+- type: loadout
+  id: CaptainWhiteDuffel
+  equipment: CaptainWhiteDuffel
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteDuffel
+  equipment:
+    back: ClothingBackpackWhiteDuffelCaptain
+
+# Outer clothing
+- type: loadout
+  id: CaptainWhiteOuterClothing
+  equipment: CaptainWhiteOuterClothing
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteOuterClothing
+  equipment:
+    outerClothing: ClothingOuterWhiteArmorCaptainCarapace
+
+- type: loadout
+  id: CaptainWhiteCoat
+  equipment: CaptainWhiteCoat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteCoat
+  equipment:
+    outerClothing: ClothingOuterWhiteCoatCaptain
+
+# Gloves
+
+- type: loadout
+  id: CaptainWhiteGloves
+  equipment: CaptainWhiteGloves
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainSenior
+
+- type: startingGear
+  id: CaptainWhiteGloves
+  equipment:
+    gloves: ClothingHandsWhiteGlovesCaptain
+
+- type: loadout
+  id: CaptainGloves
+  equipment: CaptainGloves
+
+- type: startingGear
+  id: CaptainGloves
+  equipment:
+    gloves: ClothingHandsGlovesCaptain
+
+# Playtime Golden Cap Loadout
+- type: loadoutEffectGroup
+  id: CaptainGolden
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 540000 # 150 Hours
+
+# Jumpsuit
+- type: loadout
+  id: CaptainGoldenJumpsuit
+  equipment: CaptainGoldenJumpsuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGoldCaptain
+
+# Jumpskirt
+- type: loadout
+  id: CaptainGoldenJumpskirt
+  equipment: CaptainGoldenJumpskirt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtGoldCaptain
+
+# Head
+- type: loadout
+  id: CaptainGoldenHead
+  equipment: CaptainGoldenHead
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenHead
+  equipment:
+    head: ClothingHeadHatGoldCaptain
+
+# Back
+- type: loadout
+  id: CaptainGoldenBackpack
+  equipment: CaptainGoldenBackpack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenBackpack
+  equipment:
+    back: ClothingBackpackGoldCaptain
+
+# Outer clothing
+- type: loadout
+  id: CaptainGoldenOuterClothing
+  equipment: CaptainGoldenOuterClothing
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenOuterClothing
+  equipment:
+    outerClothing: ClothingOuterArmorGoldCaptainCarapace
+
+# Gloves
+
+- type: loadout
+  id: CaptainGoldenGloves
+  equipment: CaptainGoldenGloves
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenGloves
+  equipment:
+    gloves: ClothingHandsGlovesGoldCaptain
+
+# Shoes
+
+- type: loadout
+  id: CaptainGoldenBoots
+  equipment: CaptainGoldenBoots
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CaptainGolden
+
+- type: startingGear
+  id: CaptainGoldenBoots
+  equipment:
+    shoes: ClothingShoesColorGoldBlack
