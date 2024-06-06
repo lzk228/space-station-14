@@ -38,7 +38,7 @@ public sealed class AddSponsorCommand : IConsoleCommand
             }
         }
 
-        string color = "";
+        string color = "#FF0000";
         if (args.Length > 2)
         {
             color = args[2];
@@ -50,24 +50,14 @@ public sealed class AddSponsorCommand : IConsoleCommand
             }
         }
 
-        bool allowedMarkings = false;
-        if (args.Length > 3)
-        {
-            if (!bool.TryParse(args[3], out allowedMarkings))
-            {
-                shell.WriteLine($"Invalid allowedMarkings value: {args[3]}");
-                return;
-            }
-        }
-
         if (_sponsorManager.IsSponsor(userId))
         {
-            _sponsorManager.SaveSponsors(userId, allowedAntag, color, allowedMarkings);
+            _sponsorManager.SaveSponsors(userId, allowedAntag, color);
             shell.WriteLine($"Sponsor data for user {userId} updated successfully.");
         }
         else
         {
-            _sponsorManager.AddSponsor(userId, allowedAntag, color, allowedMarkings);
+            _sponsorManager.AddSponsor(userId, allowedAntag, color);
             shell.WriteLine($"User {userId} added as a sponsor.");
         }
     }

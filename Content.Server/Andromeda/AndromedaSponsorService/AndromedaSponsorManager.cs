@@ -22,25 +22,25 @@ public sealed class AndromedaSponsorManager
         {
             string[] parts = line.Split(';');
 
-            if (parts.Length >= 2 && Guid.TryParse(parts[0], out var guid))
+            if (Guid.TryParse(parts[0], out var guid))
             {
                 _sponsors.Add(guid);
             }
         }
     }
 
-    public void SaveSponsors(Guid userId, bool? allowedAntag = null, string? color = null, bool? allowedMarkings = null)
+    public void SaveSponsors(Guid userId, bool? allowedAntag = null, string? color = null)
     {
         var lines = File.ReadAllLines(_sponsorsFilePath).ToList();
         var index = lines.FindIndex(line => line.StartsWith(userId.ToString()));
 
         if (index != -1)
         {
-            lines[index] = $"{userId};{allowedAntag ?? false};{color ?? ""};{allowedMarkings ?? false}";
+            lines[index] = $"{userId};{allowedAntag ?? false};{color ?? ""}";
         }
         else
         {
-            lines.Add($"{userId};{allowedAntag ?? false};{color ?? ""};{allowedMarkings ?? false}");
+            lines.Add($"{userId};{allowedAntag ?? false};{color ?? ""}");
         }
 
         File.WriteAllLines(_sponsorsFilePath, lines);
@@ -56,11 +56,11 @@ public sealed class AndromedaSponsorManager
         return new List<Guid>(_sponsors);
     }
 
-    public void AddSponsor(Guid userId, bool allowedAntag, string color, bool allowedMarkings)
+    public void AddSponsor(Guid userId, bool allowedAntag, string color)
     {
         _sponsors.Add(userId);
 
-        SaveSponsors(userId, allowedAntag, color, allowedMarkings);
+        SaveSponsors(userId, allowedAntag, color);
     }
 
     public void RemoveSponsor(Guid userId)
@@ -101,7 +101,6 @@ public sealed class AndromedaSponsorManager
     public Color? GetSponsorOocColor(Guid userId)
     {
         string[] lines = File.ReadAllLines(_sponsorsFilePath);
-
         foreach (string line in lines)
         {
             string[] parts = line.Split(';');
