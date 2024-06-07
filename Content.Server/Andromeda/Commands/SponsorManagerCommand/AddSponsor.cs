@@ -12,7 +12,7 @@ public sealed class AddSponsorCommand : IConsoleCommand
 
     public string Command => "addsponsor";
     public string Description => "Adds a sponsor by their user ID.";
-    public string Help => $"Usage: {Command} <user ID> [allowedAntag] [OOC color] [allowedMarkings]";
+    public string Help => $"Usage: {Command} <user ID> [allowedAntag] [OOC color]";
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
