@@ -16,8 +16,6 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.GameTicking.Components;
-using Robust.Server.Player; // A-13 SponsorAntag
-using Content.Server.Andromeda.AndromedaSponsorService; //A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -32,8 +30,6 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
-    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
-    [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; // A-13 SponsorAntag
 
     public const int MaxPicks = 20;
 
@@ -55,21 +51,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
     private void AfterEntitySelected(Entity<TraitorRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
-        // A-13 SponsorAntag start
-        if (_playerSystem.TryGetSessionByEntity(args.EntityUid, out var session) && _sponsorsManager.IsSponsor(session.UserId))
-        {
-            bool allowedAntag = _sponsorsManager.GetSponsorAllowedAntag(session.UserId);
-
-            if (allowedAntag == true)
-            {
-                MakeTraitor(args.EntityUid, ent, true, true);
-            }
-            else
-            {
-                MakeTraitor(args.EntityUid, ent);
-            }
-        }
-        // A-13 SponsorAntag end
+        MakeTraitor(args.EntityUid, ent);
     }
 
     private void MakeCodewords(TraitorRuleComponent component)

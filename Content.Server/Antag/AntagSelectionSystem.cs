@@ -347,10 +347,15 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             {
                 bool allowedAntag = _sponsorsManager.GetSponsorAllowedAntag(session.UserId);
 
-                if (allowedAntag == true)
+                if (allowedAntag)
                 {
                     sponsorPrefList.Add(session);
+                    Log.Info($"Added sponsor: {session}");
                 }
+            }
+            else
+            {
+                Log.Info($"Skipped: {session}");
             }
             // A-13 SponsorAntag end
 
@@ -372,7 +377,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         // A-13 SponsorAntag start
         if (sponsorPrefList.Count > 0)
         {
-            return new AntagSelectionPlayerPool(new() { sponsorPrefList, preferredList, fallbackList, unwantedList, invalidList });
+            Log.Info($"Added sponsor pool: {sponsorPrefList.Count}");
+            preferredList.AddRange(sponsorPrefList);
         }
         // A-13 SponsorAntag end
 
