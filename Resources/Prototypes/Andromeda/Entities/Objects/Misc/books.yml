@@ -7,7 +7,7 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-        - state: book7
+        - state: icon_medical
     - type: MeleeWeapon
       damage:
         types:
