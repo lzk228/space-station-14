@@ -106,6 +106,7 @@ public sealed class PresetIdCardSystem : EntitySystem
             return department.Color.ToHex();
         }
 
+        Logger.Error($"Error: No department found for job {jobCode}");
         return string.Empty;
     }
     // A-13 upgraded chat system end

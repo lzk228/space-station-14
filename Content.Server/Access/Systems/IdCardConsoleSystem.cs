@@ -140,7 +140,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
                 job.RadioIsBold
             );
             // A-13 upgraded chat system start
-            
+
             _idCard.TryChangeJobDepartment(targetId, job);
         }
 
