@@ -98,15 +98,11 @@ public sealed class PresetIdCardSystem : EntitySystem
         var departments = prototypeManager.EnumeratePrototypes<DepartmentPrototype>().ToList();
         departments.Sort((a, b) => a.Sort.CompareTo(b.Sort));
 
-        foreach (var department in from department in departments
-                from jobId in department.Roles
-                where jobId == jobCode
-                select department)
+        foreach (var department in departments.Where(department => department.Roles.Contains(jobCode)))
         {
             return department.Color.ToHex();
         }
 
-        Logger.Error($"Error: No department found for job {jobCode}");
         return string.Empty;
     }
     // A-13 upgraded chat system end

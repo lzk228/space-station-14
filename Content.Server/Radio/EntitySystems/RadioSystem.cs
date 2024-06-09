@@ -221,7 +221,7 @@ public sealed class RadioSystem : EntitySystem
     {
         return GetIdCard(senderUid)?.RadioBold ?? false;
     }
-   // A-13 upgraded chat system end
+    // A-13 upgraded chat system end
 
     /// <inheritdoc cref="TelecomServerComponent"/>
     private bool HasActiveServer(MapId mapId, string channelId)
