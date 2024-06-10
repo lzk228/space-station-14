@@ -293,6 +293,7 @@ namespace Content.Server.GameTicking
             UpdateInfoText();
             SendRoundStartedDiscordMessage();
             RaiseLocalEvent(new RoundStartedEvent(RoundId)); // Corvax
+            _configurationManager.SetCVar(CCVars.GameMap, ""); //A-13 Fix forcemap
 
 #if EXCEPTION_TOLERANCE
             }
@@ -341,7 +342,6 @@ namespace Content.Server.GameTicking
 
             ShowRoundEndScoreboard(text);
             CheckAndChangeGamePreset(); //A-13 GameTicker.SetGamePresetUTC
-            _configurationManager.SetCVar(CCVars.GameMap, ""); //A-13 Fix forcemap
         }
 
         public void ShowRoundEndScoreboard(string text = "")
