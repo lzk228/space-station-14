@@ -4,9 +4,6 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Tools.Components;
 using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Popups;
-using Content.Shared.Popups; //A-13 Eblan system update
-using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
-using Content.Shared.Tools.Components; //A-13 Eblan system update
 using Robust.Server.GameObjects;
 
 using SharedToolSystem = Content.Shared.Tools.Systems.SharedToolSystem;

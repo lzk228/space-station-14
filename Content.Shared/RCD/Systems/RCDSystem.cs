@@ -1,6 +1,7 @@
 using Content.Shared.Administration.Logs;
 using Content.Shared.Charges.Components;
 using Content.Shared.Charges.Systems;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Construction;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
@@ -128,6 +129,11 @@ public class RCDSystem : EntitySystem
     {
         if (args.Handled || !args.CanReach)
             return;
+
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        //A-13 Eblan system update end
 
         var user = args.User;
         var location = args.ClickLocation;

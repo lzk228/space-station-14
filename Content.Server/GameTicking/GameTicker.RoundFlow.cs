@@ -22,7 +22,6 @@ using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Server.Voting.Managers;
 using Content.Shared.Voting;
-using Content.Shared.CCVar;
 using System.Text.RegularExpressions; //A-13 AnnonceRoundUpdate
 using System.IO; //A-13 AnnonceRoundUpdate
 
@@ -294,6 +293,7 @@ namespace Content.Server.GameTicking
             UpdateInfoText();
             SendRoundStartedDiscordMessage();
             RaiseLocalEvent(new RoundStartedEvent(RoundId)); // Corvax
+            _configurationManager.SetCVar(CCVars.GameMap, ""); //A-13 Fix forcemap
 
 #if EXCEPTION_TOLERANCE
             }
@@ -549,10 +549,10 @@ namespace Content.Server.GameTicking
                 SendStatusToAll();
                 UpdateInfoText();
 
+                //A-13 Vote in end round start
                 if (_configurationManager.GetCVar(CCVars.GameAutoMapVote))
-                {
                     _voteManager.CreateStandardVote(null, StandardVoteType.Map);
-                }
+                //A-13 Vote in end round end
 
                 ReqWindowAttentionAll();
             }

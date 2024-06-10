@@ -220,15 +220,10 @@ namespace Content.Server.Communications
             if (message.Actor is not { Valid: true } mob)
                 return;
 
-            //A-13 disable start
             //A-13 Eblan system update start
-            // if (HasComp<EblanComponent>(mob))
-            // {
-            //     _popupSystem.PopupEntity(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
-            //     return;
-            // }
+            if (HasComp<EblanComponent>(mob))
+                return;
             //A-13 Eblan system update end
-            //A-13 disable end
 
             if (!CanUse(mob, uid))
             {
@@ -256,15 +251,10 @@ namespace Content.Server.Communications
                     return;
                 }
 
-                //A-13 disable start
                 //A-13 Eblan system update start
-                // if (HasComp<EblanComponent>(mob))
-                // {
-                //     _popupSystem.PopupEntity(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
-                //     return;
-                // }
+                if (HasComp<EblanComponent>(mob))
+                    return;
                 //A-13 Eblan system update end
-                //A-13 disable end
 
                 if (!CanUse(mob, uid))
                 {

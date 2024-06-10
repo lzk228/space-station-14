@@ -77,6 +77,11 @@ namespace Content.Server.Access.Systems
                 return;
 
             _cardSystem.TryChangeJobTitle(uid, args.Job, idCard);
+
+            // A-13 upgraded chat system start
+            if (TryFindJobProtoFromJobName(args.Job.ToLowerInvariant(), out var job))
+                _cardSystem.TryChangeJobColor(uid, PresetIdCardSystem.GetJobColor(_prototypeManager, job), job.RadioIsBold);
+            // A-13 upgraded chat system end
         }
 
         private void OnNameChanged(EntityUid uid, AgentIDCardComponent comp, AgentIDCardNameChangedMessage args)
@@ -109,7 +114,7 @@ namespace Content.Server.Access.Systems
         {
             foreach (var jobPrototype in _prototypeManager.EnumeratePrototypes<JobPrototype>())
             {
-                if(jobPrototype.Icon == jobIcon.ID)
+                if (jobPrototype.Icon == jobIcon.ID)
                 {
                     job = jobPrototype;
                     return true;
@@ -119,5 +124,31 @@ namespace Content.Server.Access.Systems
             job = null;
             return false;
         }
+
+        // A-13 upgraded chat system start
+        private bool TryFindJobProtoFromJobName(string jobName, [NotNullWhen(true)] out JobPrototype? job)
+        {
+            foreach (var jobPrototype in _prototypeManager.EnumeratePrototypes<JobPrototype>())
+            {
+                if (jobPrototype.LocalizedName == jobName)
+                {
+                    job = jobPrototype;
+                    return true;
+                }
+            }
+
+            foreach (var jobPrototypePassenger in _prototypeManager.EnumeratePrototypes<JobPrototype>())
+            {
+                if (jobPrototypePassenger.LocalizedName == "пассажир")
+                {
+                    job = jobPrototypePassenger;
+                    return true;
+                }
+            }
+
+            job = null;
+            return false;
+        }
+        // A-13 upgraded chat system end
     }
 }
