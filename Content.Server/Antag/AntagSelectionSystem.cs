@@ -242,6 +242,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     /// </summary>
     public void MakeAntag(Entity<AntagSelectionComponent> ent, ICommonSession? session, AntagSelectionDefinition def, bool ignoreSpawner = false)
     {
+        Log.Debug($"MakeAntag: ent={ent}, session={session}, def={def}, ignoreSpawner={ignoreSpawner}"); //A-13 Полное логирование
+
         var antagEnt = (EntityUid?) null;
         var isSpawner = false;
 
@@ -266,6 +268,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
             if (!getEntEv.Handled)
             {
+                Log.Error($"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player."); //A-13 Полное логирование
                 throw new InvalidOperationException($"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player.");
             }
 
@@ -284,22 +287,9 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             _transform.SetMapCoordinates((player, playerXform), pos);
         }
 
-        // If we want to just do a ghost role spawner, set up data here and then return early.
-        // This could probably be an event in the future if we want to be more refined about it.
-        if (isSpawner)
-        {
-            if (!TryComp<GhostRoleAntagSpawnerComponent>(player, out var spawnerComp))
-            {
-                Log.Error($"Antag spawner {player} does not have a GhostRoleAntagSpawnerComponent.");
-                return;
-            }
-
-            spawnerComp.Rule = ent;
-            spawnerComp.Definition = def;
-            return;
-        }
-
         // The following is where we apply components, equipment, and other changes to our antagonist entity.
+        Log.Debug($"Applying components to antag entity: {antagEnt}"); //A-13 Полное логирование
+
         EntityManager.AddComponents(player, def.Components);
         _stationSpawning.EquipStartingGear(player, def.StartingGear);
 
@@ -312,11 +302,15 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                 _mind.SetUserId(curMind.Value, session.UserId);
             }
 
+            Log.Debug($"Transferring mind to antag entity: {antagEnt}"); //A-13 Полное логирование
+
             _mind.TransferTo(curMind.Value, antagEnt, ghostCheckOverride: true);
             _role.MindAddRoles(curMind.Value, def.MindComponents);
             ent.Comp.SelectedMinds.Add((curMind.Value, Name(player)));
             SendBriefing(session, def.Briefing);
         }
+
+        Log.Debug($"Start apply logic to antag entity: {antagEnt}"); //A-13 Полное логирование
 
         var afterEv = new AfterAntagEntitySelectedEvent(session, player, ent, def);
         RaiseLocalEvent(ent, ref afterEv, true);
