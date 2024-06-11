@@ -14,7 +14,6 @@
     pack: VendingMachineUnderwearMatteAds
   - type: SpeakOnUIClosed
     pack: VendingMachineUnderwearMatteThx
-  - type: Speech
   - type: Sprite
     sprite: Andromeda/Evil/clothing/vendingmachineunderwearmatte.rsi
     layers:
@@ -110,8 +109,6 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evil/clothing/boxerslong.rsi
-  - type: StealTarget
-    stealGroup: Panties
 
 - type: entity
   parent: ClothingUnderwearBottomBase
@@ -122,8 +119,6 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evil/clothing/pantieslemird.rsi
-  - type: StealTarget
-    stealGroup: Panties
 
 - type: entity
   parent: ClothingUnderwearBottomBase
@@ -134,8 +129,6 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evil/clothing/pantiesmiifrii.rsi
-  - type: StealTarget
-    stealGroup: Panties
 
 - type: cargoProduct
   name: НижнеМат
