@@ -32,7 +32,7 @@ namespace Content.Server.Damage.Systems
         private void OnAttemptPacifiedThrow2(Entity<DamageOnLandComponent> ent, ref AttemptPacifiedThrowEvent2 args)
         {
             // Allow healing projectiles, forbid any that do damage:
-            if (ent.Comp.Damage.Any())
+            if (ent.Comp.Damage.AnyPositive())
             {
                 args.Cancel("pacified-cannot-throw");
             }
