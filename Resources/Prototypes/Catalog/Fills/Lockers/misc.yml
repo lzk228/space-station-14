@@ -238,8 +238,6 @@
         - id: WeaponSniperMosin
           prob: 0.0010
           orGroup: syndiemaintloot
-        - id: AcetoneChemistryBottle
-          prob: 0.15
 
 - type: entity
   id: ClosetWallMaintenanceFilledRandom

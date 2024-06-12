@@ -95,9 +95,9 @@
   - type: StationEvent
     weight: 6.5
     duration: 1
-    earliestStart: 40
+    earliestStart: 60 # A-13
     reoccurrenceDelay: 20
-    minimumPlayers: 20
+    minimumPlayers: 40 # A-13
   - type: RandomSpawnRule
     prototype: SpawnPointGhostDragon
 
