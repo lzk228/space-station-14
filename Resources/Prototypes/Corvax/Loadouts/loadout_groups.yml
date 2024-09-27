@@ -16,7 +16,7 @@
 #Command
 - type: loadoutGroup
   id: CaptainUnderwearBottom
-  name: Капитан, трусы
+  name: loadout-groups-captain-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -25,7 +25,7 @@
 
 - type: loadoutGroup
   id: CaptainUnderwearTop
-  name: Капитан, бра
+  name: loadout-group-captain-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -33,7 +33,7 @@
 
 - type: loadoutGroup
   id: HoPUnderwearBottom
-  name: Глава персонала, трусы
+  name: loadout-group-hop-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -42,7 +42,7 @@
 
 - type: loadoutGroup
   id: HoPUnderwearTop
-  name: Глава персонала, бра
+  name: loadout-group-hop-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -50,7 +50,7 @@
 
 - type: loadoutGroup
   id: QMUnderwearBottom
-  name: Квартирмейстер, трусы
+  name: loadout-group-qm-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -59,7 +59,7 @@
 
 - type: loadoutGroup
   id: QMUnderwearTop
-  name: Квартирмейстер, бра
+  name: loadout-group-qm-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -67,7 +67,7 @@
 
 - type: loadoutGroup
   id: CEUnderwearBottom
-  name: Старший инженер, трусы
+  name: loadout-group-ce-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -76,7 +76,7 @@
 
 - type: loadoutGroup
   id: CEUnderwearTop
-  name: Старший инженер, бра
+  name: loadout-group-ce-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -84,7 +84,7 @@
 
 - type: loadoutGroup
   id: CMOUnderwearBottom
-  name: Главный врач, трусы
+  name: loadout-group-cmo-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -93,7 +93,7 @@
 
 - type: loadoutGroup
   id: CMOUnderwearTop
-  name: Главный врач, бра
+  name: loadout-group-cmo-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -101,7 +101,7 @@
 
 - type: loadoutGroup
   id: RDUnderwearBottom
-  name: Научный руководитель, трусы
+  name: loadout-group-rd-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -110,7 +110,7 @@
 
 - type: loadoutGroup
   id: RDUnderwearTop
-  name: Научный руководитель, бра
+  name: loadout-group-rd-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -118,7 +118,7 @@
 
 - type: loadoutGroup
   id: HOSUnderwearBottom
-  name: Глава службы безопасности, трусы
+  name: loadout-group-hos-underwearbottom
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -127,7 +127,7 @@
 
 - type: loadoutGroup
   id: HOSUnderwearTop
-  name: Глава службы безопасности, бра
+  name: loadout-group-hos-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -137,7 +137,7 @@
 
 - type: loadoutGroup
   id: BasicUnderwearBottom
-  name: Общие, трусы
+  name: loadout-group-general-underwearbottom
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -149,7 +149,7 @@
 
 - type: loadoutGroup
   id: BasicUnderwearTop
-  name: Общие, бра
+  name: loadout-group-general-underweartop
   minLimit: 0
   maxLimit: 1
   loadouts:
@@ -161,7 +161,7 @@
 
 - type: loadoutGroup
   id: BasicUnderwearSocks
-  name: Общие, носки
+  name: loadout-group-general-socks
   minLimit: 0
   maxLimit: 1
   loadouts:
