@@ -3,6 +3,9 @@
   id: JobCaptain
   groups:
   - Inventory # Corvax-Loadouts
+  - CaptainUnderwearTop
+  - CaptainUnderwearBottom
+  - BasicUnderwearSocks
   - CaptainHead
   - CaptainNeck
   - CaptainJumpsuit
@@ -16,6 +19,9 @@
   id: JobHeadOfPersonnel
   groups:
   - Inventory # Corvax-Loadouts
+  - HoPUnderwearTop
+  - HoPUnderwearBottom
+  - BasicUnderwearSocks
   - GroupTankHarness
   - HoPHead
   - HoPNeck
@@ -37,6 +43,9 @@
   id: JobPassenger
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - PassengerJumpsuit
   - CommonBackpack
@@ -54,6 +63,9 @@
   id: JobBartender
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - BartenderHead
   - BartenderJumpsuit
@@ -68,6 +80,9 @@
   id: JobServiceWorker
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - BartenderJumpsuit
   - CommonBackpack
@@ -80,6 +95,9 @@
   id: JobChef
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ChefHead
   - ChefMask
@@ -95,6 +113,9 @@
   id: JobLibrarian
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - LibrarianJumpsuit
   - CommonBackpack
@@ -107,6 +128,9 @@
   id: JobLawyer
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - LawyerNeck
   - LawyerJumpsuit
@@ -120,6 +144,9 @@
   id: JobChaplain
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ChaplainHead
   - ChaplainMask
@@ -136,6 +163,9 @@
   id: JobJanitor
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - JanitorHead
   - JanitorJumpsuit
@@ -152,6 +182,9 @@
   id: JobBotanist
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - BotanistHead
   - BotanistJumpsuit
@@ -166,6 +199,9 @@
   id: JobClown
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ClownHead
   - ClownJumpsuit
@@ -180,6 +216,9 @@
   id: JobMime
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - MimeHead
   - MimeMask
@@ -195,6 +234,9 @@
   id: JobMusician
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - MusicianJumpsuit
   - CommonBackpack
@@ -210,6 +252,9 @@
   id: JobQuartermaster
   groups:
   - Inventory # Corvax-Loadouts
+  - QMUnderwearTop
+  - QMUnderwearBottom
+  - BasicUnderwearSocks
   - GroupTankHarness
   - QuartermasterHead
   - QuartermasterNeck
@@ -226,6 +271,9 @@
   id: JobCargoTechnician
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - CargoTechnicianHead
   - CargoTechnicianJumpsuit
@@ -241,6 +289,9 @@
   id: JobSalvageSpecialist
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing
@@ -255,6 +306,9 @@
   id: JobChiefEngineer
   groups:
   - Inventory # Corvax-Loadouts
+  - CEUnderwearTop
+  - CEUnderwearBottom
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ChiefEngineerHead
   - ChiefEngineerJumpsuit
@@ -270,6 +324,9 @@
   id: JobTechnicalAssistant
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
@@ -281,6 +338,9 @@
   id: JobStationEngineer
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - StationEngineerHead
   - StationEngineerJumpsuit
@@ -296,6 +356,9 @@
   id: JobAtmosphericTechnician
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - AtmosphericTechnicianJumpsuit
   - AtmosphericTechnicianBackpack
@@ -310,6 +373,9 @@
   id: JobResearchDirector
   groups:
   - Inventory # Corvax-Loadouts
+  - RDUnderwearTop
+  - RDUnderwearBottom
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ResearchDirectorHead
   - ResearchDirectorNeck
@@ -327,6 +393,9 @@
   id: JobScientist
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ScientistHead
   - ScientistNeck
@@ -345,6 +414,9 @@
   id: JobResearchAssistant
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ResearchAssistantJumpsuit
   - ScientistBackpack
@@ -358,6 +430,9 @@
   id: JobHeadOfSecurity
   groups:
   - Inventory # Corvax-Loadouts
+  - HOSUnderwearTop
+  - HOSUnderwearBottom
+  - BasicUnderwearSocks
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
@@ -374,6 +449,9 @@
   id: JobWarden
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - WardenHead
   - WardenJumpsuit
   - SecurityBackpack
@@ -389,6 +467,9 @@
   id: JobSecurityOfficer
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - SecurityHead
   - SecurityJumpsuit
   - SecurityBackpack
@@ -405,6 +486,9 @@
   id: JobDetective
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - DetectiveHead
   - DetectiveNeck
@@ -421,6 +505,9 @@
   id: JobSecurityCadet
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - SecurityCadetJumpsuit
   - SecurityBackpack
   - SurvivalSecurity
@@ -432,6 +519,9 @@
   id: JobChiefMedicalOfficer
   groups:
   - Inventory # Corvax-Loadouts
+  - CMOUnderwearTop
+  - CMOUnderwearBottom
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ChiefMedicalOfficerHead
   - MedicalMask
@@ -450,6 +540,9 @@
   id: JobMedicalDoctor
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - MedicalDoctorHead
   - MedicalMask
@@ -468,6 +561,9 @@
   id: JobMedicalIntern
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - MedicalInternJumpsuit
   - MedicalBackpack
@@ -480,6 +576,9 @@
   id: JobChemist
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - MedicalMask
   - ChemistJumpsuit
@@ -495,6 +594,9 @@
   id: JobParamedic
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ParamedicHead
   - MedicalMask
@@ -513,6 +615,9 @@
   id: JobZookeeper
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - CommonBackpack
   - Glasses
@@ -524,6 +629,9 @@
   id: JobReporter
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - ReporterJumpsuit
   - CommonBackpack
@@ -536,6 +644,9 @@
   id: JobPsychologist
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - PsychologistJumpsuit
   - MedicalBackpack
@@ -548,6 +659,9 @@
   id: JobBoxer
   groups:
   - Inventory # Corvax-Loadouts
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
   - GroupTankHarness
   - BoxerJumpsuit
   - BoxerGloves

@@ -12,3 +12,165 @@
   - ChiefEngineerBackpack
   - ChiefEngineerSatchel
   - ChiefEngineerDuffel
+
+#Command
+- type: loadoutGroup
+  id: CaptainUnderwearBottom
+  name: loadout-groups-captain-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CaptainBoxers
+  - CaptainPanties
+
+- type: loadoutGroup
+  id: CaptainUnderwearTop
+  name: loadout-group-captain-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - CaptainBra
+
+- type: loadoutGroup
+  id: HoPUnderwearBottom
+  name: loadout-group-hop-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - HOPBoxers
+  - HOPPanties
+
+- type: loadoutGroup
+  id: HoPUnderwearTop
+  name: loadout-group-hop-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - HOPBra
+
+- type: loadoutGroup
+  id: QMUnderwearBottom
+  name: loadout-group-qm-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - QMBoxers
+  - QMPanties
+
+- type: loadoutGroup
+  id: QMUnderwearTop
+  name: loadout-group-qm-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - QMBra
+
+- type: loadoutGroup
+  id: CEUnderwearBottom
+  name: loadout-group-ce-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CEBoxers
+  - CEPanties
+
+- type: loadoutGroup
+  id: CEUnderwearTop
+  name: loadout-group-ce-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - CEBra
+
+- type: loadoutGroup
+  id: CMOUnderwearBottom
+  name: loadout-group-cmo-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CMOBoxers
+  - CMOPanties
+
+- type: loadoutGroup
+  id: CMOUnderwearTop
+  name: loadout-group-cmo-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - CMOBra
+
+- type: loadoutGroup
+  id: RDUnderwearBottom
+  name: loadout-group-rd-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - RDBoxers
+  - RDPanties
+
+- type: loadoutGroup
+  id: RDUnderwearTop
+  name: loadout-group-rd-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - RDBra
+
+- type: loadoutGroup
+  id: HOSUnderwearBottom
+  name: loadout-group-hos-underwearbottom
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - HOSBoxers
+  - HOSPanties
+
+- type: loadoutGroup
+  id: HOSUnderwearTop
+  name: loadout-group-hos-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - HOSBra
+
+# Civilian
+
+- type: loadoutGroup
+  id: BasicUnderwearBottom
+  name: loadout-group-general-underwearbottom
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - WhiteBoxers
+  - WhitePanties
+  - WhitePantiesNeko
+  - PantiesLace
+  - PantiesThong
+
+- type: loadoutGroup
+  id: BasicUnderwearTop
+  name: loadout-group-general-underweartop
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - BraWhite
+  - BraSports
+  - BraNeko
+  - BraLace
+  - BraSportsAlt
+
+- type: loadoutGroup
+  id: BasicUnderwearSocks
+  name: loadout-group-general-socks
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SocksNormal
+  - SocksHigh
+  - SocksShort
+  - SocksBee
+  - SocksCoder
+  - SocksPantyhose
+  - SocksFishnettights
+  - SocksGarters
+  - SocksRich
